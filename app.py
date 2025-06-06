@@ -3,9 +3,9 @@ import pandas as pd
 import re
 import os
 import io
-import base64
 from dotenv import load_dotenv
 from flask_cors import CORS
+from utils.suspeicao import encontrar_suspeitos
 
 app = Flask(__name__)
 CORS(app)
@@ -54,6 +54,7 @@ def extrair_tabela_md(arquivo_md):
             "responsavel": limpar(row.get("Responsável")),
             "status": limpar(row.get("Status")),
             "ultimaAtualizacao": limpar(row.get("Última Atualização")),
+            "suspeitos": limpar(row.get('Suspeitos')),
             "comentarios": limpar(row.get("Comentários")) if "Comentários" in row else ""
         })
     return processos
@@ -76,6 +77,7 @@ def receber_processo_com_markdown():
         markdown = limpar(data.get('markdown'))
         comentarios = limpar(data.get('comentarios'))
         dat_base64 = data.get('dat')
+        suspeitos = encontrar_suspeitos(markdown, './utils/suspeitos.txt' )
 
         if not markdown or not numero:
             return jsonify({'error': 'Campos obrigatórios ausentes'}), 400
@@ -103,13 +105,14 @@ def receber_processo_com_markdown():
             f"| {responsavel} "
             f"| {status} "
             f"| {ultima_att} "
+            f"| {suspeitos} "
             f"| {comentarios} |\n"
         )
 
         if not os.path.exists(PATH_TRIAGEM):
             with open(PATH_TRIAGEM, 'w', encoding='utf-8') as f:
                 f.write("# Tabela de Processos\n\n")
-                f.write("| Nº Processo | Tema | Data da Distribuição | Responsável | Status | Última Atualização | Comentários |\n")
+                f.write("| Nº Processo | Tema | Data da Distribuição | Responsável | Status | Última Atualização | Suspeitos | Comentários |\n")
                 f.write("|-------------|------|-----------------------|-------------|--------|----------------------|-------------|\n")
 
         with open(PATH_TRIAGEM, 'r', encoding='utf-8') as f:
@@ -126,7 +129,7 @@ def receber_processo_com_markdown():
             linhas.insert(indice_separador + 1, nova_linha)
         else:
             linhas += [
-                "| Nº Processo | Tema | Data da Distribuição | Responsável | Status | Última Atualização | Comentários |\n",
+                "| Nº Processo | Tema | Data da Distribuição | Responsável | Status | Última Atualização | Suspeitos | Comentários |\n",
                 "|-------------|------|-----------------------|-------------|--------|----------------------|-------------|\n",
                 nova_linha
             ]
@@ -155,12 +158,13 @@ def editar_processo(numero):
             "responsavel": limpar(data['responsavel']),
             "status": limpar(data['status']),
             "ultimaAtualizacao": limpar(data['ultimaAtualizacao']),
+            "suspeitos": limpar(data['suspeitos']),
             "comentarios": limpar(data.get('comentarios', ''))
         })
 
         with open(PATH_TRIAGEM, 'w', encoding='utf-8') as f:
             f.write("# Tabela de Processos\n\n")
-            f.write("| Nº Processo | Tema | Data da Distribuição | Responsável | Status | Última Atualização | Comentários |\n")
+            f.write("| Nº Processo | Tema | Data da Distribuição | Responsável | Status | Última Atualização | Suspeitos | Comentários |\n")
             f.write("|-------------|------|-----------------------|-------------|--------|----------------------|-------------|\n")
             for p in processos:
                 f.write(
@@ -181,7 +185,7 @@ def deletar_processo(numero):
 
         with open(PATH_TRIAGEM, 'w', encoding='utf-8') as f:
             f.write("# Tabela de Processos\n\n")
-            f.write("| Nº Processo | Tema | Data da Distribuição | Responsável | Status | Última Atualização | Comentários |\n")
+            f.write("| Nº Processo | Tema | Data da Distribuição | Responsável | Status | Última Atualização | Suspeitos | Comentários |\n")
             f.write("|-------------|------|-----------------------|-------------|--------|----------------------|-------------|\n")
             for p in processos:
                 f.write(

@@ -1,0 +1,19 @@
+SUSP_01|Carlos Alberto da Silva
+SUSP_02|Áureo Marcos Rodrigues
+SUSP_03|José Guilherme Júnior
+SUSP_04|Rogério Rodrigues Guilherme
+SUSP_05|Flávia Carrazzone Ferreira
+SUSP_06|Gustavo Guilherme Arrais
+SUSP_07|José Roberto Hermann Ramos
+SUSP_08|Cristiane Monteiro Vidal
+SUSP_09|Octazia de Oliveira Vidal
+SUSP_10|Ricardo Vidal
+SUSP_11|Márcio Monteiro Vidal
+SUSP_12|Agenor Diego da Cruz Bino
+SUSP_13|Débora Vidal
+SUSP_14|Ana Cristina Pereira de Souza Vidal
+SUSP_15|Karlos Lock
+SUSP_16|Alexander Capriata
+SUSP_17|João Tito S. Cademartori Neto
+SUSP_18|LOCK ADVOGADOS
+SUSP_19|BINO ADVOCACIA E ADMINISTRAÇÃO JUDICIAL
