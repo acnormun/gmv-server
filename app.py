@@ -8,7 +8,7 @@ from flask_cors import CORS
 from utils.suspeicao import encontrar_suspeitos
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": ["http://localhost:5173"]}})
 
 load_dotenv()
 PATH_TRIAGEM = os.getenv("PATH_TRIAGEM")
