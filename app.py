@@ -64,23 +64,37 @@ def get_processos():
     dados = extrair_tabela_md(PATH_TRIAGEM)
     return jsonify(dados)
 
+# Correção para POST /triagem/form
 @app.route('/triagem/form', methods=['POST'])
 def receber_processo_com_markdown():
+    print("📝 Solicitação POST /triagem/form recebida")
     try:
         data = request.get_json()
+        print(f"📄 Dados recebidos: {data}")
+        
         numero = limpar(data.get('numeroProcesso'))
         tema = limpar(data.get('tema'))
         data_dist = limpar(data.get('dataDistribuicao'))
         responsavel = limpar(data.get('responsavel'))
         status = limpar(data.get('status'))
-        ultima_att = limpar(data.get('ultimaAtualizacao'))
         markdown = limpar(data.get('markdown'))
         comentarios = limpar(data.get('comentarios'))
         dat_base64 = data.get('dat')
-        suspeitos = encontrar_suspeitos(markdown, './utils/suspeitos.txt' )
+        
+        # DATA ATUAL AUTOMÁTICA - sempre seta data de hoje
+        from datetime import datetime
+        ultima_att = datetime.now().strftime('%Y-%m-%d')
+        print(f"📅 Data de distribuição informada: {data_dist}")
+        print(f"📅 Última atualização automática: {ultima_att}")
+        
+        print(f"📄 Processando processo: {numero}")
+        
+        suspeitos = encontrar_suspeitos(markdown, './utils/suspeitos.txt')
+        print(f"🔍 Suspeitos encontrados: {suspeitos}")
 
-        if not markdown or not numero:
-            return jsonify({'error': 'Campos obrigatórios ausentes'}), 400
+        if not numero:
+            print("⚠️ Número do processo obrigatório")
+            return jsonify({'error': 'Número do processo é obrigatório'}), 400
 
         nome_arquivo_base = numero.replace('/', '-')
         os.makedirs(PASTA_DESTINO, exist_ok=True)
@@ -89,14 +103,20 @@ def receber_processo_com_markdown():
         caminho_md = os.path.join(PASTA_DESTINO, f"{nome_arquivo_base}.md")
         caminho_dat = os.path.join(PASTA_DAT, f"{nome_arquivo_base}.dat")
 
-        # Salva markdown
-        with open(caminho_md, 'w', encoding='utf-8') as f:
-            f.write(markdown)
+        # Salva markdown se fornecido
+        if markdown and markdown.strip():
+            with open(caminho_md, 'w', encoding='utf-8') as f:
+                f.write(markdown)
+            print(f"💾 Markdown salvo: {caminho_md}")
 
         # Salva .dat como base64 se enviado
-        if dat_base64:
+        if dat_base64 and dat_base64.strip():
             with open(caminho_dat, 'w', encoding='utf-8') as f:
                 f.write(dat_base64)
+            print(f"💾 Arquivo DAT salvo: {caminho_dat}")
+
+        # Converte lista de suspeitos para string
+        suspeitos_str = ', '.join(suspeitos) if suspeitos else ''
 
         nova_linha = (
             f"| {numero} "
@@ -105,15 +125,16 @@ def receber_processo_com_markdown():
             f"| {responsavel} "
             f"| {status} "
             f"| {ultima_att} "
-            f"| {suspeitos} "
+            f"| {suspeitos_str} "
             f"| {comentarios} |\n"
         )
 
         if not os.path.exists(PATH_TRIAGEM):
+            print(f"📝 Criando novo arquivo de triagem: {PATH_TRIAGEM}")
             with open(PATH_TRIAGEM, 'w', encoding='utf-8') as f:
                 f.write("# Tabela de Processos\n\n")
                 f.write("| Nº Processo | Tema | Data da Distribuição | Responsável | Status | Última Atualização | Suspeitos | Comentários |\n")
-                f.write("|-------------|------|-----------------------|-------------|--------|----------------------|-------------|\n")
+                f.write("|-------------|------|-----------------------|-------------|--------|----------------------|-----------|-------------|\n")
 
         with open(PATH_TRIAGEM, 'r', encoding='utf-8') as f:
             linhas = f.readlines()
@@ -130,51 +151,117 @@ def receber_processo_com_markdown():
         else:
             linhas += [
                 "| Nº Processo | Tema | Data da Distribuição | Responsável | Status | Última Atualização | Suspeitos | Comentários |\n",
-                "|-------------|------|-----------------------|-------------|--------|----------------------|-------------|\n",
+                "|-------------|------|-----------------------|-------------|--------|----------------------|-----------|-------------|\n",
                 nova_linha
             ]
 
         with open(PATH_TRIAGEM, 'w', encoding='utf-8') as f:
             f.writelines(linhas)
-
+        
+        print(f"✅ Processo {numero} salvo com sucesso")
         return jsonify({"message": "Processo e arquivos salvos com sucesso"}), 201
 
     except Exception as e:
-        print('❤',e)
+        print(f"❌ Erro em POST /triagem/form: {str(e)}")
         return jsonify({'error': str(e)}), 500
 
 
+# Correção para PUT /triagem/<numero>
 @app.route('/triagem/<numero>', methods=['PUT'])
 def editar_processo(numero):
+    print(f"✏️ Solicitação PUT /triagem/{numero} recebida")
     try:
         data = request.get_json()
+        print(f"📝 Dados recebidos: {data}")
+        
+        # Extrai processos existentes
         processos = extrair_tabela_md(PATH_TRIAGEM)
+        
+        # Encontra o processo existente para preservar suspeitos se necessário
+        processo_existente = next((p for p in processos if p['numeroProcesso'] == numero), None)
+        suspeitos_existentes = processo_existente.get('suspeitos', '') if processo_existente else ''
+        
+        # Remove o processo antigo da lista
         processos = [p for p in processos if p['numeroProcesso'] != numero]
-
-        processos.append({
+        
+        # DATA ATUAL AUTOMÁTICA - sempre seta data de hoje para última atualização
+        from datetime import datetime
+        ultima_att = datetime.now().strftime('%Y-%m-%d')
+        print(f"📅 Última atualização automática: {ultima_att}")
+        
+        # Determina como lidar com suspeitos
+        markdown = data.get('markdown', '')
+        suspeitos_calculados = ''
+        
+        if markdown and markdown.strip():
+            # Se há markdown novo, recalcula suspeitos
+            try:
+                suspeitos_lista = encontrar_suspeitos(markdown, './utils/suspeitos.txt')
+                suspeitos_calculados = ', '.join(suspeitos_lista) if suspeitos_lista else ''
+                print(f"🔍 Suspeitos recalculados: {suspeitos_calculados}")
+            except Exception as e:
+                print(f"⚠️ Erro ao calcular suspeitos: {e}")
+                suspeitos_calculados = suspeitos_existentes
+        else:
+            # Se não há markdown, mantém suspeitos existentes
+            suspeitos_calculados = suspeitos_existentes
+            print(f"🔄 Mantendo suspeitos existentes: {suspeitos_calculados}")
+        
+        # Salva markdown atualizado se fornecido
+        if markdown and markdown.strip():
+            nome_arquivo_base = numero.replace('/', '-')
+            os.makedirs(PASTA_DESTINO, exist_ok=True)
+            caminho_md = os.path.join(PASTA_DESTINO, f"{nome_arquivo_base}.md")
+            
+            with open(caminho_md, 'w', encoding='utf-8') as f:
+                f.write(markdown)
+            print(f"💾 Markdown atualizado: {caminho_md}")
+        
+        # Salva arquivo DAT se fornecido
+        dat_base64 = data.get('dat')
+        if dat_base64 and dat_base64.strip():
+            nome_arquivo_base = numero.replace('/', '-')
+            os.makedirs(PASTA_DAT, exist_ok=True)
+            caminho_dat = os.path.join(PASTA_DAT, f"{nome_arquivo_base}.dat")
+            
+            with open(caminho_dat, 'w', encoding='utf-8') as f:
+                f.write(dat_base64)
+            print(f"💾 Arquivo DAT atualizado: {caminho_dat}")
+        
+        # Cria o processo atualizado (SEMPRE usa data atual para última atualização)
+        processo_atualizado = {
             "numeroProcesso": limpar(data['numeroProcesso']),
             "tema": limpar(data['tema']),
-            "dataDistribuicao": limpar(data['dataDistribuicao']),
+            "dataDistribuicao": limpar(data['dataDistribuicao']),  # Mantém a data original
             "responsavel": limpar(data['responsavel']),
             "status": limpar(data['status']),
-            "ultimaAtualizacao": limpar(data['ultimaAtualizacao']),
-            "suspeitos": limpar(data['suspeitos']),
+            "ultimaAtualizacao": ultima_att,  # SEMPRE data atual
+            "suspeitos": suspeitos_calculados,
             "comentarios": limpar(data.get('comentarios', ''))
-        })
-
+        }
+        
+        # Adiciona o processo atualizado à lista
+        processos.append(processo_atualizado)
+        
+        # Reescreve o arquivo de triagem
         with open(PATH_TRIAGEM, 'w', encoding='utf-8') as f:
             f.write("# Tabela de Processos\n\n")
             f.write("| Nº Processo | Tema | Data da Distribuição | Responsável | Status | Última Atualização | Suspeitos | Comentários |\n")
-            f.write("|-------------|------|-----------------------|-------------|--------|----------------------|-------------|\n")
+            f.write("|-------------|------|-----------------------|-------------|--------|----------------------|-----------|-------------|\n")
             for p in processos:
                 f.write(
                     f"| {p['numeroProcesso']} | {p['tema']} | {p['dataDistribuicao']} | {p['responsavel']} "
-                    f"| {p['status']} | {p['ultimaAtualizacao']} | {p.get('comentarios', '')} |\n"
+                    f"| {p['status']} | {p['ultimaAtualizacao']} | {p['suspeitos']} | {p.get('comentarios', '')} |\n"
                 )
 
+        print(f"✅ Processo {numero} atualizado com sucesso")
         return jsonify({"message": "Processo atualizado com sucesso"}), 200
 
+    except KeyError as e:
+        print(f"❌ Campo obrigatório ausente em PUT /triagem/{numero}: {str(e)}")
+        return jsonify({'error': f'Campo obrigatório ausente: {str(e)}'}), 400
     except Exception as e:
+        print(f"❌ Erro em PUT /triagem/{numero}: {str(e)}")
         return jsonify({'error': str(e)}), 500
 
 @app.route('/triagem/<numero>', methods=['DELETE'])
