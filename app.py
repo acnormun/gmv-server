@@ -10,45 +10,53 @@ from datetime import datetime
 from pathlib import Path
 
 # ==========================================
-# 🔧 SETUP AUTOMÁTICO DE VARIÁVEIS DE AMBIENTE
+#  SETUP AUTOMÁTICO DE VARIÁVEIS DE AMBIENTE
 # ==========================================
+
+try:
+    from utils.anonimizacao import salvar_anonimizacao_md
+    ANONIMIZACAO_ATIVA = True
+    print("Módulo de anonimização carregado")
+except ImportError as e:
+    ANONIMIZACAO_ATIVA = False
+    print(f"Anonimização desabilitada: {e}")
 
 def setup_environment():
     """Setup automático das variáveis de ambiente com LIMPEZA FORÇADA DE CACHE"""
-    print("🔧 SETUP AUTOMÁTICO DO GMV SISTEMA")
+    print("SETUP AUTOMÁTICO DO GMV SISTEMA")
     print("=" * 40)
     
     # LIMPEZA FORÇADA - Remove TODAS as variáveis relacionadas ao GMV
     old_vars = ['PATH_TRIAGEM', 'PASTA_DESTINO', 'PASTA_DAT', 'GITHUB_TOKEN']
     removed_count = 0
     
-    print("🗑️ LIMPEZA FORÇADA DE CACHE:")
+    print("LIMPEZA FORÇADA DE CACHE:")
     for var in old_vars:
         if var in os.environ:
             old_value = os.environ[var]
             del os.environ[var]
-            print(f"   ❌ Removido: {var} = {old_value}")
+            print(f"  Removido: {var} = {old_value}")
             removed_count += 1
     
     if removed_count == 0:
-        print("   ✅ Nenhuma variável em cache (primeira execução)")
+        print("   Nenhuma variável em cache (primeira execução)")
     else:
-        print(f"   🗑️ {removed_count} variáveis antigas removidas do cache")
+        print(f"   {removed_count} variáveis antigas removidas do cache")
     
     # Verifica se python-dotenv está disponível
     try:
         from dotenv import load_dotenv
         dotenv_available = True
-        print("✅ python-dotenv disponível")
+        print("python-dotenv disponível")
     except ImportError:
         dotenv_available = False
-        print("⚠️ python-dotenv não instalado - usando método manual")
+        print("python-dotenv não instalado - usando método manual")
     
     # Procura arquivo .env
     env_file = '.env'
     env_path = os.path.abspath(env_file)
     
-    print(f"\n📄 VERIFICAÇÃO DO ARQUIVO .ENV:")
+    print(f"\nVERIFICAÇÃO DO ARQUIVO .ENV:")
     print(f"   Local: {env_path}")
     print(f"   Existe: {os.path.exists(env_file)}")
     
@@ -66,20 +74,20 @@ def setup_environment():
                         else:
                             print(f"      {i:2d}: {line}")
         except Exception as e:
-            print(f"   ❌ Erro ao ler .env: {e}")
+            print(f"    Erro ao ler .env: {e}")
     else:
-        print(f"   📝 Arquivo .env não encontrado, criando...")
+        print(f"   Arquivo .env não encontrado, criando...")
         create_default_env()
     
-    print(f"\n🔄 CARREGAMENTO FORÇADO:")
+    print(f"\n CARREGAMENTO FORÇADO:")
     # Carrega variáveis com OVERRIDE forçado
     if dotenv_available:
-        print(f"   📥 Usando python-dotenv com override=True")
+        print(f"    Usando python-dotenv com override=True")
         from dotenv import load_dotenv
         result = load_dotenv(env_file, override=True, verbose=True)
-        print(f"   📊 Resultado: {result}")
+        print(f"    Resultado: {result}")
     else:
-        print(f"   📥 Carregando manualmente...")
+        print(f"    Carregando manualmente...")
         load_env_manual(env_file)
     
     # Verifica se carregou corretamente
@@ -87,14 +95,9 @@ def setup_environment():
     PASTA_DESTINO = os.getenv("PASTA_DESTINO")
     PASTA_DAT = os.getenv("PASTA_DAT")
     
-    print(f"\n📋 VARIÁVEIS CARREGADAS (ATUAL):")
-    print(f"   PATH_TRIAGEM: {PATH_TRIAGEM}")
-    print(f"   PASTA_DESTINO: {PASTA_DESTINO}")
-    print(f"   PASTA_DAT: {PASTA_DAT}")
-    
     # Se ainda não carregou, tenta novamente
     if not PATH_TRIAGEM or not PASTA_DESTINO:
-        print("\n⚠️ Variáveis essenciais não definidas! Tentando corrigir...")
+        print("\n Variáveis essenciais não definidas! Tentando corrigir...")
         
         # Recria .env
         create_default_env()
@@ -111,7 +114,7 @@ def setup_environment():
         PASTA_DESTINO = os.getenv("PASTA_DESTINO")
         PASTA_DAT = os.getenv("PASTA_DAT")
         
-        print(f"   📋 APÓS CORREÇÃO:")
+        print(f"    APÓS CORREÇÃO:")
         print(f"   PATH_TRIAGEM: {PATH_TRIAGEM}")
         print(f"   PASTA_DESTINO: {PASTA_DESTINO}")
         print(f"   PASTA_DAT: {PASTA_DAT}")
@@ -119,7 +122,7 @@ def setup_environment():
     # Cria estrutura de pastas
     setup_directories()
     
-    print("✅ Setup concluído!\n")
+    print("Setup concluído!\n")
     return PATH_TRIAGEM, PASTA_DESTINO, PASTA_DAT
 
 def create_default_env():
@@ -162,11 +165,11 @@ GITHUB_TOKEN=seu_token_aqui
     try:
         with open('.env', 'w', encoding='utf-8') as f:
             f.write(env_content)
-        print(f"   ✅ Arquivo .env criado: {os.path.abspath('.env')}")
-        print(f"   📝 Edite o arquivo se quiser usar outros caminhos")
+        print(f"    Arquivo .env criado: {os.path.abspath('.env')}")
+        print(f"    Edite o arquivo se quiser usar outros caminhos")
         return True
     except Exception as e:
-        print(f"   ❌ Erro ao criar .env: {e}")
+        print(f"    Erro ao criar .env: {e}")
         return False
 
 def load_env_manual(env_file):
@@ -200,25 +203,25 @@ def load_env_manual(env_file):
                         
                         # Log (esconde tokens)
                         if 'TOKEN' in key.upper() or 'PASSWORD' in key.upper():
-                            print(f"      ✅ {key} = ***HIDDEN***")
+                            print(f"      {key} = ***HIDDEN***")
                         else:
-                            print(f"      ✅ {key} = {value}")
+                            print(f"      {key} = {value}")
                             
                     except Exception as e:
-                        print(f"      ⚠️ Erro na linha {line_num}: {original_line.strip()} - {e}")
+                        print(f"       Erro na linha {line_num}: {original_line.strip()} - {e}")
                 else:
-                    print(f"      ⚠️ Linha {line_num} inválida (sem =): {original_line.strip()}")
+                    print(f"       Linha {line_num} inválida (sem =): {original_line.strip()}")
         
-        print(f"   📊 Total: {len(loaded_vars)} variáveis carregadas manualmente")
+        print(f"    Total: {len(loaded_vars)} variáveis carregadas manualmente")
         return True
         
     except Exception as e:
-        print(f"   ❌ Erro ao carregar .env manualmente: {e}")
+        print(f"    Erro ao carregar .env manualmente: {e}")
         return False
 
 def setup_directories():
     """Cria estrutura de diretórios"""
-    print("📁 Verificando/criando diretórios...")
+    print(" Verificando/criando diretórios...")
     
     PATH_TRIAGEM = os.getenv("PATH_TRIAGEM")
     PASTA_DESTINO = os.getenv("PASTA_DESTINO") 
@@ -229,9 +232,9 @@ def setup_directories():
         if pasta:
             try:
                 os.makedirs(pasta, exist_ok=True)
-                print(f"   ✅ {nome}: {pasta}")
+                print(f"   {nome}: {pasta}")
             except Exception as e:
-                print(f"   ❌ Erro ao criar {nome}: {e}")
+                print(f"   Erro ao criar {nome}: {e}")
     
     # Cria arquivo de triagem se não existir
     if PATH_TRIAGEM:
@@ -250,28 +253,28 @@ def setup_directories():
 """
                 with open(PATH_TRIAGEM, 'w', encoding='utf-8') as f:
                     f.write(triagem_content)
-                print(f"   ✅ Arquivo de triagem criado: {PATH_TRIAGEM}")
+                print(f"   Arquivo de triagem criado: {PATH_TRIAGEM}")
             else:
-                print(f"   ✅ PATH_TRIAGEM: {PATH_TRIAGEM}")
+                print(f"   PATH_TRIAGEM: {PATH_TRIAGEM}")
         except Exception as e:
-            print(f"   ❌ Erro ao criar arquivo de triagem: {e}")
+            print(f"   Erro ao criar arquivo de triagem: {e}")
 
 # ==========================================
-# 🚀 INICIALIZAÇÃO DO SETUP
+#  INICIALIZAÇÃO DO SETUP
 # ==========================================
 
-print("🚀 GMV SISTEMA - INICIALIZAÇÃO COM LIMPEZA DE CACHE")
+print(" GMV SISTEMA - INICIALIZAÇÃO COM LIMPEZA DE CACHE")
 print("=" * 60)
-print(f"📁 Diretório de trabalho: {os.getcwd()}")
-print(f"📄 Procurando .env em: {os.path.abspath('.env')}")
+print(f" Diretório de trabalho: {os.getcwd()}")
+print(f" Procurando .env em: {os.path.abspath('.env')}")
 
 # Executa setup automático COM LIMPEZA FORÇADA
 PATH_TRIAGEM, PASTA_DESTINO, PASTA_DAT = setup_environment()
 
 # Verificação final
 if not PATH_TRIAGEM or not PASTA_DESTINO:
-    print("\n❌ ERRO CRÍTICO: Não foi possível configurar variáveis de ambiente!")
-    print("🔧 DEPURAÇÃO:")
+    print("\n ERRO CRÍTICO: Não foi possível configurar variáveis de ambiente!")
+    print(" DEPURAÇÃO:")
     print("   1. Verifique se você tem permissão para criar arquivos neste diretório")
     print("   2. Verifique se o arquivo .env foi criado corretamente")
     print("   3. Tente executar como administrador")
@@ -279,7 +282,7 @@ if not PATH_TRIAGEM or not PASTA_DESTINO:
     sys.exit(1)
 
 # TESTE FINAL - Confirma que variáveis corretas estão sendo usadas
-print("🧪 TESTE FINAL DE VERIFICAÇÃO:")
+print(" TESTE FINAL DE VERIFICAÇÃO:")
 print("=" * 40)
 final_vars = {
     'PATH_TRIAGEM': os.getenv('PATH_TRIAGEM'),
@@ -288,17 +291,17 @@ final_vars = {
 }
 
 for var_name, var_value in final_vars.items():
-    print(f"✅ {var_name} = {var_value}")
+    print(f"{var_name} = {var_value}")
     
     # Verifica se o caminho é absoluto ou relativo
     if var_value:
         abs_path = os.path.abspath(var_value)
-        print(f"   📍 Caminho absoluto: {abs_path}")
+        print(f"   Caminho absoluto: {abs_path}")
 
-print("\n🎯 CONFIRMAÇÃO:")
-print(f"✅ Cache de variáveis antigas foi limpo")
-print(f"✅ Arquivo .env atual foi carregado")
-print(f"✅ {len([v for v in final_vars.values() if v])} variáveis essenciais definidas")
+print("\nCONFIRMAÇÃO:")
+print(f"Cache de variáveis antigas foi limpo")
+print(f"Arquivo .env atual foi carregado")
+print(f"{len([v for v in final_vars.values() if v])} variáveis essenciais definidas")
 print("=" * 60)
 
 # ==========================================
@@ -308,9 +311,9 @@ print("=" * 60)
 # Importa utils só depois do setup
 try:
     from utils.suspeicao import encontrar_suspeitos
-    print("✅ Módulo de suspeição carregado")
+    print("Módulo de suspeição carregado")
 except ImportError as e:
-    print(f"⚠️ Aviso: Módulo de suspeição não encontrado: {e}")
+    print(f"Aviso: Módulo de suspeição não encontrado: {e}")
     def encontrar_suspeitos(texto, arquivo):
         return []
 
@@ -331,15 +334,15 @@ app = Flask(__name__)
 try:
     from flask_cors import CORS
     CORS(app, resources={r"/*": {"origins": ["http://localhost:5173"]}})
-    print("✅ CORS configurado")
+    print("CORS configurado")
 except ImportError:
-    print("⚠️ flask-cors não instalado - CORS pode não funcionar")
+    print("flask-cors não instalado - CORS pode não funcionar")
 
 # Log de inicialização
-logger.info(f"🚀 Servidor Flask iniciando com PID: {os.getpid()}")
-logger.info(f"📁 PATH_TRIAGEM: {PATH_TRIAGEM}")
-logger.info(f"📁 PASTA_DESTINO: {PASTA_DESTINO}")
-logger.info(f"📁 PASTA_DAT: {PASTA_DAT}")
+logger.info(f"Servidor Flask iniciando com PID: {os.getpid()}")
+logger.info(f"PATH_TRIAGEM: {PATH_TRIAGEM}")
+logger.info(f" PASTA_DESTINO: {PASTA_DESTINO}")
+logger.info(f" PASTA_DAT: {PASTA_DAT}")
 
 # ==========================================
 # 🛠️ FUNÇÕES AUXILIARES
@@ -355,7 +358,7 @@ def extrair_tabela_md(arquivo_md):
 
         inicio = next((i for i, l in enumerate(linhas) if re.match(r'^\|.+\|$', l)), None)
         if inicio is None:
-            logger.warning(f"⚠️ Nenhuma tabela encontrada em {arquivo_md}")
+            logger.warning(f" Nenhuma tabela encontrada em {arquivo_md}")
             return []
 
         tabela_linhas = []
@@ -367,7 +370,7 @@ def extrair_tabela_md(arquivo_md):
             tabela_linhas.append(linha.strip())
 
         if not tabela_linhas:
-            logger.warning(f"⚠️ Tabela vazia em {arquivo_md}")
+            logger.warning(f" Tabela vazia em {arquivo_md}")
             return []
 
         tabela_str = '\n'.join(tabela_linhas)
@@ -377,7 +380,7 @@ def extrair_tabela_md(arquivo_md):
             df = df.dropna(axis=1, how='all')
             df.columns = [col.strip() for col in df.columns]
         except Exception as e:
-            logger.error(f"❌ Erro ao processar CSV: {e}")
+            logger.error(f" Erro ao processar CSV: {e}")
             return []
 
         processos = []
@@ -393,11 +396,11 @@ def extrair_tabela_md(arquivo_md):
                 "comentarios": limpar(row.get("Comentários")) if "Comentários" in row else ""
             })
         
-        logger.info(f"📋 {len(processos)} processos extraídos de {arquivo_md}")
+        logger.info(f" {len(processos)} processos extraídos de {arquivo_md}")
         return processos
         
     except Exception as e:
-        logger.error(f"❌ Erro ao extrair tabela de {arquivo_md}: {str(e)}")
+        logger.error(f" Erro ao extrair tabela de {arquivo_md}: {str(e)}")
         return []
 
 # ==========================================
@@ -433,22 +436,22 @@ def process_info():
 
 @app.route('/triagem', methods=['GET'])
 def get_processos():
-    logger.info("📖 Solicitação GET /triagem recebida")
+    logger.info(" Solicitação GET /triagem recebida")
     try:
         dados = extrair_tabela_md(PATH_TRIAGEM)
-        logger.info(f"✅ Retornando {len(dados)} processos")
+        logger.info(f" Retornando {len(dados)} processos")
         return jsonify(dados)
     except Exception as e:
-        logger.error(f"❌ Erro em GET /triagem: {str(e)}")
+        logger.error(f" Erro em GET /triagem: {str(e)}")
         return jsonify({'error': str(e)}), 500
 
 # Correção para POST /triagem/form
 @app.route('/triagem/form', methods=['POST'])
 def receber_processo_com_markdown():
-    print("📝 Solicitação POST /triagem/form recebida")
+    print(" Solicitação POST /triagem/form recebida")
     try:
         data = request.get_json()
-        print(f"📄 Dados recebidos: {data}")
+        print(f" Dados recebidos: {data}")
         
         numero = limpar(data.get('numeroProcesso'))
         tema = limpar(data.get('tema'))
@@ -462,25 +465,30 @@ def receber_processo_com_markdown():
         # DATA ATUAL AUTOMÁTICA - sempre seta data de hoje
         from datetime import datetime
         ultima_att = datetime.now().strftime('%Y-%m-%d')
-        print(f"📅 Data de distribuição informada: {data_dist}")
-        print(f"📅 Última atualização automática: {ultima_att}")
         
-        print(f"📄 Processando processo: {numero}")
-        
-        suspeitos = encontrar_suspeitos(markdown, './utils/suspeitos.txt')
-        print(f"🔍 Suspeitos encontrados: {suspeitos}")
+        # === PASSO 1: BUSCA SUSPEITOS NO TEXTO ORIGINAL (ANTES DE ANONIMIZAR) ===
+        suspeitos = []
+        if markdown and markdown.strip():
+            try:
+                suspeitos = encontrar_suspeitos(markdown, './utils/suspeitos.txt')
+                if suspeitos:
+                    for i, suspeito in enumerate(suspeitos, 1):
+                        print(f"   {i}. {suspeito}")
+                else:
+                    print("   Nenhum suspeito detectado")
+            except Exception as e:
+                print(f" Erro na busca de suspeitos: {e}")
+                suspeitos = []
 
         if not numero:
-            print("⚠️ Número do processo obrigatório")
+            print(" Número do processo obrigatório")
             return jsonify({'error': 'Número do processo é obrigatório'}), 400
         
-        logger.info(f"📄 Processando processo: {numero}")
-        
-        suspeitos = encontrar_suspeitos(markdown, './utils/suspeitos.txt')
-        logger.info(f"🔍 Suspeitos encontrados: {suspeitos}")
+        logger.info(f" Processando processo: {numero}")
+        logger.info(f" Suspeitos encontrados: {suspeitos}")
 
         if not markdown or not numero:
-            logger.warning("⚠️ Campos obrigatórios ausentes")
+            logger.warning(" Campos obrigatórios ausentes")
             return jsonify({'error': 'Campos obrigatórios ausentes'}), 400
 
         nome_arquivo_base = numero.replace('/', '-')
@@ -490,22 +498,46 @@ def receber_processo_com_markdown():
         caminho_md = os.path.join(PASTA_DESTINO, f"{nome_arquivo_base}.md")
         caminho_dat = os.path.join(PASTA_DAT, f"{nome_arquivo_base}.dat")
 
+        # === PASSO 2: SALVA ARQUIVOS ORIGINAIS ===
+        print(" [PASSO 2] Salvando arquivos originais...")
+        
         # Salva markdown se fornecido
         if markdown and markdown.strip():
             with open(caminho_md, 'w', encoding='utf-8') as f:
                 f.write(markdown)
-            print(f"💾 Markdown salvo: {caminho_md}")
-        # Salva markdown
-        with open(caminho_md, 'w', encoding='utf-8') as f:
-            f.write(markdown)
-        logger.info(f"💾 Markdown salvo: {caminho_md}")
+            print(f" Markdown salvo: {caminho_md}")
+            logger.info(f"Markdown salvo: {caminho_md}")
 
         # Salva .dat como base64 se enviado
         if dat_base64 and dat_base64.strip():
             with open(caminho_dat, 'w', encoding='utf-8') as f:
                 f.write(dat_base64)
-            print(f"💾 Arquivo DAT salvo: {caminho_dat}")
+            print(f" Arquivo DAT salvo: {caminho_dat}")
 
+        # === PASSO 3: ANONIMIZAÇÃO AUTOMÁTICA ===
+        print(" [PASSO 3] Iniciando anonimização automática...")
+        
+        arquivos_anonimizados = {}
+        total_substituicoes = 0
+        
+        if ANONIMIZACAO_ATIVA:
+            from utils.anonimizacao import carregar_suspeitos_mapeados, salvar_anonimizacao_md
+            try:
+                print(f" Executando anonimização para processo {numero}")
+                mapa_suspeitos = carregar_suspeitos_mapeados("utils/suspeitos.txt")
+                salvar_anonimizacao_md(markdown, nome_arquivo_base, mapa_suspeitos)
+                total_substituicoes = 1 
+                arquivos_anonimizados = {
+                    "md": os.path.join(PASTA_DESTINO, "anonimizados", f"{nome_arquivo_base}_anon.md"),
+                    "mapa": os.path.join(PASTA_DESTINO, "mapas", f"{nome_arquivo_base}_mapa.md")
+                }
+            except Exception as e:
+                print(f" Erro durante anonimização: {e}")
+                logger.error(f" Erro durante anonimização: {e}")
+
+        # === PASSO 4: ATUALIZA TABELA DE TRIAGEM ===
+        print(" [PASSO 4] Atualizando tabela de triagem...")
+        
         # Converte lista de suspeitos para string
         suspeitos_str = ', '.join(suspeitos) if suspeitos else ''
 
@@ -521,8 +553,8 @@ def receber_processo_com_markdown():
         )
 
         if not os.path.exists(PATH_TRIAGEM):
-            print(f"📝 Criando novo arquivo de triagem: {PATH_TRIAGEM}")
-            logger.info(f"📝 Criando novo arquivo de triagem: {PATH_TRIAGEM}")
+            print(f" Criando novo arquivo de triagem: {PATH_TRIAGEM}")
+            logger.info(f" Criando novo arquivo de triagem: {PATH_TRIAGEM}")
             with open(PATH_TRIAGEM, 'w', encoding='utf-8') as f:
                 f.write("# Tabela de Processos\n\n")
                 f.write("| Nº Processo | Tema | Data da Distribuição | Responsável | Status | Última Atualização | Suspeitos | Comentários |\n")
@@ -552,25 +584,41 @@ def receber_processo_com_markdown():
         with open(PATH_TRIAGEM, 'w', encoding='utf-8') as f:
             f.writelines(linhas)
         
-        print(f"✅ Processo {numero} salvo com sucesso")
+        # === RESULTADO FINAL ===
+        print(f" Processo {numero} salvo com sucesso")
+        print(f"    Suspeitos detectados: {len(suspeitos)}")
+        print(f"    Substituições anonimização: {total_substituicoes}")
+        print(f"    Arquivos anonimizados: {len(arquivos_anonimizados)}")
         
-        logger.info(f"✅ Processo {numero} salvo com sucesso")
-        return jsonify({"message": "Processo e arquivos salvos com sucesso"}), 201
+        resultado_final = {
+            "message": "Processo e arquivos salvos com sucesso",
+            "numeroProcesso": numero,
+            "suspeitos": suspeitos,
+            "anonimizacao": {
+                "ativa": ANONIMIZACAO_ATIVA,
+                "substituicoes": total_substituicoes,
+                "arquivos": arquivos_anonimizados
+            }
+        }
+        
+        logger.info(f" Processo {numero} salvo com sucesso")
+        return jsonify(resultado_final), 201
 
     except Exception as e:
-        print(f"❌ Erro em POST /triagem/form: {str(e)}")
-        logger.error(f"❌ Erro em POST /triagem/form: {str(e)}")
+        print(f" Erro em POST /triagem/form: {str(e)}")
+        logger.error(f" Erro em POST /triagem/form: {str(e)}")
+        import traceback
+        traceback.print_exc()
         return jsonify({'error': str(e)}), 500
-
 
 # Correção para PUT /triagem/<numero>
 @app.route('/triagem/<numero>', methods=['PUT'])
 def editar_processo(numero):
-    print(f"✏️ Solicitação PUT /triagem/{numero} recebida")
-    logger.info(f"✏️ Solicitação PUT /triagem/{numero} recebida")
+    print(f" Solicitação PUT /triagem/{numero} recebida")
+    logger.info(f" Solicitação PUT /triagem/{numero} recebida")
     try:
         data = request.get_json()
-        print(f"📝 Dados recebidos: {data}")
+        print(f" Dados recebidos: {data}")
         
         # Extrai processos existentes
         processos = extrair_tabela_md(PATH_TRIAGEM)
@@ -585,7 +633,7 @@ def editar_processo(numero):
         # DATA ATUAL AUTOMÁTICA - sempre seta data de hoje para última atualização
         from datetime import datetime
         ultima_att = datetime.now().strftime('%Y-%m-%d')
-        print(f"📅 Última atualização automática: {ultima_att}")
+        print(f" Última atualização automática: {ultima_att}")
         
         # Determina como lidar com suspeitos
         markdown = data.get('markdown', '')
@@ -596,14 +644,14 @@ def editar_processo(numero):
             try:
                 suspeitos_lista = encontrar_suspeitos(markdown, './utils/suspeitos.txt')
                 suspeitos_calculados = ', '.join(suspeitos_lista) if suspeitos_lista else ''
-                print(f"🔍 Suspeitos recalculados: {suspeitos_calculados}")
+                print(f" Suspeitos recalculados: {suspeitos_calculados}")
             except Exception as e:
-                print(f"⚠️ Erro ao calcular suspeitos: {e}")
+                print(f" Erro ao calcular suspeitos: {e}")
                 suspeitos_calculados = suspeitos_existentes
         else:
             # Se não há markdown, mantém suspeitos existentes
             suspeitos_calculados = suspeitos_existentes
-            print(f"🔄 Mantendo suspeitos existentes: {suspeitos_calculados}")
+            print(f" Mantendo suspeitos existentes: {suspeitos_calculados}")
         
         # Salva markdown atualizado se fornecido
         if markdown and markdown.strip():
@@ -613,7 +661,7 @@ def editar_processo(numero):
             
             with open(caminho_md, 'w', encoding='utf-8') as f:
                 f.write(markdown)
-            print(f"💾 Markdown atualizado: {caminho_md}")
+            print(f" Markdown atualizado: {caminho_md}")
         
         # Salva arquivo DAT se fornecido
         dat_base64 = data.get('dat')
@@ -624,7 +672,7 @@ def editar_processo(numero):
             
             with open(caminho_dat, 'w', encoding='utf-8') as f:
                 f.write(dat_base64)
-            print(f"💾 Arquivo DAT atualizado: {caminho_dat}")
+            print(f"Arquivo DAT atualizado: {caminho_dat}")
         
         # Cria o processo atualizado (SEMPRE usa data atual para última atualização)
         processo_atualizado = {
@@ -653,16 +701,16 @@ def editar_processo(numero):
                     f"| {p['status']} | {p['ultimaAtualizacao']} | {p['suspeitos']} | {p.get('comentarios', '')} |\n"
                 )
 
-        print(f"✅ Processo {numero} atualizado com sucesso")
-        logger.info(f"✅ Processo {numero} atualizado com sucesso")
+        print(f" Processo {numero} atualizado com sucesso")
+        logger.info(f" Processo {numero} atualizado com sucesso")
         return jsonify({"message": "Processo atualizado com sucesso"}), 200
 
     except KeyError as e:
-        print(f"❌ Campo obrigatório ausente em PUT /triagem/{numero}: {str(e)}")
+        print(f" Campo obrigatório ausente em PUT /triagem/{numero}: {str(e)}")
         return jsonify({'error': f'Campo obrigatório ausente: {str(e)}'}), 400
     except Exception as e:
-        print(f"❌ Erro em PUT /triagem/{numero}: {str(e)}")
-        logger.error(f"❌ Erro em PUT /triagem/{numero}: {str(e)}")
+        print(f" Erro em PUT /triagem/{numero}: {str(e)}")
+        logger.error(f" Erro em PUT /triagem/{numero}: {str(e)}")
         return jsonify({'error': str(e)}), 500
 
 @app.route('/triagem/<numero>', methods=['DELETE'])
@@ -685,34 +733,34 @@ def deletar_processo(numero):
         caminho_md = os.path.join(PASTA_DESTINO, f"{numero.replace('/', '-')}.md")
         if os.path.exists(caminho_md):
             os.remove(caminho_md)
-            logger.info(f"🗑️ Arquivo markdown removido: {caminho_md}")
+            logger.info(f" Arquivo markdown removido: {caminho_md}")
 
-        logger.info(f"✅ Processo {numero} excluído com sucesso")
+        logger.info(f" Processo {numero} excluído com sucesso")
         return jsonify({"message": "Processo excluído com sucesso"}), 200
 
     except Exception as e:
-        logger.error(f"❌ Erro em DELETE /triagem/{numero}: {str(e)}")
+        logger.error(f" Erro em DELETE /triagem/{numero}: {str(e)}")
         return jsonify({'error': str(e)}), 500
 
 @app.route('/triagem/<numero>/dat', methods=['GET'])
 def obter_dat(numero):
-    logger.info(f"📁 Solicitação GET /triagem/{numero}/dat recebida")
+    logger.info(f" Solicitação GET /triagem/{numero}/dat recebida")
     try:
         nome_arquivo = f"{numero.replace('/', '-')}.dat"
         caminho = os.path.join(PASTA_DAT, nome_arquivo)
 
         if not os.path.exists(caminho):
-            logger.warning(f"⚠️ Arquivo DAT não encontrado: {caminho}")
+            logger.warning(f" Arquivo DAT não encontrado: {caminho}")
             return jsonify({'error': 'Arquivo .dat não encontrado'}), 404
 
         with open(caminho, 'r', encoding='utf-8') as f:
             dat_base64 = f.read()
 
-        logger.info(f"✅ Arquivo DAT retornado: {caminho}")
+        logger.info(f"Arquivo DAT retornado: {caminho}")
         return jsonify({'base64': dat_base64}), 200
 
     except Exception as e:
-        logger.error(f"❌ Erro em GET /triagem/{numero}/dat: {str(e)}")
+        logger.error(f" Erro em GET /triagem/{numero}/dat: {str(e)}")
         return jsonify({'error': str(e)}), 500
 
 # ==========================================
@@ -720,8 +768,8 @@ def obter_dat(numero):
 # ==========================================
 
 def signal_handler(sig, frame):
-    logger.info(f"🛑 Sinal {sig} recebido. Finalizando servidor graciosamente...")
-    logger.info(f"🏁 Servidor com PID {os.getpid()} finalizado")
+    logger.info(f" Sinal {sig} recebido. Finalizando servidor graciosamente...")
+    logger.info(f" Servidor com PID {os.getpid()} finalizado")
     sys.exit(0)
 
 # Registra os handlers de sinal
@@ -730,14 +778,14 @@ signal.signal(signal.SIGINT, signal_handler)
 
 if __name__ == '__main__':
     try:
-        print(f"\n🌟 SERVIDOR GMV SISTEMA PRONTO!")
+        print(f"\n SERVIDOR GMV SISTEMA PRONTO!")
         print("=" * 40)
-        print(f"🔗 URL: http://127.0.0.1:5000")
-        print(f"🩺 Health: http://127.0.0.1:5000/health")
-        print(f"📊 Info: http://127.0.0.1:5000/process-info")
-        print(f"📁 Dados: {os.path.abspath(os.path.dirname(PATH_TRIAGEM))}")
+        print(f" URL: http://127.0.0.1:5000")
+        print(f" Health: http://127.0.0.1:5000/health")
+        print(f" Info: http://127.0.0.1:5000/process-info")
+        print(f" Dados: {os.path.abspath(os.path.dirname(PATH_TRIAGEM))}")
         print("=" * 40)
-        print(f"📋 USANDO AS SEGUINTES CONFIGURAÇÕES:")
+        print(f" USANDO AS SEGUINTES CONFIGURAÇÕES:")
         print(f"   PATH_TRIAGEM: {PATH_TRIAGEM}")
         print(f"   PASTA_DESTINO: {PASTA_DESTINO}")
         print(f"   PASTA_DAT: {PASTA_DAT}")
@@ -748,8 +796,8 @@ if __name__ == '__main__':
         
     except Exception as e:
         logger.error(f"Erro ao iniciar servidor: {e}")
-        print(f"\n❌ ERRO CRÍTICO: {str(e)}")
-        print("\n🔧 POSSÍVEIS SOLUÇÕES:")
+        print(f"\n ERRO CRÍTICO: {str(e)}")
+        print("\n POSSÍVEIS SOLUÇÕES:")
         print("1. Verifique se a porta 5000 está livre")
         print("2. Execute como administrador")
         print("3. Verifique permissões de arquivo")
