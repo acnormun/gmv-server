@@ -1,0 +1,59 @@
+2025-06-10 16:33:25,312 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-10 16:33:25,313 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-10 16:33:25,315 - INFO -  * Restarting with stat
+2025-06-10 16:33:26,132 - WARNING -  * Debugger is active!
+2025-06-10 16:33:26,148 - INFO -  * Debugger PIN: 133-666-604
+2025-06-10 16:33:58,113 - INFO - 127.0.0.1 - - [10/Jun/2025 16:33:58] "GET /triagem HTTP/1.1" 200 -
+2025-06-11 09:22:15,564 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-11 09:22:15,564 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-11 09:22:15,564 - INFO -  * Restarting with stat
+2025-06-11 09:22:16,475 - WARNING -  * Debugger is active!
+2025-06-11 09:22:16,484 - INFO -  * Debugger PIN: 133-666-604
+2025-06-11 09:30:13,548 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-11 09:30:13,548 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-11 09:30:13,548 - INFO -  * Restarting with stat
+2025-06-11 09:30:14,637 - WARNING -  * Debugger is active!
+2025-06-11 09:30:14,652 - INFO -  * Debugger PIN: 133-666-604
+2025-06-11 09:30:14,686 - INFO - 127.0.0.1 - - [11/Jun/2025 09:30:14] "[33mGET / HTTP/1.1[0m" 404 -
+2025-06-11 09:30:16,291 - INFO - 127.0.0.1 - - [11/Jun/2025 09:30:16] "GET /triagem HTTP/1.1" 200 -
+2025-06-11 09:46:12,696 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-11 09:46:12,696 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-11 09:46:12,696 - INFO -  * Restarting with stat
+2025-06-11 09:46:13,856 - WARNING -  * Debugger is active!
+2025-06-11 09:46:13,870 - INFO -  * Debugger PIN: 133-666-604
+2025-06-11 09:46:13,903 - INFO - 127.0.0.1 - - [11/Jun/2025 09:46:13] "[33mGET / HTTP/1.1[0m" 404 -
+2025-06-11 09:46:14,779 - INFO - 127.0.0.1 - - [11/Jun/2025 09:46:14] "GET /triagem HTTP/1.1" 200 -
+2025-06-11 09:50:26,179 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-11 09:50:26,179 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-11 09:50:26,179 - INFO -  * Restarting with stat
+2025-06-11 09:50:27,146 - WARNING -  * Debugger is active!
+2025-06-11 09:50:27,156 - INFO -  * Debugger PIN: 133-666-604
+2025-06-11 09:50:27,189 - INFO - 127.0.0.1 - - [11/Jun/2025 09:50:27] "[33mGET / HTTP/1.1[0m" 404 -
+2025-06-11 09:50:28,012 - INFO - 127.0.0.1 - - [11/Jun/2025 09:50:28] "GET /triagem HTTP/1.1" 200 -
+2025-06-11 10:32:42,469 - INFO - Iniciando servidor Flask na porta 5000 com PID: 12872
+2025-06-11 10:32:42,542 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-11 10:32:42,542 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-11 10:32:42,542 - INFO -  * Restarting with stat
+2025-06-11 10:32:43,811 - INFO - Iniciando servidor Flask na porta 5000 com PID: 17484
+2025-06-11 10:32:43,848 - WARNING -  * Debugger is active!
+2025-06-11 10:32:43,858 - INFO -  * Debugger PIN: 133-666-604
+2025-06-11 10:33:06,031 - INFO - 127.0.0.1 - - [11/Jun/2025 10:33:06] "GET /triagem HTTP/1.1" 200 -
+2025-06-11 10:33:06,754 - INFO - 127.0.0.1 - - [11/Jun/2025 10:33:06] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-11 10:33:09,949 - INFO - Servidor Flask com PID 17484 finalizado
+2025-06-11 10:33:10,231 - INFO - Servidor Flask com PID 12872 finalizado
+2025-06-11 10:33:43,865 - INFO - Iniciando servidor Flask na porta 5000 com PID: 17744
+2025-06-11 10:33:43,903 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-11 10:33:43,903 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-11 10:33:43,916 - INFO -  * Restarting with stat
+2025-06-11 10:33:45,001 - INFO - Iniciando servidor Flask na porta 5000 com PID: 23372
+2025-06-11 10:33:45,035 - WARNING -  * Debugger is active!
+2025-06-11 10:33:45,053 - INFO -  * Debugger PIN: 133-666-604
+2025-06-11 10:33:54,514 - INFO - Servidor Flask com PID 23372 finalizado
+2025-06-11 10:33:54,654 - INFO - Servidor Flask com PID 17744 finalizado
