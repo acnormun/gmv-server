@@ -1,1 +1,14 @@
+# Arquivos de ambiente
 .env
+.env.local
+.env.*.local
+
+# Cache do Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Pastas específicas
+utils/__pycache__/
+utils/*.pyc

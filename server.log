@@ -57,3 +57,1022 @@
 2025-06-11 10:33:45,053 - INFO -  * Debugger PIN: 133-666-604
 2025-06-11 10:33:54,514 - INFO - Servidor Flask com PID 23372 finalizado
 2025-06-11 10:33:54,654 - INFO - Servidor Flask com PID 17744 finalizado
+2025-06-12 09:09:35,395 - INFO - Iniciando servidor Flask na porta 5000 com PID: 20504
+2025-06-12 09:09:35,421 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-12 09:09:35,422 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-12 09:09:35,423 - INFO -  * Restarting with stat
+2025-06-12 09:09:36,175 - INFO - Iniciando servidor Flask na porta 5000 com PID: 16644
+2025-06-12 09:09:36,192 - WARNING -  * Debugger is active!
+2025-06-12 09:09:36,209 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 09:09:40,618 - INFO - 127.0.0.1 - - [12/Jun/2025 09:09:40] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 09:12:18,354 - INFO - 127.0.0.1 - - [12/Jun/2025 09:12:18] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 09:12:22,153 - INFO - 127.0.0.1 - - [12/Jun/2025 09:12:22] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 09:13:27,790 - INFO - 127.0.0.1 - - [12/Jun/2025 09:13:27] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 09:14:24,728 - INFO - 127.0.0.1 - - [12/Jun/2025 09:14:24] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 09:14:26,058 - INFO - 127.0.0.1 - - [12/Jun/2025 09:14:26] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 09:17:07,386 - INFO - 127.0.0.1 - - [12/Jun/2025 09:17:07] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 09:17:11,217 - INFO - 127.0.0.1 - - [12/Jun/2025 09:17:11] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 09:18:57,706 - INFO - 127.0.0.1 - - [12/Jun/2025 09:18:57] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 09:19:11,411 - INFO - 127.0.0.1 - - [12/Jun/2025 09:19:11] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 09:19:42,064 - INFO - 127.0.0.1 - - [12/Jun/2025 09:19:42] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 09:20:11,777 - INFO - 127.0.0.1 - - [12/Jun/2025 09:20:11] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 09:20:26,043 - INFO - 127.0.0.1 - - [12/Jun/2025 09:20:26] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 09:20:49,715 - INFO - 127.0.0.1 - - [12/Jun/2025 09:20:49] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 09:20:56,224 - INFO - 127.0.0.1 - - [12/Jun/2025 09:20:56] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 09:21:05,098 - INFO - 127.0.0.1 - - [12/Jun/2025 09:21:05] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 09:21:28,961 - INFO - 127.0.0.1 - - [12/Jun/2025 09:21:28] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 09:22:50,962 - INFO - 127.0.0.1 - - [12/Jun/2025 09:22:50] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 09:22:53,592 - INFO - 127.0.0.1 - - [12/Jun/2025 09:22:53] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 09:23:53,661 - INFO - 127.0.0.1 - - [12/Jun/2025 09:23:53] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 09:24:03,369 - INFO - 127.0.0.1 - - [12/Jun/2025 09:24:03] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 09:29:28,540 - INFO - 127.0.0.1 - - [12/Jun/2025 09:29:28] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 09:40:00,851 - INFO - 127.0.0.1 - - [12/Jun/2025 09:40:00] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 09:40:03,551 - INFO - 127.0.0.1 - - [12/Jun/2025 09:40:03] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 09:41:15,146 - INFO - 127.0.0.1 - - [12/Jun/2025 09:41:15] "OPTIONS /triagem/1020930-57.2024.8.11.0015 HTTP/1.1" 200 -
+2025-06-12 09:41:15,427 - INFO - 127.0.0.1 - - [12/Jun/2025 09:41:15] "PUT /triagem/1020930-57.2024.8.11.0015 HTTP/1.1" 200 -
+2025-06-12 09:41:15,482 - INFO - 127.0.0.1 - - [12/Jun/2025 09:41:15] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 09:46:34,249 - INFO - 127.0.0.1 - - [12/Jun/2025 09:46:34] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 09:46:54,276 - INFO - 127.0.0.1 - - [12/Jun/2025 09:46:54] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 09:46:56,660 - INFO - 127.0.0.1 - - [12/Jun/2025 09:46:56] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 09:48:18,423 - INFO - 127.0.0.1 - - [12/Jun/2025 09:48:18] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 09:48:29,301 - INFO - 127.0.0.1 - - [12/Jun/2025 09:48:29] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 09:48:48,932 - INFO - 127.0.0.1 - - [12/Jun/2025 09:48:48] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 09:50:21,656 - INFO - 127.0.0.1 - - [12/Jun/2025 09:50:21] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 09:50:26,961 - INFO - 127.0.0.1 - - [12/Jun/2025 09:50:26] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 09:55:37,779 - INFO - 127.0.0.1 - - [12/Jun/2025 09:55:37] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 09:55:50,682 - INFO - 127.0.0.1 - - [12/Jun/2025 09:55:50] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 09:56:00,696 - INFO - 127.0.0.1 - - [12/Jun/2025 09:56:00] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 09:56:02,136 - INFO - 127.0.0.1 - - [12/Jun/2025 09:56:02] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 09:56:07,567 - INFO - Servidor Flask com PID 16644 finalizado
+2025-06-12 09:56:07,902 - INFO - Servidor Flask com PID 20504 finalizado
+2025-06-12 10:08:38,329 - INFO - Iniciando servidor Flask na porta 5000 com PID: 13088
+2025-06-12 10:08:38,367 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-12 10:08:38,367 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-12 10:08:38,369 - INFO -  * Restarting with stat
+2025-06-12 10:08:39,112 - INFO - Iniciando servidor Flask na porta 5000 com PID: 24340
+2025-06-12 10:08:39,126 - WARNING -  * Debugger is active!
+2025-06-12 10:08:39,131 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 10:09:02,390 - INFO - 127.0.0.1 - - [12/Jun/2025 10:09:02] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 10:09:05,813 - INFO - 127.0.0.1 - - [12/Jun/2025 10:09:05] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 10:09:27,034 - INFO - 127.0.0.1 - - [12/Jun/2025 10:09:27] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 10:10:51,430 - INFO - 127.0.0.1 - - [12/Jun/2025 10:10:51] "GET /triagem/1001682-16.2021.8.11.0014/dat HTTP/1.1" 200 -
+2025-06-12 10:13:08,598 - INFO - 127.0.0.1 - - [12/Jun/2025 10:13:08] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 10:18:13,283 - INFO - 127.0.0.1 - - [12/Jun/2025 10:18:13] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 10:18:13,990 - INFO - 127.0.0.1 - - [12/Jun/2025 10:18:13] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 10:26:04,823 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\utils\\anonimização.py', reloading
+2025-06-12 10:26:04,831 - INFO - Servidor Flask com PID 24340 finalizado
+2025-06-12 10:26:05,141 - INFO -  * Restarting with stat
+2025-06-12 10:26:06,105 - INFO - Iniciando servidor Flask na porta 5000 com PID: 17532
+2025-06-12 10:26:06,118 - WARNING -  * Debugger is active!
+2025-06-12 10:26:06,124 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 10:27:01,322 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\utils\\anonimização.py', reloading
+2025-06-12 10:27:01,323 - INFO - Servidor Flask com PID 17532 finalizado
+2025-06-12 10:27:01,391 - INFO -  * Restarting with stat
+2025-06-12 10:27:02,175 - INFO - Iniciando servidor Flask na porta 5000 com PID: 24328
+2025-06-12 10:27:02,190 - WARNING -  * Debugger is active!
+2025-06-12 10:27:02,195 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 10:29:37,740 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\utils\\anonimização.py', reloading
+2025-06-12 10:29:37,741 - INFO - Servidor Flask com PID 24328 finalizado
+2025-06-12 10:29:37,814 - INFO -  * Restarting with stat
+2025-06-12 10:29:38,594 - INFO - Iniciando servidor Flask na porta 5000 com PID: 20532
+2025-06-12 10:29:38,607 - WARNING -  * Debugger is active!
+2025-06-12 10:29:38,612 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 10:30:03,710 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\utils\\anonimização.py', reloading
+2025-06-12 10:30:03,710 - INFO - Servidor Flask com PID 20532 finalizado
+2025-06-12 10:30:03,788 - INFO -  * Restarting with stat
+2025-06-12 10:30:04,577 - INFO - Iniciando servidor Flask na porta 5000 com PID: 13448
+2025-06-12 10:30:04,592 - WARNING -  * Debugger is active!
+2025-06-12 10:30:04,597 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 10:31:18,829 - INFO - 127.0.0.1 - - [12/Jun/2025 10:31:18] "GET /health HTTP/1.1" 200 -
+2025-06-12 10:31:19,345 - INFO - 127.0.0.1 - - [12/Jun/2025 10:31:19] "[33mPOST /anonimizar HTTP/1.1[0m" 404 -
+2025-06-12 10:31:19,859 - INFO - 127.0.0.1 - - [12/Jun/2025 10:31:19] "[33mGET /anonimizados HTTP/1.1[0m" 404 -
+2025-06-12 10:31:20,369 - INFO - 127.0.0.1 - - [12/Jun/2025 10:31:20] "[33mGET /anonimizados/1234567-12.2024.8.26.0000 HTTP/1.1[0m" 404 -
+2025-06-12 10:31:20,878 - INFO - 127.0.0.1 - - [12/Jun/2025 10:31:20] "[33mPOST /anonimizar/batch HTTP/1.1[0m" 404 -
+2025-06-12 10:31:21,398 - INFO - 127.0.0.1 - - [12/Jun/2025 10:31:21] "[31m[1mPOST /triagem/form-com-anonimizacao HTTP/1.1[0m" 405 -
+2025-06-12 10:33:58,435 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\app.py', reloading
+2025-06-12 10:33:58,436 - INFO - Servidor Flask com PID 13448 finalizado
+2025-06-12 10:33:58,534 - INFO -  * Restarting with stat
+2025-06-12 10:34:00,901 - INFO - Iniciando servidor Flask na porta 5000 com PID: 3068
+2025-06-12 10:34:00,916 - WARNING -  * Debugger is active!
+2025-06-12 10:34:00,921 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 10:39:06,045 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\utils\\anonimizacao.py', reloading
+2025-06-12 10:39:06,045 - INFO - Servidor Flask com PID 3068 finalizado
+2025-06-12 10:39:06,167 - INFO -  * Restarting with stat
+2025-06-12 10:39:07,435 - INFO - Iniciando servidor Flask na porta 5000 com PID: 25216
+2025-06-12 10:39:07,448 - WARNING -  * Debugger is active!
+2025-06-12 10:39:07,453 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 10:41:27,007 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\utils\\anonimizacao.py', reloading
+2025-06-12 10:41:27,007 - INFO - Servidor Flask com PID 25216 finalizado
+2025-06-12 10:41:27,116 - INFO -  * Restarting with stat
+2025-06-12 10:41:27,963 - INFO - Iniciando servidor Flask na porta 5000 com PID: 8992
+2025-06-12 10:41:27,980 - WARNING -  * Debugger is active!
+2025-06-12 10:41:27,985 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 10:43:14,221 - INFO - 127.0.0.1 - - [12/Jun/2025 10:43:14] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 10:43:15,062 - INFO - 127.0.0.1 - - [12/Jun/2025 10:43:15] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 10:44:25,653 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\app.py', reloading
+2025-06-12 10:44:25,654 - INFO - Servidor Flask com PID 8992 finalizado
+2025-06-12 10:44:25,741 - INFO -  * Restarting with stat
+2025-06-12 10:44:27,208 - INFO - Iniciando servidor Flask na porta 5000 com PID: 25564
+2025-06-12 10:44:27,223 - WARNING -  * Debugger is active!
+2025-06-12 10:44:27,228 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 10:45:22,436 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\app.py', reloading
+2025-06-12 10:45:22,437 - INFO - Servidor Flask com PID 25564 finalizado
+2025-06-12 10:45:22,511 - INFO -  * Restarting with stat
+2025-06-12 10:45:23,869 - INFO - Iniciando servidor Flask na porta 5000 com PID: 8784
+2025-06-12 10:45:23,881 - WARNING -  * Debugger is active!
+2025-06-12 10:45:23,886 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 10:45:43,969 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\app.py', reloading
+2025-06-12 10:45:43,970 - INFO - Servidor Flask com PID 8784 finalizado
+2025-06-12 10:45:44,069 - INFO -  * Restarting with stat
+2025-06-12 10:45:44,938 - INFO - Iniciando servidor Flask na porta 5000 com PID: 7328
+2025-06-12 10:45:44,951 - WARNING -  * Debugger is active!
+2025-06-12 10:45:44,956 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 10:45:56,281 - INFO - 127.0.0.1 - - [12/Jun/2025 10:45:56] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 10:46:35,916 - INFO - 127.0.0.1 - - [12/Jun/2025 10:46:35] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-12 10:46:36,921 - INFO - 127.0.0.1 - - [12/Jun/2025 10:46:36] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 201 -
+2025-06-12 10:46:36,956 - INFO - 127.0.0.1 - - [12/Jun/2025 10:46:36] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 10:47:26,610 - INFO - Servidor Flask com PID 7328 finalizado
+2025-06-12 10:47:26,795 - INFO - Servidor Flask com PID 13088 finalizado
+2025-06-12 10:55:28,266 - INFO - Iniciando servidor Flask na porta 5000 com PID: 11356
+2025-06-12 10:55:28,293 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-12 10:55:28,294 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-12 10:55:28,295 - INFO -  * Restarting with stat
+2025-06-12 10:55:29,126 - INFO - Iniciando servidor Flask na porta 5000 com PID: 5908
+2025-06-12 10:55:29,140 - WARNING -  * Debugger is active!
+2025-06-12 10:55:29,145 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 10:55:40,600 - INFO - 127.0.0.1 - - [12/Jun/2025 10:55:40] "OPTIONS /triagem/1028689-11.2024.8.11.0003 HTTP/1.1" 200 -
+2025-06-12 10:55:40,914 - INFO - 127.0.0.1 - - [12/Jun/2025 10:55:40] "DELETE /triagem/1028689-11.2024.8.11.0003 HTTP/1.1" 200 -
+2025-06-12 10:55:40,940 - INFO - 127.0.0.1 - - [12/Jun/2025 10:55:40] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 10:56:10,313 - INFO - 127.0.0.1 - - [12/Jun/2025 10:56:10] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-12 10:56:11,288 - INFO - 127.0.0.1 - - [12/Jun/2025 10:56:11] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 201 -
+2025-06-12 10:56:11,317 - INFO - 127.0.0.1 - - [12/Jun/2025 10:56:11] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 10:57:30,876 - INFO - 127.0.0.1 - - [12/Jun/2025 10:57:30] "OPTIONS /triagem/1005767-48.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-12 10:57:31,141 - INFO - 127.0.0.1 - - [12/Jun/2025 10:57:31] "DELETE /triagem/1005767-48.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-12 10:57:31,209 - INFO - 127.0.0.1 - - [12/Jun/2025 10:57:31] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 10:58:08,229 - INFO - 127.0.0.1 - - [12/Jun/2025 10:58:08] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-12 11:01:20,833 - INFO - Servidor Flask com PID 5908 finalizado
+2025-06-12 11:01:21,113 - INFO - Servidor Flask com PID 11356 finalizado
+2025-06-12 11:04:10,704 - INFO - Iniciando servidor Flask na porta 5000 com PID: 8076
+2025-06-12 11:04:10,730 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-12 11:04:10,730 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-12 11:04:10,731 - INFO -  * Restarting with stat
+2025-06-12 11:04:11,659 - INFO - Iniciando servidor Flask na porta 5000 com PID: 12560
+2025-06-12 11:04:11,675 - WARNING -  * Debugger is active!
+2025-06-12 11:04:11,681 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 11:04:18,966 - INFO - 127.0.0.1 - - [12/Jun/2025 11:04:18] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 11:04:51,756 - INFO - 127.0.0.1 - - [12/Jun/2025 11:04:51] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-12 11:05:14,688 - INFO - 127.0.0.1 - - [12/Jun/2025 11:05:14] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 201 -
+2025-06-12 11:05:15,063 - INFO - 127.0.0.1 - - [12/Jun/2025 11:05:15] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 11:06:01,987 - INFO - 127.0.0.1 - - [12/Jun/2025 11:06:01] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 11:06:10,126 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\utils\\anonimizacao.py', reloading
+2025-06-12 11:06:10,127 - INFO - Servidor Flask com PID 12560 finalizado
+2025-06-12 11:06:10,233 - INFO -  * Restarting with stat
+2025-06-12 11:06:11,218 - INFO - Iniciando servidor Flask na porta 5000 com PID: 5420
+2025-06-12 11:06:11,235 - WARNING -  * Debugger is active!
+2025-06-12 11:06:11,240 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 11:07:22,026 - INFO - 127.0.0.1 - - [12/Jun/2025 11:07:22] "OPTIONS /triagem/1005767-48.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-12 11:07:22,350 - INFO - 127.0.0.1 - - [12/Jun/2025 11:07:22] "DELETE /triagem/1005767-48.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-12 11:07:22,372 - INFO - 127.0.0.1 - - [12/Jun/2025 11:07:22] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 11:08:42,858 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\app.py', reloading
+2025-06-12 11:08:42,861 - INFO - Servidor Flask com PID 5420 finalizado
+2025-06-12 11:08:43,019 - INFO -  * Restarting with stat
+2025-06-12 11:08:45,469 - INFO - Iniciando servidor Flask na porta 5000 com PID: 19752
+2025-06-12 11:08:45,490 - WARNING -  * Debugger is active!
+2025-06-12 11:08:45,501 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 11:09:22,688 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\app.py', reloading
+2025-06-12 11:09:22,688 - INFO - Servidor Flask com PID 19752 finalizado
+2025-06-12 11:09:22,801 - INFO -  * Restarting with stat
+2025-06-12 11:09:24,005 - INFO - Iniciando servidor Flask na porta 5000 com PID: 8020
+2025-06-12 11:09:24,020 - WARNING -  * Debugger is active!
+2025-06-12 11:09:24,025 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 11:09:52,883 - INFO - 127.0.0.1 - - [12/Jun/2025 11:09:52] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-12 11:12:14,565 - INFO - Servidor Flask com PID 8020 finalizado
+2025-06-12 11:12:14,830 - INFO - Servidor Flask com PID 8076 finalizado
+2025-06-12 11:14:56,764 - INFO - Iniciando servidor Flask na porta 5000 com PID: 11612
+2025-06-12 11:14:56,791 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-12 11:14:56,791 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-12 11:14:56,793 - INFO -  * Restarting with stat
+2025-06-12 11:14:57,689 - INFO - Iniciando servidor Flask na porta 5000 com PID: 23312
+2025-06-12 11:14:57,696 - WARNING -  * Debugger is active!
+2025-06-12 11:14:57,696 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 11:15:08,895 - INFO - 127.0.0.1 - - [12/Jun/2025 11:15:08] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-12 11:16:44,962 - INFO - Servidor Flask com PID 23312 finalizado
+2025-06-12 11:16:45,224 - INFO - Servidor Flask com PID 11612 finalizado
+2025-06-12 11:18:19,196 - INFO - Iniciando servidor Flask na porta 5000 com PID: 13120
+2025-06-12 11:18:19,227 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-12 11:18:19,227 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-12 11:18:19,243 - INFO -  * Restarting with stat
+2025-06-12 11:18:20,363 - INFO - Iniciando servidor Flask na porta 5000 com PID: 17660
+2025-06-12 11:18:20,379 - WARNING -  * Debugger is active!
+2025-06-12 11:18:20,386 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 11:18:29,796 - INFO - 127.0.0.1 - - [12/Jun/2025 11:18:29] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-12 11:18:53,471 - INFO - 127.0.0.1 - - [12/Jun/2025 11:18:53] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 201 -
+2025-06-12 11:18:53,857 - INFO - 127.0.0.1 - - [12/Jun/2025 11:18:53] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 11:20:47,147 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\app.py', reloading
+2025-06-12 11:20:47,147 - INFO - Servidor Flask com PID 17660 finalizado
+2025-06-12 11:20:47,247 - INFO -  * Restarting with stat
+2025-06-12 11:20:48,679 - INFO - Servidor Flask com PID 13120 finalizado
+2025-06-12 11:22:05,885 - INFO - Iniciando servidor Flask na porta 5000 com PID: 10648
+2025-06-12 11:22:05,901 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-12 11:22:05,901 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-12 11:22:05,901 - INFO -  * Restarting with stat
+2025-06-12 11:22:06,711 - INFO - Iniciando servidor Flask na porta 5000 com PID: 22712
+2025-06-12 11:22:06,727 - WARNING -  * Debugger is active!
+2025-06-12 11:22:06,727 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 11:22:16,391 - INFO - 127.0.0.1 - - [12/Jun/2025 11:22:16] "OPTIONS /triagem/1005767-48.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-12 11:22:16,694 - INFO - 127.0.0.1 - - [12/Jun/2025 11:22:16] "DELETE /triagem/1005767-48.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-12 11:22:16,721 - INFO - 127.0.0.1 - - [12/Jun/2025 11:22:16] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 11:22:49,263 - INFO - 127.0.0.1 - - [12/Jun/2025 11:22:49] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-12 11:23:10,915 - INFO - 127.0.0.1 - - [12/Jun/2025 11:23:10] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 201 -
+2025-06-12 11:23:11,254 - INFO - 127.0.0.1 - - [12/Jun/2025 11:23:11] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 11:26:39,826 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\app.py', reloading
+2025-06-12 11:26:39,829 - INFO - Servidor Flask com PID 22712 finalizado
+2025-06-12 11:26:39,932 - INFO -  * Restarting with stat
+2025-06-12 11:26:41,313 - INFO - Iniciando servidor Flask na porta 5000 com PID: 19948
+2025-06-12 11:26:41,332 - WARNING -  * Debugger is active!
+2025-06-12 11:26:41,346 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 11:26:56,393 - INFO - 127.0.0.1 - - [12/Jun/2025 11:26:56] "OPTIONS /triagem/1005767-48.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-12 11:26:56,696 - INFO - 127.0.0.1 - - [12/Jun/2025 11:26:56] "DELETE /triagem/1005767-48.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-12 11:26:56,726 - INFO - 127.0.0.1 - - [12/Jun/2025 11:26:56] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 11:27:02,479 - INFO - 127.0.0.1 - - [12/Jun/2025 11:27:02] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 11:27:16,864 - INFO - 127.0.0.1 - - [12/Jun/2025 11:27:16] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 11:27:23,315 - INFO - Servidor Flask com PID 19948 finalizado
+2025-06-12 11:27:23,424 - INFO - Servidor Flask com PID 10648 finalizado
+2025-06-12 11:27:26,772 - INFO - Iniciando servidor Flask na porta 5000 com PID: 24052
+2025-06-12 11:27:26,796 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-12 11:27:26,796 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-12 11:27:26,796 - INFO -  * Restarting with stat
+2025-06-12 11:27:27,664 - INFO - Iniciando servidor Flask na porta 5000 com PID: 4272
+2025-06-12 11:27:27,679 - WARNING -  * Debugger is active!
+2025-06-12 11:27:27,682 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 11:27:29,354 - INFO - 127.0.0.1 - - [12/Jun/2025 11:27:29] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 11:27:34,748 - INFO - 127.0.0.1 - - [12/Jun/2025 11:27:34] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 11:27:50,793 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\app.py', reloading
+2025-06-12 11:27:50,793 - INFO - Servidor Flask com PID 4272 finalizado
+2025-06-12 11:27:50,980 - INFO -  * Restarting with stat
+2025-06-12 11:27:52,566 - INFO - Iniciando servidor Flask na porta 5000 com PID: 23572
+2025-06-12 11:27:52,586 - WARNING -  * Debugger is active!
+2025-06-12 11:27:52,600 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 11:27:53,221 - INFO - 127.0.0.1 - - [12/Jun/2025 11:27:53] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 11:28:00,131 - INFO - 127.0.0.1 - - [12/Jun/2025 11:28:00] "OPTIONS /triagem/1005767-48.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-12 11:28:00,419 - INFO - 127.0.0.1 - - [12/Jun/2025 11:28:00] "DELETE /triagem/1005767-48.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-12 11:28:00,466 - INFO - 127.0.0.1 - - [12/Jun/2025 11:28:00] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 11:31:44,778 - INFO - 127.0.0.1 - - [12/Jun/2025 11:31:44] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 11:32:15,613 - INFO - 127.0.0.1 - - [12/Jun/2025 11:32:15] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-12 11:32:38,013 - INFO - 127.0.0.1 - - [12/Jun/2025 11:32:38] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 201 -
+2025-06-12 11:32:38,350 - INFO - 127.0.0.1 - - [12/Jun/2025 11:32:38] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 11:33:59,479 - INFO - 127.0.0.1 - - [12/Jun/2025 11:33:59] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 11:35:33,186 - INFO - 127.0.0.1 - - [12/Jun/2025 11:35:33] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 11:35:33,835 - INFO - 127.0.0.1 - - [12/Jun/2025 11:35:33] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 12:46:53,615 - INFO - 127.0.0.1 - - [12/Jun/2025 12:46:53] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 12:47:05,215 - INFO - 127.0.0.1 - - [12/Jun/2025 12:47:05] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 12:47:12,919 - INFO - 127.0.0.1 - - [12/Jun/2025 12:47:12] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 12:47:13,574 - INFO - 127.0.0.1 - - [12/Jun/2025 12:47:13] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 12:48:34,599 - INFO - 127.0.0.1 - - [12/Jun/2025 12:48:34] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 12:48:41,772 - INFO - 127.0.0.1 - - [12/Jun/2025 12:48:41] "OPTIONS /triagem/1005767-48.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-12 12:48:42,047 - INFO - 127.0.0.1 - - [12/Jun/2025 12:48:42] "DELETE /triagem/1005767-48.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-12 12:48:42,114 - INFO - 127.0.0.1 - - [12/Jun/2025 12:48:42] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 12:49:20,714 - INFO - 127.0.0.1 - - [12/Jun/2025 12:49:20] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-12 12:49:42,647 - INFO - 127.0.0.1 - - [12/Jun/2025 12:49:42] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 201 -
+2025-06-12 12:49:42,999 - INFO - 127.0.0.1 - - [12/Jun/2025 12:49:42] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 12:49:55,985 - INFO - 127.0.0.1 - - [12/Jun/2025 12:49:55] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 12:50:08,343 - INFO - 127.0.0.1 - - [12/Jun/2025 12:50:08] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 12:52:22,570 - INFO - 127.0.0.1 - - [12/Jun/2025 12:52:22] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 12:52:25,054 - INFO - 127.0.0.1 - - [12/Jun/2025 12:52:25] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 12:54:29,558 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\utils\\anonimizacao.py', reloading
+2025-06-12 12:54:29,564 - INFO - Servidor Flask com PID 23572 finalizado
+2025-06-12 12:54:29,965 - INFO -  * Restarting with stat
+2025-06-12 12:54:40,798 - INFO - Iniciando servidor Flask na porta 5000 com PID: 8604
+2025-06-12 12:54:40,866 - WARNING -  * Debugger is active!
+2025-06-12 12:54:40,866 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 13:00:23,003 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\utils\\anonimizacao.py', reloading
+2025-06-12 13:00:23,003 - INFO - Servidor Flask com PID 8604 finalizado
+2025-06-12 13:00:23,128 - INFO -  * Restarting with stat
+2025-06-12 13:00:24,164 - INFO - Iniciando servidor Flask na porta 5000 com PID: 22952
+2025-06-12 13:00:24,181 - WARNING -  * Debugger is active!
+2025-06-12 13:00:24,198 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 13:00:56,327 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\utils\\anonimizacao.py', reloading
+2025-06-12 13:00:56,327 - INFO - Servidor Flask com PID 22952 finalizado
+2025-06-12 13:00:56,433 - INFO -  * Restarting with stat
+2025-06-12 13:00:57,291 - INFO - Iniciando servidor Flask na porta 5000 com PID: 13412
+2025-06-12 13:00:57,291 - WARNING -  * Debugger is active!
+2025-06-12 13:00:57,307 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 13:01:28,439 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\utils\\anonimizacao.py', reloading
+2025-06-12 13:01:28,439 - INFO - Servidor Flask com PID 13412 finalizado
+2025-06-12 13:01:28,543 - INFO -  * Restarting with stat
+2025-06-12 13:01:29,407 - INFO - Iniciando servidor Flask na porta 5000 com PID: 24244
+2025-06-12 13:01:29,421 - WARNING -  * Debugger is active!
+2025-06-12 13:01:29,426 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 13:03:42,899 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\app.py', reloading
+2025-06-12 13:03:42,899 - INFO - Servidor Flask com PID 24244 finalizado
+2025-06-12 13:03:43,009 - INFO -  * Restarting with stat
+2025-06-12 13:03:43,757 - INFO - Servidor Flask com PID 24052 finalizado
+2025-06-12 13:04:31,483 - INFO - Iniciando servidor Flask na porta 5000 com PID: 7324
+2025-06-12 13:04:31,514 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-12 13:04:31,514 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-12 13:04:31,514 - INFO -  * Restarting with stat
+2025-06-12 13:04:32,333 - INFO - Iniciando servidor Flask na porta 5000 com PID: 24620
+2025-06-12 13:04:32,349 - WARNING -  * Debugger is active!
+2025-06-12 13:04:32,349 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 13:04:37,600 - INFO - 127.0.0.1 - - [12/Jun/2025 13:04:37] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 13:04:38,597 - INFO - 127.0.0.1 - - [12/Jun/2025 13:04:38] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 13:04:44,598 - INFO - 127.0.0.1 - - [12/Jun/2025 13:04:44] "OPTIONS /triagem/1005767-48.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-12 13:04:44,859 - INFO - 127.0.0.1 - - [12/Jun/2025 13:04:44] "DELETE /triagem/1005767-48.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-12 13:04:44,916 - INFO - 127.0.0.1 - - [12/Jun/2025 13:04:44] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 13:05:11,521 - INFO - 127.0.0.1 - - [12/Jun/2025 13:05:11] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-12 13:05:32,399 - INFO - 127.0.0.1 - - [12/Jun/2025 13:05:32] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 201 -
+2025-06-12 13:05:32,754 - INFO - 127.0.0.1 - - [12/Jun/2025 13:05:32] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 13:08:31,195 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\utils\\anonimizacao.py', reloading
+2025-06-12 13:08:31,196 - INFO - Servidor Flask com PID 24620 finalizado
+2025-06-12 13:08:31,298 - INFO -  * Restarting with stat
+2025-06-12 13:08:32,327 - INFO - Iniciando servidor Flask na porta 5000 com PID: 18328
+2025-06-12 13:08:32,342 - WARNING -  * Debugger is active!
+2025-06-12 13:08:32,347 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 13:08:45,403 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\utils\\anonimizacao.py', reloading
+2025-06-12 13:08:45,403 - INFO - Servidor Flask com PID 18328 finalizado
+2025-06-12 13:08:45,509 - INFO -  * Restarting with stat
+2025-06-12 13:08:46,330 - INFO - Iniciando servidor Flask na porta 5000 com PID: 22644
+2025-06-12 13:08:46,346 - WARNING -  * Debugger is active!
+2025-06-12 13:08:46,346 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 13:11:38,949 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\utils\\anonimizacao.py', reloading
+2025-06-12 13:11:38,949 - INFO - Servidor Flask com PID 22644 finalizado
+2025-06-12 13:11:39,048 - INFO -  * Restarting with stat
+2025-06-12 13:11:39,847 - INFO - Iniciando servidor Flask na porta 5000 com PID: 23948
+2025-06-12 13:11:39,860 - WARNING -  * Debugger is active!
+2025-06-12 13:11:39,865 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 13:13:19,224 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\app.py', reloading
+2025-06-12 13:13:19,224 - INFO - Servidor Flask com PID 23948 finalizado
+2025-06-12 13:13:19,304 - INFO -  * Restarting with stat
+2025-06-12 13:13:21,412 - INFO - Iniciando servidor Flask na porta 5000 com PID: 18248
+2025-06-12 13:13:21,428 - WARNING -  * Debugger is active!
+2025-06-12 13:13:21,443 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 13:13:30,488 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\app.py', reloading
+2025-06-12 13:13:30,488 - INFO - Servidor Flask com PID 18248 finalizado
+2025-06-12 13:13:30,572 - INFO -  * Restarting with stat
+2025-06-12 13:13:31,524 - INFO - Iniciando servidor Flask na porta 5000 com PID: 5872
+2025-06-12 13:13:31,540 - WARNING -  * Debugger is active!
+2025-06-12 13:13:31,540 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 13:14:06,615 - INFO - 127.0.0.1 - - [12/Jun/2025 13:14:06] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-12 13:14:27,999 - INFO - 127.0.0.1 - - [12/Jun/2025 13:14:27] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 201 -
+2025-06-12 13:14:28,381 - INFO - 127.0.0.1 - - [12/Jun/2025 13:14:28] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 13:19:42,793 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\utils\\anonimizacao.py', reloading
+2025-06-12 13:19:42,794 - INFO - Servidor Flask com PID 5872 finalizado
+2025-06-12 13:19:42,876 - INFO -  * Restarting with stat
+2025-06-12 13:19:43,731 - INFO - Iniciando servidor Flask na porta 5000 com PID: 21236
+2025-06-12 13:19:43,747 - WARNING -  * Debugger is active!
+2025-06-12 13:19:43,762 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 13:20:59,029 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\utils\\anonimizacao.py', reloading
+2025-06-12 13:20:59,029 - INFO - Servidor Flask com PID 21236 finalizado
+2025-06-12 13:20:59,097 - INFO -  * Restarting with stat
+2025-06-12 13:20:59,952 - INFO - Iniciando servidor Flask na porta 5000 com PID: 19084
+2025-06-12 13:20:59,968 - WARNING -  * Debugger is active!
+2025-06-12 13:20:59,972 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 13:24:09,641 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\utils\\anonimizacao.py', reloading
+2025-06-12 13:24:09,641 - INFO - Servidor Flask com PID 19084 finalizado
+2025-06-12 13:24:09,749 - INFO -  * Restarting with stat
+2025-06-12 13:24:10,949 - INFO - Servidor Flask com PID 7324 finalizado
+2025-06-12 13:24:21,421 - INFO - Iniciando servidor Flask na porta 5000 com PID: 8440
+2025-06-12 13:24:21,448 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-12 13:24:21,448 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-12 13:24:21,450 - INFO -  * Restarting with stat
+2025-06-12 13:24:22,255 - INFO - Iniciando servidor Flask na porta 5000 com PID: 24292
+2025-06-12 13:24:22,267 - WARNING -  * Debugger is active!
+2025-06-12 13:24:22,272 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 13:24:32,187 - INFO - 127.0.0.1 - - [12/Jun/2025 13:24:32] "OPTIONS /triagem/1005767-48.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-12 13:24:32,511 - INFO - 127.0.0.1 - - [12/Jun/2025 13:24:32] "DELETE /triagem/1005767-48.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-12 13:24:32,533 - INFO - 127.0.0.1 - - [12/Jun/2025 13:24:32] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 13:24:59,282 - INFO - 127.0.0.1 - - [12/Jun/2025 13:24:59] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-12 13:25:20,829 - INFO - 127.0.0.1 - - [12/Jun/2025 13:25:20] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 201 -
+2025-06-12 13:25:21,165 - INFO - 127.0.0.1 - - [12/Jun/2025 13:25:21] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 13:27:12,844 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\utils\\anonimizacao.py', reloading
+2025-06-12 13:27:12,844 - INFO - Servidor Flask com PID 24292 finalizado
+2025-06-12 13:27:12,949 - INFO -  * Restarting with stat
+2025-06-12 13:27:14,055 - INFO - Iniciando servidor Flask na porta 5000 com PID: 15112
+2025-06-12 13:27:14,087 - WARNING -  * Debugger is active!
+2025-06-12 13:27:14,089 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 13:27:23,153 - INFO - 127.0.0.1 - - [12/Jun/2025 13:27:23] "OPTIONS /triagem/1005767-48.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-12 13:27:23,446 - INFO - 127.0.0.1 - - [12/Jun/2025 13:27:23] "DELETE /triagem/1005767-48.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-12 13:27:23,480 - INFO - 127.0.0.1 - - [12/Jun/2025 13:27:23] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 13:27:48,382 - INFO - 127.0.0.1 - - [12/Jun/2025 13:27:48] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-12 13:28:11,603 - INFO - 127.0.0.1 - - [12/Jun/2025 13:28:11] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 201 -
+2025-06-12 13:28:11,948 - INFO - 127.0.0.1 - - [12/Jun/2025 13:28:11] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 13:30:25,275 - INFO - Servidor Flask com PID 15112 finalizado
+2025-06-12 13:30:25,396 - INFO - Servidor Flask com PID 8440 finalizado
+2025-06-12 13:33:56,462 - INFO - Iniciando servidor Flask na porta 5000 com PID: 13672
+2025-06-12 13:33:56,487 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-12 13:33:56,487 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-12 13:33:56,488 - INFO -  * Restarting with stat
+2025-06-12 13:33:57,320 - INFO - Iniciando servidor Flask na porta 5000 com PID: 22472
+2025-06-12 13:33:57,333 - WARNING -  * Debugger is active!
+2025-06-12 13:33:57,338 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 13:34:23,949 - INFO - 127.0.0.1 - - [12/Jun/2025 13:34:23] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-12 13:38:24,116 - INFO - Servidor Flask com PID 22472 finalizado
+2025-06-12 13:38:27,255 - INFO - Servidor Flask com PID 13672 finalizado
+2025-06-12 13:53:03,155 - INFO - Iniciando servidor Flask na porta 5000 com PID: 19700
+2025-06-12 13:53:03,170 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-12 13:53:03,170 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-12 13:53:03,186 - INFO -  * Restarting with stat
+2025-06-12 13:53:07,255 - INFO - Iniciando servidor Flask na porta 5000 com PID: 16716
+2025-06-12 13:53:07,255 - WARNING -  * Debugger is active!
+2025-06-12 13:53:07,270 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 13:53:14,324 - INFO - 127.0.0.1 - - [12/Jun/2025 13:53:14] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 13:53:34,028 - INFO - 127.0.0.1 - - [12/Jun/2025 13:53:34] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 13:54:28,262 - INFO - 127.0.0.1 - - [12/Jun/2025 13:54:28] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 13:54:34,789 - INFO - 127.0.0.1 - - [12/Jun/2025 13:54:34] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 13:54:41,518 - INFO - 127.0.0.1 - - [12/Jun/2025 13:54:41] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 13:54:59,493 - INFO - 127.0.0.1 - - [12/Jun/2025 13:54:59] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 13:57:24,452 - INFO - 127.0.0.1 - - [12/Jun/2025 13:57:24] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 13:57:43,607 - INFO - 127.0.0.1 - - [12/Jun/2025 13:57:43] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 13:59:37,815 - INFO - 127.0.0.1 - - [12/Jun/2025 13:59:37] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 13:59:50,076 - INFO - 127.0.0.1 - - [12/Jun/2025 13:59:50] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 14:00:38,820 - INFO - 127.0.0.1 - - [12/Jun/2025 14:00:38] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 14:03:09,612 - INFO - 127.0.0.1 - - [12/Jun/2025 14:03:09] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 14:03:54,380 - INFO - 127.0.0.1 - - [12/Jun/2025 14:03:54] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 14:06:38,976 - INFO - 127.0.0.1 - - [12/Jun/2025 14:06:38] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 14:09:00,304 - INFO - 127.0.0.1 - - [12/Jun/2025 14:09:00] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 14:09:28,436 - INFO - 127.0.0.1 - - [12/Jun/2025 14:09:28] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 14:09:51,856 - INFO - 127.0.0.1 - - [12/Jun/2025 14:09:51] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 14:10:08,615 - INFO - 127.0.0.1 - - [12/Jun/2025 14:10:08] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 14:10:34,929 - INFO - 127.0.0.1 - - [12/Jun/2025 14:10:34] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 14:10:36,235 - INFO - 127.0.0.1 - - [12/Jun/2025 14:10:36] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 14:10:38,749 - INFO - 127.0.0.1 - - [12/Jun/2025 14:10:38] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 14:12:13,747 - INFO - 127.0.0.1 - - [12/Jun/2025 14:12:13] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 14:12:49,873 - INFO - 127.0.0.1 - - [12/Jun/2025 14:12:49] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 14:13:07,705 - INFO - 127.0.0.1 - - [12/Jun/2025 14:13:07] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 14:13:10,549 - INFO - 127.0.0.1 - - [12/Jun/2025 14:13:10] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 14:13:18,630 - INFO - 127.0.0.1 - - [12/Jun/2025 14:13:18] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 14:13:26,687 - INFO - 127.0.0.1 - - [12/Jun/2025 14:13:26] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 14:13:29,911 - INFO - 127.0.0.1 - - [12/Jun/2025 14:13:29] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 14:13:30,328 - INFO - 127.0.0.1 - - [12/Jun/2025 14:13:30] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 14:14:02,491 - INFO - 127.0.0.1 - - [12/Jun/2025 14:14:02] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-12 14:14:28,141 - INFO - 127.0.0.1 - - [12/Jun/2025 14:14:28] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 201 -
+2025-06-12 14:14:28,489 - INFO - 127.0.0.1 - - [12/Jun/2025 14:14:28] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 14:18:45,777 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\app.py', reloading
+2025-06-12 14:18:45,782 - INFO - Servidor Flask com PID 16716 finalizado
+2025-06-12 14:18:47,128 - INFO -  * Restarting with stat
+2025-06-12 14:18:50,692 - INFO - Servidor Flask com PID 19700 finalizado
+2025-06-12 14:18:58,643 - INFO - Servidor Flask iniciando com PID: 24872
+2025-06-12 14:18:58,643 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-12 14:18:58,643 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-12 14:18:58,643 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-12 14:18:58,646 - INFO - Iniciando servidor Flask na porta 5000 com PID: 24872
+2025-06-12 14:18:58,666 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-12 14:18:58,666 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-12 14:18:58,668 - INFO -  * Restarting with stat
+2025-06-12 14:19:02,803 - INFO - Servidor Flask iniciando com PID: 3056
+2025-06-12 14:19:02,803 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-12 14:19:02,803 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-12 14:19:02,803 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-12 14:19:02,808 - INFO - Iniciando servidor Flask na porta 5000 com PID: 3056
+2025-06-12 14:19:02,815 - WARNING -  * Debugger is active!
+2025-06-12 14:19:02,821 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 14:19:24,179 - INFO - 127.0.0.1 - - [12/Jun/2025 14:19:24] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-12 14:19:49,473 - INFO -  Processando processo: 123456789
+2025-06-12 14:19:49,473 - INFO -  Suspeitos encontrados: ['Débora Vidal']
+2025-06-12 14:19:49,484 - INFO - Markdown salvo: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\123456789.md
+2025-06-12 14:19:49,552 - ERROR -  Erro durante anonimização: [E088] Text of length 1791769 exceeds maximum of 1000000. The parser and NER models require roughly 1GB of temporary memory per 100,000 characters in the input. This means long texts may cause memory allocation errors. If you're not using the parser or NER, it's probably safe to increase the `nlp.max_length` limit. The limit is in number of characters, so you can check whether your inputs are too long by checking `len(text)`.
+2025-06-12 14:19:49,555 - INFO -  Processo 123456789 salvo com sucesso
+2025-06-12 14:19:49,555 - INFO - 127.0.0.1 - - [12/Jun/2025 14:19:49] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 201 -
+2025-06-12 14:19:49,884 - INFO -  Solicitação GET /triagem recebida
+2025-06-12 14:19:49,947 - INFO -  Retornando 10 processos
+2025-06-12 14:19:49,948 - INFO - 127.0.0.1 - - [12/Jun/2025 14:19:49] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 14:24:05,290 - INFO -  Sinal 2 recebido. Finalizando servidor graciosamente...
+2025-06-12 14:24:05,291 - INFO -  Servidor com PID 3056 finalizado
+2025-06-12 14:24:05,611 - INFO - Servidor Flask com PID 3056 finalizado
+2025-06-12 14:24:06,214 - INFO -  Sinal 2 recebido. Finalizando servidor graciosamente...
+2025-06-12 14:24:06,217 - INFO -  Servidor com PID 24872 finalizado
+2025-06-12 14:24:06,221 - INFO - Servidor Flask com PID 24872 finalizado
+2025-06-12 14:24:13,734 - INFO - Servidor Flask iniciando com PID: 12776
+2025-06-12 14:24:13,735 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-12 14:24:13,735 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-12 14:24:13,735 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-12 14:24:13,738 - INFO - Iniciando servidor Flask na porta 5000 com PID: 12776
+2025-06-12 14:24:13,755 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-12 14:24:13,756 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-12 14:24:13,758 - INFO -  * Restarting with stat
+2025-06-12 14:24:18,639 - INFO - Servidor Flask iniciando com PID: 7656
+2025-06-12 14:24:18,639 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-12 14:24:18,639 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-12 14:24:18,640 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-12 14:24:18,646 - INFO - Iniciando servidor Flask na porta 5000 com PID: 7656
+2025-06-12 14:24:18,654 - WARNING -  * Debugger is active!
+2025-06-12 14:24:18,661 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 14:24:18,673 - INFO -  Solicitação GET /triagem recebida
+2025-06-12 14:24:18,689 - INFO -  Retornando 10 processos
+2025-06-12 14:24:18,690 - INFO - 127.0.0.1 - - [12/Jun/2025 14:24:18] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 14:24:43,423 - INFO -  Sinal 2 recebido. Finalizando servidor graciosamente...
+2025-06-12 14:24:43,423 - INFO -  Servidor com PID 7656 finalizado
+2025-06-12 14:24:43,423 - INFO - Servidor Flask com PID 7656 finalizado
+2025-06-12 14:24:43,828 - INFO -  Sinal 2 recebido. Finalizando servidor graciosamente...
+2025-06-12 14:24:43,829 - INFO -  Servidor com PID 12776 finalizado
+2025-06-12 14:24:43,829 - INFO - Servidor Flask com PID 12776 finalizado
+2025-06-12 14:25:02,511 - INFO - Servidor Flask iniciando com PID: 15164
+2025-06-12 14:25:02,511 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-12 14:25:02,511 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-12 14:25:02,511 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-12 14:25:02,514 - INFO - Iniciando servidor Flask na porta 5000 com PID: 15164
+2025-06-12 14:25:02,528 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-12 14:25:02,529 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-12 14:25:02,530 - INFO -  * Restarting with stat
+2025-06-12 14:25:07,063 - INFO - Servidor Flask iniciando com PID: 20712
+2025-06-12 14:25:07,063 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-12 14:25:07,064 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-12 14:25:07,064 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-12 14:25:07,067 - INFO - Iniciando servidor Flask na porta 5000 com PID: 20712
+2025-06-12 14:25:07,075 - WARNING -  * Debugger is active!
+2025-06-12 14:25:07,080 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 14:25:07,089 - INFO -  Solicitação GET /triagem recebida
+2025-06-12 14:25:07,096 - INFO -  10 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-12 14:25:07,096 - INFO -  Retornando 10 processos
+2025-06-12 14:25:07,097 - INFO - 127.0.0.1 - - [12/Jun/2025 14:25:07] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 14:25:35,661 - INFO - 127.0.0.1 - - [12/Jun/2025 14:25:35] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-12 14:25:57,444 - INFO -  Processando processo: 87685456486
+2025-06-12 14:25:57,444 - INFO -  Suspeitos encontrados: ['Débora Vidal']
+2025-06-12 14:25:57,449 - INFO - Markdown salvo: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\87685456486.md
+2025-06-12 14:25:57,494 - ERROR -  Erro durante anonimização: [E088] Text of length 1791769 exceeds maximum of 1000000. The parser and NER models require roughly 1GB of temporary memory per 100,000 characters in the input. This means long texts may cause memory allocation errors. If you're not using the parser or NER, it's probably safe to increase the `nlp.max_length` limit. The limit is in number of characters, so you can check whether your inputs are too long by checking `len(text)`.
+2025-06-12 14:25:57,495 - INFO -  Processo 87685456486 salvo com sucesso
+2025-06-12 14:25:57,496 - INFO - 127.0.0.1 - - [12/Jun/2025 14:25:57] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 201 -
+2025-06-12 14:25:57,827 - INFO -  Solicitação GET /triagem recebida
+2025-06-12 14:25:57,837 - INFO -  11 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-12 14:25:57,837 - INFO -  Retornando 11 processos
+2025-06-12 14:25:57,838 - INFO - 127.0.0.1 - - [12/Jun/2025 14:25:57] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 14:26:23,785 - INFO -  Sinal 2 recebido. Finalizando servidor graciosamente...
+2025-06-12 14:26:23,785 - INFO -  Servidor com PID 20712 finalizado
+2025-06-12 14:26:23,786 - INFO - Servidor Flask com PID 20712 finalizado
+2025-06-12 14:26:24,238 - INFO -  Sinal 2 recebido. Finalizando servidor graciosamente...
+2025-06-12 14:26:24,238 - INFO -  Servidor com PID 15164 finalizado
+2025-06-12 14:26:24,239 - INFO - Servidor Flask com PID 15164 finalizado
+2025-06-12 14:31:39,110 - INFO - Servidor Flask iniciando com PID: 22296
+2025-06-12 14:31:39,110 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-12 14:31:39,110 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-12 14:31:39,110 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-12 14:31:39,113 - INFO - Iniciando servidor Flask na porta 5000 com PID: 22296
+2025-06-12 14:31:39,134 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-12 14:31:39,135 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-12 14:31:39,136 - INFO -  * Restarting with stat
+2025-06-12 14:31:43,866 - INFO - Servidor Flask iniciando com PID: 23456
+2025-06-12 14:31:43,866 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-12 14:31:43,866 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-12 14:31:43,866 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-12 14:31:43,869 - INFO - Iniciando servidor Flask na porta 5000 com PID: 23456
+2025-06-12 14:31:43,877 - WARNING -  * Debugger is active!
+2025-06-12 14:31:43,884 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 14:31:47,499 - INFO - 127.0.0.1 - - [12/Jun/2025 14:31:47] "OPTIONS /triagem/87685456486 HTTP/1.1" 200 -
+2025-06-12 14:31:47,786 - INFO -  11 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-12 14:31:47,787 - INFO -  Arquivo markdown removido: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\87685456486.md
+2025-06-12 14:31:47,787 - INFO -  Processo 87685456486 excluído com sucesso
+2025-06-12 14:31:47,788 - INFO - 127.0.0.1 - - [12/Jun/2025 14:31:47] "DELETE /triagem/87685456486 HTTP/1.1" 200 -
+2025-06-12 14:31:47,809 - INFO -  Solicitação GET /triagem recebida
+2025-06-12 14:31:47,813 - INFO -  10 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-12 14:31:47,814 - INFO -  Retornando 10 processos
+2025-06-12 14:31:47,814 - INFO - 127.0.0.1 - - [12/Jun/2025 14:31:47] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 14:31:51,327 - INFO - 127.0.0.1 - - [12/Jun/2025 14:31:51] "OPTIONS /triagem/123456789 HTTP/1.1" 200 -
+2025-06-12 14:31:51,584 - INFO -  10 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-12 14:31:51,585 - INFO -  Arquivo markdown removido: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\123456789.md
+2025-06-12 14:31:51,585 - INFO -  Processo 123456789 excluído com sucesso
+2025-06-12 14:31:51,586 - INFO - 127.0.0.1 - - [12/Jun/2025 14:31:51] "DELETE /triagem/123456789 HTTP/1.1" 200 -
+2025-06-12 14:31:51,642 - INFO -  Solicitação GET /triagem recebida
+2025-06-12 14:31:51,645 - INFO -  9 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-12 14:31:51,645 - INFO -  Retornando 9 processos
+2025-06-12 14:31:51,646 - INFO - 127.0.0.1 - - [12/Jun/2025 14:31:51] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 14:31:54,636 - INFO - 127.0.0.1 - - [12/Jun/2025 14:31:54] "OPTIONS /triagem/1005767-48.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-12 14:31:54,965 - INFO -  9 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-12 14:31:54,966 - INFO -  Arquivo markdown removido: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1005767-48.2025.8.11.0000.md
+2025-06-12 14:31:54,966 - INFO -  Processo 1005767-48.2025.8.11.0000 excluído com sucesso
+2025-06-12 14:31:54,967 - INFO - 127.0.0.1 - - [12/Jun/2025 14:31:54] "DELETE /triagem/1005767-48.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-12 14:31:55,209 - INFO -  Solicitação GET /triagem recebida
+2025-06-12 14:31:55,212 - INFO -  7 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-12 14:31:55,212 - INFO -  Retornando 7 processos
+2025-06-12 14:31:55,212 - INFO - 127.0.0.1 - - [12/Jun/2025 14:31:55] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 14:32:21,760 - INFO - 127.0.0.1 - - [12/Jun/2025 14:32:21] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-12 14:32:43,477 - INFO -  Processando processo: 1005767-48.2025.8.11.0000
+2025-06-12 14:32:43,478 - INFO -  Suspeitos encontrados: ['Débora Vidal']
+2025-06-12 14:32:43,482 - INFO - Markdown salvo: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1005767-48.2025.8.11.0000.md
+2025-06-12 14:34:46,336 - INFO -  Processo 1005767-48.2025.8.11.0000 salvo com sucesso
+2025-06-12 14:34:46,351 - INFO - 127.0.0.1 - - [12/Jun/2025 14:34:46] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 201 -
+2025-06-12 14:34:46,819 - INFO -  Solicitação GET /triagem recebida
+2025-06-12 14:34:46,851 - INFO -  8 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-12 14:34:46,851 - INFO -  Retornando 8 processos
+2025-06-12 14:34:46,851 - INFO - 127.0.0.1 - - [12/Jun/2025 14:34:46] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 15:08:11,688 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\utils\\anonimizacao.py', reloading
+2025-06-12 15:08:11,705 - INFO - Servidor Flask com PID 23456 finalizado
+2025-06-12 15:08:13,390 - INFO -  * Restarting with stat
+2025-06-12 15:08:19,657 - INFO - Servidor Flask iniciando com PID: 10356
+2025-06-12 15:08:19,658 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-12 15:08:19,658 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-12 15:08:19,658 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-12 15:08:19,662 - INFO - Iniciando servidor Flask na porta 5000 com PID: 10356
+2025-06-12 15:08:19,675 - WARNING -  * Debugger is active!
+2025-06-12 15:08:19,681 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 15:08:47,175 - INFO - 127.0.0.1 - - [12/Jun/2025 15:08:47] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-12 15:09:09,584 - INFO -  Processando processo: 1005767-48.2025.8.11.0000
+2025-06-12 15:09:09,584 - INFO -  Suspeitos encontrados: ['Débora Vidal']
+2025-06-12 15:09:09,584 - INFO - Markdown salvo: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1005767-48.2025.8.11.0000.md
+2025-06-12 15:11:18,131 - INFO -  Processo 1005767-48.2025.8.11.0000 salvo com sucesso
+2025-06-12 15:11:18,146 - INFO - 127.0.0.1 - - [12/Jun/2025 15:11:18] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 201 -
+2025-06-12 15:11:18,668 - INFO -  Solicitação GET /triagem recebida
+2025-06-12 15:11:18,701 - INFO -  9 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-12 15:11:18,701 - INFO -  Retornando 9 processos
+2025-06-12 15:11:18,717 - INFO - 127.0.0.1 - - [12/Jun/2025 15:11:18] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 15:38:10,109 - INFO -  Solicitação GET /triagem recebida
+2025-06-12 15:38:10,313 - INFO -  9 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-12 15:38:10,314 - INFO -  Retornando 9 processos
+2025-06-12 15:38:10,330 - INFO - 127.0.0.1 - - [12/Jun/2025 15:38:10] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 15:44:53,369 - INFO -  Solicitação GET /triagem recebida
+2025-06-12 15:44:53,477 - INFO -  9 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-12 15:44:53,477 - INFO -  Retornando 9 processos
+2025-06-12 15:44:53,479 - INFO - 127.0.0.1 - - [12/Jun/2025 15:44:53] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 15:45:13,404 - INFO -  Solicitação GET /triagem recebida
+2025-06-12 15:45:13,404 - INFO -  9 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-12 15:45:13,404 - INFO -  Retornando 9 processos
+2025-06-12 15:45:13,404 - INFO - 127.0.0.1 - - [12/Jun/2025 15:45:13] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 15:45:13,679 - INFO -  Solicitação GET /triagem recebida
+2025-06-12 15:45:13,684 - INFO -  9 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-12 15:45:13,685 - INFO -  Retornando 9 processos
+2025-06-12 15:45:13,686 - INFO - 127.0.0.1 - - [12/Jun/2025 15:45:13] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 15:45:16,214 - INFO -  Solicitação GET /triagem recebida
+2025-06-12 15:45:16,218 - INFO -  9 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-12 15:45:16,218 - INFO -  Retornando 9 processos
+2025-06-12 15:45:16,220 - INFO - 127.0.0.1 - - [12/Jun/2025 15:45:16] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 15:50:00,316 - INFO -  Solicitação GET /triagem recebida
+2025-06-12 15:50:00,337 - INFO -  9 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-12 15:50:00,338 - INFO -  Retornando 9 processos
+2025-06-12 15:50:00,341 - INFO - 127.0.0.1 - - [12/Jun/2025 15:50:00] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 15:50:16,181 - INFO -  Solicitação GET /triagem recebida
+2025-06-12 15:50:16,191 - INFO -  9 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-12 15:50:16,195 - INFO -  Retornando 9 processos
+2025-06-12 15:50:16,197 - INFO - 127.0.0.1 - - [12/Jun/2025 15:50:16] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 15:50:22,817 - INFO -  Solicitação GET /triagem recebida
+2025-06-12 15:50:22,817 - INFO -  9 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-12 15:50:22,817 - INFO -  Retornando 9 processos
+2025-06-12 15:50:22,817 - INFO - 127.0.0.1 - - [12/Jun/2025 15:50:22] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 15:50:37,447 - INFO -  Solicitação GET /triagem recebida
+2025-06-12 15:50:37,448 - INFO -  9 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-12 15:50:37,448 - INFO -  Retornando 9 processos
+2025-06-12 15:50:37,448 - INFO - 127.0.0.1 - - [12/Jun/2025 15:50:37] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 16:02:00,084 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\utils\\anonimizacao.py', reloading
+2025-06-12 16:02:00,100 - INFO - Servidor Flask com PID 10356 finalizado
+2025-06-12 16:02:01,503 - INFO -  * Restarting with stat
+2025-06-12 16:02:08,143 - INFO - Servidor Flask iniciando com PID: 18732
+2025-06-12 16:02:08,143 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-12 16:02:08,143 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-12 16:02:08,143 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-12 16:02:08,147 - INFO - Iniciando servidor Flask na porta 5000 com PID: 18732
+2025-06-12 16:02:08,161 - WARNING -  * Debugger is active!
+2025-06-12 16:02:08,171 - INFO -  * Debugger PIN: 316-893-758
+2025-06-12 16:02:08,185 - INFO -  Solicitação GET /triagem recebida
+2025-06-12 16:02:08,187 - INFO -  Solicitação GET /triagem recebida
+2025-06-12 16:02:08,210 - INFO -  9 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-12 16:02:08,211 - INFO -  9 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-12 16:02:08,212 - INFO -  Retornando 9 processos
+2025-06-12 16:02:08,213 - INFO -  Retornando 9 processos
+2025-06-12 16:02:08,214 - INFO - 127.0.0.1 - - [12/Jun/2025 16:02:08] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 16:02:08,215 - INFO - 127.0.0.1 - - [12/Jun/2025 16:02:08] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 16:02:18,718 - INFO - 127.0.0.1 - - [12/Jun/2025 16:02:18] "OPTIONS /triagem/1005767-48.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-12 16:02:18,997 - INFO -  9 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-12 16:02:18,998 - INFO -  Arquivo markdown removido: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1005767-48.2025.8.11.0000.md
+2025-06-12 16:02:18,999 - INFO -  Processo 1005767-48.2025.8.11.0000 excluído com sucesso
+2025-06-12 16:02:19,000 - INFO - 127.0.0.1 - - [12/Jun/2025 16:02:19] "DELETE /triagem/1005767-48.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-12 16:02:19,035 - INFO -  Solicitação GET /triagem recebida
+2025-06-12 16:02:19,038 - INFO -  7 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-12 16:02:19,038 - INFO -  Retornando 7 processos
+2025-06-12 16:02:19,039 - INFO - 127.0.0.1 - - [12/Jun/2025 16:02:19] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 16:02:50,117 - INFO - 127.0.0.1 - - [12/Jun/2025 16:02:50] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-12 16:03:10,696 - INFO -  Processando processo: 1005767-48.2025.8.11.0000
+2025-06-12 16:03:10,696 - INFO -  Suspeitos encontrados: ['Débora Vidal']
+2025-06-12 16:03:10,712 - INFO - Markdown salvo: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1005767-48.2025.8.11.0000.md
+2025-06-12 16:05:14,983 - INFO -  Processo 1005767-48.2025.8.11.0000 salvo com sucesso
+2025-06-12 16:05:14,998 - INFO - 127.0.0.1 - - [12/Jun/2025 16:05:14] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 201 -
+2025-06-12 16:05:15,521 - INFO -  Solicitação GET /triagem recebida
+2025-06-12 16:05:15,552 - INFO -  8 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-12 16:05:15,552 - INFO -  Retornando 8 processos
+2025-06-12 16:05:15,552 - INFO - 127.0.0.1 - - [12/Jun/2025 16:05:15] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 16:11:58,694 - INFO -  Solicitação GET /triagem recebida
+2025-06-12 16:11:58,804 - INFO -  8 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-12 16:11:58,805 - INFO -  Retornando 8 processos
+2025-06-12 16:11:58,812 - INFO - 127.0.0.1 - - [12/Jun/2025 16:11:58] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 16:12:11,102 - INFO -  Solicitação GET /triagem recebida
+2025-06-12 16:12:11,107 - INFO -  8 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-12 16:12:11,107 - INFO -  Retornando 8 processos
+2025-06-12 16:12:11,108 - INFO - 127.0.0.1 - - [12/Jun/2025 16:12:11] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 16:15:09,882 - INFO - 127.0.0.1 - - [12/Jun/2025 16:15:09] "OPTIONS /triagem/1005767-48.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-12 16:15:10,188 - INFO -  8 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-12 16:15:10,191 - INFO -  Arquivo markdown removido: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1005767-48.2025.8.11.0000.md
+2025-06-12 16:15:10,191 - INFO -  Processo 1005767-48.2025.8.11.0000 excluído com sucesso
+2025-06-12 16:15:10,192 - INFO - 127.0.0.1 - - [12/Jun/2025 16:15:10] "DELETE /triagem/1005767-48.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-12 16:15:10,200 - INFO -  Solicitação GET /triagem recebida
+2025-06-12 16:15:10,202 - INFO -  7 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-12 16:15:10,202 - INFO -  Retornando 7 processos
+2025-06-12 16:15:10,202 - INFO - 127.0.0.1 - - [12/Jun/2025 16:15:10] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 16:15:35,952 - INFO - 127.0.0.1 - - [12/Jun/2025 16:15:35] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-12 16:15:57,336 - INFO -  Processando processo: 1005767-48.2025.8.11.0000
+2025-06-12 16:15:57,336 - INFO -  Suspeitos encontrados: ['Débora Vidal']
+2025-06-12 16:15:57,336 - INFO - Markdown salvo: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1005767-48.2025.8.11.0000.md
+2025-06-12 16:18:02,668 - INFO -  Processo 1005767-48.2025.8.11.0000 salvo com sucesso
+2025-06-12 16:18:02,668 - INFO - 127.0.0.1 - - [12/Jun/2025 16:18:02] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 201 -
+2025-06-12 16:18:03,168 - INFO -  Solicitação GET /triagem recebida
+2025-06-12 16:18:03,214 - INFO -  8 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-12 16:18:03,214 - INFO -  Retornando 8 processos
+2025-06-12 16:18:03,214 - INFO - 127.0.0.1 - - [12/Jun/2025 16:18:03] "GET /triagem HTTP/1.1" 200 -
+2025-06-12 16:19:10,976 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\utils\\anonimizacao.py', reloading
+2025-06-12 16:19:10,977 - INFO - Servidor Flask com PID 18732 finalizado
+2025-06-12 16:19:11,786 - INFO -  * Restarting with stat
+2025-06-12 16:19:18,562 - INFO - Servidor Flask iniciando com PID: 25352
+2025-06-12 16:19:18,562 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-12 16:19:18,562 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-12 16:19:18,562 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-12 16:19:18,569 - INFO - Iniciando servidor Flask na porta 5000 com PID: 25352
+2025-06-12 16:19:18,579 - WARNING -  * Debugger is active!
+2025-06-12 16:19:18,587 - INFO -  * Debugger PIN: 316-893-758
+2025-06-13 08:40:33,842 - INFO - Servidor Flask iniciando com PID: 20396
+2025-06-13 08:40:33,842 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-13 08:40:33,842 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-13 08:40:33,842 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-13 08:40:33,848 - INFO - Iniciando servidor Flask na porta 5000 com PID: 20396
+2025-06-13 08:40:33,872 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-13 08:40:33,873 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-13 08:40:33,875 - INFO -  * Restarting with stat
+2025-06-13 08:40:38,721 - INFO - Servidor Flask iniciando com PID: 13380
+2025-06-13 08:40:38,721 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-13 08:40:38,722 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-13 08:40:38,723 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-13 08:40:38,728 - INFO - Iniciando servidor Flask na porta 5000 com PID: 13380
+2025-06-13 08:40:38,739 - WARNING -  * Debugger is active!
+2025-06-13 08:40:38,742 - INFO -  * Debugger PIN: 316-893-758
+2025-06-13 08:44:15,394 - INFO -  Solicitação GET /triagem recebida
+2025-06-13 08:44:20,778 - INFO -  Solicitação GET /triagem recebida
+2025-06-13 08:44:20,874 - INFO -  8 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-13 08:44:20,875 - INFO -  Retornando 8 processos
+2025-06-13 08:44:20,878 - INFO - 127.0.0.1 - - [13/Jun/2025 08:44:20] "GET /triagem HTTP/1.1" 200 -
+2025-06-13 08:44:31,696 - INFO -  Solicitação GET /triagem recebida
+2025-06-13 08:44:31,700 - INFO -  8 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-13 08:44:31,700 - INFO -  Retornando 8 processos
+2025-06-13 08:44:31,703 - INFO - 127.0.0.1 - - [13/Jun/2025 08:44:31] "GET /triagem HTTP/1.1" 200 -
+2025-06-13 09:12:04,504 - INFO -  Solicitação GET /triagem recebida
+2025-06-13 09:12:04,541 - INFO -  8 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-13 09:12:04,542 - INFO -  Retornando 8 processos
+2025-06-13 09:12:04,544 - INFO - 127.0.0.1 - - [13/Jun/2025 09:12:04] "GET /triagem HTTP/1.1" 200 -
+2025-06-13 09:12:11,058 - INFO -  Solicitação GET /triagem recebida
+2025-06-13 09:12:11,066 - INFO -  8 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-13 09:12:11,066 - INFO -  Retornando 8 processos
+2025-06-13 09:12:11,067 - INFO - 127.0.0.1 - - [13/Jun/2025 09:12:11] "GET /triagem HTTP/1.1" 200 -
+2025-06-13 09:12:11,325 - INFO -  Solicitação GET /triagem recebida
+2025-06-13 09:12:11,329 - INFO -  8 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-13 09:12:11,330 - INFO -  Retornando 8 processos
+2025-06-13 09:12:11,330 - INFO - 127.0.0.1 - - [13/Jun/2025 09:12:11] "GET /triagem HTTP/1.1" 200 -
+2025-06-13 09:12:22,095 - INFO -  Solicitação GET /triagem recebida
+2025-06-13 09:12:22,099 - INFO -  8 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-13 09:12:22,100 - INFO -  Retornando 8 processos
+2025-06-13 09:12:22,100 - INFO - 127.0.0.1 - - [13/Jun/2025 09:12:22] "GET /triagem HTTP/1.1" 200 -
+2025-06-13 09:12:27,362 - INFO -  Solicitação GET /triagem recebida
+2025-06-13 09:12:27,367 - INFO -  8 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-13 09:12:27,367 - INFO -  Retornando 8 processos
+2025-06-13 09:12:27,369 - INFO - 127.0.0.1 - - [13/Jun/2025 09:12:27] "GET /triagem HTTP/1.1" 200 -
+2025-06-13 09:12:32,241 - INFO -  Solicitação GET /triagem recebida
+2025-06-13 09:12:32,248 - INFO -  8 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-13 09:12:32,248 - INFO -  Retornando 8 processos
+2025-06-13 09:12:32,249 - INFO - 127.0.0.1 - - [13/Jun/2025 09:12:32] "GET /triagem HTTP/1.1" 200 -
+2025-06-13 09:12:33,658 - INFO -  Solicitação GET /triagem recebida
+2025-06-13 09:12:33,664 - INFO -  8 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-13 09:12:33,664 - INFO -  Retornando 8 processos
+2025-06-13 09:12:33,665 - INFO - 127.0.0.1 - - [13/Jun/2025 09:12:33] "GET /triagem HTTP/1.1" 200 -
+2025-06-13 09:16:19,736 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\utils\\anonimizacao.py', reloading
+2025-06-13 09:16:19,740 - INFO - Servidor Flask com PID 13380 finalizado
+2025-06-13 09:16:20,930 - INFO -  * Restarting with stat
+2025-06-13 09:16:40,222 - INFO - Servidor Flask iniciando com PID: 13152
+2025-06-13 09:16:40,222 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-13 09:16:40,222 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-13 09:16:40,222 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-13 09:16:40,227 - INFO - Iniciando servidor Flask na porta 5000 com PID: 13152
+2025-06-13 09:16:40,243 - WARNING -  * Debugger is active!
+2025-06-13 09:16:40,252 - INFO -  * Debugger PIN: 316-893-758
+2025-06-13 09:26:24,843 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\utils\\anonimizacao.py', reloading
+2025-06-13 09:26:24,847 - INFO - Servidor Flask com PID 13152 finalizado
+2025-06-13 09:26:25,617 - INFO -  * Restarting with stat
+2025-06-13 09:26:29,998 - INFO - Servidor Flask iniciando com PID: 10488
+2025-06-13 09:26:29,998 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-13 09:26:29,998 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-13 09:26:29,998 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-13 09:26:30,003 - INFO - Iniciando servidor Flask na porta 5000 com PID: 10488
+2025-06-13 09:26:30,013 - WARNING -  * Debugger is active!
+2025-06-13 09:26:30,019 - INFO -  * Debugger PIN: 316-893-758
+2025-06-13 09:30:47,230 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\utils\\anonimizacao.py', reloading
+2025-06-13 09:30:47,231 - INFO - Servidor Flask com PID 10488 finalizado
+2025-06-13 09:30:47,665 - INFO -  * Restarting with stat
+2025-06-13 09:30:48,711 - INFO - Servidor Flask iniciando com PID: 5960
+2025-06-13 09:30:48,711 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-13 09:30:48,712 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-13 09:30:48,712 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-13 09:30:48,717 - INFO - Iniciando servidor Flask na porta 5000 com PID: 5960
+2025-06-13 09:30:48,734 - WARNING -  * Debugger is active!
+2025-06-13 09:30:48,737 - INFO -  * Debugger PIN: 316-893-758
+2025-06-13 09:31:01,800 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\utils\\anonimizacao.py', reloading
+2025-06-13 09:31:01,801 - INFO - Servidor Flask com PID 5960 finalizado
+2025-06-13 09:31:01,881 - INFO -  * Restarting with stat
+2025-06-13 09:31:06,149 - INFO - Servidor Flask iniciando com PID: 23048
+2025-06-13 09:31:06,149 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-13 09:31:06,149 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-13 09:31:06,150 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-13 09:31:06,153 - INFO - Iniciando servidor Flask na porta 5000 com PID: 23048
+2025-06-13 09:31:06,161 - WARNING -  * Debugger is active!
+2025-06-13 09:31:06,162 - INFO -  * Debugger PIN: 316-893-758
+2025-06-13 09:31:28,277 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\app.py', reloading
+2025-06-13 09:31:28,277 - INFO - Servidor Flask com PID 23048 finalizado
+2025-06-13 09:31:28,642 - INFO -  * Restarting with stat
+2025-06-13 09:31:32,932 - INFO - Servidor Flask iniciando com PID: 14976
+2025-06-13 09:31:32,932 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-13 09:31:32,932 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-13 09:31:32,932 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-13 09:31:32,932 - INFO - Iniciando servidor Flask na porta 5000 com PID: 14976
+2025-06-13 09:31:32,947 - WARNING -  * Debugger is active!
+2025-06-13 09:31:32,947 - INFO -  * Debugger PIN: 316-893-758
+2025-06-13 09:32:06,113 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\app.py', reloading
+2025-06-13 09:32:06,114 - INFO - Servidor Flask com PID 14976 finalizado
+2025-06-13 09:32:06,523 - INFO -  * Restarting with stat
+2025-06-13 09:32:11,118 - INFO - Servidor Flask iniciando com PID: 1616
+2025-06-13 09:32:11,118 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-13 09:32:11,119 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-13 09:32:11,119 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-13 09:32:11,123 - INFO - Iniciando servidor Flask na porta 5000 com PID: 1616
+2025-06-13 09:32:11,131 - WARNING -  * Debugger is active!
+2025-06-13 09:32:11,138 - INFO -  * Debugger PIN: 316-893-758
+2025-06-13 09:32:49,364 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\app.py', reloading
+2025-06-13 09:32:49,364 - INFO - Servidor Flask com PID 1616 finalizado
+2025-06-13 09:32:49,809 - INFO -  * Restarting with stat
+2025-06-13 09:32:54,053 - INFO - Servidor Flask iniciando com PID: 25272
+2025-06-13 09:32:54,054 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-13 09:32:54,054 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-13 09:32:54,054 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-13 09:32:54,060 - INFO - Iniciando servidor Flask na porta 5000 com PID: 25272
+2025-06-13 09:32:54,068 - WARNING -  * Debugger is active!
+2025-06-13 09:32:54,074 - INFO -  * Debugger PIN: 316-893-758
+2025-06-13 09:33:08,174 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\app.py', reloading
+2025-06-13 09:33:08,174 - INFO - Servidor Flask com PID 25272 finalizado
+2025-06-13 09:33:08,570 - INFO -  * Restarting with stat
+2025-06-13 09:33:13,250 - INFO - Servidor Flask iniciando com PID: 21308
+2025-06-13 09:33:13,250 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-13 09:33:13,251 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-13 09:33:13,251 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-13 09:33:13,256 - INFO - Iniciando servidor Flask na porta 5000 com PID: 21308
+2025-06-13 09:33:13,265 - WARNING -  * Debugger is active!
+2025-06-13 09:33:13,271 - INFO -  * Debugger PIN: 316-893-758
+2025-06-13 09:33:22,001 - INFO -  Solicitação GET /triagem recebida
+2025-06-13 09:33:22,039 - INFO -  8 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-13 09:33:22,040 - INFO -  Retornando 8 processos
+2025-06-13 09:33:22,041 - INFO - 127.0.0.1 - - [13/Jun/2025 09:33:22] "GET /triagem HTTP/1.1" 200 -
+2025-06-13 09:34:00,236 - INFO - 127.0.0.1 - - [13/Jun/2025 09:34:00] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-13 09:34:24,577 - INFO -  Processando processo: 1005767-48.2025.8.11.0000
+2025-06-13 09:34:24,577 - INFO -  Suspeitos encontrados: ['Débora Vidal']
+2025-06-13 09:34:24,582 - INFO - Markdown salvo: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1005767-48.2025.8.11.0000.md
+2025-06-13 09:34:24,643 - INFO -  Processo 1005767-48.2025.8.11.0000 salvo com sucesso
+2025-06-13 09:34:24,644 - INFO - 127.0.0.1 - - [13/Jun/2025 09:34:24] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 201 -
+2025-06-13 09:34:24,968 - INFO -  Solicitação GET /triagem recebida
+2025-06-13 09:34:25,002 - INFO -  9 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-13 09:34:25,002 - INFO -  Retornando 9 processos
+2025-06-13 09:34:25,002 - INFO - 127.0.0.1 - - [13/Jun/2025 09:34:25] "GET /triagem HTTP/1.1" 200 -
+2025-06-13 09:35:15,048 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\app.py', reloading
+2025-06-13 09:35:15,049 - INFO - Servidor Flask com PID 21308 finalizado
+2025-06-13 09:35:15,629 - INFO -  * Restarting with stat
+2025-06-13 09:35:20,601 - INFO - Servidor Flask iniciando com PID: 1200
+2025-06-13 09:35:20,601 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-13 09:35:20,603 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-13 09:35:20,603 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-13 09:35:20,607 - INFO - Iniciando servidor Flask na porta 5000 com PID: 1200
+2025-06-13 09:35:20,610 - WARNING -  * Debugger is active!
+2025-06-13 09:35:20,623 - INFO -  * Debugger PIN: 316-893-758
+2025-06-13 09:35:20,846 - INFO - 127.0.0.1 - - [13/Jun/2025 09:35:20] "OPTIONS /triagem/1005767-48.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-13 09:35:21,119 - INFO -  9 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-13 09:35:21,120 - INFO -  Arquivo markdown removido: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1005767-48.2025.8.11.0000.md
+2025-06-13 09:35:21,121 - INFO -  Processo 1005767-48.2025.8.11.0000 excluído com sucesso
+2025-06-13 09:35:21,121 - INFO - 127.0.0.1 - - [13/Jun/2025 09:35:21] "DELETE /triagem/1005767-48.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-13 09:35:21,165 - INFO -  Solicitação GET /triagem recebida
+2025-06-13 09:35:21,168 - INFO -  7 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-13 09:35:21,168 - INFO -  Retornando 7 processos
+2025-06-13 09:35:21,169 - INFO - 127.0.0.1 - - [13/Jun/2025 09:35:21] "GET /triagem HTTP/1.1" 200 -
+2025-06-13 09:35:45,258 - INFO - 127.0.0.1 - - [13/Jun/2025 09:35:45] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-13 09:36:09,984 - INFO -  Processando processo: 1005767-48.2025.8.11.0000
+2025-06-13 09:36:09,984 - INFO -  Suspeitos encontrados: ['Débora Vidal']
+2025-06-13 09:36:09,989 - INFO - Markdown salvo: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1005767-48.2025.8.11.0000.md
+2025-06-13 09:37:43,162 - INFO -  Anonimização concluída: 1063 substituições em 93.14s
+2025-06-13 09:37:43,164 - INFO -  Processo 1005767-48.2025.8.11.0000 salvo com sucesso
+2025-06-13 09:37:43,166 - INFO - 127.0.0.1 - - [13/Jun/2025 09:37:43] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 201 -
+2025-06-13 09:37:43,494 - INFO -  Solicitação GET /triagem recebida
+2025-06-13 09:37:43,513 - INFO -  8 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-13 09:37:43,513 - INFO -  Retornando 8 processos
+2025-06-13 09:37:43,513 - INFO - 127.0.0.1 - - [13/Jun/2025 09:37:43] "GET /triagem HTTP/1.1" 200 -
+2025-06-13 09:40:11,462 - INFO - 127.0.0.1 - - [13/Jun/2025 09:40:11] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-13 09:40:33,755 - INFO -  Processando processo: 1005767-48.2025.8.11.0000
+2025-06-13 09:40:33,755 - INFO -  Suspeitos encontrados: ['Débora Vidal']
+2025-06-13 09:40:33,761 - INFO - Markdown salvo: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1005767-48.2025.8.11.0000.md
+2025-06-13 09:42:02,730 - INFO -  Anonimização concluída: 1063 substituições em 88.93s
+2025-06-13 09:42:02,745 - INFO -  Processo 1005767-48.2025.8.11.0000 salvo com sucesso
+2025-06-13 09:42:02,745 - INFO - 127.0.0.1 - - [13/Jun/2025 09:42:02] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 201 -
+2025-06-13 09:42:03,077 - INFO -  Solicitação GET /triagem recebida
+2025-06-13 09:42:03,082 - INFO -  9 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-13 09:42:03,082 - INFO -  Retornando 9 processos
+2025-06-13 09:42:03,082 - INFO - 127.0.0.1 - - [13/Jun/2025 09:42:03] "GET /triagem HTTP/1.1" 200 -
+2025-06-13 09:44:41,535 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\utils\\anonimizacao.py', reloading
+2025-06-13 09:44:41,535 - INFO - Servidor Flask com PID 1200 finalizado
+2025-06-13 09:44:42,547 - INFO -  * Restarting with stat
+2025-06-13 09:44:43,881 - INFO - Servidor Flask com PID 20396 finalizado
+2025-06-13 09:48:50,656 - INFO - Servidor Flask iniciando com PID: 6060
+2025-06-13 09:48:50,656 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-13 09:48:50,660 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-13 09:48:50,660 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-13 09:48:50,667 - INFO - Iniciando servidor Flask na porta 5000 com PID: 6060
+2025-06-13 09:48:50,687 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-13 09:48:50,687 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-13 09:48:50,687 - INFO -  * Restarting with stat
+2025-06-13 09:48:54,640 - INFO - Servidor Flask iniciando com PID: 16008
+2025-06-13 09:48:54,640 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-13 09:48:54,640 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-13 09:48:54,641 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-13 09:48:54,645 - INFO - Iniciando servidor Flask na porta 5000 com PID: 16008
+2025-06-13 09:48:54,653 - WARNING -  * Debugger is active!
+2025-06-13 09:48:54,661 - INFO -  * Debugger PIN: 316-893-758
+2025-06-13 09:48:56,662 - INFO -  Solicitação GET /triagem recebida
+2025-06-13 09:48:56,702 - INFO -  9 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-13 09:48:56,703 - INFO -  Retornando 9 processos
+2025-06-13 09:48:56,704 - INFO - 127.0.0.1 - - [13/Jun/2025 09:48:56] "GET /triagem HTTP/1.1" 200 -
+2025-06-13 09:49:23,430 - INFO - 127.0.0.1 - - [13/Jun/2025 09:49:23] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-13 09:49:44,664 - INFO -  Processando processo: 1005767-48.2025.8.11.0000
+2025-06-13 09:49:44,664 - INFO -  Suspeitos encontrados: ['Débora Vidal']
+2025-06-13 09:49:44,673 - INFO - Markdown salvo: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1005767-48.2025.8.11.0000.md
+2025-06-13 09:50:39,155 - INFO -  Anonimização concluída: 480 substituições em 54.45s
+2025-06-13 09:50:39,155 - INFO -  Processo 1005767-48.2025.8.11.0000 salvo com sucesso
+2025-06-13 09:50:39,155 - INFO - 127.0.0.1 - - [13/Jun/2025 09:50:39] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 201 -
+2025-06-13 09:50:39,483 - INFO -  Solicitação GET /triagem recebida
+2025-06-13 09:50:39,505 - INFO -  10 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-13 09:50:39,506 - INFO -  Retornando 10 processos
+2025-06-13 09:50:39,506 - INFO - 127.0.0.1 - - [13/Jun/2025 09:50:39] "GET /triagem HTTP/1.1" 200 -
+2025-06-13 09:55:16,500 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\utils\\anonimizacao.py', reloading
+2025-06-13 09:55:16,513 - INFO - Servidor Flask com PID 16008 finalizado
+2025-06-13 10:00:32,909 - INFO -  Sinal 2 recebido. Finalizando servidor graciosamente...
+2025-06-13 10:00:32,925 - INFO -  Servidor com PID 6060 finalizado
+2025-06-13 10:00:32,947 - INFO - Servidor Flask com PID 6060 finalizado
+2025-06-13 10:00:43,198 - INFO - Servidor Flask iniciando com PID: 21400
+2025-06-13 10:00:43,198 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-13 10:00:43,199 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-13 10:00:43,199 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-13 10:00:43,204 - INFO - Iniciando servidor Flask na porta 5000 com PID: 21400
+2025-06-13 10:00:43,226 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-13 10:00:43,227 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-13 10:00:43,229 - INFO -  * Restarting with stat
+2025-06-13 10:00:48,164 - INFO - Servidor Flask iniciando com PID: 15240
+2025-06-13 10:00:48,164 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-13 10:00:48,165 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-13 10:00:48,165 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-13 10:00:48,169 - INFO - Iniciando servidor Flask na porta 5000 com PID: 15240
+2025-06-13 10:00:48,177 - WARNING -  * Debugger is active!
+2025-06-13 10:00:48,185 - INFO -  * Debugger PIN: 316-893-758
+2025-06-13 10:01:01,282 - INFO -  Solicitação GET /triagem recebida
+2025-06-13 10:01:01,309 - INFO -  10 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-13 10:01:01,309 - INFO -  Retornando 10 processos
+2025-06-13 10:01:01,312 - INFO - 127.0.0.1 - - [13/Jun/2025 10:01:01] "GET /triagem HTTP/1.1" 200 -
+2025-06-13 10:01:28,500 - INFO - 127.0.0.1 - - [13/Jun/2025 10:01:28] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-13 10:01:52,145 - INFO -  Processando processo: 1005767-48.2025.8.11.0000
+2025-06-13 10:01:52,146 - INFO -  Suspeitos encontrados: ['Débora Vidal']
+2025-06-13 10:01:52,150 - INFO - Markdown salvo: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1005767-48.2025.8.11.0000.md
+2025-06-13 10:02:58,946 - INFO -  Anonimização concluída: 698 substituições em 66.76s
+2025-06-13 10:02:58,946 - INFO -  Processo 1005767-48.2025.8.11.0000 salvo com sucesso
+2025-06-13 10:02:58,966 - INFO - 127.0.0.1 - - [13/Jun/2025 10:02:58] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 201 -
+2025-06-13 10:02:59,294 - INFO -  Solicitação GET /triagem recebida
+2025-06-13 10:02:59,298 - INFO -  11 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-13 10:02:59,298 - INFO -  Retornando 11 processos
+2025-06-13 10:02:59,314 - INFO - 127.0.0.1 - - [13/Jun/2025 10:02:59] "GET /triagem HTTP/1.1" 200 -
+2025-06-13 10:22:09,500 - INFO - 127.0.0.1 - - [13/Jun/2025 10:22:09] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-13 10:22:31,827 - INFO -  Processando processo: 1005767-48.2025.8.11.0000
+2025-06-13 10:22:31,827 - INFO -  Suspeitos encontrados: ['Débora Vidal']
+2025-06-13 10:22:31,834 - INFO - Markdown salvo: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1005767-48.2025.8.11.0000.md
+2025-06-13 10:23:38,016 - INFO -  Anonimização concluída: 698 substituições em 66.13s
+2025-06-13 10:23:38,016 - INFO -  Processo 1005767-48.2025.8.11.0000 salvo com sucesso
+2025-06-13 10:23:38,016 - INFO - 127.0.0.1 - - [13/Jun/2025 10:23:38] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 201 -
+2025-06-13 10:23:38,354 - INFO -  Solicitação GET /triagem recebida
+2025-06-13 10:23:38,354 - INFO -  12 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-13 10:23:38,354 - INFO -  Retornando 12 processos
+2025-06-13 10:23:38,354 - INFO - 127.0.0.1 - - [13/Jun/2025 10:23:38] "GET /triagem HTTP/1.1" 200 -
+2025-06-13 10:26:40,497 - INFO -  Sinal 2 recebido. Finalizando servidor graciosamente...
+2025-06-13 10:26:40,497 - INFO -  Servidor com PID 15240 finalizado
+2025-06-13 10:26:40,497 - INFO - Servidor Flask com PID 15240 finalizado
+2025-06-13 10:26:41,248 - INFO -  Sinal 2 recebido. Finalizando servidor graciosamente...
+2025-06-13 10:26:41,265 - INFO -  Servidor com PID 21400 finalizado
+2025-06-13 10:26:41,286 - INFO - Servidor Flask com PID 21400 finalizado
