@@ -8,13 +8,16 @@ import sys
 import logging
 from datetime import datetime
 from pathlib import Path
+from utils.anonimizacao import AnonimizadorOtimizado
+
+anonimizador_global = None
 
 # ==========================================
 #  SETUP AUTOMÁTICO DE VARIÁVEIS DE AMBIENTE
 # ==========================================
 
 try:
-    from utils.anonimizacao import salvar_anonimizacao_md
+    from utils.anonimizacao import AnonimizadorOtimizado
     ANONIMIZACAO_ATIVA = True
     print("Módulo de anonimização carregado")
 except ImportError as e:
@@ -348,6 +351,15 @@ logger.info(f" PASTA_DAT: {PASTA_DAT}")
 # 🛠️ FUNÇÕES AUXILIARES
 # ==========================================
 
+
+def get_anonimizador():
+    global anonimizador_global
+    if anonimizador_global is None:
+        caminho_palavras = "utils/palavras_descartadas.txt"
+        anonimizador_global = AnonimizadorOtimizado(caminho_palavras)
+    return anonimizador_global
+
+
 def limpar(valor):
     return str(valor).strip() if valor is not None else ""
 
@@ -444,8 +456,40 @@ def get_processos():
     except Exception as e:
         logger.error(f" Erro em GET /triagem: {str(e)}")
         return jsonify({'error': str(e)}), 500
+    
+@app.route('/anonimizacao/status', methods=['GET'])
+def status_anonimizacao():
+    """Retorna informações sobre o status da anonimização"""
+    try:
+        anonimizador = get_anonimizador()
+        
+        # Informações sobre o modelo spaCy
+        modelo_info = {
+            "carregado": anonimizador.nlp is not None,
+            "max_length": anonimizador.nlp.max_length if anonimizador.nlp else None,
+            "componentes_desabilitados": anonimizador.nlp.disabled if anonimizador.nlp else []
+        }
+        
+        # Informações sobre cache
+        cache_info = {
+            "normalizacao_size": len(anonimizador.cache_normalizacao),
+            "suspeitos_carregados": anonimizador.cache_suspeitos is not None,
+            "suspeitos_count": len(anonimizador.cache_suspeitos) if anonimizador.cache_suspeitos else 0
+        }
+        
+        resposta = {
+            "anonimizacao_ativa": ANONIMIZACAO_ATIVA,
+            "modelo_spacy": modelo_info,
+            "cache": cache_info,
+            "palavras_descartadas": len(anonimizador.palavras_descartadas),
+            "padroes_regex": len(anonimizador.padroes_regex)
+        }
+        
+        return jsonify(resposta), 200
+        
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
 
-# Correção para POST /triagem/form
 @app.route('/triagem/form', methods=['POST'])
 def receber_processo_com_markdown():
     print(" Solicitação POST /triagem/form recebida")
@@ -514,26 +558,74 @@ def receber_processo_com_markdown():
                 f.write(dat_base64)
             print(f" Arquivo DAT salvo: {caminho_dat}")
 
-        # === PASSO 3: ANONIMIZAÇÃO AUTOMÁTICA ===
-        print(" [PASSO 3] Iniciando anonimização automática...")
+        # === PASSO 3: ANONIMIZAÇÃO AUTOMÁTICA OTIMIZADA ===
+        print(" [PASSO 3] Iniciando anonimização automática otimizada...")
         
         arquivos_anonimizados = {}
         total_substituicoes = 0
+        tempo_anonimizacao = 0
         
-        if ANONIMIZACAO_ATIVA:
-            from utils.anonimizacao import carregar_suspeitos_mapeados, salvar_anonimizacao_md
+        if ANONIMIZACAO_ATIVA and markdown and markdown.strip():
             try:
-                print(f" Executando anonimização para processo {numero}")
-                mapa_suspeitos = carregar_suspeitos_mapeados("utils/suspeitos.txt")
-                salvar_anonimizacao_md(markdown, nome_arquivo_base, mapa_suspeitos)
-                total_substituicoes = 1 
+                import time
+                inicio = time.time()
+                
+                print(f" Executando anonimização otimizada para processo {numero}")
+                
+                # Usa a instância otimizada do anonimizador
+                anonimizador = get_anonimizador()
+                
+                # Carrega mapeamento de suspeitos (com cache)
+                mapa_suspeitos = anonimizador.carregar_suspeitos_mapeados("utils/suspeitos.txt")
+                
+                # Executa anonimização otimizada
+                texto_anonimizado, mapa_reverso = anonimizador.anonimizar_com_identificadores(
+                    markdown, mapa_suspeitos
+                )
+                
+                # Salva arquivos anonimizados
+                pasta_anon = os.path.join(PASTA_DESTINO, "anonimizados")
+                pasta_mapas = os.path.join(PASTA_DESTINO, "mapas")
+                os.makedirs(pasta_anon, exist_ok=True)
+                os.makedirs(pasta_mapas, exist_ok=True)
+                
+                # Salva texto anonimizado
+                caminho_md_anon = os.path.join(pasta_anon, f"{nome_arquivo_base}_anon.md")
+                with open(caminho_md_anon, "w", encoding="utf-8") as f:
+                    f.write(texto_anonimizado)
+                
+                # Salva mapa de substituições se houver
+                caminho_mapa = None
+                if mapa_reverso:
+                    caminho_mapa = os.path.join(pasta_mapas, f"{nome_arquivo_base}_mapa.md")
+                    with open(caminho_mapa, "w", encoding="utf-8") as f:
+                        f.write("| Identificador | Nome Original |\n")
+                        f.write("|---------------|----------------|\n")
+                        for ident, nome in sorted(mapa_reverso.items()):
+                            f.write(f"| {ident} | {nome} |\n")
+                
+                total_substituicoes = len(mapa_reverso)
+                tempo_anonimizacao = round(time.time() - inicio, 2)
+                
                 arquivos_anonimizados = {
-                    "md": os.path.join(PASTA_DESTINO, "anonimizados", f"{nome_arquivo_base}_anon.md"),
-                    "mapa": os.path.join(PASTA_DESTINO, "mapas", f"{nome_arquivo_base}_mapa.md")
+                    "md": caminho_md_anon,
+                    "mapa": caminho_mapa if caminho_mapa else None
                 }
+                
+                print(f" Anonimização concluída em {tempo_anonimizacao}s")
+                print(f" Total de substituições: {total_substituicoes}")
+                logger.info(f" Anonimização concluída: {total_substituicoes} substituições em {tempo_anonimizacao}s")
+                
             except Exception as e:
-                print(f" Erro durante anonimização: {e}")
-                logger.error(f" Erro durante anonimização: {e}")
+                print(f" Erro durante anonimização otimizada: {e}")
+                logger.error(f" Erro durante anonimização otimizada: {e}")
+                import traceback
+                traceback.print_exc()
+        else:
+            if not ANONIMIZACAO_ATIVA:
+                print(" Anonimização desativada")
+            elif not markdown or not markdown.strip():
+                print(" Sem conteúdo markdown para anonimizar")
 
         # === PASSO 4: ATUALIZA TABELA DE TRIAGEM ===
         print(" [PASSO 4] Atualizando tabela de triagem...")
@@ -588,7 +680,8 @@ def receber_processo_com_markdown():
         print(f" Processo {numero} salvo com sucesso")
         print(f"    Suspeitos detectados: {len(suspeitos)}")
         print(f"    Substituições anonimização: {total_substituicoes}")
-        print(f"    Arquivos anonimizados: {len(arquivos_anonimizados)}")
+        print(f"    Tempo de anonimização: {tempo_anonimizacao}s")
+        print(f"    Arquivos anonimizados: {len([a for a in arquivos_anonimizados.values() if a])}")
         
         resultado_final = {
             "message": "Processo e arquivos salvos com sucesso",
@@ -597,6 +690,7 @@ def receber_processo_com_markdown():
             "anonimizacao": {
                 "ativa": ANONIMIZACAO_ATIVA,
                 "substituicoes": total_substituicoes,
+                "tempo_segundos": tempo_anonimizacao,
                 "arquivos": arquivos_anonimizados
             }
         }
@@ -609,6 +703,53 @@ def receber_processo_com_markdown():
         logger.error(f" Erro em POST /triagem/form: {str(e)}")
         import traceback
         traceback.print_exc()
+        return jsonify({'error': str(e)}), 500
+
+
+# === OPCIONAL: Rota para processamento em lote ===
+@app.route('/triagem/lote', methods=['POST'])
+def processar_lote_anonimizacao():
+    """Rota para processamento em lote de múltiplos textos"""
+    try:
+        data = request.get_json()
+        textos = data.get('textos', [])
+        
+        if not textos:
+            return jsonify({'error': 'Lista de textos é obrigatória'}), 400
+        
+        print(f" Processando lote de {len(textos)} textos")
+        
+        anonimizador = get_anonimizador()
+        mapa_suspeitos = anonimizador.carregar_suspeitos_mapeados("utils/suspeitos.txt")
+        
+        import time
+        inicio = time.time()
+        
+        resultados = anonimizador.processar_lote(textos, mapa_suspeitos)
+        
+        tempo_total = round(time.time() - inicio, 2)
+        
+        resposta = {
+            "message": f"Lote processado com sucesso",
+            "total_textos": len(textos),
+            "tempo_total_segundos": tempo_total,
+            "tempo_medio_por_texto": round(tempo_total / len(textos), 2),
+            "resultados": [
+                {
+                    "texto_anonimizado": resultado[0],
+                    "substituicoes": len(resultado[1]),
+                    "mapa": resultado[1]
+                }
+                for resultado in resultados
+            ]
+        }
+        
+        logger.info(f"Lote de {len(textos)} textos processado em {tempo_total}s")
+        return jsonify(resposta), 200
+        
+    except Exception as e:
+        print(f" Erro em processamento de lote: {str(e)}")
+        logger.error(f" Erro em processamento de lote: {str(e)}")
         return jsonify({'error': str(e)}), 500
 
 # Correção para PUT /triagem/<numero>
