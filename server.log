@@ -2482,3 +2482,35 @@ AssertionError: write() before start_response
 2025-06-16 14:57:28,822 - INFO -  Servidor com PID 23776 finalizado
 2025-06-16 14:57:29,426 - INFO -  Sinal 2 recebido. Finalizando servidor graciosamente...
 2025-06-16 14:57:29,426 - INFO -  Servidor com PID 22136 finalizado
+2025-06-16 16:05:11,874 - INFO - Servidor Flask iniciando com PID: 20020
+2025-06-16 16:05:11,875 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 16:05:11,875 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-16 16:05:11,875 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-16 16:05:11,908 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.26:5000
+2025-06-16 16:05:11,908 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-16 16:05:40,116 - INFO - 127.0.0.1 - - [16/Jun/2025 16:05:40] "GET /rag/status HTTP/1.1" 200 -
+2025-06-16 16:20:12,902 - INFO - 127.0.0.1 - - [16/Jun/2025 16:20:12] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 16:20:12,902 - INFO - 127.0.0.1 - - [16/Jun/2025 16:20:12] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 16:20:12,918 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 16:20:12,918 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 16:24:31,504 - INFO -  Sinal 2 recebido. Finalizando servidor graciosamente...
+2025-06-16 16:24:31,506 - INFO -  Servidor com PID 20020 finalizado

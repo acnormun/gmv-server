@@ -14,6 +14,7 @@ from utils.auxiliar import extrair_tabela_md, get_anonimizador, limpar
 from utils.auto_setup import setup_environment
 from utils.progress_step import send_progress_ws
 from utils import progress_step
+import logging
 from flask_socketio import SocketIO
 
 app = Flask(__name__)
@@ -33,6 +34,24 @@ try:
 except ImportError as e:
     ANONIMIZACAO_ATIVA = False
     print(f"Anonimização desabilitada: {e}")
+    
+
+
+# ==========================================
+# 🧠 IMPORTAÇÕES DO SISTEMA RAG
+# ==========================================
+
+try:
+    from utils.adaptive_rag import initialize_rag, query_rag, get_rag_statistics
+    RAG_AVAILABLE = True
+    print("✅ Sistema RAG carregado com sucesso")
+except ImportError as e:
+    RAG_AVAILABLE = False
+    print(f"⚠️ Sistema RAG não disponível: {e}")
+    print("   Funcionalidades de consulta inteligente serão desabilitadas")
+
+if 'logger' not in globals():
+    logger = logging.getLogger(__name__)
 
 # ==========================================
 #  INICIALIZAÇÃO DO SETUP
@@ -78,6 +97,42 @@ print(f"Cache de variáveis antigas foi limpo")
 print(f"Arquivo .env atual foi carregado")
 print(f"{len([v for v in final_vars.values() if v])} variáveis essenciais definidas")
 print("=" * 60)
+
+# ==========================================
+# 🔧 INICIALIZAÇÃO DO RAG (APÓS CARREGAMENTO DO .ENV)
+# ==========================================
+
+def inicializar_rag():
+    """Inicializa o sistema RAG se disponível"""
+    if not RAG_AVAILABLE:
+        logger.warning("⚠️ Sistema RAG não disponível")
+        return False
+    
+    try:
+        logger.info("🧠 Inicializando sistema RAG...")
+        
+        sucesso = initialize_rag(
+            triagem_path=PATH_TRIAGEM,
+            pasta_destino=PASTA_DESTINO,
+            pasta_dat=PASTA_DAT
+        )
+        
+        if sucesso:
+            logger.info("✅ Sistema RAG inicializado com sucesso")
+            return True
+        else:
+            logger.warning("⚠️ Falha na inicialização do RAG")
+            return False
+            
+    except Exception as e:
+        logger.error(f"❌ Erro ao inicializar RAG: {str(e)}")
+        return False
+
+# Inicializa RAG após carregar variáveis de ambiente
+if RAG_AVAILABLE:
+    rag_inicializado = inicializar_rag()
+else:
+    rag_inicializado = False
 
 # ==========================================
 # 🌐 CONFIGURAÇÃO DO FLASK
@@ -671,6 +726,414 @@ def test_progress(operation_id):
         'socket_registered': operation_id in operation_sockets,
         'socket_id': operation_sockets.get(operation_id, 'Não encontrado')
     })
+    
+@app.route('/rag/status', methods=['GET'])
+def rag_status():
+    """Retorna status do sistema RAG"""
+    logger.info("📊 Solicitação GET /rag/status recebida")
+    
+    try:
+        if not RAG_AVAILABLE:
+            return jsonify({
+                'available': False,
+                'initialized': False,
+                'error': 'Sistema RAG não foi carregado'
+            }), 503
+        
+        if not rag_inicializado:
+            return jsonify({
+                'available': True,
+                'initialized': False,
+                'error': 'Sistema RAG não foi inicializado'
+            }), 503
+        
+        # Obtém estatísticas do sistema
+        stats = get_rag_statistics()
+        
+        return jsonify({
+            'available': True,
+            'initialized': True,
+            'statistics': stats
+        }), 200
+        
+    except Exception as e:
+        logger.error(f"❌ Erro em GET /rag/status: {str(e)}")
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/rag/query', methods=['POST'])
+def rag_query():
+    """Executa consulta no sistema RAG"""
+    logger.info("🔍 Solicitação POST /rag/query recebida")
+    
+    try:
+        if not RAG_AVAILABLE:
+            return jsonify({
+                'error': 'Sistema RAG não disponível'
+            }), 503
+        
+        if not rag_inicializado:
+            return jsonify({
+                'error': 'Sistema RAG não foi inicializado'
+            }), 503
+        
+        data = request.get_json()
+        
+        if not data or 'query' not in data:
+            logger.warning("⚠️ Parâmetro 'query' não fornecido")
+            return jsonify({'error': 'Parâmetro query é obrigatório'}), 400
+        
+        query_text = data.get('query', '').strip()
+        k = data.get('k', 5)  # Número de chunks a recuperar
+        
+        if not query_text:
+            logger.warning("⚠️ Query vazia fornecida")
+            return jsonify({'error': 'Query não pode estar vazia'}), 400
+        
+        if not isinstance(k, int) or k < 1 or k > 20:
+            k = 5  # Valor padrão
+        
+        logger.info(f"🔍 Executando consulta RAG: '{query_text[:50]}{'...' if len(query_text) > 50 else ''}'")
+        
+        # Executa consulta
+        resultado = query_rag(query_text, k=k)
+        
+        logger.info(f"✅ Consulta processada - Confiança: {resultado.get('confidence_score', 0):.3f}")
+        
+        return jsonify(resultado), 200
+        
+    except Exception as e:
+        logger.error(f"❌ Erro em POST /rag/query: {str(e)}")
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/rag/reinitialize', methods=['POST'])
+def rag_reinitialize():
+    """Reinicializa o sistema RAG"""
+    logger.info("🔄 Solicitação POST /rag/reinitialize recebida")
+    
+    try:
+        if not RAG_AVAILABLE:
+            return jsonify({
+                'error': 'Sistema RAG não disponível'
+            }), 503
+        
+        global rag_inicializado
+        
+        logger.info("🔄 Reinicializando sistema RAG...")
+        
+        sucesso = initialize_rag(
+            triagem_path=PATH_TRIAGEM,
+            pasta_destino=PASTA_DESTINO,
+            pasta_dat=PASTA_DAT
+        )
+        
+        rag_inicializado = sucesso
+        
+        if sucesso:
+            stats = get_rag_statistics()
+            logger.info("✅ Sistema RAG reinicializado com sucesso")
+            
+            return jsonify({
+                'success': True,
+                'message': 'Sistema RAG reinicializado com sucesso',
+                'statistics': stats
+            }), 200
+        else:
+            logger.error("❌ Falha na reinicialização do RAG")
+            return jsonify({
+                'success': False,
+                'error': 'Falha na reinicialização do sistema RAG'
+            }), 500
+            
+    except Exception as e:
+        logger.error(f"❌ Erro em POST /rag/reinitialize: {str(e)}")
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/rag/search', methods=['POST'])
+def rag_search():
+    """Busca avançada com filtros"""
+    logger.info("🔍 Solicitação POST /rag/search recebida")
+    
+    try:
+        if not RAG_AVAILABLE or not rag_inicializado:
+            return jsonify({
+                'error': 'Sistema RAG não disponível ou não inicializado'
+            }), 503
+        
+        data = request.get_json()
+        
+        if not data:
+            return jsonify({'error': 'Dados não fornecidos'}), 400
+        
+        query_text = data.get('query', '').strip()
+        filtros = data.get('filters', {})
+        k = data.get('k', 5)
+        
+        if not query_text:
+            return jsonify({'error': 'Query é obrigatória'}), 400
+        
+        # Monta consulta com filtros
+        if filtros:
+            filter_parts = []
+            
+            if filtros.get('tema'):
+                filter_parts.append(f"tema: {filtros['tema']}")
+            
+            if filtros.get('status'):
+                filter_parts.append(f"status: {filtros['status']}")
+            
+            if filtros.get('responsavel'):
+                filter_parts.append(f"responsável: {filtros['responsavel']}")
+            
+            if filtros.get('suspeitos'):
+                filter_parts.append(f"suspeitos: {filtros['suspeitos']}")
+            
+            if filter_parts:
+                query_text = f"{query_text} considerando {', '.join(filter_parts)}"
+        
+        logger.info(f"🔍 Busca avançada: '{query_text[:100]}{'...' if len(query_text) > 100 else ''}'")
+        
+        resultado = query_rag(query_text, k=k)
+        
+        # Adiciona informações dos filtros aplicados
+        resultado['filters_applied'] = filtros
+        resultado['original_query'] = data.get('query', '')
+        
+        return jsonify(resultado), 200
+        
+    except Exception as e:
+        logger.error(f"❌ Erro em POST /rag/search: {str(e)}")
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/rag/statistics', methods=['GET'])
+def rag_statistics():
+    """Retorna estatísticas detalhadas do sistema RAG"""
+    logger.info("📊 Solicitação GET /rag/statistics recebida")
+    
+    try:
+        if not RAG_AVAILABLE or not rag_inicializado:
+            return jsonify({
+                'error': 'Sistema RAG não disponível ou não inicializado'
+            }), 503
+        
+        stats = get_rag_statistics()
+        
+        # Adiciona informações extras
+        stats['system_info'] = {
+            'rag_available': RAG_AVAILABLE,
+            'rag_initialized': rag_inicializado,
+            'paths': {
+                'triagem': PATH_TRIAGEM,
+                'processos': PASTA_DESTINO,
+                'dat': PASTA_DAT
+            }
+        }
+        
+        return jsonify(stats), 200
+        
+    except Exception as e:
+        logger.error(f"❌ Erro em GET /rag/statistics: {str(e)}")
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/rag/suggestions', methods=['GET'])
+def rag_suggestions():
+    """Retorna sugestões de consultas baseadas nos dados"""
+    logger.info("💡 Solicitação GET /rag/suggestions recebida")
+    
+    try:
+        if not RAG_AVAILABLE or not rag_inicializado:
+            return jsonify({
+                'error': 'Sistema RAG não disponível ou não inicializado'
+            }), 503
+        
+        stats = get_rag_statistics()
+        
+        # Gera sugestões baseadas nos dados disponíveis
+        suggestions = []
+        
+        # Sugestões baseadas em temas
+        if 'tema_distribution' in stats:
+            temas = list(stats['tema_distribution'].keys())[:3]
+            for tema in temas:
+                suggestions.append({
+                    'type': 'factual',
+                    'query': f"Quais processos estão relacionados ao tema {tema}?",
+                    'category': 'Consulta por Tema'
+                })
+        
+        # Sugestões baseadas em status
+        if 'status_distribution' in stats:
+            status_list = list(stats['status_distribution'].keys())[:3]
+            for status in status_list:
+                suggestions.append({
+                    'type': 'analytical',
+                    'query': f"Analise os processos com status {status}",
+                    'category': 'Análise por Status'
+                })
+        
+        # Sugestões baseadas em suspeitos
+        if 'top_suspeitos' in stats and stats['top_suspeitos']:
+            suspeitos = list(stats['top_suspeitos'].keys())[:2]
+            for suspeito in suspeitos:
+                suggestions.append({
+                    'type': 'contextual',
+                    'query': f"Quais processos envolvem {suspeito}?",
+                    'category': 'Consulta por Suspeito'
+                })
+        
+        # Sugestões gerais
+        suggestions.extend([
+            {
+                'type': 'analytical',
+                'query': 'Compare a distribuição de processos por tema',
+                'category': 'Análise Geral'
+            },
+            {
+                'type': 'opinion',
+                'query': 'Qual a tendência dos processos investigados?',
+                'category': 'Análise de Tendências'
+            },
+            {
+                'type': 'contextual',
+                'query': 'Identifique padrões nos processos suspeitos',
+                'category': 'Identificação de Padrões'
+            },
+            {
+                'type': 'factual',
+                'query': 'Quantos processos estão em investigação?',
+                'category': 'Consulta Quantitativa'
+            }
+        ])
+        
+        return jsonify({
+            'suggestions': suggestions[:10],  # Máximo 10 sugestões
+            'total_suggestions': len(suggestions),
+            'based_on_data': {
+                'total_documents': stats.get('total_documents', 0),
+                'unique_themes': len(stats.get('tema_distribution', {})),
+                'unique_status': len(stats.get('status_distribution', {}))
+            }
+        }), 200
+        
+    except Exception as e:
+        logger.error(f"❌ Erro em GET /rag/suggestions: {str(e)}")
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/rag/health', methods=['GET'])
+def rag_health():
+    """Endpoint de saúde do sistema RAG"""
+    logger.info("🏥 Solicitação GET /rag/health recebida")
+    
+    try:
+        health_status = {
+            'status': 'healthy' if (RAG_AVAILABLE and rag_inicializado) else 'unhealthy',
+            'rag_available': RAG_AVAILABLE,
+            'rag_initialized': rag_inicializado,
+            'timestamp': datetime.now().isoformat()
+        }
+        
+        if RAG_AVAILABLE and rag_inicializado:
+            stats = get_rag_statistics()
+            health_status.update({
+                'documents_loaded': stats.get('total_documents', 0),
+                'chunks_processed': stats.get('total_chunks', 0),
+                'cache_size': stats.get('cache_size', 0)
+            })
+        
+        status_code = 200 if health_status['status'] == 'healthy' else 503
+        
+        return jsonify(health_status), status_code
+        
+    except Exception as e:
+        logger.error(f"❌ Erro em GET /rag/health: {str(e)}")
+        return jsonify({
+            'status': 'error',
+            'error': str(e),
+            'timestamp': datetime.now().isoformat()
+        }), 500
+
+@app.route('/triagem/<numero>/analyze', methods=['POST'])
+def analisar_processo_com_rag(numero):
+    """Analisa um processo específico usando RAG"""
+    logger.info(f"🧠 Solicitação POST /triagem/{numero}/analyze recebida")
+    
+    try:
+        if not RAG_AVAILABLE or not rag_inicializado:
+            return jsonify({
+                'error': 'Sistema RAG não disponível para análise'
+            }), 503
+        
+        # Busca informações do processo
+        query_text = f"Analise detalhadamente o processo {numero} incluindo status, tema, suspeitos e evidências"
+        
+        resultado = query_rag(query_text, k=3)
+        
+        return jsonify({
+            'processo': numero,
+            'analise': resultado,
+            'timestamp': datetime.now().isoformat()
+        }), 200
+        
+    except Exception as e:
+        logger.error(f"❌ Erro em POST /triagem/{numero}/analyze: {str(e)}")
+        return jsonify({'error': str(e)}), 500
+    
+@app.route('/dashboard/insights', methods=['GET'])
+def dashboard_insights():
+    """Gera insights inteligentes para o dashboard usando RAG"""
+    logger.info("📊 Solicitação GET /dashboard/insights recebida")
+    
+    try:
+        insights = []
+        
+        if RAG_AVAILABLE and rag_inicializado:
+            # Gera insights automáticos usando RAG
+            queries_automaticas = [
+                "Qual o status geral dos processos investigados?",
+                "Identifique os principais temas em investigação",
+                "Quais são os padrões mais relevantes identificados?"
+            ]
+            
+            for query in queries_automaticas:
+                try:
+                    resultado = query_rag(query, k=3)
+                    insights.append({
+                        'question': query,
+                        'insight': resultado.get('response', ''),
+                        'confidence': resultado.get('confidence_score', 0),
+                        'strategy': resultado.get('strategy_used', 'unknown')
+                    })
+                except Exception as e:
+                    logger.warning(f"Erro ao gerar insight para '{query}': {str(e)}")
+        
+        # Adiciona estatísticas básicas
+        stats = get_rag_statistics() if (RAG_AVAILABLE and rag_inicializado) else {}
+        
+        return jsonify({
+            'insights': insights,
+            'statistics': stats,
+            'rag_available': RAG_AVAILABLE and rag_inicializado,
+            'generated_at': datetime.now().isoformat()
+        }), 200
+        
+    except Exception as e:
+        logger.error(f"❌ Erro em GET /dashboard/insights: {str(e)}")
+        return jsonify({'error': str(e)}), 500
+
+
+# ==========================================
+# 🎯 MIDDLEWARE PARA LOGS RAG
+# ==========================================
+
+@app.before_request
+def log_rag_requests():
+    """Log específico para requisições RAG"""
+    if request.path.startswith('/rag/'):
+        logger.info(f"🧠 RAG Request: {request.method} {request.path}")
+        if request.method == 'POST' and request.is_json:
+            data = request.get_json()
+            if data and 'query' in data:
+                query_preview = data['query'][:50] + ('...' if len(data['query']) > 50 else '')
+                logger.info(f"   Query: '{query_preview}'")
 
 # ==========================================
 # 🔄 FINALIZAÇÃO E EXECUÇÃO
@@ -728,26 +1191,35 @@ def handle_disconnect():
 
 if __name__ == '__main__':
     try:
-        print(f"\n SERVIDOR GMV SISTEMA PRONTO!")
-        print("=" * 40)
-        print(f" URL: http://127.0.0.1:5000")
-        print(f" Health: http://127.0.0.1:5000/health")
-        print(f" Info: http://127.0.0.1:5000/process-info")
-        print(f" Dados: {os.path.abspath(os.path.dirname(PATH_TRIAGEM))}")
-        print("=" * 40)
-        print(f" USANDO AS SEGUINTES CONFIGURAÇÕES:")
-        print(f"   PATH_TRIAGEM: {PATH_TRIAGEM}")
-        print(f"   PASTA_DESTINO: {PASTA_DESTINO}")
-        print(f"   PASTA_DAT: {PASTA_DAT}")
-        print("=" * 40)
-
-        logger.info(f"Iniciando servidor Flask na porta 5000 com PID: {os.getpid()}")
+        print(f"\n🌟 SERVIDOR GMV SISTEMA PRONTO!")
+        print("=" * 60)
+        print(f"🌐 Flask App rodando")
+        print(f"📁 PATH_TRIAGEM: {PATH_TRIAGEM}")
+        print(f"📁 PASTA_DESTINO: {PASTA_DESTINO}")
+        print(f"📁 PASTA_DAT: {PASTA_DAT}")
+        print(f"🧠 Sistema RAG: {'✅ Ativo' if (RAG_AVAILABLE and rag_inicializado) else '❌ Inativo'}")
         
+        if RAG_AVAILABLE and rag_inicializado:
+            stats = get_rag_statistics()
+            print(f"📊 Documentos carregados: {stats.get('total_documents', 0)}")
+            print(f"🔍 Chunks processados: {stats.get('total_chunks', 0)}")
         
-        # CORRETO PARA SUPORTE A SOCKET.IO
-        socketio.run(app, debug=True, port=5000, host='127.0.0.1')
-
+        print("=" * 60)
+        print(f"🏃‍♂️ Servidor iniciado em PID {os.getpid()}")
+        print("🔄 Endpoints RAG disponíveis:")
+        print("   GET  /rag/status - Status do sistema")
+        print("   POST /rag/query - Executar consulta")
+        print("   GET  /rag/statistics - Estatísticas")
+        print("   GET  /rag/suggestions - Sugestões de consultas")
+        print("   POST /rag/search - Busca com filtros")
+        print("   GET  /rag/health - Health check")
+        print("   POST /rag/reinitialize - Reinicializar sistema")
+        
+        app.run(host='0.0.0.0', port=5000, debug=False)
+        
+    except KeyboardInterrupt:
+        print(f"\n🛑 Servidor interrompido pelo usuário")
     except Exception as e:
-        logger.error(f"Erro ao iniciar servidor: {e}")
-        print(f"\n ERRO CRÍTICO: {str(e)}")
-        sys.exit(1)
+        print(f"\n❌ Erro fatal no servidor: {str(e)}")
+    finally:
+        logger.info(f"🏁 Servidor com PID {os.getpid()} finalizado")
