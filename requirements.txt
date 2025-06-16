@@ -6,3 +6,4 @@ pdfplumber
 markdownify
 pyMuPDF
 requests
+flask_socketio
