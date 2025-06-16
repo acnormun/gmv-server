@@ -2,19 +2,29 @@ from flask import Flask, jsonify, request
 import pandas as pd
 import re
 import os
-import io
+import uuid
+import time
 import signal
 import sys
 import logging
 from datetime import datetime
 from pathlib import Path
 from utils.anonimizacao import AnonimizadorOtimizado
+from utils.auxiliar import extrair_tabela_md, get_anonimizador, limpar
+from utils.auto_setup import setup_environment
+from utils.progress_step import send_progress_ws
+from utils import progress_step
+from flask_socketio import SocketIO
 
-anonimizador_global = None
+app = Flask(__name__)
+app.config['SECRET_KEY'] = 'sua_chave_secreta'
 
-# ==========================================
-#  SETUP AUTOMÁTICO DE VARIÁVEIS DE AMBIENTE
-# ==========================================
+socketio = SocketIO(app, 
+                   cors_allowed_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+                   logger=True,
+                   engineio_logger=False)
+operation_sockets = {}
+progress_step.init_progress(socketio, operation_sockets)
 
 try:
     from utils.anonimizacao import AnonimizadorOtimizado
@@ -23,244 +33,6 @@ try:
 except ImportError as e:
     ANONIMIZACAO_ATIVA = False
     print(f"Anonimização desabilitada: {e}")
-
-def setup_environment():
-    """Setup automático das variáveis de ambiente com LIMPEZA FORÇADA DE CACHE"""
-    print("SETUP AUTOMÁTICO DO GMV SISTEMA")
-    print("=" * 40)
-    
-    # LIMPEZA FORÇADA - Remove TODAS as variáveis relacionadas ao GMV
-    old_vars = ['PATH_TRIAGEM', 'PASTA_DESTINO', 'PASTA_DAT', 'GITHUB_TOKEN']
-    removed_count = 0
-    
-    print("LIMPEZA FORÇADA DE CACHE:")
-    for var in old_vars:
-        if var in os.environ:
-            old_value = os.environ[var]
-            del os.environ[var]
-            print(f"  Removido: {var} = {old_value}")
-            removed_count += 1
-    
-    if removed_count == 0:
-        print("   Nenhuma variável em cache (primeira execução)")
-    else:
-        print(f"   {removed_count} variáveis antigas removidas do cache")
-    
-    # Verifica se python-dotenv está disponível
-    try:
-        from dotenv import load_dotenv
-        dotenv_available = True
-        print("python-dotenv disponível")
-    except ImportError:
-        dotenv_available = False
-        print("python-dotenv não instalado - usando método manual")
-    
-    # Procura arquivo .env
-    env_file = '.env'
-    env_path = os.path.abspath(env_file)
-    
-    print(f"\nVERIFICAÇÃO DO ARQUIVO .ENV:")
-    print(f"   Local: {env_path}")
-    print(f"   Existe: {os.path.exists(env_file)}")
-    
-    if os.path.exists(env_file):
-        # Mostra conteúdo do .env para debug
-        print("   Conteúdo atual:")
-        try:
-            with open(env_file, 'r', encoding='utf-8') as f:
-                for i, line in enumerate(f, 1):
-                    line = line.strip()
-                    if line and not line.startswith('#'):
-                        if 'TOKEN' in line.upper():
-                            key = line.split('=')[0] if '=' in line else line
-                            print(f"      {i:2d}: {key}=***HIDDEN***")
-                        else:
-                            print(f"      {i:2d}: {line}")
-        except Exception as e:
-            print(f"    Erro ao ler .env: {e}")
-    else:
-        print(f"   Arquivo .env não encontrado, criando...")
-        create_default_env()
-    
-    print(f"\n CARREGAMENTO FORÇADO:")
-    # Carrega variáveis com OVERRIDE forçado
-    if dotenv_available:
-        print(f"    Usando python-dotenv com override=True")
-        from dotenv import load_dotenv
-        result = load_dotenv(env_file, override=True, verbose=True)
-        print(f"    Resultado: {result}")
-    else:
-        print(f"    Carregando manualmente...")
-        load_env_manual(env_file)
-    
-    # Verifica se carregou corretamente
-    PATH_TRIAGEM = os.getenv("PATH_TRIAGEM")
-    PASTA_DESTINO = os.getenv("PASTA_DESTINO")
-    PASTA_DAT = os.getenv("PASTA_DAT")
-    
-    # Se ainda não carregou, tenta novamente
-    if not PATH_TRIAGEM or not PASTA_DESTINO:
-        print("\n Variáveis essenciais não definidas! Tentando corrigir...")
-        
-        # Recria .env
-        create_default_env()
-        
-        # Tenta carregar novamente
-        if dotenv_available:
-            from dotenv import load_dotenv
-            load_dotenv(env_file, override=True)
-        else:
-            load_env_manual(env_file)
-        
-        # Verifica novamente
-        PATH_TRIAGEM = os.getenv("PATH_TRIAGEM")
-        PASTA_DESTINO = os.getenv("PASTA_DESTINO")
-        PASTA_DAT = os.getenv("PASTA_DAT")
-        
-        print(f"    APÓS CORREÇÃO:")
-        print(f"   PATH_TRIAGEM: {PATH_TRIAGEM}")
-        print(f"   PASTA_DESTINO: {PASTA_DESTINO}")
-        print(f"   PASTA_DAT: {PASTA_DAT}")
-    
-    # Cria estrutura de pastas
-    setup_directories()
-    
-    print("Setup concluído!\n")
-    return PATH_TRIAGEM, PASTA_DESTINO, PASTA_DAT
-
-def create_default_env():
-    """Cria arquivo .env padrão"""
-    env_content = """# Configurações do GMV Sistema
-# Edite os caminhos conforme necessário para este PC
-
-# Arquivo principal de triagem (será criado se não existir)
-PATH_TRIAGEM=./data/triagem.md
-
-# Pasta onde ficam os arquivos markdown dos processos
-PASTA_DESTINO=./data/processos
-
-# Pasta onde ficam os arquivos .dat
-PASTA_DAT=./data/dat
-
-# Token do GitHub (opcional, para atualizações)
-GITHUB_TOKEN=seu_token_aqui
-
-# ===========================================
-# EXEMPLOS para diferentes PCs:
-# ===========================================
-# 
-# Para usar caminhos absolutos Windows:
-# PATH_TRIAGEM=C:/GMV_Data/triagem.md
-# PASTA_DESTINO=C:/GMV_Data/processos
-# PASTA_DAT=C:/GMV_Data/dat
-#
-# Para usar pasta do usuário:
-# PATH_TRIAGEM=%USERPROFILE%/Documents/GMV/triagem.md
-# PASTA_DESTINO=%USERPROFILE%/Documents/GMV/processos
-# PASTA_DAT=%USERPROFILE%/Documents/GMV/dat
-#
-# Para usar pasta específica:
-# PATH_TRIAGEM=D:/Trabalho/GMV/triagem.md
-# PASTA_DESTINO=D:/Trabalho/GMV/processos  
-# PASTA_DAT=D:/Trabalho/GMV/dat
-"""
-    
-    try:
-        with open('.env', 'w', encoding='utf-8') as f:
-            f.write(env_content)
-        print(f"    Arquivo .env criado: {os.path.abspath('.env')}")
-        print(f"    Edite o arquivo se quiser usar outros caminhos")
-        return True
-    except Exception as e:
-        print(f"    Erro ao criar .env: {e}")
-        return False
-
-def load_env_manual(env_file):
-    """Carrega .env manualmente (fallback se dotenv não disponível)"""
-    loaded_vars = {}
-    try:
-        with open(env_file, 'r', encoding='utf-8') as f:
-            for line_num, line in enumerate(f, 1):
-                original_line = line
-                line = line.strip()
-                
-                # Pula linhas vazias e comentários
-                if not line or line.startswith('#'):
-                    continue
-                
-                # Processa linha com =
-                if '=' in line:
-                    try:
-                        key, value = line.split('=', 1)
-                        key = key.strip()
-                        value = value.strip()
-                        
-                        # Remove aspas se existirem
-                        if (value.startswith('"') and value.endswith('"')) or \
-                           (value.startswith("'") and value.endswith("'")):
-                            value = value[1:-1]
-                        
-                        # Define no ambiente
-                        os.environ[key] = value
-                        loaded_vars[key] = value
-                        
-                        # Log (esconde tokens)
-                        if 'TOKEN' in key.upper() or 'PASSWORD' in key.upper():
-                            print(f"      {key} = ***HIDDEN***")
-                        else:
-                            print(f"      {key} = {value}")
-                            
-                    except Exception as e:
-                        print(f"       Erro na linha {line_num}: {original_line.strip()} - {e}")
-                else:
-                    print(f"       Linha {line_num} inválida (sem =): {original_line.strip()}")
-        
-        print(f"    Total: {len(loaded_vars)} variáveis carregadas manualmente")
-        return True
-        
-    except Exception as e:
-        print(f"    Erro ao carregar .env manualmente: {e}")
-        return False
-
-def setup_directories():
-    """Cria estrutura de diretórios"""
-    print(" Verificando/criando diretórios...")
-    
-    PATH_TRIAGEM = os.getenv("PATH_TRIAGEM")
-    PASTA_DESTINO = os.getenv("PASTA_DESTINO") 
-    PASTA_DAT = os.getenv("PASTA_DAT")
-    
-    # Cria diretórios
-    for pasta, nome in [(PASTA_DESTINO, "PASTA_DESTINO"), (PASTA_DAT, "PASTA_DAT")]:
-        if pasta:
-            try:
-                os.makedirs(pasta, exist_ok=True)
-                print(f"   {nome}: {pasta}")
-            except Exception as e:
-                print(f"   Erro ao criar {nome}: {e}")
-    
-    # Cria arquivo de triagem se não existir
-    if PATH_TRIAGEM:
-        try:
-            # Cria diretório pai se necessário
-            triagem_dir = os.path.dirname(PATH_TRIAGEM)
-            if triagem_dir:
-                os.makedirs(triagem_dir, exist_ok=True)
-            
-            if not os.path.exists(PATH_TRIAGEM):
-                triagem_content = """# Tabela de Processos
-
-| Nº Processo | Tema | Data da Distribuição | Responsável | Status | Última Atualização | Suspeitos | Comentários |
-|-------------|------|-----------------------|-------------|--------|----------------------|-----------|-------------|
-
-"""
-                with open(PATH_TRIAGEM, 'w', encoding='utf-8') as f:
-                    f.write(triagem_content)
-                print(f"   Arquivo de triagem criado: {PATH_TRIAGEM}")
-            else:
-                print(f"   PATH_TRIAGEM: {PATH_TRIAGEM}")
-        except Exception as e:
-            print(f"   Erro ao criar arquivo de triagem: {e}")
 
 # ==========================================
 #  INICIALIZAÇÃO DO SETUP
@@ -331,8 +103,6 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-app = Flask(__name__)
-
 # Configuração CORS
 try:
     from flask_cors import CORS
@@ -346,74 +116,6 @@ logger.info(f"Servidor Flask iniciando com PID: {os.getpid()}")
 logger.info(f"PATH_TRIAGEM: {PATH_TRIAGEM}")
 logger.info(f" PASTA_DESTINO: {PASTA_DESTINO}")
 logger.info(f" PASTA_DAT: {PASTA_DAT}")
-
-# ==========================================
-# 🛠️ FUNÇÕES AUXILIARES
-# ==========================================
-
-
-def get_anonimizador():
-    global anonimizador_global
-    if anonimizador_global is None:
-        caminho_palavras = "utils/palavras_descartadas.txt"
-        anonimizador_global = AnonimizadorOtimizado(caminho_palavras)
-    return anonimizador_global
-
-
-def limpar(valor):
-    return str(valor).strip() if valor is not None else ""
-
-def extrair_tabela_md(arquivo_md):
-    try:
-        with open(arquivo_md, 'r', encoding='utf-8') as f:
-            linhas = f.readlines()
-
-        inicio = next((i for i, l in enumerate(linhas) if re.match(r'^\|.+\|$', l)), None)
-        if inicio is None:
-            logger.warning(f" Nenhuma tabela encontrada em {arquivo_md}")
-            return []
-
-        tabela_linhas = []
-        for linha in linhas[inicio:]:
-            if not linha.strip().startswith('|'):
-                break
-            if re.match(r'^\|\s*-+\s*\|', linha):
-                continue
-            tabela_linhas.append(linha.strip())
-
-        if not tabela_linhas:
-            logger.warning(f" Tabela vazia em {arquivo_md}")
-            return []
-
-        tabela_str = '\n'.join(tabela_linhas)
-        
-        try:
-            df = pd.read_csv(io.StringIO(tabela_str), sep='|', engine='python', skipinitialspace=True)
-            df = df.dropna(axis=1, how='all')
-            df.columns = [col.strip() for col in df.columns]
-        except Exception as e:
-            logger.error(f" Erro ao processar CSV: {e}")
-            return []
-
-        processos = []
-        for _, row in df.iterrows():
-            processos.append({
-                "numeroProcesso": limpar(row.get("Nº Processo")),
-                "tema": limpar(row.get("Tema")),
-                "dataDistribuicao": limpar(row.get("Data da Distribuição")),
-                "responsavel": limpar(row.get("Responsável")),
-                "status": limpar(row.get("Status")),
-                "ultimaAtualizacao": limpar(row.get("Última Atualização")),
-                "suspeitos": limpar(row.get('Suspeitos')),
-                "comentarios": limpar(row.get("Comentários")) if "Comentários" in row else ""
-            })
-        
-        logger.info(f" {len(processos)} processos extraídos de {arquivo_md}")
-        return processos
-        
-    except Exception as e:
-        logger.error(f" Erro ao extrair tabela de {arquivo_md}: {str(e)}")
-        return []
 
 # ==========================================
 # 🌐 ROTAS DA API
@@ -456,303 +158,347 @@ def get_processos():
     except Exception as e:
         logger.error(f" Erro em GET /triagem: {str(e)}")
         return jsonify({'error': str(e)}), 500
-    
-@app.route('/anonimizacao/status', methods=['GET'])
-def status_anonimizacao():
-    """Retorna informações sobre o status da anonimização"""
-    try:
-        anonimizador = get_anonimizador()
-        
-        # Informações sobre o modelo spaCy
-        modelo_info = {
-            "carregado": anonimizador.nlp is not None,
-            "max_length": anonimizador.nlp.max_length if anonimizador.nlp else None,
-            "componentes_desabilitados": anonimizador.nlp.disabled if anonimizador.nlp else []
-        }
-        
-        # Informações sobre cache
-        cache_info = {
-            "normalizacao_size": len(anonimizador.cache_normalizacao),
-            "suspeitos_carregados": anonimizador.cache_suspeitos is not None,
-            "suspeitos_count": len(anonimizador.cache_suspeitos) if anonimizador.cache_suspeitos else 0
-        }
-        
-        resposta = {
-            "anonimizacao_ativa": ANONIMIZACAO_ATIVA,
-            "modelo_spacy": modelo_info,
-            "cache": cache_info,
-            "palavras_descartadas": len(anonimizador.palavras_descartadas),
-            "padroes_regex": len(anonimizador.padroes_regex)
-        }
-        
-        return jsonify(resposta), 200
-        
-    except Exception as e:
-        return jsonify({'error': str(e)}), 500
 
 @app.route('/triagem/form', methods=['POST'])
 def receber_processo_com_markdown():
-    print(" Solicitação POST /triagem/form recebida")
+    print("📝 Solicitação POST /triagem/form recebida")
     try:
         data = request.get_json()
-        print(f" Dados recebidos: {data}")
+        print(f"📄 Dados recebidos")
         
-        numero = limpar(data.get('numeroProcesso'))
-        tema = limpar(data.get('tema'))
-        data_dist = limpar(data.get('dataDistribuicao'))
-        responsavel = limpar(data.get('responsavel'))
-        status = limpar(data.get('status'))
-        markdown = limpar(data.get('markdown'))
-        comentarios = limpar(data.get('comentarios'))
-        dat_base64 = data.get('dat')
+        # CRIA O OPERATION_ID PRIMEIRO!
+        operation_id = str(uuid.uuid4())
+        print(f"🆔 Operation ID gerado: {operation_id}")
         
-        # DATA ATUAL AUTOMÁTICA - sempre seta data de hoje
-        from datetime import datetime
-        ultima_att = datetime.now().strftime('%Y-%m-%d')
-        
-        # === PASSO 1: BUSCA SUSPEITOS NO TEXTO ORIGINAL (ANTES DE ANONIMIZAR) ===
-        suspeitos = []
-        if markdown and markdown.strip():
+        def processar_em_background():
+            """Processa o documento em background"""
+            print(f"🔄 Iniciando processamento em background para {operation_id}")
+            
+            # Pequeno delay para dar tempo do frontend se registrar
+            time.sleep(1)
+            
+            # Verifica se o frontend se registrou
+            if operation_id not in operation_sockets:
+                print(f"⚠️ Frontend ainda não registrado para {operation_id}, aguardando...")
+                # Aguarda mais um pouco
+                for i in range(5):  # Aguarda até 5 segundos
+                    time.sleep(1)
+                    if operation_id in operation_sockets:
+                        break
+                    print(f"⏳ Aguardando registro... {i+1}/5")
+            
+            if operation_id not in operation_sockets:
+                print(f"❌ Frontend não se registrou para {operation_id} após 6 segundos")
+                # Continua processamento sem progresso
+                processar_sem_progresso(data, operation_id)
+                return
+            
+            print(f"✅ Frontend registrado! Iniciando processamento com progresso...")
+            
             try:
-                suspeitos = encontrar_suspeitos(markdown, './utils/suspeitos.txt')
-                if suspeitos:
-                    for i, suspeito in enumerate(suspeitos, 1):
-                        print(f"   {i}. {suspeito}")
-                else:
-                    print("   Nenhum suspeito detectado")
-            except Exception as e:
-                print(f" Erro na busca de suspeitos: {e}")
+                # ETAPA 1: VALIDAÇÃO INICIAL
+                send_progress_ws(operation_id, 1, 'Validando dados do processo...', 10)
+                time.sleep(0.5) 
+                
+                numero = limpar(data.get('numeroProcesso'))
+                tema = limpar(data.get('tema'))
+                data_dist = limpar(data.get('dataDistribuicao'))
+                responsavel = limpar(data.get('responsavel'))
+                status = limpar(data.get('status'))
+                markdown = limpar(data.get('markdown'))
+                comentarios = limpar(data.get('comentarios'))
+                dat_base64 = data.get('dat')
+                
+                # DATA ATUAL AUTOMÁTICA - sempre seta data de hoje
+                from datetime import datetime
+                ultima_att = datetime.now().strftime('%Y-%m-%d')
+                
+                # Validação básica
+                if not numero:
+                    send_progress_ws(operation_id, 0, 'Erro: Número do processo é obrigatório', 0)
+                    print("❌ Número do processo obrigatório")
+                    return
+                
+                if not markdown or not numero:
+                    send_progress_ws(operation_id, 0, 'Erro: Campos obrigatórios ausentes', 0)
+                    logger.warning("⚠️ Campos obrigatórios ausentes")
+                    return
+                
+                logger.info(f"📄 Processando processo: {numero}")
+                
+                # === PASSO 2: BUSCA SUSPEITOS NO TEXTO ORIGINAL ===
+                send_progress_ws(operation_id, 2, 'Analisando suspeição e impedimento no documento...', 25)
+                time.sleep(1)
+                
                 suspeitos = []
-
-        if not numero:
-            print(" Número do processo obrigatório")
-            return jsonify({'error': 'Número do processo é obrigatório'}), 400
-        
-        logger.info(f" Processando processo: {numero}")
-        logger.info(f" Suspeitos encontrados: {suspeitos}")
-
-        if not markdown or not numero:
-            logger.warning(" Campos obrigatórios ausentes")
-            return jsonify({'error': 'Campos obrigatórios ausentes'}), 400
-
-        nome_arquivo_base = numero.replace('/', '-')
-        os.makedirs(PASTA_DESTINO, exist_ok=True)
-        os.makedirs(PASTA_DAT, exist_ok=True)
-
-        caminho_md = os.path.join(PASTA_DESTINO, f"{nome_arquivo_base}.md")
-        caminho_dat = os.path.join(PASTA_DAT, f"{nome_arquivo_base}.dat")
-
-        # === PASSO 2: SALVA ARQUIVOS ORIGINAIS ===
-        print(" [PASSO 2] Salvando arquivos originais...")
-        
-        # Salva markdown se fornecido
-        if markdown and markdown.strip():
-            with open(caminho_md, 'w', encoding='utf-8') as f:
-                f.write(markdown)
-            print(f" Markdown salvo: {caminho_md}")
-            logger.info(f"Markdown salvo: {caminho_md}")
-
-        # Salva .dat como base64 se enviado
-        if dat_base64 and dat_base64.strip():
-            with open(caminho_dat, 'w', encoding='utf-8') as f:
-                f.write(dat_base64)
-            print(f" Arquivo DAT salvo: {caminho_dat}")
-
-        # === PASSO 3: ANONIMIZAÇÃO AUTOMÁTICA OTIMIZADA ===
-        print(" [PASSO 3] Iniciando anonimização automática otimizada...")
-        
-        arquivos_anonimizados = {}
-        total_substituicoes = 0
-        tempo_anonimizacao = 0
-        
-        if ANONIMIZACAO_ATIVA and markdown and markdown.strip():
-            try:
-                import time
-                inicio = time.time()
+                if markdown and markdown.strip():
+                    try:
+                        suspeitos = encontrar_suspeitos(markdown, './utils/suspeitos.txt')
+                        if suspeitos:
+                            for i, suspeito in enumerate(suspeitos, 1):
+                                print(f"   {i}. {suspeito}")
+                        else:
+                            print("   Nenhum suspeito detectado")
+                    except Exception as e:
+                        print(f"❌ Erro na busca de suspeitos: {e}")
+                        suspeitos = []
                 
-                print(f" Executando anonimização otimizada para processo {numero}")
+                logger.info(f"🔍 Suspeitos encontrados: {suspeitos}")
+
+                # === PASSO 3: PREPARANDO ESTRUTURA ===
+                send_progress_ws(operation_id, 3, 'Preparando estrutura de arquivos...', 40)
+                time.sleep(0.5)
                 
-                # Usa a instância otimizada do anonimizador
-                anonimizador = get_anonimizador()
+                nome_arquivo_base = numero.replace('/', '-')
+                os.makedirs(PASTA_DESTINO, exist_ok=True)
+                os.makedirs(PASTA_DAT, exist_ok=True)
+
+                caminho_md = os.path.join(PASTA_DESTINO, f"{nome_arquivo_base}.md")
+                caminho_dat = os.path.join(PASTA_DAT, f"{nome_arquivo_base}.dat")
+
+                # === PASSO 4: SALVA ARQUIVOS ORIGINAIS ===
+                print("📁 [PASSO 4] Salvando arquivos originais...")
                 
-                # Carrega mapeamento de suspeitos (com cache)
-                mapa_suspeitos = anonimizador.carregar_suspeitos_mapeados("utils/suspeitos.txt")
+                # Salva markdown se fornecido
+                if markdown and markdown.strip():
+                    send_progress_ws(operation_id, 4, 'Salvando documento processado...', 55)
+                    time.sleep(0.8)
+                    with open(caminho_md, 'w', encoding='utf-8') as f:
+                        f.write(markdown)
+                    print(f"💾 Markdown salvo: {caminho_md}")
+                    logger.info(f"Markdown salvo: {caminho_md}")
+
+                # Salva .dat como base64 se enviado
+                if dat_base64 and dat_base64.strip():
+                    send_progress_ws(operation_id, 5, 'Salvando arquivo original...', 65)
+                    time.sleep(0.5)
+                    with open(caminho_dat, 'w', encoding='utf-8') as f:
+                        f.write(dat_base64)
+                    print(f"💾 Arquivo DAT salvo: {caminho_dat}")
+
+                # === PASSO 5: ANONIMIZAÇÃO AUTOMÁTICA OTIMIZADA ===
+                print("🔒 [PASSO 5] Iniciando anonimização automática otimizada...")
+                send_progress_ws(operation_id, 6, 'Executando anonimização automática...', 75)
+                time.sleep(0.7)
                 
-                # Executa anonimização otimizada
-                texto_anonimizado, mapa_reverso = anonimizador.anonimizar_com_identificadores(
-                    markdown, mapa_suspeitos
+                arquivos_anonimizados = {}
+                total_substituicoes = 0
+                tempo_anonimizacao = 0
+                
+                if ANONIMIZACAO_ATIVA and markdown and markdown.strip():
+                    try:
+                        inicio = time.time()
+                        print(f"🔄 Executando anonimização otimizada para processo {numero}")
+                        
+                        # Usa a instância otimizada do anonimizador
+                        anonimizador = get_anonimizador()
+                        
+                        # Carrega mapeamento de suspeitos (com cache)
+                        mapa_suspeitos = anonimizador.carregar_suspeitos_mapeados("utils/suspeitos.txt")
+                        
+                        # Executa anonimização otimizada
+                        texto_anonimizado, mapa_reverso = anonimizador.anonimizar_com_identificadores(
+                            markdown, mapa_suspeitos
+                        )
+                        
+                        # Salva arquivos anonimizados
+                        pasta_anon = os.path.join(PASTA_DESTINO, "anonimizados")
+                        pasta_mapas = os.path.join(PASTA_DESTINO, "mapas")
+                        os.makedirs(pasta_anon, exist_ok=True)
+                        os.makedirs(pasta_mapas, exist_ok=True)
+                        
+                        # Salva texto anonimizado
+                        caminho_md_anon = os.path.join(pasta_anon, f"{nome_arquivo_base}_anon.md")
+                        with open(caminho_md_anon, "w", encoding="utf-8") as f:
+                            f.write(texto_anonimizado)
+                        
+                        # Salva mapa de substituições se houver
+                        caminho_mapa = None
+                        if mapa_reverso:
+                            caminho_mapa = os.path.join(pasta_mapas, f"{nome_arquivo_base}_mapa.md")
+                            with open(caminho_mapa, "w", encoding="utf-8") as f:
+                                f.write("| Identificador | Nome Original |\n")
+                                f.write("|---------------|----------------|\n")
+                                for ident, nome in sorted(mapa_reverso.items()):
+                                    f.write(f"| {ident} | {nome} |\n")
+                        
+                        total_substituicoes = len(mapa_reverso)
+                        tempo_anonimizacao = round(time.time() - inicio, 2)
+                        
+                        arquivos_anonimizados = {
+                            "md": caminho_md_anon,
+                            "mapa": caminho_mapa if caminho_mapa else None
+                        }
+                        
+                        print(f"✅ Anonimização concluída em {tempo_anonimizacao}s")
+                        print(f"📊 Total de substituições: {total_substituicoes}")
+                        logger.info(f"✅ Anonimização concluída: {total_substituicoes} substituições em {tempo_anonimizacao}s")
+                        
+                    except Exception as e:
+                        print(f"❌ Erro durante anonimização otimizada: {e}")
+                        logger.error(f"❌ Erro durante anonimização otimizada: {e}")
+                        import traceback
+                        traceback.print_exc()
+                else:
+                    if not ANONIMIZACAO_ATIVA:
+                        print("ℹ️ Anonimização desativada")
+                    elif not markdown or not markdown.strip():
+                        print("ℹ️ Sem conteúdo markdown para anonimizar")
+
+                # === PASSO 6: ATUALIZA TABELA DE TRIAGEM ===
+                send_progress_ws(operation_id, 7, 'Atualizando tabela de triagem...', 90)
+                print("📋 [PASSO 6] Atualizando tabela de triagem...")
+                time.sleep(0.5)
+                
+                # Converte lista de suspeitos para string
+                suspeitos_str = ', '.join(suspeitos) if suspeitos else ''
+
+                nova_linha = (
+                    f"| {numero} "
+                    f"| {tema} "
+                    f"| {data_dist} "
+                    f"| {responsavel} "
+                    f"| {status} "
+                    f"| {ultima_att} "
+                    f"| {suspeitos_str} "
+                    f"| {comentarios} |\n"
                 )
+
+                if not os.path.exists(PATH_TRIAGEM):
+                    print(f"📄 Criando novo arquivo de triagem: {PATH_TRIAGEM}")
+                    logger.info(f"📄 Criando novo arquivo de triagem: {PATH_TRIAGEM}")
+                    with open(PATH_TRIAGEM, 'w', encoding='utf-8') as f:
+                        f.write("# Tabela de Processos\n\n")
+                        f.write("| Nº Processo | Tema | Data da Distribuição | Responsável | Status | Última Atualização | Suspeitos | Comentários |\n")
+                        f.write("|-------------|------|-----------------------|-------------|--------|----------------------|-----------|-------------|\n")
+
+                with open(PATH_TRIAGEM, 'r', encoding='utf-8') as f:
+                    linhas = f.readlines()
+
+                indice_separador = next(
+                    (i for i, linha in enumerate(linhas) if re.match(r'^\|\s*-+\s*\|', linha.strip())),
+                    None
+                )
+
+                if indice_separador is not None:
+                    while indice_separador + 1 < len(linhas) and not linhas[indice_separador + 1].strip().startswith('|'):
+                        del linhas[indice_separador + 1]
+                    linhas.insert(indice_separador + 1, nova_linha)
+                else:
+                    linhas += [
+                        "| Nº Processo | Tema | Data da Distribuição | Responsável | Status | Última Atualização | Suspeitos | Comentários |\n",
+                        "|-------------|------|-----------------------|-------------|--------|----------------------|-----------|-------------|\n",
+                        nova_linha
+                    ]
+
+                with open(PATH_TRIAGEM, 'w', encoding='utf-8') as f:
+                    f.writelines(linhas)
                 
-                # Salva arquivos anonimizados
-                pasta_anon = os.path.join(PASTA_DESTINO, "anonimizados")
-                pasta_mapas = os.path.join(PASTA_DESTINO, "mapas")
-                os.makedirs(pasta_anon, exist_ok=True)
-                os.makedirs(pasta_mapas, exist_ok=True)
+                # === FINALIZAÇÃO ===
+                send_progress_ws(operation_id, 8, 'Processo adicionado com sucesso!', 100)
+                time.sleep(0.5)
                 
-                # Salva texto anonimizado
-                caminho_md_anon = os.path.join(pasta_anon, f"{nome_arquivo_base}_anon.md")
-                with open(caminho_md_anon, "w", encoding="utf-8") as f:
-                    f.write(texto_anonimizado)
+                print(f"🎉 Processo {numero} salvo com sucesso")
+                print(f"    📊 Suspeitos detectados: {len(suspeitos)}")
+                print(f"    🔄 Substituições anonimização: {total_substituicoes}")
+                print(f"    ⏱️ Tempo de anonimização: {tempo_anonimizacao}s")
+                print(f"    📁 Arquivos anonimizados: {len([a for a in arquivos_anonimizados.values() if a])}")
                 
-                # Salva mapa de substituições se houver
-                caminho_mapa = None
-                if mapa_reverso:
-                    caminho_mapa = os.path.join(pasta_mapas, f"{nome_arquivo_base}_mapa.md")
-                    with open(caminho_mapa, "w", encoding="utf-8") as f:
-                        f.write("| Identificador | Nome Original |\n")
-                        f.write("|---------------|----------------|\n")
-                        for ident, nome in sorted(mapa_reverso.items()):
-                            f.write(f"| {ident} | {nome} |\n")
+                logger.info(f"✅ Processo {numero} salvo com sucesso")
                 
-                total_substituicoes = len(mapa_reverso)
-                tempo_anonimizacao = round(time.time() - inicio, 2)
-                
-                arquivos_anonimizados = {
-                    "md": caminho_md_anon,
-                    "mapa": caminho_mapa if caminho_mapa else None
-                }
-                
-                print(f" Anonimização concluída em {tempo_anonimizacao}s")
-                print(f" Total de substituições: {total_substituicoes}")
-                logger.info(f" Anonimização concluída: {total_substituicoes} substituições em {tempo_anonimizacao}s")
+                # Remove da lista de sockets após 5 segundos
+                import threading
+                threading.Timer(5.0, lambda: operation_sockets.pop(operation_id, None)).start()
                 
             except Exception as e:
-                print(f" Erro durante anonimização otimizada: {e}")
-                logger.error(f" Erro durante anonimização otimizada: {e}")
+                send_progress_ws(operation_id, 0, f'Erro: {str(e)}', 0)
+                print(f"❌ Erro no processamento: {e}")
                 import traceback
                 traceback.print_exc()
-        else:
-            if not ANONIMIZACAO_ATIVA:
-                print(" Anonimização desativada")
-            elif not markdown or not markdown.strip():
-                print(" Sem conteúdo markdown para anonimizar")
-
-        # === PASSO 4: ATUALIZA TABELA DE TRIAGEM ===
-        print(" [PASSO 4] Atualizando tabela de triagem...")
         
-        # Converte lista de suspeitos para string
-        suspeitos_str = ', '.join(suspeitos) if suspeitos else ''
-
-        nova_linha = (
-            f"| {numero} "
-            f"| {tema} "
-            f"| {data_dist} "
-            f"| {responsavel} "
-            f"| {status} "
-            f"| {ultima_att} "
-            f"| {suspeitos_str} "
-            f"| {comentarios} |\n"
-        )
-
-        if not os.path.exists(PATH_TRIAGEM):
-            print(f" Criando novo arquivo de triagem: {PATH_TRIAGEM}")
-            logger.info(f" Criando novo arquivo de triagem: {PATH_TRIAGEM}")
-            with open(PATH_TRIAGEM, 'w', encoding='utf-8') as f:
-                f.write("# Tabela de Processos\n\n")
-                f.write("| Nº Processo | Tema | Data da Distribuição | Responsável | Status | Última Atualização | Suspeitos | Comentários |\n")
-                f.write("|-------------|------|-----------------------|-------------|--------|----------------------|-----------|-------------|\n")
-                f.write("|-------------|------|-----------------------|-------------|--------|----------------------|-----------|-------------|\n")
-
-        with open(PATH_TRIAGEM, 'r', encoding='utf-8') as f:
-            linhas = f.readlines()
-
-        indice_separador = next(
-            (i for i, linha in enumerate(linhas) if re.match(r'^\|\s*-+\s*\|', linha.strip())),
-            None
-        )
-
-        if indice_separador is not None:
-            while indice_separador + 1 < len(linhas) and not linhas[indice_separador + 1].strip().startswith('|'):
-                del linhas[indice_separador + 1]
-            linhas.insert(indice_separador + 1, nova_linha)
-        else:
-            linhas += [
-                "| Nº Processo | Tema | Data da Distribuição | Responsável | Status | Última Atualização | Suspeitos | Comentários |\n",
-                "|-------------|------|-----------------------|-------------|--------|----------------------|-----------|-------------|\n",
-                "|-------------|------|-----------------------|-------------|--------|----------------------|-----------|-------------|\n",
-                nova_linha
-            ]
-
-        with open(PATH_TRIAGEM, 'w', encoding='utf-8') as f:
-            f.writelines(linhas)
+        def processar_sem_progresso(data, operation_id):
+            """Fallback: processa sem enviar progresso (cópia da lógica original)"""
+            print(f"🔄 Processando sem progresso para {operation_id}")
+            try:
+                numero = limpar(data.get('numeroProcesso'))
+                tema = limpar(data.get('tema'))
+                data_dist = limpar(data.get('dataDistribuicao'))
+                responsavel = limpar(data.get('responsavel'))
+                status = limpar(data.get('status'))
+                markdown = limpar(data.get('markdown'))
+                comentarios = limpar(data.get('comentarios'))
+                dat_base64 = data.get('dat')
+                
+                from datetime import datetime
+                ultima_att = datetime.now().strftime('%Y-%m-%d')
+                
+                if not numero or not markdown:
+                    print("❌ Campos obrigatórios ausentes")
+                    return
+                
+                # Busca suspeitos
+                suspeitos = []
+                if markdown and markdown.strip():
+                    try:
+                        suspeitos = encontrar_suspeitos(markdown, './utils/suspeitos.txt')
+                    except Exception as e:
+                        print(f"❌ Erro na busca de suspeitos: {e}")
+                
+                # Salva arquivos
+                nome_arquivo_base = numero.replace('/', '-')
+                os.makedirs(PASTA_DESTINO, exist_ok=True)
+                os.makedirs(PASTA_DAT, exist_ok=True)
+                
+                if markdown and markdown.strip():
+                    caminho_md = os.path.join(PASTA_DESTINO, f"{nome_arquivo_base}.md")
+                    with open(caminho_md, 'w', encoding='utf-8') as f:
+                        f.write(markdown)
+                
+                if dat_base64 and dat_base64.strip():
+                    caminho_dat = os.path.join(PASTA_DAT, f"{nome_arquivo_base}.dat")
+                    with open(caminho_dat, 'w', encoding='utf-8') as f:
+                        f.write(dat_base64)
+                
+                # Atualiza tabela (versão simplificada)
+                suspeitos_str = ', '.join(suspeitos) if suspeitos else ''
+                nova_linha = f"| {numero} | {tema} | {data_dist} | {responsavel} | {status} | {ultima_att} | {suspeitos_str} | {comentarios} |\n"
+                
+                # Salva na tabela (lógica simplificada)
+                if not os.path.exists(PATH_TRIAGEM):
+                    with open(PATH_TRIAGEM, 'w', encoding='utf-8') as f:
+                        f.write("# Tabela de Processos\n\n")
+                        f.write("| Nº Processo | Tema | Data da Distribuição | Responsável | Status | Última Atualização | Suspeitos | Comentários |\n")
+                        f.write("|-------------|------|-----------------------|-------------|--------|----------------------|-----------|-------------|\n")
+                        f.write(nova_linha)
+                else:
+                    with open(PATH_TRIAGEM, 'a', encoding='utf-8') as f:
+                        f.write(nova_linha)
+                
+                print(f"✅ Processo {numero} salvo (sem progresso)")
+                
+            except Exception as e:
+                print(f"❌ Erro no processamento sem progresso: {e}")
         
-        # === RESULTADO FINAL ===
-        print(f" Processo {numero} salvo com sucesso")
-        print(f"    Suspeitos detectados: {len(suspeitos)}")
-        print(f"    Substituições anonimização: {total_substituicoes}")
-        print(f"    Tempo de anonimização: {tempo_anonimizacao}s")
-        print(f"    Arquivos anonimizados: {len([a for a in arquivos_anonimizados.values() if a])}")
+        # Inicia processamento em background
+        import threading
+        thread = threading.Thread(target=processar_em_background)
+        thread.daemon = True
+        thread.start()
         
-        resultado_final = {
-            "message": "Processo e arquivos salvos com sucesso",
-            "numeroProcesso": numero,
-            "suspeitos": suspeitos,
-            "anonimizacao": {
-                "ativa": ANONIMIZACAO_ATIVA,
-                "substituicoes": total_substituicoes,
-                "tempo_segundos": tempo_anonimizacao,
-                "arquivos": arquivos_anonimizados
-            }
+        # Retorna imediatamente para o frontend
+        resultado_inicial = {
+            "message": "Processamento iniciado",
+            "operation_id": operation_id
         }
         
-        logger.info(f" Processo {numero} salvo com sucesso")
-        return jsonify(resultado_final), 201
-
+        return jsonify(resultado_inicial), 202  # 202 = Accepted
+        
     except Exception as e:
-        print(f" Erro em POST /triagem/form: {str(e)}")
-        logger.error(f" Erro em POST /triagem/form: {str(e)}")
+        print(f"❌ Erro em POST /triagem/form: {str(e)}")
         import traceback
         traceback.print_exc()
         return jsonify({'error': str(e)}), 500
 
-
-# === OPCIONAL: Rota para processamento em lote ===
-@app.route('/triagem/lote', methods=['POST'])
-def processar_lote_anonimizacao():
-    """Rota para processamento em lote de múltiplos textos"""
-    try:
-        data = request.get_json()
-        textos = data.get('textos', [])
-        
-        if not textos:
-            return jsonify({'error': 'Lista de textos é obrigatória'}), 400
-        
-        print(f" Processando lote de {len(textos)} textos")
-        
-        anonimizador = get_anonimizador()
-        mapa_suspeitos = anonimizador.carregar_suspeitos_mapeados("utils/suspeitos.txt")
-        
-        import time
-        inicio = time.time()
-        
-        resultados = anonimizador.processar_lote(textos, mapa_suspeitos)
-        
-        tempo_total = round(time.time() - inicio, 2)
-        
-        resposta = {
-            "message": f"Lote processado com sucesso",
-            "total_textos": len(textos),
-            "tempo_total_segundos": tempo_total,
-            "tempo_medio_por_texto": round(tempo_total / len(textos), 2),
-            "resultados": [
-                {
-                    "texto_anonimizado": resultado[0],
-                    "substituicoes": len(resultado[1]),
-                    "mapa": resultado[1]
-                }
-                for resultado in resultados
-            ]
-        }
-        
-        logger.info(f"Lote de {len(textos)} textos processado em {tempo_total}s")
-        return jsonify(resposta), 200
-        
-    except Exception as e:
-        print(f" Erro em processamento de lote: {str(e)}")
-        logger.error(f" Erro em processamento de lote: {str(e)}")
-        return jsonify({'error': str(e)}), 500
-
-# Correção para PUT /triagem/<numero>
 @app.route('/triagem/<numero>', methods=['PUT'])
 def editar_processo(numero):
     print(f" Solicitação PUT /triagem/{numero} recebida")
@@ -903,6 +649,28 @@ def obter_dat(numero):
     except Exception as e:
         logger.error(f" Erro em GET /triagem/{numero}/dat: {str(e)}")
         return jsonify({'error': str(e)}), 500
+    
+@app.route('/debug/sockets')
+def debug_sockets():
+    """Debug dos sockets ativos"""
+    return jsonify({
+        'active_sockets': operation_sockets,
+        'socket_count': len(operation_sockets),
+        'keys': list(operation_sockets.keys())
+    })
+
+@app.route('/debug/test-progress/<operation_id>')
+def test_progress(operation_id):
+    """Testa envio de progresso manualmente"""
+    from utils.progress_step import send_progress_ws
+    
+    send_progress_ws(operation_id, 2, 'Teste manual de progresso', 50)
+    
+    return jsonify({
+        'message': f'Progresso teste enviado para {operation_id}',
+        'socket_registered': operation_id in operation_sockets,
+        'socket_id': operation_sockets.get(operation_id, 'Não encontrado')
+    })
 
 # ==========================================
 # 🔄 FINALIZAÇÃO E EXECUÇÃO
@@ -916,6 +684,47 @@ def signal_handler(sig, frame):
 # Registra os handlers de sinal
 signal.signal(signal.SIGTERM, signal_handler)
 signal.signal(signal.SIGINT, signal_handler)
+
+@socketio.on('connect')
+def handle_connect():
+    print(f'✅ Cliente WebSocket conectado: {request.sid}')
+    
+@socketio.on('start_listening')
+def handle_start_listening(data):
+    print(f"📥 Evento start_listening recebido")
+    print(f"📊 Dados: {data}")
+    print(f"📍 Socket ID: {request.sid}")
+    
+    operation_id = data.get('operation_id')
+    
+    if operation_id:
+        operation_sockets[operation_id] = request.sid
+        print(f"✅ Registrado: {operation_id} -> {request.sid}")
+        print(f"📊 Sockets ativos agora: {operation_sockets}")
+        
+        # Confirma registro
+        socketio.emit('progress_update', {
+            'step': 1,
+            'message': 'Canal de progresso ativo! Aguardando processamento...',
+            'percentage': 5,
+            'operation_id': operation_id,
+            'error': False
+        }, to=request.sid)
+        
+        print(f"📤 Confirmação enviada para {request.sid}")
+        
+    else:
+        print("❌ operation_id ausente!")
+        socketio.emit('error', {'message': 'operation_id é obrigatório'}, to=request.sid)
+
+@socketio.on('disconnect')
+def handle_disconnect():
+    print(f'❌ Cliente WebSocket desconectado: {request.sid}')
+    # Remove das operações ativas
+    to_remove = [op_id for op_id, sid in operation_sockets.items() if sid == request.sid]
+    for op_id in to_remove:
+        operation_sockets.pop(op_id, None)
+    print(f"🧹 Removidas {len(to_remove)} operações do cliente")
 
 if __name__ == '__main__':
     try:
@@ -931,18 +740,14 @@ if __name__ == '__main__':
         print(f"   PASTA_DESTINO: {PASTA_DESTINO}")
         print(f"   PASTA_DAT: {PASTA_DAT}")
         print("=" * 40)
-        
+
         logger.info(f"Iniciando servidor Flask na porta 5000 com PID: {os.getpid()}")
-        app.run(debug=True, port=5000, host='127.0.0.1')
         
+        
+        # CORRETO PARA SUPORTE A SOCKET.IO
+        socketio.run(app, debug=True, port=5000, host='127.0.0.1')
+
     except Exception as e:
         logger.error(f"Erro ao iniciar servidor: {e}")
         print(f"\n ERRO CRÍTICO: {str(e)}")
-        print("\n POSSÍVEIS SOLUÇÕES:")
-        print("1. Verifique se a porta 5000 está livre")
-        print("2. Execute como administrador")
-        print("3. Verifique permissões de arquivo")
-        print("4. Verifique se as variáveis de ambiente estão corretas")
         sys.exit(1)
-    finally:
-        logger.info(f"Servidor Flask com PID {os.getpid()} finalizado")

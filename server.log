@@ -1076,3 +1076,1409 @@
 2025-06-13 10:26:41,248 - INFO -  Sinal 2 recebido. Finalizando servidor graciosamente...
 2025-06-13 10:26:41,265 - INFO -  Servidor com PID 21400 finalizado
 2025-06-13 10:26:41,286 - INFO - Servidor Flask com PID 21400 finalizado
+2025-06-16 11:34:28,353 - INFO - Servidor Flask iniciando com PID: 21256
+2025-06-16 11:34:28,354 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 11:34:28,354 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-16 11:34:28,354 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-16 11:34:28,361 - INFO - Iniciando servidor Flask na porta 5000 com PID: 21256
+2025-06-16 11:34:28,380 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-16 11:34:28,380 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-16 11:34:28,380 - INFO -  * Restarting with stat
+2025-06-16 11:34:33,070 - INFO - Servidor Flask iniciando com PID: 18920
+2025-06-16 11:34:33,070 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 11:34:33,071 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-16 11:34:33,071 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-16 11:34:33,076 - INFO - Iniciando servidor Flask na porta 5000 com PID: 18920
+2025-06-16 11:34:33,086 - WARNING -  * Debugger is active!
+2025-06-16 11:34:33,096 - INFO -  * Debugger PIN: 316-893-758
+2025-06-16 11:34:47,803 - INFO -  Solicitação GET /triagem recebida
+2025-06-16 11:34:47,826 - INFO -  12 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 11:34:47,827 - INFO -  Retornando 12 processos
+2025-06-16 11:34:47,828 - INFO - 127.0.0.1 - - [16/Jun/2025 11:34:47] "GET /triagem HTTP/1.1" 200 -
+2025-06-16 11:35:22,484 - INFO - 127.0.0.1 - - [16/Jun/2025 11:35:22] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-16 11:35:50,446 - INFO -  Processando processo: 1005767-48.2025.8.11.0000
+2025-06-16 11:35:50,447 - INFO -  Suspeitos encontrados: ['Débora Vidal']
+2025-06-16 11:35:50,453 - INFO - Markdown salvo: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1005767-48.2025.8.11.0000.md
+2025-06-16 11:35:51,106 - ERROR -  Erro em POST /triagem/form: name 'ANONIMIZACAO_ATIVA' is not defined
+2025-06-16 11:35:51,108 - INFO - 127.0.0.1 - - [16/Jun/2025 11:35:51] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 500 -
+2025-06-16 11:37:51,446 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\app.py', reloading
+2025-06-16 11:37:51,446 - INFO - Servidor Flask com PID 18920 finalizado
+2025-06-16 11:37:52,458 - INFO -  * Restarting with stat
+2025-06-16 11:38:00,245 - INFO - Servidor Flask iniciando com PID: 20228
+2025-06-16 11:38:00,245 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 11:38:00,245 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-16 11:38:00,246 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-16 11:38:00,252 - INFO - Iniciando servidor Flask na porta 5000 com PID: 20228
+2025-06-16 11:38:00,264 - WARNING -  * Debugger is active!
+2025-06-16 11:38:00,270 - INFO -  * Debugger PIN: 316-893-758
+2025-06-16 11:38:04,545 - INFO - 127.0.0.1 - - [16/Jun/2025 11:38:04] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-16 11:38:31,645 - INFO -  Processando processo: 1005767-48.2025.8.11.0000
+2025-06-16 11:38:31,645 - INFO -  Suspeitos encontrados: ['Débora Vidal']
+2025-06-16 11:38:31,652 - INFO - Markdown salvo: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1005767-48.2025.8.11.0000.md
+2025-06-16 11:38:31,960 - ERROR -  Erro durante anonimização otimizada: name 'AnonimizadorOtimizado' is not defined
+2025-06-16 11:38:31,976 - INFO -  Processo 1005767-48.2025.8.11.0000 salvo com sucesso
+2025-06-16 11:38:31,980 - INFO - 127.0.0.1 - - [16/Jun/2025 11:38:31] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 201 -
+2025-06-16 11:39:58,862 - INFO -  Solicitação GET /triagem recebida
+2025-06-16 11:39:58,888 - INFO -  13 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 11:39:58,889 - INFO -  Retornando 13 processos
+2025-06-16 11:39:58,889 - INFO - 127.0.0.1 - - [16/Jun/2025 11:39:58] "GET /triagem HTTP/1.1" 200 -
+2025-06-16 11:40:05,875 - INFO - 127.0.0.1 - - [16/Jun/2025 11:40:05] "OPTIONS /triagem/1005767-48.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-16 11:40:06,113 - INFO -  13 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 11:40:06,115 - INFO -  Arquivo markdown removido: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1005767-48.2025.8.11.0000.md
+2025-06-16 11:40:06,116 - INFO -  Processo 1005767-48.2025.8.11.0000 excluído com sucesso
+2025-06-16 11:40:06,116 - INFO - 127.0.0.1 - - [16/Jun/2025 11:40:06] "DELETE /triagem/1005767-48.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-16 11:40:06,387 - INFO -  Solicitação GET /triagem recebida
+2025-06-16 11:40:06,392 - INFO -  7 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 11:40:06,392 - INFO -  Retornando 7 processos
+2025-06-16 11:40:06,392 - INFO - 127.0.0.1 - - [16/Jun/2025 11:40:06] "GET /triagem HTTP/1.1" 200 -
+2025-06-16 11:40:39,644 - INFO - 127.0.0.1 - - [16/Jun/2025 11:40:39] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-16 11:41:05,738 - INFO -  Processando processo: 1005767-48.2025.8.11.0000
+2025-06-16 11:41:05,738 - INFO -  Suspeitos encontrados: ['Débora Vidal']
+2025-06-16 11:41:05,862 - INFO - Markdown salvo: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1005767-48.2025.8.11.0000.md
+2025-06-16 11:41:07,145 - ERROR -  Erro durante anonimização otimizada: name 'AnonimizadorOtimizado' is not defined
+2025-06-16 11:41:07,162 - INFO -  Processo 1005767-48.2025.8.11.0000 salvo com sucesso
+2025-06-16 11:41:07,163 - INFO - 127.0.0.1 - - [16/Jun/2025 11:41:07] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 201 -
+2025-06-16 11:43:13,105 - INFO -  Solicitação GET /triagem recebida
+2025-06-16 11:43:13,182 - INFO -  8 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 11:43:13,183 - INFO -  Retornando 8 processos
+2025-06-16 11:43:13,184 - INFO - 127.0.0.1 - - [16/Jun/2025 11:43:13] "GET /triagem HTTP/1.1" 200 -
+2025-06-16 11:43:44,598 - INFO - 127.0.0.1 - - [16/Jun/2025 11:43:44] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-16 11:44:14,595 - INFO -  Processando processo: 1005767-48.2025.8.11.0000
+2025-06-16 11:44:14,595 - INFO -  Suspeitos encontrados: ['Débora Vidal']
+2025-06-16 11:44:14,604 - INFO - Markdown salvo: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1005767-48.2025.8.11.0000.md
+2025-06-16 11:44:14,645 - ERROR -  Erro durante anonimização otimizada: name 'AnonimizadorOtimizado' is not defined
+2025-06-16 11:44:14,661 - INFO -  Processo 1005767-48.2025.8.11.0000 salvo com sucesso
+2025-06-16 11:44:14,662 - INFO - 127.0.0.1 - - [16/Jun/2025 11:44:14] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 201 -
+2025-06-16 11:44:14,995 - INFO -  Solicitação GET /triagem recebida
+2025-06-16 11:44:14,995 - INFO -  9 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 11:44:14,995 - INFO -  Retornando 9 processos
+2025-06-16 11:44:15,002 - INFO - 127.0.0.1 - - [16/Jun/2025 11:44:15] "GET /triagem HTTP/1.1" 200 -
+2025-06-16 11:45:26,381 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\utils\\auxiliar.py', reloading
+2025-06-16 11:45:26,385 - INFO - Servidor Flask com PID 20228 finalizado
+2025-06-16 11:45:27,680 - INFO -  * Restarting with stat
+2025-06-16 11:45:34,215 - INFO - Servidor Flask iniciando com PID: 21196
+2025-06-16 11:45:34,216 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 11:45:34,216 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-16 11:45:34,216 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-16 11:45:34,221 - INFO - Iniciando servidor Flask na porta 5000 com PID: 21196
+2025-06-16 11:45:34,232 - WARNING -  * Debugger is active!
+2025-06-16 11:45:34,238 - INFO -  * Debugger PIN: 316-893-758
+2025-06-16 11:45:43,348 - INFO - 127.0.0.1 - - [16/Jun/2025 11:45:43] "OPTIONS /triagem/1005767-48.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-16 11:45:43,627 - INFO -  9 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 11:45:43,630 - INFO -  Arquivo markdown removido: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1005767-48.2025.8.11.0000.md
+2025-06-16 11:45:43,630 - INFO -  Processo 1005767-48.2025.8.11.0000 excluído com sucesso
+2025-06-16 11:45:43,631 - INFO - 127.0.0.1 - - [16/Jun/2025 11:45:43] "DELETE /triagem/1005767-48.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-16 11:45:43,665 - INFO -  Solicitação GET /triagem recebida
+2025-06-16 11:45:43,670 - INFO -  7 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 11:45:43,670 - INFO -  Retornando 7 processos
+2025-06-16 11:45:43,671 - INFO - 127.0.0.1 - - [16/Jun/2025 11:45:43] "GET /triagem HTTP/1.1" 200 -
+2025-06-16 11:46:08,845 - INFO - 127.0.0.1 - - [16/Jun/2025 11:46:08] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-16 11:46:35,362 - INFO -  Processando processo: 1005767-48.2025.8.11.0000
+2025-06-16 11:46:35,362 - INFO -  Suspeitos encontrados: ['Débora Vidal']
+2025-06-16 11:46:35,362 - INFO - Markdown salvo: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1005767-48.2025.8.11.0000.md
+2025-06-16 11:47:00,678 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\utils\\auxiliar.py', reloading
+2025-06-16 11:47:00,680 - INFO - Servidor Flask com PID 21196 finalizado
+2025-06-16 11:47:01,386 - INFO -  * Restarting with stat
+2025-06-16 11:47:07,331 - INFO - Servidor Flask iniciando com PID: 18220
+2025-06-16 11:47:07,331 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 11:47:07,331 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-16 11:47:07,332 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-16 11:47:07,336 - INFO - Iniciando servidor Flask na porta 5000 com PID: 18220
+2025-06-16 11:47:07,346 - WARNING -  * Debugger is active!
+2025-06-16 11:47:07,353 - INFO -  * Debugger PIN: 316-893-758
+2025-06-16 11:47:18,381 - INFO - 127.0.0.1 - - [16/Jun/2025 11:47:18] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-16 11:47:43,679 - INFO -  Processando processo: 1005767-48.2025.8.11.0000
+2025-06-16 11:47:43,679 - INFO -  Suspeitos encontrados: ['Débora Vidal']
+2025-06-16 11:47:43,679 - INFO - Markdown salvo: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1005767-48.2025.8.11.0000.md
+2025-06-16 11:48:49,536 - INFO -  Anonimização concluída: 659 substituições em 65.09s
+2025-06-16 11:48:49,546 - INFO -  Processo 1005767-48.2025.8.11.0000 salvo com sucesso
+2025-06-16 11:48:49,547 - INFO - 127.0.0.1 - - [16/Jun/2025 11:48:49] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 201 -
+2025-06-16 11:48:49,870 - INFO -  Solicitação GET /triagem recebida
+2025-06-16 11:48:49,892 - INFO -  8 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 11:48:49,892 - INFO -  Retornando 8 processos
+2025-06-16 11:48:49,893 - INFO - 127.0.0.1 - - [16/Jun/2025 11:48:49] "GET /triagem HTTP/1.1" 200 -
+2025-06-16 11:51:59,553 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\utils\\progress_step.py', reloading
+2025-06-16 11:51:59,557 - INFO - Servidor Flask com PID 18220 finalizado
+2025-06-16 11:52:00,358 - INFO -  * Restarting with stat
+2025-06-16 11:52:06,092 - INFO - Servidor Flask iniciando com PID: 16956
+2025-06-16 11:52:06,092 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 11:52:06,092 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-16 11:52:06,093 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-16 11:52:06,098 - INFO - Iniciando servidor Flask na porta 5000 com PID: 16956
+2025-06-16 11:52:06,109 - WARNING -  * Debugger is active!
+2025-06-16 11:52:06,117 - INFO -  * Debugger PIN: 316-893-758
+2025-06-16 11:52:11,192 - INFO -  Sinal 2 recebido. Finalizando servidor graciosamente...
+2025-06-16 11:52:11,192 - INFO -  Servidor com PID 16956 finalizado
+2025-06-16 11:52:11,193 - INFO - Servidor Flask com PID 16956 finalizado
+2025-06-16 11:52:11,667 - INFO - Servidor Flask com PID 21256 finalizado
+2025-06-16 12:14:06,959 - INFO - Servidor Flask iniciando com PID: 16484
+2025-06-16 12:14:06,959 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 12:14:06,960 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-16 12:14:06,960 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-16 12:14:06,965 - INFO - Iniciando servidor Flask na porta 5000 com PID: 16484
+2025-06-16 12:14:06,988 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-16 12:14:06,988 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-16 12:14:06,989 - INFO -  * Restarting with stat
+2025-06-16 12:14:12,254 - INFO - Servidor Flask iniciando com PID: 16612
+2025-06-16 12:14:12,254 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 12:14:12,254 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-16 12:14:12,255 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-16 12:14:12,260 - INFO - Iniciando servidor Flask na porta 5000 com PID: 16612
+2025-06-16 12:14:12,266 - WARNING -  * Debugger is active!
+2025-06-16 12:14:12,278 - INFO -  * Debugger PIN: 316-893-758
+2025-06-16 12:14:13,011 - INFO -  Solicitação GET /triagem recebida
+2025-06-16 12:14:13,036 - INFO -  8 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 12:14:13,036 - INFO -  Retornando 8 processos
+2025-06-16 12:14:13,037 - INFO - 127.0.0.1 - - [16/Jun/2025 12:14:13] "GET /triagem HTTP/1.1" 200 -
+2025-06-16 12:14:47,983 - INFO - 127.0.0.1 - - [16/Jun/2025 12:14:47] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-16 12:15:20,517 - INFO - 127.0.0.1 - - [16/Jun/2025 12:15:20] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 500 -
+2025-06-16 12:16:35,056 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\app.py', reloading
+2025-06-16 12:16:35,076 - INFO - Servidor Flask com PID 16612 finalizado
+2025-06-16 12:16:36,436 - INFO -  * Restarting with stat
+2025-06-16 12:16:42,861 - INFO - Servidor Flask iniciando com PID: 14248
+2025-06-16 12:16:42,861 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 12:16:42,862 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-16 12:16:42,862 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-16 12:16:42,868 - INFO - Iniciando servidor Flask na porta 5000 com PID: 14248
+2025-06-16 12:16:42,873 - WARNING -  * Debugger is active!
+2025-06-16 12:16:42,881 - INFO -  * Debugger PIN: 316-893-758
+2025-06-16 12:16:55,630 - INFO - 127.0.0.1 - - [16/Jun/2025 12:16:55] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-16 12:17:28,265 - INFO - Markdown salvo: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1005767-48.2025.8.11.0000.md
+2025-06-16 12:18:33,869 - INFO - 127.0.0.1 - - [16/Jun/2025 12:18:33] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 201 -
+2025-06-16 12:18:34,204 - INFO -  Solicitação GET /triagem recebida
+2025-06-16 12:18:34,227 - INFO -  9 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 12:18:34,227 - INFO -  Retornando 9 processos
+2025-06-16 12:18:34,230 - INFO - 127.0.0.1 - - [16/Jun/2025 12:18:34] "GET /triagem HTTP/1.1" 200 -
+2025-06-16 12:23:23,829 - INFO -  Solicitação GET /triagem recebida
+2025-06-16 12:23:23,950 - INFO -  9 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 12:23:23,950 - INFO -  Retornando 9 processos
+2025-06-16 12:23:23,957 - INFO - 127.0.0.1 - - [16/Jun/2025 12:23:23] "GET /triagem HTTP/1.1" 200 -
+2025-06-16 12:23:24,358 - INFO -  Solicitação GET /triagem recebida
+2025-06-16 12:23:24,365 - INFO -  9 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 12:23:24,365 - INFO -  Retornando 9 processos
+2025-06-16 12:23:24,367 - INFO - 127.0.0.1 - - [16/Jun/2025 12:23:24] "GET /triagem HTTP/1.1" 200 -
+2025-06-16 12:23:31,052 - INFO -  Solicitação GET /triagem recebida
+2025-06-16 12:23:32,170 - INFO -  9 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 12:23:32,171 - INFO -  Retornando 9 processos
+2025-06-16 12:23:32,172 - INFO - 127.0.0.1 - - [16/Jun/2025 12:23:32] "GET /triagem HTTP/1.1" 200 -
+2025-06-16 12:24:18,920 - INFO -  Sinal 2 recebido. Finalizando servidor graciosamente...
+2025-06-16 12:24:18,922 - INFO -  Servidor com PID 14248 finalizado
+2025-06-16 12:24:18,922 - INFO - Servidor Flask com PID 14248 finalizado
+2025-06-16 12:24:20,757 - INFO -  Sinal 2 recebido. Finalizando servidor graciosamente...
+2025-06-16 12:24:20,764 - INFO -  Servidor com PID 16484 finalizado
+2025-06-16 12:24:20,952 - INFO - Servidor Flask com PID 16484 finalizado
+2025-06-16 13:20:34,881 - INFO - Servidor Flask iniciando com PID: 4276
+2025-06-16 13:20:34,883 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 13:20:34,884 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-16 13:20:34,884 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-16 13:20:34,890 - INFO - Iniciando servidor Flask na porta 5000 com PID: 4276
+2025-06-16 13:20:34,966 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-16 13:20:34,968 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-16 13:20:34,969 - INFO -  * Restarting with stat
+2025-06-16 13:20:40,301 - INFO - Servidor Flask iniciando com PID: 9904
+2025-06-16 13:20:40,301 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 13:20:40,302 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-16 13:20:40,302 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-16 13:20:40,307 - INFO - Iniciando servidor Flask na porta 5000 com PID: 9904
+2025-06-16 13:20:40,313 - WARNING -  * Debugger is active!
+2025-06-16 13:20:40,325 - INFO -  * Debugger PIN: 316-893-758
+2025-06-16 13:24:51,726 - INFO -  Solicitação GET /triagem recebida
+2025-06-16 13:24:51,866 - INFO -  9 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 13:24:51,866 - INFO -  Retornando 9 processos
+2025-06-16 13:24:51,866 - INFO - 127.0.0.1 - - [16/Jun/2025 13:24:51] "GET /triagem HTTP/1.1" 200 -
+2025-06-16 13:25:24,858 - INFO -  Solicitação GET /triagem recebida
+2025-06-16 13:25:24,866 - INFO - 127.0.0.1 - - [16/Jun/2025 13:25:24] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:25:24,871 - INFO -  9 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 13:25:24,871 - INFO -  Retornando 9 processos
+2025-06-16 13:25:24,872 - INFO - 127.0.0.1 - - [16/Jun/2025 13:25:24] "GET /triagem HTTP/1.1" 200 -
+2025-06-16 13:25:24,905 - INFO - 127.0.0.1 - - [16/Jun/2025 13:25:24] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:25:26,038 - INFO - 127.0.0.1 - - [16/Jun/2025 13:25:26] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:25:26,657 - INFO - 127.0.0.1 - - [16/Jun/2025 13:25:26] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:25:27,946 - INFO - 127.0.0.1 - - [16/Jun/2025 13:25:27] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:25:28,901 - INFO - 127.0.0.1 - - [16/Jun/2025 13:25:28] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:25:31,318 - INFO - 127.0.0.1 - - [16/Jun/2025 13:25:31] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:25:34,223 - INFO - 127.0.0.1 - - [16/Jun/2025 13:25:34] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:25:37,936 - INFO - 127.0.0.1 - - [16/Jun/2025 13:25:37] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:25:39,352 - INFO - 127.0.0.1 - - [16/Jun/2025 13:25:39] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:25:43,272 - INFO - 127.0.0.1 - - [16/Jun/2025 13:25:43] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:25:44,703 - INFO - 127.0.0.1 - - [16/Jun/2025 13:25:44] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:25:48,916 - INFO - 127.0.0.1 - - [16/Jun/2025 13:25:48] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:25:50,857 - INFO - 127.0.0.1 - - [16/Jun/2025 13:25:50] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:25:54,838 - INFO - 127.0.0.1 - - [16/Jun/2025 13:25:54] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:25:56,848 - INFO - 127.0.0.1 - - [16/Jun/2025 13:25:56] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:26:00,842 - INFO - 127.0.0.1 - - [16/Jun/2025 13:26:00] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:26:02,906 - INFO - 127.0.0.1 - - [16/Jun/2025 13:26:02] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:26:06,519 - INFO - 127.0.0.1 - - [16/Jun/2025 13:26:06] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:26:08,248 - INFO - 127.0.0.1 - - [16/Jun/2025 13:26:08] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:26:11,906 - INFO - 127.0.0.1 - - [16/Jun/2025 13:26:11] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:26:13,597 - INFO - 127.0.0.1 - - [16/Jun/2025 13:26:13] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:26:17,354 - INFO - 127.0.0.1 - - [16/Jun/2025 13:26:17] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:26:18,987 - INFO - 127.0.0.1 - - [16/Jun/2025 13:26:18] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:26:22,819 - INFO - 127.0.0.1 - - [16/Jun/2025 13:26:22] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:26:24,618 - INFO - 127.0.0.1 - - [16/Jun/2025 13:26:24] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:26:28,241 - INFO - 127.0.0.1 - - [16/Jun/2025 13:26:28] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-16 13:26:29,138 - INFO - 127.0.0.1 - - [16/Jun/2025 13:26:29] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:26:47,868 - INFO - 127.0.0.1 - - [16/Jun/2025 13:26:47] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:26:54,272 - INFO - 127.0.0.1 - - [16/Jun/2025 13:26:54] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:27:00,752 - INFO - 127.0.0.1 - - [16/Jun/2025 13:27:00] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:27:05,274 - INFO - Markdown salvo: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1005767-48.2025.8.11.0000.md
+2025-06-16 13:27:07,372 - INFO - 127.0.0.1 - - [16/Jun/2025 13:27:07] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:27:10,036 - INFO - 127.0.0.1 - - [16/Jun/2025 13:27:10] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:27:16,338 - INFO - 127.0.0.1 - - [16/Jun/2025 13:27:16] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:27:19,918 - INFO - 127.0.0.1 - - [16/Jun/2025 13:27:19] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:27:26,748 - INFO - 127.0.0.1 - - [16/Jun/2025 13:27:26] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:27:29,754 - INFO - 127.0.0.1 - - [16/Jun/2025 13:27:29] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:27:34,364 - INFO - 127.0.0.1 - - [16/Jun/2025 13:27:34] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:27:39,844 - INFO - 127.0.0.1 - - [16/Jun/2025 13:27:39] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:27:42,272 - INFO - 127.0.0.1 - - [16/Jun/2025 13:27:42] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:27:49,904 - INFO - 127.0.0.1 - - [16/Jun/2025 13:27:49] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:27:51,390 - INFO - 127.0.0.1 - - [16/Jun/2025 13:27:51] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:28:00,750 - INFO - 127.0.0.1 - - [16/Jun/2025 13:28:00] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:28:02,499 - INFO - 127.0.0.1 - - [16/Jun/2025 13:28:02] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:28:09,160 - INFO - 127.0.0.1 - - [16/Jun/2025 13:28:09] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:28:11,618 - INFO - 127.0.0.1 - - [16/Jun/2025 13:28:11] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:28:18,309 - INFO - 127.0.0.1 - - [16/Jun/2025 13:28:18] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:28:19,026 - INFO - 127.0.0.1 - - [16/Jun/2025 13:28:19] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:28:27,144 - INFO - 127.0.0.1 - - [16/Jun/2025 13:28:27] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:28:28,533 - INFO - 127.0.0.1 - - [16/Jun/2025 13:28:28] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:28:28,557 - INFO - 127.0.0.1 - - [16/Jun/2025 13:28:28] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 201 -
+2025-06-16 13:28:29,171 - INFO -  Solicitação GET /triagem recebida
+2025-06-16 13:28:29,202 - INFO -  10 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 13:28:29,202 - INFO -  Retornando 10 processos
+2025-06-16 13:28:29,204 - INFO - 127.0.0.1 - - [16/Jun/2025 13:28:29] "GET /triagem HTTP/1.1" 200 -
+2025-06-16 13:28:35,968 - INFO - 127.0.0.1 - - [16/Jun/2025 13:28:35] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:28:38,771 - INFO - 127.0.0.1 - - [16/Jun/2025 13:28:38] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:28:41,839 - INFO - 127.0.0.1 - - [16/Jun/2025 13:28:41] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:28:44,837 - INFO - 127.0.0.1 - - [16/Jun/2025 13:28:44] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:28:47,823 - INFO - 127.0.0.1 - - [16/Jun/2025 13:28:47] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:28:50,823 - INFO - 127.0.0.1 - - [16/Jun/2025 13:28:50] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:28:53,839 - INFO - 127.0.0.1 - - [16/Jun/2025 13:28:53] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:28:56,856 - INFO - 127.0.0.1 - - [16/Jun/2025 13:28:56] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:28:59,840 - INFO - 127.0.0.1 - - [16/Jun/2025 13:28:59] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:29:02,848 - INFO - 127.0.0.1 - - [16/Jun/2025 13:29:02] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:29:05,853 - INFO - 127.0.0.1 - - [16/Jun/2025 13:29:05] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:29:08,858 - INFO - 127.0.0.1 - - [16/Jun/2025 13:29:08] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:29:11,919 - INFO - 127.0.0.1 - - [16/Jun/2025 13:29:11] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:29:14,874 - INFO - 127.0.0.1 - - [16/Jun/2025 13:29:14] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:29:17,907 - INFO - 127.0.0.1 - - [16/Jun/2025 13:29:17] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:29:21,307 - INFO - 127.0.0.1 - - [16/Jun/2025 13:29:21] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:29:24,317 - INFO - 127.0.0.1 - - [16/Jun/2025 13:29:24] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:29:27,373 - INFO - 127.0.0.1 - - [16/Jun/2025 13:29:27] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:29:33,641 - INFO - 127.0.0.1 - - [16/Jun/2025 13:29:33] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:29:33,984 - INFO - 127.0.0.1 - - [16/Jun/2025 13:29:33] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:29:41,071 - INFO - 127.0.0.1 - - [16/Jun/2025 13:29:41] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:29:43,191 - INFO - 127.0.0.1 - - [16/Jun/2025 13:29:43] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:29:50,774 - INFO - 127.0.0.1 - - [16/Jun/2025 13:29:50] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:29:51,306 - INFO - 127.0.0.1 - - [16/Jun/2025 13:29:51] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:29:59,374 - INFO - 127.0.0.1 - - [16/Jun/2025 13:29:59] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:30:01,756 - INFO - 127.0.0.1 - - [16/Jun/2025 13:30:01] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:30:07,850 - INFO - 127.0.0.1 - - [16/Jun/2025 13:30:07] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:30:12,023 - INFO - 127.0.0.1 - - [16/Jun/2025 13:30:12] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:30:18,281 - INFO - 127.0.0.1 - - [16/Jun/2025 13:30:18] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:30:22,576 - INFO - 127.0.0.1 - - [16/Jun/2025 13:30:22] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:30:26,474 - INFO - 127.0.0.1 - - [16/Jun/2025 13:30:26] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:30:30,342 - INFO - 127.0.0.1 - - [16/Jun/2025 13:30:30] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:30:36,623 - INFO - 127.0.0.1 - - [16/Jun/2025 13:30:36] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:30:37,409 - INFO - 127.0.0.1 - - [16/Jun/2025 13:30:37] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:30:42,844 - INFO - 127.0.0.1 - - [16/Jun/2025 13:30:42] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:30:42,879 - INFO - 127.0.0.1 - - [16/Jun/2025 13:30:42] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:30:48,877 - INFO - 127.0.0.1 - - [16/Jun/2025 13:30:48] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:30:48,949 - INFO - 127.0.0.1 - - [16/Jun/2025 13:30:48] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:30:56,333 - INFO - 127.0.0.1 - - [16/Jun/2025 13:30:56] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:30:56,547 - INFO - 127.0.0.1 - - [16/Jun/2025 13:30:56] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:31:02,131 - INFO - 127.0.0.1 - - [16/Jun/2025 13:31:02] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:31:02,861 - INFO - 127.0.0.1 - - [16/Jun/2025 13:31:02] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:31:05,166 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\utils\\progress_step.py', reloading
+2025-06-16 13:31:05,171 - INFO - Servidor Flask com PID 9904 finalizado
+2025-06-16 13:31:07,100 - INFO -  * Restarting with stat
+2025-06-16 13:31:15,368 - INFO - Servidor Flask iniciando com PID: 15604
+2025-06-16 13:31:15,369 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 13:31:15,369 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-16 13:31:15,370 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-16 13:31:15,375 - INFO - Iniciando servidor Flask na porta 5000 com PID: 15604
+2025-06-16 13:31:15,382 - WARNING -  * Debugger is active!
+2025-06-16 13:31:15,394 - INFO -  * Debugger PIN: 316-893-758
+2025-06-16 13:31:15,408 - INFO - 127.0.0.1 - - [16/Jun/2025 13:31:15] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:31:15,441 - INFO - 127.0.0.1 - - [16/Jun/2025 13:31:15] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:31:20,894 - INFO - 127.0.0.1 - - [16/Jun/2025 13:31:20] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:31:20,915 - INFO - 127.0.0.1 - - [16/Jun/2025 13:31:20] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:31:27,411 - INFO - 127.0.0.1 - - [16/Jun/2025 13:31:27] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:31:28,247 - INFO - 127.0.0.1 - - [16/Jun/2025 13:31:28] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:31:34,175 - INFO - 127.0.0.1 - - [16/Jun/2025 13:31:34] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:31:34,777 - INFO - 127.0.0.1 - - [16/Jun/2025 13:31:34] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:31:42,971 - INFO - 127.0.0.1 - - [16/Jun/2025 13:31:42] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:31:43,578 - INFO - 127.0.0.1 - - [16/Jun/2025 13:31:43] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:31:50,331 - INFO - 127.0.0.1 - - [16/Jun/2025 13:31:50] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:31:50,925 - INFO - 127.0.0.1 - - [16/Jun/2025 13:31:50] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:31:58,702 - INFO - 127.0.0.1 - - [16/Jun/2025 13:31:58] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:31:58,742 - INFO - 127.0.0.1 - - [16/Jun/2025 13:31:58] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:32:08,604 - INFO - 127.0.0.1 - - [16/Jun/2025 13:32:08] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:32:09,576 - INFO - 127.0.0.1 - - [16/Jun/2025 13:32:09] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:32:11,734 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\app.py', reloading
+2025-06-16 13:32:11,735 - INFO - Servidor Flask com PID 15604 finalizado
+2025-06-16 13:32:12,197 - INFO -  * Restarting with stat
+2025-06-16 13:32:18,319 - INFO - Servidor Flask iniciando com PID: 17844
+2025-06-16 13:32:18,321 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 13:32:18,321 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-16 13:32:18,321 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-16 13:32:18,325 - INFO - Iniciando servidor Flask na porta 5000 com PID: 17844
+2025-06-16 13:32:18,326 - ERROR - Erro ao iniciar servidor: name 'socketio' is not defined
+2025-06-16 13:32:18,815 - INFO - Servidor Flask com PID 4276 finalizado
+2025-06-16 13:37:35,182 - INFO - Servidor Flask iniciando com PID: 20860
+2025-06-16 13:37:35,182 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 13:37:35,183 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-16 13:37:35,183 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-16 13:37:35,187 - INFO - Iniciando servidor Flask na porta 5000 com PID: 20860
+2025-06-16 13:37:35,205 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-16 13:37:35,205 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-16 13:37:35,206 - INFO -  * Restarting with stat
+2025-06-16 13:37:39,745 - INFO - Servidor Flask iniciando com PID: 3928
+2025-06-16 13:37:39,746 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 13:37:39,746 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-16 13:37:39,746 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-16 13:37:39,750 - INFO - Iniciando servidor Flask na porta 5000 com PID: 3928
+2025-06-16 13:37:39,754 - WARNING -  * Debugger is active!
+2025-06-16 13:37:39,765 - INFO -  * Debugger PIN: 316-893-758
+2025-06-16 13:37:39,777 - INFO - 127.0.0.1 - - [16/Jun/2025 13:37:39] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:37:41,209 - INFO - 127.0.0.1 - - [16/Jun/2025 13:37:41] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:37:44,424 - INFO -  Solicitação GET /triagem recebida
+2025-06-16 13:37:44,449 - INFO -  10 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 13:37:44,449 - INFO -  Retornando 10 processos
+2025-06-16 13:37:44,450 - INFO - 127.0.0.1 - - [16/Jun/2025 13:37:44] "GET /triagem HTTP/1.1" 200 -
+2025-06-16 13:37:45,742 - INFO - 127.0.0.1 - - [16/Jun/2025 13:37:45] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:37:48,256 - INFO - 127.0.0.1 - - [16/Jun/2025 13:37:48] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:37:51,655 - INFO - 127.0.0.1 - - [16/Jun/2025 13:37:51] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:37:54,196 - INFO - 127.0.0.1 - - [16/Jun/2025 13:37:54] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:37:57,428 - INFO - 127.0.0.1 - - [16/Jun/2025 13:37:57] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:37:57,926 - INFO - 127.0.0.1 - - [16/Jun/2025 13:37:57] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:38:02,993 - INFO - 127.0.0.1 - - [16/Jun/2025 13:38:02] "OPTIONS /triagem/1005767-48.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-16 13:38:03,258 - INFO -  10 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 13:38:03,261 - INFO -  Arquivo markdown removido: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1005767-48.2025.8.11.0000.md
+2025-06-16 13:38:03,261 - INFO -  Processo 1005767-48.2025.8.11.0000 excluído com sucesso
+2025-06-16 13:38:03,262 - INFO - 127.0.0.1 - - [16/Jun/2025 13:38:03] "DELETE /triagem/1005767-48.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-16 13:38:03,305 - INFO -  Solicitação GET /triagem recebida
+2025-06-16 13:38:03,308 - INFO -  7 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 13:38:03,308 - INFO -  Retornando 7 processos
+2025-06-16 13:38:03,309 - INFO - 127.0.0.1 - - [16/Jun/2025 13:38:03] "GET /triagem HTTP/1.1" 200 -
+2025-06-16 13:38:04,173 - INFO - 127.0.0.1 - - [16/Jun/2025 13:38:04] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:38:08,213 - INFO - 127.0.0.1 - - [16/Jun/2025 13:38:08] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:38:11,778 - INFO - 127.0.0.1 - - [16/Jun/2025 13:38:11] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:38:17,738 - INFO - 127.0.0.1 - - [16/Jun/2025 13:38:17] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:38:21,736 - INFO - 127.0.0.1 - - [16/Jun/2025 13:38:21] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:38:25,433 - INFO - 127.0.0.1 - - [16/Jun/2025 13:38:25] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:38:29,462 - INFO - 127.0.0.1 - - [16/Jun/2025 13:38:29] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:38:34,066 - INFO - 127.0.0.1 - - [16/Jun/2025 13:38:34] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:38:36,594 - INFO - 127.0.0.1 - - [16/Jun/2025 13:38:36] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-16 13:38:39,214 - INFO - 127.0.0.1 - - [16/Jun/2025 13:38:39] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:38:54,687 - INFO - 127.0.0.1 - - [16/Jun/2025 13:38:54] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:39:00,261 - INFO - 127.0.0.1 - - [16/Jun/2025 13:39:00] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:39:08,664 - INFO - 127.0.0.1 - - [16/Jun/2025 13:39:08] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:39:11,688 - INFO - Markdown salvo: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1005767-48.2025.8.11.0000.md
+2025-06-16 13:39:14,960 - INFO - 127.0.0.1 - - [16/Jun/2025 13:39:14] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:39:16,617 - INFO - 127.0.0.1 - - [16/Jun/2025 13:39:16] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:39:22,352 - INFO - 127.0.0.1 - - [16/Jun/2025 13:39:22] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:39:24,964 - INFO - 127.0.0.1 - - [16/Jun/2025 13:39:24] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:39:31,786 - INFO - 127.0.0.1 - - [16/Jun/2025 13:39:31] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:39:34,197 - INFO - 127.0.0.1 - - [16/Jun/2025 13:39:34] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:39:41,413 - INFO - 127.0.0.1 - - [16/Jun/2025 13:39:41] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:39:44,229 - INFO - 127.0.0.1 - - [16/Jun/2025 13:39:44] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:39:48,530 - INFO - 127.0.0.1 - - [16/Jun/2025 13:39:48] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:39:51,094 - INFO - 127.0.0.1 - - [16/Jun/2025 13:39:51] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:39:58,523 - INFO - 127.0.0.1 - - [16/Jun/2025 13:39:58] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:40:01,709 - INFO - 127.0.0.1 - - [16/Jun/2025 13:40:01] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:40:08,362 - INFO - 127.0.0.1 - - [16/Jun/2025 13:40:08] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:40:09,279 - INFO - 127.0.0.1 - - [16/Jun/2025 13:40:09] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:40:16,861 - INFO - 127.0.0.1 - - [16/Jun/2025 13:40:16] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:40:17,045 - INFO - 127.0.0.1 - - [16/Jun/2025 13:40:17] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:40:24,172 - INFO - 127.0.0.1 - - [16/Jun/2025 13:40:24] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:40:25,447 - INFO - 127.0.0.1 - - [16/Jun/2025 13:40:25] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 201 -
+2025-06-16 13:40:25,781 - INFO -  Solicitação GET /triagem recebida
+2025-06-16 13:40:25,813 - INFO -  8 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 13:40:25,813 - INFO -  Retornando 8 processos
+2025-06-16 13:40:25,814 - INFO - 127.0.0.1 - - [16/Jun/2025 13:40:25] "GET /triagem HTTP/1.1" 200 -
+2025-06-16 13:40:27,382 - INFO - 127.0.0.1 - - [16/Jun/2025 13:40:27] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:40:33,576 - INFO - 127.0.0.1 - - [16/Jun/2025 13:40:33] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:40:36,696 - INFO - 127.0.0.1 - - [16/Jun/2025 13:40:36] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:40:44,342 - INFO - 127.0.0.1 - - [16/Jun/2025 13:40:44] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:40:46,141 - INFO - 127.0.0.1 - - [16/Jun/2025 13:40:46] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:40:52,359 - INFO - 127.0.0.1 - - [16/Jun/2025 13:40:52] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:40:55,678 - INFO - 127.0.0.1 - - [16/Jun/2025 13:40:55] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:41:01,475 - INFO - 127.0.0.1 - - [16/Jun/2025 13:41:01] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:41:03,410 - INFO - 127.0.0.1 - - [16/Jun/2025 13:41:03] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:41:08,938 - INFO - 127.0.0.1 - - [16/Jun/2025 13:41:08] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:41:11,659 - INFO - 127.0.0.1 - - [16/Jun/2025 13:41:11] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:41:15,942 - INFO - 127.0.0.1 - - [16/Jun/2025 13:41:15] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:41:20,463 - INFO - 127.0.0.1 - - [16/Jun/2025 13:41:20] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:41:23,566 - INFO - 127.0.0.1 - - [16/Jun/2025 13:41:23] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:41:29,306 - INFO - 127.0.0.1 - - [16/Jun/2025 13:41:29] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:41:31,164 - INFO - 127.0.0.1 - - [16/Jun/2025 13:41:31] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:41:38,495 - INFO - 127.0.0.1 - - [16/Jun/2025 13:41:38] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:41:39,796 - INFO - 127.0.0.1 - - [16/Jun/2025 13:41:39] "[33mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 404 -
+2025-06-16 13:41:45,888 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\app.py', reloading
+2025-06-16 13:41:46,883 - INFO -  * Restarting with stat
+2025-06-16 13:41:53,853 - INFO - Servidor Flask iniciando com PID: 19444
+2025-06-16 13:41:53,854 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 13:41:53,854 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-16 13:41:53,854 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-16 13:41:53,858 - INFO - Iniciando servidor Flask na porta 5000 com PID: 19444
+2025-06-16 13:41:53,863 - WARNING -  * Debugger is active!
+2025-06-16 13:41:53,863 - INFO -  * Debugger PIN: 316-893-758
+2025-06-16 13:42:13,151 - INFO - 127.0.0.1 - - [16/Jun/2025 13:42:13] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 13:42:13,153 - INFO - 127.0.0.1 - - [16/Jun/2025 13:42:13] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 13:42:13,160 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 13:42:13,160 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 13:42:14,395 - INFO -  Solicitação GET /triagem recebida
+2025-06-16 13:42:14,419 - INFO -  8 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 13:42:14,419 - INFO -  Retornando 8 processos
+2025-06-16 13:42:14,421 - INFO - 127.0.0.1 - - [16/Jun/2025 13:42:14] "GET /triagem HTTP/1.1" 200 -
+2025-06-16 13:43:03,911 - INFO - 127.0.0.1 - - [16/Jun/2025 13:43:03] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-16 13:43:37,724 - INFO - Markdown salvo: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1005767-48.2025.8.11.0000.md
+2025-06-16 13:44:44,842 - INFO - 127.0.0.1 - - [16/Jun/2025 13:44:44] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 201 -
+2025-06-16 13:44:45,187 - INFO -  Solicitação GET /triagem recebida
+2025-06-16 13:44:45,213 - INFO -  9 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 13:44:45,213 - INFO -  Retornando 9 processos
+2025-06-16 13:44:45,213 - INFO - 127.0.0.1 - - [16/Jun/2025 13:44:45] "GET /triagem HTTP/1.1" 200 -
+2025-06-16 13:46:31,572 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\app.py', reloading
+2025-06-16 13:46:32,566 - INFO -  * Restarting with stat
+2025-06-16 13:46:39,832 - INFO - Servidor Flask iniciando com PID: 24568
+2025-06-16 13:46:39,833 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 13:46:39,833 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-16 13:46:39,833 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-16 13:46:39,836 - INFO - Iniciando servidor Flask na porta 5000 com PID: 24568
+2025-06-16 13:46:39,839 - WARNING -  * Debugger is active!
+2025-06-16 13:46:39,849 - INFO -  * Debugger PIN: 316-893-758
+2025-06-16 13:47:32,791 - INFO - 127.0.0.1 - - [16/Jun/2025 13:47:32] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-16 13:48:02,601 - INFO - Markdown salvo: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1005767-48.2025.8.11.0000.md
+2025-06-16 13:49:10,265 - INFO - 127.0.0.1 - - [16/Jun/2025 13:49:10] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 201 -
+2025-06-16 13:49:10,605 - INFO -  Solicitação GET /triagem recebida
+2025-06-16 13:49:10,649 - INFO -  10 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 13:49:10,649 - INFO -  Retornando 10 processos
+2025-06-16 13:49:10,650 - INFO - 127.0.0.1 - - [16/Jun/2025 13:49:10] "GET /triagem HTTP/1.1" 200 -
+2025-06-16 13:49:17,614 - INFO - 127.0.0.1 - - [16/Jun/2025 13:49:17] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 13:49:17,614 - INFO - 127.0.0.1 - - [16/Jun/2025 13:49:17] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 13:49:17,621 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 13:49:17,621 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 13:49:28,831 - INFO - 127.0.0.1 - - [16/Jun/2025 13:49:28] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 13:49:28,831 - INFO - 127.0.0.1 - - [16/Jun/2025 13:49:28] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 13:49:28,831 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 13:49:28,831 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 13:49:29,896 - INFO -  Solicitação GET /triagem recebida
+2025-06-16 13:49:29,903 - INFO -  10 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 13:49:29,903 - INFO -  Retornando 10 processos
+2025-06-16 13:49:29,904 - INFO - 127.0.0.1 - - [16/Jun/2025 13:49:29] "GET /triagem HTTP/1.1" 200 -
+2025-06-16 13:50:23,066 - INFO - 127.0.0.1 - - [16/Jun/2025 13:50:23] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-16 13:50:56,137 - INFO - Markdown salvo: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1005767-48.2025.8.11.0000.md
+2025-06-16 13:52:28,358 - INFO - 127.0.0.1 - - [16/Jun/2025 13:52:28] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 201 -
+2025-06-16 13:52:28,732 - INFO -  Solicitação GET /triagem recebida
+2025-06-16 13:52:28,763 - INFO -  11 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 13:52:28,763 - INFO -  Retornando 11 processos
+2025-06-16 13:52:28,764 - INFO - 127.0.0.1 - - [16/Jun/2025 13:52:28] "GET /triagem HTTP/1.1" 200 -
+2025-06-16 13:55:27,432 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\utils\\progress_step.py', reloading
+2025-06-16 13:55:29,304 - INFO -  * Restarting with stat
+2025-06-16 13:55:37,306 - INFO - Servidor Flask iniciando com PID: 17584
+2025-06-16 13:55:37,307 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 13:55:37,308 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-16 13:55:37,308 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-16 13:55:37,311 - INFO - Iniciando servidor Flask na porta 5000 com PID: 17584
+2025-06-16 13:55:37,315 - WARNING -  * Debugger is active!
+2025-06-16 13:55:37,332 - INFO -  * Debugger PIN: 316-893-758
+2025-06-16 14:01:31,544 - INFO - 127.0.0.1 - - [16/Jun/2025 14:01:31] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 14:01:31,546 - INFO - 127.0.0.1 - - [16/Jun/2025 14:01:31] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 14:01:31,597 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 14:01:31,598 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 14:01:50,716 - INFO - 127.0.0.1 - - [16/Jun/2025 14:01:50] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 14:01:50,716 - INFO - 127.0.0.1 - - [16/Jun/2025 14:01:50] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 14:01:50,724 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 14:01:50,725 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 14:01:54,703 - INFO - 127.0.0.1 - - [16/Jun/2025 14:01:54] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 14:01:54,705 - INFO - 127.0.0.1 - - [16/Jun/2025 14:01:54] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 14:01:54,710 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 14:01:54,711 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 14:01:55,822 - INFO -  Solicitação GET /triagem recebida
+2025-06-16 14:01:56,138 - INFO -  11 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 14:01:56,139 - INFO -  Retornando 11 processos
+2025-06-16 14:01:56,146 - INFO - 127.0.0.1 - - [16/Jun/2025 14:01:56] "GET /triagem HTTP/1.1" 200 -
+2025-06-16 14:02:09,279 - INFO - 127.0.0.1 - - [16/Jun/2025 14:02:09] "OPTIONS /triagem/1005767-48.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-16 14:02:09,580 - INFO -  11 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 14:02:09,589 - INFO -  Arquivo markdown removido: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1005767-48.2025.8.11.0000.md
+2025-06-16 14:02:09,590 - INFO -  Processo 1005767-48.2025.8.11.0000 excluído com sucesso
+2025-06-16 14:02:09,591 - INFO - 127.0.0.1 - - [16/Jun/2025 14:02:09] "DELETE /triagem/1005767-48.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-16 14:02:09,599 - INFO -  Solicitação GET /triagem recebida
+2025-06-16 14:02:09,605 - INFO -  7 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 14:02:09,605 - INFO -  Retornando 7 processos
+2025-06-16 14:02:09,606 - INFO - 127.0.0.1 - - [16/Jun/2025 14:02:09] "GET /triagem HTTP/1.1" 200 -
+2025-06-16 14:02:41,354 - INFO - 127.0.0.1 - - [16/Jun/2025 14:02:41] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-16 14:03:14,655 - INFO - Markdown salvo: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1005767-48.2025.8.11.0000.md
+2025-06-16 14:04:28,117 - INFO - 127.0.0.1 - - [16/Jun/2025 14:04:28] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 201 -
+2025-06-16 14:05:39,915 - INFO - 127.0.0.1 - - [16/Jun/2025 14:05:39] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 14:05:39,918 - INFO - 127.0.0.1 - - [16/Jun/2025 14:05:39] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 14:05:39,939 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 14:05:39,940 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 14:06:36,945 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\app.py', reloading
+2025-06-16 14:06:38,708 - INFO -  * Restarting with stat
+2025-06-16 14:06:47,007 - INFO - Servidor Flask iniciando com PID: 10716
+2025-06-16 14:06:47,007 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 14:06:47,008 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-16 14:06:47,008 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-16 14:06:47,015 - INFO - Iniciando servidor Flask na porta 5000 com PID: 10716
+2025-06-16 14:06:47,021 - WARNING -  * Debugger is active!
+2025-06-16 14:06:47,032 - INFO -  * Debugger PIN: 316-893-758
+2025-06-16 14:06:47,043 - INFO -  Solicitação GET /triagem recebida
+2025-06-16 14:06:47,052 - INFO - 127.0.0.1 - - [16/Jun/2025 14:06:47] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 14:06:47,056 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 14:06:47,088 - INFO -  8 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 14:06:47,088 - INFO -  Retornando 8 processos
+2025-06-16 14:06:47,088 - INFO - 127.0.0.1 - - [16/Jun/2025 14:06:47] "GET /triagem HTTP/1.1" 200 -
+2025-06-16 14:06:57,863 - INFO - 127.0.0.1 - - [16/Jun/2025 14:06:57] "OPTIONS /triagem/1005767-48.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-16 14:06:58,138 - INFO -  8 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 14:06:58,140 - INFO -  Arquivo markdown removido: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1005767-48.2025.8.11.0000.md
+2025-06-16 14:06:58,141 - INFO -  Processo 1005767-48.2025.8.11.0000 excluído com sucesso
+2025-06-16 14:06:58,141 - INFO - 127.0.0.1 - - [16/Jun/2025 14:06:58] "DELETE /triagem/1005767-48.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-16 14:06:58,183 - INFO -  Solicitação GET /triagem recebida
+2025-06-16 14:06:58,187 - INFO -  7 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 14:06:58,187 - INFO -  Retornando 7 processos
+2025-06-16 14:06:58,188 - INFO - 127.0.0.1 - - [16/Jun/2025 14:06:58] "GET /triagem HTTP/1.1" 200 -
+2025-06-16 14:07:24,155 - INFO - 127.0.0.1 - - [16/Jun/2025 14:07:24] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-16 14:07:51,028 - INFO - Markdown salvo: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1005767-48.2025.8.11.0000.md
+2025-06-16 14:08:19,754 - INFO -  Sinal 2 recebido. Finalizando servidor graciosamente...
+2025-06-16 14:08:19,850 - INFO -  Servidor com PID 10716 finalizado
+2025-06-16 14:08:20,721 - INFO -  Sinal 2 recebido. Finalizando servidor graciosamente...
+2025-06-16 14:08:20,722 - INFO -  Servidor com PID 20860 finalizado
+2025-06-16 14:16:04,771 - INFO - Servidor Flask iniciando com PID: 17312
+2025-06-16 14:16:04,772 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 14:16:04,772 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-16 14:16:04,773 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-16 14:16:04,779 - INFO - Iniciando servidor Flask na porta 5000 com PID: 17312
+2025-06-16 14:16:04,802 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-16 14:16:04,803 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-16 14:16:04,803 - INFO -  * Restarting with stat
+2025-06-16 14:16:12,899 - INFO - Servidor Flask iniciando com PID: 24944
+2025-06-16 14:16:12,900 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 14:16:12,901 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-16 14:16:12,901 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-16 14:16:12,906 - INFO - Iniciando servidor Flask na porta 5000 com PID: 24944
+2025-06-16 14:16:12,908 - WARNING -  * Debugger is active!
+2025-06-16 14:16:12,917 - INFO -  * Debugger PIN: 316-893-758
+2025-06-16 14:17:11,442 - INFO - 127.0.0.1 - - [16/Jun/2025 14:17:11] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 14:17:11,444 - INFO - 127.0.0.1 - - [16/Jun/2025 14:17:11] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 14:17:11,451 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 14:17:11,451 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 14:17:12,183 - INFO -  Solicitação GET /triagem recebida
+2025-06-16 14:17:12,206 - INFO -  7 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 14:17:12,206 - INFO -  Retornando 7 processos
+2025-06-16 14:17:12,208 - INFO - 127.0.0.1 - - [16/Jun/2025 14:17:12] "GET /triagem HTTP/1.1" 200 -
+2025-06-16 14:17:38,723 - INFO - 127.0.0.1 - - [16/Jun/2025 14:17:38] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-16 14:18:08,900 - INFO - Markdown salvo: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1005767-48.2025.8.11.0000.md
+2025-06-16 14:18:51,594 - INFO - 127.0.0.1 - - [16/Jun/2025 14:18:51] "GET /debug/sockets HTTP/1.1" 200 -
+2025-06-16 14:18:52,604 - INFO - 127.0.0.1 - - [16/Jun/2025 14:18:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-16 14:19:27,193 - INFO - 127.0.0.1 - - [16/Jun/2025 14:19:27] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 201 -
+2025-06-16 14:21:53,377 - INFO - 127.0.0.1 - - [16/Jun/2025 14:21:53] "GET /debug/test-progress/test-1750098112055 HTTP/1.1" 200 -
+2025-06-16 14:22:08,878 - INFO - 127.0.0.1 - - [16/Jun/2025 14:22:08] "GET /debug/test-progress/test-1750098127558 HTTP/1.1" 200 -
+2025-06-16 14:22:13,447 - INFO - 127.0.0.1 - - [16/Jun/2025 14:22:13] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 14:22:13,453 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 14:22:18,249 - INFO - 127.0.0.1 - - [16/Jun/2025 14:22:18] "GET /debug/test-progress/test-1750098136928 HTTP/1.1" 200 -
+2025-06-16 14:23:28,735 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\app.py', reloading
+2025-06-16 14:23:32,734 - INFO -  * Restarting with stat
+2025-06-16 14:23:40,640 - INFO - Servidor Flask iniciando com PID: 23656
+2025-06-16 14:23:40,641 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 14:23:40,641 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-16 14:23:40,641 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-16 14:23:40,648 - INFO - Iniciando servidor Flask na porta 5000 com PID: 23656
+2025-06-16 14:23:40,655 - WARNING -  * Debugger is active!
+2025-06-16 14:23:40,665 - INFO -  * Debugger PIN: 316-893-758
+2025-06-16 14:23:40,679 - ERROR - null is not an accepted origin. (further occurrences of this error will be logged with level INFO)
+2025-06-16 14:23:40,680 - INFO - 127.0.0.1 - - [16/Jun/2025 14:23:40] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:23:42,881 - INFO - 127.0.0.1 - - [16/Jun/2025 14:23:42] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:23:46,850 - INFO - 127.0.0.1 - - [16/Jun/2025 14:23:46] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:23:52,851 - INFO - 127.0.0.1 - - [16/Jun/2025 14:23:52] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:23:54,234 - INFO - 127.0.0.1 - - [16/Jun/2025 14:23:54] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 14:23:54,234 - INFO - 127.0.0.1 - - [16/Jun/2025 14:23:54] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 14:23:54,241 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 14:23:54,241 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 14:23:58,834 - INFO - 127.0.0.1 - - [16/Jun/2025 14:23:58] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:24:04,851 - INFO - 127.0.0.1 - - [16/Jun/2025 14:24:04] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:24:10,835 - INFO - 127.0.0.1 - - [16/Jun/2025 14:24:10] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:24:16,835 - INFO - 127.0.0.1 - - [16/Jun/2025 14:24:16] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:24:17,885 - INFO - 127.0.0.1 - - [16/Jun/2025 14:24:17] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 14:24:17,886 - INFO - 127.0.0.1 - - [16/Jun/2025 14:24:17] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 14:24:17,893 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 14:24:17,893 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 14:24:22,849 - INFO - 127.0.0.1 - - [16/Jun/2025 14:24:22] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:24:27,352 - INFO - 127.0.0.1 - - [16/Jun/2025 14:24:27] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 14:24:27,353 - INFO - 127.0.0.1 - - [16/Jun/2025 14:24:27] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 14:24:27,359 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 14:24:27,359 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 14:24:28,567 - INFO -  Solicitação GET /triagem recebida
+2025-06-16 14:24:29,370 - INFO -  8 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 14:24:29,371 - INFO - 127.0.0.1 - - [16/Jun/2025 14:24:29] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:24:29,372 - INFO -  Retornando 8 processos
+2025-06-16 14:24:29,374 - INFO - 127.0.0.1 - - [16/Jun/2025 14:24:29] "GET /triagem HTTP/1.1" 200 -
+2025-06-16 14:24:34,839 - INFO - 127.0.0.1 - - [16/Jun/2025 14:24:34] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:24:41,552 - INFO - 127.0.0.1 - - [16/Jun/2025 14:24:41] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:24:47,836 - INFO - 127.0.0.1 - - [16/Jun/2025 14:24:47] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:24:53,849 - INFO - 127.0.0.1 - - [16/Jun/2025 14:24:53] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:24:59,857 - INFO - 127.0.0.1 - - [16/Jun/2025 14:24:59] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:25:05,845 - INFO - 127.0.0.1 - - [16/Jun/2025 14:25:05] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:25:11,869 - INFO - 127.0.0.1 - - [16/Jun/2025 14:25:11] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:25:17,852 - INFO - 127.0.0.1 - - [16/Jun/2025 14:25:17] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:25:23,886 - INFO - 127.0.0.1 - - [16/Jun/2025 14:25:23] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:25:29,987 - INFO - 127.0.0.1 - - [16/Jun/2025 14:25:29] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:25:35,934 - INFO - 127.0.0.1 - - [16/Jun/2025 14:25:35] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:25:42,035 - INFO - 127.0.0.1 - - [16/Jun/2025 14:25:42] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:25:48,188 - INFO - 127.0.0.1 - - [16/Jun/2025 14:25:48] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:25:56,735 - INFO - 127.0.0.1 - - [16/Jun/2025 14:25:56] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:26:05,391 - INFO - 127.0.0.1 - - [16/Jun/2025 14:26:05] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:26:18,618 - INFO - 127.0.0.1 - - [16/Jun/2025 14:26:18] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:26:24,887 - INFO - 127.0.0.1 - - [16/Jun/2025 14:26:24] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:26:30,976 - INFO - 127.0.0.1 - - [16/Jun/2025 14:26:30] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:26:36,865 - INFO - 127.0.0.1 - - [16/Jun/2025 14:26:36] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:26:43,721 - INFO - 127.0.0.1 - - [16/Jun/2025 14:26:43] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:26:49,848 - INFO - 127.0.0.1 - - [16/Jun/2025 14:26:49] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:26:55,844 - INFO - 127.0.0.1 - - [16/Jun/2025 14:26:55] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:27:01,922 - INFO - 127.0.0.1 - - [16/Jun/2025 14:27:01] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:27:07,862 - INFO - 127.0.0.1 - - [16/Jun/2025 14:27:07] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:27:13,869 - INFO - 127.0.0.1 - - [16/Jun/2025 14:27:13] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:27:19,872 - INFO - 127.0.0.1 - - [16/Jun/2025 14:27:19] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:27:25,862 - INFO - 127.0.0.1 - - [16/Jun/2025 14:27:25] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:27:32,988 - INFO - 127.0.0.1 - - [16/Jun/2025 14:27:32] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:27:39,006 - INFO - 127.0.0.1 - - [16/Jun/2025 14:27:39] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:27:45,281 - INFO - 127.0.0.1 - - [16/Jun/2025 14:27:45] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:27:51,498 - INFO - 127.0.0.1 - - [16/Jun/2025 14:27:51] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:27:58,784 - INFO - 127.0.0.1 - - [16/Jun/2025 14:27:58] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:28:06,706 - INFO - 127.0.0.1 - - [16/Jun/2025 14:28:06] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:28:15,793 - INFO - 127.0.0.1 - - [16/Jun/2025 14:28:15] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:28:21,840 - INFO - 127.0.0.1 - - [16/Jun/2025 14:28:21] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:28:27,839 - INFO - 127.0.0.1 - - [16/Jun/2025 14:28:27] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:28:33,856 - INFO - 127.0.0.1 - - [16/Jun/2025 14:28:33] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:28:39,850 - INFO - 127.0.0.1 - - [16/Jun/2025 14:28:39] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:28:45,848 - INFO - 127.0.0.1 - - [16/Jun/2025 14:28:45] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:28:51,865 - INFO - 127.0.0.1 - - [16/Jun/2025 14:28:51] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:28:57,844 - INFO - 127.0.0.1 - - [16/Jun/2025 14:28:57] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:29:03,859 - INFO - 127.0.0.1 - - [16/Jun/2025 14:29:03] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:29:09,862 - INFO - 127.0.0.1 - - [16/Jun/2025 14:29:09] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:29:15,870 - INFO - 127.0.0.1 - - [16/Jun/2025 14:29:15] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:29:21,871 - INFO - 127.0.0.1 - - [16/Jun/2025 14:29:21] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:29:27,922 - INFO - 127.0.0.1 - - [16/Jun/2025 14:29:27] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:29:33,998 - INFO - 127.0.0.1 - - [16/Jun/2025 14:29:33] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:29:40,171 - INFO - 127.0.0.1 - - [16/Jun/2025 14:29:40] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:29:46,919 - INFO - 127.0.0.1 - - [16/Jun/2025 14:29:46] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:29:50,989 - INFO -  Sinal 2 recebido. Finalizando servidor graciosamente...
+2025-06-16 14:29:50,990 - INFO -  Servidor com PID 23656 finalizado
+2025-06-16 14:29:52,672 - INFO -  Sinal 2 recebido. Finalizando servidor graciosamente...
+2025-06-16 14:29:52,676 - INFO -  Servidor com PID 17312 finalizado
+2025-06-16 14:30:31,096 - INFO - Servidor Flask iniciando com PID: 6316
+2025-06-16 14:30:31,096 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 14:30:31,097 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-16 14:30:31,097 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-16 14:30:31,101 - INFO - Iniciando servidor Flask na porta 5000 com PID: 6316
+2025-06-16 14:30:31,117 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-16 14:30:31,118 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-16 14:30:31,118 - INFO -  * Restarting with stat
+2025-06-16 14:30:35,629 - INFO - Servidor Flask iniciando com PID: 24992
+2025-06-16 14:30:35,630 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 14:30:35,630 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-16 14:30:35,630 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-16 14:30:35,635 - INFO - Iniciando servidor Flask na porta 5000 com PID: 24992
+2025-06-16 14:30:35,639 - WARNING -  * Debugger is active!
+2025-06-16 14:30:35,649 - INFO -  * Debugger PIN: 316-893-758
+2025-06-16 14:30:35,688 - ERROR - null is not an accepted origin. (further occurrences of this error will be logged with level INFO)
+2025-06-16 14:30:35,690 - INFO - 127.0.0.1 - - [16/Jun/2025 14:30:35] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:30:41,846 - INFO - 127.0.0.1 - - [16/Jun/2025 14:30:41] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:30:47,850 - INFO - 127.0.0.1 - - [16/Jun/2025 14:30:47] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:30:53,848 - INFO - 127.0.0.1 - - [16/Jun/2025 14:30:53] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:30:59,854 - INFO - 127.0.0.1 - - [16/Jun/2025 14:30:59] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:31:05,848 - INFO - 127.0.0.1 - - [16/Jun/2025 14:31:05] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:31:11,858 - INFO - 127.0.0.1 - - [16/Jun/2025 14:31:11] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:31:17,880 - INFO - 127.0.0.1 - - [16/Jun/2025 14:31:17] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:31:23,868 - INFO - 127.0.0.1 - - [16/Jun/2025 14:31:23] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:31:29,892 - INFO - 127.0.0.1 - - [16/Jun/2025 14:31:29] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:31:35,994 - INFO - 127.0.0.1 - - [16/Jun/2025 14:31:35] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:31:41,996 - INFO - 127.0.0.1 - - [16/Jun/2025 14:31:41] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:31:48,058 - INFO - 127.0.0.1 - - [16/Jun/2025 14:31:48] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:31:54,618 - INFO - 127.0.0.1 - - [16/Jun/2025 14:31:54] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:32:02,316 - INFO - 127.0.0.1 - - [16/Jun/2025 14:32:02] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:32:10,890 - INFO - 127.0.0.1 - - [16/Jun/2025 14:32:10] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:32:18,980 - INFO - 127.0.0.1 - - [16/Jun/2025 14:32:18] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:32:24,225 - INFO - 127.0.0.1 - - [16/Jun/2025 14:32:24] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 14:32:24,226 - INFO - 127.0.0.1 - - [16/Jun/2025 14:32:24] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 14:32:24,239 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 14:32:24,239 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 14:32:24,849 - INFO - 127.0.0.1 - - [16/Jun/2025 14:32:24] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:32:30,850 - INFO - 127.0.0.1 - - [16/Jun/2025 14:32:30] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:32:36,842 - INFO - 127.0.0.1 - - [16/Jun/2025 14:32:36] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:32:40,351 - INFO - 127.0.0.1 - - [16/Jun/2025 14:32:40] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 14:32:40,351 - INFO - 127.0.0.1 - - [16/Jun/2025 14:32:40] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 14:32:40,358 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 14:32:40,358 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 14:32:42,853 - INFO - 127.0.0.1 - - [16/Jun/2025 14:32:42] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:32:48,846 - INFO - 127.0.0.1 - - [16/Jun/2025 14:32:48] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:32:54,857 - INFO - 127.0.0.1 - - [16/Jun/2025 14:32:54] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:33:00,857 - INFO - 127.0.0.1 - - [16/Jun/2025 14:33:00] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:33:01,755 - INFO - 127.0.0.1 - - [16/Jun/2025 14:33:01] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 14:33:01,755 - INFO - 127.0.0.1 - - [16/Jun/2025 14:33:01] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 14:33:01,761 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 14:33:01,761 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 14:33:06,865 - INFO - 127.0.0.1 - - [16/Jun/2025 14:33:06] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:33:12,883 - INFO - 127.0.0.1 - - [16/Jun/2025 14:33:12] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:33:19,071 - INFO - 127.0.0.1 - - [16/Jun/2025 14:33:19] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:33:24,919 - INFO - 127.0.0.1 - - [16/Jun/2025 14:33:24] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:33:25,324 - INFO - 127.0.0.1 - - [16/Jun/2025 14:33:25] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 14:33:25,329 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 14:33:25,340 - INFO - 127.0.0.1 - - [16/Jun/2025 14:33:25] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 14:33:25,344 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 14:33:30,953 - INFO - 127.0.0.1 - - [16/Jun/2025 14:33:30] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:33:32,726 - INFO - 127.0.0.1 - - [16/Jun/2025 14:33:32] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 14:33:32,727 - INFO - 127.0.0.1 - - [16/Jun/2025 14:33:32] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 14:33:32,735 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 14:33:32,735 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 14:33:33,895 - INFO -  Solicitação GET /triagem recebida
+2025-06-16 14:33:34,088 - INFO -  8 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 14:33:34,088 - INFO -  Retornando 8 processos
+2025-06-16 14:33:34,102 - INFO - 127.0.0.1 - - [16/Jun/2025 14:33:34] "GET /triagem HTTP/1.1" 200 -
+2025-06-16 14:33:37,153 - INFO - 127.0.0.1 - - [16/Jun/2025 14:33:37] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:33:43,174 - INFO - 127.0.0.1 - - [16/Jun/2025 14:33:43] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:33:49,883 - INFO - 127.0.0.1 - - [16/Jun/2025 14:33:49] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:33:57,425 - INFO - 127.0.0.1 - - [16/Jun/2025 14:33:57] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:34:05,047 - INFO - 127.0.0.1 - - [16/Jun/2025 14:34:05] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:34:05,809 - INFO - 127.0.0.1 - - [16/Jun/2025 14:34:05] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-16 14:34:11,910 - INFO - 127.0.0.1 - - [16/Jun/2025 14:34:11] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:34:32,057 - INFO - 127.0.0.1 - - [16/Jun/2025 14:34:32] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:34:44,671 - INFO - Markdown salvo: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1005767-48.2025.8.11.0000.md
+2025-06-16 14:34:50,843 - INFO - 127.0.0.1 - - [16/Jun/2025 14:34:50] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:35:01,745 - INFO - 127.0.0.1 - - [16/Jun/2025 14:35:01] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:35:09,794 - INFO - 127.0.0.1 - - [16/Jun/2025 14:35:09] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:35:19,496 - INFO - 127.0.0.1 - - [16/Jun/2025 14:35:19] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:35:27,440 - INFO - 127.0.0.1 - - [16/Jun/2025 14:35:27] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:35:37,555 - INFO - 127.0.0.1 - - [16/Jun/2025 14:35:37] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:35:45,435 - INFO - 127.0.0.1 - - [16/Jun/2025 14:35:45] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:35:57,969 - INFO - 127.0.0.1 - - [16/Jun/2025 14:35:57] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:36:04,571 - INFO - 127.0.0.1 - - [16/Jun/2025 14:36:04] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 201 -
+2025-06-16 14:36:04,884 - INFO - received event "start_listening" from vRMFtRGZ1iQCRg7HAAAX [/]
+2025-06-16 14:36:04,890 - INFO - emitting event "progress_update" to vRMFtRGZ1iQCRg7HAAAX [/]
+2025-06-16 14:36:06,541 - INFO - 127.0.0.1 - - [16/Jun/2025 14:36:06] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:36:15,080 - INFO - 127.0.0.1 - - [16/Jun/2025 14:36:15] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:36:20,852 - INFO - 127.0.0.1 - - [16/Jun/2025 14:36:20] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:36:26,904 - INFO - 127.0.0.1 - - [16/Jun/2025 14:36:26] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:36:33,849 - INFO - 127.0.0.1 - - [16/Jun/2025 14:36:33] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:36:39,849 - INFO - 127.0.0.1 - - [16/Jun/2025 14:36:39] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:36:45,850 - INFO - 127.0.0.1 - - [16/Jun/2025 14:36:45] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:36:51,861 - INFO - 127.0.0.1 - - [16/Jun/2025 14:36:51] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:36:57,862 - INFO - 127.0.0.1 - - [16/Jun/2025 14:36:57] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:37:03,858 - INFO - 127.0.0.1 - - [16/Jun/2025 14:37:03] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:37:09,865 - INFO - 127.0.0.1 - - [16/Jun/2025 14:37:09] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:37:15,924 - INFO - 127.0.0.1 - - [16/Jun/2025 14:37:15] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:37:21,895 - INFO - 127.0.0.1 - - [16/Jun/2025 14:37:21] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:37:27,992 - INFO - 127.0.0.1 - - [16/Jun/2025 14:37:27] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:37:34,056 - INFO - 127.0.0.1 - - [16/Jun/2025 14:37:34] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:37:40,063 - INFO - 127.0.0.1 - - [16/Jun/2025 14:37:40] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:37:46,872 - INFO - 127.0.0.1 - - [16/Jun/2025 14:37:46] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:37:54,057 - INFO - 127.0.0.1 - - [16/Jun/2025 14:37:54] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:38:04,540 - INFO - 127.0.0.1 - - [16/Jun/2025 14:38:04] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:38:15,550 - INFO - 127.0.0.1 - - [16/Jun/2025 14:38:15] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:38:21,860 - INFO - 127.0.0.1 - - [16/Jun/2025 14:38:21] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:38:27,850 - INFO - 127.0.0.1 - - [16/Jun/2025 14:38:27] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:38:33,857 - INFO - 127.0.0.1 - - [16/Jun/2025 14:38:33] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:38:39,850 - INFO - 127.0.0.1 - - [16/Jun/2025 14:38:39] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:38:45,849 - INFO - 127.0.0.1 - - [16/Jun/2025 14:38:45] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:38:51,858 - INFO - 127.0.0.1 - - [16/Jun/2025 14:38:51] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:38:57,863 - INFO - 127.0.0.1 - - [16/Jun/2025 14:38:57] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:39:03,858 - INFO - 127.0.0.1 - - [16/Jun/2025 14:39:03] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:39:06,664 - INFO - 127.0.0.1 - - [16/Jun/2025 14:39:06] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 14:39:06,664 - INFO - 127.0.0.1 - - [16/Jun/2025 14:39:06] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 14:39:06,674 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 14:39:06,675 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 14:39:09,883 - INFO - 127.0.0.1 - - [16/Jun/2025 14:39:09] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:39:16,422 - INFO - 127.0.0.1 - - [16/Jun/2025 14:39:16] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:39:22,893 - INFO - 127.0.0.1 - - [16/Jun/2025 14:39:22] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:39:28,931 - INFO - 127.0.0.1 - - [16/Jun/2025 14:39:28] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:39:35,055 - INFO - 127.0.0.1 - - [16/Jun/2025 14:39:35] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:39:41,116 - INFO - 127.0.0.1 - - [16/Jun/2025 14:39:41] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:39:46,148 - INFO - 127.0.0.1 - - [16/Jun/2025 14:39:46] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 14:39:46,148 - INFO - 127.0.0.1 - - [16/Jun/2025 14:39:46] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 14:39:46,156 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 14:39:46,157 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 14:39:47,762 - INFO - 127.0.0.1 - - [16/Jun/2025 14:39:47] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:39:55,619 - INFO - 127.0.0.1 - - [16/Jun/2025 14:39:55] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:40:04,957 - INFO - 127.0.0.1 - - [16/Jun/2025 14:40:04] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:40:15,049 - INFO - 127.0.0.1 - - [16/Jun/2025 14:40:15] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:40:20,862 - INFO - 127.0.0.1 - - [16/Jun/2025 14:40:20] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:40:26,859 - INFO - 127.0.0.1 - - [16/Jun/2025 14:40:26] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:40:32,858 - INFO - 127.0.0.1 - - [16/Jun/2025 14:40:32] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:40:38,859 - INFO - 127.0.0.1 - - [16/Jun/2025 14:40:38] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:40:44,863 - INFO - 127.0.0.1 - - [16/Jun/2025 14:40:44] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:40:50,852 - INFO - 127.0.0.1 - - [16/Jun/2025 14:40:50] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:40:56,867 - INFO - 127.0.0.1 - - [16/Jun/2025 14:40:56] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:41:02,875 - INFO - 127.0.0.1 - - [16/Jun/2025 14:41:02] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:41:04,272 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\app.py', reloading
+2025-06-16 14:41:06,739 - INFO -  Sinal 2 recebido. Finalizando servidor graciosamente...
+2025-06-16 14:41:06,760 - INFO -  Servidor com PID 6316 finalizado
+2025-06-16 14:41:56,054 - INFO - Servidor Flask iniciando com PID: 13732
+2025-06-16 14:41:56,054 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 14:41:56,054 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-16 14:41:56,054 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-16 14:41:56,062 - INFO - Iniciando servidor Flask na porta 5000 com PID: 13732
+2025-06-16 14:41:56,082 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-16 14:41:56,082 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-16 14:41:56,083 - INFO -  * Restarting with stat
+2025-06-16 14:42:05,860 - INFO - Servidor Flask iniciando com PID: 10008
+2025-06-16 14:42:05,860 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 14:42:05,861 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-16 14:42:05,861 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-16 14:42:05,866 - INFO - Iniciando servidor Flask na porta 5000 com PID: 10008
+2025-06-16 14:42:05,872 - WARNING -  * Debugger is active!
+2025-06-16 14:42:05,883 - INFO -  * Debugger PIN: 316-893-758
+2025-06-16 14:42:05,899 - ERROR - null is not an accepted origin. (further occurrences of this error will be logged with level INFO)
+2025-06-16 14:42:05,901 - INFO -  Solicitação GET /triagem recebida
+2025-06-16 14:42:05,902 - INFO - 127.0.0.1 - - [16/Jun/2025 14:42:05] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:42:05,910 - INFO - 127.0.0.1 - - [16/Jun/2025 14:42:05] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 14:42:05,925 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 14:42:05,942 - INFO -  9 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 14:42:05,942 - INFO -  Retornando 9 processos
+2025-06-16 14:42:05,944 - INFO - 127.0.0.1 - - [16/Jun/2025 14:42:05] "GET /triagem HTTP/1.1" 200 -
+2025-06-16 14:42:13,226 - INFO - 127.0.0.1 - - [16/Jun/2025 14:42:13] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:42:20,637 - INFO - 127.0.0.1 - - [16/Jun/2025 14:42:20] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:42:29,808 - INFO - 127.0.0.1 - - [16/Jun/2025 14:42:29] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:42:38,874 - INFO - 127.0.0.1 - - [16/Jun/2025 14:42:38] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:42:46,474 - INFO - 127.0.0.1 - - [16/Jun/2025 14:42:46] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:42:56,602 - INFO - 127.0.0.1 - - [16/Jun/2025 14:42:56] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:42:58,479 - INFO - 127.0.0.1 - - [16/Jun/2025 14:42:58] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 14:42:58,480 - INFO - 127.0.0.1 - - [16/Jun/2025 14:42:58] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 14:42:58,493 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 14:42:58,493 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 14:43:00,423 - INFO -  Solicitação GET /triagem recebida
+2025-06-16 14:43:00,483 - INFO -  9 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 14:43:00,484 - INFO -  Retornando 9 processos
+2025-06-16 14:43:00,487 - INFO - 127.0.0.1 - - [16/Jun/2025 14:43:00] "GET /triagem HTTP/1.1" 200 -
+2025-06-16 14:43:07,816 - INFO - 127.0.0.1 - - [16/Jun/2025 14:43:07] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:43:14,886 - INFO - 127.0.0.1 - - [16/Jun/2025 14:43:14] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:43:17,662 - INFO - 127.0.0.1 - - [16/Jun/2025 14:43:17] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 14:43:17,663 - INFO - 127.0.0.1 - - [16/Jun/2025 14:43:17] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 14:43:17,671 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 14:43:17,672 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 14:43:18,699 - INFO -  Solicitação GET /triagem recebida
+2025-06-16 14:43:18,705 - INFO -  9 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 14:43:18,706 - INFO -  Retornando 9 processos
+2025-06-16 14:43:18,706 - INFO - 127.0.0.1 - - [16/Jun/2025 14:43:18] "GET /triagem HTTP/1.1" 200 -
+2025-06-16 14:43:24,013 - INFO - 127.0.0.1 - - [16/Jun/2025 14:43:24] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:43:32,098 - INFO - 127.0.0.1 - - [16/Jun/2025 14:43:32] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:43:34,878 - INFO - 127.0.0.1 - - [16/Jun/2025 14:43:34] "OPTIONS /triagem/1005767-48.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-16 14:43:35,159 - INFO -  9 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 14:43:35,162 - INFO -  Arquivo markdown removido: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1005767-48.2025.8.11.0000.md
+2025-06-16 14:43:35,163 - INFO -  Processo 1005767-48.2025.8.11.0000 excluído com sucesso
+2025-06-16 14:43:35,163 - INFO - 127.0.0.1 - - [16/Jun/2025 14:43:35] "DELETE /triagem/1005767-48.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-16 14:43:35,190 - INFO -  Solicitação GET /triagem recebida
+2025-06-16 14:43:35,197 - INFO -  7 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 14:43:35,197 - INFO -  Retornando 7 processos
+2025-06-16 14:43:35,198 - INFO - 127.0.0.1 - - [16/Jun/2025 14:43:35] "GET /triagem HTTP/1.1" 200 -
+2025-06-16 14:43:39,909 - INFO - 127.0.0.1 - - [16/Jun/2025 14:43:39] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:43:46,964 - INFO - 127.0.0.1 - - [16/Jun/2025 14:43:46] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:43:56,522 - INFO - 127.0.0.1 - - [16/Jun/2025 14:43:56] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:44:03,936 - INFO - 127.0.0.1 - - [16/Jun/2025 14:44:03] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:44:04,989 - INFO - 127.0.0.1 - - [16/Jun/2025 14:44:04] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-16 14:44:05,621 - INFO - 127.0.0.1 - - [16/Jun/2025 14:44:05] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 202 -
+2025-06-16 14:44:05,879 - INFO - received event "start_listening" from O4VJecCxW1UtUG99AAAM [/]
+2025-06-16 14:44:05,885 - INFO - emitting event "progress_update" to O4VJecCxW1UtUG99AAAM [/]
+2025-06-16 14:44:06,621 - INFO - emitting event "progress_update" to O4VJecCxW1UtUG99AAAM [/]
+2025-06-16 14:44:07,942 - INFO - emitting event "progress_update" to O4VJecCxW1UtUG99AAAM [/]
+2025-06-16 14:44:09,563 - INFO - emitting event "progress_update" to O4VJecCxW1UtUG99AAAM [/]
+2025-06-16 14:44:10,070 - INFO - emitting event "progress_update" to O4VJecCxW1UtUG99AAAM [/]
+2025-06-16 14:44:10,876 - INFO - emitting event "progress_update" to O4VJecCxW1UtUG99AAAM [/]
+2025-06-16 14:44:14,345 - INFO - emitting event "progress_update" to O4VJecCxW1UtUG99AAAM [/]
+2025-06-16 14:44:15,046 - INFO - emitting event "progress_update" to O4VJecCxW1UtUG99AAAM [/]
+2025-06-16 14:44:15,046 - INFO - emitting event "progress_update" to O4VJecCxW1UtUG99AAAM [/]
+2025-06-16 14:44:15,747 - INFO - 127.0.0.1 - - [16/Jun/2025 14:44:15] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:44:17,370 - INFO -  Solicitação GET /triagem recebida
+2025-06-16 14:44:17,375 - INFO -  7 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 14:44:17,375 - INFO -  Retornando 7 processos
+2025-06-16 14:44:17,376 - INFO - 127.0.0.1 - - [16/Jun/2025 14:44:17] "GET /triagem HTTP/1.1" 200 -
+2025-06-16 14:44:21,845 - INFO - 127.0.0.1 - - [16/Jun/2025 14:44:21] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:44:27,847 - INFO - 127.0.0.1 - - [16/Jun/2025 14:44:27] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:44:33,576 - INFO - 127.0.0.1 - - [16/Jun/2025 14:44:33] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 14:44:33,581 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 14:44:33,587 - INFO - 127.0.0.1 - - [16/Jun/2025 14:44:33] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 14:44:33,596 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 14:44:33,852 - INFO - 127.0.0.1 - - [16/Jun/2025 14:44:33] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:44:34,650 - INFO -  Solicitação GET /triagem recebida
+2025-06-16 14:44:34,658 - INFO -  7 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 14:44:34,659 - INFO -  Retornando 7 processos
+2025-06-16 14:44:34,660 - INFO - 127.0.0.1 - - [16/Jun/2025 14:44:34] "GET /triagem HTTP/1.1" 200 -
+2025-06-16 14:44:39,854 - INFO - 127.0.0.1 - - [16/Jun/2025 14:44:39] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:44:45,847 - INFO - 127.0.0.1 - - [16/Jun/2025 14:44:45] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:44:53,237 - INFO - 127.0.0.1 - - [16/Jun/2025 14:44:53] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:44:58,850 - INFO - 127.0.0.1 - - [16/Jun/2025 14:44:58] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:45:04,855 - INFO - 127.0.0.1 - - [16/Jun/2025 14:45:04] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:45:10,857 - INFO - 127.0.0.1 - - [16/Jun/2025 14:45:10] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:45:16,870 - INFO - 127.0.0.1 - - [16/Jun/2025 14:45:16] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:45:22,918 - INFO - 127.0.0.1 - - [16/Jun/2025 14:45:22] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:45:29,004 - INFO - 127.0.0.1 - - [16/Jun/2025 14:45:29] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:45:35,153 - INFO - 127.0.0.1 - - [16/Jun/2025 14:45:35] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:45:41,069 - INFO - 127.0.0.1 - - [16/Jun/2025 14:45:41] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:45:47,927 - INFO - 127.0.0.1 - - [16/Jun/2025 14:45:47] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:45:54,744 - INFO - 127.0.0.1 - - [16/Jun/2025 14:45:54] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:46:05,476 - INFO - 127.0.0.1 - - [16/Jun/2025 14:46:05] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:46:14,524 - INFO - 127.0.0.1 - - [16/Jun/2025 14:46:14] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:46:23,174 - INFO - 127.0.0.1 - - [16/Jun/2025 14:46:23] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:46:31,339 - INFO - 127.0.0.1 - - [16/Jun/2025 14:46:31] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:46:42,130 - INFO - 127.0.0.1 - - [16/Jun/2025 14:46:42] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:46:51,341 - INFO - 127.0.0.1 - - [16/Jun/2025 14:46:51] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:46:58,924 - INFO - 127.0.0.1 - - [16/Jun/2025 14:46:58] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:47:06,740 - INFO - 127.0.0.1 - - [16/Jun/2025 14:47:06] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:47:17,605 - INFO - 127.0.0.1 - - [16/Jun/2025 14:47:17] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:47:21,230 - INFO -  * Detected change in 'C:\\Users\\54117\\Documents\\Apps\\gmv-server\\app.py', reloading
+2025-06-16 14:47:23,229 - INFO -  Sinal 2 recebido. Finalizando servidor graciosamente...
+2025-06-16 14:47:23,245 - INFO -  Servidor com PID 13732 finalizado
+2025-06-16 14:54:08,606 - INFO - Servidor Flask iniciando com PID: 22136
+2025-06-16 14:54:08,607 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 14:54:08,607 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-16 14:54:08,607 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-16 14:54:08,612 - INFO - Iniciando servidor Flask na porta 5000 com PID: 22136
+2025-06-16 14:54:08,630 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-16 14:54:08,630 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-16 14:54:08,631 - INFO -  * Restarting with stat
+2025-06-16 14:54:14,689 - INFO - Servidor Flask iniciando com PID: 23776
+2025-06-16 14:54:14,689 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 14:54:14,689 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-16 14:54:14,690 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-16 14:54:14,695 - INFO - Iniciando servidor Flask na porta 5000 com PID: 23776
+2025-06-16 14:54:14,700 - WARNING -  * Debugger is active!
+2025-06-16 14:54:14,710 - INFO -  * Debugger PIN: 316-893-758
+2025-06-16 14:54:14,723 - ERROR - null is not an accepted origin. (further occurrences of this error will be logged with level INFO)
+2025-06-16 14:54:14,725 - INFO - 127.0.0.1 - - [16/Jun/2025 14:54:14] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:54:21,947 - INFO - 127.0.0.1 - - [16/Jun/2025 14:54:21] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:54:29,620 - INFO - 127.0.0.1 - - [16/Jun/2025 14:54:29] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:54:40,574 - INFO - 127.0.0.1 - - [16/Jun/2025 14:54:40] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:54:46,369 - INFO - 127.0.0.1 - - [16/Jun/2025 14:54:46] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 14:54:46,369 - INFO - 127.0.0.1 - - [16/Jun/2025 14:54:46] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-16 14:54:46,376 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 14:54:46,376 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-16 14:54:47,384 - INFO -  Solicitação GET /triagem recebida
+2025-06-16 14:54:47,410 - INFO -  7 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 14:54:47,410 - INFO -  Retornando 7 processos
+2025-06-16 14:54:47,412 - INFO - 127.0.0.1 - - [16/Jun/2025 14:54:47] "GET /triagem HTTP/1.1" 200 -
+2025-06-16 14:54:49,807 - INFO - 127.0.0.1 - - [16/Jun/2025 14:54:49] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:54:58,740 - INFO - 127.0.0.1 - - [16/Jun/2025 14:54:58] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:55:07,910 - INFO - 127.0.0.1 - - [16/Jun/2025 14:55:07] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:55:16,190 - INFO - 127.0.0.1 - - [16/Jun/2025 14:55:16] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:55:26,525 - INFO - 127.0.0.1 - - [16/Jun/2025 14:55:26] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:55:35,302 - INFO - 127.0.0.1 - - [16/Jun/2025 14:55:35] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:55:44,602 - INFO - 127.0.0.1 - - [16/Jun/2025 14:55:44] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:55:52,172 - INFO - 127.0.0.1 - - [16/Jun/2025 14:55:52] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:56:00,537 - INFO - 127.0.0.1 - - [16/Jun/2025 14:56:00] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:56:00,776 - INFO - 127.0.0.1 - - [16/Jun/2025 14:56:00] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-16 14:56:01,342 - INFO - 127.0.0.1 - - [16/Jun/2025 14:56:01] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 202 -
+2025-06-16 14:56:01,384 - INFO - received event "start_listening" from nLiZw0AHA2aMNKfbAAAG [/]
+2025-06-16 14:56:01,386 - INFO - emitting event "progress_update" to nLiZw0AHA2aMNKfbAAAG [/]
+2025-06-16 14:56:02,352 - INFO - emitting event "progress_update" to nLiZw0AHA2aMNKfbAAAG [/]
+2025-06-16 14:56:03,569 - INFO - emitting event "progress_update" to nLiZw0AHA2aMNKfbAAAG [/]
+2025-06-16 14:56:07,532 - INFO - emitting event "progress_update" to nLiZw0AHA2aMNKfbAAAG [/]
+2025-06-16 14:56:08,033 - INFO - emitting event "progress_update" to nLiZw0AHA2aMNKfbAAAG [/]
+2025-06-16 14:56:08,070 - INFO - 127.0.0.1 - - [16/Jun/2025 14:56:08] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:56:09,235 - INFO - Markdown salvo: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1005767-48.2025.8.11.0000.md
+2025-06-16 14:56:09,235 - INFO - emitting event "progress_update" to nLiZw0AHA2aMNKfbAAAG [/]
+2025-06-16 14:56:10,102 - INFO - emitting event "progress_update" to nLiZw0AHA2aMNKfbAAAG [/]
+2025-06-16 14:56:18,186 - INFO - 127.0.0.1 - - [16/Jun/2025 14:56:18] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:56:23,885 - INFO - 127.0.0.1 - - [16/Jun/2025 14:56:23] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:56:29,869 - INFO - 127.0.0.1 - - [16/Jun/2025 14:56:29] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:56:35,869 - INFO - 127.0.0.1 - - [16/Jun/2025 14:56:35] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:56:41,869 - INFO - 127.0.0.1 - - [16/Jun/2025 14:56:41] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:56:47,941 - INFO - 127.0.0.1 - - [16/Jun/2025 14:56:47] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:56:53,919 - INFO - 127.0.0.1 - - [16/Jun/2025 14:56:53] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:56:59,957 - INFO - 127.0.0.1 - - [16/Jun/2025 14:56:59] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:57:05,953 - INFO - 127.0.0.1 - - [16/Jun/2025 14:57:05] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:57:11,966 - INFO - 127.0.0.1 - - [16/Jun/2025 14:57:11] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:57:16,670 - INFO - emitting event "progress_update" to nLiZw0AHA2aMNKfbAAAG [/]
+2025-06-16 14:57:17,173 - INFO - emitting event "progress_update" to nLiZw0AHA2aMNKfbAAAG [/]
+2025-06-16 14:57:17,903 - INFO - 127.0.0.1 - - [16/Jun/2025 14:57:17] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:57:19,493 - INFO -  Solicitação GET /triagem recebida
+2025-06-16 14:57:19,511 - INFO -  8 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-16 14:57:19,511 - INFO -  Retornando 8 processos
+2025-06-16 14:57:19,511 - INFO - 127.0.0.1 - - [16/Jun/2025 14:57:19] "GET /triagem HTTP/1.1" 200 -
+2025-06-16 14:57:23,910 - INFO - 127.0.0.1 - - [16/Jun/2025 14:57:23] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-06-16 14:57:28,822 - INFO -  Sinal 2 recebido. Finalizando servidor graciosamente...
+2025-06-16 14:57:28,822 - INFO -  Servidor com PID 23776 finalizado
+2025-06-16 14:57:29,426 - INFO -  Sinal 2 recebido. Finalizando servidor graciosamente...
+2025-06-16 14:57:29,426 - INFO -  Servidor com PID 22136 finalizado
