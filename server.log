@@ -2514,3 +2514,1317 @@ Traceback (most recent call last):
 AssertionError: write() before start_response
 2025-06-16 16:24:31,504 - INFO -  Sinal 2 recebido. Finalizando servidor graciosamente...
 2025-06-16 16:24:31,506 - INFO -  Servidor com PID 20020 finalizado
+2025-06-17 11:35:09,471 - INFO - Servidor Flask iniciando com PID: 25324
+2025-06-17 11:35:09,472 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-17 11:35:09,472 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-17 11:35:09,472 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-17 11:35:09,497 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.26:5000
+2025-06-17 11:35:09,497 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-17 11:39:27,009 - INFO -  Solicitação GET /triagem recebida
+2025-06-17 11:39:27,298 - INFO -  10 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-17 11:39:27,298 - INFO -  Retornando 10 processos
+2025-06-17 11:39:27,310 - INFO - 127.0.0.1 - - [17/Jun/2025 11:39:27] "GET /triagem HTTP/1.1" 200 -
+2025-06-17 11:39:40,338 - INFO -  Solicitação GET /triagem recebida
+2025-06-17 11:39:40,338 - INFO -  10 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-17 11:39:40,354 - INFO -  Retornando 10 processos
+2025-06-17 11:39:40,355 - INFO - 127.0.0.1 - - [17/Jun/2025 11:39:40] "GET /triagem HTTP/1.1" 200 -
+2025-06-17 11:39:41,348 - INFO - 127.0.0.1 - - [17/Jun/2025 11:39:41] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-17 11:39:41,349 - INFO - 127.0.0.1 - - [17/Jun/2025 11:39:41] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-17 11:39:41,380 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-17 11:39:41,380 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-17 11:39:41,380 - INFO - 127.0.0.1 - - [17/Jun/2025 11:39:41] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 11:39:41,718 - INFO - 127.0.0.1 - - [17/Jun/2025 11:39:41] "GET /rag/suggestions HTTP/1.1" 200 -
+2025-06-17 11:39:55,505 - INFO - 127.0.0.1 - - [17/Jun/2025 11:39:55] "OPTIONS /rag/query HTTP/1.1" 200 -
+2025-06-17 11:39:55,758 - INFO -    Query: 'Quais processos estão relacionados ao tema CÍVEL?'
+2025-06-17 11:39:55,929 - INFO - 127.0.0.1 - - [17/Jun/2025 11:39:55] "[35m[1mPOST /rag/query HTTP/1.1[0m" 500 -
+2025-06-17 11:40:12,139 - INFO - 127.0.0.1 - - [17/Jun/2025 11:40:12] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 11:40:42,068 - INFO - 127.0.0.1 - - [17/Jun/2025 11:40:42] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 11:41:12,050 - INFO - 127.0.0.1 - - [17/Jun/2025 11:41:12] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 11:41:42,060 - INFO - 127.0.0.1 - - [17/Jun/2025 11:41:42] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 11:42:12,065 - INFO - 127.0.0.1 - - [17/Jun/2025 11:42:12] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 11:42:42,047 - INFO - 127.0.0.1 - - [17/Jun/2025 11:42:42] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 11:43:12,068 - INFO - 127.0.0.1 - - [17/Jun/2025 11:43:12] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 11:43:41,752 - INFO - 127.0.0.1 - - [17/Jun/2025 11:43:41] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 11:44:12,066 - INFO - 127.0.0.1 - - [17/Jun/2025 11:44:12] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 11:44:41,750 - INFO - 127.0.0.1 - - [17/Jun/2025 11:44:41] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 11:45:12,068 - INFO - 127.0.0.1 - - [17/Jun/2025 11:45:12] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 11:45:42,068 - INFO - 127.0.0.1 - - [17/Jun/2025 11:45:42] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 11:46:11,752 - INFO - 127.0.0.1 - - [17/Jun/2025 11:46:11] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 11:46:42,066 - INFO - 127.0.0.1 - - [17/Jun/2025 11:46:42] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 11:47:11,750 - INFO - 127.0.0.1 - - [17/Jun/2025 11:47:11] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 11:47:42,067 - INFO - 127.0.0.1 - - [17/Jun/2025 11:47:42] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 11:48:12,069 - INFO - 127.0.0.1 - - [17/Jun/2025 11:48:12] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 11:48:42,069 - INFO - 127.0.0.1 - - [17/Jun/2025 11:48:42] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 11:49:11,752 - INFO - 127.0.0.1 - - [17/Jun/2025 11:49:11] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 11:49:42,065 - INFO - 127.0.0.1 - - [17/Jun/2025 11:49:42] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 11:50:11,753 - INFO - 127.0.0.1 - - [17/Jun/2025 11:50:11] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 11:50:42,056 - INFO - 127.0.0.1 - - [17/Jun/2025 11:50:42] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 11:51:12,067 - INFO - 127.0.0.1 - - [17/Jun/2025 11:51:12] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 11:51:42,069 - INFO - 127.0.0.1 - - [17/Jun/2025 11:51:42] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 11:52:12,172 - INFO - 127.0.0.1 - - [17/Jun/2025 11:52:12] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 11:52:41,864 - INFO - 127.0.0.1 - - [17/Jun/2025 11:52:41] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 11:53:21,169 - INFO - 127.0.0.1 - - [17/Jun/2025 11:53:21] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 11:54:21,172 - INFO - 127.0.0.1 - - [17/Jun/2025 11:54:21] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 11:55:21,172 - INFO - 127.0.0.1 - - [17/Jun/2025 11:55:21] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 11:56:21,169 - INFO - 127.0.0.1 - - [17/Jun/2025 11:56:21] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 11:57:21,160 - INFO - 127.0.0.1 - - [17/Jun/2025 11:57:21] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 11:58:21,169 - INFO - 127.0.0.1 - - [17/Jun/2025 11:58:21] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 11:59:21,178 - INFO - 127.0.0.1 - - [17/Jun/2025 11:59:21] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:00:21,162 - INFO - 127.0.0.1 - - [17/Jun/2025 12:00:21] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:01:21,165 - INFO - 127.0.0.1 - - [17/Jun/2025 12:01:21] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:02:21,165 - INFO - 127.0.0.1 - - [17/Jun/2025 12:02:21] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:03:20,856 - INFO - 127.0.0.1 - - [17/Jun/2025 12:03:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:04:21,174 - INFO - 127.0.0.1 - - [17/Jun/2025 12:04:21] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:05:21,182 - INFO - 127.0.0.1 - - [17/Jun/2025 12:05:21] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:06:21,166 - INFO - 127.0.0.1 - - [17/Jun/2025 12:06:21] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:07:21,165 - INFO - 127.0.0.1 - - [17/Jun/2025 12:07:21] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:08:21,161 - INFO - 127.0.0.1 - - [17/Jun/2025 12:08:21] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:09:21,183 - INFO - 127.0.0.1 - - [17/Jun/2025 12:09:21] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:10:21,176 - INFO - 127.0.0.1 - - [17/Jun/2025 12:10:21] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:11:21,175 - INFO - 127.0.0.1 - - [17/Jun/2025 12:11:21] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:12:21,168 - INFO - 127.0.0.1 - - [17/Jun/2025 12:12:21] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:13:21,169 - INFO - 127.0.0.1 - - [17/Jun/2025 12:13:21] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:14:21,176 - INFO - 127.0.0.1 - - [17/Jun/2025 12:14:21] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:15:21,177 - INFO - 127.0.0.1 - - [17/Jun/2025 12:15:21] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:16:21,179 - INFO - 127.0.0.1 - - [17/Jun/2025 12:16:21] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:17:21,168 - INFO - 127.0.0.1 - - [17/Jun/2025 12:17:21] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:18:21,174 - INFO - 127.0.0.1 - - [17/Jun/2025 12:18:21] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:19:21,170 - INFO - 127.0.0.1 - - [17/Jun/2025 12:19:21] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:20:21,169 - INFO - 127.0.0.1 - - [17/Jun/2025 12:20:21] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:21:21,164 - INFO - 127.0.0.1 - - [17/Jun/2025 12:21:21] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:22:21,166 - INFO - 127.0.0.1 - - [17/Jun/2025 12:22:21] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:23:21,164 - INFO - 127.0.0.1 - - [17/Jun/2025 12:23:21] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:24:21,170 - INFO - 127.0.0.1 - - [17/Jun/2025 12:24:21] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:31:01,227 - INFO - 127.0.0.1 - - [17/Jun/2025 12:31:01] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:31:11,991 - INFO - 127.0.0.1 - - [17/Jun/2025 12:31:11] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:31:12,601 - INFO - 127.0.0.1 - - [17/Jun/2025 12:31:12] "GET /rag/suggestions HTTP/1.1" 200 -
+2025-06-17 12:31:43,867 - INFO - 127.0.0.1 - - [17/Jun/2025 12:31:43] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:32:13,865 - INFO - 127.0.0.1 - - [17/Jun/2025 12:32:13] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:32:43,865 - INFO - 127.0.0.1 - - [17/Jun/2025 12:32:43] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:33:13,864 - INFO - 127.0.0.1 - - [17/Jun/2025 12:33:13] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:33:43,866 - INFO - 127.0.0.1 - - [17/Jun/2025 12:33:43] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:34:13,865 - INFO - 127.0.0.1 - - [17/Jun/2025 12:34:13] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:35:20,863 - INFO - 127.0.0.1 - - [17/Jun/2025 12:35:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:36:20,868 - INFO - 127.0.0.1 - - [17/Jun/2025 12:36:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:37:20,854 - INFO - 127.0.0.1 - - [17/Jun/2025 12:37:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:38:20,866 - INFO - 127.0.0.1 - - [17/Jun/2025 12:38:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:39:20,865 - INFO - 127.0.0.1 - - [17/Jun/2025 12:39:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:40:20,556 - INFO - 127.0.0.1 - - [17/Jun/2025 12:40:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:41:20,866 - INFO - 127.0.0.1 - - [17/Jun/2025 12:41:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:41:43,818 - INFO - 127.0.0.1 - - [17/Jun/2025 12:41:43] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:41:48,412 - INFO - 127.0.0.1 - - [17/Jun/2025 12:41:48] "OPTIONS /rag/query HTTP/1.1" 200 -
+2025-06-17 12:41:48,742 - INFO -    Query: 'teste'
+2025-06-17 12:41:48,940 - INFO - 127.0.0.1 - - [17/Jun/2025 12:41:48] "[35m[1mPOST /rag/query HTTP/1.1[0m" 500 -
+2025-06-17 12:42:12,952 - INFO - 127.0.0.1 - - [17/Jun/2025 12:42:12] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:42:43,851 - INFO - 127.0.0.1 - - [17/Jun/2025 12:42:43] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:43:08,416 - INFO - 127.0.0.1 - - [17/Jun/2025 12:43:08] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:43:08,728 - INFO - 127.0.0.1 - - [17/Jun/2025 12:43:08] "GET /rag/suggestions HTTP/1.1" 200 -
+2025-06-17 12:43:10,529 - INFO - 127.0.0.1 - - [17/Jun/2025 12:43:10] "OPTIONS /rag/query HTTP/1.1" 200 -
+2025-06-17 12:43:10,781 - INFO -    Query: 'Quais processos estão relacionados ao tema CÍVEL?'
+2025-06-17 12:43:10,832 - INFO - 127.0.0.1 - - [17/Jun/2025 12:43:10] "[35m[1mPOST /rag/query HTTP/1.1[0m" 500 -
+2025-06-17 12:43:39,860 - INFO - 127.0.0.1 - - [17/Jun/2025 12:43:39] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:44:09,867 - INFO - 127.0.0.1 - - [17/Jun/2025 12:44:09] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:44:39,867 - INFO - 127.0.0.1 - - [17/Jun/2025 12:44:39] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:45:09,847 - INFO - 127.0.0.1 - - [17/Jun/2025 12:45:09] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:45:39,867 - INFO - 127.0.0.1 - - [17/Jun/2025 12:45:39] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:46:09,872 - INFO - 127.0.0.1 - - [17/Jun/2025 12:46:09] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:46:39,965 - INFO - 127.0.0.1 - - [17/Jun/2025 12:46:39] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:46:42,135 - INFO - 127.0.0.1 - - [17/Jun/2025 12:46:42] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:46:42,518 - INFO - 127.0.0.1 - - [17/Jun/2025 12:46:42] "GET /rag/suggestions HTTP/1.1" 200 -
+2025-06-17 12:46:44,590 - INFO - 127.0.0.1 - - [17/Jun/2025 12:46:44] "OPTIONS /rag/query HTTP/1.1" 200 -
+2025-06-17 12:46:44,916 - INFO -    Query: 'oie'
+2025-06-17 12:46:45,031 - INFO - 127.0.0.1 - - [17/Jun/2025 12:46:45] "[35m[1mPOST /rag/query HTTP/1.1[0m" 500 -
+2025-06-17 12:47:13,859 - INFO - 127.0.0.1 - - [17/Jun/2025 12:47:13] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:47:43,860 - INFO - 127.0.0.1 - - [17/Jun/2025 12:47:43] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:48:13,880 - INFO - 127.0.0.1 - - [17/Jun/2025 12:48:13] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:48:43,852 - INFO - 127.0.0.1 - - [17/Jun/2025 12:48:43] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:48:47,546 - INFO - 127.0.0.1 - - [17/Jun/2025 12:48:47] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:48:47,798 - INFO - 127.0.0.1 - - [17/Jun/2025 12:48:47] "GET /rag/suggestions HTTP/1.1" 200 -
+2025-06-17 12:48:53,575 - INFO - 127.0.0.1 - - [17/Jun/2025 12:48:53] "OPTIONS /rag/query HTTP/1.1" 200 -
+2025-06-17 12:48:53,916 - INFO -    Query: 'oi!'
+2025-06-17 12:48:53,972 - INFO - 127.0.0.1 - - [17/Jun/2025 12:48:53] "[35m[1mPOST /rag/query HTTP/1.1[0m" 500 -
+2025-06-17 12:48:57,705 - INFO -  Sinal 2 recebido. Finalizando servidor graciosamente...
+2025-06-17 12:48:57,705 - INFO -  Servidor com PID 25324 finalizado
+2025-06-17 12:49:53,734 - INFO - Servidor Flask iniciando com PID: 4028
+2025-06-17 12:49:53,735 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-17 12:49:53,735 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-17 12:49:53,735 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-17 12:49:53,764 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.26:5000
+2025-06-17 12:49:53,765 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-17 12:50:18,150 - INFO - 127.0.0.1 - - [17/Jun/2025 12:50:18] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:50:19,266 - INFO - 127.0.0.1 - - [17/Jun/2025 12:50:19] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:50:19,663 - INFO - 127.0.0.1 - - [17/Jun/2025 12:50:19] "GET /rag/suggestions HTTP/1.1" 200 -
+2025-06-17 12:50:26,509 - INFO - 127.0.0.1 - - [17/Jun/2025 12:50:26] "OPTIONS /rag/query HTTP/1.1" 200 -
+2025-06-17 12:50:26,831 - INFO -    Query: 'oie'
+2025-06-17 12:50:26,883 - INFO - 127.0.0.1 - - [17/Jun/2025 12:50:26] "[35m[1mPOST /rag/query HTTP/1.1[0m" 500 -
+2025-06-17 12:50:50,847 - INFO - 127.0.0.1 - - [17/Jun/2025 12:50:50] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:51:13,595 - INFO - 127.0.0.1 - - [17/Jun/2025 12:51:13] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:51:13,838 - INFO - 127.0.0.1 - - [17/Jun/2025 12:51:13] "GET /rag/suggestions HTTP/1.1" 200 -
+2025-06-17 12:51:15,661 - INFO - 127.0.0.1 - - [17/Jun/2025 12:51:15] "OPTIONS /rag/query HTTP/1.1" 200 -
+2025-06-17 12:51:15,982 - INFO -    Query: 'Quais processos estão relacionados ao tema TRABALH...'
+2025-06-17 12:51:16,047 - INFO - 127.0.0.1 - - [17/Jun/2025 12:51:16] "[35m[1mPOST /rag/query HTTP/1.1[0m" 500 -
+2025-06-17 12:51:22,787 - INFO -  Sinal 2 recebido. Finalizando servidor graciosamente...
+2025-06-17 12:51:22,787 - INFO -  Servidor com PID 4028 finalizado
+2025-06-17 12:52:01,860 - INFO - Servidor Flask iniciando com PID: 6240
+2025-06-17 12:52:01,860 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-17 12:52:01,861 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-17 12:52:01,861 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-17 12:52:01,884 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.26:5000
+2025-06-17 12:52:01,885 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-17 12:52:04,342 - INFO - 127.0.0.1 - - [17/Jun/2025 12:52:04] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:52:04,620 - INFO - 127.0.0.1 - - [17/Jun/2025 12:52:04] "GET /rag/suggestions HTTP/1.1" 200 -
+2025-06-17 12:52:06,611 - INFO - 127.0.0.1 - - [17/Jun/2025 12:52:06] "OPTIONS /rag/query HTTP/1.1" 200 -
+2025-06-17 12:52:06,866 - INFO -    Query: 'Analise os processos com status Aberto'
+2025-06-17 12:52:06,913 - INFO - 127.0.0.1 - - [17/Jun/2025 12:52:06] "POST /rag/query HTTP/1.1" 200 -
+2025-06-17 12:52:15,638 - INFO - 127.0.0.1 - - [17/Jun/2025 12:52:15] "OPTIONS /rag/query HTTP/1.1" 200 -
+2025-06-17 12:52:15,882 - INFO -    Query: 'e quais estão fechados?'
+2025-06-17 12:52:15,925 - INFO - 127.0.0.1 - - [17/Jun/2025 12:52:15] "POST /rag/query HTTP/1.1" 200 -
+2025-06-17 12:52:34,965 - INFO - 127.0.0.1 - - [17/Jun/2025 12:52:34] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:52:40,011 - INFO - 127.0.0.1 - - [17/Jun/2025 12:52:40] "OPTIONS /rag/query HTTP/1.1" 200 -
+2025-06-17 12:52:40,279 - INFO -    Query: 'liste todos os processos'
+2025-06-17 12:52:40,320 - INFO - 127.0.0.1 - - [17/Jun/2025 12:52:40] "POST /rag/query HTTP/1.1" 200 -
+2025-06-17 12:53:05,849 - INFO - 127.0.0.1 - - [17/Jun/2025 12:53:05] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:53:35,861 - INFO - 127.0.0.1 - - [17/Jun/2025 12:53:35] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:54:05,864 - INFO - 127.0.0.1 - - [17/Jun/2025 12:54:05] "GET /rag/status HTTP/1.1" 200 -
+2025-06-17 12:54:34,472 - INFO -  Sinal 2 recebido. Finalizando servidor graciosamente...
+2025-06-17 12:54:34,472 - INFO -  Servidor com PID 6240 finalizado
+2025-06-18 08:29:59,906 - INFO - Servidor Flask iniciando com PID: 9720
+2025-06-18 08:29:59,907 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 08:29:59,907 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-18 08:29:59,907 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-18 08:29:59,936 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.26:5000
+2025-06-18 08:29:59,937 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-18 08:37:17,414 - INFO -  Solicitação GET /triagem recebida
+2025-06-18 08:37:17,727 - INFO -  10 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 08:37:17,731 - INFO -  Retornando 10 processos
+2025-06-18 08:37:17,755 - INFO - 127.0.0.1 - - [18/Jun/2025 08:37:17] "GET /triagem HTTP/1.1" 200 -
+2025-06-18 08:37:45,028 - INFO - 127.0.0.1 - - [18/Jun/2025 08:37:45] "OPTIONS /triagem/1034332-50.2024.8.11.0002 HTTP/1.1" 200 -
+2025-06-18 08:37:45,394 - INFO -  10 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 08:37:45,395 - INFO -  Arquivo markdown removido: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1034332-50.2024.8.11.0002.md
+2025-06-18 08:37:45,396 - INFO -  Processo 1034332-50.2024.8.11.0002 excluído com sucesso
+2025-06-18 08:37:45,396 - INFO - 127.0.0.1 - - [18/Jun/2025 08:37:45] "DELETE /triagem/1034332-50.2024.8.11.0002 HTTP/1.1" 200 -
+2025-06-18 08:37:45,407 - INFO -  Solicitação GET /triagem recebida
+2025-06-18 08:37:45,408 - INFO -  9 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 08:37:45,408 - INFO -  Retornando 9 processos
+2025-06-18 08:37:45,408 - INFO - 127.0.0.1 - - [18/Jun/2025 08:37:45] "GET /triagem HTTP/1.1" 200 -
+2025-06-18 08:37:49,157 - INFO - 127.0.0.1 - - [18/Jun/2025 08:37:49] "OPTIONS /triagem/1028689-11.2024.8.11.0003 HTTP/1.1" 200 -
+2025-06-18 08:37:49,407 - INFO -  9 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 08:37:49,407 - INFO -  Arquivo markdown removido: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1028689-11.2024.8.11.0003.md
+2025-06-18 08:37:49,407 - INFO -  Processo 1028689-11.2024.8.11.0003 excluído com sucesso
+2025-06-18 08:37:49,407 - INFO - 127.0.0.1 - - [18/Jun/2025 08:37:49] "DELETE /triagem/1028689-11.2024.8.11.0003 HTTP/1.1" 200 -
+2025-06-18 08:37:49,474 - INFO -  Solicitação GET /triagem recebida
+2025-06-18 08:37:49,478 - INFO -  8 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 08:37:49,479 - INFO -  Retornando 8 processos
+2025-06-18 08:37:49,479 - INFO - 127.0.0.1 - - [18/Jun/2025 08:37:49] "GET /triagem HTTP/1.1" 200 -
+2025-06-18 08:37:51,487 - INFO - 127.0.0.1 - - [18/Jun/2025 08:37:51] "OPTIONS /triagem/1022030-20.2023.8.11.0003 HTTP/1.1" 200 -
+2025-06-18 08:37:51,813 - INFO -  8 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 08:37:51,815 - INFO -  Arquivo markdown removido: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1022030-20.2023.8.11.0003.md
+2025-06-18 08:37:51,815 - INFO -  Processo 1022030-20.2023.8.11.0003 excluído com sucesso
+2025-06-18 08:37:51,815 - INFO - 127.0.0.1 - - [18/Jun/2025 08:37:51] "DELETE /triagem/1022030-20.2023.8.11.0003 HTTP/1.1" 200 -
+2025-06-18 08:37:52,072 - INFO -  Solicitação GET /triagem recebida
+2025-06-18 08:37:52,076 - INFO -  7 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 08:37:52,076 - INFO -  Retornando 7 processos
+2025-06-18 08:37:52,076 - INFO - 127.0.0.1 - - [18/Jun/2025 08:37:52] "GET /triagem HTTP/1.1" 200 -
+2025-06-18 08:37:57,774 - INFO - 127.0.0.1 - - [18/Jun/2025 08:37:57] "OPTIONS /triagem/1021692-10.2023.8.11.0015 HTTP/1.1" 200 -
+2025-06-18 08:37:58,099 - INFO -  7 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 08:37:58,101 - INFO -  Arquivo markdown removido: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1021692-10.2023.8.11.0015.md
+2025-06-18 08:37:58,101 - INFO -  Processo 1021692-10.2023.8.11.0015 excluído com sucesso
+2025-06-18 08:37:58,101 - INFO - 127.0.0.1 - - [18/Jun/2025 08:37:58] "DELETE /triagem/1021692-10.2023.8.11.0015 HTTP/1.1" 200 -
+2025-06-18 08:37:58,356 - INFO -  Solicitação GET /triagem recebida
+2025-06-18 08:37:58,360 - INFO -  6 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 08:37:58,361 - INFO -  Retornando 6 processos
+2025-06-18 08:37:58,361 - INFO - 127.0.0.1 - - [18/Jun/2025 08:37:58] "GET /triagem HTTP/1.1" 200 -
+2025-06-18 08:38:00,236 - INFO - 127.0.0.1 - - [18/Jun/2025 08:38:00] "OPTIONS /triagem/1020930-57.2024.8.11.0015 HTTP/1.1" 200 -
+2025-06-18 08:38:00,555 - INFO -  6 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 08:38:00,555 - INFO -  Arquivo markdown removido: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1020930-57.2024.8.11.0015.md
+2025-06-18 08:38:00,555 - INFO -  Processo 1020930-57.2024.8.11.0015 excluído com sucesso
+2025-06-18 08:38:00,555 - INFO - 127.0.0.1 - - [18/Jun/2025 08:38:00] "DELETE /triagem/1020930-57.2024.8.11.0015 HTTP/1.1" 200 -
+2025-06-18 08:38:00,807 - INFO -  Solicitação GET /triagem recebida
+2025-06-18 08:38:00,810 - INFO -  5 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 08:38:00,811 - INFO -  Retornando 5 processos
+2025-06-18 08:38:00,811 - INFO - 127.0.0.1 - - [18/Jun/2025 08:38:00] "GET /triagem HTTP/1.1" 200 -
+2025-06-18 08:38:03,170 - INFO - 127.0.0.1 - - [18/Jun/2025 08:38:03] "OPTIONS /triagem/1019150-82.2024.8.11.0015 HTTP/1.1" 200 -
+2025-06-18 08:38:03,522 - INFO -  5 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 08:38:03,522 - INFO -  Arquivo markdown removido: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1019150-82.2024.8.11.0015.md
+2025-06-18 08:38:03,522 - INFO -  Processo 1019150-82.2024.8.11.0015 excluído com sucesso
+2025-06-18 08:38:03,522 - INFO - 127.0.0.1 - - [18/Jun/2025 08:38:03] "DELETE /triagem/1019150-82.2024.8.11.0015 HTTP/1.1" 200 -
+2025-06-18 08:38:03,746 - INFO -  Solicitação GET /triagem recebida
+2025-06-18 08:38:03,750 - INFO -  4 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 08:38:03,750 - INFO -  Retornando 4 processos
+2025-06-18 08:38:03,751 - INFO - 127.0.0.1 - - [18/Jun/2025 08:38:03] "GET /triagem HTTP/1.1" 200 -
+2025-06-18 08:38:05,391 - INFO - 127.0.0.1 - - [18/Jun/2025 08:38:05] "OPTIONS /triagem/1017432-89.2024.8.11.0002 HTTP/1.1" 200 -
+2025-06-18 08:38:05,714 - INFO -  4 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 08:38:05,715 - INFO -  Arquivo markdown removido: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1017432-89.2024.8.11.0002.md
+2025-06-18 08:38:05,715 - INFO -  Processo 1017432-89.2024.8.11.0002 excluído com sucesso
+2025-06-18 08:38:05,715 - INFO - 127.0.0.1 - - [18/Jun/2025 08:38:05] "DELETE /triagem/1017432-89.2024.8.11.0002 HTTP/1.1" 200 -
+2025-06-18 08:38:05,974 - INFO -  Solicitação GET /triagem recebida
+2025-06-18 08:38:05,977 - INFO -  3 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 08:38:05,977 - INFO -  Retornando 3 processos
+2025-06-18 08:38:05,978 - INFO - 127.0.0.1 - - [18/Jun/2025 08:38:05] "GET /triagem HTTP/1.1" 200 -
+2025-06-18 08:38:07,942 - INFO - 127.0.0.1 - - [18/Jun/2025 08:38:07] "OPTIONS /triagem/1005767-48.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-18 08:38:08,255 - INFO -  3 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 08:38:08,255 - INFO -  Arquivo markdown removido: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1005767-48.2025.8.11.0000.md
+2025-06-18 08:38:08,255 - INFO -  Processo 1005767-48.2025.8.11.0000 excluído com sucesso
+2025-06-18 08:38:08,255 - INFO - 127.0.0.1 - - [18/Jun/2025 08:38:08] "DELETE /triagem/1005767-48.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-18 08:38:08,506 - INFO -  Solicitação GET /triagem recebida
+2025-06-18 08:38:08,508 - INFO -  2 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 08:38:08,509 - INFO -  Retornando 2 processos
+2025-06-18 08:38:08,509 - INFO - 127.0.0.1 - - [18/Jun/2025 08:38:08] "GET /triagem HTTP/1.1" 200 -
+2025-06-18 08:38:11,452 - INFO - 127.0.0.1 - - [18/Jun/2025 08:38:11] "OPTIONS /triagem/1001682-16.2021.8.11.0014 HTTP/1.1" 200 -
+2025-06-18 08:38:11,779 - INFO -  2 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 08:38:11,780 - INFO -  Arquivo markdown removido: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1001682-16.2021.8.11.0014.md
+2025-06-18 08:38:11,780 - INFO -  Processo 1001682-16.2021.8.11.0014 excluído com sucesso
+2025-06-18 08:38:11,780 - INFO - 127.0.0.1 - - [18/Jun/2025 08:38:11] "DELETE /triagem/1001682-16.2021.8.11.0014 HTTP/1.1" 200 -
+2025-06-18 08:38:12,039 - INFO -  Solicitação GET /triagem recebida
+2025-06-18 08:38:12,044 - INFO -  1 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 08:38:12,044 - INFO -  Retornando 1 processos
+2025-06-18 08:38:12,045 - INFO - 127.0.0.1 - - [18/Jun/2025 08:38:12] "GET /triagem HTTP/1.1" 200 -
+2025-06-18 08:38:13,816 - INFO - 127.0.0.1 - - [18/Jun/2025 08:38:13] "OPTIONS /triagem/0002008-54.1994.8.11.0041 HTTP/1.1" 200 -
+2025-06-18 08:38:14,129 - INFO -  1 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 08:38:14,131 - INFO -  Arquivo markdown removido: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\0002008-54.1994.8.11.0041.md
+2025-06-18 08:38:14,131 - INFO -  Processo 0002008-54.1994.8.11.0041 excluído com sucesso
+2025-06-18 08:38:14,131 - INFO - 127.0.0.1 - - [18/Jun/2025 08:38:14] "DELETE /triagem/0002008-54.1994.8.11.0041 HTTP/1.1" 200 -
+2025-06-18 08:38:14,377 - INFO -  Solicitação GET /triagem recebida
+2025-06-18 08:38:14,381 - INFO -  0 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 08:38:14,382 - INFO -  Retornando 0 processos
+2025-06-18 08:38:14,382 - INFO - 127.0.0.1 - - [18/Jun/2025 08:38:14] "GET /triagem HTTP/1.1" 200 -
+2025-06-18 08:38:14,956 - INFO - 127.0.0.1 - - [18/Jun/2025 08:38:14] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 08:38:14,958 - INFO - 127.0.0.1 - - [18/Jun/2025 08:38:14] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-18 08:38:14,967 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 08:38:14,970 - INFO - 127.0.0.1 - - [18/Jun/2025 08:38:14] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 08:38:14,975 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 08:38:15,285 - INFO - 127.0.0.1 - - [18/Jun/2025 08:38:15] "[35m[1mGET /rag/suggestions HTTP/1.1[0m" 503 -
+2025-06-18 08:38:19,185 - INFO -  Solicitação GET /triagem recebida
+2025-06-18 08:38:19,188 - INFO -  0 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 08:38:19,188 - INFO -  Retornando 0 processos
+2025-06-18 08:38:19,189 - INFO - 127.0.0.1 - - [18/Jun/2025 08:38:19] "GET /triagem HTTP/1.1" 200 -
+2025-06-18 08:38:20,791 - INFO -  Solicitação GET /triagem recebida
+2025-06-18 08:38:20,793 - INFO -  0 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 08:38:20,794 - INFO -  Retornando 0 processos
+2025-06-18 08:38:20,795 - INFO - 127.0.0.1 - - [18/Jun/2025 08:38:20] "GET /triagem HTTP/1.1" 200 -
+2025-06-18 08:38:22,460 - INFO - 127.0.0.1 - - [18/Jun/2025 08:38:22] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-18 08:38:22,472 - INFO - 127.0.0.1 - - [18/Jun/2025 08:38:22] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 08:38:22,472 - INFO - 127.0.0.1 - - [18/Jun/2025 08:38:22] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 08:38:22,477 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 08:38:22,477 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 08:38:22,773 - INFO - 127.0.0.1 - - [18/Jun/2025 08:38:22] "[35m[1mGET /rag/suggestions HTTP/1.1[0m" 503 -
+2025-06-18 08:38:46,499 - INFO - 127.0.0.1 - - [18/Jun/2025 08:38:46] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-18 08:38:53,181 - INFO - 127.0.0.1 - - [18/Jun/2025 08:38:53] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-18 08:39:16,500 - INFO - 127.0.0.1 - - [18/Jun/2025 08:39:16] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-18 08:39:22,800 - INFO - 127.0.0.1 - - [18/Jun/2025 08:39:22] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-18 08:39:26,882 - INFO -  Sinal 2 recebido. Finalizando servidor graciosamente...
+2025-06-18 08:39:26,882 - INFO -  Servidor com PID 9720 finalizado
+2025-06-18 08:42:29,193 - INFO - Servidor Flask iniciando com PID: 292
+2025-06-18 08:42:29,193 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 08:42:29,193 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-18 08:42:29,193 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-18 08:42:29,213 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.26:5000
+2025-06-18 08:42:29,214 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-18 08:42:32,458 - INFO - 127.0.0.1 - - [18/Jun/2025 08:42:32] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 08:42:32,459 - INFO - 127.0.0.1 - - [18/Jun/2025 08:42:32] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 08:42:32,469 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 08:42:32,470 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 08:42:33,461 - INFO -  Solicitação GET /triagem recebida
+2025-06-18 08:42:33,477 - INFO -  0 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 08:42:33,477 - INFO -  Retornando 0 processos
+2025-06-18 08:42:33,478 - INFO - 127.0.0.1 - - [18/Jun/2025 08:42:33] "GET /triagem HTTP/1.1" 200 -
+2025-06-18 08:43:17,310 - INFO - 127.0.0.1 - - [18/Jun/2025 08:43:17] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-18 08:43:17,572 - INFO - 127.0.0.1 - - [18/Jun/2025 08:43:17] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 202 -
+2025-06-18 08:43:17,597 - INFO - received event "start_listening" from MHs057NH2hH5TqUvAAAH [/]
+2025-06-18 08:43:17,599 - INFO - emitting event "progress_update" to MHs057NH2hH5TqUvAAAH [/]
+2025-06-18 08:43:18,580 - INFO - emitting event "progress_update" to MHs057NH2hH5TqUvAAAH [/]
+2025-06-18 08:43:19,082 - INFO - emitting event "progress_update" to MHs057NH2hH5TqUvAAAH [/]
+2025-06-18 08:43:20,089 - INFO - emitting event "progress_update" to MHs057NH2hH5TqUvAAAH [/]
+2025-06-18 08:43:20,597 - INFO - emitting event "progress_update" to MHs057NH2hH5TqUvAAAH [/]
+2025-06-18 08:43:21,398 - INFO - Markdown salvo: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\0002008-54.1994.8.11.0041.md
+2025-06-18 08:43:21,398 - INFO - emitting event "progress_update" to MHs057NH2hH5TqUvAAAH [/]
+2025-06-18 08:43:21,901 - INFO - emitting event "progress_update" to MHs057NH2hH5TqUvAAAH [/]
+2025-06-18 08:43:23,274 - INFO - emitting event "progress_update" to MHs057NH2hH5TqUvAAAH [/]
+2025-06-18 08:43:23,778 - INFO - emitting event "progress_update" to MHs057NH2hH5TqUvAAAH [/]
+2025-06-18 08:43:26,096 - INFO -  Solicitação GET /triagem recebida
+2025-06-18 08:43:26,096 - INFO -  1 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 08:43:26,096 - INFO -  Retornando 1 processos
+2025-06-18 08:43:26,096 - INFO - 127.0.0.1 - - [18/Jun/2025 08:43:26] "GET /triagem HTTP/1.1" 200 -
+2025-06-18 08:44:34,730 - INFO - 127.0.0.1 - - [18/Jun/2025 08:44:34] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-18 08:44:34,989 - INFO - 127.0.0.1 - - [18/Jun/2025 08:44:34] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 202 -
+2025-06-18 08:44:35,012 - INFO - received event "start_listening" from MHs057NH2hH5TqUvAAAH [/]
+2025-06-18 08:44:35,013 - INFO - emitting event "progress_update" to MHs057NH2hH5TqUvAAAH [/]
+2025-06-18 08:44:35,998 - INFO - emitting event "progress_update" to MHs057NH2hH5TqUvAAAH [/]
+2025-06-18 08:44:36,499 - INFO - emitting event "progress_update" to MHs057NH2hH5TqUvAAAH [/]
+2025-06-18 08:44:37,506 - INFO - emitting event "progress_update" to MHs057NH2hH5TqUvAAAH [/]
+2025-06-18 08:44:38,010 - INFO - emitting event "progress_update" to MHs057NH2hH5TqUvAAAH [/]
+2025-06-18 08:44:38,812 - INFO - Markdown salvo: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1001682-16.2021.8.11.0014.md
+2025-06-18 08:44:38,812 - INFO - emitting event "progress_update" to MHs057NH2hH5TqUvAAAH [/]
+2025-06-18 08:44:39,315 - INFO - emitting event "progress_update" to MHs057NH2hH5TqUvAAAH [/]
+2025-06-18 08:44:40,156 - INFO - emitting event "progress_update" to MHs057NH2hH5TqUvAAAH [/]
+2025-06-18 08:44:40,672 - INFO - emitting event "progress_update" to MHs057NH2hH5TqUvAAAH [/]
+2025-06-18 08:44:42,995 - INFO -  Solicitação GET /triagem recebida
+2025-06-18 08:44:42,995 - INFO -  2 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 08:44:42,995 - INFO -  Retornando 2 processos
+2025-06-18 08:44:42,995 - INFO - 127.0.0.1 - - [18/Jun/2025 08:44:42] "GET /triagem HTTP/1.1" 200 -
+2025-06-18 08:45:36,358 - INFO - 127.0.0.1 - - [18/Jun/2025 08:45:36] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-18 08:45:36,946 - INFO - 127.0.0.1 - - [18/Jun/2025 08:45:36] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 202 -
+2025-06-18 08:45:36,986 - INFO - received event "start_listening" from MHs057NH2hH5TqUvAAAH [/]
+2025-06-18 08:45:36,988 - INFO - emitting event "progress_update" to MHs057NH2hH5TqUvAAAH [/]
+2025-06-18 08:45:37,961 - INFO - emitting event "progress_update" to MHs057NH2hH5TqUvAAAH [/]
+2025-06-18 08:45:38,462 - INFO - emitting event "progress_update" to MHs057NH2hH5TqUvAAAH [/]
+2025-06-18 08:45:39,689 - INFO - emitting event "progress_update" to MHs057NH2hH5TqUvAAAH [/]
+2025-06-18 08:45:40,204 - INFO - emitting event "progress_update" to MHs057NH2hH5TqUvAAAH [/]
+2025-06-18 08:45:41,007 - INFO - Markdown salvo: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\1005767-48.2025.8.11.0000.md
+2025-06-18 08:45:41,007 - INFO - emitting event "progress_update" to MHs057NH2hH5TqUvAAAH [/]
+2025-06-18 08:45:41,539 - INFO - emitting event "progress_update" to MHs057NH2hH5TqUvAAAH [/]
+2025-06-18 08:46:46,222 - INFO - emitting event "progress_update" to MHs057NH2hH5TqUvAAAH [/]
+2025-06-18 08:46:46,726 - INFO - emitting event "progress_update" to MHs057NH2hH5TqUvAAAH [/]
+2025-06-18 08:46:49,056 - INFO -  Solicitação GET /triagem recebida
+2025-06-18 08:46:49,056 - INFO -  3 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 08:46:49,056 - INFO -  Retornando 3 processos
+2025-06-18 08:46:49,056 - INFO - 127.0.0.1 - - [18/Jun/2025 08:46:49] "GET /triagem HTTP/1.1" 200 -
+2025-06-18 08:47:47,700 - INFO - 127.0.0.1 - - [18/Jun/2025 08:47:47] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 08:47:47,701 - INFO - 127.0.0.1 - - [18/Jun/2025 08:47:47] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 08:47:47,708 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 08:47:47,709 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 08:48:23,507 - INFO -  Solicitação GET /triagem recebida
+2025-06-18 08:48:23,514 - INFO -  3 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 08:48:23,515 - INFO -  Retornando 3 processos
+2025-06-18 08:48:23,516 - INFO - 127.0.0.1 - - [18/Jun/2025 08:48:23] "GET /triagem HTTP/1.1" 200 -
+2025-06-18 08:49:46,410 - INFO - 127.0.0.1 - - [18/Jun/2025 08:49:46] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 08:49:46,410 - INFO - 127.0.0.1 - - [18/Jun/2025 08:49:46] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 08:49:46,418 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 08:49:46,418 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 08:50:06,383 - INFO - 127.0.0.1 - - [18/Jun/2025 08:50:06] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 08:50:06,383 - INFO - 127.0.0.1 - - [18/Jun/2025 08:50:06] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 08:50:06,388 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 08:50:06,388 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 08:50:54,174 - INFO - 127.0.0.1 - - [18/Jun/2025 08:50:54] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 08:50:54,174 - INFO - 127.0.0.1 - - [18/Jun/2025 08:50:54] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 08:50:54,180 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 08:50:54,180 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 08:50:54,473 - INFO -  Solicitação GET /triagem recebida
+2025-06-18 08:50:54,489 - INFO -  3 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 08:50:54,489 - INFO -  Retornando 3 processos
+2025-06-18 08:50:54,489 - INFO - 127.0.0.1 - - [18/Jun/2025 08:50:54] "GET /triagem HTTP/1.1" 200 -
+2025-06-18 08:51:04,954 - INFO - 127.0.0.1 - - [18/Jun/2025 08:51:04] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 08:51:04,954 - INFO - 127.0.0.1 - - [18/Jun/2025 08:51:04] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 08:51:04,954 - INFO - 127.0.0.1 - - [18/Jun/2025 08:51:04] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 08:51:04,956 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 08:51:04,956 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 08:51:04,956 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 08:51:12,018 - INFO - 127.0.0.1 - - [18/Jun/2025 08:51:12] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 08:51:12,018 - INFO - 127.0.0.1 - - [18/Jun/2025 08:51:12] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 08:51:12,019 - INFO - 127.0.0.1 - - [18/Jun/2025 08:51:12] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 08:51:12,024 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 08:51:12,024 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 08:51:12,025 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 08:51:27,428 - INFO - 127.0.0.1 - - [18/Jun/2025 08:51:27] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 08:51:27,428 - INFO - 127.0.0.1 - - [18/Jun/2025 08:51:27] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 08:51:27,428 - INFO - 127.0.0.1 - - [18/Jun/2025 08:51:27] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 08:51:27,433 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 08:51:27,433 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 08:51:27,433 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 08:51:57,537 - INFO -  Solicitação GET /triagem/1001682-16.2021.8.11.0014/dat recebida
+2025-06-18 08:51:57,538 - INFO - Arquivo DAT retornado: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat\1001682-16.2021.8.11.0014.dat
+2025-06-18 08:51:57,539 - INFO - 127.0.0.1 - - [18/Jun/2025 08:51:57] "GET /triagem/1001682-16.2021.8.11.0014/dat HTTP/1.1" 200 -
+2025-06-18 08:52:02,112 - INFO -  Solicitação GET /triagem/1005767-48.2025.8.11.0000/dat recebida
+2025-06-18 08:52:02,155 - INFO - Arquivo DAT retornado: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat\1005767-48.2025.8.11.0000.dat
+2025-06-18 08:52:02,277 - INFO - 127.0.0.1 - - [18/Jun/2025 08:52:02] "GET /triagem/1005767-48.2025.8.11.0000/dat HTTP/1.1" 200 -
+2025-06-18 08:53:15,285 - INFO - 127.0.0.1 - - [18/Jun/2025 08:53:15] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 08:53:15,286 - INFO - 127.0.0.1 - - [18/Jun/2025 08:53:15] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 08:53:15,288 - INFO - 127.0.0.1 - - [18/Jun/2025 08:53:15] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 08:53:15,297 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 08:53:15,297 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 08:53:15,297 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 08:53:15,993 - INFO -  Solicitação GET /triagem recebida
+2025-06-18 08:53:16,002 - INFO -  3 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 08:53:16,003 - INFO -  Retornando 3 processos
+2025-06-18 08:53:16,004 - INFO - 127.0.0.1 - - [18/Jun/2025 08:53:16] "GET /triagem HTTP/1.1" 200 -
+2025-06-18 08:53:18,405 - INFO - 127.0.0.1 - - [18/Jun/2025 08:53:18] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 08:53:18,406 - INFO - 127.0.0.1 - - [18/Jun/2025 08:53:18] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 08:53:18,410 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 08:53:18,410 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 08:53:18,743 - INFO - 127.0.0.1 - - [18/Jun/2025 08:53:18] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-18 08:53:18,967 - INFO - 127.0.0.1 - - [18/Jun/2025 08:53:18] "[35m[1mGET /rag/suggestions HTTP/1.1[0m" 503 -
+2025-06-18 08:53:32,171 - INFO -  Sinal 2 recebido. Finalizando servidor graciosamente...
+2025-06-18 08:53:32,172 - INFO -  Servidor com PID 292 finalizado
+2025-06-18 08:53:45,613 - INFO - Servidor Flask iniciando com PID: 1644
+2025-06-18 08:53:45,613 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 08:53:45,613 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-18 08:53:45,613 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-18 08:53:45,635 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.26:5000
+2025-06-18 08:53:45,635 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-18 08:53:49,306 - INFO - 127.0.0.1 - - [18/Jun/2025 08:53:49] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-18 08:53:54,919 - INFO - 127.0.0.1 - - [18/Jun/2025 08:53:54] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-18 08:53:55,284 - INFO - 127.0.0.1 - - [18/Jun/2025 08:53:55] "[35m[1mGET /rag/suggestions HTTP/1.1[0m" 503 -
+2025-06-18 08:54:00,072 - INFO -  Sinal 2 recebido. Finalizando servidor graciosamente...
+2025-06-18 08:54:00,072 - INFO -  Servidor com PID 1644 finalizado
+2025-06-18 09:26:50,535 - INFO - Servidor Flask iniciando com PID: 5244
+2025-06-18 09:26:50,536 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 09:26:50,536 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-18 09:26:50,536 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-18 09:26:50,561 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.26:5000
+2025-06-18 09:26:50,562 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-18 09:26:56,752 - INFO - 127.0.0.1 - - [18/Jun/2025 09:26:56] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:26:57,096 - INFO - 127.0.0.1 - - [18/Jun/2025 09:26:57] "GET /rag/suggestions HTTP/1.1" 200 -
+2025-06-18 09:27:10,159 - INFO - 127.0.0.1 - - [18/Jun/2025 09:27:10] "OPTIONS /rag/query HTTP/1.1" 200 -
+2025-06-18 09:27:10,414 - INFO -    Query: 'Bom dia'
+2025-06-18 09:27:10,462 - INFO - 127.0.0.1 - - [18/Jun/2025 09:27:10] "POST /rag/query HTTP/1.1" 200 -
+2025-06-18 09:27:27,538 - INFO - 127.0.0.1 - - [18/Jun/2025 09:27:27] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:27:57,570 - INFO - 127.0.0.1 - - [18/Jun/2025 09:27:57] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:28:27,568 - INFO - 127.0.0.1 - - [18/Jun/2025 09:28:27] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:28:57,572 - INFO - 127.0.0.1 - - [18/Jun/2025 09:28:57] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:29:27,571 - INFO - 127.0.0.1 - - [18/Jun/2025 09:29:27] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:29:57,557 - INFO - 127.0.0.1 - - [18/Jun/2025 09:29:57] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:30:27,554 - INFO - 127.0.0.1 - - [18/Jun/2025 09:30:27] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:30:57,571 - INFO - 127.0.0.1 - - [18/Jun/2025 09:30:57] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:31:27,563 - INFO - 127.0.0.1 - - [18/Jun/2025 09:31:27] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:31:57,563 - INFO - 127.0.0.1 - - [18/Jun/2025 09:31:57] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:32:27,553 - INFO - 127.0.0.1 - - [18/Jun/2025 09:32:27] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:32:57,563 - INFO - 127.0.0.1 - - [18/Jun/2025 09:32:57] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:33:27,560 - INFO - 127.0.0.1 - - [18/Jun/2025 09:33:27] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:33:57,552 - INFO - 127.0.0.1 - - [18/Jun/2025 09:33:57] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:34:27,243 - INFO - 127.0.0.1 - - [18/Jun/2025 09:34:27] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:34:57,569 - INFO - 127.0.0.1 - - [18/Jun/2025 09:34:57] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:35:27,553 - INFO - 127.0.0.1 - - [18/Jun/2025 09:35:27] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:35:57,544 - INFO - 127.0.0.1 - - [18/Jun/2025 09:35:57] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:36:27,554 - INFO - 127.0.0.1 - - [18/Jun/2025 09:36:27] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:36:57,544 - INFO - 127.0.0.1 - - [18/Jun/2025 09:36:57] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:37:27,589 - INFO - 127.0.0.1 - - [18/Jun/2025 09:37:27] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:37:57,556 - INFO - 127.0.0.1 - - [18/Jun/2025 09:37:57] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:38:27,550 - INFO - 127.0.0.1 - - [18/Jun/2025 09:38:27] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:38:57,588 - INFO - 127.0.0.1 - - [18/Jun/2025 09:38:57] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:39:27,554 - INFO - 127.0.0.1 - - [18/Jun/2025 09:39:27] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:39:57,555 - INFO - 127.0.0.1 - - [18/Jun/2025 09:39:57] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:40:27,553 - INFO - 127.0.0.1 - - [18/Jun/2025 09:40:27] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:40:51,561 - INFO -  Sinal 2 recebido. Finalizando servidor graciosamente...
+2025-06-18 09:40:51,561 - INFO -  Servidor com PID 5244 finalizado
+2025-06-18 09:41:12,235 - INFO - Servidor Flask iniciando com PID: 4116
+2025-06-18 09:41:12,235 - INFO - PATH_TRIAGEM: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 09:41:12,235 - INFO -  PASTA_DESTINO: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial
+2025-06-18 09:41:12,235 - INFO -  PASTA_DAT: C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\dat
+2025-06-18 09:41:12,260 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.26:5000
+2025-06-18 09:41:12,261 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-18 09:41:12,298 - INFO - 127.0.0.1 - - [18/Jun/2025 09:41:12] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:41:12,524 - INFO - 127.0.0.1 - - [18/Jun/2025 09:41:12] "GET /rag/suggestions HTTP/1.1" 200 -
+2025-06-18 09:41:42,877 - INFO - 127.0.0.1 - - [18/Jun/2025 09:41:42] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:42:12,869 - INFO - 127.0.0.1 - - [18/Jun/2025 09:42:12] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:42:31,495 - INFO -  Solicitação GET /triagem recebida
+2025-06-18 09:42:31,528 - INFO -  3 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 09:42:31,528 - INFO -  Retornando 3 processos
+2025-06-18 09:42:31,528 - INFO - 127.0.0.1 - - [18/Jun/2025 09:42:31] "GET /triagem HTTP/1.1" 200 -
+2025-06-18 09:42:32,202 - INFO -  Solicitação GET /triagem recebida
+2025-06-18 09:42:32,208 - INFO -  3 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 09:42:32,208 - INFO -  Retornando 3 processos
+2025-06-18 09:42:32,209 - INFO - 127.0.0.1 - - [18/Jun/2025 09:42:32] "GET /triagem HTTP/1.1" 200 -
+2025-06-18 09:42:34,263 - INFO - 127.0.0.1 - - [18/Jun/2025 09:42:34] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 09:42:34,264 - INFO - 127.0.0.1 - - [18/Jun/2025 09:42:34] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 09:42:34,271 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 09:42:34,271 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 09:42:34,554 - INFO -  Solicitação GET /triagem recebida
+2025-06-18 09:42:34,558 - INFO -  3 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 09:42:34,558 - INFO -  Retornando 3 processos
+2025-06-18 09:42:34,559 - INFO - 127.0.0.1 - - [18/Jun/2025 09:42:34] "GET /triagem HTTP/1.1" 200 -
+2025-06-18 09:42:42,860 - INFO - 127.0.0.1 - - [18/Jun/2025 09:42:42] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:43:12,868 - INFO - 127.0.0.1 - - [18/Jun/2025 09:43:12] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:43:42,860 - INFO - 127.0.0.1 - - [18/Jun/2025 09:43:42] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:44:12,869 - INFO - 127.0.0.1 - - [18/Jun/2025 09:44:12] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:44:42,860 - INFO - 127.0.0.1 - - [18/Jun/2025 09:44:42] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:45:12,860 - INFO - 127.0.0.1 - - [18/Jun/2025 09:45:12] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:45:42,860 - INFO - 127.0.0.1 - - [18/Jun/2025 09:45:42] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:46:12,860 - INFO - 127.0.0.1 - - [18/Jun/2025 09:46:12] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:46:42,860 - INFO - 127.0.0.1 - - [18/Jun/2025 09:46:42] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:47:12,861 - INFO - 127.0.0.1 - - [18/Jun/2025 09:47:12] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:47:42,870 - INFO - 127.0.0.1 - - [18/Jun/2025 09:47:42] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:48:12,886 - INFO - 127.0.0.1 - - [18/Jun/2025 09:48:12] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:48:42,854 - INFO - 127.0.0.1 - - [18/Jun/2025 09:48:42] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:49:13,395 - INFO - 127.0.0.1 - - [18/Jun/2025 09:49:13] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:49:43,386 - INFO - 127.0.0.1 - - [18/Jun/2025 09:49:43] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:50:20,384 - INFO - 127.0.0.1 - - [18/Jun/2025 09:50:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:51:20,388 - INFO - 127.0.0.1 - - [18/Jun/2025 09:51:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:51:48,227 - INFO - 127.0.0.1 - - [18/Jun/2025 09:51:48] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:52:13,377 - INFO - 127.0.0.1 - - [18/Jun/2025 09:52:13] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:52:43,377 - INFO - 127.0.0.1 - - [18/Jun/2025 09:52:43] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:53:20,429 - INFO - 127.0.0.1 - - [18/Jun/2025 09:53:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:54:20,400 - INFO - 127.0.0.1 - - [18/Jun/2025 09:54:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:55:20,378 - INFO - 127.0.0.1 - - [18/Jun/2025 09:55:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:56:20,389 - INFO - 127.0.0.1 - - [18/Jun/2025 09:56:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:57:20,392 - INFO - 127.0.0.1 - - [18/Jun/2025 09:57:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:58:20,400 - INFO - 127.0.0.1 - - [18/Jun/2025 09:58:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 09:59:20,374 - INFO - 127.0.0.1 - - [18/Jun/2025 09:59:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 10:00:20,364 - INFO - 127.0.0.1 - - [18/Jun/2025 10:00:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 10:01:20,373 - INFO - 127.0.0.1 - - [18/Jun/2025 10:01:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 10:02:20,391 - INFO - 127.0.0.1 - - [18/Jun/2025 10:02:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 10:03:20,393 - INFO - 127.0.0.1 - - [18/Jun/2025 10:03:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 10:04:20,393 - INFO - 127.0.0.1 - - [18/Jun/2025 10:04:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 10:05:20,378 - INFO - 127.0.0.1 - - [18/Jun/2025 10:05:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 10:06:20,387 - INFO - 127.0.0.1 - - [18/Jun/2025 10:06:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 10:07:20,388 - INFO - 127.0.0.1 - - [18/Jun/2025 10:07:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 10:08:20,398 - INFO - 127.0.0.1 - - [18/Jun/2025 10:08:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 10:09:20,392 - INFO - 127.0.0.1 - - [18/Jun/2025 10:09:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 10:10:20,388 - INFO - 127.0.0.1 - - [18/Jun/2025 10:10:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 10:11:20,381 - INFO - 127.0.0.1 - - [18/Jun/2025 10:11:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 10:12:20,396 - INFO - 127.0.0.1 - - [18/Jun/2025 10:12:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 10:13:20,388 - INFO - 127.0.0.1 - - [18/Jun/2025 10:13:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 10:14:20,385 - INFO - 127.0.0.1 - - [18/Jun/2025 10:14:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 10:15:20,375 - INFO - 127.0.0.1 - - [18/Jun/2025 10:15:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 10:16:20,368 - INFO - 127.0.0.1 - - [18/Jun/2025 10:16:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 10:17:20,369 - INFO - 127.0.0.1 - - [18/Jun/2025 10:17:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 10:18:22,107 - INFO - 127.0.0.1 - - [18/Jun/2025 10:18:22] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 10:19:20,422 - INFO - 127.0.0.1 - - [18/Jun/2025 10:19:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 10:20:20,389 - INFO - 127.0.0.1 - - [18/Jun/2025 10:20:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 10:21:20,391 - INFO - 127.0.0.1 - - [18/Jun/2025 10:21:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 10:22:20,391 - INFO - 127.0.0.1 - - [18/Jun/2025 10:22:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 10:23:20,390 - INFO - 127.0.0.1 - - [18/Jun/2025 10:23:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 10:24:20,395 - INFO - 127.0.0.1 - - [18/Jun/2025 10:24:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 10:25:20,395 - INFO - 127.0.0.1 - - [18/Jun/2025 10:25:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 10:26:20,383 - INFO - 127.0.0.1 - - [18/Jun/2025 10:26:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 10:27:20,395 - INFO - 127.0.0.1 - - [18/Jun/2025 10:27:20] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 10:27:43,615 - INFO - 127.0.0.1 - - [18/Jun/2025 10:27:43] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 10:27:46,040 - INFO -  Solicitação GET /triagem recebida
+2025-06-18 10:27:46,180 - INFO -  3 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 10:27:46,181 - INFO -  Retornando 3 processos
+2025-06-18 10:27:46,184 - INFO - 127.0.0.1 - - [18/Jun/2025 10:27:46] "GET /triagem HTTP/1.1" 200 -
+2025-06-18 10:27:59,822 - INFO - 127.0.0.1 - - [18/Jun/2025 10:27:59] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 10:27:59,822 - INFO - 127.0.0.1 - - [18/Jun/2025 10:27:59] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 10:27:59,835 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 10:27:59,835 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 10:28:00,108 - INFO -  Solicitação GET /triagem recebida
+2025-06-18 10:28:00,121 - INFO -  3 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 10:28:00,121 - INFO -  Retornando 3 processos
+2025-06-18 10:28:00,122 - INFO - 127.0.0.1 - - [18/Jun/2025 10:28:00] "GET /triagem HTTP/1.1" 200 -
+2025-06-18 10:28:12,875 - INFO - 127.0.0.1 - - [18/Jun/2025 10:28:12] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 10:28:42,879 - INFO - 127.0.0.1 - - [18/Jun/2025 10:28:42] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 10:29:04,506 - INFO -  Solicitação GET /triagem recebida
+2025-06-18 10:29:04,516 - INFO -  3 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 10:29:04,517 - INFO -  Retornando 3 processos
+2025-06-18 10:29:04,519 - INFO - 127.0.0.1 - - [18/Jun/2025 10:29:04] "GET /triagem HTTP/1.1" 200 -
+2025-06-18 10:29:12,860 - INFO - 127.0.0.1 - - [18/Jun/2025 10:29:12] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 10:29:42,862 - INFO - 127.0.0.1 - - [18/Jun/2025 10:29:42] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 10:30:12,877 - INFO - 127.0.0.1 - - [18/Jun/2025 10:30:12] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 10:30:42,877 - INFO - 127.0.0.1 - - [18/Jun/2025 10:30:42] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 10:31:12,878 - INFO - 127.0.0.1 - - [18/Jun/2025 10:31:12] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 10:31:42,867 - INFO - 127.0.0.1 - - [18/Jun/2025 10:31:42] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 10:32:12,867 - INFO - 127.0.0.1 - - [18/Jun/2025 10:32:12] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 10:32:42,880 - INFO - 127.0.0.1 - - [18/Jun/2025 10:32:42] "GET /rag/status HTTP/1.1" 200 -
+2025-06-18 10:32:58,265 - INFO -  Sinal 2 recebido. Finalizando servidor graciosamente...
+2025-06-18 10:32:58,266 - INFO -  Servidor com PID 4116 finalizado
+2025-06-18 10:48:20,697 - INFO - Servidor iniciado com PID 20672
+2025-06-18 10:48:20,716 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.26:5000
+2025-06-18 10:48:20,717 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-18 10:48:21,427 - INFO - Cliente WebSocket conectado: jgdCrHAtsmr-x2oMAAAB
+2025-06-18 10:48:25,894 - INFO - Cliente WebSocket conectado: NPeUn2I8ZkkHcSacAAAD
+2025-06-18 10:48:27,974 - INFO - Cliente desconectado: NPeUn2I8ZkkHcSacAAAD
+2025-06-18 10:48:27,975 - INFO - Cliente desconectado: jgdCrHAtsmr-x2oMAAAB
+2025-06-18 10:48:27,986 - INFO - 127.0.0.1 - - [18/Jun/2025 10:48:27] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 10:48:27,992 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 10:48:28,011 - INFO - 127.0.0.1 - - [18/Jun/2025 10:48:28] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 10:48:28,017 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 10:48:28,972 - INFO -  3 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 10:48:28,973 - INFO - 127.0.0.1 - - [18/Jun/2025 10:48:28] "GET /triagem HTTP/1.1" 200 -
+2025-06-18 10:48:29,299 - INFO - Cliente WebSocket conectado: oHCbbht9eyvadUzkAAAG
+2025-06-18 10:48:29,299 - INFO - Cliente WebSocket conectado: -cp7qzK64sk8SZ2gAAAH
+2025-06-18 10:49:25,442 - INFO - 127.0.0.1 - - [18/Jun/2025 10:49:25] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-18 10:49:31,717 - INFO - 127.0.0.1 - - [18/Jun/2025 10:49:31] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 202 -
+2025-06-18 10:49:37,175 - INFO - 127.0.0.1 - - [18/Jun/2025 10:49:37] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-18 10:49:43,432 - INFO - 127.0.0.1 - - [18/Jun/2025 10:49:43] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 202 -
+2025-06-18 10:50:14,358 - INFO - 127.0.0.1 - - [18/Jun/2025 10:50:14] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-18 10:50:20,634 - INFO - 127.0.0.1 - - [18/Jun/2025 10:50:20] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 202 -
+2025-06-18 10:51:43,519 - INFO - 127.0.0.1 - - [18/Jun/2025 10:51:43] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-18 10:51:49,783 - INFO - 127.0.0.1 - - [18/Jun/2025 10:51:49] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 202 -
+2025-06-18 10:52:18,654 - INFO - Servidor iniciado com PID 21484
+2025-06-18 10:52:18,668 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.26:5000
+2025-06-18 10:52:18,668 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-18 10:52:18,934 - INFO - Cliente WebSocket conectado: 5KDXsD60s_STXp_KAAAB
+2025-06-18 10:52:20,198 - INFO - Cliente WebSocket conectado: rhtlxKSZ7MC1Axx9AAAD
+2025-06-18 10:52:27,878 - INFO - Cliente desconectado: rhtlxKSZ7MC1Axx9AAAD
+2025-06-18 10:52:27,879 - INFO - Cliente desconectado: 5KDXsD60s_STXp_KAAAB
+2025-06-18 10:52:27,884 - INFO - 127.0.0.1 - - [18/Jun/2025 10:52:27] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 10:52:27,886 - INFO - 127.0.0.1 - - [18/Jun/2025 10:52:27] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 10:52:27,893 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 10:52:27,893 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 10:52:28,618 - INFO -  7 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 10:52:28,619 - INFO - 127.0.0.1 - - [18/Jun/2025 10:52:28] "GET /triagem HTTP/1.1" 200 -
+2025-06-18 10:52:28,848 - INFO - Cliente WebSocket conectado: Jo062ZmlaWNLZIpHAAAG
+2025-06-18 10:52:28,849 - INFO - Cliente WebSocket conectado: _xMMfIjDZU0cwRo9AAAH
+2025-06-18 10:53:12,261 - INFO - 127.0.0.1 - - [18/Jun/2025 10:53:12] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-18 10:53:18,533 - INFO - 127.0.0.1 - - [18/Jun/2025 10:53:18] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 202 -
+2025-06-18 10:55:17,825 - INFO - Cliente desconectado: Jo062ZmlaWNLZIpHAAAG
+2025-06-18 10:55:17,826 - INFO - Cliente desconectado: _xMMfIjDZU0cwRo9AAAH
+2025-06-18 10:55:17,839 - INFO - 127.0.0.1 - - [18/Jun/2025 10:55:17] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 10:55:17,840 - INFO - 127.0.0.1 - - [18/Jun/2025 10:55:17] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 10:55:17,867 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 10:55:17,869 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 10:55:18,818 - INFO -  8 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 10:55:18,821 - INFO - 127.0.0.1 - - [18/Jun/2025 10:55:18] "GET /triagem HTTP/1.1" 200 -
+2025-06-18 10:55:18,948 - INFO - Cliente WebSocket conectado: abB5B__pkh2c-a3hAAAK
+2025-06-18 10:55:18,949 - INFO - Cliente WebSocket conectado: FhVmO-zSjKWREhLHAAAL
+2025-06-18 10:55:37,267 - INFO - Cliente desconectado: abB5B__pkh2c-a3hAAAK
+2025-06-18 10:55:37,268 - INFO - Cliente desconectado: FhVmO-zSjKWREhLHAAAL
+2025-06-18 10:55:37,282 - INFO - 127.0.0.1 - - [18/Jun/2025 10:55:37] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 10:55:37,282 - INFO - 127.0.0.1 - - [18/Jun/2025 10:55:37] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 10:55:37,291 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 10:55:37,292 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 10:55:37,589 - INFO -  8 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 10:55:37,590 - INFO - 127.0.0.1 - - [18/Jun/2025 10:55:37] "GET /triagem HTTP/1.1" 200 -
+2025-06-18 10:55:39,113 - INFO -  8 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 10:55:39,115 - INFO - 127.0.0.1 - - [18/Jun/2025 10:55:39] "GET /triagem HTTP/1.1" 200 -
+2025-06-18 10:55:39,434 - INFO - Cliente WebSocket conectado: ct_v6mPCIM8TAydvAAAN
+2025-06-18 10:55:39,457 - INFO - Cliente WebSocket conectado: E4xbtn_hzmWZ5LxaAAAP
+2025-06-18 11:03:26,489 - INFO - Servidor iniciado com PID 20012
+2025-06-18 11:03:26,503 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.26:5000
+2025-06-18 11:03:26,504 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-18 11:03:26,978 - INFO - Cliente WebSocket conectado: 47_cOmmWf7qh9npPAAAB
+2025-06-18 11:03:31,398 - INFO - Cliente WebSocket conectado: kHCtTXcNorAImLcgAAAD
+2025-06-18 11:03:57,816 - INFO - Cliente desconectado: kHCtTXcNorAImLcgAAAD
+2025-06-18 11:03:57,817 - INFO - Cliente desconectado: 47_cOmmWf7qh9npPAAAB
+2025-06-18 11:03:57,826 - INFO - 127.0.0.1 - - [18/Jun/2025 11:03:57] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 11:03:57,827 - INFO - 127.0.0.1 - - [18/Jun/2025 11:03:57] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 11:03:57,833 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 11:03:57,835 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 11:03:59,144 - INFO -  8 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 11:03:59,145 - INFO - 127.0.0.1 - - [18/Jun/2025 11:03:59] "GET /triagem HTTP/1.1" 200 -
+2025-06-18 11:03:59,421 - INFO - Cliente WebSocket conectado: nkZD_D6YSmyP_Al3AAAG
+2025-06-18 11:03:59,425 - INFO - Cliente WebSocket conectado: CDpIUqR_7OZGAq0dAAAH
+2025-06-18 11:04:10,268 - INFO - 127.0.0.1 - - [18/Jun/2025 11:04:10] "OPTIONS /triagem/1028689-11.2024.8.11.0003 HTTP/1.1" 200 -
+2025-06-18 11:04:10,523 - INFO -  8 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 11:04:10,525 - INFO - 127.0.0.1 - - [18/Jun/2025 11:04:10] "DELETE /triagem/1028689-11.2024.8.11.0003 HTTP/1.1" 200 -
+2025-06-18 11:04:10,589 - INFO -  4 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 11:04:10,589 - INFO - 127.0.0.1 - - [18/Jun/2025 11:04:10] "GET /triagem HTTP/1.1" 200 -
+2025-06-18 11:04:21,347 - INFO - 127.0.0.1 - - [18/Jun/2025 11:04:21] "OPTIONS /triagem/1034332-50.2024.8.11.0002 HTTP/1.1" 200 -
+2025-06-18 11:04:21,617 - INFO -  4 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 11:04:21,617 - INFO - 127.0.0.1 - - [18/Jun/2025 11:04:21] "DELETE /triagem/1034332-50.2024.8.11.0002 HTTP/1.1" 200 -
+2025-06-18 11:04:21,671 - INFO -  3 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 11:04:21,672 - INFO - 127.0.0.1 - - [18/Jun/2025 11:04:21] "GET /triagem HTTP/1.1" 200 -
+2025-06-18 11:04:37,757 - INFO - 127.0.0.1 - - [18/Jun/2025 11:04:37] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-18 11:04:38,018 - INFO - 127.0.0.1 - - [18/Jun/2025 11:04:38] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 202 -
+2025-06-18 11:04:38,053 - INFO - received event "start_listening" from CDpIUqR_7OZGAq0dAAAH [/]
+2025-06-18 11:04:38,054 - INFO - emitting event "progress_update" to CDpIUqR_7OZGAq0dAAAH [/]
+2025-06-18 11:08:46,210 - INFO - Servidor iniciado com PID 25312
+2025-06-18 11:08:46,227 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.26:5000
+2025-06-18 11:08:46,228 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-18 11:08:47,891 - INFO - Cliente WebSocket conectado: gWzcdS86jDsiWQD6AAAB
+2025-06-18 11:08:51,115 - INFO - Cliente WebSocket conectado: BM4OcS52SbRL8ttbAAAD
+2025-06-18 11:19:04,029 - INFO - Cliente desconectado: BM4OcS52SbRL8ttbAAAD
+2025-06-18 11:19:04,032 - INFO - Cliente desconectado: gWzcdS86jDsiWQD6AAAB
+2025-06-18 11:19:04,059 - INFO - 127.0.0.1 - - [18/Jun/2025 11:19:04] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 11:19:04,061 - INFO - 127.0.0.1 - - [18/Jun/2025 11:19:04] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 11:19:04,074 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 11:19:04,075 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 11:19:05,270 - INFO -  3 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 11:19:05,278 - INFO - 127.0.0.1 - - [18/Jun/2025 11:19:05] "GET /triagem HTTP/1.1" 200 -
+2025-06-18 11:19:05,414 - INFO - Cliente WebSocket conectado: XscYk5UKjvXcm-aGAAAG
+2025-06-18 11:19:05,415 - INFO - Cliente WebSocket conectado: a-5KXN2dGqjEneqjAAAH
+2025-06-18 11:26:25,458 - INFO - 127.0.0.1 - - [18/Jun/2025 11:26:25] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-18 11:26:25,714 - INFO - 127.0.0.1 - - [18/Jun/2025 11:26:25] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 202 -
+2025-06-18 11:26:25,731 - INFO - received event "start_listening" from XscYk5UKjvXcm-aGAAAG [/]
+2025-06-18 11:26:25,734 - INFO - emitting event "progress_update" to XscYk5UKjvXcm-aGAAAG [/]
+2025-06-18 11:28:39,734 - INFO - Sinal 2 recebido. Finalizando...
+2025-06-18 11:29:45,626 - INFO - Servidor iniciado com PID 11076
+2025-06-18 11:29:45,645 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.26:5000
+2025-06-18 11:29:45,646 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-18 11:29:45,909 - INFO - Cliente WebSocket conectado: 65nQYd_Cy8TdfnbtAAAB
+2025-06-18 11:29:45,933 - INFO - Cliente WebSocket conectado: rijOjk4_4Vcf7oFQAAAD
+2025-06-18 11:29:46,749 - INFO - Cliente desconectado: 65nQYd_Cy8TdfnbtAAAB
+2025-06-18 11:29:46,749 - INFO - Cliente desconectado: rijOjk4_4Vcf7oFQAAAD
+2025-06-18 11:29:46,756 - INFO - 127.0.0.1 - - [18/Jun/2025 11:29:46] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 11:29:46,757 - INFO - 127.0.0.1 - - [18/Jun/2025 11:29:46] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 11:29:46,764 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 11:29:46,764 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 11:29:47,565 - INFO -  3 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 11:29:47,567 - INFO - 127.0.0.1 - - [18/Jun/2025 11:29:47] "GET /triagem HTTP/1.1" 200 -
+2025-06-18 11:29:47,924 - INFO - Cliente WebSocket conectado: oTcUHBNl8DuYzeoxAAAG
+2025-06-18 11:29:47,978 - INFO - Cliente WebSocket conectado: wWOx_pnv28Q0_XceAAAH
+2025-06-18 11:30:09,736 - INFO - 127.0.0.1 - - [18/Jun/2025 11:30:09] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-18 11:30:09,992 - ERROR - Exception on /triagem/form [POST]
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\Documents\Apps\gmv-server\routes\triagem.py", line 22, in criar_processo
+    operation_id = str(uuid.uuid4())
+                       ^^^^
+NameError: name 'uuid' is not defined
+2025-06-18 11:30:10,002 - INFO - 127.0.0.1 - - [18/Jun/2025 11:30:10] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 500 -
+2025-06-18 11:30:23,294 - INFO - Sinal 2 recebido. Finalizando...
+2025-06-18 11:31:14,548 - INFO - Servidor iniciado com PID 3332
+2025-06-18 11:31:14,561 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.26:5000
+2025-06-18 11:31:14,562 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-18 11:31:15,068 - INFO - Cliente WebSocket conectado: yhwJEj_3zFuV-kkzAAAB
+2025-06-18 11:31:18,861 - INFO - Cliente WebSocket conectado: GDGBytCo6IVqTqr4AAAD
+2025-06-18 11:32:08,636 - INFO - 127.0.0.1 - - [18/Jun/2025 11:32:08] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-18 11:32:08,906 - ERROR - Exception on /triagem/form [POST]
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\Documents\Apps\gmv-server\routes\triagem.py", line 22, in criar_processo
+    operation_id = str(uuid.uuid4())
+                       ^^^^
+NameError: name 'uuid' is not defined
+2025-06-18 11:32:08,910 - INFO - 127.0.0.1 - - [18/Jun/2025 11:32:08] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 500 -
+2025-06-18 11:32:29,665 - INFO - Sinal 2 recebido. Finalizando...
+2025-06-18 11:33:47,012 - INFO - Servidor iniciado com PID 2116
+2025-06-18 11:33:47,026 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.26:5000
+2025-06-18 11:33:47,026 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-18 11:33:47,222 - INFO - Cliente WebSocket conectado: m9mSM5gZPK7g9j1XAAAB
+2025-06-18 11:33:49,984 - INFO - Cliente WebSocket conectado: yt64dc1f5lOHdJq_AAAD
+2025-06-18 11:34:26,203 - INFO - 127.0.0.1 - - [18/Jun/2025 11:34:26] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-18 11:34:26,458 - INFO - 127.0.0.1 - - [18/Jun/2025 11:34:26] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 202 -
+2025-06-18 11:34:26,492 - INFO - received event "start_listening" from yt64dc1f5lOHdJq_AAAD [/]
+2025-06-18 11:34:26,493 - INFO - emitting event "progress_update" to yt64dc1f5lOHdJq_AAAD [/]
+2025-06-18 11:36:03,756 - INFO - Cliente desconectado: m9mSM5gZPK7g9j1XAAAB
+2025-06-18 11:36:03,757 - INFO - Cliente desconectado: yt64dc1f5lOHdJq_AAAD
+2025-06-18 11:36:03,770 - INFO - 127.0.0.1 - - [18/Jun/2025 11:36:03] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 11:36:03,772 - INFO - 127.0.0.1 - - [18/Jun/2025 11:36:03] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 11:36:03,789 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 11:36:03,792 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 11:36:04,973 - INFO -  3 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 11:36:04,976 - INFO - 127.0.0.1 - - [18/Jun/2025 11:36:04] "GET /triagem HTTP/1.1" 200 -
+2025-06-18 11:36:05,269 - INFO - Cliente WebSocket conectado: eswytq8Lv2CQ1VnxAAAH
+2025-06-18 11:36:05,269 - INFO - Cliente WebSocket conectado: Bpuzx6QOACXYDg3hAAAG
+2025-06-18 11:53:13,946 - INFO - Sinal 2 recebido. Finalizando...
+2025-06-18 11:53:43,734 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.26:5000
+2025-06-18 11:53:43,734 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-18 11:54:08,688 - INFO - 127.0.0.1 - - [18/Jun/2025 11:54:08] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 11:54:08,698 - INFO - 127.0.0.1 - - [18/Jun/2025 11:54:08] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 11:54:08,698 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 11:54:08,702 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 11:54:09,821 - INFO -  3 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 11:54:09,822 - INFO - 127.0.0.1 - - [18/Jun/2025 11:54:09] "GET /triagem HTTP/1.1" 200 -
+2025-06-18 11:54:43,387 - INFO - 127.0.0.1 - - [18/Jun/2025 11:54:43] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-18 11:54:43,658 - INFO - 127.0.0.1 - - [18/Jun/2025 11:54:43] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 202 -
+2025-06-18 11:54:43,678 - INFO - received event "start_listening" from kXXiZiy6tNE0FrsCAAAG [/]
+2025-06-18 11:54:43,687 - INFO - emitting event "progress_update" to kXXiZiy6tNE0FrsCAAAG [/]
+2025-06-18 11:58:21,836 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.26:5000
+2025-06-18 11:58:21,837 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-18 11:58:24,756 - INFO - 127.0.0.1 - - [18/Jun/2025 11:58:24] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 11:58:24,762 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 11:58:26,028 - INFO -  3 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 11:58:26,030 - INFO - 127.0.0.1 - - [18/Jun/2025 11:58:26] "GET /triagem HTTP/1.1" 200 -
+2025-06-18 11:58:45,241 - INFO - 127.0.0.1 - - [18/Jun/2025 11:58:45] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-18 11:58:45,495 - INFO - 127.0.0.1 - - [18/Jun/2025 11:58:45] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 202 -
+2025-06-18 11:58:45,522 - INFO - received event "start_listening" from iqpNzIO2WUdRSnvTAAAF [/]
+2025-06-18 11:58:45,529 - INFO - emitting event "progress_update" to iqpNzIO2WUdRSnvTAAAF [/]
+2025-06-18 12:01:10,855 - INFO - 127.0.0.1 - - [18/Jun/2025 12:01:10] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 12:01:10,873 - INFO - 127.0.0.1 - - [18/Jun/2025 12:01:10] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-18 12:01:10,882 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 12:01:10,887 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-18 12:01:12,112 - INFO -  3 processos extraídos de C:\Users\54117\Desktop\Obsidian\GMV\gmv\Triagem Inicial\Tabela Triagem.md
+2025-06-18 12:01:12,116 - INFO - 127.0.0.1 - - [18/Jun/2025 12:01:12] "GET /triagem HTTP/1.1" 200 -
+2025-06-18 12:01:44,806 - INFO - 127.0.0.1 - - [18/Jun/2025 12:01:44] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-18 12:01:45,078 - INFO - 127.0.0.1 - - [18/Jun/2025 12:01:45] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 202 -
+2025-06-18 12:01:45,107 - INFO - received event "start_listening" from 599vNRx-OY3ax_zQAAAJ [/]
+2025-06-18 12:01:45,117 - INFO - emitting event "progress_update" to 599vNRx-OY3ax_zQAAAJ [/]
