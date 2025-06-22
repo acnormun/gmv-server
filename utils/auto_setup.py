@@ -6,7 +6,7 @@ def setup_environment():
     print("=" * 40)
     
     # LIMPEZA FORÇADA - Remove TODAS as variáveis relacionadas ao GMV
-    old_vars = ['PATH_TRIAGEM', 'PASTA_DESTINO', 'PASTA_DAT', 'GITHUB_TOKEN']
+    old_vars = ['PATH_TRIAGEM', 'PASTA_DESTINO', 'PASTA_DAT', 'RAG_DB_PATH', 'GITHUB_TOKEN']
     removed_count = 0
     
     print("LIMPEZA FORÇADA DE CACHE:")
@@ -73,6 +73,7 @@ def setup_environment():
     PATH_TRIAGEM = os.getenv("PATH_TRIAGEM")
     PASTA_DESTINO = os.getenv("PASTA_DESTINO")
     PASTA_DAT = os.getenv("PASTA_DAT")
+    RAG_DB_PATH = os.getenv("RAG_DB_PATH")
     
     # Se ainda não carregou, tenta novamente
     if not PATH_TRIAGEM or not PASTA_DESTINO:
@@ -92,17 +93,19 @@ def setup_environment():
         PATH_TRIAGEM = os.getenv("PATH_TRIAGEM")
         PASTA_DESTINO = os.getenv("PASTA_DESTINO")
         PASTA_DAT = os.getenv("PASTA_DAT")
+        RAG_DB_PATH = os.getenv("RAG_DB_PATH")
         
         print(f"    APÓS CORREÇÃO:")
         print(f"   PATH_TRIAGEM: {PATH_TRIAGEM}")
         print(f"   PASTA_DESTINO: {PASTA_DESTINO}")
         print(f"   PASTA_DAT: {PASTA_DAT}")
+        print(f"   RAG_DB_PATH: {RAG_DB_PATH}")
     
     # Cria estrutura de pastas
     setup_directories()
-    
+
     print("Setup concluído!\n")
-    return PATH_TRIAGEM, PASTA_DESTINO, PASTA_DAT
+    return PATH_TRIAGEM, PASTA_DESTINO, PASTA_DAT, RAG_DB_PATH
 
 def create_default_env():
     """Cria arquivo .env padrão"""
@@ -117,6 +120,9 @@ PASTA_DESTINO=./data/processos
 
 # Pasta onde ficam os arquivos .dat
 PASTA_DAT=./data/dat
+
+# Pasta onde ficam os documentos para a RAG
+RAG_DB_PATH=./data/rag_base
 
 # Token do GitHub (opcional, para atualizações)
 GITHUB_TOKEN=seu_token_aqui
@@ -207,7 +213,7 @@ def setup_directories():
     PASTA_DAT = os.getenv("PASTA_DAT")
     
     # Cria diretórios
-    for pasta, nome in [(PASTA_DESTINO, "PASTA_DESTINO"), (PASTA_DAT, "PASTA_DAT")]:
+    for pasta, nome in [(PASTA_DESTINO, "PASTA_DESTINO"), (PASTA_DAT, "PASTA_DAT"), (RAG_DB_PATH, "RAG_DB_PATH")]:
         if pasta:
             try:
                 os.makedirs(pasta, exist_ok=True)
@@ -244,7 +250,7 @@ if __name__ == "__main__":
     print(f" Diretório de trabalho: {os.getcwd()}")
     print(f" Procurando .env em: {os.path.abspath('.env')}")
 
-    PATH_TRIAGEM, PASTA_DESTINO, PASTA_DAT = setup_environment()
+    PATH_TRIAGEM, PASTA_DESTINO, PASTA_DAT, RAG_DB_PATH = setup_environment()
 
     if not PATH_TRIAGEM or not PASTA_DESTINO:
         print("\n ERRO CRÍTICO: Não foi possível configurar variáveis de ambiente!")
@@ -259,8 +265,9 @@ if __name__ == "__main__":
     print("=" * 40)
     final_vars = {
         'PATH_TRIAGEM': os.getenv('PATH_TRIAGEM'),
-        'PASTA_DESTINO': os.getenv('PASTA_DESTINO'), 
-        'PASTA_DAT': os.getenv('PASTA_DAT')
+        'PASTA_DESTINO': os.getenv('PASTA_DESTINO'),
+        'PASTA_DAT': os.getenv('PASTA_DAT'),
+        'RAG_DB_PATH': os.getenv('RAG_DB_PATH')
     }
 
     for var_name, var_value in final_vars.items():

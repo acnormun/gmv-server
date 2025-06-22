@@ -15,7 +15,8 @@ def health_check():
         "env_vars": {
             "PATH_TRIAGEM": current_app.config.get('PATH_TRIAGEM'),
             "PASTA_DESTINO": current_app.config.get('PASTA_DESTINO'),
-            "PASTA_DAT": current_app.config.get('PASTA_DAT')
+            "PASTA_DAT": current_app.config.get('PASTA_DAT'),
+            "RAG_DB_PATH": current_app.config.get('RAG_DB_PATH')
         }
     }), 200
 
@@ -29,6 +30,7 @@ def process_info():
         "env_vars": {
             "PATH_TRIAGEM": current_app.config.get('PATH_TRIAGEM'),
             "PASTA_DESTINO": current_app.config.get('PASTA_DESTINO'),
-            "PASTA_DAT": current_app.config.get('PASTA_DAT')
+            "PASTA_DAT": current_app.config.get('PASTA_DAT'),
+            "RAG_DB_PATH": current_app.config.get('RAG_DB_PATH')
         }
     }), 200
