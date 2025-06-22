@@ -3828,3 +3828,584 @@ AssertionError: write() before start_response
 2025-06-18 12:01:45,078 - INFO - 127.0.0.1 - - [18/Jun/2025 12:01:45] "[35m[1mPOST /triagem/form HTTP/1.1[0m" 202 -
 2025-06-18 12:01:45,107 - INFO - received event "start_listening" from 599vNRx-OY3ax_zQAAAJ [/]
 2025-06-18 12:01:45,117 - INFO - emitting event "progress_update" to 599vNRx-OY3ax_zQAAAJ [/]
+2025-06-18 14:54:52,442 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.83.76:5000
+2025-06-18 14:54:52,442 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-21 20:24:38,396 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.45:5000
+2025-06-21 20:24:38,398 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-21 20:26:23,718 - INFO -  0 processos extraídos de ./data/triagem.md
+2025-06-21 20:26:23,718 - INFO - 127.0.0.1 - - [21/Jun/2025 20:26:23] "GET /triagem HTTP/1.1" 200 -
+2025-06-21 20:27:05,187 - INFO -  0 processos extraídos de ./data/triagem.md
+2025-06-21 20:27:05,189 - INFO - 127.0.0.1 - - [21/Jun/2025 20:27:05] "GET /triagem HTTP/1.1" 200 -
+2025-06-21 20:41:22,227 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.45:5000
+2025-06-21 20:41:22,227 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-21 20:41:27,385 - INFO -  0 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/triagem.md
+2025-06-21 20:41:27,386 - INFO - 127.0.0.1 - - [21/Jun/2025 20:41:27] "GET /triagem HTTP/1.1" 200 -
+2025-06-21 20:43:11,506 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.45:5000
+2025-06-21 20:43:11,506 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-21 20:43:13,608 - INFO -  4 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-21 20:43:13,608 - INFO - 127.0.0.1 - - [21/Jun/2025 20:43:13] "GET /triagem HTTP/1.1" 200 -
+2025-06-21 20:44:35,448 - INFO - 127.0.0.1 - - [21/Jun/2025 20:44:35] "OPTIONS /triagem/1034332-50.2024.8.11.0002 HTTP/1.1" 200 -
+2025-06-21 20:44:35,730 - INFO -  4 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-21 20:44:35,731 - INFO - 127.0.0.1 - - [21/Jun/2025 20:44:35] "DELETE /triagem/1034332-50.2024.8.11.0002 HTTP/1.1" 200 -
+2025-06-21 20:44:35,769 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-21 20:44:35,771 - INFO - 127.0.0.1 - - [21/Jun/2025 20:44:35] "GET /triagem HTTP/1.1" 200 -
+2025-06-21 20:44:38,055 - INFO - 127.0.0.1 - - [21/Jun/2025 20:44:38] "OPTIONS /triagem/0002008-54.1994.8.11.0041 HTTP/1.1" 200 -
+2025-06-21 20:44:38,374 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-21 20:44:38,374 - INFO - 127.0.0.1 - - [21/Jun/2025 20:44:38] "DELETE /triagem/0002008-54.1994.8.11.0041 HTTP/1.1" 200 -
+2025-06-21 20:44:38,621 - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-21 20:44:38,623 - INFO - 127.0.0.1 - - [21/Jun/2025 20:44:38] "GET /triagem HTTP/1.1" 200 -
+2025-06-21 20:44:40,905 - INFO - 127.0.0.1 - - [21/Jun/2025 20:44:40] "OPTIONS /triagem/1001682-16.2021.8.11.0014 HTTP/1.1" 200 -
+2025-06-21 20:44:41,215 - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-21 20:44:41,216 - INFO - 127.0.0.1 - - [21/Jun/2025 20:44:41] "DELETE /triagem/1001682-16.2021.8.11.0014 HTTP/1.1" 200 -
+2025-06-21 20:44:41,481 - INFO -  1 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-21 20:44:41,482 - INFO - 127.0.0.1 - - [21/Jun/2025 20:44:41] "GET /triagem HTTP/1.1" 200 -
+2025-06-21 20:44:44,412 - INFO - 127.0.0.1 - - [21/Jun/2025 20:44:44] "OPTIONS /triagem/1005767-48.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-21 20:44:44,730 - INFO -  1 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-21 20:44:44,731 - INFO - 127.0.0.1 - - [21/Jun/2025 20:44:44] "DELETE /triagem/1005767-48.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-21 20:44:45,003 - INFO -  0 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-21 20:44:45,004 - INFO - 127.0.0.1 - - [21/Jun/2025 20:44:45] "GET /triagem HTTP/1.1" 200 -
+2025-06-21 20:44:52,504 - INFO -  0 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-21 20:44:52,515 - INFO - 127.0.0.1 - - [21/Jun/2025 20:44:52] "GET /triagem HTTP/1.1" 200 -
+2025-06-21 20:44:52,521 - INFO - 127.0.0.1 - - [21/Jun/2025 20:44:52] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-21 20:44:52,527 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-21 20:44:52,536 - INFO - 127.0.0.1 - - [21/Jun/2025 20:44:52] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-21 20:44:52,541 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-21 20:44:58,693 - INFO - RAG Request: GET /rag/status
+2025-06-21 20:44:58,693 - INFO - 127.0.0.1 - - [21/Jun/2025 20:44:58] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 20:44:58,949 - INFO - RAG Request: GET /rag/suggestions
+2025-06-21 20:44:58,949 - INFO - 127.0.0.1 - - [21/Jun/2025 20:44:58] "[35m[1mGET /rag/suggestions HTTP/1.1[0m" 503 -
+2025-06-21 20:45:12,662 - INFO -  0 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-21 20:45:12,663 - INFO - 127.0.0.1 - - [21/Jun/2025 20:45:12] "GET /triagem HTTP/1.1" 200 -
+2025-06-21 20:45:29,617 - INFO - RAG Request: GET /rag/status
+2025-06-21 20:45:29,617 - INFO - 127.0.0.1 - - [21/Jun/2025 20:45:29] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 20:45:59,286 - INFO - RAG Request: GET /rag/status
+2025-06-21 20:45:59,286 - INFO - 127.0.0.1 - - [21/Jun/2025 20:45:59] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 20:46:29,601 - INFO - RAG Request: GET /rag/status
+2025-06-21 20:46:29,601 - INFO - 127.0.0.1 - - [21/Jun/2025 20:46:29] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 20:46:59,291 - INFO - RAG Request: GET /rag/status
+2025-06-21 20:46:59,291 - INFO - 127.0.0.1 - - [21/Jun/2025 20:46:59] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 20:47:29,285 - INFO - RAG Request: GET /rag/status
+2025-06-21 20:47:29,285 - INFO - 127.0.0.1 - - [21/Jun/2025 20:47:29] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 20:47:58,971 - INFO - RAG Request: GET /rag/status
+2025-06-21 20:47:58,972 - INFO - 127.0.0.1 - - [21/Jun/2025 20:47:58] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 20:48:29,279 - INFO - RAG Request: GET /rag/status
+2025-06-21 20:48:29,281 - INFO - 127.0.0.1 - - [21/Jun/2025 20:48:29] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 20:48:40,574 - INFO - 127.0.0.1 - - [21/Jun/2025 20:48:40] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-21 20:48:40,884 - INFO - 127.0.0.1 - - [21/Jun/2025 20:48:40] "POST /triagem/form HTTP/1.1" 200 -
+2025-06-21 20:48:40,894 - INFO - received event "start_listening" from rziwV6J6-YZKlU0SAAAL [/]
+2025-06-21 20:48:40,915 - INFO - emitting event "progress_update" to rziwV6J6-YZKlU0SAAAL [/]
+2025-06-21 20:48:41,389 - INFO - emitting event "progress_update" to rziwV6J6-YZKlU0SAAAL [/]
+2025-06-21 20:48:41,697 - INFO - emitting event "progress_update" to rziwV6J6-YZKlU0SAAAL [/]
+2025-06-21 20:48:42,222 - INFO - emitting event "progress_update" to rziwV6J6-YZKlU0SAAAL [/]
+2025-06-21 20:48:42,530 - INFO - emitting event "progress_update" to rziwV6J6-YZKlU0SAAAL [/]
+2025-06-21 20:48:42,937 - INFO - Markdown salvo: /Users/anacl/Documents/GMV/Triagem Inicial\1001917-74.2025.8.11.0003.md
+2025-06-21 20:48:42,937 - INFO - emitting event "progress_update" to rziwV6J6-YZKlU0SAAAL [/]
+2025-06-21 20:48:43,245 - INFO - emitting event "progress_update" to rziwV6J6-YZKlU0SAAAL [/]
+2025-06-21 20:48:43,684 - INFO - emitting event "progress_update" to rziwV6J6-YZKlU0SAAAL [/]
+2025-06-21 20:48:43,990 - INFO - emitting event "progress_update" to rziwV6J6-YZKlU0SAAAL [/]
+2025-06-21 20:48:46,011 - INFO -  1 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-21 20:48:46,012 - INFO - 127.0.0.1 - - [21/Jun/2025 20:48:46] "GET /triagem HTTP/1.1" 200 -
+2025-06-21 20:48:59,601 - INFO - RAG Request: GET /rag/status
+2025-06-21 20:48:59,601 - INFO - 127.0.0.1 - - [21/Jun/2025 20:48:59] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 20:49:29,304 - INFO - RAG Request: GET /rag/status
+2025-06-21 20:49:29,304 - INFO - 127.0.0.1 - - [21/Jun/2025 20:49:29] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 20:49:56,273 - INFO - 127.0.0.1 - - [21/Jun/2025 20:49:56] "OPTIONS /triagem/1001917-74.2025.8.11.0003 HTTP/1.1" 200 -
+2025-06-21 20:49:56,542 - INFO -  1 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-21 20:49:56,548 - INFO - 127.0.0.1 - - [21/Jun/2025 20:49:56] "DELETE /triagem/1001917-74.2025.8.11.0003 HTTP/1.1" 200 -
+2025-06-21 20:49:56,588 - INFO -  0 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-21 20:49:56,588 - INFO - 127.0.0.1 - - [21/Jun/2025 20:49:56] "GET /triagem HTTP/1.1" 200 -
+2025-06-21 20:49:59,299 - INFO - RAG Request: GET /rag/status
+2025-06-21 20:49:59,299 - INFO - 127.0.0.1 - - [21/Jun/2025 20:49:59] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 20:50:29,604 - INFO - RAG Request: GET /rag/status
+2025-06-21 20:50:29,605 - INFO - 127.0.0.1 - - [21/Jun/2025 20:50:29] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 20:51:43,615 - INFO - RAG Request: GET /rag/status
+2025-06-21 20:51:43,615 - INFO - 127.0.0.1 - - [21/Jun/2025 20:51:43] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 20:52:08,586 - INFO - RAG Request: GET /rag/status
+2025-06-21 20:52:08,587 - INFO - 127.0.0.1 - - [21/Jun/2025 20:52:08] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 20:52:29,615 - INFO - RAG Request: GET /rag/status
+2025-06-21 20:52:29,615 - INFO - 127.0.0.1 - - [21/Jun/2025 20:52:29] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 20:52:58,956 - INFO - RAG Request: GET /rag/status
+2025-06-21 20:52:58,956 - INFO - 127.0.0.1 - - [21/Jun/2025 20:52:58] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 20:53:01,516 - INFO - 127.0.0.1 - - [21/Jun/2025 20:53:01] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-21 20:53:01,934 - INFO - 127.0.0.1 - - [21/Jun/2025 20:53:01] "POST /triagem/form HTTP/1.1" 200 -
+2025-06-21 20:53:01,945 - INFO - received event "start_listening" from rziwV6J6-YZKlU0SAAAL [/]
+2025-06-21 20:53:01,961 - INFO - emitting event "progress_update" to rziwV6J6-YZKlU0SAAAL [/]
+2025-06-21 20:53:02,437 - INFO - emitting event "progress_update" to rziwV6J6-YZKlU0SAAAL [/]
+2025-06-21 20:53:02,742 - INFO - emitting event "progress_update" to rziwV6J6-YZKlU0SAAAL [/]
+2025-06-21 20:53:03,344 - INFO - emitting event "progress_update" to rziwV6J6-YZKlU0SAAAL [/]
+2025-06-21 20:53:03,647 - INFO - emitting event "progress_update" to rziwV6J6-YZKlU0SAAAL [/]
+2025-06-21 20:53:04,065 - INFO - Markdown salvo: /Users/anacl/Documents/GMV/Triagem Inicial\1001917-74.2025.8.11.0003.md
+2025-06-21 20:53:04,067 - INFO - emitting event "progress_update" to rziwV6J6-YZKlU0SAAAL [/]
+2025-06-21 20:53:04,385 - INFO - emitting event "progress_update" to rziwV6J6-YZKlU0SAAAL [/]
+2025-06-21 20:53:04,929 - INFO - emitting event "progress_update" to rziwV6J6-YZKlU0SAAAL [/]
+2025-06-21 20:53:05,237 - INFO - emitting event "progress_update" to rziwV6J6-YZKlU0SAAAL [/]
+2025-06-21 20:53:07,257 - INFO -  1 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-21 20:53:07,258 - INFO - 127.0.0.1 - - [21/Jun/2025 20:53:07] "GET /triagem HTTP/1.1" 200 -
+2025-06-21 20:53:11,334 - INFO - 127.0.0.1 - - [21/Jun/2025 20:53:11] "GET /triagem/1001917-74.2025.8.11.0003/dat HTTP/1.1" 200 -
+2025-06-21 20:53:15,459 - INFO - 127.0.0.1 - - [21/Jun/2025 20:53:15] "GET /triagem/1001917-74.2025.8.11.0003/dat HTTP/1.1" 200 -
+2025-06-21 20:53:29,614 - INFO - RAG Request: GET /rag/status
+2025-06-21 20:53:29,614 - INFO - 127.0.0.1 - - [21/Jun/2025 20:53:29] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 20:53:59,291 - INFO - RAG Request: GET /rag/status
+2025-06-21 20:53:59,291 - INFO - 127.0.0.1 - - [21/Jun/2025 20:53:59] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 20:54:43,607 - INFO - RAG Request: GET /rag/status
+2025-06-21 20:54:43,607 - INFO - 127.0.0.1 - - [21/Jun/2025 20:54:43] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 21:08:15,193 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.45:5000
+2025-06-21 21:08:15,194 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-21 21:08:20,370 - INFO - RAG Request: GET /rag/status
+2025-06-21 21:08:20,372 - INFO - 127.0.0.1 - - [21/Jun/2025 21:08:20] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 21:08:28,973 - INFO - RAG Request: GET /rag/status
+2025-06-21 21:08:28,974 - INFO - 127.0.0.1 - - [21/Jun/2025 21:08:28] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 21:08:47,019 - INFO - 127.0.0.1 - - [21/Jun/2025 21:08:47] "OPTIONS /triagem/1001917-74.2025.8.11.0003 HTTP/1.1" 200 -
+2025-06-21 21:08:47,286 - INFO -  1 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-21 21:08:47,286 - INFO - 127.0.0.1 - - [21/Jun/2025 21:08:47] "DELETE /triagem/1001917-74.2025.8.11.0003 HTTP/1.1" 200 -
+2025-06-21 21:08:47,334 - INFO -  0 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-21 21:08:47,335 - INFO - 127.0.0.1 - - [21/Jun/2025 21:08:47] "GET /triagem HTTP/1.1" 200 -
+2025-06-21 21:08:58,968 - INFO - RAG Request: GET /rag/status
+2025-06-21 21:08:58,969 - INFO - 127.0.0.1 - - [21/Jun/2025 21:08:58] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 21:09:26,035 - INFO - 127.0.0.1 - - [21/Jun/2025 21:09:26] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-21 21:09:26,454 - INFO - 127.0.0.1 - - [21/Jun/2025 21:09:26] "POST /triagem/form HTTP/1.1" 200 -
+2025-06-21 21:09:26,466 - INFO - received event "start_listening" from KKOTrR9qRzFAHF-IAAAB [/]
+2025-06-21 21:09:26,483 - INFO - emitting event "progress_update" to KKOTrR9qRzFAHF-IAAAB [/]
+2025-06-21 21:09:26,958 - INFO - emitting event "progress_update" to KKOTrR9qRzFAHF-IAAAB [/]
+2025-06-21 21:09:27,263 - INFO - emitting event "progress_update" to KKOTrR9qRzFAHF-IAAAB [/]
+2025-06-21 21:09:27,846 - INFO - emitting event "progress_update" to KKOTrR9qRzFAHF-IAAAB [/]
+2025-06-21 21:09:28,152 - INFO - emitting event "progress_update" to KKOTrR9qRzFAHF-IAAAB [/]
+2025-06-21 21:09:28,559 - INFO - Markdown salvo: /Users/anacl/Documents/GMV/Triagem Inicial\1001917-74.2025.8.11.0003.md
+2025-06-21 21:09:28,559 - INFO - emitting event "progress_update" to KKOTrR9qRzFAHF-IAAAB [/]
+2025-06-21 21:09:28,892 - INFO - Arquivo DAT salvo: /Users/anacl/Documents/GMV/Triagem Inicial/dat\1001917-74.2025.8.11.0003.dat
+2025-06-21 21:09:28,894 - INFO - emitting event "progress_update" to KKOTrR9qRzFAHF-IAAAB [/]
+2025-06-21 21:09:28,957 - INFO - RAG Request: GET /rag/status
+2025-06-21 21:09:28,958 - INFO - 127.0.0.1 - - [21/Jun/2025 21:09:28] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 21:09:29,306 - INFO - emitting event "progress_update" to KKOTrR9qRzFAHF-IAAAB [/]
+2025-06-21 21:09:34,794 - INFO - emitting event "progress_update" to KKOTrR9qRzFAHF-IAAAB [/]
+2025-06-21 21:09:34,801 - INFO - emitting event "progress_update" to KKOTrR9qRzFAHF-IAAAB [/]
+2025-06-21 21:09:34,813 - INFO - emitting event "progress_update" to KKOTrR9qRzFAHF-IAAAB [/]
+2025-06-21 21:09:35,118 - INFO - emitting event "progress_update" to KKOTrR9qRzFAHF-IAAAB [/]
+2025-06-21 21:09:37,438 - INFO -  1 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-21 21:09:37,438 - INFO - 127.0.0.1 - - [21/Jun/2025 21:09:37] "GET /triagem HTTP/1.1" 200 -
+2025-06-21 21:09:40,847 - INFO - 127.0.0.1 - - [21/Jun/2025 21:09:40] "GET /triagem/1001917-74.2025.8.11.0003/dat HTTP/1.1" 200 -
+2025-06-21 21:09:59,272 - INFO - RAG Request: GET /rag/status
+2025-06-21 21:09:59,272 - INFO - 127.0.0.1 - - [21/Jun/2025 21:09:59] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 21:10:07,356 - INFO - 127.0.0.1 - - [21/Jun/2025 21:10:07] "GET /triagem/1001917-74.2025.8.11.0003/dat HTTP/1.1" 200 -
+2025-06-21 21:10:29,291 - INFO - RAG Request: GET /rag/status
+2025-06-21 21:10:29,292 - INFO - 127.0.0.1 - - [21/Jun/2025 21:10:29] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 21:10:35,453 - INFO -  1 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-21 21:10:35,499 - INFO - 127.0.0.1 - - [21/Jun/2025 21:10:35] "GET /triagem HTTP/1.1" 200 -
+2025-06-21 21:10:35,505 - INFO - 127.0.0.1 - - [21/Jun/2025 21:10:35] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-21 21:10:35,513 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-21 21:10:35,521 - INFO - 127.0.0.1 - - [21/Jun/2025 21:10:35] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-21 21:10:35,532 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-21 21:10:40,118 - INFO - 127.0.0.1 - - [21/Jun/2025 21:10:40] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-21 21:10:40,118 - INFO - 127.0.0.1 - - [21/Jun/2025 21:10:40] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-21 21:10:40,133 - INFO - 127.0.0.1 - - [21/Jun/2025 21:10:40] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-21 21:10:40,148 - INFO - 127.0.0.1 - - [21/Jun/2025 21:10:40] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-21 21:10:40,239 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-21 21:10:40,240 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-21 21:10:40,240 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-21 21:10:40,255 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-21 21:10:40,268 - INFO - 127.0.0.1 - - [21/Jun/2025 21:10:40] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-21 21:10:40,272 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-21 21:10:40,379 - INFO -  1 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-21 21:10:40,399 - INFO - 127.0.0.1 - - [21/Jun/2025 21:10:40] "GET /triagem HTTP/1.1" 200 -
+2025-06-21 21:10:40,484 - INFO - 127.0.0.1 - - [21/Jun/2025 21:10:40] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-21 21:10:40,487 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-21 21:10:40,626 - INFO -  1 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-21 21:10:40,628 - INFO - 127.0.0.1 - - [21/Jun/2025 21:10:40] "GET /triagem HTTP/1.1" 200 -
+2025-06-21 21:10:44,091 - INFO - 127.0.0.1 - - [21/Jun/2025 21:10:44] "GET /triagem/1001917-74.2025.8.11.0003/dat HTTP/1.1" 200 -
+2025-06-21 21:11:00,907 - INFO - RAG Request: GET /rag/status
+2025-06-21 21:11:00,907 - INFO - 127.0.0.1 - - [21/Jun/2025 21:11:00] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 21:11:09,072 - INFO -  1 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-21 21:11:09,110 - INFO - 127.0.0.1 - - [21/Jun/2025 21:11:09] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-21 21:11:09,128 - INFO - 127.0.0.1 - - [21/Jun/2025 21:11:09] "GET /triagem HTTP/1.1" 200 -
+2025-06-21 21:11:09,149 - INFO - 127.0.0.1 - - [21/Jun/2025 21:11:09] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-21 21:11:09,167 - INFO - 127.0.0.1 - - [21/Jun/2025 21:11:09] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-21 21:11:09,213 - INFO - 127.0.0.1 - - [21/Jun/2025 21:11:09] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-21 21:11:09,356 - INFO - 127.0.0.1 - - [21/Jun/2025 21:11:09] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-21 21:11:09,466 - INFO - 127.0.0.1 - - [21/Jun/2025 21:11:09] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-21 21:11:09,482 - INFO - 127.0.0.1 - - [21/Jun/2025 21:11:09] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-21 21:11:09,528 - INFO - 127.0.0.1 - - [21/Jun/2025 21:11:09] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-21 21:11:09,528 - INFO - 127.0.0.1 - - [21/Jun/2025 21:11:09] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-21 21:11:09,543 - INFO - 127.0.0.1 - - [21/Jun/2025 21:11:09] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-21 21:11:09,559 - INFO - 127.0.0.1 - - [21/Jun/2025 21:11:09] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-21 21:11:09,579 - INFO - 127.0.0.1 - - [21/Jun/2025 21:11:09] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-21 21:11:09,590 - INFO - 127.0.0.1 - - [21/Jun/2025 21:11:09] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-21 21:11:09,604 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-21 21:11:09,606 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-21 21:11:09,608 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-21 21:11:09,608 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-21 21:11:09,610 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-21 21:11:09,613 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-21 21:11:09,618 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-21 21:11:09,619 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-21 21:11:09,620 - INFO - 127.0.0.1 - - [21/Jun/2025 21:11:09] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-21 21:11:09,623 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-21 21:11:09,624 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-21 21:11:09,624 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-21 21:11:09,626 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-21 21:11:09,626 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-21 21:11:09,638 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-21 21:11:09,916 - INFO -  1 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-21 21:11:09,917 - INFO - 127.0.0.1 - - [21/Jun/2025 21:11:09] "GET /triagem HTTP/1.1" 200 -
+2025-06-21 21:11:10,228 - INFO -  1 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-21 21:11:10,229 - INFO - 127.0.0.1 - - [21/Jun/2025 21:11:10] "GET /triagem HTTP/1.1" 200 -
+2025-06-21 21:11:10,546 - INFO -  1 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-21 21:11:10,547 - INFO - 127.0.0.1 - - [21/Jun/2025 21:11:10] "GET /triagem HTTP/1.1" 200 -
+2025-06-21 21:11:13,737 - INFO - 127.0.0.1 - - [21/Jun/2025 21:11:13] "GET /triagem/1001917-74.2025.8.11.0003/dat HTTP/1.1" 200 -
+2025-06-21 21:11:25,090 - INFO -  1 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-21 21:11:25,115 - INFO - 127.0.0.1 - - [21/Jun/2025 21:11:25] "GET /triagem HTTP/1.1" 200 -
+2025-06-21 21:11:25,119 - INFO - 127.0.0.1 - - [21/Jun/2025 21:11:25] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-21 21:11:25,123 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-21 21:11:25,134 - INFO - 127.0.0.1 - - [21/Jun/2025 21:11:25] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-21 21:11:25,137 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-21 21:11:29,260 - INFO - RAG Request: GET /rag/status
+2025-06-21 21:11:29,260 - INFO - 127.0.0.1 - - [21/Jun/2025 21:11:29] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 21:11:36,943 - INFO -  1 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-21 21:11:36,944 - INFO - 127.0.0.1 - - [21/Jun/2025 21:11:36] "GET /triagem HTTP/1.1" 200 -
+2025-06-21 21:11:55,415 - INFO - 127.0.0.1 - - [21/Jun/2025 21:11:55] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-21 21:11:55,439 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-21 21:11:55,452 - INFO - 127.0.0.1 - - [21/Jun/2025 21:11:55] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-21 21:11:55,455 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-21 21:11:55,714 - INFO -  1 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-21 21:11:55,714 - INFO - 127.0.0.1 - - [21/Jun/2025 21:11:55] "GET /triagem HTTP/1.1" 200 -
+2025-06-21 21:11:58,958 - INFO - RAG Request: GET /rag/status
+2025-06-21 21:11:58,959 - INFO - 127.0.0.1 - - [21/Jun/2025 21:11:58] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 21:12:00,680 - INFO -  1 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-21 21:12:00,680 - INFO - 127.0.0.1 - - [21/Jun/2025 21:12:00] "GET /triagem HTTP/1.1" 200 -
+2025-06-21 21:12:29,290 - INFO - RAG Request: GET /rag/status
+2025-06-21 21:12:29,291 - INFO - 127.0.0.1 - - [21/Jun/2025 21:12:29] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 21:12:59,612 - INFO - RAG Request: GET /rag/status
+2025-06-21 21:12:59,613 - INFO - 127.0.0.1 - - [21/Jun/2025 21:12:59] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 21:13:43,300 - INFO - RAG Request: GET /rag/status
+2025-06-21 21:13:43,300 - INFO - 127.0.0.1 - - [21/Jun/2025 21:13:43] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 21:13:59,265 - INFO - RAG Request: GET /rag/status
+2025-06-21 21:13:59,266 - INFO - 127.0.0.1 - - [21/Jun/2025 21:13:59] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 21:14:28,957 - INFO - RAG Request: GET /rag/status
+2025-06-21 21:14:28,958 - INFO - 127.0.0.1 - - [21/Jun/2025 21:14:28] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 21:14:59,599 - INFO - RAG Request: GET /rag/status
+2025-06-21 21:14:59,600 - INFO - 127.0.0.1 - - [21/Jun/2025 21:14:59] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 21:21:00,606 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.45:5000
+2025-06-21 21:21:00,606 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-21 21:21:00,802 - INFO - RAG Request: GET /rag/status
+2025-06-21 21:21:00,804 - INFO - 127.0.0.1 - - [21/Jun/2025 21:21:00] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 21:21:01,192 - INFO - 127.0.0.1 - - [21/Jun/2025 21:21:01] "OPTIONS /triagem/1001917-74.2025.8.11.0003 HTTP/1.1" 200 -
+2025-06-21 21:21:01,588 - INFO -  1 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-21 21:21:01,636 - INFO - 127.0.0.1 - - [21/Jun/2025 21:21:01] "DELETE /triagem/1001917-74.2025.8.11.0003 HTTP/1.1" 200 -
+2025-06-21 21:21:01,831 - INFO -  0 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-21 21:21:01,831 - INFO - 127.0.0.1 - - [21/Jun/2025 21:21:01] "GET /triagem HTTP/1.1" 200 -
+2025-06-21 21:21:07,125 - INFO - 127.0.0.1 - - [21/Jun/2025 21:21:07] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-21 21:21:07,698 - INFO -  0 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-21 21:21:07,854 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-21 21:21:07,855 - INFO - 127.0.0.1 - - [21/Jun/2025 21:21:07] "GET /triagem HTTP/1.1" 200 -
+2025-06-21 21:22:00,834 - INFO - 127.0.0.1 - - [21/Jun/2025 21:22:00] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-21 21:22:01,317 - INFO - 127.0.0.1 - - [21/Jun/2025 21:22:01] "POST /triagem/form HTTP/1.1" 200 -
+2025-06-21 21:22:01,333 - INFO - received event "start_listening" from dmoNsCFF2bS3PXbOAABb [/]
+2025-06-21 21:22:01,344 - INFO - emitting event "progress_update" to dmoNsCFF2bS3PXbOAABb [/]
+2025-06-21 21:22:01,825 - INFO - emitting event "progress_update" to dmoNsCFF2bS3PXbOAABb [/]
+2025-06-21 21:22:02,137 - INFO - emitting event "progress_update" to dmoNsCFF2bS3PXbOAABb [/]
+2025-06-21 21:22:02,749 - INFO - emitting event "progress_update" to dmoNsCFF2bS3PXbOAABb [/]
+2025-06-21 21:22:03,057 - INFO - emitting event "progress_update" to dmoNsCFF2bS3PXbOAABb [/]
+2025-06-21 21:22:03,467 - INFO - Markdown salvo: /Users/anacl/Documents/GMV/Triagem Inicial\1001917-74.2025.8.11.0003.md
+2025-06-21 21:22:03,468 - INFO - emitting event "progress_update" to dmoNsCFF2bS3PXbOAABb [/]
+2025-06-21 21:22:03,801 - INFO - Arquivo DAT salvo: /Users/anacl/Documents/GMV/Triagem Inicial/dat\1001917-74.2025.8.11.0003.dat
+2025-06-21 21:22:03,802 - INFO - emitting event "progress_update" to dmoNsCFF2bS3PXbOAABb [/]
+2025-06-21 21:22:04,219 - INFO - emitting event "progress_update" to dmoNsCFF2bS3PXbOAABb [/]
+2025-06-21 21:22:54,561 - INFO - emitting event "progress_update" to dmoNsCFF2bS3PXbOAABb [/]
+2025-06-21 21:22:54,571 - INFO - emitting event "progress_update" to dmoNsCFF2bS3PXbOAABb [/]
+2025-06-21 21:22:54,587 - INFO - emitting event "progress_update" to dmoNsCFF2bS3PXbOAABb [/]
+2025-06-21 21:22:54,896 - INFO - emitting event "progress_update" to dmoNsCFF2bS3PXbOAABb [/]
+2025-06-21 21:22:56,906 - INFO -  1 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-21 21:22:56,906 - INFO - 127.0.0.1 - - [21/Jun/2025 21:22:56] "GET /triagem HTTP/1.1" 200 -
+2025-06-21 21:41:02,009 - INFO - 127.0.0.1 - - [21/Jun/2025 21:41:02] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-21 21:41:02,617 - INFO - 127.0.0.1 - - [21/Jun/2025 21:41:02] "POST /triagem/form HTTP/1.1" 200 -
+2025-06-21 21:41:02,632 - INFO - received event "start_listening" from dmoNsCFF2bS3PXbOAABb [/]
+2025-06-21 21:41:02,646 - INFO - emitting event "progress_update" to dmoNsCFF2bS3PXbOAABb [/]
+2025-06-21 21:41:03,119 - INFO - emitting event "progress_update" to dmoNsCFF2bS3PXbOAABb [/]
+2025-06-21 21:41:03,427 - INFO - emitting event "progress_update" to dmoNsCFF2bS3PXbOAABb [/]
+2025-06-21 21:41:04,011 - INFO - emitting event "progress_update" to dmoNsCFF2bS3PXbOAABb [/]
+2025-06-21 21:41:04,329 - INFO - emitting event "progress_update" to dmoNsCFF2bS3PXbOAABb [/]
+2025-06-21 21:41:04,735 - INFO - Markdown salvo: /Users/anacl/Documents/GMV/Triagem Inicial\1008728-75.2021.8.11.0040.md
+2025-06-21 21:41:04,735 - INFO - emitting event "progress_update" to dmoNsCFF2bS3PXbOAABb [/]
+2025-06-21 21:41:05,094 - INFO - Arquivo DAT salvo: /Users/anacl/Documents/GMV/Triagem Inicial/dat\1008728-75.2021.8.11.0040.dat
+2025-06-21 21:41:05,094 - INFO - emitting event "progress_update" to dmoNsCFF2bS3PXbOAABb [/]
+2025-06-21 21:41:05,498 - INFO - emitting event "progress_update" to dmoNsCFF2bS3PXbOAABb [/]
+2025-06-21 21:41:52,729 - INFO - emitting event "progress_update" to dmoNsCFF2bS3PXbOAABb [/]
+2025-06-21 21:41:52,730 - INFO - emitting event "progress_update" to dmoNsCFF2bS3PXbOAABb [/]
+2025-06-21 21:41:52,746 - INFO - emitting event "progress_update" to dmoNsCFF2bS3PXbOAABb [/]
+2025-06-21 21:41:53,052 - INFO - emitting event "progress_update" to dmoNsCFF2bS3PXbOAABb [/]
+2025-06-21 21:41:55,078 - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-21 21:41:55,079 - INFO - 127.0.0.1 - - [21/Jun/2025 21:41:55] "GET /triagem HTTP/1.1" 200 -
+2025-06-21 21:42:03,112 - INFO - 127.0.0.1 - - [21/Jun/2025 21:42:03] "GET /triagem/1008728-75.2021.8.11.0040/dat HTTP/1.1" 200 -
+2025-06-21 21:42:23,491 - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-21 21:42:23,509 - INFO - 127.0.0.1 - - [21/Jun/2025 21:42:23] "GET /triagem HTTP/1.1" 200 -
+2025-06-21 21:42:23,509 - INFO - 127.0.0.1 - - [21/Jun/2025 21:42:23] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-21 21:42:23,512 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-21 21:42:23,525 - INFO - 127.0.0.1 - - [21/Jun/2025 21:42:23] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-21 21:42:23,527 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-21 21:45:30,742 - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-21 21:45:30,744 - INFO - 127.0.0.1 - - [21/Jun/2025 21:45:30] "GET /triagem HTTP/1.1" 200 -

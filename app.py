@@ -75,7 +75,7 @@ def log_rag_requests():
 # WebSocket handlers
 @socketio.on('connect')
 def handle_connect():
-    logger.info(f'✅ Cliente WebSocket conectado: {request.sid}')
+    logger.info(f' Cliente WebSocket conectado: {request.sid}')
     
 @socketio.on('start_listening')
 def handle_start_listening(data):  
@@ -136,8 +136,8 @@ def health_check():
 
 # Finalização graciosa
 def graceful_shutdown(sig, frame):
-    logger.info(f"🛑 Sinal {sig} recebido. Finalizando graciosamente...")
-    logger.info(f"🏁 Servidor com PID {os.getpid()} finalizado")
+    logger.info(f" Sinal {sig} recebido. Finalizando graciosamente...")
+    logger.info(f"Servidor com PID {os.getpid()} finalizado")
     sys.exit(0)
 
 signal.signal(signal.SIGTERM, graceful_shutdown)

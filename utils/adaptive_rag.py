@@ -210,7 +210,7 @@ class GMVAdaptiveRAG:
             
             if num_docs > 0:
                 self.is_initialized = True
-                self.logger.info(f"✅ Sistema RAG inicializado com {num_docs} documentos")
+                self.logger.info(f" Sistema RAG inicializado com {num_docs} documentos")
                 return True
             else:
                 self.logger.error("❌ Falha na inicialização - nenhum documento carregado")
@@ -336,7 +336,7 @@ class GMVAdaptiveRAG:
             self.embedding_model.fit(all_chunks)
             self.chunk_embeddings = self.embedding_model.encode(all_chunks, show_progress_bar=True)
             
-            self.logger.info(f"✅ {len(all_chunks)} chunks processados")
+            self.logger.info(f" {len(all_chunks)} chunks processados")
     
     def _create_chunks_with_overlap(self, text: str) -> List[str]:
         """Cria chunks com overlap"""
@@ -558,7 +558,7 @@ class GMVAdaptiveRAG:
         if use_cache:
             self.query_cache[query_text] = result
         
-        self.logger.info(f"✅ Consulta processada em {processing_time:.2f}s com confiança {confidence:.3f}")
+        self.logger.info(f" Consulta processada em {processing_time:.2f}s com confiança {confidence:.3f}")
         
         return result
     

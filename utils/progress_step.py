@@ -19,7 +19,7 @@ def init_progress(socketio, operation_sockets):
     global _socketio, _operation_sockets
     _socketio = socketio
     _operation_sockets = operation_sockets
-    logger.info("✅ Sistema de progresso inicializado")
+    logger.info(" Sistema de progresso inicializado")
 
 def send_progress_ws(operation_id, step, message, percentage):
     """

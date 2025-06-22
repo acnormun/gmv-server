@@ -22,7 +22,7 @@ def processar_com_progresso(data, operation_id, operation_sockets):
     for attempt in range(10):  # 10 tentativas de 0.5s = 5s total
         if operation_id in operation_sockets:
             connection_found = True
-            logger.info(f"✅ WebSocket connection encontrada na tentativa {attempt + 1}")
+            logger.info(f" WebSocket connection encontrada na tentativa {attempt + 1}")
             break
         time.sleep(0.5)
     
@@ -124,7 +124,7 @@ def processar_com_progresso(data, operation_id, operation_sockets):
         with open(path_triagem, 'a', encoding='utf-8') as f:
             f.write(nova_linha)
 
-        logger.info(f"✅ Processo {numero} salvo na tabela")
+        logger.info(f" Processo {numero} salvo na tabela")
         send_progress_ws(operation_id, 8, 'Finalizado com sucesso!', 100)
 
     except Exception as e:

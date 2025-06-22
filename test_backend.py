@@ -15,7 +15,7 @@ def test_python():
     for dep in deps:
         try:
             __import__(dep)
-            print(f"   ✅ {dep}")
+            print(f"    {dep}")
         except ImportError:
             print(f"   ❌ {dep} - Execute: pip install {dep}")
             return False
@@ -33,7 +33,7 @@ def test_files():
     
     for file_path, description in files_to_check:
         if os.path.exists(file_path):
-            print(f"   ✅ {description}: {file_path}")
+            print(f"    {description}: {file_path}")
         else:
             print(f"   ⚠️ {description}: {file_path} (não existe)")
     
@@ -59,12 +59,12 @@ def test_backend_start():
         
         # Verifica se ainda está rodando
         if process.poll() is None:
-            print("   ✅ Servidor iniciou com sucesso!")
+            print("    Servidor iniciou com sucesso!")
             
             # Para o servidor
             process.terminate()
             process.wait(timeout=5)
-            print("   ✅ Servidor finalizado")
+            print("    Servidor finalizado")
             return True
         else:
             # Processo morreu, pega output
@@ -102,7 +102,7 @@ def test_imports():
                 exec(f"from {module} import {submodules}")
             else:
                 __import__(module)
-            print(f"   ✅ {module}")
+            print(f"    {module}")
         except ImportError as e:
             print(f"   ❌ {module}: {e}")
             all_good = False
@@ -110,7 +110,7 @@ def test_imports():
     # Teste específico do pandas
     try:
         import pandas as pd
-        print(f"   ✅ pandas as pd")
+        print(f"    pandas as pd")
     except ImportError as e:
         print(f"   ❌ pandas as pd: {e}")
         all_good = False
@@ -142,14 +142,14 @@ def main():
     print("=" * 30)
     all_passed = True
     for test_name, passed in results:
-        status = "✅ PASSOU" if passed else "❌ FALHOU"
+        status = " PASSOU" if passed else "❌ FALHOU"
         print(f"   {status}: {test_name}")
         if not passed:
             all_passed = False
     
     if all_passed:
         print(f"\n🎉 TODOS OS TESTES PASSARAM!")
-        print("✅ Backend está pronto para usar")
+        print(" Backend está pronto para usar")
         print("💡 Execute: python app.py")
     else:
         print(f"\n⚠️ ALGUNS TESTES FALHARAM")

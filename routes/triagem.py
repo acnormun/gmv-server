@@ -65,7 +65,7 @@ def receber_processo_com_markdown():
             if operation_id not in operation_sockets:
                 print(f"⚠️ Frontend não registrado, mas continuando com progresso")
             else:
-                print(f"✅ Frontend registrado! Iniciando processamento com progresso...")
+                print(f" Frontend registrado! Iniciando processamento com progresso...")
             
             try:
                 # ETAPA 1: VALIDAÇÃO INICIAL
@@ -136,12 +136,30 @@ def receber_processo_com_markdown():
                     print(f"💾 Markdown salvo: {caminho_md}")
                     logger.info(f"Markdown salvo: {caminho_md}")
 
+                print("💾 [PASSO 4.1] Processando arquivo DAT...")
                 if dat_base64 and dat_base64.strip():
-                    send_progress_ws(operation_id, 5, 'Salvando arquivo original...', 65)
+                    send_progress_ws(operation_id, 5, 'Salvando arquivo original (DAT)...', 60)
                     time.sleep(0.3)
-                    with open(caminho_dat, 'w', encoding='utf-8') as f:
-                        f.write(dat_base64)
-                    print(f"💾 Arquivo DAT salvo: {caminho_dat}")
+                    
+                    try:
+                        # Salva o arquivo DAT
+                        with open(caminho_dat, 'w', encoding='utf-8') as f:
+                            f.write(dat_base64)
+                        print(f" Arquivo DAT salvo com sucesso: {caminho_dat}")
+                        logger.info(f"Arquivo DAT salvo: {caminho_dat}")
+                        
+                        # Verifica se foi salvo corretamente
+                        if os.path.exists(caminho_dat):
+                            tamanho_arquivo = os.path.getsize(caminho_dat)
+                            print(f"📊 Tamanho do arquivo DAT: {tamanho_arquivo} bytes")
+                        else:
+                            print(f"❌ ERRO: Arquivo DAT não foi criado!")
+                            
+                    except Exception as e:
+                        print(f"❌ Erro ao salvar arquivo DAT: {e}")
+                        logger.error(f"Erro ao salvar arquivo DAT: {e}")
+                else:
+                    print("ℹ️ Nenhum arquivo DAT fornecido para salvar")
 
                 # === PASSO 5: ANONIMIZAÇÃO ===
                 print("🔒 [PASSO 5] Iniciando anonimização automática otimizada...")
@@ -158,22 +176,45 @@ def receber_processo_com_markdown():
                         print(f"🔄 Executando anonimização otimizada para processo {numero}")
                         
                         anonimizador = get_anonimizador()
-                        mapa_suspeitos = anonimizador.carregar_suspeitos_mapeados("utils/suspeitos.txt")
+                        if anonimizador is None:
+                            print("❌ ERRO: Anonimizador não pôde ser inicializado!")
+                            raise Exception("Anonimizador não disponível")
+                        
+                        print(" Anonimizador carregado com sucesso")
+                        print("📋 Carregando mapeamento de suspeitos...")
+                        mapa_suspeitos = anonimizador.carregar_suspeitos_mapeados("./utils/suspeitos.txt")
+                        print(f"📊 Suspeitos carregados: {len(mapa_suspeitos)} mapeamentos")
+                        print("🔒 Iniciando processo de anonimização...")
+                        
                         texto_anonimizado, mapa_reverso = anonimizador.anonimizar_com_identificadores(
-                            markdown, mapa_suspeitos
+                            markdown, mapa_suspeitos, debug=False  # Mude para True se quiser ver debug
                         )
                         
                         pasta_anon = os.path.join(PASTA_DESTINO, "anonimizados")
                         pasta_mapas = os.path.join(PASTA_DESTINO, "mapas")
                         os.makedirs(pasta_anon, exist_ok=True)
                         os.makedirs(pasta_mapas, exist_ok=True)
-                        
+                        send_progress_ws(operation_id, 8, 'Salvando versão anonimizada...', 80)
                         caminho_md_anon = os.path.join(pasta_anon, f"{nome_arquivo_base}_anon.md")
-                        with open(caminho_md_anon, "w", encoding="utf-8") as f:
-                            f.write(texto_anonimizado)
+                        try:
+                            with open(caminho_md_anon, "w", encoding="utf-8") as f:
+                                f.write(texto_anonimizado)
+                            print(f" Markdown anonimizado salvo: {caminho_md_anon}")
+                            
+                            # Verifica se foi salvo
+                            if os.path.exists(caminho_md_anon):
+                                tamanho = os.path.getsize(caminho_md_anon)
+                                print(f"📊 Tamanho do arquivo anonimizado: {tamanho} bytes")
+                                arquivos_anonimizados["md"] = caminho_md_anon
+                            else:
+                                print(f"❌ ERRO: Arquivo anonimizado não foi criado!")
+                                
+                        except Exception as e:
+                            print(f"❌ Erro ao salvar markdown anonimizado: {e}")
+                            raise
                         
                         caminho_mapa = None
-                        if mapa_reverso:
+                        if mapa_reverso and len(mapa_reverso) > 0:
                             caminho_mapa = os.path.join(pasta_mapas, f"{nome_arquivo_base}_mapa.md")
                             with open(caminho_mapa, "w", encoding="utf-8") as f:
                                 f.write("| Identificador | Nome Original |\n")
@@ -189,9 +230,9 @@ def receber_processo_com_markdown():
                             "mapa": caminho_mapa if caminho_mapa else None
                         }
                         
-                        print(f"✅ Anonimização concluída em {tempo_anonimizacao}s")
+                        print(f" Anonimização concluída em {tempo_anonimizacao}s")
                         print(f"📊 Total de substituições: {total_substituicoes}")
-                        logger.info(f"✅ Anonimização concluída: {total_substituicoes} substituições em {tempo_anonimizacao}s")
+                        logger.info(f" Anonimização concluída: {total_substituicoes} substituições em {tempo_anonimizacao}s")
                         
                     except Exception as e:
                         print(f"❌ Erro durante anonimização otimizada: {e}")
@@ -251,7 +292,7 @@ def receber_processo_com_markdown():
                 with open(PATH_TRIAGEM, 'w', encoding='utf-8') as f:
                     f.writelines(linhas)
                 
-                send_progress_ws(operation_id, 8, 'Processo adicionado com sucesso!', 100)
+                send_progress_ws(operation_id, 9, 'Processo adicionado com sucesso!', 100)
                 time.sleep(0.5)
                 
                 print(f"🎉 Processo {numero} salvo com sucesso")
@@ -260,7 +301,7 @@ def receber_processo_com_markdown():
                 print(f"    ⏱️ Tempo de anonimização: {tempo_anonimizacao}s")
                 print(f"    📁 Arquivos anonimizados: {len([a for a in arquivos_anonimizados.values() if a])}")
                 
-                logger.info(f"✅ Processo {numero} salvo com sucesso")
+                logger.info(f" Processo {numero} salvo com sucesso")
                 
                 operation_sockets.pop(operation_id, None)
                 
