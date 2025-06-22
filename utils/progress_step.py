@@ -53,7 +53,7 @@ def send_progress_ws(operation_id, step, message, percentage):
             # Emite para cliente específico
             _socketio.emit('progress_update', progress_data, to=client_sid)
             
-            logger.info(f"📡 Progresso enviado para {operation_id}: {percentage}% - {message}")
+            logger.info(f" Progresso enviado para {operation_id}: {percentage}% - {message}")
             
             # Remove da lista se completou ou falhou
             if percentage >= 100 or step == 0:

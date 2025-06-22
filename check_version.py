@@ -50,7 +50,7 @@ def comparar_versoes(local, remoto):
 
 def baixar_zip_do_repositorio():
     zip_url = f"https://api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/zipball/{BRANCH}"
-    print("🔄 Baixando atualização...")
+    print(" Baixando atualização...")
     try:
         res = requests.get(zip_url, headers=HEADERS, stream=True, verify=False)
         if res.status_code == 200:
