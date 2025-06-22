@@ -35,7 +35,7 @@ def send_progress_ws(operation_id, step, message, percentage):
     
     try:
         if not _socketio:
-            logger.warning(f"⚠️ SocketIO não inicializado - Progresso apenas no log: {percentage}% - {message}")
+            logger.warning(f" SocketIO não inicializado - Progresso apenas no log: {percentage}% - {message}")
             return
             
         if operation_id in _operation_sockets:
@@ -61,11 +61,11 @@ def send_progress_ws(operation_id, step, message, percentage):
                     del _operation_sockets[operation_id]
                     logger.info(f"🧹 Operação {operation_id} removida da lista")
         else:
-            logger.warning(f"⚠️ Cliente não encontrado para operação {operation_id}")
+            logger.warning(f" Cliente não encontrado para operação {operation_id}")
             logger.warning(f"   Sockets ativos: {list(_operation_sockets.keys())}")
             
     except Exception as e:
-        logger.error(f"❌ Erro ao enviar progresso: {e}")
+        logger.error(f"Erro ao enviar progresso: {e}")
         # Não falha o processamento se WebSocket der erro
         pass
 

@@ -30,27 +30,6 @@ app.config['PATH_TRIAGEM'] = PATH_TRIAGEM
 app.config['PASTA_DESTINO'] = PASTA_DESTINO
 app.config['PASTA_DAT'] = PASTA_DAT
 
-# RAG
-try:
-    from utils.adaptive_rag import initialize_rag, query_rag, get_rag_statistics
-    RAG_AVAILABLE = True
-except ImportError as e:
-    RAG_AVAILABLE = False
-
-rag_inicializado = False
-if RAG_AVAILABLE:
-    try:
-        rag_inicializado = initialize_rag(
-            triagem_path=PATH_TRIAGEM,
-            pasta_destino=PASTA_DESTINO,
-            pasta_dat=PASTA_DAT
-        )
-    except Exception as e:
-        logger.error(f"Erro ao inicializar RAG: {str(e)}")
-
-app.config['RAG_AVAILABLE'] = RAG_AVAILABLE
-app.config['RAG_INICIALIZADO'] = rag_inicializado
-
 # CORS
 try:
     from flask_cors import CORS
@@ -61,16 +40,6 @@ except ImportError:
 # NOVO: Passa operation_sockets para as rotas antes de registrá-las
 with app.app_context():
     register_routes(app, operation_sockets)
-
-# Middleware de logs para RAG
-@app.before_request
-def log_rag_requests():
-    if request.path.startswith('/rag/'):
-        logger.info(f"RAG Request: {request.method} {request.path}")
-        if request.method == 'POST' and request.is_json:
-            data = request.get_json()
-            if data and 'query' in data:
-                logger.info(f"Query: {data['query'][:50]}")
 
 # WebSocket handlers
 @socketio.on('connect')
@@ -121,7 +90,7 @@ def handle_disconnect():
     for op_id in to_remove:
         del operation_sockets[op_id]
         
-    logger.info(f'❌ Cliente desconectado: {request.sid} (removidas {len(to_remove)} operações)')
+    logger.info(f'Cliente desconectado: {request.sid} (removidas {len(to_remove)} operações)')
 
 # NOVO: Health check com info do WebSocket
 @app.route('/health', methods=['GET'])
@@ -129,9 +98,7 @@ def health_check():
     return jsonify({
         "status": "ok",
         "websocket": "enabled",
-        "active_operations": len(operation_sockets),
-        "rag_available": app.config.get('RAG_AVAILABLE', False),
-        "rag_initialized": app.config.get('RAG_INICIALIZADO', False)
+        "active_operations": len(operation_sockets)
     })
 
 # Finalização graciosa

@@ -27,7 +27,7 @@ def processar_com_progresso(data, operation_id, operation_sockets):
         time.sleep(0.5)
     
     if not connection_found:
-        logger.warning(f"⚠️ WebSocket não conectado para {operation_id}, mas continuando com progresso via log")
+        logger.warning(f" WebSocket não conectado para {operation_id}, mas continuando com progresso via log")
         # NÃO chama processar_sem_progresso! Continua normalmente
     
     try:
@@ -36,7 +36,7 @@ def processar_com_progresso(data, operation_id, operation_sockets):
         markdown = limpar(data.get('markdown'))
         
         if not numero or not markdown:
-            logger.error(f"❌ Campos obrigatórios ausentes para {operation_id}")
+            logger.error(f"Campos obrigatórios ausentes para {operation_id}")
             send_progress_ws(operation_id, 0, 'Erro: Campos obrigatórios ausentes', 0)
             return
 
@@ -57,7 +57,7 @@ def processar_com_progresso(data, operation_id, operation_sockets):
                 suspeitos = encontrar_suspeitos(markdown, './utils/suspeitos.txt')
                 logger.info(f"🔍 Suspeitos encontrados: {suspeitos}")
             except Exception as e:
-                logger.error(f"❌ Erro na análise de suspeitos: {e}")
+                logger.error(f"Erro na análise de suspeitos: {e}")
                 suspeitos = []
 
         send_progress_ws(operation_id, 3, 'Preparando arquivos...', 40)
@@ -107,7 +107,7 @@ def processar_com_progresso(data, operation_id, operation_sockets):
                 
                 logger.info(f"🔒 Anonimização concluída")
         except Exception as e:
-            logger.error(f"❌ Erro na anonimização: {e}")
+            logger.error(f"Erro na anonimização: {e}")
             # Continua mesmo se anonimização falhar
 
         send_progress_ws(operation_id, 7, 'Atualizando tabela...', 90)
@@ -128,7 +128,7 @@ def processar_com_progresso(data, operation_id, operation_sockets):
         send_progress_ws(operation_id, 8, 'Finalizado com sucesso!', 100)
 
     except Exception as e:
-        logger.error(f"❌ Erro no processamento de {operation_id}: {str(e)}")
+        logger.error(f"Erro no processamento de {operation_id}: {str(e)}")
         send_progress_ws(operation_id, 0, f"Erro: {str(e)}", 0)
 
 def processar_sem_progresso(data, operation_id):

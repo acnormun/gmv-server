@@ -45,8 +45,8 @@ class AnonimizadorOtimizado:
             print(" Modelo spaCy carregado com sucesso")
             return nlp
         except Exception as e:
-            print(f"❌ Erro ao carregar modelo spaCy: {e}")
-            print("⚠️ Continuando sem spaCy - funcionalidade limitada")
+            print(f"Erro ao carregar modelo spaCy: {e}")
+            print(" Continuando sem spaCy - funcionalidade limitada")
             return None
     
     @lru_cache(maxsize=2000)
@@ -77,7 +77,7 @@ class AnonimizadorOtimizado:
                 break
         
         if not arquivo_encontrado:
-            print(f"⚠️ Arquivo de palavras descartadas não encontrado. Usando lista padrão.")
+            print(f" Arquivo de palavras descartadas não encontrado. Usando lista padrão.")
             
             # Lista mínima de fallback
             palavras = {
@@ -107,7 +107,7 @@ class AnonimizadorOtimizado:
             print(f"📊 Carregadas {total_palavras} palavras descartadas ({len(palavras)} incluindo normalizadas)")
             
         except Exception as e:
-            print(f"❌ Erro ao ler arquivo {arquivo_encontrado}: {e}")
+            print(f"Erro ao ler arquivo {arquivo_encontrado}: {e}")
             # Lista mínima de fallback
             palavras = {
                 'E', 'EM', 'NO', 'NA', 'DOS', 'DAS', 'DE', 'DO', 'DA', 'AOS', 'AO',
@@ -152,7 +152,7 @@ class AnonimizadorOtimizado:
                 break
         
         if not arquivo_encontrado:
-            print(f"⚠️ Arquivo de suspeitos não encontrado. Continuando sem lista específica.")
+            print(f" Arquivo de suspeitos não encontrado. Continuando sem lista específica.")
             self.cache_suspeitos = mapa
             return mapa
         
@@ -182,7 +182,7 @@ class AnonimizadorOtimizado:
             print(f" Carregados {total_suspeitos} suspeitos com {len(mapa)} mapeamentos")
             
         except Exception as e:
-            print(f"❌ Erro ao carregar suspeitos: {e}")
+            print(f"Erro ao carregar suspeitos: {e}")
         
         self.cache_suspeitos = mapa
         return mapa
@@ -212,13 +212,13 @@ class AnonimizadorOtimizado:
                                     print(f" spaCy ACEITO: '{nome}'")
                             else:
                                 if debug:
-                                    print(f"❌ spaCy REJEITADO: '{nome}' - {self._obter_motivo_rejeicao(nome)}")
+                                    print(f"spaCy REJEITADO: '{nome}' - {self._obter_motivo_rejeicao(nome)}")
                 
                 if debug:
                     print(f"📊 spaCy encontrou: {len(nomes_spacy)} nomes")
                     
             except Exception as e:
-                print(f"❌ Erro ao extrair nomes com spaCy: {e}")
+                print(f"Erro ao extrair nomes com spaCy: {e}")
         
         # MÉTODO 2: Regex robusto (sempre executa para complementar)
         nomes_regex = set(self._extrair_nomes_regex_melhorado(texto, debug))
@@ -284,7 +284,7 @@ class AnonimizadorOtimizado:
                     print(f" REGEX ACEITO: '{nome_limpo}'")
             else:
                 if debug:
-                    print(f"❌ REGEX REJEITADO: '{nome_limpo}' - {self._obter_motivo_rejeicao(nome_limpo)}")
+                    print(f"REGEX REJEITADO: '{nome_limpo}' - {self._obter_motivo_rejeicao(nome_limpo)}")
         
         return list(nomes_encontrados)
     
@@ -529,7 +529,7 @@ class AnonimizadorOtimizado:
                 gc.collect()
                 
             except Exception as e:
-                print(f"❌ Erro ao processar chunk: {e}")
+                print(f"Erro ao processar chunk: {e}")
                 continue
         
         return list(todos_nomes)

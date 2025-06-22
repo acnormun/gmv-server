@@ -4409,3 +4409,299 @@ Traceback (most recent call last):
 AssertionError: write() before start_response
 2025-06-21 21:45:30,742 - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-21 21:45:30,744 - INFO - 127.0.0.1 - - [21/Jun/2025 21:45:30] "GET /triagem HTTP/1.1" 200 -
+2025-06-21 21:49:01,295 - INFO -  436 chunks processados
+2025-06-21 21:49:01,295 - INFO -  Sistema RAG inicializado com 2 documentos
+2025-06-21 21:49:01,349 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.45:5000
+2025-06-21 21:49:01,350 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-21 21:49:02,208 - INFO -  Cliente WebSocket conectado: TE_rDT_U5ioPHC2ZAAAB
+2025-06-21 21:49:03,835 - INFO -  Cliente WebSocket conectado: pJ2enq5r-lwIuVsXAAAD
+2025-06-21 21:49:11,667 - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-21 21:49:11,668 - INFO - 127.0.0.1 - - [21/Jun/2025 21:49:11] "GET /triagem HTTP/1.1" 200 -
+2025-06-21 21:49:11,881 - INFO -  Cliente WebSocket conectado: Ojr2Zm3WAtQD3egNAAAG
+2025-06-21 21:49:11,919 - INFO -  Cliente WebSocket conectado: yam7NnQQQERybGrBAAAH
+2025-06-21 21:49:15,760 - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-21 21:49:15,761 - INFO - 127.0.0.1 - - [21/Jun/2025 21:49:15] "GET /triagem HTTP/1.1" 200 -
+2025-06-21 21:49:16,064 - INFO -  Cliente WebSocket conectado: mBJw4l-4Gi5jeWeXAAAJ
+2025-06-21 21:49:16,084 - INFO -  Cliente WebSocket conectado: q6ky3e2CaV6AHMRpAAAL
+2025-06-21 21:49:29,193 - INFO -  Cliente WebSocket conectado: omQSs6HVsbgxhpR1AAAN
+2025-06-21 21:49:29,196 - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-21 21:49:29,198 - INFO - 127.0.0.1 - - [21/Jun/2025 21:49:29] "GET /triagem HTTP/1.1" 200 -
+2025-06-21 21:49:29,262 - INFO -  Cliente WebSocket conectado: WCM75Z5lN6Rs8J3XAAAP
+2025-06-21 21:49:59,426 - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-21 21:49:59,427 - INFO - 127.0.0.1 - - [21/Jun/2025 21:49:59] "GET /triagem HTTP/1.1" 200 -
+2025-06-21 21:49:59,734 - INFO -  Cliente WebSocket conectado: DB0o_wTeIW-NpJ3HAAAR
+2025-06-21 21:49:59,753 - INFO -  Cliente WebSocket conectado: q3No8j2XBGpKSnuJAAAT
+2025-06-21 21:50:17,371 - INFO -  Sinal 2 recebido. Finalizando graciosamente...
+2025-06-21 21:50:17,371 - INFO - Servidor com PID 29240 finalizado
+2025-06-21 21:50:29,675 - INFO -  436 chunks processados
+2025-06-21 21:50:29,675 - INFO -  Sistema RAG inicializado com 2 documentos
+2025-06-21 21:50:29,727 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.45:5000
+2025-06-21 21:50:29,728 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-21 21:50:31,209 - INFO -  Cliente WebSocket conectado: GfketGlo4rASUK0gAAAB
+2025-06-21 21:50:31,858 - INFO - Cliente desconectado: GfketGlo4rASUK0gAAAB (removidas 0 operações)
+2025-06-21 21:50:32,461 - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-21 21:50:32,463 - INFO -  Cliente WebSocket conectado: pO5kRBMdYEHTuusRAAAD
+2025-06-21 21:50:32,464 - INFO - 127.0.0.1 - - [21/Jun/2025 21:50:32] "GET /triagem HTTP/1.1" 200 -
+2025-06-21 21:50:32,537 - INFO -  Cliente WebSocket conectado: XISmdG4DMimUfYHzAAAF
+2025-06-21 21:50:37,910 - INFO - Cliente desconectado: pO5kRBMdYEHTuusRAAAD (removidas 0 operações)
+2025-06-21 21:50:37,910 - INFO - Cliente desconectado: XISmdG4DMimUfYHzAAAF (removidas 0 operações)
+2025-06-21 21:50:37,927 - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-21 21:50:37,928 - INFO - 127.0.0.1 - - [21/Jun/2025 21:50:37] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-21 21:50:37,928 - INFO - 127.0.0.1 - - [21/Jun/2025 21:50:37] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-21 21:50:37,929 - INFO - 127.0.0.1 - - [21/Jun/2025 21:50:37] "GET /triagem HTTP/1.1" 200 -
+2025-06-21 21:50:37,933 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-21 21:50:37,934 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-21 21:50:48,730 - INFO - RAG Request: GET /rag/status
+2025-06-21 21:50:48,730 - INFO - 127.0.0.1 - - [21/Jun/2025 21:50:48] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 21:50:48,981 - INFO - RAG Request: GET /rag/suggestions
+2025-06-21 21:50:48,981 - INFO - 127.0.0.1 - - [21/Jun/2025 21:50:48] "[35m[1mGET /rag/suggestions HTTP/1.1[0m" 503 -
+2025-06-21 21:51:19,294 - INFO - RAG Request: GET /rag/status
+2025-06-21 21:51:19,296 - INFO - 127.0.0.1 - - [21/Jun/2025 21:51:19] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 21:51:49,618 - INFO - RAG Request: GET /rag/status
+2025-06-21 21:51:49,619 - INFO - 127.0.0.1 - - [21/Jun/2025 21:51:49] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 21:52:19,314 - INFO - RAG Request: GET /rag/status
+2025-06-21 21:52:19,315 - INFO - 127.0.0.1 - - [21/Jun/2025 21:52:19] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 21:52:49,669 - INFO - RAG Request: GET /rag/status
+2025-06-21 21:52:49,669 - INFO - 127.0.0.1 - - [21/Jun/2025 21:52:49] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 21:53:19,300 - INFO - RAG Request: GET /rag/status
+2025-06-21 21:53:19,301 - INFO - 127.0.0.1 - - [21/Jun/2025 21:53:19] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 21:53:49,599 - INFO - RAG Request: GET /rag/status
+2025-06-21 21:53:49,599 - INFO - 127.0.0.1 - - [21/Jun/2025 21:53:49] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 21:54:43,289 - INFO - RAG Request: GET /rag/status
+2025-06-21 21:54:43,291 - INFO - 127.0.0.1 - - [21/Jun/2025 21:54:43] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 21:55:43,612 - INFO - RAG Request: GET /rag/status
+2025-06-21 21:55:43,613 - INFO - 127.0.0.1 - - [21/Jun/2025 21:55:43] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 21:56:43,293 - INFO - RAG Request: GET /rag/status
+2025-06-21 21:56:43,293 - INFO - 127.0.0.1 - - [21/Jun/2025 21:56:43] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 21:57:02,354 - INFO -  Sinal 2 recebido. Finalizando graciosamente...
+2025-06-21 21:57:02,354 - INFO - Servidor com PID 16780 finalizado
+2025-06-21 21:57:11,822 - INFO -  436 chunks processados
+2025-06-21 21:57:11,822 - INFO -  Sistema RAG inicializado com 2 documentos
+2025-06-21 21:57:11,864 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.45:5000
+2025-06-21 21:57:11,864 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-21 21:57:12,059 - INFO - RAG Request: GET /rag/status
+2025-06-21 21:57:12,059 - INFO - 127.0.0.1 - - [21/Jun/2025 21:57:12] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 21:57:12,325 - INFO - RAG Request: GET /rag/suggestions
+2025-06-21 21:57:12,325 - INFO - 127.0.0.1 - - [21/Jun/2025 21:57:12] "[35m[1mGET /rag/suggestions HTTP/1.1[0m" 503 -
+2025-06-21 21:57:43,291 - INFO - RAG Request: GET /rag/status
+2025-06-21 21:57:43,291 - INFO - 127.0.0.1 - - [21/Jun/2025 21:57:43] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 21:58:13,617 - INFO - RAG Request: GET /rag/status
+2025-06-21 21:58:13,618 - INFO - 127.0.0.1 - - [21/Jun/2025 21:58:13] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 21:58:43,303 - INFO - RAG Request: GET /rag/status
+2025-06-21 21:58:43,304 - INFO - 127.0.0.1 - - [21/Jun/2025 21:58:43] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 21:59:13,596 - INFO - RAG Request: GET /rag/status
+2025-06-21 21:59:13,597 - INFO - 127.0.0.1 - - [21/Jun/2025 21:59:13] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 21:59:43,288 - INFO - RAG Request: GET /rag/status
+2025-06-21 21:59:43,289 - INFO - 127.0.0.1 - - [21/Jun/2025 21:59:43] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 22:00:13,603 - INFO - RAG Request: GET /rag/status
+2025-06-21 22:00:13,604 - INFO - 127.0.0.1 - - [21/Jun/2025 22:00:13] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 22:00:43,295 - INFO - RAG Request: GET /rag/status
+2025-06-21 22:00:43,295 - INFO - 127.0.0.1 - - [21/Jun/2025 22:00:43] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 22:01:43,609 - INFO - RAG Request: GET /rag/status
+2025-06-21 22:01:43,609 - INFO - 127.0.0.1 - - [21/Jun/2025 22:01:43] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 22:02:43,290 - INFO - RAG Request: GET /rag/status
+2025-06-21 22:02:43,292 - INFO - 127.0.0.1 - - [21/Jun/2025 22:02:43] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 22:03:43,606 - INFO - RAG Request: GET /rag/status
+2025-06-21 22:03:43,606 - INFO - 127.0.0.1 - - [21/Jun/2025 22:03:43] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 22:04:43,301 - INFO - RAG Request: GET /rag/status
+2025-06-21 22:04:43,301 - INFO - 127.0.0.1 - - [21/Jun/2025 22:04:43] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 22:05:10,136 - INFO -  Sinal 2 recebido. Finalizando graciosamente...
+2025-06-21 22:05:10,136 - INFO - Servidor com PID 13548 finalizado
+2025-06-21 22:14:20,063 - INFO -  436 chunks processados
+2025-06-21 22:14:20,064 - INFO -  Sistema RAG inicializado com 2 documentos
+2025-06-21 22:14:20,087 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.45:5000
+2025-06-21 22:14:20,087 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-21 22:14:20,322 - INFO - RAG Request: GET /rag/suggestions
+2025-06-21 22:14:20,322 - INFO - 127.0.0.1 - - [21/Jun/2025 22:14:20] "[35m[1mGET /rag/suggestions HTTP/1.1[0m" 503 -
+2025-06-21 22:14:23,462 - INFO - RAG Request: GET /rag/status
+2025-06-21 22:14:23,462 - INFO - 127.0.0.1 - - [21/Jun/2025 22:14:23] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 22:14:23,820 - INFO - RAG Request: GET /rag/suggestions
+2025-06-21 22:14:23,820 - INFO - 127.0.0.1 - - [21/Jun/2025 22:14:23] "[35m[1mGET /rag/suggestions HTTP/1.1[0m" 503 -
+2025-06-21 22:14:54,297 - INFO - RAG Request: GET /rag/status
+2025-06-21 22:14:54,297 - INFO - 127.0.0.1 - - [21/Jun/2025 22:14:54] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 22:15:24,600 - INFO - RAG Request: GET /rag/status
+2025-06-21 22:15:24,601 - INFO - 127.0.0.1 - - [21/Jun/2025 22:15:24] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 22:15:54,291 - INFO - RAG Request: GET /rag/status
+2025-06-21 22:15:54,292 - INFO - 127.0.0.1 - - [21/Jun/2025 22:15:54] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 22:16:24,615 - INFO - RAG Request: GET /rag/status
+2025-06-21 22:16:24,615 - INFO - 127.0.0.1 - - [21/Jun/2025 22:16:24] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 22:16:54,292 - INFO - RAG Request: GET /rag/status
+2025-06-21 22:16:54,293 - INFO - 127.0.0.1 - - [21/Jun/2025 22:16:54] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 22:17:24,613 - INFO - RAG Request: GET /rag/status
+2025-06-21 22:17:24,613 - INFO - 127.0.0.1 - - [21/Jun/2025 22:17:24] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 22:18:16,405 - INFO - RAG Request: GET /rag/status
+2025-06-21 22:18:16,406 - INFO - 127.0.0.1 - - [21/Jun/2025 22:18:16] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 22:18:24,615 - INFO - RAG Request: GET /rag/status
+2025-06-21 22:18:24,615 - INFO - 127.0.0.1 - - [21/Jun/2025 22:18:24] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 22:18:54,299 - INFO - RAG Request: GET /rag/status
+2025-06-21 22:18:54,300 - INFO - 127.0.0.1 - - [21/Jun/2025 22:18:54] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 22:19:43,629 - INFO - RAG Request: GET /rag/status
+2025-06-21 22:19:43,636 - INFO - 127.0.0.1 - - [21/Jun/2025 22:19:43] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 22:20:43,287 - INFO - RAG Request: GET /rag/status
+2025-06-21 22:20:43,289 - INFO - 127.0.0.1 - - [21/Jun/2025 22:20:43] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 22:21:43,594 - INFO - RAG Request: GET /rag/status
+2025-06-21 22:21:43,595 - INFO - 127.0.0.1 - - [21/Jun/2025 22:21:43] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 22:22:43,386 - INFO - RAG Request: GET /rag/status
+2025-06-21 22:22:43,386 - INFO - 127.0.0.1 - - [21/Jun/2025 22:22:43] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 22:23:43,605 - INFO - RAG Request: GET /rag/status
+2025-06-21 22:23:43,605 - INFO - 127.0.0.1 - - [21/Jun/2025 22:23:43] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 22:24:43,299 - INFO - RAG Request: GET /rag/status
+2025-06-21 22:24:43,300 - INFO - 127.0.0.1 - - [21/Jun/2025 22:24:43] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 22:25:43,615 - INFO - RAG Request: GET /rag/status
+2025-06-21 22:25:43,615 - INFO - 127.0.0.1 - - [21/Jun/2025 22:25:43] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 22:26:43,302 - INFO - RAG Request: GET /rag/status
+2025-06-21 22:26:43,303 - INFO - 127.0.0.1 - - [21/Jun/2025 22:26:43] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 22:27:43,602 - INFO - RAG Request: GET /rag/status
+2025-06-21 22:27:43,602 - INFO - 127.0.0.1 - - [21/Jun/2025 22:27:43] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 22:28:43,292 - INFO - RAG Request: GET /rag/status
+2025-06-21 22:28:43,293 - INFO - 127.0.0.1 - - [21/Jun/2025 22:28:43] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 22:29:43,587 - INFO - RAG Request: GET /rag/status
+2025-06-21 22:29:43,587 - INFO - 127.0.0.1 - - [21/Jun/2025 22:29:43] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 22:30:43,293 - INFO - RAG Request: GET /rag/status
+2025-06-21 22:30:43,294 - INFO - 127.0.0.1 - - [21/Jun/2025 22:30:43] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 22:31:43,610 - INFO - RAG Request: GET /rag/status
+2025-06-21 22:31:43,611 - INFO - 127.0.0.1 - - [21/Jun/2025 22:31:43] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 22:32:43,294 - INFO - RAG Request: GET /rag/status
+2025-06-21 22:32:43,296 - INFO - 127.0.0.1 - - [21/Jun/2025 22:32:43] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 22:33:43,615 - INFO - RAG Request: GET /rag/status
+2025-06-21 22:33:43,616 - INFO - 127.0.0.1 - - [21/Jun/2025 22:33:43] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 22:34:43,390 - INFO - RAG Request: GET /rag/status
+2025-06-21 22:34:43,391 - INFO - 127.0.0.1 - - [21/Jun/2025 22:34:43] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 22:35:43,599 - INFO - RAG Request: GET /rag/status
+2025-06-21 22:35:43,599 - INFO - 127.0.0.1 - - [21/Jun/2025 22:35:43] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 22:35:57,464 - INFO - RAG Request: GET /rag/status
+2025-06-21 22:35:57,466 - INFO - 127.0.0.1 - - [21/Jun/2025 22:35:57] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 22:36:24,595 - INFO - RAG Request: GET /rag/status
+2025-06-21 22:36:24,596 - INFO - 127.0.0.1 - - [21/Jun/2025 22:36:24] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 22:36:54,291 - INFO - RAG Request: GET /rag/status
+2025-06-21 22:36:54,292 - INFO - 127.0.0.1 - - [21/Jun/2025 22:36:54] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 22:37:43,600 - INFO - RAG Request: GET /rag/status
+2025-06-21 22:37:43,603 - INFO - 127.0.0.1 - - [21/Jun/2025 22:37:43] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 22:38:43,296 - INFO - RAG Request: GET /rag/status
+2025-06-21 22:38:43,297 - INFO - 127.0.0.1 - - [21/Jun/2025 22:38:43] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
+2025-06-21 22:38:50,301 - INFO -  Sinal 2 recebido. Finalizando graciosamente...
+2025-06-21 22:38:50,301 - INFO - Servidor com PID 8104 finalizado
+2025-06-22 13:30:14,550 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.45:5000
+2025-06-22 13:30:14,550 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-22 13:30:19,906 - INFO - 127.0.0.1 - - [22/Jun/2025 13:30:19] "[33mGET /rag/status HTTP/1.1[0m" 404 -
+2025-06-22 13:30:20,575 - INFO - 127.0.0.1 - - [22/Jun/2025 13:30:20] "[33mGET /rag/status HTTP/1.1[0m" 404 -
+2025-06-22 13:30:20,931 - INFO - 127.0.0.1 - - [22/Jun/2025 13:30:20] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-06-22 13:30:21,363 - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-22 13:30:21,363 - INFO - 127.0.0.1 - - [22/Jun/2025 13:30:21] "GET /triagem HTTP/1.1" 200 -
+2025-06-22 13:30:21,657 - INFO -  Cliente WebSocket conectado: XQ1aqiHwlZ3zmkIlAAAB
+2025-06-22 13:30:21,673 - INFO -  Cliente WebSocket conectado: jSo9VttVJ6k_5vh0AAAD
+2025-06-22 13:30:24,390 - INFO - Cliente desconectado: XQ1aqiHwlZ3zmkIlAAAB (removidas 0 operações)
+2025-06-22 13:30:24,391 - INFO - Cliente desconectado: jSo9VttVJ6k_5vh0AAAD (removidas 0 operações)
+2025-06-22 13:30:24,414 - INFO - 127.0.0.1 - - [22/Jun/2025 13:30:24] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-22 13:30:24,415 - INFO - 127.0.0.1 - - [22/Jun/2025 13:30:24] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-22 13:30:24,421 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-22 13:30:24,421 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-22 13:30:24,718 - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-22 13:30:24,718 - INFO - 127.0.0.1 - - [22/Jun/2025 13:30:24] "GET /triagem HTTP/1.1" 200 -
+2025-06-22 13:30:25,090 - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-22 13:30:25,092 - INFO - 127.0.0.1 - - [22/Jun/2025 13:30:25] "GET /triagem HTTP/1.1" 200 -
+2025-06-22 13:30:25,388 - INFO -  Cliente WebSocket conectado: RVxZUR6dJs58sWGUAAAF
+2025-06-22 13:30:25,403 - INFO -  Cliente WebSocket conectado: UUnygcZ8aBKOa3V5AAAH
+2025-06-22 13:30:25,832 - INFO - Cliente desconectado: RVxZUR6dJs58sWGUAAAF (removidas 0 operações)
+2025-06-22 13:30:25,832 - INFO - Cliente desconectado: UUnygcZ8aBKOa3V5AAAH (removidas 0 operações)
+2025-06-22 13:30:26,323 - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-22 13:30:26,324 - INFO -  Cliente WebSocket conectado: psOPj_HgzS9BP8Q0AAAJ
+2025-06-22 13:30:26,325 - INFO - 127.0.0.1 - - [22/Jun/2025 13:30:26] "GET /triagem HTTP/1.1" 200 -
+2025-06-22 13:30:26,358 - INFO -  Cliente WebSocket conectado: YCEBB0s7lzCEvzG9AAAL
+2025-06-22 13:31:03,572 - INFO - 127.0.0.1 - - [22/Jun/2025 13:31:03] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-22 13:31:04,302 - INFO - 127.0.0.1 - - [22/Jun/2025 13:31:04] "POST /triagem/form HTTP/1.1" 200 -
+2025-06-22 13:31:04,324 - INFO - received event "start_listening" from YCEBB0s7lzCEvzG9AAAL [/]
+2025-06-22 13:31:04,346 - INFO - emitting event "progress_update" to YCEBB0s7lzCEvzG9AAAL [/]
+2025-06-22 13:31:04,810 - INFO - emitting event "progress_update" to YCEBB0s7lzCEvzG9AAAL [/]
+2025-06-22 13:31:05,118 - INFO - emitting event "progress_update" to YCEBB0s7lzCEvzG9AAAL [/]
+2025-06-22 13:31:05,672 - INFO - emitting event "progress_update" to YCEBB0s7lzCEvzG9AAAL [/]
+2025-06-22 13:31:05,985 - INFO - emitting event "progress_update" to YCEBB0s7lzCEvzG9AAAL [/]
+2025-06-22 13:31:06,392 - INFO - Markdown salvo: /Users/anacl/Documents/GMV/Triagem Inicial\123456.md
+2025-06-22 13:31:06,392 - INFO - emitting event "progress_update" to YCEBB0s7lzCEvzG9AAAL [/]
+2025-06-22 13:31:06,743 - INFO - Arquivo DAT salvo: /Users/anacl/Documents/GMV/Triagem Inicial/dat\123456.dat
+2025-06-22 13:31:06,743 - INFO - emitting event "progress_update" to YCEBB0s7lzCEvzG9AAAL [/]
+2025-06-22 13:31:46,241 - INFO - emitting event "progress_update" to YCEBB0s7lzCEvzG9AAAL [/]
+2025-06-22 13:31:46,241 - INFO -  Anonimização concluída: 1180 substituições em 39.1s
+2025-06-22 13:31:46,241 - INFO - emitting event "progress_update" to YCEBB0s7lzCEvzG9AAAL [/]
+2025-06-22 13:31:46,558 - INFO - emitting event "progress_update" to YCEBB0s7lzCEvzG9AAAL [/]
+2025-06-22 13:31:47,065 - INFO -  Processo 123456 salvo com sucesso
+2025-06-22 13:31:49,488 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-22 13:31:49,489 - INFO - 127.0.0.1 - - [22/Jun/2025 13:31:49] "GET /triagem HTTP/1.1" 200 -
+2025-06-22 13:31:59,323 - INFO - 127.0.0.1 - - [22/Jun/2025 13:31:59] "OPTIONS /triagem/123456 HTTP/1.1" 200 -
+2025-06-22 13:31:59,574 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-22 13:31:59,576 - INFO - 127.0.0.1 - - [22/Jun/2025 13:31:59] "DELETE /triagem/123456 HTTP/1.1" 200 -
+2025-06-22 13:31:59,642 - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-22 13:31:59,642 - INFO - 127.0.0.1 - - [22/Jun/2025 13:31:59] "GET /triagem HTTP/1.1" 200 -
+2025-06-22 13:32:01,557 - INFO - Cliente desconectado: psOPj_HgzS9BP8Q0AAAJ (removidas 0 operações)
+2025-06-22 13:32:01,557 - INFO - Cliente desconectado: YCEBB0s7lzCEvzG9AAAL (removidas 0 operações)
+2025-06-22 13:32:01,579 - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-22 13:32:01,580 - INFO - 127.0.0.1 - - [22/Jun/2025 13:32:01] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-22 13:32:01,580 - INFO - 127.0.0.1 - - [22/Jun/2025 13:32:01] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-22 13:32:01,581 - INFO - 127.0.0.1 - - [22/Jun/2025 13:32:01] "GET /triagem HTTP/1.1" 200 -
+2025-06-22 13:32:01,583 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-22 13:32:01,583 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-22 13:32:10,042 - INFO -  Sinal 2 recebido. Finalizando graciosamente...
+2025-06-22 13:32:10,042 - INFO - Servidor com PID 7684 finalizado

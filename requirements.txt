@@ -8,3 +8,8 @@ pyMuPDF
 requests
 flask_socketio
 spacy
+scikit-learn
+numpy
+sentence-transformers
+torch
+ollama
