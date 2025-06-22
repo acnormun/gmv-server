@@ -58,14 +58,14 @@ def baixar_zip_do_repositorio():
                 z.extractall("update_temp/")
             print(" Atualização baixada e extraída para a pasta 'update_temp/'")
         else:
-            print("❌ Falha ao baixar atualização:", res.status_code, res.text)
+            print("Falha ao baixar atualização:", res.status_code, res.text)
     except Exception as e:
-        print("❌ Erro ao baixar o ZIP:", e)
+        print("Erro ao baixar o ZIP:", e)
 
 def aplicar_atualizacao():
     subpastas = [nome for nome in os.listdir("update_temp") if os.path.isdir(os.path.join("update_temp", nome))]
     if not subpastas:
-        print("❌ Estrutura de atualização inválida.")
+        print("Estrutura de atualização inválida.")
         return
 
     nova_pasta = os.path.join("update_temp", subpastas[0])

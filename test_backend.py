@@ -17,7 +17,7 @@ def test_python():
             __import__(dep)
             print(f"    {dep}")
         except ImportError:
-            print(f"   ❌ {dep} - Execute: pip install {dep}")
+            print(f"   {dep} - Execute: pip install {dep}")
             return False
     return True
 
@@ -35,7 +35,7 @@ def test_files():
         if os.path.exists(file_path):
             print(f"    {description}: {file_path}")
         else:
-            print(f"   ⚠️ {description}: {file_path} (não existe)")
+            print(f"    {description}: {file_path} (não existe)")
     
     return True
 
@@ -69,7 +69,7 @@ def test_backend_start():
         else:
             # Processo morreu, pega output
             stdout, stderr = process.communicate()
-            print("   ❌ Servidor falhou!")
+            print("   Servidor falhou!")
             if stderr:
                 print(f"   Erro: {stderr[:500]}")
             if stdout:
@@ -77,7 +77,7 @@ def test_backend_start():
             return False
             
     except Exception as e:
-        print(f"   ❌ Erro ao testar: {e}")
+        print(f"   Erro ao testar: {e}")
         return False
 
 def test_imports():
@@ -104,7 +104,7 @@ def test_imports():
                 __import__(module)
             print(f"    {module}")
         except ImportError as e:
-            print(f"   ❌ {module}: {e}")
+            print(f"   {module}: {e}")
             all_good = False
     
     # Teste específico do pandas
@@ -112,7 +112,7 @@ def test_imports():
         import pandas as pd
         print(f"    pandas as pd")
     except ImportError as e:
-        print(f"   ❌ pandas as pd: {e}")
+        print(f"   pandas as pd: {e}")
         all_good = False
     
     return all_good
@@ -134,7 +134,7 @@ def main():
             result = test_func()
             results.append((test_name, result))
         except Exception as e:
-            print(f"   ❌ Erro no teste {test_name}: {e}")
+            print(f"   Erro no teste {test_name}: {e}")
             results.append((test_name, False))
     
     # Resumo
@@ -142,7 +142,7 @@ def main():
     print("=" * 30)
     all_passed = True
     for test_name, passed in results:
-        status = " PASSOU" if passed else "❌ FALHOU"
+        status = " PASSOU" if passed else "FALHOU"
         print(f"   {status}: {test_name}")
         if not passed:
             all_passed = False
@@ -152,7 +152,7 @@ def main():
         print(" Backend está pronto para usar")
         print("💡 Execute: python app.py")
     else:
-        print(f"\n⚠️ ALGUNS TESTES FALHARAM")
+        print(f"\n ALGUNS TESTES FALHARAM")
         print("🔧 Resolva os problemas acima antes de executar o backend")
         print("\n💡 SOLUÇÕES COMUNS:")
         print("1. pip install flask pandas")
@@ -163,8 +163,8 @@ if __name__ == "__main__":
     try:
         main()
     except KeyboardInterrupt:
-        print("\n⚠️ Teste interrompido")
+        print("\n Teste interrompido")
     except Exception as e:
-        print(f"\n❌ Erro no teste: {e}")
+        print(f"\nErro no teste: {e}")
     finally:
         input("\nPressione Enter para sair...")

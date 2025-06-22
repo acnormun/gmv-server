@@ -54,7 +54,7 @@ def receber_processo_com_markdown():
             
             # Verifica se o frontend se registrou
             if operation_id not in operation_sockets:
-                print(f"⚠️ Frontend ainda não registrado para {operation_id}, aguardando...")
+                print(f" Frontend ainda não registrado para {operation_id}, aguardando...")
                 for i in range(10):
                     time.sleep(0.5)
                     if operation_id in operation_sockets:
@@ -63,7 +63,7 @@ def receber_processo_com_markdown():
             
             # MUDANÇA: sempre continua, não chama processar_sem_progresso
             if operation_id not in operation_sockets:
-                print(f"⚠️ Frontend não registrado, mas continuando com progresso")
+                print(f" Frontend não registrado, mas continuando com progresso")
             else:
                 print(f" Frontend registrado! Iniciando processamento com progresso...")
             
@@ -85,12 +85,12 @@ def receber_processo_com_markdown():
                 
                 if not numero:
                     send_progress_ws(operation_id, 0, 'Erro: Número do processo é obrigatório', 0)
-                    print("❌ Número do processo obrigatório")
+                    print("Número do processo obrigatório")
                     return
                 
                 if not markdown or not numero:
                     send_progress_ws(operation_id, 0, 'Erro: Campos obrigatórios ausentes', 0)
-                    logger.warning("⚠️ Campos obrigatórios ausentes")
+                    logger.warning(" Campos obrigatórios ausentes")
                     return
                 
                 logger.info(f"📄 Processando processo: {numero}")
@@ -109,7 +109,7 @@ def receber_processo_com_markdown():
                         else:
                             print("   Nenhum suspeito detectado")
                     except Exception as e:
-                        print(f"❌ Erro na busca de suspeitos: {e}")
+                        print(f"Erro na busca de suspeitos: {e}")
                         suspeitos = []
                 
                 logger.info(f"🔍 Suspeitos encontrados: {suspeitos}")
@@ -153,10 +153,10 @@ def receber_processo_com_markdown():
                             tamanho_arquivo = os.path.getsize(caminho_dat)
                             print(f"📊 Tamanho do arquivo DAT: {tamanho_arquivo} bytes")
                         else:
-                            print(f"❌ ERRO: Arquivo DAT não foi criado!")
+                            print(f"ERRO: Arquivo DAT não foi criado!")
                             
                     except Exception as e:
-                        print(f"❌ Erro ao salvar arquivo DAT: {e}")
+                        print(f"Erro ao salvar arquivo DAT: {e}")
                         logger.error(f"Erro ao salvar arquivo DAT: {e}")
                 else:
                     print("ℹ️ Nenhum arquivo DAT fornecido para salvar")
@@ -177,7 +177,7 @@ def receber_processo_com_markdown():
                         
                         anonimizador = get_anonimizador()
                         if anonimizador is None:
-                            print("❌ ERRO: Anonimizador não pôde ser inicializado!")
+                            print("ERRO: Anonimizador não pôde ser inicializado!")
                             raise Exception("Anonimizador não disponível")
                         
                         print(" Anonimizador carregado com sucesso")
@@ -207,10 +207,10 @@ def receber_processo_com_markdown():
                                 print(f"📊 Tamanho do arquivo anonimizado: {tamanho} bytes")
                                 arquivos_anonimizados["md"] = caminho_md_anon
                             else:
-                                print(f"❌ ERRO: Arquivo anonimizado não foi criado!")
+                                print(f"ERRO: Arquivo anonimizado não foi criado!")
                                 
                         except Exception as e:
-                            print(f"❌ Erro ao salvar markdown anonimizado: {e}")
+                            print(f"Erro ao salvar markdown anonimizado: {e}")
                             raise
                         
                         caminho_mapa = None
@@ -235,8 +235,8 @@ def receber_processo_com_markdown():
                         logger.info(f" Anonimização concluída: {total_substituicoes} substituições em {tempo_anonimizacao}s")
                         
                     except Exception as e:
-                        print(f"❌ Erro durante anonimização otimizada: {e}")
-                        logger.error(f"❌ Erro durante anonimização otimizada: {e}")
+                        print(f"Erro durante anonimização otimizada: {e}")
+                        logger.error(f"Erro durante anonimização otimizada: {e}")
                         import traceback
                         traceback.print_exc()
                 else:
@@ -307,7 +307,7 @@ def receber_processo_com_markdown():
                 
             except Exception as e:
                 send_progress_ws(operation_id, 0, f'Erro: {str(e)}', 0)
-                print(f"❌ Erro no processamento: {e}")
+                print(f"Erro no processamento: {e}")
                 import traceback
                 traceback.print_exc()
                 operation_sockets.pop(operation_id, None)
@@ -323,7 +323,7 @@ def receber_processo_com_markdown():
         }), 200
         
     except Exception as e:
-        print(f"❌ Erro em POST /triagem/form: {str(e)}")
+        print(f"Erro em POST /triagem/form: {str(e)}")
         import traceback
         traceback.print_exc()
         return jsonify({'error': str(e)}), 500

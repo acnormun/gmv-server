@@ -121,7 +121,7 @@ def handle_disconnect():
     for op_id in to_remove:
         del operation_sockets[op_id]
         
-    logger.info(f'❌ Cliente desconectado: {request.sid} (removidas {len(to_remove)} operações)')
+    logger.info(f'Cliente desconectado: {request.sid} (removidas {len(to_remove)} operações)')
 
 # NOVO: Health check com info do WebSocket
 @app.route('/health', methods=['GET'])

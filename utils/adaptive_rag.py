@@ -1,22 +1,14 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-adaptive_rag.py - Sistema RAG Adaptativo para GMV
-Utilitário modular para integração com app.py
-"""
-
 import os
-import json
 import pandas as pd
 import numpy as np
-from typing import List, Dict, Optional, Tuple
-from dataclasses import dataclass, asdict
+from typing import List, Dict
+from dataclasses import dataclass
 from enum import Enum
 import re
-from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.cluster import KMeans
 import logging
+import requests
 from datetime import datetime
 
 # ==========================================
@@ -51,6 +43,7 @@ class RAGResult:
     confidence_score: float
     strategy_used: str
     processing_time: float
+    llm_model: str
     
     def to_dict(self):
         """Converte para dicionário para JSON"""
@@ -60,133 +53,217 @@ class RAGResult:
             'retrieved_chunks': self.retrieved_chunks,
             'confidence_score': self.confidence_score,
             'strategy_used': self.strategy_used,
-            'processing_time': self.processing_time
+            'processing_time': self.processing_time,
+            'llm_model': self.llm_model
         }
 
 # ==========================================
-# 🧠 SISTEMA DE EMBEDDINGS OFFLINE
+# 🦙 CLIENTE LLAMA 3.1:8B OTIMIZADO
 # ==========================================
 
-class AdvancedTfidfEmbeddings:
-    """Sistema avançado de embeddings usando TF-IDF + features customizadas"""
+class Llama31Client:
+    """Cliente otimizado para Llama 3.1:8B via Ollama"""
     
-    def __init__(self, max_features: int = 3000):
-        self.max_features = max_features
-        self.tfidf = TfidfVectorizer(
-            max_features=max_features,
-            stop_words=None,
-            ngram_range=(1, 3),
-            min_df=1,
-            max_df=0.9,
-            lowercase=True,
-            strip_accents='unicode',
-            sublinear_tf=True
-        )
+    def __init__(self, base_url: str = "http://localhost:11434"):
+        self.base_url = base_url
+        self.model_name = "llama3.1:8b"
+        self.is_available = False
+        
+        # Configurações otimizadas para Llama 3.1:8B
+        self.generation_config = {
+            "temperature": 0.1,          # Baixa para respostas mais consistentes
+            "top_p": 0.9,               # Boa diversidade controlada
+            "top_k": 40,                # Vocabulário focado
+            "repeat_penalty": 1.1,      # Evita repetições
+            "num_predict": 2048,        # Respostas detalhadas
+            "stop": ["###", "---", "```"]  # Stopwords para melhor controle
+        }
+        
+        self._check_and_setup()
+    
+    def _check_and_setup(self):
+        """Verifica e configura Llama 3.1:8B"""
+        print("🦙 Configurando Llama 3.1:8B...")
+        
+        # Verifica se Ollama está rodando
+        if not self._check_ollama_running():
+            raise ConnectionError(
+                "❌ Ollama não está rodando!\n"
+                "💡 Para resolver:\n"
+                "   1. Instale: https://ollama.ai\n" 
+                "   2. Execute: ollama serve\n"
+                "   3. Baixe o modelo: ollama pull llama3.1:8b"
+            )
+        
+        # Verifica se modelo está disponível
+        if not self._check_model_available():
+            print("📥 Baixando Llama 3.1:8B (isso pode demorar alguns minutos)...")
+            if not self._download_model():
+                raise RuntimeError("❌ Falha ao baixar Llama 3.1:8B")
+        
+        # Testa o modelo
+        if self._test_model():
+            self.is_available = True
+            print("✅ Llama 3.1:8B configurado e testado com sucesso!")
+        else:
+            raise RuntimeError("❌ Llama 3.1:8B não está funcionando corretamente")
+    
+    def _check_ollama_running(self) -> bool:
+        """Verifica se Ollama está rodando"""
+        try:
+            response = requests.get(f"{self.base_url}/api/tags", timeout=5)
+            return response.status_code == 200
+        except:
+            return False
+    
+    def _check_model_available(self) -> bool:
+        """Verifica se Llama 3.1:8B está disponível"""
+        try:
+            response = requests.get(f"{self.base_url}/api/tags")
+            if response.status_code == 200:
+                models = response.json().get('models', [])
+                available_models = [model['name'] for model in models]
+                return self.model_name in available_models
+        except:
+            pass
+        return False
+    
+    def _download_model(self) -> bool:
+        """Baixa Llama 3.1:8B"""
+        try:
+            print("🔄 Iniciando download do Llama 3.1:8B...")
+            response = requests.post(
+                f"{self.base_url}/api/pull",
+                json={"name": self.model_name},
+                timeout=1800  # 30 minutos timeout
+            )
+            return response.status_code == 200
+        except Exception as e:
+            print(f"❌ Erro no download: {e}")
+            return False
+    
+    def _test_model(self) -> bool:
+        """Testa Llama 3.1:8B"""
+        try:
+            response = self.generate(
+                prompt="Diga apenas 'Teste OK' em português.",
+                max_tokens=10
+            )
+            return "ok" in response.lower()
+        except:
+            return False
+    
+    def generate(self, prompt: str, system_prompt: str = "", max_tokens: int = None) -> str:
+        """Gera resposta usando Llama 3.1:8B"""
+        if not self.is_available:
+            raise ValueError("Llama 3.1:8B não está disponível")
+        
+        # Prepara configuração
+        config = self.generation_config.copy()
+        if max_tokens:
+            config["num_predict"] = max_tokens
+        
+        try:
+            payload = {
+                "model": self.model_name,
+                "prompt": prompt,
+                "system": system_prompt,
+                "stream": False,
+                "options": config
+            }
+            
+            response = requests.post(
+                f"{self.base_url}/api/generate",
+                json=payload,
+                timeout=120
+            )
+            
+            if response.status_code == 200:
+                return response.json().get('response', '').strip()
+            else:
+                print(f"❌ Erro na geração: {response.status_code}")
+                return "Erro na geração de resposta"
+                
+        except Exception as e:
+            print(f"❌ Erro na geração: {e}")
+            return "Erro de conectividade"
+    
+    def get_info(self) -> Dict:
+        """Retorna informações do modelo"""
+        return {
+            "model": self.model_name,
+            "status": "disponível" if self.is_available else "indisponível",
+            "config": self.generation_config,
+            "url": self.base_url
+        }
+
+# ==========================================
+# 🧠 SISTEMA DE EMBEDDINGS
+# ==========================================
+
+class MiniLMEmbeddings:
+    """Sistema de embeddings otimizado para português"""
+    
+    def __init__(self, model_name: str = "all-MiniLM-L12-v2"):
+        self.model_name = model_name
+        self.model = None
         self.is_fitted = False
-        
-        # Palavras-chave jurídicas com pesos
-        self.domain_keywords = {
-            'lavagem': 15.0, 'dinheiro': 12.0, 'fraude': 14.0, 'corrupcao': 14.0,
-            'suspeito': 10.0, 'investigacao': 8.0, 'processo': 6.0, 'crime': 12.0,
-            'financeiro': 8.0, 'bancario': 8.0, 'movimentacao': 7.0, 'operacao': 7.0,
-            'empresa': 5.0, 'pessoa': 4.0, 'documento': 6.0, 'evidencia': 10.0,
-            'prova': 10.0, 'analise': 6.0, 'relatorio': 5.0, 'conclusao': 8.0,
-            'apreensao': 9.0, 'bloqueio': 8.0, 'indisponibilidade': 9.0,
-            'organizacao': 7.0, 'quadrilha': 9.0, 'esquema': 8.0,
-            'falsificacao': 11.0, 'adulteracao': 10.0, 'propina': 12.0
-        }
+        self._load_model()
     
-    def _preprocess_text(self, text: str) -> str:
-        """Pré-processamento do texto"""
-        if not text:
-            return ""
-        
-        text = re.sub(r'[^\w\s áéíóúâêîôûàèìòùãõçÁÉÍÓÚÂÊÎÔÛÀÈÌÒÙÃÕÇ]', ' ', text.lower())
-        text = re.sub(r'\d{4}\.\d{2}\.\d{4}\.\d{1}\.\d{2}\.\d{4}', 'NUMERO_PROCESSO', text)
-        text = re.sub(r'r\$\s*[\d.,]+', 'VALOR_MONETARIO', text)
-        text = re.sub(r'\d{1,2}\/\d{1,2}\/\d{4}', 'DATA', text)
-        text = re.sub(r'\s+', ' ', text).strip()
-        
-        return text
-    
-    def fit(self, texts: List[str]):
-        """Treina o modelo com os textos"""
-        if not texts:
-            raise ValueError("Lista de textos vazia")
-        
-        processed_texts = [self._preprocess_text(text) for text in texts]
-        processed_texts = [t for t in processed_texts if t.strip()]
-        
-        if not processed_texts:
-            raise ValueError("Todos os textos ficaram vazios após processamento")
-        
-        self.tfidf.fit(processed_texts)
-        self.is_fitted = True
+    def _load_model(self):
+        """Carrega modelo de embeddings"""
+        try:
+            from sentence_transformers import SentenceTransformer
+            print(f"🔄 Carregando {self.model_name}...")
+            
+            self.model = SentenceTransformer(self.model_name)
+            self.is_fitted = True
+            
+            print(f"✅ Embeddings carregados!")
+            
+        except ImportError:
+            raise ImportError(
+                "sentence-transformers não instalado.\n"
+                "Execute: pip install sentence-transformers"
+            )
+        except Exception as e:
+            raise RuntimeError(f"Erro ao carregar embeddings: {e}")
     
     def encode(self, texts: List[str], show_progress_bar: bool = False) -> np.ndarray:
-        """Gera embeddings para os textos"""
+        """Gera embeddings"""
         if not self.is_fitted:
-            raise ValueError("Modelo não treinado. Execute .fit() primeiro.")
+            raise ValueError("Modelo não carregado")
         
         if isinstance(texts, str):
             texts = [texts]
         
-        processed_texts = [self._preprocess_text(text) for text in texts]
-        tfidf_embeddings = self.tfidf.transform(processed_texts).toarray()
-        domain_features = self._extract_domain_features(texts)
-        
-        combined_embeddings = np.hstack([
-            tfidf_embeddings,
-            domain_features * 0.2
-        ])
-        
-        return combined_embeddings
-    
-    def _extract_domain_features(self, texts: List[str]) -> np.ndarray:
-        """Extrai features específicas do domínio jurídico"""
-        features = []
-        
-        for text in texts:
-            text_lower = text.lower()
-            feat = []
+        try:
+            embeddings = self.model.encode(
+                texts,
+                show_progress_bar=show_progress_bar,
+                convert_to_numpy=True,
+                normalize_embeddings=True
+            )
+            return embeddings
             
-            feat.append(len(text))
-            feat.append(len(text.split()))
-            feat.append(len(re.findall(r'\d', text)) / max(len(text), 1))
-            
-            for keyword, weight in self.domain_keywords.items():
-                count = len(re.findall(r'\b' + keyword, text_lower))
-                feat.append(count * weight)
-            
-            feat.append(1 if re.search(r'\d{4}\.\d{2}\.\d{4}', text) else 0)
-            feat.append(1 if re.search(r'r\$|real|reais', text_lower) else 0)
-            feat.append(1 if re.search(r'\d{1,2}\/\d{1,2}\/\d{4}', text) else 0)
-            feat.append(len(re.findall(r'\b[A-Z]{2,}\b', text)))
-            
-            features.append(feat)
-        
-        features_array = np.array(features, dtype=float)
-        
-        for i in range(features_array.shape[1]):
-            col = features_array[:, i]
-            if col.std() > 0:
-                features_array[:, i] = (col - col.mean()) / col.std()
-        
-        return features_array
+        except Exception as e:
+            print(f"❌ Erro ao gerar embeddings: {e}")
+            raise
 
 # ==========================================
-# 🤖 SISTEMA RAG ADAPTATIVO
+# 🤖 RAG ADAPTATIVO COM LLAMA 3.1:8B
 # ==========================================
 
-class GMVAdaptiveRAG:
-    """Sistema RAG adaptativo para dados do GMV"""
+class GMVAdaptiveRAGLlama31:
+    """Sistema RAG adaptativo otimizado para Llama 3.1:8B"""
     
     def __init__(self, chunk_size: int = 400, chunk_overlap: int = 50):
         self.chunk_size = chunk_size
         self.chunk_overlap = chunk_overlap
         
-        # Sistema de embeddings offline
-        self.embedding_model = AdvancedTfidfEmbeddings()
+        # Sistemas de IA
+        self.embedding_model = MiniLMEmbeddings()
+        self.llm_client = Llama31Client()
         
         # Storage
         self.documents: List[ProcessDocument] = []
@@ -194,39 +271,118 @@ class GMVAdaptiveRAG:
         self.chunk_metadata: List[Dict] = []
         self.all_chunks: List[str] = []
         
-        # Configuração de logging
+        # Configuração
         self.logger = logging.getLogger(__name__)
-        
-        # Cache
         self.query_cache: Dict[str, RAGResult] = {}
         self.is_initialized = False
+        
+        # Prompts otimizados para Llama 3.1:8B
+        self.prompt_templates = {
+            QueryType.FACTUAL: """Você é um assistente especializado em análise de processos jurídicos do GMV.
+
+INSTRUÇÕES:
+- Responda de forma direta e factual
+- Cite informações específicas dos documentos
+- Use dados concretos (números, datas, nomes)
+- Mantenha o foco na pergunta
+
+CONTEXTO DOS DOCUMENTOS:
+{context}
+
+PERGUNTA: {query}
+
+RESPOSTA:""",
+
+            QueryType.ANALYTICAL: """Você é um analista especializado em processos jurídicos do GMV.
+
+INSTRUÇÕES:
+- Faça uma análise detalhada e comparativa
+- Identifique padrões e tendências
+- Compare dados entre diferentes processos
+- Forneça insights relevantes
+
+CONTEXTO DOS DOCUMENTOS:
+{context}
+
+PERGUNTA: {query}
+
+ANÁLISE:""",
+
+            QueryType.CONTEXTUAL: """Você é um investigador experiente do GMV.
+
+INSTRUÇÕES:
+- Explique o contexto e circunstâncias
+- Relacione informações entre documentos
+- Descreva o cenário completo
+- Identifique conexões importantes
+
+CONTEXTO DOS DOCUMENTOS:
+{context}
+
+PERGUNTA: {query}
+
+CONTEXTO:""",
+
+            QueryType.OPINION: """Você é um consultor jurídico especializado do GMV.
+
+INSTRUÇÕES:
+- Forneça avaliação baseada em padrões observados
+- Identifique tendências e indicadores
+- Baseie-se nos dados disponíveis
+- Seja objetivo nas conclusões
+
+CONTEXTO DOS DOCUMENTOS:
+{context}
+
+PERGUNTA: {query}
+
+AVALIAÇÃO:"""
+        }
+        
+        # Prompt de sistema otimizado para Llama 3.1
+        self.system_prompt = """Você é um assistente especializado em análise de processos jurídicos do Gabinete de Monitoramento e Vigilância (GMV).
+
+CARACTERÍSTICAS:
+- Responda sempre em português brasileiro
+- Seja preciso e objetivo
+- Cite informações específicas dos documentos
+- Mantenha confidencialidade dos dados
+- Foque apenas nas informações fornecidas
+- Use linguagem técnica apropriada
+
+FORMATO DE RESPOSTA:
+- Seja claro e estruturado
+- Use bullets quando apropriado
+- Evite especulações
+- Baseie-se somente nos dados fornecidos"""
     
     def initialize(self, triagem_path: str, pasta_destino: str, pasta_dat: str = None) -> bool:
-        """Inicializa o sistema carregando dados"""
+        """Inicializa o sistema"""
         try:
-            self.logger.info("🔄 Inicializando sistema RAG...")
+            self.logger.info("🔄 Inicializando RAG com Llama 3.1:8B...")
             
             num_docs = self.load_gmv_data(triagem_path, pasta_destino, pasta_dat or "")
             
             if num_docs > 0:
                 self.is_initialized = True
-                self.logger.info(f" Sistema RAG inicializado com {num_docs} documentos")
+                self.logger.info(f"✅ RAG inicializado com {num_docs} documentos")
+                print(f"🦙 Usando Llama 3.1:8B para geração de respostas")
                 return True
             else:
-                self.logger.error("❌ Falha na inicialização - nenhum documento carregado")
+                self.logger.error("Falha - nenhum documento carregado")
                 return False
                 
         except Exception as e:
-            self.logger.error(f"❌ Erro na inicialização: {str(e)}")
+            self.logger.error(f"Erro na inicialização: {e}")
             return False
     
     def load_gmv_data(self, triagem_path: str, pasta_destino: str, pasta_dat: str) -> int:
-        """Carrega dados do sistema GMV"""
+        """Carrega dados do GMV"""
         try:
             processos = self._extrair_tabela_triagem(triagem_path)
             
             if not processos:
-                self.logger.warning("⚠️ Nenhum processo encontrado na tabela de triagem")
+                self.logger.warning("⚠️ Nenhum processo na triagem")
                 return 0
             
             for processo in processos:
@@ -258,11 +414,11 @@ class GMVAdaptiveRAG:
                 return 0
                 
         except Exception as e:
-            self.logger.error(f"❌ Erro ao carregar dados: {str(e)}")
+            self.logger.error(f"Erro ao carregar dados: {e}")
             return 0
     
     def _extrair_tabela_triagem(self, arquivo_md: str) -> List[Dict]:
-        """Extrai dados da tabela de triagem markdown"""
+        """Extrai dados da tabela de triagem"""
         processos = []
         
         try:
@@ -290,13 +446,13 @@ class GMVAdaptiveRAG:
                         processos.append(processo)
                         
         except Exception as e:
-            self.logger.error(f"Erro ao extrair tabela: {str(e)}")
+            self.logger.error(f"Erro ao extrair tabela: {e}")
             
         return processos
     
     def _process_documents(self):
-        """Processa documentos em chunks e gera embeddings"""
-        self.logger.info("🔄 Processando documentos em chunks...")
+        """Processa documentos em chunks"""
+        self.logger.info("🔄 Processando documentos...")
         
         all_chunks = []
         all_metadata = []
@@ -332,11 +488,10 @@ class GMVAdaptiveRAG:
             self.all_chunks = all_chunks
             self.chunk_metadata = all_metadata
             
-            # Treina e gera embeddings
-            self.embedding_model.fit(all_chunks)
+            print("🔄 Gerando embeddings...")
             self.chunk_embeddings = self.embedding_model.encode(all_chunks, show_progress_bar=True)
             
-            self.logger.info(f" {len(all_chunks)} chunks processados")
+            self.logger.info(f"✅ {len(all_chunks)} chunks processados")
     
     def _create_chunks_with_overlap(self, text: str) -> List[str]:
         """Cria chunks com overlap"""
@@ -353,32 +508,38 @@ class GMVAdaptiveRAG:
         return chunks
     
     def _classify_query_type(self, query: str) -> QueryType:
-        """Classifica o tipo de consulta"""
+        """Classifica tipo de consulta"""
         query_lower = query.lower()
         
+        # Padrões otimizados para português brasileiro
         factual_patterns = [
             r'\b(qual|quais|quando|onde|quem|quantos|numero|data|nome)\b',
             r'\b(processo.*numero|numero.*processo)\b',
-            r'\b(responsavel|status|tema)\b'
+            r'\b(responsavel|status|tema|data)\b',
+            r'\b(quanto|quantas|que.*e|o.*que)\b'
         ]
         
         analytical_patterns = [
             r'\b(compare|analise|diferenca|relacao|tendencia|padrao)\b',
             r'\b(maior|menor|melhor|pior|mais|menos)\b',
-            r'\b(como.*difere|porque.*diferente)\b'
+            r'\b(como.*difere|porque.*diferente|em.*relacao)\b',
+            r'\b(distribui[cç][aã]o|frequencia|incidencia)\b'
         ]
         
         contextual_patterns = [
             r'\b(contexto|situacao|cenario|ambiente|circunstancia)\b',
-            r'\b(explique.*porque|razao.*por)\b',
-            r'\b(considerando|levando.*conta)\b'
+            r'\b(explique.*porque|razao.*por|motivo)\b',
+            r'\b(considerando|levando.*conta|dado.*que)\b',
+            r'\b(historico|antecedentes|origem)\b'
         ]
         
         opinion_patterns = [
             r'\b(opini[aã]o|acho|acredito|parece|talvez|provavel)\b',
-            r'\b(tendencia|futuro|prever|expectativa)\b'
+            r'\b(tendencia|futuro|prever|expectativa|perspectiva)\b',
+            r'\b(avalia[cç][aã]o|julgamento|considera[cç][aã]o)\b'
         ]
         
+        # Classifica por prioridade
         for pattern in factual_patterns:
             if re.search(pattern, query_lower):
                 return QueryType.FACTUAL
@@ -395,15 +556,15 @@ class GMVAdaptiveRAG:
             if re.search(pattern, query_lower):
                 return QueryType.OPINION
         
-        return QueryType.FACTUAL
+        return QueryType.FACTUAL  # Default
     
     def _retrieval_strategy(self, query: str, query_type: QueryType, k: int = 5) -> List[Dict]:
-        """Executa estratégia de recuperação baseada no tipo de consulta"""
+        """Estratégia de recuperação adaptativa"""
         query_embedding = self.embedding_model.encode([query])
         similarities = cosine_similarity(query_embedding, self.chunk_embeddings)[0]
         
         if query_type == QueryType.ANALYTICAL:
-            # Para consultas analíticas, busca mais diversidade
+            # Diversidade para análises
             top_indices = np.argsort(similarities)[-k*2:][::-1]
             
             if len(top_indices) > k:
@@ -421,30 +582,18 @@ class GMVAdaptiveRAG:
                 final_indices = top_indices
                 
         elif query_type == QueryType.CONTEXTUAL:
-            # Para consultas contextuais, aplica boost baseado em metadados
+            # Boost para suspeitos e investigações
             boosted_similarities = similarities.copy()
             
             for i, metadata in enumerate(self.chunk_metadata):
                 if metadata['suspeitos']:
+                    boosted_similarities[i] *= 1.3
+                if metadata['status'].lower() in ['suspeito', 'investigação', 'investigacao']:
                     boosted_similarities[i] *= 1.2
-                if metadata['status'].lower() in ['suspeito', 'investigação']:
-                    boosted_similarities[i] *= 1.1
             
             final_indices = np.argsort(boosted_similarities)[-k:][::-1]
             
-        elif query_type == QueryType.OPINION:
-            # Para consultas de opinião, prioriza comentários
-            weighted_similarities = similarities.copy()
-            
-            for i, metadata in enumerate(self.chunk_metadata):
-                doc = next((d for d in self.documents if d.numero_processo == metadata['document_id']), None)
-                if doc and doc.comentarios.strip():
-                    weighted_similarities[i] *= 1.3
-            
-            final_indices = np.argsort(weighted_similarities)[-k:][::-1]
-            
-        else:  # FACTUAL
-            # Para consultas factuais, busca direta por similaridade
+        else:  # FACTUAL e OPINION
             final_indices = np.argsort(similarities)[-k:][::-1]
         
         results = []
@@ -458,87 +607,81 @@ class GMVAdaptiveRAG:
             
         return sorted(results, key=lambda x: x['similarity'], reverse=True)
     
-    def _generate_response(self, query: str, retrieved_chunks: List[Dict], strategy: str) -> str:
-        """Gera resposta baseada nos chunks recuperados"""
+    def _generate_response_with_llama(self, query: str, retrieved_chunks: List[Dict], strategy: str) -> str:
+        """Gera resposta usando Llama 3.1:8B"""
         
         if not retrieved_chunks:
             return "Desculpe, não encontrei informações relevantes para sua consulta."
         
-        if strategy == QueryType.FACTUAL.value:
-            response = f"Com base nos dados dos processos:\n\n"
-            
-            for chunk in retrieved_chunks[:3]:
-                metadata = chunk['metadata']
-                response += f"• **Processo {metadata['document_id']}**\n"
-                response += f"  - Tema: {metadata['tema']}\n"
-                response += f"  - Status: {metadata['status']}\n"
-                response += f"  - Confiança: {chunk['similarity']:.3f}\n\n"
-                
-        elif strategy == QueryType.ANALYTICAL.value:
-            response = f"Análise dos dados encontrados:\n\n"
-            
-            temas = {}
-            for chunk in retrieved_chunks:
-                tema = chunk['metadata']['tema']
-                if tema not in temas:
-                    temas[tema] = []
-                temas[tema].append(chunk)
-            
-            for tema, chunks in temas.items():
-                response += f"**{tema}:** {len(chunks)} processo(s) relacionado(s)\n"
-                
-        elif strategy == QueryType.CONTEXTUAL.value:
-            response = f"Considerando o contexto dos processos:\n\n"
-            
-            suspeitos_encontrados = set()
-            for chunk in retrieved_chunks:
-                suspeitos_encontrados.update(chunk['metadata']['suspeitos'])
-            
-            if suspeitos_encontrados:
-                response += f"Suspeitos identificados: {', '.join(list(suspeitos_encontrados)[:5])}\n\n"
-                
-        else:  # OPINION
-            response = f"Com base nos padrões observados:\n\n"
-            
-            status_count = {}
-            for chunk in retrieved_chunks:
-                status = chunk['metadata']['status']
-                status_count[status] = status_count.get(status, 0) + 1
-            
-            response += "Distribuição por status:\n"
-            for status, count in status_count.items():
-                response += f"• {status}: {count} processo(s)\n"
+        # Prepara contexto otimizado para Llama 3.1
+        context_parts = []
+        for i, chunk in enumerate(retrieved_chunks):
+            metadata = chunk['metadata']
+            context_parts.append(f"""
+[DOCUMENTO {i+1}]
+Processo: {metadata['document_id']}
+Tema: {metadata['tema']}
+Status: {metadata['status']}
+Relevância: {chunk['similarity']:.3f}
+
+Conteúdo:
+{chunk['content'][:600]}
+""")
         
-        response += f"\n---\n*Baseado em {len(retrieved_chunks)} chunk(s) de dados anonimizados*"
+        context = "\n".join(context_parts)
         
-        return response
+        # Seleciona template
+        query_type = QueryType(strategy)
+        prompt_template = self.prompt_templates.get(query_type, self.prompt_templates[QueryType.FACTUAL])
+        
+        # Gera prompt final
+        final_prompt = prompt_template.format(context=context, query=query)
+        
+        # Gera resposta com Llama 3.1:8B
+        try:
+            response = self.llm_client.generate(
+                prompt=final_prompt,
+                system_prompt=self.system_prompt
+            )
+            
+            # Adiciona metadados
+            response += f"\n\n---\n"
+            response += f"*Gerado por: Llama 3.1:8B*\n"
+            response += f"*Baseado em {len(retrieved_chunks)} documentos*\n"
+            response += f"*Estratégia: {strategy}*"
+            
+            return response
+            
+        except Exception as e:
+            self.logger.error(f"Erro na geração: {e}")
+            return f"Erro ao gerar resposta: {str(e)}"
     
     def query(self, query_text: str, k: int = 5, use_cache: bool = True) -> RAGResult:
-        """Executa consulta usando Adaptive RAG"""
+        """Executa consulta RAG"""
         if not self.is_initialized:
-            raise ValueError("Sistema RAG não foi inicializado. Execute initialize() primeiro.")
+            raise ValueError("Sistema não inicializado. Execute initialize() primeiro.")
         
         start_time = datetime.now()
         
-        # Verifica cache
+        # Cache
         if use_cache and query_text in self.query_cache:
-            self.logger.info("🔄 Usando resultado do cache")
+            self.logger.info("🔄 Cache hit")
             return self.query_cache[query_text]
         
-        # Classifica tipo de consulta
+        # Classifica consulta
         query_type = self._classify_query_type(query_text)
-        self.logger.info(f"🔍 Tipo de consulta detectado: {query_type.value}")
+        self.logger.info(f"🔍 Query tipo: {query_type.value}")
         
-        # Executa estratégia de recuperação
+        # Recupera chunks
         retrieved_chunks = self._retrieval_strategy(query_text, query_type, k)
         
         # Gera resposta
-        response = self._generate_response(query_text, retrieved_chunks, query_type.value)
+        response = self._generate_response_with_llama(query_text, retrieved_chunks, query_type.value)
         
         # Calcula confiança
         if retrieved_chunks:
             avg_similarity = np.mean([chunk['similarity'] for chunk in retrieved_chunks])
-            confidence = min(avg_similarity * 1.2, 1.0)
+            confidence = min(avg_similarity * 1.1, 1.0)
         else:
             confidence = 0.0
         
@@ -551,19 +694,20 @@ class GMVAdaptiveRAG:
             retrieved_chunks=retrieved_chunks,
             confidence_score=confidence,
             strategy_used=query_type.value,
-            processing_time=processing_time
+            processing_time=processing_time,
+            llm_model="llama3.1:8b"
         )
         
-        # Salva no cache
+        # Cache
         if use_cache:
             self.query_cache[query_text] = result
         
-        self.logger.info(f" Consulta processada em {processing_time:.2f}s com confiança {confidence:.3f}")
+        self.logger.info(f"✅ Processado em {processing_time:.2f}s - confiança {confidence:.3f}")
         
         return result
     
     def get_statistics(self) -> Dict:
-        """Retorna estatísticas do sistema"""
+        """Estatísticas do sistema"""
         if not self.documents:
             return {"error": "Nenhum documento carregado"}
         
@@ -584,24 +728,55 @@ class GMVAdaptiveRAG:
             "total_chunks": len(self.chunk_metadata) if self.chunk_metadata else 0,
             "cache_size": len(self.query_cache),
             "is_initialized": self.is_initialized,
+            "embedding_model": "all-MiniLM-L12-v2",
+            "llm_model": "llama3.1:8b",
+            "llm_info": self.llm_client.get_info(),
             "status_distribution": status_count,
             "tema_distribution": tema_count,
             "top_suspeitos": dict(sorted(suspeitos_count.items(), key=lambda x: x[1], reverse=True)[:10])
         }
+    
+    def test_llama_connection(self) -> Dict:
+        """Testa conexão com Llama 3.1:8B"""
+        test_queries = [
+            "Diga apenas 'Conectado' em português",
+            "Responda '2+2=4' apenas",
+            "Teste de português: responda 'OK'"
+        ]
+        
+        results = {}
+        for query in test_queries:
+            try:
+                start = datetime.now()
+                response = self.llm_client.generate(query, max_tokens=10)
+                end = datetime.now()
+                
+                results[query] = {
+                    "response": response,
+                    "time": (end - start).total_seconds(),
+                    "success": len(response) > 0
+                }
+            except Exception as e:
+                results[query] = {
+                    "error": str(e),
+                    "success": False
+                }
+        
+        return results
 
 # ==========================================
-# 🎯 INSTÂNCIA GLOBAL DO RAG
+# 🎯 INSTÂNCIA GLOBAL
 # ==========================================
 
-# Instância global para uso na aplicação Flask
-rag_instance = GMVAdaptiveRAG()
+# Instância global otimizada para Llama 3.1:8B
+rag_instance = GMVAdaptiveRAGLlama31()
 
 def initialize_rag(triagem_path: str, pasta_destino: str, pasta_dat: str = None) -> bool:
-    """Inicializa a instância global do RAG"""
+    """Inicializa RAG com Llama 3.1:8B"""
     return rag_instance.initialize(triagem_path, pasta_destino, pasta_dat)
 
 def query_rag(query: str, k: int = 5) -> Dict:
-    """Executa consulta na instância global do RAG"""
+    """Executa consulta"""
     try:
         result = rag_instance.query(query, k=k)
         return result.to_dict()
@@ -611,9 +786,14 @@ def query_rag(query: str, k: int = 5) -> Dict:
             "query": query,
             "response": "Erro ao processar consulta",
             "confidence_score": 0.0,
-            "processing_time": 0.0
+            "processing_time": 0.0,
+            "llm_model": "llama3.1:8b"
         }
 
 def get_rag_statistics() -> Dict:
-    """Retorna estatísticas da instância global do RAG"""
+    """Estatísticas do RAG"""
     return rag_instance.get_statistics()
+
+def test_llama_connection() -> Dict:
+    """Testa Llama 3.1:8B"""
+    return rag_instance.test_llama_connection()
