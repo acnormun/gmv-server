@@ -9,8 +9,8 @@ from utils.progress_step import send_progress_ws
 def processar_com_progresso(data, operation_id, operation_sockets):
     """Versão melhorada com mais logs e fallback inteligente"""
     
-    logger.info(f"🚀 Iniciando processamento para operation_id: {operation_id}")
-    logger.info(f"📊 operation_sockets atuais: {list(operation_sockets.keys())}")
+    logger.info(f" Iniciando processamento para operation_id: {operation_id}")
+    logger.info(f"operation_sockets atuais: {list(operation_sockets.keys())}")
     
     # Envia primeiro progresso SEMPRE (mesmo sem WebSocket)
     send_progress_ws(operation_id, 1, 'Iniciando processamento...', 5)
@@ -55,7 +55,7 @@ def processar_com_progresso(data, operation_id, operation_sockets):
         if markdown:
             try:
                 suspeitos = encontrar_suspeitos(markdown, './utils/suspeitos.txt')
-                logger.info(f"🔍 Suspeitos encontrados: {suspeitos}")
+                logger.info(f" Suspeitos encontrados: {suspeitos}")
             except Exception as e:
                 logger.error(f"Erro na análise de suspeitos: {e}")
                 suspeitos = []

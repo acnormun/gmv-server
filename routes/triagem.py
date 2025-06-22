@@ -34,7 +34,7 @@ def listar_processos():
 
 @triagem_bp.route('/triagem/form', methods=['POST'])
 def receber_processo_com_markdown():
-    print("📝 Solicitação POST /triagem/form recebida")
+    print("Solicitação POST /triagem/form recebida")
     try:
         data = request.get_json()
         print(f"📄 Dados recebidos")
@@ -46,7 +46,7 @@ def receber_processo_com_markdown():
         
         def processar_em_background():
             """Processa o documento em background"""
-            print(f"🔄 Iniciando processamento em background para {operation_id}")
+            print(f" Iniciando processamento em background para {operation_id}")
             
             time.sleep(0.5)
             
@@ -110,7 +110,7 @@ def receber_processo_com_markdown():
                         print(f"Erro na busca de suspeitos: {e}")
                         suspeitos = []
                 
-                logger.info(f"🔍 Suspeitos encontrados: {suspeitos}")
+                logger.info(f" Suspeitos encontrados: {suspeitos}")
 
                 # === PASSO 3: PREPARANDO ESTRUTURA ===
                 send_progress_ws(operation_id, 3, 'Preparando estrutura de arquivos...', 40)
@@ -124,7 +124,7 @@ def receber_processo_com_markdown():
                 caminho_dat = os.path.join(PASTA_DAT, f"{nome_arquivo_base}.dat")
 
                 # === PASSO 4: SALVA ARQUIVOS ORIGINAIS ===
-                print("📁 [PASSO 4] Salvando arquivos originais...")
+                print(" [PASSO 4] Salvando arquivos originais...")
                 
                 if markdown and markdown.strip():
                     send_progress_ws(operation_id, 4, 'Salvando documento processado...', 55)
@@ -149,7 +149,7 @@ def receber_processo_com_markdown():
                         # Verifica se foi salvo corretamente
                         if os.path.exists(caminho_dat):
                             tamanho_arquivo = os.path.getsize(caminho_dat)
-                            print(f"📊 Tamanho do arquivo DAT: {tamanho_arquivo} bytes")
+                            print(f"Tamanho do arquivo DAT: {tamanho_arquivo} bytes")
                         else:
                             print(f"ERRO: Arquivo DAT não foi criado!")
                             
@@ -171,7 +171,7 @@ def receber_processo_com_markdown():
                 if ANONIMIZACAO_ATIVA and markdown and markdown.strip():
                     try:
                         inicio = time.time()
-                        print(f"🔄 Executando anonimização otimizada para processo {numero}")
+                        print(f" Executando anonimização otimizada para processo {numero}")
                         
                         anonimizador = get_anonimizador()
                         if anonimizador is None:
@@ -181,7 +181,7 @@ def receber_processo_com_markdown():
                         print(" Anonimizador carregado com sucesso")
                         print("📋 Carregando mapeamento de suspeitos...")
                         mapa_suspeitos = anonimizador.carregar_suspeitos_mapeados("./utils/suspeitos.txt")
-                        print(f"📊 Suspeitos carregados: {len(mapa_suspeitos)} mapeamentos")
+                        print(f"Suspeitos carregados: {len(mapa_suspeitos)} mapeamentos")
                         print("🔒 Iniciando processo de anonimização...")
                         
                         texto_anonimizado, mapa_reverso = anonimizador.anonimizar_com_identificadores(
@@ -202,7 +202,7 @@ def receber_processo_com_markdown():
                             # Verifica se foi salvo
                             if os.path.exists(caminho_md_anon):
                                 tamanho = os.path.getsize(caminho_md_anon)
-                                print(f"📊 Tamanho do arquivo anonimizado: {tamanho} bytes")
+                                print(f"Tamanho do arquivo anonimizado: {tamanho} bytes")
                                 arquivos_anonimizados["md"] = caminho_md_anon
                             else:
                                 print(f"ERRO: Arquivo anonimizado não foi criado!")
@@ -229,7 +229,7 @@ def receber_processo_com_markdown():
                         }
                         
                         print(f" Anonimização concluída em {tempo_anonimizacao}s")
-                        print(f"📊 Total de substituições: {total_substituicoes}")
+                        print(f"Total de substituições: {total_substituicoes}")
                         logger.info(f" Anonimização concluída: {total_substituicoes} substituições em {tempo_anonimizacao}s")
                         
                     except Exception as e:
@@ -293,11 +293,11 @@ def receber_processo_com_markdown():
                 send_progress_ws(operation_id, 9, 'Processo adicionado com sucesso!', 100)
                 time.sleep(0.5)
                 
-                print(f"🎉 Processo {numero} salvo com sucesso")
-                print(f"    📊 Suspeitos detectados: {len(suspeitos)}")
-                print(f"    🔄 Substituições anonimização: {total_substituicoes}")
+                print(f" Processo {numero} salvo com sucesso")
+                print(f"    Suspeitos detectados: {len(suspeitos)}")
+                print(f"     Substituições anonimização: {total_substituicoes}")
                 print(f"    ⏱️ Tempo de anonimização: {tempo_anonimizacao}s")
-                print(f"    📁 Arquivos anonimizados: {len([a for a in arquivos_anonimizados.values() if a])}")
+                print(f"     Arquivos anonimizados: {len([a for a in arquivos_anonimizados.values() if a])}")
                 
                 logger.info(f" Processo {numero} salvo com sucesso")
                 

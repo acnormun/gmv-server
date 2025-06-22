@@ -14,7 +14,7 @@ class AnonimizadorOtimizado:
     """Sistema de anonimização otimizado usando spaCy"""
     
     def __init__(self, caminho_palavras_descartadas="utils/palavras_descartadas.txt"):
-        print("🚀 Inicializando AnonimizadorOtimizado...")
+        print(" Inicializando AnonimizadorOtimizado...")
         
         # Carrega modelo spaCy apenas uma vez com componentes otimizados
         self.nlp = self._carregar_modelo_otimizado()
@@ -104,7 +104,7 @@ class AnonimizadorOtimizado:
                     palavras.add(self.normalizar(palavra))
                     total_palavras += 1
             
-            print(f"📊 Carregadas {total_palavras} palavras descartadas ({len(palavras)} incluindo normalizadas)")
+            print(f"Carregadas {total_palavras} palavras descartadas ({len(palavras)} incluindo normalizadas)")
             
         except Exception as e:
             print(f"Erro ao ler arquivo {arquivo_encontrado}: {e}")
@@ -204,7 +204,7 @@ class AnonimizadorOtimizado:
                         if ent.label_ in ["PER", "PERSON"]:
                             nome = ent.text.strip()
                             if debug:
-                                print(f"🔍 spaCy detectou: '{nome}' (label: {ent.label_})")
+                                print(f" spaCy detectou: '{nome}' (label: {ent.label_})")
                             
                             if self._validar_nome(nome):
                                 nomes_spacy.add(nome)
@@ -215,7 +215,7 @@ class AnonimizadorOtimizado:
                                     print(f"spaCy REJEITADO: '{nome}' - {self._obter_motivo_rejeicao(nome)}")
                 
                 if debug:
-                    print(f"📊 spaCy encontrou: {len(nomes_spacy)} nomes")
+                    print(f"spaCy encontrou: {len(nomes_spacy)} nomes")
                     
             except Exception as e:
                 print(f"Erro ao extrair nomes com spaCy: {e}")
@@ -224,13 +224,13 @@ class AnonimizadorOtimizado:
         nomes_regex = set(self._extrair_nomes_regex_melhorado(texto, debug))
         
         if debug:
-            print(f"📊 Regex encontrou: {len(nomes_regex)} nomes")
+            print(f"Regex encontrou: {len(nomes_regex)} nomes")
         
         # COMBINA os resultados (união dos dois métodos)
         todos_nomes = nomes_spacy.union(nomes_regex)
         
         if debug:
-            print(f"📊 TOTAL COMBINADO: {len(todos_nomes)} nomes únicos")
+            print(f"TOTAL COMBINADO: {len(todos_nomes)} nomes únicos")
             if todos_nomes:
                 print(f"   Nomes finais: {sorted(list(todos_nomes))}")
         
@@ -269,11 +269,11 @@ class AnonimizadorOtimizado:
         todos_padroes = nomes1 + nomes2 + nomes3 + nomes4 + nomes5
         
         if debug:
-            print(f"🔍 REGEX - Padrão 1 (normais): {len(nomes1)} - {nomes1[:3] if nomes1 else []}")
-            print(f"🔍 REGEX - Padrão 2 (MAIÚSCULA): {len(nomes2)} - {nomes2[:3] if nomes2 else []}")
-            print(f"🔍 REGEX - Padrão 3 (misto): {len(nomes3)} - {nomes3[:3] if nomes3 else []}")
-            print(f"🔍 REGEX - Padrão 4 (únicos): {len(nomes4)} - {nomes4[:3] if nomes4 else []}")
-            print(f"🔍 REGEX - Padrão 5 (pontuados): {len(nomes5)} - {nomes5[:3] if nomes5 else []}")
+            print(f" REGEX - Padrão 1 (normais): {len(nomes1)} - {nomes1[:3] if nomes1 else []}")
+            print(f" REGEX - Padrão 2 (MAIÚSCULA): {len(nomes2)} - {nomes2[:3] if nomes2 else []}")
+            print(f" REGEX - Padrão 3 (misto): {len(nomes3)} - {nomes3[:3] if nomes3 else []}")
+            print(f" REGEX - Padrão 4 (únicos): {len(nomes4)} - {nomes4[:3] if nomes4 else []}")
+            print(f" REGEX - Padrão 5 (pontuados): {len(nomes5)} - {nomes5[:3] if nomes5 else []}")
         
         # Valida cada nome encontrado
         for nome in todos_padroes:
@@ -472,7 +472,7 @@ class AnonimizadorOtimizado:
         substituidos = set()
         contador = 1
         
-        print(f"📝 Nomes detectados: {len(nomes)}")
+        print(f"Nomes detectados: {len(nomes)}")
         if debug and nomes:
             print(f"   Nomes: {nomes}")
         
@@ -501,7 +501,7 @@ class AnonimizadorOtimizado:
             texto_com_padroes, n = padrao.subn(ident, texto_com_padroes)
             if n > 0:
                 reverso[ident] = nome
-                print(f"👤 NOME: {nome} → {ident} ({n}x)")
+                print(f" NOME: {nome} → {ident} ({n}x)")
                 contador += 1
         
         print(f" Anonimização concluída: {len(reverso)} substituições")

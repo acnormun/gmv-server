@@ -23,7 +23,7 @@ def test_python():
 
 def test_files():
     """Testa estrutura de arquivos"""
-    print("\n📁 TESTE ARQUIVOS:")
+    print("\n TESTE ARQUIVOS:")
     
     files_to_check = [
         ('app.py', 'Arquivo principal'),
@@ -41,7 +41,7 @@ def test_files():
 
 def test_backend_start():
     """Testa inicialização do backend"""
-    print("\n🚀 TESTE BACKEND:")
+    print("\n TESTE BACKEND:")
     print("   Iniciando servidor...")
     
     try:
@@ -148,13 +148,13 @@ def main():
             all_passed = False
     
     if all_passed:
-        print(f"\n🎉 TODOS OS TESTES PASSARAM!")
+        print(f"\n TODOS OS TESTES PASSARAM!")
         print(" Backend está pronto para usar")
-        print("💡 Execute: python app.py")
+        print(" Execute: python app.py")
     else:
         print(f"\n ALGUNS TESTES FALHARAM")
         print("🔧 Resolva os problemas acima antes de executar o backend")
-        print("\n💡 SOLUÇÕES COMUNS:")
+        print("\n SOLUÇÕES COMUNS:")
         print("1. pip install flask pandas")
         print("2. Verifique se app.py existe")
         print("3. Execute como administrador")
