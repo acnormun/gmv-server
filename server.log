@@ -5956,3 +5956,43 @@ TypeError: The view function for 'rag.rag_status' did not return a valid respons
 2025-06-22 19:45:22,063 - INFO - 127.0.0.1 - - [22/Jun/2025 19:45:22] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
 2025-06-22 19:51:09,507 - INFO - Sinal 2 recebido. Finalizando graciosamente...
 2025-06-22 19:51:09,507 - INFO - Servidor com PID 5552 finalizado
+2025-06-22 19:53:26,785 - INFO -  Servidor iniciado com PID 18052
+2025-06-22 19:53:26,785 - INFO -  URL: http://0.0.0.0:5000
+2025-06-22 19:53:26,785 - INFO -  WebSocket: ws://0.0.0.0:5000/socket.io/
+2025-06-22 19:53:26,785 - INFO -  Health: http://0.0.0.0:5000/health
+2025-06-22 19:53:26,785 - INFO -  System Status: http://0.0.0.0:5000/api/system/status
+2025-06-22 19:53:26,785 - INFO -  Operações ativas: 0
+2025-06-22 19:53:26,802 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.45:5000
+2025-06-22 19:53:26,802 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-22 19:53:29,796 - INFO -  Iniciando RAG automaticamente...
+2025-06-22 19:53:29,796 - INFO - emitting event "progress_update" to all [/]
+2025-06-22 19:53:29,796 - INFO -  Progresso rag_startup: Verificando sistema RAG...
+2025-06-22 19:53:29,796 - INFO - emitting event "progress_update" to all [/]
+2025-06-22 19:53:29,796 - INFO -  Progresso rag_startup:  Módulo RAG encontrado
+2025-06-22 19:53:29,796 - INFO - emitting event "progress_update" to all [/]
+2025-06-22 19:53:29,796 - INFO -  Progresso rag_startup: Conectando com Ollama...
+2025-06-22 19:53:29,796 - INFO -  Inicializando RAG Adaptativo...
+2025-06-22 19:53:29,796 - INFO -  Usando langchain-ollama (versão atual)
+2025-06-22 19:53:46,494 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-22 19:53:46,693 - INFO -  Ollama conectado: OK...
+2025-06-22 19:53:46,694 - INFO - emitting event "progress_update" to all [/]
+2025-06-22 19:53:46,694 - INFO -  Progresso rag_startup:  RAG inicializado! Carregando documentos...
+2025-06-22 19:53:46,695 - INFO -  Carregando documentos de: /Users/anacl/Documents/GMV/Triagem Inicial
+2025-06-22 19:53:46,697 - INFO -  Processado: 1001917-74.2025.8.11.0003.md
+2025-06-22 19:53:46,698 - INFO -  Processado: 1008728-75.2021.8.11.0040.md
+2025-06-22 19:53:46,699 - INFO -  Processado: Tabela Triagem.md
+2025-06-22 19:53:46,701 - INFO -  Processado: 1001917-74.2025.8.11.0003_anon.md
+2025-06-22 19:53:46,703 - INFO -  Processado: 1008728-75.2021.8.11.0040_anon.md
+2025-06-22 19:53:46,704 - INFO -  Processado: 123456_anon.md
+2025-06-22 19:53:46,704 - INFO -  Processado: 1001917-74.2025.8.11.0003_mapa.md
+2025-06-22 19:53:46,704 - INFO -  Processado: 1008728-75.2021.8.11.0040_mapa.md
+2025-06-22 19:53:46,704 - INFO -  Processado: 123456_mapa.md
+2025-06-22 19:53:46,704 - INFO -  Criando chunks e embeddings...
+2025-06-22 19:53:46,988 - INFO - Criados 8909 chunks
+2025-06-22 19:53:49,942 - INFO - 127.0.0.1 - - [22/Jun/2025 19:53:49] "GET /api/rag/status HTTP/1.1" 200 -
+2025-06-22 19:53:50,206 - INFO - 127.0.0.1 - - [22/Jun/2025 19:53:50] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-06-22 19:53:55,219 - INFO - 127.0.0.1 - - [22/Jun/2025 19:53:55] "OPTIONS /api/rag/query HTTP/1.1" 200 -
+2025-06-22 19:53:55,526 - INFO - 127.0.0.1 - - [22/Jun/2025 19:53:55] "[31m[1mPOST /api/rag/query HTTP/1.1[0m" 400 -
