@@ -25,10 +25,12 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 logger = logging.getLogger(__name__)
 
 # Setup de ambiente
-PATH_TRIAGEM, PASTA_DESTINO, PASTA_DAT = setup_environment()
+PATH_TRIAGEM, PASTA_DESTINO, PASTA_DAT, RAG_DB_PATH = setup_environment()
 app.config['PATH_TRIAGEM'] = PATH_TRIAGEM
 app.config['PASTA_DESTINO'] = PASTA_DESTINO
 app.config['PASTA_DAT'] = PASTA_DAT
+app.config['RAG_DB_PATH'] = RAG_DB_PATH
+app.config['OPERATION_SOCKETS'] = operation_sockets
 
 # CORS
 try:
