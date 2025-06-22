@@ -4609,3 +4609,99 @@ AssertionError: write() before start_response
 2025-06-21 22:38:43,297 - INFO - 127.0.0.1 - - [21/Jun/2025 22:38:43] "[35m[1mGET /rag/status HTTP/1.1[0m" 503 -
 2025-06-21 22:38:50,301 - INFO -  Sinal 2 recebido. Finalizando graciosamente...
 2025-06-21 22:38:50,301 - INFO - Servidor com PID 8104 finalizado
+2025-06-22 13:30:14,550 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.45:5000
+2025-06-22 13:30:14,550 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-22 13:30:19,906 - INFO - 127.0.0.1 - - [22/Jun/2025 13:30:19] "[33mGET /rag/status HTTP/1.1[0m" 404 -
+2025-06-22 13:30:20,575 - INFO - 127.0.0.1 - - [22/Jun/2025 13:30:20] "[33mGET /rag/status HTTP/1.1[0m" 404 -
+2025-06-22 13:30:20,931 - INFO - 127.0.0.1 - - [22/Jun/2025 13:30:20] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-06-22 13:30:21,363 - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-22 13:30:21,363 - INFO - 127.0.0.1 - - [22/Jun/2025 13:30:21] "GET /triagem HTTP/1.1" 200 -
+2025-06-22 13:30:21,657 - INFO -  Cliente WebSocket conectado: XQ1aqiHwlZ3zmkIlAAAB
+2025-06-22 13:30:21,673 - INFO -  Cliente WebSocket conectado: jSo9VttVJ6k_5vh0AAAD
+2025-06-22 13:30:24,390 - INFO - Cliente desconectado: XQ1aqiHwlZ3zmkIlAAAB (removidas 0 operações)
+2025-06-22 13:30:24,391 - INFO - Cliente desconectado: jSo9VttVJ6k_5vh0AAAD (removidas 0 operações)
+2025-06-22 13:30:24,414 - INFO - 127.0.0.1 - - [22/Jun/2025 13:30:24] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-22 13:30:24,415 - INFO - 127.0.0.1 - - [22/Jun/2025 13:30:24] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-22 13:30:24,421 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-22 13:30:24,421 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-22 13:30:24,718 - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-22 13:30:24,718 - INFO - 127.0.0.1 - - [22/Jun/2025 13:30:24] "GET /triagem HTTP/1.1" 200 -
+2025-06-22 13:30:25,090 - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-22 13:30:25,092 - INFO - 127.0.0.1 - - [22/Jun/2025 13:30:25] "GET /triagem HTTP/1.1" 200 -
+2025-06-22 13:30:25,388 - INFO -  Cliente WebSocket conectado: RVxZUR6dJs58sWGUAAAF
+2025-06-22 13:30:25,403 - INFO -  Cliente WebSocket conectado: UUnygcZ8aBKOa3V5AAAH
+2025-06-22 13:30:25,832 - INFO - Cliente desconectado: RVxZUR6dJs58sWGUAAAF (removidas 0 operações)
+2025-06-22 13:30:25,832 - INFO - Cliente desconectado: UUnygcZ8aBKOa3V5AAAH (removidas 0 operações)
+2025-06-22 13:30:26,323 - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-22 13:30:26,324 - INFO -  Cliente WebSocket conectado: psOPj_HgzS9BP8Q0AAAJ
+2025-06-22 13:30:26,325 - INFO - 127.0.0.1 - - [22/Jun/2025 13:30:26] "GET /triagem HTTP/1.1" 200 -
+2025-06-22 13:30:26,358 - INFO -  Cliente WebSocket conectado: YCEBB0s7lzCEvzG9AAAL
+2025-06-22 13:31:03,572 - INFO - 127.0.0.1 - - [22/Jun/2025 13:31:03] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-22 13:31:04,302 - INFO - 127.0.0.1 - - [22/Jun/2025 13:31:04] "POST /triagem/form HTTP/1.1" 200 -
+2025-06-22 13:31:04,324 - INFO - received event "start_listening" from YCEBB0s7lzCEvzG9AAAL [/]
+2025-06-22 13:31:04,346 - INFO - emitting event "progress_update" to YCEBB0s7lzCEvzG9AAAL [/]
+2025-06-22 13:31:04,810 - INFO - emitting event "progress_update" to YCEBB0s7lzCEvzG9AAAL [/]
+2025-06-22 13:31:05,118 - INFO - emitting event "progress_update" to YCEBB0s7lzCEvzG9AAAL [/]
+2025-06-22 13:31:05,672 - INFO - emitting event "progress_update" to YCEBB0s7lzCEvzG9AAAL [/]
+2025-06-22 13:31:05,985 - INFO - emitting event "progress_update" to YCEBB0s7lzCEvzG9AAAL [/]
+2025-06-22 13:31:06,392 - INFO - Markdown salvo: /Users/anacl/Documents/GMV/Triagem Inicial\123456.md
+2025-06-22 13:31:06,392 - INFO - emitting event "progress_update" to YCEBB0s7lzCEvzG9AAAL [/]
+2025-06-22 13:31:06,743 - INFO - Arquivo DAT salvo: /Users/anacl/Documents/GMV/Triagem Inicial/dat\123456.dat
+2025-06-22 13:31:06,743 - INFO - emitting event "progress_update" to YCEBB0s7lzCEvzG9AAAL [/]
+2025-06-22 13:31:46,241 - INFO - emitting event "progress_update" to YCEBB0s7lzCEvzG9AAAL [/]
+2025-06-22 13:31:46,241 - INFO -  Anonimização concluída: 1180 substituições em 39.1s
+2025-06-22 13:31:46,241 - INFO - emitting event "progress_update" to YCEBB0s7lzCEvzG9AAAL [/]
+2025-06-22 13:31:46,558 - INFO - emitting event "progress_update" to YCEBB0s7lzCEvzG9AAAL [/]
+2025-06-22 13:31:47,065 - INFO -  Processo 123456 salvo com sucesso
+2025-06-22 13:31:49,488 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-22 13:31:49,489 - INFO - 127.0.0.1 - - [22/Jun/2025 13:31:49] "GET /triagem HTTP/1.1" 200 -
+2025-06-22 13:31:59,323 - INFO - 127.0.0.1 - - [22/Jun/2025 13:31:59] "OPTIONS /triagem/123456 HTTP/1.1" 200 -
+2025-06-22 13:31:59,574 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-22 13:31:59,576 - INFO - 127.0.0.1 - - [22/Jun/2025 13:31:59] "DELETE /triagem/123456 HTTP/1.1" 200 -
+2025-06-22 13:31:59,642 - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-22 13:31:59,642 - INFO - 127.0.0.1 - - [22/Jun/2025 13:31:59] "GET /triagem HTTP/1.1" 200 -
+2025-06-22 13:32:01,557 - INFO - Cliente desconectado: psOPj_HgzS9BP8Q0AAAJ (removidas 0 operações)
+2025-06-22 13:32:01,557 - INFO - Cliente desconectado: YCEBB0s7lzCEvzG9AAAL (removidas 0 operações)
+2025-06-22 13:32:01,579 - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-22 13:32:01,580 - INFO - 127.0.0.1 - - [22/Jun/2025 13:32:01] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-22 13:32:01,580 - INFO - 127.0.0.1 - - [22/Jun/2025 13:32:01] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-22 13:32:01,581 - INFO - 127.0.0.1 - - [22/Jun/2025 13:32:01] "GET /triagem HTTP/1.1" 200 -
+2025-06-22 13:32:01,583 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-22 13:32:01,583 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-22 13:32:10,042 - INFO -  Sinal 2 recebido. Finalizando graciosamente...
+2025-06-22 13:32:10,042 - INFO - Servidor com PID 7684 finalizado

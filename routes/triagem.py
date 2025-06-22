@@ -2,12 +2,10 @@
 from flask import Blueprint, request, jsonify, current_app
 from utils.triagem import (
     get_processos,
-    processar_com_progresso,
     atualizar_processo,
     deletar_processo_por_numero,
     obter_dat_por_numero
 )
-from utils.rag import handle_rag_analyze_processo
 from utils.auto_setup import setup_environment
 from utils.auxiliar import limpar, get_anonimizador
 from utils.suspeicao import encontrar_suspeitos
@@ -346,7 +344,3 @@ def obter_dat(numero):
         return jsonify({'dat': conteudo}), 200
     except FileNotFoundError:
         return jsonify({'error': 'Arquivo não encontrado'}), 404
-
-@triagem_bp.route('/triagem/<numero>/analyze', methods=['POST'])
-def analisar_processo(numero):
-    return handle_rag_analyze_processo(numero)
