@@ -131,10 +131,10 @@ def receber_processo_com_markdown():
                     time.sleep(0.4)
                     with open(caminho_md, 'w', encoding='utf-8') as f:
                         f.write(markdown)
-                    print(f"💾 Markdown salvo: {caminho_md}")
+                    print(f"Markdown salvo: {caminho_md}")
                     logger.info(f"Markdown salvo: {caminho_md}")
 
-                print("💾 [PASSO 4.1] Processando arquivo DAT...")
+                print("[PASSO 4.1] Processando arquivo DAT...")
                 if dat_base64 and dat_base64.strip():
                     send_progress_ws(operation_id, 5, 'Salvando arquivo original (DAT)...', 60)
                     time.sleep(0.3)

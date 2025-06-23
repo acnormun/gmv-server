@@ -153,7 +153,7 @@ def main():
         print(" Execute: python app.py")
     else:
         print(f"\n ALGUNS TESTES FALHARAM")
-        print("🔧 Resolva os problemas acima antes de executar o backend")
+        print(" Resolva os problemas acima antes de executar o backend")
         print("\n SOLUÇÕES COMUNS:")
         print("1. pip install flask pandas")
         print("2. Verifique se app.py existe")

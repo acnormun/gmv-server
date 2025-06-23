@@ -74,12 +74,12 @@ def processar_com_progresso(data, operation_id, operation_sockets):
         if markdown:
             with open(caminho_md, 'w', encoding='utf-8') as f:
                 f.write(markdown)
-            logger.info(f"💾 Markdown salvo: {caminho_md}")
+            logger.info(f"Markdown salvo: {caminho_md}")
                 
         if dat_base64:
             with open(caminho_dat, 'w', encoding='utf-8') as f:
                 f.write(dat_base64)
-            logger.info(f"💾 DAT salvo: {caminho_dat}")
+            logger.info(f"DAT salvo: {caminho_dat}")
 
         send_progress_ws(operation_id, 6, 'Anonimizando documento...', 75)
         try:

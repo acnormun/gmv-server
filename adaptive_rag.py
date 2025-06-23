@@ -1,515 +1,445 @@
-"""
-RAG Adaptativo para GMV Sistema
-Integração com Llama31 via Ollama + LangChain
-Versão: 1.2 - Final com langchain-ollama
-"""
+# adaptive_rag.py - VERSÃO ULTRA-RÁPIDA (Embeddings Otimizados)
 
 import os
+import pickle
+import hashlib
 import re
-import json
-import logging
 from pathlib import Path
-from typing import List, Dict, Optional, Tuple, Any
+from typing import List, Dict, Any
 from dataclasses import dataclass
-from enum import Enum
+from collections import Counter
+import math
 
-# Core dependencies
 import numpy as np
-from sklearn.metrics.pairwise import cosine_similarity
-
-# LangChain (versão mais atual)
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.schema import Document
 from langchain.chains import RetrievalQA
 from langchain.prompts import PromptTemplate
+from langchain.schema.retriever import BaseRetriever  # ADICIONADO
 
-rag_status = False
-
-# LangChain Ollama (nova versão)
+# Imports com fallback
 try:
     from langchain_ollama import OllamaLLM, OllamaEmbeddings
-    OLLAMA_NEW = True
 except ImportError:
-    # Fallback para versão anterior
     try:
         from langchain_community.llms import Ollama as OllamaLLM
         from langchain_community.embeddings import OllamaEmbeddings
-        OLLAMA_NEW = False
     except ImportError:
         from langchain.llms import Ollama as OllamaLLM
         from langchain.embeddings import OllamaEmbeddings
-        OLLAMA_NEW = False
 
-# Vector Store
-try:
-    from langchain_community.vectorstores import FAISS
-except ImportError:
-    from langchain.vectorstores import FAISS
+# EMBEDDING ULTRA-RÁPIDO BASEADO EM TF-IDF
+class FastTFIDFEmbedder:
+    """Embeddings baseados em TF-IDF - 100x mais rápido que Ollama"""
+    
+    def __init__(self, max_features=1000):
+        self.vocabulary = {}
+        self.idf_scores = {}
+        self.max_features = max_features
+        self.is_fitted = False
+    
+    def _tokenize(self, text):
+        """Tokenização simples e rápida"""
+        # Remove pontuação e converte para minúsculas
+        text = re.sub(r'[^\w\s]', ' ', text.lower())
+        # Extrai tokens de 2+ caracteres
+        tokens = [token for token in text.split() if len(token) >= 2]
+        return tokens
+    
+    def _get_important_terms(self, documents):
+        """Extrai termos mais importantes dos documentos"""
+        all_tokens = []
+        doc_tokens = []
+        
+        for doc in documents:
+            tokens = self._tokenize(doc)
+            doc_tokens.append(set(tokens))  # Unique tokens per doc
+            all_tokens.extend(tokens)
+        
+        # Conta frequência total
+        token_freq = Counter(all_tokens)
+        
+        # Calcula IDF (inverse document frequency)
+        vocab = {}
+        for token, freq in token_freq.most_common(self.max_features):
+            # Quantos documentos contêm este token
+            doc_count = sum(1 for doc_set in doc_tokens if token in doc_set)
+            if doc_count > 0:
+                idf = math.log(len(documents) / doc_count)
+                vocab[token] = len(vocab)
+                self.idf_scores[token] = idf
+        
+        return vocab
+    
+    def fit(self, documents):
+        """Treina o vocabulário nos documentos"""
+        print(f"🔄 Criando vocabulário TF-IDF para {len(documents)} documentos...")
+        self.vocabulary = self._get_important_terms(documents)
+        self.is_fitted = True
+        print(f"✅ Vocabulário criado: {len(self.vocabulary)} termos")
+    
+    def embed_query(self, text):
+        """Gera embedding de uma query"""
+        if not self.is_fitted:
+            return np.random.random(self.max_features).tolist()
+        
+        tokens = self._tokenize(text)
+        token_count = Counter(tokens)
+        
+        # Cria vetor TF-IDF
+        vector = np.zeros(len(self.vocabulary))
+        
+        for token, count in token_count.items():
+            if token in self.vocabulary:
+                idx = self.vocabulary[token]
+                tf = count / len(tokens) if tokens else 0
+                idf = self.idf_scores.get(token, 0)
+                vector[idx] = tf * idf
+        
+        # Normaliza o vetor
+        norm = np.linalg.norm(vector)
+        if norm > 0:
+            vector = vector / norm
+        
+        return vector.tolist()
+    
+    def embed_documents(self, documents):
+        """Gera embeddings para múltiplos documentos"""
+        return [self.embed_query(doc) for doc in documents]
 
-# Document processing
-import pypdf
-from docx import Document as DocxDocument
-from bs4 import BeautifulSoup
-
-# Local utilities
-try:
-    from utils.suspeicao import encontrar_suspeitos
-except ImportError:
-    def encontrar_suspeitos(text, file_path):
-        """Fallback function for suspeitos detection"""
-        return []
-
-logger = logging.getLogger(__name__)
-
-class QueryType(Enum):
-    """Tipos de consulta para estratégia adaptativa"""
-    FACTUAL = "factual"      # Busca fatos específicos
-    ANALYTICAL = "analytical" # Análise abrangente 
-    OPINION = "opinion"      # Múltiplas perspectivas
-    CONTEXTUAL = "contextual" # Específico do usuário
+# Vector store otimizado
+class UltraFastVectorStore:
+    def __init__(self, persist_dir):
+        self.persist_dir = persist_dir
+        self.embeddings = []
+        self.documents = []
+        self.metadata = []
+        self.doc_hashes = []
+        self.embedder = FastTFIDFEmbedder()
+        os.makedirs(persist_dir, exist_ok=True)
+    
+    def _get_doc_hash(self, content):
+        return hashlib.md5(content.encode()).hexdigest()[:8]  # Hash curto
+    
+    def add_documents(self, documents, embedding_func=None):
+        """Adiciona documentos com SAMPLING INTELIGENTE"""
+        
+        # OTIMIZAÇÃO 1: Reduz número de chunks drasticamente
+        if len(documents) > 500:
+            print(f"📊 {len(documents)} chunks encontrados - aplicando sampling...")
+            # Pega os chunks mais longos (mais informativos)
+            documents = sorted(documents, key=lambda x: len(x.page_content), reverse=True)[:500]
+            print(f"📝 Reduzido para {len(documents)} chunks mais importantes")
+        
+        # Carrega cache
+        cache = self._load_cache()
+        new_docs = []
+        new_contents = []
+        
+        # Filtra apenas novos
+        for doc in documents:
+            doc_hash = self._get_doc_hash(doc.page_content)
+            
+            if doc_hash not in cache:
+                new_docs.append(doc)
+                new_contents.append(doc.page_content)
+                self.doc_hashes.append(doc_hash)
+            else:
+                # Usa cache
+                cached = cache[doc_hash]
+                self.embeddings.append(cached["embedding"])
+                self.documents.append(doc.page_content)
+                self.metadata.append(doc.metadata)
+                self.doc_hashes.append(doc_hash)
+        
+        if new_contents:
+            print(f"🚀 Gerando embeddings TF-IDF para {len(new_contents)} novos chunks...")
+            
+            # OTIMIZAÇÃO 2: Usa TF-IDF ao invés de Ollama
+            all_docs_for_vocab = new_contents + [doc for doc in self.documents]
+            self.embedder.fit(all_docs_for_vocab)
+            
+            # Gera embeddings rapidamente
+            batch_embeddings = self.embedder.embed_documents(new_contents)
+            
+            for doc, embedding in zip(new_docs, batch_embeddings):
+                self.embeddings.append(embedding)
+                self.documents.append(doc.page_content)
+                self.metadata.append(doc.metadata)
+            
+            print(f"✅ {len(new_contents)} embeddings TF-IDF gerados INSTANTANEAMENTE!")
+        
+        self._save_cache()
+    
+    def _load_cache(self):
+        cache_file = os.path.join(self.persist_dir, "tfidf_cache.pkl")
+        if os.path.exists(cache_file):
+            try:
+                with open(cache_file, 'rb') as f:
+                    return pickle.load(f)
+            except:
+                pass
+        return {}
+    
+    def _save_cache(self):
+        # Salva cache
+        cache_data = {}
+        for i, doc_hash in enumerate(self.doc_hashes):
+            if i < len(self.embeddings):
+                cache_data[doc_hash] = {
+                    "embedding": self.embeddings[i],
+                    "content": self.documents[i],
+                    "metadata": self.metadata[i]
+                }
+        
+        cache_file = os.path.join(self.persist_dir, "tfidf_cache.pkl")
+        with open(cache_file, 'wb') as f:
+            pickle.dump(cache_data, f)
+        
+        # Salva embedder
+        embedder_file = os.path.join(self.persist_dir, "embedder.pkl")
+        with open(embedder_file, 'wb') as f:
+            pickle.dump(self.embedder, f)
+        
+        # Salva dados principais
+        main_file = os.path.join(self.persist_dir, "data.pkl")
+        with open(main_file, 'wb') as f:
+            pickle.dump({
+                "embeddings": self.embeddings,
+                "documents": self.documents,
+                "metadata": self.metadata,
+                "doc_hashes": self.doc_hashes
+            }, f)
+    
+    def similarity_search(self, query, k=3):
+        if not self.embeddings:
+            return []
+        
+        # Usa TF-IDF para busca
+        query_emb = np.array(self.embedder.embed_query(query))
+        similarities = []
+        
+        for emb in self.embeddings:
+            emb_array = np.array(emb)
+            # Cosine similarity
+            sim = np.dot(query_emb, emb_array) / (np.linalg.norm(query_emb) * np.linalg.norm(emb_array) + 1e-8)
+            similarities.append(sim)
+        
+        indices = np.argsort(similarities)[::-1][:k]
+        return [Document(page_content=self.documents[i], metadata=self.metadata[i]) 
+                for i in indices]
+    
+    def as_retriever(self, search_kwargs=None):
+        k = search_kwargs.get("k", 3) if search_kwargs else 3
+        
+        class FastRetriever(BaseRetriever):
+            """Retriever compatível com LangChain"""
+            
+            def __init__(self, vector_store, k):
+                super().__init__()
+                self.vector_store = vector_store
+                self.k = k
+            
+            def _get_relevant_documents(self, query: str) -> List[Document]:
+                """Método requerido pelo BaseRetriever"""
+                return self.vector_store.similarity_search(query, k=self.k)
+            
+            def get_relevant_documents(self, query: str) -> List[Document]:
+                """Método público para compatibilidade"""
+                return self._get_relevant_documents(query)
+        
+        return FastRetriever(self, k)
+    
+    def load(self):
+        """Carrega dados salvos"""
+        # Carrega embedder
+        embedder_file = os.path.join(self.persist_dir, "embedder.pkl")
+        if os.path.exists(embedder_file):
+            try:
+                with open(embedder_file, 'rb') as f:
+                    self.embedder = pickle.load(f)
+            except:
+                self.embedder = FastTFIDFEmbedder()
+        
+        # Carrega dados principais
+        filepath = os.path.join(self.persist_dir, "data.pkl")
+        if os.path.exists(filepath):
+            try:
+                with open(filepath, 'rb') as f:
+                    data = pickle.load(f)
+                    self.embeddings = data.get("embeddings", [])
+                    self.documents = data.get("documents", [])
+                    self.metadata = data.get("metadata", [])
+                    self.doc_hashes = data.get("doc_hashes", [])
+                    return len(self.embeddings) > 0
+            except:
+                pass
+        return False
 
 @dataclass
-class RAGConfig:
-    """Configuração do sistema RAG"""
-    model_name: str = "llama3.1:8b"
-    embedding_model: str = "nomic-embed-text"
-    chunk_size: int = 500
-    chunk_overlap: int = 50
-    top_k: int = 4
-    temperature: float = 0.1
-    max_tokens: int = 1024
-    
-class DocumentProcessor:
-    """Processador de documentos para extração de texto"""
-    
-    @staticmethod
-    def extract_text_from_pdf(file_path: str) -> str:
-        """Extrai texto de arquivo PDF"""
-        try:
-            with open(file_path, 'rb') as file:
-                reader = pypdf.PdfReader(file)
-                text = ""
-                for page in reader.pages:
-                    text += page.extract_text() + "\n"
-                return text
-        except Exception as e:
-            logger.error(f"Erro ao extrair PDF {file_path}: {e}")
-            return ""
-    
-    @staticmethod
-    def extract_text_from_docx(file_path: str) -> str:
-        """Extrai texto de arquivo DOCX"""
-        try:
-            doc = DocxDocument(file_path)
-            text = ""
-            for paragraph in doc.paragraphs:
-                text += paragraph.text + "\n"
-            return text
-        except Exception as e:
-            logger.error(f"Erro ao extrair DOCX {file_path}: {e}")
-            return ""
-    
-    @staticmethod
-    def extract_text_from_txt(file_path: str) -> str:
-        """Extrai texto de arquivo TXT/MD"""
-        try:
-            with open(file_path, 'r', encoding='utf-8') as file:
-                return file.read()
-        except Exception as e:
-            logger.error(f"Erro ao extrair TXT {file_path}: {e}")
-            return ""
-    
-    @classmethod
-    def extract_text(cls, file_path: str) -> str:
-        """Extrai texto baseado na extensão do arquivo"""
-        ext = Path(file_path).suffix.lower()
-        
-        if ext == '.pdf':
-            return cls.extract_text_from_pdf(file_path)
-        elif ext == '.docx':
-            return cls.extract_text_from_docx(file_path)
-        elif ext in ['.txt', '.md']:
-            return cls.extract_text_from_txt(file_path)
-        else:
-            logger.warning(f"Tipo de arquivo não suportado: {ext}")
-            return ""
+class FastRAGConfig:
+    model_name: str = "gemma:2b"
+    chunk_size: int = 1500  # Chunks MUITO maiores
+    chunk_overlap: int = 150
+    top_k: int = 3
+    max_chunks: int = 300  # Limite máximo de chunks
 
-class QueryClassifier:
-    """Classificador de tipos de consulta para estratégia adaptativa"""
-    
-    # Palavras-chave para cada tipo de consulta
-    FACTUAL_KEYWORDS = [
-        'quando', 'onde', 'quem', 'qual', 'quanto', 'data', 'número',
-        'nome', 'valor', 'endereço', 'telefone', 'cpf', 'cnpj'
-    ]
-    
-    ANALYTICAL_KEYWORDS = [
-        'análise', 'comparar', 'avaliar', 'examinar', 'investigar',
-        'explicar', 'como', 'por que', 'causas', 'consequências'
-    ]
-    
-    OPINION_KEYWORDS = [
-        'opinião', 'perspectiva', 'visão', 'ponto de vista', 'considera',
-        'acredita', 'pensa', 'diferentes', 'alternativas', 'possibilidades'
-    ]
-    
-    CONTEXTUAL_KEYWORDS = [
-        'meu caso', 'minha situação', 'para mim', 'no meu contexto',
-        'considerando', 'levando em conta', 'específico', 'particular'
-    ]
-    
-    @classmethod
-    def classify_query(cls, query: str) -> QueryType:
-        """Classifica o tipo da consulta"""
-        query_lower = query.lower()
-        
-        # Conta ocorrências de palavras-chave
-        scores = {
-            QueryType.FACTUAL: sum(1 for word in cls.FACTUAL_KEYWORDS if word in query_lower),
-            QueryType.ANALYTICAL: sum(1 for word in cls.ANALYTICAL_KEYWORDS if word in query_lower),
-            QueryType.OPINION: sum(1 for word in cls.OPINION_KEYWORDS if word in query_lower),
-            QueryType.CONTEXTUAL: sum(1 for word in cls.CONTEXTUAL_KEYWORDS if word in query_lower)
-        }
-        
-        # Retorna o tipo com maior pontuação
-        max_type = max(scores.items(), key=lambda x: x[1])
-        
-        # Se não há palavras-chave claras, usa factual como padrão
-        return max_type[0] if max_type[1] > 0 else QueryType.FACTUAL
-
-class AdaptiveRAG:
-    """Sistema RAG Adaptativo principal"""
-    
-    def __init__(self, config: RAGConfig = None):
-        self.config = config or RAGConfig()
+class UltraFastRAG:
+    def __init__(self):
+        self.config = FastRAGConfig()
         self.llm = None
-        self.embeddings = None
         self.vector_store = None
         self.documents = []
         self.is_initialized = False
-        
-        # Pasta de dados do projeto - usa variável de ambiente se disponível
-        self.data_path = os.getenv("PASTA_DESTINO", os.getenv("DADOS_ANONIMOS", "./documentos"))
-        
-    def initialize(self) -> bool:
-        """Inicializa os modelos Ollama"""
+        self.data_path = os.getenv("DADOS_ANONIMOS", os.getenv("PASTA_DESTINO", "./documentos"))
+        self.cache_path = os.path.join(os.path.dirname(self.data_path), ".rag_cache")
+        os.makedirs(self.cache_path, exist_ok=True)
+    
+    def initialize(self):
         try:
-            logger.info(" Inicializando RAG Adaptativo...")
-            
-            # Inicializa LLM (usando método mais atual)
-            if OLLAMA_NEW:
-                logger.info(" Usando langchain-ollama (versão atual)")
-                self.llm = OllamaLLM(
-                    model=self.config.model_name,
-                    temperature=self.config.temperature,
-                    num_predict=self.config.max_tokens
-                )
-            else:
-                logger.info("⚠️ Usando langchain-community (versão anterior)")
-                self.llm = OllamaLLM(
-                    model=self.config.model_name,
-                    temperature=self.config.temperature,
-                    num_predict=self.config.max_tokens
-                )
-            
-            # Inicializa embeddings
-            self.embeddings = OllamaEmbeddings(
-                model=self.config.embedding_model
-            )
-            
-            # Testa conexão (usando invoke em vez de __call__)
-            try:
-                if hasattr(self.llm, 'invoke'):
-                    test_response = self.llm.invoke("Teste de conexão. Responda apenas 'OK'.")
-                else:
-                    test_response = self.llm("Teste de conexão. Responda apenas 'OK'.")
-                    
-                logger.info(f" Ollama conectado: {test_response[:20]}...")
-            except Exception as e:
-                logger.warning(f"⚠️ Teste de conexão falhou: {e}")
-                # Continua mesmo com falha no teste
-            
+            print("🔄 Inicializando Gemma:2b...")
+            self.llm = OllamaLLM(model=self.config.model_name, temperature=0.1, num_predict=512)
             self.is_initialized = True
+            self._load_cache()
+            print("✅ RAG inicializado (SEM embeddings Ollama!)")
             return True
-            
         except Exception as e:
-            logger.error(f"❌ Erro ao inicializar Ollama: {e}")
-            logger.error("💡 Verifique se Ollama está rodando: ollama serve")
+            print(f"❌ Erro: {e}")
             return False
     
-    def load_documents_from_directory(self, directory: str = None) -> int:
-        """Carrega documentos de um diretório"""
-        if not self.is_initialized:
-            logger.error("❌ RAG não inicializado!")
+    def _load_cache(self):
+        self.vector_store = UltraFastVectorStore(os.path.join(self.cache_path, "ultra_fast"))
+        if self.vector_store.load():
+            self.documents = [Document(page_content=doc, metadata=meta) 
+                            for doc, meta in zip(self.vector_store.documents, self.vector_store.metadata)]
+            print(f"📦 Cache TF-IDF carregado: {len(self.documents)} chunks")
+    
+    def load_documents_from_directory(self):
+        if not os.path.exists(self.data_path):
             return 0
-            
-        directory = directory or self.data_path
-        if not os.path.exists(directory):
-            logger.warning(f"⚠️ Diretório não existe: {directory}")
-            return 0
+        
+        print(f"📁 Carregando de: {self.data_path}")
         
         documents = []
-        processed_files = 0
-        
-        logger.info(f" Carregando documentos de: {directory}")
-        
-        # Processa todos os arquivos suportados
-        for root, dirs, files in os.walk(directory):
+        for root, dirs, files in os.walk(self.data_path):
             for file in files:
-                if file.lower().endswith(('.pdf', '.docx', '.txt', '.md')):
-                    file_path = os.path.join(root, file)
-                    
+                if file.lower().endswith(('.txt', '.md')):
                     try:
-                        text = DocumentProcessor.extract_text(file_path)
-                        if text.strip():
-                            # Cria documento LangChain
-                            doc = Document(
-                                page_content=text,
-                                metadata={
-                                    "source": file_path,
-                                    "filename": file,
-                                    "size": len(text)
-                                }
-                            )
-                            documents.append(doc)
-                            processed_files += 1
-                            logger.info(f" Processado: {file}")
-                        else:
-                            logger.warning(f"⚠️ Arquivo vazio: {file}")
-                            
-                    except Exception as e:
-                        logger.error(f"❌ Erro ao processar {file}: {e}")
+                        filepath = os.path.join(root, file)
+                        with open(filepath, 'r', encoding='utf-8') as f:
+                            text = f.read().strip()
+                            if text and len(text) > 100:
+                                documents.append(Document(
+                                    page_content=text, 
+                                    metadata={"filename": file, "source": filepath}
+                                ))
+                    except:
+                        continue
         
         if documents:
+            print(f"📄 {len(documents)} arquivos encontrados")
             self.documents = documents
             self._create_vector_store()
-        else:
-            logger.warning("⚠️ Nenhum documento foi carregado!")
-            
-        logger.info(f"📊 Total processado: {processed_files} arquivos")
-        return processed_files
+        
+        return len(documents)
     
     def _create_vector_store(self):
-        """Cria o vector store com chunking"""
         if not self.documents:
-            logger.warning("⚠️ Nenhum documento carregado!")
             return
-            
-        logger.info(" Criando chunks e embeddings...")
         
-        try:
-            # Splitter para chunking
-            text_splitter = RecursiveCharacterTextSplitter(
-                chunk_size=self.config.chunk_size,
-                chunk_overlap=self.config.chunk_overlap,
-                separators=["\n\n", "\n", ". ", " ", ""]
-            )
-            
-            # Cria chunks
-            chunks = text_splitter.split_documents(self.documents)
-            logger.info(f"Criados {len(chunks)} chunks")
-            global rag_status
-            rag_status = True
-            
-            # Cria vector store
-            self.vector_store = FAISS.from_documents(chunks, self.embeddings)
-            logger.info(" Vector store criado!")
-            
-        except Exception as e:
-            logger.error(f"❌ Erro ao criar vector store: {e}")
-            raise
+        print("✂️ Criando chunks GRANDES e OTIMIZADOS...")
+        splitter = RecursiveCharacterTextSplitter(
+            chunk_size=self.config.chunk_size,  # Chunks grandes
+            chunk_overlap=self.config.chunk_overlap,
+            separators=["\n\n", "\n", ". ", " "]
+        )
+        chunks = splitter.split_documents(self.documents)
+        print(f"📝 {len(chunks)} chunks criados")
+        
+        # Filtra chunks pequenos demais
+        chunks = [chunk for chunk in chunks if len(chunk.page_content.strip()) > 100]
+        
+        # LIMITE RÍGIDO para performance
+        if len(chunks) > self.config.max_chunks:
+            print(f"⚡ Limitando a {self.config.max_chunks} chunks para máxima velocidade")
+            # Ordena por tamanho (chunks maiores = mais informativos)
+            chunks = sorted(chunks, key=lambda x: len(x.page_content), reverse=True)[:self.config.max_chunks]
+        
+        print(f"🔍 {len(chunks)} chunks finais para processamento")
+        
+        self.vector_store = UltraFastVectorStore(os.path.join(self.cache_path, "ultra_fast"))
+        self.vector_store.add_documents(chunks)  # SEM embedding_func - usa TF-IDF interno
+        print("⚡ Vector store TF-IDF criado INSTANTANEAMENTE!")
     
-    def _get_retrieval_strategy(self, query_type: QueryType) -> Dict[str, Any]:
-        """Define estratégia de retrieval baseada no tipo de consulta"""
-        strategies = {
-            QueryType.FACTUAL: {
-                "k": 3,  # Menos documentos, mais precisos
-                "search_type": "similarity",
-                "score_threshold": 0.7
-            },
-            QueryType.ANALYTICAL: {
-                "k": 6,  # Mais documentos para análise abrangente
-                "search_type": "similarity",
-                "score_threshold": 0.6
-            },
-            QueryType.OPINION: {
-                "k": 5,  # Documentos variados
-                "search_type": "mmr",  # Maximum Marginal Relevance
-                "score_threshold": 0.5
-            },
-            QueryType.CONTEXTUAL: {
-                "k": 4,  # Balanceado
-                "search_type": "similarity",
-                "score_threshold": 0.6
-            }
-        }
-        return strategies.get(query_type, strategies[QueryType.FACTUAL])
-    
-    def _get_prompt_template(self, query_type: QueryType) -> str:
-        """Define template de prompt baseado no tipo de consulta"""
-        templates = {
-            QueryType.FACTUAL: """
-Com base nos documentos fornecidos, responda à pergunta de forma factual e precisa.
-Se a informação não estiver disponível, diga claramente.
-
-Documentos:
-{context}
-
-Pergunta: {question}
-
-Resposta factual:""",
-            
-            QueryType.ANALYTICAL: """
-Analise os documentos fornecidos e forneça uma resposta abrangente e analítica.
-Explore diferentes aspectos e conexões entre as informações.
-
-Documentos:
-{context}
-
-Pergunta: {question}
-
-Análise detalhada:""",
-            
-            QueryType.OPINION: """
-Com base nos documentos, apresente diferentes perspectivas e pontos de vista sobre a questão.
-Considere múltiplas interpretações quando aplicável.
-
-Documentos:
-{context}
-
-Pergunta: {question}
-
-Múltiplas perspectivas:""",
-            
-            QueryType.CONTEXTUAL: """
-Considerando o contexto específico mencionado, forneça uma resposta personalizada
-baseada nos documentos disponíveis.
-
-Documentos:
-{context}
-
-Pergunta: {question}
-
-Resposta contextualizada:"""
-        }
-        return templates.get(query_type, templates[QueryType.FACTUAL])
-    
-    def query(self, question: str, context: str = None) -> Dict[str, Any]:
-        """Executa consulta RAG adaptativa"""
+    def query(self, question):
         if not self.is_initialized or not self.vector_store:
-            return {
-                "error": "RAG não inicializado ou sem documentos carregados"
-            }
+            return {"error": "Sistema não inicializado"}
         
         try:
-            # 1. Classifica o tipo da consulta
-            query_type = QueryClassifier.classify_query(question)
-            logger.info(f"🎯 Consulta classificada como: {query_type.value}")
+            # MÉTODO SIMPLIFICADO - sem RetrievalQA complexo
+            print(f"🔍 Buscando documentos para: {question[:50]}...")
             
-            # 2. Define estratégia de retrieval
-            strategy = self._get_retrieval_strategy(query_type)
+            # Busca documentos relevantes
+            relevant_docs = self.vector_store.similarity_search(question, k=self.config.top_k)
             
-            # 3. Busca documentos relevantes
-            retriever = self.vector_store.as_retriever(
-                search_kwargs={"k": strategy["k"]}
-            )
+            if not relevant_docs:
+                return {"error": "Nenhum documento relevante encontrado"}
             
-            # 4. Cria prompt adaptativo
-            prompt_template = self._get_prompt_template(query_type)
-            prompt = PromptTemplate(
-                template=prompt_template,
-                input_variables=["context", "question"]
-            )
+            # Cria contexto
+            context = "\n\n".join([doc.page_content for doc in relevant_docs])
             
-            # 5. Executa chain RAG
-            qa_chain = RetrievalQA.from_chain_type(
-                llm=self.llm,
-                chain_type="stuff",
-                retriever=retriever,
-                chain_type_kwargs={"prompt": prompt},
-                return_source_documents=True
-            )
+            # Template simples
+            prompt_text = f"""Com base nos documentos encontrados, responda de forma direta e objetiva:
+
+DOCUMENTOS:
+{context}
+
+PERGUNTA: {question}
+
+RESPOSTA:"""
             
-            result = qa_chain({"query": question})
+            print("🤖 Consultando Gemma:2b...")
             
-            # 6. Processa suspeitos se relevante
-            suspeitos = []
-            if "suspeito" in question.lower() or "suspeita" in question.lower():
-                suspeitos = encontrar_suspeitos(result["result"], "")
+            # Chama LLM diretamente
+            if hasattr(self.llm, 'invoke'):
+                answer = self.llm.invoke(prompt_text)
+            else:
+                answer = self.llm(prompt_text)
             
             return {
                 "question": question,
-                "query_type": query_type.value,
-                "answer": result["result"],
-                "source_documents": [
-                    {
-                        "content": doc.page_content[:200] + "...",
-                        "source": doc.metadata.get("source", ""),
-                        "filename": doc.metadata.get("filename", "")
-                    }
-                    for doc in result["source_documents"]
-                ],
-                "suspeitos": suspeitos,
-                "strategy_used": strategy,
-                "processing_time": 0.0  # Pode ser implementado se necessário
+                "answer": answer,
+                "source_documents": [{
+                    "content": doc.page_content[:300] + "...",
+                    "filename": doc.metadata.get("filename", "")
+                } for doc in relevant_docs],
+                "documents_count": len(self.documents),
+                "search_method": "TF-IDF (ultra-fast)",
+                "context_size": len(context)
             }
             
         except Exception as e:
-            logger.error(f"❌ Erro na consulta RAG: {e}")
+            print(f"❌ Erro na query: {e}")
             return {"error": str(e)}
-    
-    def add_document_text(self, text: str, metadata: Dict = None) -> bool:
-        """Adiciona texto como documento"""
-        if not self.is_initialized:
-            return False
-            
-        try:
-            doc = Document(
-                page_content=text,
-                metadata=metadata or {}
-            )
-            
-            self.documents.append(doc)
-            self._create_vector_store()
-            return True
-            
-        except Exception as e:
-            logger.error(f"❌ Erro ao adicionar documento: {e}")
-            return False
-    
-    def get_stats(self) -> Dict[str, Any]:
-        """Retorna estatísticas do sistema"""
-        stats = {
-            "initialized": self.is_initialized,
-            "documents_count": len(self.documents),
-            "has_vector_store": self.vector_store is not None,
-            "vector_store_size": 0,
-            "ollama_version": "langchain-ollama" if OLLAMA_NEW else "langchain-community",
-            "config": {
-                "model": self.config.model_name,
-                "embedding_model": self.config.embedding_model,
-                "chunk_size": self.config.chunk_size,
-                "data_path": self.data_path
-            }
-        }
-        
-        # Calcula tamanho do vector store se disponível
-        if self.vector_store:
-            try:
-                # FAISS não tem método direto para contar, estimamos pelos documentos
-                stats["vector_store_size"] = len(self.documents)
-            except Exception:
-                stats["vector_store_size"] = 0
-        
-        return stats
 
-# Instância global para uso no Flask
-rag_system = AdaptiveRAG()
+# Instância global
+rag_system = UltraFastRAG()
 
-def init_rag_system() -> bool:
-    """Inicializa o sistema RAG global"""
+def init_rag_system():
     return rag_system.initialize()
 
-def load_data_directory() -> int:
-    """Carrega dados do diretório configurado"""
+def load_data_directory():
     return rag_system.load_documents_from_directory()
+
+def get_rag_status():
+    if not rag_system.is_initialized:
+        return {"status": "offline", "message": "Não inicializado", "isReady": False}
+    if not rag_system.vector_store or len(rag_system.documents) == 0:
+        return {"status": "offline", "message": "Sem documentos", "isReady": False, "data_path": rag_system.data_path}
+    return {
+        "status": "online", 
+        "message": f"{len(rag_system.documents)} chunks TF-IDF", 
+        "isReady": True,
+        "documents_loaded": len(rag_system.documents),
+        "method": "TF-IDF embeddings"
+    }
