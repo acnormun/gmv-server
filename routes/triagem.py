@@ -17,6 +17,7 @@ import os
 import re
 import logging
 from datetime import datetime
+from utils.extrair_metadados_processo import extrair_e_formatar_metadados
 
 logger = logging.getLogger(__name__)
 
@@ -26,6 +27,14 @@ PATH_TRIAGEM, PASTA_DESTINO, PASTA_DAT = setup_environment()
 triagem_bp.operation_sockets = {}
 
 ANONIMIZACAO_ATIVA = True 
+
+try:
+    from adaptive_rag import rag_system
+    RAG_DISPONIVEL = True
+    print("✅ Sistema RAG importado com sucesso")
+except ImportError:
+    RAG_DISPONIVEL = False
+    print("⚠️ Sistema RAG não disponível")
 
 @triagem_bp.route('/triagem', methods=['GET'])
 def listar_processos():
@@ -129,10 +138,78 @@ def receber_processo_com_markdown():
                 if markdown and markdown.strip():
                     send_progress_ws(operation_id, 4, 'Salvando documento processado...', 55)
                     time.sleep(0.4)
+                    
+                    try:
+                        print("🔍 Extraindo metadados da primeira página...")
+                        metadados_dict, front_matter = extrair_e_formatar_metadados(markdown)
+                        campos_extraidos = len([v for v in metadados_dict.values() if v])
+                        
+                        if campos_extraidos > 0:
+                            # Concatena metadados + conteúdo original
+                            markdown_com_metadados = front_matter + "\n\n" + markdown
+                            print(f"✅ {campos_extraidos} metadados extraídos e adicionados")
+                            
+                            # Log dos principais metadados
+                            for campo in ['numero_processo', 'classe', 'agravante', 'agravado']:
+                                if metadados_dict.get(campo):
+                                    valor = metadados_dict[campo][:50] + "..." if len(metadados_dict[campo]) > 50 else metadados_dict[campo]
+                                    print(f"   📋 {campo}: {valor}")
+                        else:
+                            print("⚠️ Nenhum metadado extraído - usando markdown original")
+                            markdown_com_metadados = markdown
+                            
+                    except Exception as e:
+                        print(f"❌ Erro ao extrair metadados: {e}")
+                        markdown_com_metadados = markdown  # Fallback para markdown original
+                    
+                    # Salva o markdown COM os metadados
                     with open(caminho_md, 'w', encoding='utf-8') as f:
-                        f.write(markdown)
-                    print(f"Markdown salvo: {caminho_md}")
-                    logger.info(f"Markdown salvo: {caminho_md}")
+                        f.write(markdown_com_metadados)  # 🆕 MUDANÇA: salva com metadados
+                    
+                    print(f"💾 Markdown salvo: {caminho_md}")
+                    logger.info(f"💾 Markdown salvo: {caminho_md}")
+                    
+                    if RAG_DISPONIVEL and rag_system.is_initialized:
+                        try:
+                            print("🔄 Atualizando RAG com novo processo...")
+                            send_progress_ws(operation_id, 5, 'Atualizando sistema de busca...', 65)
+                            
+                            # Cria documento para a RAG
+                            from langchain.schema import Document
+                            novo_doc = Document(
+                                page_content=markdown_com_metadados,
+                                metadata={
+                                    "filename": f"{nome_arquivo_base}.md",
+                                    "source": caminho_md,
+                                    "numero_processo": numero,
+                                    "tem_metadados": campos_extraidos > 0
+                                }
+                            )
+                            
+                            # Adiciona apenas este documento novo
+                            if rag_system.vector_store:
+                                print(f"📝 Adicionando processo {numero} à base de conhecimento...")
+                                rag_system.vector_store.add_documents([novo_doc])
+                                
+                                # Atualiza lista de documentos
+                                rag_system.documents.append(novo_doc)
+                                
+                                print(f"✅ RAG atualizada! Total: {len(rag_system.documents)} documentos")
+                                logger.info(f"✅ RAG atualizada com processo {numero}")
+                            else:
+                                print("⚠️ Vector store não inicializado, recriando...")
+                                rag_system.documents.append(novo_doc)
+                                rag_system._create_vector_store()
+                                
+                        except Exception as e:
+                            print(f"⚠️ Erro ao atualizar RAG: {e}")
+                            logger.warning(f"Erro ao atualizar RAG: {e}")
+                            # Continua mesmo se RAG falhar
+                    else:
+                        if not RAG_DISPONIVEL:
+                            print("ℹ️ Sistema RAG não disponível")
+                        else:
+                            print("ℹ️ Sistema RAG não inicializado")
 
                 print("[PASSO 4.1] Processando arquivo DAT...")
                 if dat_base64 and dat_base64.strip():
@@ -344,3 +421,149 @@ def obter_dat(numero):
         return jsonify({'dat': conteudo}), 200
     except FileNotFoundError:
         return jsonify({'error': 'Arquivo não encontrado'}), 404
+    
+@triagem_bp.route('/triagem/rag/reload', methods=['POST'])
+def recarregar_rag_completa():
+    """🔄 Recarrega completamente a base de conhecimento da RAG (SEM arquivos internos)"""
+    print("🔄 Solicitação para recarregar RAG completa (limpa) recebida")
+    
+    if not RAG_DISPONIVEL:
+        return jsonify({
+            'success': False,
+            'error': 'Sistema RAG não disponível'
+        }), 500
+    
+    try:
+        print("🧹 Recarregando RAG com filtros para ignorar diretórios internos...")
+        
+        # Usa reload limpo que ignora anonimizados, mapas, etc.
+        documentos_carregados = rag_system.reload_clean()
+        
+        if documentos_carregados > 0:
+            print(f"✅ RAG recarregada (limpa) com {documentos_carregados} documentos")
+            return jsonify({
+                'success': True,
+                'message': f'RAG recarregada (sem arquivos internos) com {documentos_carregados} documentos',
+                'documentos_carregados': documentos_carregados,
+                'pasta_origem': rag_system.data_path,
+                'metodo': 'Reload limpo (ignora anonimizados/mapas/dat)'
+            }), 200
+        else:
+            return jsonify({
+                'success': False,
+                'message': 'Nenhum documento principal encontrado para carregar',
+                'pasta_origem': rag_system.data_path
+            }), 404
+            
+    except Exception as e:
+        print(f"❌ Erro ao recarregar RAG: {e}")
+        return jsonify({
+            'success': False,
+            'error': str(e)
+        }), 500
+
+@triagem_bp.route('/triagem/rag/status', methods=['GET'])
+def status_rag():
+    """📊 Retorna status atual da RAG"""
+    if not RAG_DISPONIVEL:
+        return jsonify({
+            'disponivel': False,
+            'status': 'RAG não importada',
+            'documentos': 0
+        }), 200
+    
+    try:
+        from adaptive_rag import get_rag_status
+        status = get_rag_status()
+        
+        return jsonify({
+            'disponivel': True,
+            'status': status.get('status', 'unknown'),
+            'mensagem': status.get('message', ''),
+            'pronto': status.get('isReady', False),
+            'documentos': status.get('documents_loaded', 0),
+            'metodo': status.get('method', 'TF-IDF'),
+            'pasta_dados': rag_system.data_path if hasattr(rag_system, 'data_path') else 'N/A'
+        }), 200
+        
+    except Exception as e:
+        return jsonify({
+            'disponivel': True,
+            'status': 'erro',
+            'erro': str(e)
+        }), 500
+        
+@triagem_bp.route('/triagem/rag/debug', methods=['GET'])
+def debug_arquivos_rag():
+    """🔍 Mostra quais arquivos estão carregados na RAG"""
+    if not RAG_DISPONIVEL:
+        return jsonify({
+            'disponivel': False,
+            'erro': 'RAG não disponível'
+        }), 500
+    
+    try:
+        # Captura output do debug
+        import io
+        import sys
+        from contextlib import redirect_stdout
+        
+        output = io.StringIO()
+        with redirect_stdout(output):
+            rag_system.debug_loaded_files()
+        
+        debug_text = output.getvalue()
+        
+        # Informações estruturadas
+        arquivos_info = []
+        for doc in rag_system.documents:
+            arquivos_info.append({
+                'filename': doc.metadata.get('filename', 'N/A'),
+                'relative_path': doc.metadata.get('relative_path', 'N/A'),
+                'tamanho': len(doc.page_content),
+                'tem_metadados': doc.page_content.startswith('---'),
+                'eh_documento_principal': doc.metadata.get('is_main_document', False)
+            })
+        
+        return jsonify({
+            'success': True,
+            'total_documentos': len(rag_system.documents),
+            'debug_output': debug_text,
+            'arquivos': arquivos_info[:10],  # Primeiros 10
+            'diretorios_ignorados': ['anonimizados', 'mapas', 'dat', '.rag_cache']
+        }), 200
+        
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'error': str(e)
+        }), 500
+        
+@triagem_bp.route('/triagem/rag/clear-cache', methods=['POST'])
+def limpar_cache_rag():
+    """🧹 Limpa completamente o cache da RAG"""
+    if not RAG_DISPONIVEL:
+        return jsonify({
+            'success': False,
+            'error': 'RAG não disponível'
+        }), 500
+    
+    try:
+        sucesso = rag_system.clear_cache()
+        
+        if sucesso:
+            return jsonify({
+                'success': True,
+                'message': 'Cache da RAG limpo com sucesso'
+            }), 200
+        else:
+            return jsonify({
+                'success': False,
+                'message': 'Falha ao limpar cache'
+            }), 500
+            
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'error': str(e)
+        }), 500
