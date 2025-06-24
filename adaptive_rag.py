@@ -1,15 +1,18 @@
-# adaptive_rag.py - VERSÃO INTEGRADA E CORRIGIDA
+# adaptive_rag.py - VERSÃO INTEGRADA COM CONVERSATIONAL RAG
 
 import os
 import pickle
 import hashlib
 import re
+import datetime
+import random
 from pathlib import Path
 from typing import List, Dict, Any, Optional
 from dataclasses import dataclass
 from collections import Counter
 import math
 import json
+import logging
 
 import numpy as np
 from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -17,6 +20,8 @@ from langchain.schema import Document
 from langchain.chains import RetrievalQA
 from langchain.prompts import PromptTemplate
 from langchain.schema.retriever import BaseRetriever
+
+logger = logging.getLogger(__name__)
 
 # Imports com fallback robusto
 try:
@@ -46,6 +51,397 @@ except ImportError:
                     print("⚠️ Usando OllamaEmbeddings mock")
                 def embed_query(self, text): return np.random.random(384).tolist()
                 def embed_documents(self, docs): return [np.random.random(384).tolist() for _ in docs]
+
+# =================================================================================
+# 💬 SISTEMA CONVERSACIONAL INTEGRADO
+# =================================================================================
+
+class ConversationalLayer:
+    def __init__(self):
+        self.conversation_patterns = self._load_conversation_patterns()
+        self.context_memory = {}
+        
+    def _load_conversation_patterns(self) -> Dict[str, Dict]:
+        return {
+            'greetings': {
+                'patterns': [
+                    r'\b(oi|olá|ola|hey|e ai|eai|salve)\b',
+                    r'\bbom\s+dia\b',
+                    r'\bboa\s+tarde\b',
+                    r'\bboa\s+noite\b',
+                    r'\bbom\s+final\s+de\s+semana\b',
+                    r'\bcomo\s+(vai|está|esta|ta)\b',
+                    r'\btudo\s+(bem|bom|certo)\b',
+                    r'\be\s+aí\b',
+                    r'\bbeleza\b',
+                    r'\btranquilo\b'
+                ],
+                'responses': [
+                    "Olá! 😊 Como posso ajudar você hoje?",
+                    "Oi! Tudo bem? Em que posso ser útil?",
+                    "Olá! Prazer em falar contigo. Como posso ajudar?",
+                    "Oi! 👋 Pronto para ajudar. O que você precisa?",
+                    "Olá! Espero que esteja tendo um ótimo dia. Como posso ajudar?"
+                ],
+                'time_specific': {
+                    'morning': [
+                        "Bom dia! ☀️ Como posso ajudar você hoje?",
+                        "Bom dia! Espero que tenha uma manhã produtiva. Em que posso ajudar?",
+                        "Oi, bom dia! Pronto para te ajudar. O que precisa?"
+                    ],
+                    'afternoon': [
+                        "Boa tarde! 🌤️ Como posso ser útil?",
+                        "Boa tarde! Em que posso ajudar você hoje?",
+                        "Oi, boa tarde! O que você gostaria de saber?"
+                    ],
+                    'evening': [
+                        "Boa noite! 🌙 Como posso ajudar?",
+                        "Boa noite! Em que posso ser útil?",
+                        "Oi, boa noite! O que você precisa?"
+                    ]
+                }
+            },
+            'farewells': {
+                'patterns': [
+                    r'\b(tchau|bye|adeus|até|falou|valeu)\b',
+                    r'\bobrigad[oa]\b',
+                    r'\bté\s+mais\b',
+                    r'\baté\s+(logo|mais|breve)\b',
+                    r'\bum\s+abraço\b',
+                    r'\bfico\s+por\s+aqui\b'
+                ],
+                'responses': [
+                    "Até mais! 👋 Foi um prazer ajudar!",
+                    "Tchau! Qualquer coisa, é só chamar! 😊",
+                    "Até logo! Espero ter ajudado!",
+                    "Valeu! Volte sempre que precisar! 🤝",
+                    "Tchau! Tenha um ótimo dia! ☀️"
+                ]
+            },
+            'thanks': {
+                'patterns': [
+                    r'\bobrigad[oa]\b',
+                    r'\bvaleu\b',
+                    r'\b(muito\s+)?obrigad[oa]\b',
+                    r'\bmto\s+obrigad[oa]\b',
+                    r'\bagradeço\b',
+                    r'\bthanks?\b'
+                ],
+                'responses': [
+                    "Por nada! 😊 Fico feliz em ajudar!",
+                    "De nada! É sempre um prazer ajudar!",
+                    "Magina! Para isso estou aqui! 🤝",
+                    "Não há de quê! Precisando, é só falar!",
+                    "Disponha! Qualquer dúvida, estou aqui!"
+                ]
+            },
+            'how_are_you': {
+                'patterns': [
+                    r'\bcomo\s+(você\s+)?(está|esta|vai|anda)\b',
+                    r'\btudo\s+(bem|bom|certo)\s+com\s+você\b',
+                    r'\bcomo\s+(você\s+)?se\s+sente\b',
+                    r'\bcomo\s+(anda|vai)\s+você\b'
+                ],
+                'responses': [
+                    "Estou bem, obrigado por perguntar! 😊 Como você está?",
+                    "Tudo certo por aqui! E você, como anda?",
+                    "Estou ótimo e pronto para ajudar! Como posso ser útil?",
+                    "Muito bem, obrigado! E você, tudo bem?",
+                    "Estou excelente! Pronto para responder suas dúvidas! 💪"
+                ]
+            },
+            'help_requests': {
+                'patterns': [
+                    r'\b(me\s+)?ajuda\b',
+                    r'\bpreciso\s+de\s+ajuda\b',
+                    r'\bpode\s+me\s+ajudar\b',
+                    r'\bo\s+que\s+(você\s+)?(faz|pode)\b',
+                    r'\bcomo\s+(funciona|usar|utilizar)\b',
+                    r'\bquais\s+suas\s+funções\b'
+                ],
+                'responses': [
+                    "Claro! Posso ajudar com informações sobre processos jurídicos, documentos legais e muito mais. O que você gostaria de saber?",
+                    "É claro que posso ajudar! Sou especializado em documentos legais e processos. Qual sua dúvida?",
+                    "Com certeza! Estou aqui para ajudar com questões jurídicas e análise de documentos. Em que posso ser útil?",
+                    "Claro! Posso responder perguntas sobre processos, analisar documentos e fornecer informações jurídicas. O que precisa?",
+                    "Sem problemas! Especializo-me em assistência jurídica e análise documental. Como posso ajudar?"
+                ]
+            },
+            'compliments': {
+                'patterns': [
+                    r'\b(você é|és)\s+(bom|ótimo|excelente|top|massa)\b',
+                    r'\bmuito\s+(bom|útil|eficiente)\b',
+                    r'\bparabéns\b',
+                    r'\bgostei\s+da\s+resposta\b',
+                    r'\bvocê\s+é\s+inteligente\b'
+                ],
+                'responses': [
+                    "Muito obrigado! 😊 Fico feliz em ser útil!",
+                    "Que bom que gostou! É um prazer ajudar!",
+                    "Obrigado pelo elogio! Sempre dou meu melhor! 💪",
+                    "Agradeço! É sempre gratificante saber que ajudei!",
+                    "Obrigado! Continuo melhorando para servir melhor! 🚀"
+                ]
+            },
+            'personal_questions': {
+                'patterns': [
+                    r'\bqual\s+(seu|teu)\s+nome\b',
+                    r'\bcomo\s+(você\s+)?se\s+chama\b',
+                    r'\bquem\s+(você\s+)?é\b',
+                    r'\bo\s+que\s+(você\s+)?é\b',
+                    r'\bvocê\s+é\s+(um\s+)?robô\b'
+                ],
+                'responses': [
+                    "Sou seu assistente jurídico especializado em documentos legais! 🤖⚖️ Estou aqui para ajudar com processos e questões jurídicas.",
+                    "Me chamo Assistente GMV! Sou especializado em análise de documentos jurídicos e processos legais. Como posso ajudar?",
+                    "Sou um assistente inteligente focado em questões jurídicas! Minha especialidade é analisar documentos e processos legais.",
+                    "Sou o Assistente do sistema GMV, especializado em direito e análise documental! Em que posso ser útil?",
+                    "Sou seu assistente jurídico digital! 💼 Especializado em processos, documentos legais e orientação jurídica."
+                ]
+            },
+            'confirmations': {
+                'patterns': [
+                    r'\b(sim|claro|certo|ok|okay|beleza|perfeito)\b',
+                    r'\b(pode|vamos)\s+(seguir|continuar)\b',
+                    r'\bentendi\b',
+                    r'\bcontinua\b'
+                ],
+                'responses': [
+                    "Perfeito! Como posso ajudar?",
+                    "Ótimo! O que você gostaria de saber?",
+                    "Certo! Qual sua próxima pergunta?",
+                    "Beleza! Em que mais posso ser útil?",
+                    "Entendido! Qual sua dúvida?"
+                ]
+            }
+        }
+    
+    def detect_conversation_type(self, text: str) -> Optional[str]:
+        text_lower = text.lower().strip()
+        text_clean = re.sub(r'[!?.,;]', '', text_lower)
+        for conv_type, data in self.conversation_patterns.items():
+            for pattern in data['patterns']:
+                if re.search(pattern, text_clean, re.IGNORECASE):
+                    return conv_type
+        return None
+    
+    def get_time_period(self) -> str:
+        hour = datetime.datetime.now().hour
+        if 5 <= hour < 12:
+            return 'morning'
+        elif 12 <= hour < 18:
+            return 'afternoon'
+        else:
+            return 'evening'
+    
+    def generate_conversational_response(self, text: str, conv_type: str) -> str:
+        conv_data = self.conversation_patterns[conv_type]
+        if conv_type == 'greetings' and 'time_specific' in conv_data:
+            time_period = self.get_time_period()
+            if time_period in conv_data['time_specific']:
+                return random.choice(conv_data['time_specific'][time_period])
+        return random.choice(conv_data['responses'])
+    
+    def should_use_conversational_response(self, text: str) -> bool:
+        if len(text.strip()) <= 30:
+            return True
+        conv_type = self.detect_conversation_type(text)
+        if conv_type:
+            text_without_conv = text.lower()
+            patterns = self.conversation_patterns[conv_type]['patterns']
+            for pattern in patterns:
+                text_without_conv = re.sub(pattern, '', text_without_conv, flags=re.IGNORECASE)
+            remaining_words = len([w for w in text_without_conv.split() if len(w) > 2])
+            return remaining_words <= 2
+        return False
+
+class SmartRAGHandler:
+    def __init__(self, rag_system):
+        self.rag_system = rag_system
+        self.conversational = ConversationalLayer()
+        self.conversation_history = []
+        
+    def process_query(self, question: str, user_id: str = "default") -> Dict[str, Any]:
+        question_clean = question.strip()
+        conv_type = self.conversational.detect_conversation_type(question_clean)
+        
+        if conv_type and self.conversational.should_use_conversational_response(question_clean):
+            response = self.conversational.generate_conversational_response(question_clean, conv_type)
+            return {
+                "answer": response,
+                "type": "conversational",
+                "conversation_type": conv_type,
+                "sources": [],
+                "documents_found": 0,
+                "is_natural_response": True,
+                "suggestion": "Faça uma pergunta sobre processos ou documentos jurídicos para que eu possa ajudar melhor!"
+            }
+        elif conv_type:
+            question_technical = self._extract_technical_part(question_clean, conv_type)
+            if question_technical and len(question_technical.strip()) > 5:
+                # Usa o método base para evitar recursão
+                if hasattr(self.rag_system, 'base_query'):
+                    rag_result = self.rag_system.base_query(question_technical)
+                else:
+                    rag_result = self._call_original_rag(question_technical)
+                
+                if "error" not in rag_result:
+                    conv_prefix = self._get_conversational_prefix(conv_type)
+                    rag_result["answer"] = f"{conv_prefix}\n\n{rag_result['answer']}"
+                    rag_result["type"] = "hybrid"
+                    rag_result["conversation_type"] = conv_type
+                    rag_result["is_natural_response"] = True
+                return rag_result
+            else:
+                response = self.conversational.generate_conversational_response(question_clean, conv_type)
+                return {
+                    "answer": response,
+                    "type": "conversational",
+                    "conversation_type": conv_type,
+                    "sources": [],
+                    "documents_found": 0,
+                    "is_natural_response": True
+                }
+        else:
+            # Usa o método base para evitar recursão
+            if hasattr(self.rag_system, 'base_query'):
+                rag_result = self.rag_system.base_query(question_clean)
+            else:
+                rag_result = self._call_original_rag(question_clean)
+            
+            if "error" not in rag_result:
+                rag_result["type"] = "technical"
+                rag_result["is_natural_response"] = False
+                rag_result["answer"] = self._humanize_technical_response(rag_result["answer"])
+            return rag_result
+    
+    def _call_original_rag(self, question: str) -> Dict[str, Any]:
+        """Chama o método RAG original diretamente para evitar recursão"""
+        try:
+            # Chama o método básico do UltraFastRAG diretamente
+            if not self.rag_system.is_initialized or not self.rag_system.vector_store:
+                return {"error": "Sistema não inicializado"}
+            
+            k = self.rag_system.config.top_k
+            print(f"🔍 Processamento RAG direto: {question[:50]}...")
+            
+            # Busca documentos relevantes
+            relevant_docs = self.rag_system.vector_store.similarity_search(question, k=k, min_score=0.15)
+            
+            if not relevant_docs:
+                return {
+                    "error": "Nenhum documento relevante encontrado",
+                    "suggestion": "Tente reformular a pergunta com termos mais específicos"
+                }
+            
+            # Prepara contexto (versão simplificada)
+            context_parts = []
+            sources = set()
+            
+            for i, doc in enumerate(relevant_docs, 1):
+                content = doc.page_content.strip()
+                context_parts.append(f"DOCUMENTO {i}:\n{content}")
+                
+                if 'source' in doc.metadata:
+                    sources.add(doc.metadata['source'])
+                elif 'filename' in doc.metadata:
+                    sources.add(doc.metadata['filename'])
+            
+            context = "\n\n".join(context_parts)
+            
+            # Template simplificado
+            prompt_template = f"""Com base nos documentos fornecidos, responda a pergunta de forma clara e objetiva.
+
+DOCUMENTOS:
+{context}
+
+PERGUNTA: {question}
+
+RESPOSTA:"""
+            
+            # Chama LLM
+            if hasattr(self.rag_system.llm, 'invoke'):
+                answer = self.rag_system.llm.invoke(prompt_template)
+            else:
+                answer = self.rag_system.llm(prompt_template)
+            
+            return {
+                "answer": answer.strip(),
+                "sources": list(sources),
+                "documents_found": len(relevant_docs)
+            }
+            
+        except Exception as e:
+            return {"error": str(e)}
+    
+    def _extract_technical_part(self, text: str, conv_type: str) -> str:
+        patterns = self.conversational.conversation_patterns[conv_type]['patterns']
+        technical_text = text.lower()
+        for pattern in patterns:
+            technical_text = re.sub(pattern, '', technical_text, flags=re.IGNORECASE)
+        technical_text = re.sub(r'\b(e|mas|então|aí|né|assim|tipo)\b', '', technical_text)
+        return technical_text.strip()
+    
+    def _get_conversational_prefix(self, conv_type: str) -> str:
+        prefixes = {
+            'greetings': random.choice([
+                "Olá! 😊", 
+                "Oi!", 
+                "Olá, que bom falar contigo!"
+            ]),
+            'help_requests': random.choice([
+                "Claro, posso ajudar!", 
+                "Com certeza!", 
+                "É claro que posso ajudar!"
+            ]),
+            'thanks': random.choice([
+                "De nada! 😊", 
+                "Por nada!", 
+                "Fico feliz em ajudar!"
+            ])
+        }
+        return prefixes.get(conv_type, "")
+    
+    def _humanize_technical_response(self, answer: str) -> str:
+        if len(answer) < 50:
+            friendly_endings = [
+                " Espero ter esclarecido sua dúvida! 😊",
+                " Precisa de mais alguma informação?",
+                " Posso detalhar mais algum ponto específico?",
+                " Isso responde sua pergunta?"
+            ]
+            answer += random.choice(friendly_endings)
+        elif "conforme" in answer.lower() or "nos termos" in answer.lower():
+            if not any(emoji in answer for emoji in ['😊', '👍', '💡', '⚖️']):
+                answer += " \n\n💡 Espero ter ajudado! Qualquer dúvida, é só perguntar."
+        return answer
+
+def enhance_rag_with_conversation(rag_system):
+    """Melhora o sistema RAG com capacidades conversacionais"""
+    # Salva referência para o método original
+    original_query_method = rag_system.query
+    smart_handler = SmartRAGHandler(rag_system)
+    
+    # Método que usa o original diretamente (evita recursão)
+    def base_rag_query(question: str, top_k: int = 4) -> Dict[str, Any]:
+        """Chama o método RAG original diretamente"""
+        return original_query_method(question, top_k)
+    
+    # Atualiza o handler para usar o método base
+    smart_handler.rag_system.base_query = base_rag_query
+    
+    def enhanced_query(question: str, top_k: int = 4, user_id: str = "default") -> Dict[str, Any]:
+        try:
+            return smart_handler.process_query(question, user_id)
+        except Exception as e:
+            logger.error(f"Erro no processamento conversacional: {e}")
+            # Usa o método base em caso de erro
+            return base_rag_query(question, top_k)
+    
+    rag_system.query = enhanced_query
+    rag_system.conversational_handler = smart_handler
+    logger.info("✅ Sistema RAG melhorado com capacidades conversacionais!")
+    return rag_system
 
 # =================================================================================
 # 🚀 EMBEDDING HÍBRIDO OTIMIZADO
@@ -369,13 +765,29 @@ class OptimizedVectorStore:
         print(f"🔍 Buscando para: '{query[:50]}...'")
         
         # Gera embedding da query
+        query_embedding = None
+        
         if self.use_ollama:
             try:
                 query_embedding = self.ollama_embeddings.embed_query(query)
-            except:
-                query_embedding = self.tfidf_embedder.embed_query(query)
-        else:
+            except Exception as e:
+                print(f"⚠️ Erro Ollama embedding: {e}")
+                self.use_ollama = False
+        
+        if not self.use_ollama:
+            # Inicializa TF-IDF se necessário
+            if not hasattr(self, 'tfidf_embedder') or self.tfidf_embedder is None:
+                print("🔄 Inicializando TF-IDF embedder...")
+                self.tfidf_embedder = SmartTFIDFEmbedder()
+                # Treina com documentos existentes
+                if self.documents:
+                    self.tfidf_embedder.fit(self.documents)
+            
             query_embedding = self.tfidf_embedder.embed_query(query)
+        
+        if query_embedding is None:
+            print("❌ Erro ao gerar embedding da query")
+            return []
         
         query_vec = np.array(query_embedding)
         
@@ -489,7 +901,7 @@ class OptimizedVectorStore:
         return SmartRetriever(self, k, min_score)
 
 # =================================================================================
-# 🎯 SISTEMA RAG PRINCIPAL
+# 🎯 SISTEMA RAG PRINCIPAL COM INTEGRAÇÃO CONVERSACIONAL
 # =================================================================================
 
 @dataclass
@@ -502,6 +914,7 @@ class UltraFastRAGConfig:
     max_chunks: int = 500
     data_dir: str = "data"
     use_ollama_embeddings: bool = True
+    enable_conversational: bool = True  # Nova opção
 
 class UltraFastRAG:
     def __init__(self, config: Optional[UltraFastRAGConfig] = None):
@@ -510,6 +923,7 @@ class UltraFastRAG:
         self.vector_store = None
         self.documents = []
         self.is_initialized = False
+        self.conversational_handler = None
         
         # Caminhos configuráveis
         self.data_path = os.getenv("DADOS_ANONIMOS", 
@@ -544,12 +958,25 @@ class UltraFastRAG:
             self.is_initialized = True
             self._load_cache()
             
+            # Integra sistema conversacional se habilitado
+            if self.config.enable_conversational:
+                self._integrate_conversational()
+            
             return True
             
         except Exception as e:
             print(f"❌ Erro na inicialização: {e}")
             print("💡 Verifique se o Ollama está rodando e os modelos instalados")
             return False
+    
+    def _integrate_conversational(self):
+        """Integra o sistema conversacional"""
+        try:
+            enhance_rag_with_conversation(self)
+            print("✅ Sistema conversacional integrado!")
+        except Exception as e:
+            print(f"⚠️ Erro ao integrar sistema conversacional: {e}")
+            print("🔄 Continuando com sistema RAG básico")
     
     def _load_cache(self):
         """Carrega cache existente"""
@@ -663,7 +1090,7 @@ class UltraFastRAG:
         print("✅ Vector store criado!")
     
     def query(self, question: str, top_k: Optional[int] = None) -> Dict[str, Any]:
-        """Realiza consulta no sistema RAG"""
+        """Realiza consulta no sistema RAG (método básico, pode ser sobrescrito pelo conversacional)"""
         if not self.is_initialized or not self.vector_store:
             return {"error": "Sistema não inicializado"}
         
@@ -786,6 +1213,7 @@ def get_rag_status():
         }
     
     embedding_method = "Híbrido (Ollama + TF-IDF)" if rag_system.config.use_ollama_embeddings else "TF-IDF"
+    conversational_status = "Ativo" if rag_system.config.enable_conversational and hasattr(rag_system, 'conversational_handler') else "Inativo"
     
     return {
         "status": "online", 
@@ -793,21 +1221,59 @@ def get_rag_status():
         "isReady": True,
         "documents_loaded": len(rag_system.documents),
         "embedding_method": embedding_method,
+        "conversational": conversational_status,
         "model": rag_system.config.model_name,
         "data_path": rag_system.data_path
     }
 
 def query_rag(question: str, top_k: int = 4):
-    """Interface para consultas RAG"""
+    """Interface para consultas RAG (agora com capacidades conversacionais)"""
     return rag_system.query(question, top_k)
 
 # =================================================================================
 # 🧪 TESTE STANDALONE
 # =================================================================================
 
+def test_conversational_responses():
+    """Teste específico para respostas conversacionais"""
+    conv_layer = ConversationalLayer()
+    test_cases = [
+        "Oi!",
+        "Bom dia!",
+        "Como você está?",
+        "Obrigado pela ajuda",
+        "Você pode me ajudar?",
+        "Tchau!",
+        "Qual seu nome?",
+        "Oi, bom dia! Preciso saber sobre um processo específico",
+        "Olá! Gostaria de entender sobre TEA e terapia ABA",
+        "Valeu pelas informações! Qual o valor da causa do processo 1005888?"
+    ]
+    
+    print("🧪 TESTE DE RESPOSTAS CONVERSACIONAIS")
+    print("=" * 60)
+    
+    for test in test_cases:
+        conv_type = conv_layer.detect_conversation_type(test)
+        should_conv = conv_layer.should_use_conversational_response(test)
+        print(f"\n📝 Input: '{test}'")
+        print(f"🎯 Tipo: {conv_type}")
+        print(f"🗣️ Conversacional: {should_conv}")
+        
+        if conv_type and should_conv:
+            response = conv_layer.generate_conversational_response(test, conv_type)
+            print(f"💬 Resposta: {response}")
+        else:
+            print(f"🔍 Resposta: [Processamento técnico RAG]")
+
 if __name__ == "__main__":
-    print("🧪 TESTE DO SISTEMA RAG")
-    print("=" * 50)
+    print("🧪 TESTE DO SISTEMA RAG ADAPTATIVO COM CONVERSACIONAL")
+    print("=" * 60)
+    
+    # Primeiro testa as respostas conversacionais
+    test_conversational_responses()
+    
+    print("\n" + "="*60)
     
     # Cria diretório de teste se não existir
     test_dir = "data"
@@ -850,12 +1316,13 @@ A responsabilidade dos entes federativos na saúde é solidária, podendo qualqu
             f.write(test_content)
         print(f"✅ Documento de teste criado em {test_dir}")
     
-    # Configura sistema
+    # Configura sistema com conversacional habilitado
     config = UltraFastRAGConfig(
         model_name="gemma:2b",
         temperature=0.1,
         data_dir=test_dir,
-        use_ollama_embeddings=True
+        use_ollama_embeddings=True,
+        enable_conversational=True  # Habilita sistema conversacional
     )
     
     test_rag = UltraFastRAG(config)
@@ -869,12 +1336,14 @@ A responsabilidade dos entes federativos na saúde é solidária, podendo qualqu
         print(f"✅ {docs_loaded} documentos carregados")
         
         if docs_loaded > 0:
-            print("\n🧪 Executando testes...")
+            print("\n🧪 Executando testes mistos (conversacional + técnico)...")
             
             queries = [
-                "Qual é o número do processo e quem são as partes envolvidas?",
-                "A terapia ABA é disponibilizada pelo SUS?",
-                "Quais tratamentos o agravante necessita?"
+                "Oi! Bom dia!",  # Conversacional
+                "Qual é o número do processo e quem são as partes envolvidas?",  # Técnica
+                "Obrigado! A terapia ABA é disponibilizada pelo SUS?",  # Híbrida
+                "Quais tratamentos o agravante necessita?",  # Técnica
+                "Valeu pelas informações! Tchau!"  # Conversacional
             ]
             
             for i, query in enumerate(queries, 1):
@@ -887,8 +1356,11 @@ A responsabilidade dos entes federativos na saúde é solidária, podendo qualqu
                     print(f"❌ Erro: {result['error']}")
                 else:
                     print(f"Resposta: {result['answer']}")
-                    print(f"Fontes: {result['sources']}")
-                    print(f"Documentos: {result['documents_found']}")
+                    print(f"Tipo: {result.get('type', 'técnico')}")
+                    if result.get('sources'):
+                        print(f"Fontes: {result['sources']}")
+                    if result.get('documents_found'):
+                        print(f"Documentos: {result['documents_found']}")
         else:
             print("⚠️ Nenhum documento carregado para teste")
     else:
