@@ -1,9 +1,14 @@
-# utils/ultrafast_rag.py
+# utils/ultrafast_rag_optimized.py
 
 import os
 import re
+import time
+import hashlib
 from dataclasses import dataclass
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Tuple
+from functools import lru_cache
+import concurrent.futures
+import threading
 
 import numpy as np
 from langchain.schema import Document
@@ -31,15 +36,22 @@ except ImportError:
 
 @dataclass
 class UltraFastRAGConfig:
-    model_name: str = "gemma:2b"
-    temperature: float = 0.1
-    chunk_size: int = 1200
+    model_name: str = "mistral:7b-instruct"
+    temperature: float = 0.0
+    chunk_size: int = 800
     chunk_overlap: int = 200
-    top_k: int = 4
-    max_chunks: int = 500
+    top_k: int = 7
+    max_chunks: int = 50 
     data_dir: str = "data"
     use_ollama_embeddings: bool = True
     enable_conversational: bool = True
+    max_context_length: int = 8192 
+    num_predict: int = 1024
+    enable_cache: bool = True
+    cache_ttl: int = 3600 
+    min_similarity_score: float = 0.15
+    enable_parallel_search: bool = True
+    enable_preprocessing: bool = True
 
 
 class UltraFastRAG:
@@ -51,6 +63,13 @@ class UltraFastRAG:
         self.is_initialized = False
         self.conversational_handler = None
         
+        # Cache em memória para respostas
+        self.response_cache = {}
+        self.cache_stats = {"hits": 0, "misses": 0}
+        
+        # Lock para thread safety
+        self.cache_lock = threading.Lock()
+        
         # Caminhos configuráveis
         self.data_path = os.getenv("DADOS_ANONIMOS", 
                                   os.getenv("PASTA_DESTINO", 
@@ -58,51 +77,116 @@ class UltraFastRAG:
         self.cache_path = os.path.join(os.path.dirname(self.data_path), ".rag_cache")
         os.makedirs(self.cache_path, exist_ok=True)
         
-        # Splitter para chunks
+        # Splitter otimizado para chunks menores
         self.text_splitter = RecursiveCharacterTextSplitter(
             chunk_size=self.config.chunk_size,
             chunk_overlap=self.config.chunk_overlap,
             separators=["\n\n", "\n", ". ", "! ", "? ", " "]
         )
+        
+        # Padrões de preprocessamento compilados
+        self._compile_preprocessing_patterns()
+    
+    def _compile_preprocessing_patterns(self):
+        """Compila padrões regex para preprocessamento rápido"""
+        self.cleanup_patterns = [
+            (re.compile(r'\s+'), ' '),  # Múltiplos espaços
+            (re.compile(r'\n+'), '\n'),  # Múltiplas quebras
+            (re.compile(r'[^\w\s\.\?\!\,\:\;\-\(\)]', re.UNICODE), ''),  # Caracteres especiais
+        ]
+        
+        self.query_patterns = [
+            (re.compile(r'\b(qual|quais|como|quando|onde|por que|porque)\b', re.IGNORECASE), ''),
+            (re.compile(r'\b(me|nos|lhe|te)\s+(ajude|ajudar|diga|dizer|fale|falar)\b', re.IGNORECASE), ''),
+            (re.compile(r'\b(por favor|obrigad[oa]|valeu)\b', re.IGNORECASE), ''),
+        ]
+    
+    @lru_cache(maxsize=1000)
+    def _preprocess_query(self, query: str) -> str:
+        """Preprocessa query para melhor busca (com cache)"""
+        if not self.config.enable_preprocessing:
+            return query
+        
+        # Remove palavras de cortesia e melhora a query
+        processed = query.strip().lower()
+        
+        for pattern, replacement in self.query_patterns:
+            processed = pattern.sub(replacement, processed)
+        
+        # Remove espaços extras
+        processed = re.sub(r'\s+', ' ', processed).strip()
+        
+        # Mantém palavras-chave importantes
+        keywords = [word for word in processed.split() 
+                   if len(word) > 2 and word not in ['para', 'com', 'por', 'sobre']]
+        
+        return ' '.join(keywords) if keywords else query
+    
+    def _get_cache_key(self, query: str, top_k: int) -> str:
+        """Gera chave única para cache"""
+        content = f"{query}_{top_k}_{self.config.model_name}"
+        return hashlib.md5(content.encode()).hexdigest()
+    
+    def _get_from_cache(self, cache_key: str) -> Optional[Dict[str, Any]]:
+        """Busca resposta no cache"""
+        if not self.config.enable_cache:
+            return None
+        
+        with self.cache_lock:
+            if cache_key in self.response_cache:
+                cached_data, timestamp = self.response_cache[cache_key]
+                if time.time() - timestamp < self.config.cache_ttl:
+                    self.cache_stats["hits"] += 1
+                    return cached_data
+                else:
+                    # Remove cache expirado
+                    del self.response_cache[cache_key]
+        
+        self.cache_stats["misses"] += 1
+        return None
+    
+    def _save_to_cache(self, cache_key: str, response: Dict[str, Any]) -> None:
+        """Salva resposta no cache"""
+        if not self.config.enable_cache:
+            return
+        
+        with self.cache_lock:
+            # Limita tamanho do cache
+            if len(self.response_cache) > 500:
+                # Remove entradas mais antigas
+                oldest_key = min(self.response_cache.keys(), 
+                               key=lambda k: self.response_cache[k][1])
+                del self.response_cache[oldest_key]
+            
+            self.response_cache[cache_key] = (response, time.time())
     
     def initialize(self):
-        """Inicializa o sistema RAG"""
+        """Inicializa o sistema RAG otimizado"""
         try:
-            print("🔄 Inicializando UltraFast RAG...")
+            print("🚀 Inicializando UltraFast RAG Otimizado...")
             
-            # Inicializa LLM com timeout
+            # Inicializa LLM com configurações otimizadas
             try:
-                print("🔌 Conectando com Ollama LLM...")
                 self.llm = OllamaLLM(
                     model=self.config.model_name,
                     temperature=self.config.temperature,
-                    num_predict=400
+                    num_predict=self.config.num_predict,  # Reduzido para velocidade
+                    # Parâmetros otimizados para velocidade
+                    repeat_penalty=1.1,
+                    top_k=10,
+                    top_p=0.9,
                 )
                 
-                # Testa conexão com timeout implícito
-                print("🧪 Testando conexão...")
-                test_response = self.llm.invoke("Teste")
-                print(f"✅ LLM {self.config.model_name} conectado")
+                # Teste rápido de conexão
+                test_response = self.llm.invoke("OK")
+                print(f"✅ LLM {self.config.model_name} otimizado conectado")
                 
             except Exception as e:
                 print(f"❌ Erro na conexão LLM: {e}")
-                print("⚠️ Continuando sem LLM - funcionalidade limitada")
-                # Cria LLM mock para não quebrar o sistema
-                class MockLLM:
-                    def invoke(self, prompt):
-                        return "Sistema RAG não disponível - LLM offline"
-                    def __call__(self, prompt):
-                        return "Sistema RAG não disponível - LLM offline"
-                
-                self.llm = MockLLM()
+                return False
             
             self.is_initialized = True
-            
-            # Carrega cache de forma segura
-            try:
-                self._load_cache()
-            except Exception as e:
-                print(f"⚠️ Erro ao carregar cache: {e}")
+            self._load_cache()
             
             # Integra sistema conversacional se habilitado
             if self.config.enable_conversational:
@@ -115,14 +199,12 @@ class UltraFastRAG:
             
         except Exception as e:
             print(f"❌ Erro crítico na inicialização: {e}")
-            print("💡 Verifique se o Ollama está rodando e os modelos instalados")
             self.is_initialized = False
             return False
     
     def _integrate_conversational(self):
-        """Integra o sistema conversacional"""
+        """Integra sistema conversacional de forma otimizada"""
         try:
-            # Evita imports circulares usando import local
             import sys
             if 'adaptive_rag' in sys.modules:
                 module = sys.modules['adaptive_rag']
@@ -130,19 +212,12 @@ class UltraFastRAG:
                     enhance_rag_with_conversation = module.enhance_rag_with_conversation
                     enhance_rag_with_conversation(self)
                     print("✅ Sistema conversacional integrado!")
-                else:
-                    print("⚠️ Função enhance_rag_with_conversation não encontrada")
-            else:
-                print("⚠️ Módulo adaptive_rag não carregado")
         except Exception as e:
-            print(f"⚠️ Erro ao integrar sistema conversacional: {e}")
-            print("🔄 Continuando com sistema RAG básico")
+            print(f"⚠️ Erro ao integrar conversacional: {e}")
     
     def _load_cache(self):
-        """Carrega cache existente"""
+        """Carrega cache de forma otimizada"""
         try:
-            print("📦 Verificando cache existente...")
-            
             self.vector_store = OptimizedVectorStore(
                 os.path.join(self.cache_path, "optimized"),
                 use_ollama=self.config.use_ollama_embeddings
@@ -150,217 +225,27 @@ class UltraFastRAG:
             
             if self.vector_store.load():
                 try:
-                    # Reconstrói lista de documentos do vector store
                     self.documents = []
                     for i, (doc_content, metadata) in enumerate(zip(self.vector_store.documents, self.vector_store.metadata)):
-                        try:
-                            self.documents.append(Document(page_content=doc_content, metadata=metadata))
-                        except Exception as e:
-                            print(f"⚠️ Erro ao carregar documento {i} do cache: {e}")
-                            continue
-                    
+                        self.documents.append(Document(page_content=doc_content, metadata=metadata))
                     print(f"📦 Cache carregado: {len(self.documents)} documentos")
                 except Exception as e:
-                    print(f"⚠️ Erro ao processar documentos do cache: {e}")
+                    print(f"⚠️ Erro ao processar cache: {e}")
                     self.documents = []
             else:
-                print("📦 Nenhum cache encontrado - inicializando vazio")
                 self.documents = []
                 
         except Exception as e:
             print(f"⚠️ Erro ao carregar cache: {e}")
-            # Cria vector store vazio em caso de erro
-            try:
-                self.vector_store = OptimizedVectorStore(
-                    os.path.join(self.cache_path, "optimized"),
-                    use_ollama=self.config.use_ollama_embeddings
-                )
-                self.documents = []
-            except Exception as e2:
-                print(f"❌ Erro crítico ao criar vector store: {e2}")
-                # Mock vector store como último recurso
-                class MockVectorStore:
-                    def similarity_search(self, query, k=4, min_score=0.1):
-                        return []
-    
-    def test_search_detailed(self, question: str):
-        """Teste detalhado da busca para debug"""
-        try:
-            print(f"\n🔬 TESTE DETALHADO PARA: '{question}'")
-            print("=" * 70)
-            
-            # Informações básicas
-            print(f"📊 Sistema inicializado: {self.is_initialized}")
-            print(f"📊 Total documentos: {len(self.documents) if self.documents else 0}")
-            print(f"📊 Vector store: {self.vector_store is not None}")
-            
-            if not self.is_initialized or not self.vector_store:
-                print("❌ Sistema não está pronto para busca")
-                return
-            
-            # Teste de similaridade detalhado
-            if hasattr(self.vector_store, 'test_similarity_calculation'):
-                print(f"\n🧮 CALCULANDO SIMILARIDADES...")
-                similarities = self.vector_store.test_similarity_calculation(question, max_docs=20)
-            
-            # Teste com diferentes thresholds
-            print(f"\n🎯 TESTE COM DIFERENTES THRESHOLDS:")
-            thresholds = [0.0, 0.01, 0.03, 0.05, 0.1, 0.15, 0.2]
-            
-            for threshold in thresholds:
-                try:
-                    results = self.vector_store.similarity_search(question, k=3, min_score=threshold)
-                    print(f"   Threshold {threshold:4.2f}: {len(results)} resultados")
-                    
-                    if results and threshold <= 0.05:  # Mostra detalhes para thresholds baixos
-                        for i, doc in enumerate(results):
-                            score = doc.metadata.get("similarity_score", 0)
-                            preview = doc.page_content[:50].replace('\n', ' ')
-                            print(f"      {i+1}. Score {score:.3f}: {preview}...")
-                            
-                except Exception as e:
-                    print(f"   Threshold {threshold:4.2f}: ERRO - {e}")
-            
-            # Busca por keywords
-            print(f"\n🔍 TESTE DE BUSCA POR KEYWORDS:")
-            if hasattr(self.vector_store, '_keyword_search'):
-                keyword_results = self.vector_store._keyword_search(question, k=5)
-                print(f"   Keywords encontraram: {len(keyword_results)} resultados")
-                
-                for i, doc in enumerate(keyword_results):
-                    score = doc.metadata.get("similarity_score", 0)
-                    search_type = doc.metadata.get("search_type", "unknown")
-                    preview = doc.page_content[:50].replace('\n', ' ')
-                    print(f"      {i+1}. {search_type} Score {score:.3f}: {preview}...")
-            
-            # Busca de fallback
-            print(f"\n🆘 TESTE DE BUSCA FALLBACK:")
-            fallback_results = self._simple_keyword_search(question, k=5)
-            print(f"   Fallback encontrou: {len(fallback_results)} resultados")
-            
-            return {
-                "question": question,
-                "system_ready": self.is_initialized and self.vector_store is not None,
-                "total_documents": len(self.documents) if self.documents else 0,
-                "threshold_results": {str(t): "tested" for t in thresholds},
-                "keyword_results": len(keyword_results) if 'keyword_results' in locals() else 0,
-                "fallback_results": len(fallback_results)
-            }
-            
-        except Exception as e:
-            print(f"❌ Erro no teste detalhado: {e}")
-            import traceback
-            traceback.print_exc()
-            return {"error": str(e)}
-    
-    def debug_search(self, question: str) -> Dict[str, Any]:
-        """Método de debug para diagnosticar problemas de busca"""
-        try:
-            debug_info = {
-                "question": question,
-                "system_initialized": self.is_initialized,
-                "total_documents": len(self.documents) if self.documents else 0,
-                "vector_store_available": self.vector_store is not None,
-                "config": {
-                    "model_name": self.config.model_name,
-                    "use_ollama_embeddings": self.config.use_ollama_embeddings,
-                    "top_k": self.config.top_k
-                }
-            }
-            
-            if self.documents:
-                # Amostra de documentos
-                sample_docs = []
-                for i, doc in enumerate(self.documents[:3]):
-                    sample_docs.append({
-                        "index": i,
-                        "content_preview": doc.page_content[:200] + "..." if len(doc.page_content) > 200 else doc.page_content,
-                        "metadata": doc.metadata
-                    })
-                debug_info["sample_documents"] = sample_docs
-            
-            if self.vector_store and hasattr(self.vector_store, 'embeddings'):
-                debug_info["embeddings_count"] = len(self.vector_store.embeddings)
-                debug_info["embeddings_type"] = "ollama" if self.vector_store.use_ollama else "tfidf"
-                
-                # Testa busca com diferentes thresholds
-                test_results = {}
-                for threshold in [0.0, 0.01, 0.05, 0.1, 0.15]:
-                    try:
-                        results = self.vector_store.similarity_search(question, k=3, min_score=threshold)
-                        test_results[f"threshold_{threshold}"] = len(results)
-                    except Exception as e:
-                        test_results[f"threshold_{threshold}"] = f"Error: {str(e)}"
-                
-                debug_info["threshold_tests"] = test_results
-            
-            return debug_info
-            
-        except Exception as e:
-            return {"error": f"Debug failed: {str(e)}"}
-    
-    def list_available_processes(self, limit: int = 20) -> List[str]:
-        """Lista números de processos disponíveis na base"""
-        try:
-            processes = set()
-            pattern = r'\d{6,7}-\d{2}\.\d{4}\.\d\.\d{2}\.\d{4}'
-            
-            for doc in (self.documents or [])[:500]:  # Limita para performance
-                # Busca no conteúdo
-                found = re.findall(pattern, doc.page_content)
-                processes.update(found)
-                
-                # Busca nos metadados
-                if hasattr(doc, 'metadata'):
-                    for key, value in doc.metadata.items():
-                        if isinstance(value, str) and 'processo' in key.lower():
-                            found = re.findall(pattern, value)
-                            processes.update(found)
-            
-            return sorted(list(processes))[:limit]
-            
-        except Exception as e:
-            print(f"⚠️ Erro ao listar processos: {e}")
-            return []
-                # Removed unreachable code
-    def _parse_legal_metadata(self, file_content: str) -> Dict[str, str]:
-        """Extrai metadados de documentos legais"""
-        metadata = {}
-        
-        # Extrai metadados do processo
-        metadata_match = re.search(r"### METADADOS DO PROCESSO\n(.*?)(?=\n###|\Z)", file_content, re.DOTALL)
-        if metadata_match:
-            block = metadata_match.group(1)
-            # Parse simples key: value
-            for line in block.split('\n'):
-                if ':' in line:
-                    key, value = line.split(':', 1)
-                    key = key.strip().strip('"')
-                    value = value.strip().strip('"')
-                    if key and value:
-                        metadata[key] = value
-        
-        # Extrai partes envolvidas
-        partes_match = re.search(r"### PARTES ENVOLVIDAS\n(.*?)(?=\n###|\Z)", file_content, re.DOTALL)
-        if partes_match:
-            block = partes_match.group(1)
-            for line in block.split('\n'):
-                if ':' in line:
-                    key, value = line.split(':', 1)
-                    key = key.strip().strip('"')
-                    value = value.strip().strip('"')
-                    if key and value:
-                        metadata[key] = value
-        
-        return metadata
+            self.vector_store = None
     
     def load_documents_from_directory(self):
-        """Carrega documentos do diretório"""
+        """Carrega documentos de forma otimizada"""
         if not os.path.exists(self.data_path):
             print(f"⚠️ Diretório não encontrado: {self.data_path}")
             return 0
         
-        print(f"📁 Carregando documentos de: {self.data_path}")
+        print(f"📁 Carregando documentos otimizado de: {self.data_path}")
         
         documents = []
         try:
@@ -372,248 +257,368 @@ class UltraFastRAG:
                             with open(filepath, 'r', encoding='utf-8') as f:
                                 content = f.read().strip()
                             
-                            if len(content) < 100:  # Ignora arquivos muito pequenos
+                            if len(content) < 100:
                                 continue
                             
-                            # Extrai metadados se for documento legal
-                            metadata = self._parse_legal_metadata(content)
+                            # Parse de metadados otimizado
+                            metadata = self._parse_legal_metadata_fast(content)
                             metadata['filename'] = file
                             metadata['source'] = filepath
                             
-                            # Remove blocos de metadados do conteúdo principal
-                            clean_content = re.sub(r"### METADADOS DO PROCESSO.*?(?=\n###|\Z)", "", content, flags=re.DOTALL)
-                            clean_content = re.sub(r"### PARTES ENVOLVIDAS.*?(?=\n###|\Z)", "", clean_content, flags=re.DOTALL)
-                            clean_content = clean_content.strip()
+                            # Limpeza otimizada do conteúdo
+                            clean_content = self._clean_content_fast(content)
                             
-                            # Cria chunks do documento de forma mais segura
-                            try:
-                                chunks = self.text_splitter.split_text(clean_content)
-                                for chunk in chunks:
-                                    if len(chunk.strip()) > 100:  # Chunks muito pequenos
-                                        documents.append(Document(
-                                            page_content=chunk.strip(),
-                                            metadata=metadata.copy()
-                                        ))
-                            except Exception as e:
-                                print(f"⚠️ Erro ao criar chunks para {file}: {e}")
-                                # Adiciona documento inteiro se falhar o chunking
-                                if len(clean_content) > 100:
+                            # Chunking otimizado
+                            chunks = self.text_splitter.split_text(clean_content)
+                            for chunk in chunks:
+                                if len(chunk.strip()) > 100:
                                     documents.append(Document(
-                                        page_content=clean_content,
+                                        page_content=chunk.strip(),
                                         metadata=metadata.copy()
                                     ))
                             
                         except Exception as e:
-                            print(f"⚠️ Erro ao processar {file}: {e}")
                             continue
             
             if documents:
-                print(f"📄 {len(documents)} chunks carregados")
+                print(f"📄 {len(documents)} chunks carregados (otimizado)")
                 self.documents = documents
                 self._create_vector_store()
-            else:
-                print("⚠️ Nenhum documento válido encontrado")
             
             return len(documents)
             
         except Exception as e:
-            print(f"❌ Erro crítico ao carregar documentos: {e}")
+            print(f"❌ Erro ao carregar documentos: {e}")
             return 0
     
+    @lru_cache(maxsize=100)
+    def _parse_legal_metadata_fast(self, content: str) -> Dict[str, str]:
+        """Parse otimizado de metadados com cache"""
+        metadata = {}
+        
+        # Parse mais direto com regex
+        patterns = {
+            'numero_processo': r'numero_processo[:\s]+["\']?([^"\'\n]+)["\']?',
+            'agravante': r'agravante[:\s]+["\']?([^"\'\n]+)["\']?',
+            'agravado': r'agravado[:\s]+["\']?([^"\'\n]+)["\']?',
+            'valor_causa': r'valor_causa[:\s]+["\']?([^"\'\n]+)["\']?',
+        }
+        
+        for key, pattern in patterns.items():
+            match = re.search(pattern, content, re.IGNORECASE)
+            if match:
+                metadata[key] = match.group(1).strip()
+        
+        return metadata
+    
+    def _clean_content_fast(self, content: str) -> str:
+        """Limpeza otimizada de conteúdo"""
+        # Remove seções de metadados
+        content = re.sub(r"### METADADOS DO PROCESSO.*?(?=\n###|\Z)", "", content, flags=re.DOTALL)
+        content = re.sub(r"### PARTES ENVOLVIDAS.*?(?=\n###|\Z)", "", content, flags=re.DOTALL)
+        
+        # Limpeza básica
+        for pattern, replacement in self.cleanup_patterns:
+            content = pattern.sub(replacement, content)
+        
+        return content.strip()
+    
     def _create_vector_store(self):
-        """Cria vector store com os documentos"""
+        """Cria vector store otimizado"""
         if not self.documents:
-            print("⚠️ Nenhum documento disponível para criar vector store")
             return
         
         try:
-            print("🗃️ Criando vector store...")
+            print("🗃️ Criando vector store otimizado...")
             
             self.vector_store = OptimizedVectorStore(
                 os.path.join(self.cache_path, "optimized"),
                 use_ollama=self.config.use_ollama_embeddings
             )
             
-            # Adiciona documentos de forma segura
-            try:
-                self.vector_store.add_documents(self.documents, max_docs=self.config.max_chunks)
-                print("✅ Vector store criado!")
-            except Exception as e:
-                print(f"❌ Erro ao adicionar documentos ao vector store: {e}")
-                # Cria vector store vazio mesmo com erro
-                print("🔄 Continuando com vector store vazio...")
-                
+            # Limita documentos para performance
+            max_docs = min(len(self.documents), self.config.max_chunks)
+            self.vector_store.add_documents(self.documents[:max_docs], max_docs=max_docs)
+            print("✅ Vector store otimizado criado!")
+            
         except Exception as e:
             print(f"❌ Erro ao criar vector store: {e}")
-            # Cria um mock vector store para não quebrar o sistema
-            class MockVectorStore:
-                def similarity_search(self, query, k=4, min_score=0.1):
-                    print("⚠️ Usando mock vector store - retornando lista vazia")
-                    return []
-                
-                def load(self):
-                    return False
-            
-            self.vector_store = MockVectorStore()
+            self.vector_store = None
     
-    def query(self, question: str, top_k: Optional[int] = None) -> Dict[str, Any]:
-        """Realiza consulta no sistema RAG (método básico, pode ser sobrescrito pelo conversacional)"""
-        if not self.is_initialized or not self.vector_store:
-            return {"error": "Sistema não inicializado"}
+    def _search_documents_optimized(self, query: str, top_k: int) -> List[Document]:
+        """Busca otimizada de documentos"""
+        if not self.vector_store:
+            return []
         
-        try:
-            k = top_k or self.config.top_k
-            print(f"🔍 Processando: {question[:50]}...")
-            
-            # Busca documentos relevantes com threshold mais baixo
-            relevant_docs = self.vector_store.similarity_search(question, k=k, min_score=0.05)  # Reduzido de 0.15 para 0.05
-            
-            if not relevant_docs:
-                # Tenta busca mais permissiva se não encontrou nada
-                print("🔄 Tentando busca mais permissiva...")
-                relevant_docs = self.vector_store.similarity_search(question, k=k, min_score=0.01)
-            
-            if not relevant_docs:
-                # Como último recurso, pega os documentos com maior score, independente do threshold
-                print("🔄 Buscando documentos com qualquer score...")
-                try:
-                    # Força busca sem threshold mínimo
-                    all_docs = self.vector_store.similarity_search(question, k=k, min_score=0.0)
-                    if all_docs:
-                        relevant_docs = all_docs
-                    else:
-                        # Busca por palavras-chave simples se embedding falhou
-                        print("🔄 Tentando busca por palavras-chave...")
-                        simple_search = self._simple_keyword_search(question, k)
-                        if simple_search:
-                            relevant_docs = simple_search
-                except Exception as e:
-                    print(f"⚠️ Erro na busca de fallback: {e}")
-            
-            if not relevant_docs:
-                # Fornece informação mais útil sobre o que está disponível
-                total_docs = len(self.documents) if self.documents else 0
-                return {
-                    "error": "Nenhum documento relevante encontrado",
-                    "suggestion": f"Tente reformular a pergunta. Há {total_docs} documentos disponíveis na base.",
-                    "query_analyzed": question,
-                    "available_documents": total_docs
-                }
-            
-            # Prepara contexto
-            context_parts = []
-            sources = set()
-            
-            for i, doc in enumerate(relevant_docs, 1):
-                content = doc.page_content.strip()
-                score = doc.metadata.get("similarity_score", 0)
-                search_type = doc.metadata.get("search_type", "embedding")
+        # Preprocessa query
+        processed_query = self._preprocess_query(query)
+        
+        if self.config.enable_parallel_search:
+            # Busca paralela com diferentes estratégias
+            with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
+                # Busca principal
+                future_main = executor.submit(
+                    self.vector_store.similarity_search,
+                    processed_query, top_k, self.config.min_similarity_score
+                )
                 
-                # Adiciona metadados relevantes se existirem
-                metadata_info = []
-                for key in ['numero_processo', 'agravante', 'agravado', 'assuntos', 'filename']:
-                    if key in doc.metadata and doc.metadata[key]:
-                        metadata_info.append(f"{key}: {doc.metadata[key]}")
+                # Busca de fallback
+                future_fallback = executor.submit(
+                    self.vector_store.similarity_search,
+                    query, max(1, top_k//2), 0.01
+                )
                 
-                doc_text = f"DOCUMENTO {i} (relevância: {score:.3f}, busca: {search_type}):\n"
-                if metadata_info:
-                    doc_text += f"Metadados: {', '.join(metadata_info)}\n"
-                doc_text += f"Conteúdo: {content}"
+                main_results = future_main.result()
                 
-                context_parts.append(doc_text)
-                
-                if 'source' in doc.metadata:
-                    sources.add(doc.metadata['source'])
-                elif 'filename' in doc.metadata:
-                    sources.add(doc.metadata['filename'])
+                if main_results:
+                    return main_results
+                else:
+                    return future_fallback.result()
+        else:
+            # Busca sequencial
+            results = self.vector_store.similarity_search(
+                processed_query, top_k, self.config.min_similarity_score
+            )
             
-            context = "\n\n" + "="*50 + "\n\n".join(context_parts)
+            if not results:
+                results = self.vector_store.similarity_search(query, top_k, 0.01)
             
-            # Template otimizado para documentos legais
-            prompt_template = f"""Você é um assistente especializado em documentos legais. Responda com base EXCLUSIVAMENTE nos documentos fornecidos.
-
-INSTRUÇÕES:
-1. Use APENAS as informações dos documentos abaixo
-2. Cite metadados relevantes (número do processo, partes, etc.) quando disponíveis
-3. Se a informação não estiver nos documentos, responda "Informação não encontrada nos documentos disponíveis"
-4. Seja preciso e objetivo
-5. Mantenha linguagem jurídica adequada
-6. Se encontrar informações parciais, mencione e explique o que foi encontrado
+            return results
+    
+    def _create_optimized_context(self, docs: List[Document]) -> str:
+        """Cria contexto otimizado e compacto"""
+        if not docs:
+            return ""
+        
+        context_parts = []
+        total_length = 0
+        
+        for i, doc in enumerate(docs, 1):
+            content = doc.page_content.strip()
+            
+            # Limita tamanho do contexto individual
+            if len(content) > 400:
+                content = content[:400] + "..."
+            
+            # Adiciona informações essenciais
+            doc_info = f"DOC{i}: {content}"
+            
+            if total_length + len(doc_info) > self.config.max_context_length:
+                break
+                
+            context_parts.append(doc_info)
+            total_length += len(doc_info)
+        
+        return "\n\n".join(context_parts)
+    
+    def _create_optimized_prompt(self, question: str, context: str) -> str:
+        """Cria prompt otimizado e mais direto"""
+        # Template muito mais conciso
+        return f"""Baseado nos documentos, responda objetivamente:
 
 DOCUMENTOS:
 {context}
 
 PERGUNTA: {question}
 
-RESPOSTA:"""
-
-            print("🤖 Consultando LLM...")
+RESPOSTA (seja direto e preciso):"""
+    
+    def query(self, question: str, top_k: Optional[int] = None) -> Dict[str, Any]:
+        """Query otimizada com cache e paralelização"""
+        if not self.is_initialized or not self.vector_store:
+            return {"error": "Sistema não inicializado"}
+        
+        k = top_k or self.config.top_k
+        
+        # Verifica cache primeiro
+        cache_key = self._get_cache_key(question, k)
+        cached_result = self._get_from_cache(cache_key)
+        if cached_result:
+            cached_result["from_cache"] = True
+            return cached_result
+        
+        try:
+            start_time = time.time()
             
-            # Chama LLM
+            # Busca otimizada de documentos
+            relevant_docs = self._search_documents_optimized(question, k)
+            
+            if not relevant_docs:
+                result = {
+                    "error": "Nenhum documento relevante encontrado",
+                    "suggestion": "Tente reformular a pergunta",
+                    "processing_time": time.time() - start_time
+                }
+                self._save_to_cache(cache_key, result)
+                return result
+            
+            # Cria contexto otimizado
+            context = self._create_optimized_context(relevant_docs)
+            
+            # Cria prompt otimizado
+            prompt = self._create_optimized_prompt(question, context)
+            
+            # Chama LLM de forma otimizada
             if hasattr(self.llm, 'invoke'):
-                answer = self.llm.invoke(prompt_template)
+                answer = self.llm.invoke(prompt)
             else:
-                answer = self.llm(prompt_template)
+                answer = self.llm(prompt)
             
-            return {
+            result = {
                 "answer": answer.strip(),
-                "context_used": context,
-                "sources": list(sources),
                 "documents_found": len(relevant_docs),
-                "search_method": "Híbrido TF-IDF + Ollama" if self.config.use_ollama_embeddings else "TF-IDF",
-                "source_documents": [{
-                    "content": doc.page_content[:300] + ("..." if len(doc.page_content) > 300 else ""),
-                    "metadata": {k: v for k, v in doc.metadata.items() if k in ['filename', 'numero_processo', 'agravante', 'agravado', 'search_type']},
-                    "similarity_score": doc.metadata.get("similarity_score", 0)
-                } for doc in relevant_docs]
+                "processing_time": time.time() - start_time,
+                "from_cache": False,
+                "cache_stats": self.cache_stats.copy()
             }
             
+            # Salva no cache
+            self._save_to_cache(cache_key, result)
+            
+            return result
+            
         except Exception as e:
-            print(f"❌ Erro na consulta: {e}")
-            return {"error": str(e)}
+            error_result = {"error": str(e), "processing_time": time.time() - start_time}
+            return error_result
     
-    def _simple_keyword_search(self, question: str, k: int = 4):
-        """Busca simples por palavras-chave quando embedding falha"""
-        try:
-            if not self.documents:
-                return []
+    def get_performance_stats(self) -> Dict[str, Any]:
+        """Retorna estatísticas de performance"""
+        return {
+            "cache_stats": self.cache_stats.copy(),
+            "cache_size": len(self.response_cache),
+            "documents_loaded": len(self.documents) if self.documents else 0,
+            "config": {
+                "num_predict": self.config.num_predict,
+                "max_context_length": self.config.max_context_length,
+                "top_k": self.config.top_k,
+                "chunk_size": self.config.chunk_size,
+                "enable_cache": self.config.enable_cache,
+                "enable_parallel_search": self.config.enable_parallel_search,
+                "enable_preprocessing": self.config.enable_preprocessing
+            }
+        }
+    
+    def clear_cache(self):
+        """Limpa cache de respostas"""
+        with self.cache_lock:
+            self.response_cache.clear()
+            self.cache_stats = {"hits": 0, "misses": 0}
+        print("🗑️ Cache limpo")
+
+
+# =================================================================================
+# INSTÂNCIA GLOBAL E FUNÇÕES DE INTERFACE OTIMIZADAS
+# =================================================================================
+
+# Instância global otimizada
+optimized_rag_system = None
+
+def init_optimized_rag():
+    """Inicializa sistema RAG otimizado"""
+    global optimized_rag_system
+    
+    config = UltraFastRAGConfig(
+        model_name="mistral:7b-instruct",
+        enable_cache=True,
+        enable_parallel_search=True,
+        enable_preprocessing=True,
+        num_predict=200,  # Reduzido para velocidade
+        max_context_length=2000,  # Limitado para velocidade
+        top_k=3  # Reduzido para velocidade
+    )
+    
+    optimized_rag_system = OptimizedUltraFastRAG(config)
+    return optimized_rag_system.initialize()
+
+def load_optimized_data():
+    """Carrega dados de forma otimizada"""
+    if optimized_rag_system:
+        return optimized_rag_system.load_documents_from_directory()
+    return 0
+
+def query_optimized_rag(question: str, top_k: int = 3):
+    """Interface otimizada para consultas"""
+    if optimized_rag_system:
+        return optimized_rag_system.query(question, top_k)
+    return {"error": "Sistema não inicializado"}
+
+def get_optimized_performance_stats():
+    """Estatísticas de performance"""
+    if optimized_rag_system:
+        return optimized_rag_system.get_performance_stats()
+    return {"error": "Sistema não inicializado"}
+
+def clear_optimized_cache():
+    """Limpa cache do sistema otimizado"""
+    if optimized_rag_system:
+        optimized_rag_system.clear_cache()
+
+
+# =================================================================================
+# TESTE DE PERFORMANCE
+# =================================================================================
+
+def performance_comparison_test():
+    """Teste de comparação de performance"""
+    print("🏃‍♂️ TESTE DE PERFORMANCE - RAG OTIMIZADO")
+    print("=" * 60)
+    
+    if not optimized_rag_system or not optimized_rag_system.is_initialized:
+        print("❌ Sistema otimizado não inicializado")
+        return
+    
+    # Queries de teste
+    test_queries = [
+        "processo 1005888",
+        "terapia ABA",
+        "valor da causa",
+        "agravante agravado",
+        "SUS tratamento"
+    ]
+    
+    print("🧪 Testando velocidade das consultas...")
+    
+    for i, query in enumerate(test_queries, 1):
+        print(f"\n--- TESTE {i} ---")
+        print(f"Query: {query}")
+        
+        start_time = time.time()
+        result = optimized_rag_system.query(query)
+        end_time = time.time()
+        
+        if "error" not in result:
+            print(f"✅ Resposta obtida")
+            print(f"⏱️ Tempo: {end_time - start_time:.2f}s")
+            print(f"📊 Docs encontrados: {result.get('documents_found', 0)}")
+            print(f"💾 Do cache: {result.get('from_cache', False)}")
+        else:
+            print(f"❌ Erro: {result['error']}")
+    
+    # Estatísticas finais
+    print(f"\n📈 ESTATÍSTICAS FINAIS:")
+    stats = optimized_rag_system.get_performance_stats()
+    print(f"Cache hits: {stats['cache_stats']['hits']}")
+    print(f"Cache misses: {stats['cache_stats']['misses']}")
+    if stats['cache_stats']['hits'] + stats['cache_stats']['misses'] > 0:
+        hit_rate = stats['cache_stats']['hits'] / (stats['cache_stats']['hits'] + stats['cache_stats']['misses'])
+        print(f"Taxa de acerto do cache: {hit_rate:.2%}")
+
+if __name__ == "__main__":
+    print("🚀 SISTEMA RAG ULTRA OTIMIZADO")
+    print("=" * 50)
+    
+    # Inicializa sistema otimizado
+    if init_optimized_rag():
+        print("✅ Sistema otimizado inicializado")
+        
+        # Carrega dados
+        docs_loaded = load_optimized_data()
+        if docs_loaded > 0:
+            print(f"✅ {docs_loaded} documentos carregados")
             
-            question_words = set(re.findall(r'\b\w{3,}\b', question.lower()))
-            if not question_words:
-                return []
-            
-            matches = []
-            for i, doc in enumerate(self.documents):
-                try:
-                    doc_text = doc.page_content.lower()
-                    doc_words = set(re.findall(r'\b\w{3,}\b', doc_text))
-                    
-                    if doc_words:
-                        overlap = len(question_words.intersection(doc_words))
-                        score = overlap / len(question_words)
-                        
-                        if score > 0:
-                            matches.append((i, score))
-                except Exception:
-                    continue
-            
-            # Ordena e pega os melhores
-            matches.sort(key=lambda x: x[1], reverse=True)
-            
-            results = []
-            for i, score in matches[:k]:
-                try:
-                    doc = Document(
-                        page_content=self.documents[i].page_content,
-                        metadata={**self.documents[i].metadata, "similarity_score": score, "search_type": "keyword_fallback"}
-                    )
-                    results.append(doc)
-                except Exception:
-                    continue
-            
-            print(f"🔍 Busca por palavras-chave encontrou {len(results)} resultados")
-            return results
-            
-        except Exception as e:
-            print(f"⚠️ Erro na busca por palavras-chave: {e}")
-            return []
+            # Executa teste de performance
+            performance_comparison_test()
+        else:
+            print("⚠️ Nenhum documento carregado")
+    else:
+        print("❌ Falha na inicialização do sistema otimizado")
