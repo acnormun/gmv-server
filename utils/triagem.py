@@ -3,6 +3,7 @@ import os
 import time
 from datetime import datetime
 from utils.auxiliar import limpar, extrair_tabela_md, get_anonimizador
+from utils.extrair_metadados_processo import salvar_arquivo_seguro
 from utils.suspeicao import encontrar_suspeitos
 from utils.progress_step import send_progress_ws
 
@@ -72,8 +73,8 @@ def processar_com_progresso(data, operation_id, operation_sockets):
 
         send_progress_ws(operation_id, 4, 'Salvando documentos...', 55)
         if markdown:
-            with open(caminho_md, 'w', encoding='utf-8') as f:
-                f.write(markdown)
+            if not salvar_arquivo_seguro(caminho_md, markdown_com_metadados, numero):
+                raise Exception(f"Falha ao salvar arquivo único para {numero}")
             logger.info(f"Markdown salvo: {caminho_md}")
                 
         if dat_base64:
