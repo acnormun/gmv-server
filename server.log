@@ -12053,3 +12053,334 @@ Traceback (most recent call last):
 AssertionError: write() before start_response
 2025-06-25 11:35:37,133 - INFO - 127.0.0.1 - - [25/Jun/2025 11:35:37] "GET /api/rag/status HTTP/1.1" 200 -
 2025-06-25 11:35:37,401 - INFO - 127.0.0.1 - - [25/Jun/2025 11:35:37] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-06-25 13:20:20,805 - INFO -  Servidor iniciado com PID 66300
+2025-06-25 13:20:20,805 - INFO -  URL: http://0.0.0.0:5000
+2025-06-25 13:20:20,813 - INFO -  WebSocket: ws://0.0.0.0:5000/socket.io/
+2025-06-25 13:20:20,813 - INFO -  Health: http://0.0.0.0:5000/health
+2025-06-25 13:20:20,813 - INFO -  System Status: http://0.0.0.0:5000/api/system/status
+2025-06-25 13:20:20,813 - INFO -  Operações ativas: 0
+2025-06-25 13:20:20,832 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.78:5000
+2025-06-25 13:20:20,832 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-25 13:20:22,142 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 13:20:22,143 - INFO - 127.0.0.1 - - [25/Jun/2025 13:20:22] "GET /triagem HTTP/1.1" 200 -
+2025-06-25 13:20:22,146 - INFO -  Cliente WebSocket conectado: L2OPGqL27NoMYZdSAAAC
+2025-06-25 13:20:22,153 - INFO -  Cliente WebSocket conectado: NVPGjKV6cqGZo0UQAAAD
+2025-06-25 13:20:23,815 - INFO -  Iniciando RAG automaticamente...
+2025-06-25 13:20:23,815 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 13:20:23,815 - INFO -  Progresso rag_startup: Verificando sistema RAG...
+2025-06-25 13:20:23,815 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 13:20:23,816 - INFO -  Progresso rag_startup:  Módulo RAG encontrado
+2025-06-25 13:20:23,816 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 13:20:23,816 - INFO -  Progresso rag_startup: Conectando com Ollama...
+2025-06-25 13:20:32,728 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-25 13:20:50,858 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 13:20:50,859 - INFO -  Progresso rag_startup:  RAG inicializado! Carregando documentos...
+2025-06-25 13:20:51,285 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 13:20:51,286 - INFO -  Progresso rag_startup:  RAG pronto! 5944 documentos carregados
+2025-06-25 13:20:51,286 - INFO -  RAG inicializado automaticamente: 5944 documentos
+2025-06-25 13:20:51,287 - INFO - emitting event "rag_ready" to all [/]
+2025-06-25 13:20:53,608 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 13:20:53,608 - INFO - 127.0.0.1 - - [25/Jun/2025 13:20:53] "GET /triagem HTTP/1.1" 200 -
+2025-06-25 13:20:53,855 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 13:20:53,855 - INFO - 127.0.0.1 - - [25/Jun/2025 13:20:53] "GET /triagem HTTP/1.1" 200 -
+2025-06-25 13:20:54,829 - INFO -  Cliente desconectado: L2OPGqL27NoMYZdSAAAC (removidas 0 operações)
+2025-06-25 13:20:54,831 - INFO -  Cliente desconectado: NVPGjKV6cqGZo0UQAAAD (removidas 0 operações)
+2025-06-25 13:20:54,861 - INFO - 127.0.0.1 - - [25/Jun/2025 13:20:54] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-25 13:20:54,862 - INFO - 127.0.0.1 - - [25/Jun/2025 13:20:54] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-25 13:20:54,877 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-25 13:20:54,879 - INFO - 127.0.0.1 - - [25/Jun/2025 13:20:54] "GET /api/rag/status HTTP/1.1" 200 -
+2025-06-25 13:20:54,880 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-25 13:20:55,200 - INFO - 127.0.0.1 - - [25/Jun/2025 13:20:55] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-06-25 13:21:01,522 - INFO - 127.0.0.1 - - [25/Jun/2025 13:21:01] "OPTIONS /api/rag/query HTTP/1.1" 200 -
+2025-06-25 13:21:01,835 - INFO - 127.0.0.1 - - [25/Jun/2025 13:21:01] "POST /api/rag/query HTTP/1.1" 200 -
+2025-06-25 13:21:37,683 - INFO - 127.0.0.1 - - [25/Jun/2025 13:21:37] "OPTIONS /api/rag/query HTTP/1.1" 200 -
+2025-06-25 13:21:51,884 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-25 13:22:57,623 - INFO - 127.0.0.1 - - [25/Jun/2025 13:22:57] "POST /api/rag/query HTTP/1.1" 200 -
+2025-06-25 13:23:36,075 - INFO - 127.0.0.1 - - [25/Jun/2025 13:23:36] "OPTIONS /api/rag/query HTTP/1.1" 200 -
+2025-06-25 13:23:38,101 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-25 13:24:47,472 - INFO - 127.0.0.1 - - [25/Jun/2025 13:24:47] "POST /api/rag/query HTTP/1.1" 200 -
+2025-06-25 13:31:10,669 - INFO - Sinal 2 recebido. Finalizando graciosamente...
+2025-06-25 13:31:10,670 - INFO - Servidor com PID 66300 finalizado
+2025-06-25 13:31:19,030 - INFO -  Servidor iniciado com PID 37176
+2025-06-25 13:31:19,030 - INFO -  URL: http://0.0.0.0:5000
+2025-06-25 13:31:19,046 - INFO -  WebSocket: ws://0.0.0.0:5000/socket.io/
+2025-06-25 13:31:19,046 - INFO -  Health: http://0.0.0.0:5000/health
+2025-06-25 13:31:19,046 - INFO -  System Status: http://0.0.0.0:5000/api/system/status
+2025-06-25 13:31:19,046 - INFO -  Operações ativas: 0
+2025-06-25 13:31:19,046 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.78:5000
+2025-06-25 13:31:19,046 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-25 13:31:19,109 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 13:31:19,109 - INFO - 127.0.0.1 - - [25/Jun/2025 13:31:19] "GET /triagem HTTP/1.1" 200 -
+2025-06-25 13:31:19,356 - INFO -  Cliente WebSocket conectado: zWHFh-nZUjlfTlZAAAAB
+2025-06-25 13:31:19,377 - INFO -  Cliente WebSocket conectado: njsUYGmCtVkdPcUbAAAD
+2025-06-25 13:31:22,048 - INFO -  Iniciando RAG automaticamente...
+2025-06-25 13:31:22,049 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 13:31:22,050 - INFO -  Progresso rag_startup: Verificando sistema RAG...
+2025-06-25 13:31:22,051 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 13:31:22,054 - INFO -  Progresso rag_startup:  Módulo RAG encontrado
+2025-06-25 13:31:22,055 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 13:31:22,055 - INFO -  Progresso rag_startup: Conectando com Ollama...
+2025-06-25 13:31:32,250 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-25 13:31:40,404 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 13:31:40,405 - INFO -  Progresso rag_startup:  RAG inicializado! Carregando documentos...
+2025-06-25 13:31:49,786 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:31:52,637 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:31:55,630 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:31:58,534 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:32:01,544 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:32:04,215 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:32:07,208 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:32:10,106 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:32:13,160 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:32:16,221 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:32:19,263 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:32:22,616 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:32:26,073 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:32:29,119 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:32:32,629 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:32:35,780 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:32:38,994 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:32:42,858 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:32:46,889 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:32:50,905 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:32:54,914 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:32:58,797 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:33:02,676 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:33:07,094 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:33:11,504 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:33:15,921 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:33:20,370 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:33:24,777 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:33:29,184 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:33:33,579 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:33:37,989 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:33:42,388 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:33:46,785 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:33:51,180 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:33:55,585 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:33:59,975 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:34:04,372 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:34:08,781 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:34:13,177 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:34:17,576 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:34:21,980 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:34:26,373 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:34:30,720 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:34:35,109 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:34:39,505 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:34:43,901 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:34:48,301 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:34:52,699 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:34:56,802 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:35:01,202 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:35:05,594 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:35:09,999 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:35:14,404 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:35:18,805 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:35:23,219 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:35:27,628 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:35:32,029 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:35:36,444 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:35:40,847 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:35:45,263 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:35:49,668 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:35:54,067 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:35:58,464 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:36:02,873 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:36:07,284 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:36:11,683 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:36:16,074 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:36:20,477 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:36:24,872 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:36:29,281 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:36:33,678 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:36:38,077 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:36:42,484 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:36:46,884 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:36:50,515 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:36:53,907 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:36:57,363 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:37:00,844 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:37:04,464 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:37:07,958 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:37:11,284 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:37:15,038 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:37:18,783 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:37:22,505 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:37:25,930 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:37:29,672 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:37:33,143 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:37:36,842 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:37:40,015 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:37:43,491 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:37:46,755 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:37:50,246 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:37:53,607 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:37:56,975 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:38:00,544 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:38:04,312 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:38:08,076 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:38:11,722 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:38:15,423 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:38:19,837 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:38:24,242 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:38:28,655 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:38:33,066 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:38:37,490 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:38:41,898 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:38:46,311 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:38:49,854 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:38:53,441 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:38:57,215 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:39:00,886 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:39:04,623 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:39:08,233 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:39:11,846 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:39:15,543 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:39:19,105 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:39:22,536 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:39:26,181 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:39:29,726 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:39:33,991 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:39:38,391 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:39:42,176 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:39:45,793 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:39:49,481 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:39:53,007 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:39:56,771 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:40:00,511 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:40:03,878 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:40:06,668 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:40:09,517 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:40:12,578 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:40:15,023 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:40:19,143 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:40:22,873 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:40:26,478 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:40:30,269 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:40:34,124 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:40:37,736 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:40:41,356 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:40:45,102 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:40:49,006 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:40:53,030 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:40:57,011 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:41:00,733 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:41:04,487 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:41:08,375 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:41:11,960 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:41:15,352 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:41:19,063 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:41:22,428 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:41:26,112 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:41:29,720 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:41:33,508 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:41:37,396 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:41:41,009 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:41:44,622 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:41:48,144 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:41:51,608 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:41:55,714 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:41:59,376 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:42:03,387 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:42:07,171 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:42:11,159 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:42:14,813 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:42:18,578 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:42:22,128 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:42:25,850 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:42:29,482 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:42:33,218 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:42:36,960 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:42:40,209 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:42:43,942 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:42:47,566 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:42:51,063 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:42:54,632 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:42:58,238 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:43:01,863 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:43:05,582 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:43:09,002 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:43:12,490 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:43:15,983 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:43:19,433 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:43:23,142 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:43:26,773 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:43:30,147 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:43:33,637 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:43:37,198 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:43:40,660 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:43:44,919 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:43:48,236 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:43:51,066 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:43:54,074 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:43:57,596 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:44:00,931 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:44:04,489 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:44:08,271 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:44:11,355 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:44:14,955 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:44:18,425 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:44:21,519 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:44:24,852 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 13:44:24,882 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 13:44:24,883 - INFO -  Progresso rag_startup:  RAG pronto! 2178 documentos carregados
+2025-06-25 13:44:24,883 - INFO -  RAG inicializado automaticamente: 2178 documentos
+2025-06-25 13:44:24,883 - INFO - emitting event "rag_ready" to all [/]
+2025-06-25 13:44:27,650 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 13:44:27,651 - INFO - 127.0.0.1 - - [25/Jun/2025 13:44:27] "GET /triagem HTTP/1.1" 200 -
+2025-06-25 13:44:27,899 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 13:44:27,900 - INFO - 127.0.0.1 - - [25/Jun/2025 13:44:27] "GET /triagem HTTP/1.1" 200 -
+2025-06-25 13:44:32,920 - INFO -  Cliente desconectado: zWHFh-nZUjlfTlZAAAAB (removidas 0 operações)
+2025-06-25 13:44:32,921 - INFO -  Cliente desconectado: njsUYGmCtVkdPcUbAAAD (removidas 0 operações)
+2025-06-25 13:44:32,942 - INFO - 127.0.0.1 - - [25/Jun/2025 13:44:32] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-25 13:44:32,944 - INFO - 127.0.0.1 - - [25/Jun/2025 13:44:32] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-25 13:44:32,950 - INFO - 127.0.0.1 - - [25/Jun/2025 13:44:32] "GET /api/rag/status HTTP/1.1" 200 -
+2025-06-25 13:44:32,957 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-25 13:44:32,958 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-25 13:44:33,282 - INFO - 127.0.0.1 - - [25/Jun/2025 13:44:33] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-06-25 13:44:47,463 - INFO - 127.0.0.1 - - [25/Jun/2025 13:44:47] "OPTIONS /api/rag/query HTTP/1.1" 200 -
+2025-06-25 13:44:47,781 - INFO - 127.0.0.1 - - [25/Jun/2025 13:44:47] "POST /api/rag/query HTTP/1.1" 200 -
+2025-06-25 13:45:20,600 - INFO - 127.0.0.1 - - [25/Jun/2025 13:45:20] "OPTIONS /api/rag/query HTTP/1.1" 200 -
+2025-06-25 13:47:42,364 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-25 13:52:49,025 - INFO - 127.0.0.1 - - [25/Jun/2025 13:52:49] "POST /api/rag/query HTTP/1.1" 200 -
+2025-06-25 13:53:19,848 - INFO - Sinal 2 recebido. Finalizando graciosamente...
+2025-06-25 13:53:19,848 - INFO - Servidor com PID 37176 finalizado
