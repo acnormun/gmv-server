@@ -14287,3 +14287,423 @@ AssertionError: write() before start_response
 2025-06-27 09:27:23,514 - INFO -  Cliente WebSocket conectado: 8XmqapXlqHYEWPdxAABL
 2025-06-27 10:24:18,251 - INFO - Sinal 2 recebido. Finalizando graciosamente...
 2025-06-27 10:24:18,259 - INFO - Servidor com PID 44300 finalizado
+2025-06-27 13:58:45,316 - INFO -  Servidor iniciado com PID 21124
+2025-06-27 13:58:45,316 - INFO -  URL: http://0.0.0.0:5000
+2025-06-27 13:58:45,316 - INFO -  WebSocket: ws://0.0.0.0:5000/socket.io/
+2025-06-27 13:58:45,316 - INFO -  Health: http://0.0.0.0:5000/health
+2025-06-27 13:58:45,316 - INFO -  System Status: http://0.0.0.0:5000/api/system/status
+2025-06-27 13:58:45,317 - INFO -  Operações ativas: 0
+2025-06-27 13:58:45,331 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.124:5000
+2025-06-27 13:58:45,331 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-27 13:58:48,319 - INFO -  Iniciando RAG automaticamente...
+2025-06-27 13:58:48,319 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 13:58:48,319 - INFO -  Progresso rag_startup: Verificando sistema RAG...
+2025-06-27 13:58:48,319 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 13:58:48,319 - INFO -  Progresso rag_startup:  Módulo RAG encontrado
+2025-06-27 13:58:48,319 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 13:58:48,319 - INFO -  Progresso rag_startup: Conectando com Ollama...
+2025-06-27 13:58:54,315 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-27 13:58:56,216 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 13:58:56,216 - INFO -  Progresso rag_startup:  RAG inicializado! Carregando documentos...
+2025-06-27 13:58:56,858 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 13:58:56,859 - INFO -  Progresso rag_startup:  RAG pronto! 2178 documentos carregados
+2025-06-27 13:58:56,859 - INFO -  RAG inicializado automaticamente: 2178 documentos
+2025-06-27 13:58:56,859 - INFO - emitting event "rag_ready" to all [/]
+2025-06-27 14:10:11,053 - ERROR - Erro ao enviar teste para admin: name 'email_service' is not defined
+2025-06-27 14:10:11,053 - INFO - 127.0.0.1 - - [27/Jun/2025 14:10:11] "[35m[1mPOST /triagem/email/send-test-to-admin HTTP/1.1[0m" 500 -
+2025-06-27 14:11:56,778 - ERROR - Erro ao enviar teste para admin: name 'email_service' is not defined
+2025-06-27 14:11:56,778 - INFO - 127.0.0.1 - - [27/Jun/2025 14:11:56] "[35m[1mPOST /triagem/email/send-test-to-admin HTTP/1.1[0m" 500 -
+2025-06-27 14:12:31,666 - INFO - 127.0.0.1 - - [27/Jun/2025 14:12:31] "[31m[1mGET /triagem/email/send-test-to-admin HTTP/1.1[0m" 405 -
+2025-06-27 14:12:32,406 - INFO - 127.0.0.1 - - [27/Jun/2025 14:12:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-27 14:13:24,239 - ERROR - Erro ao enviar teste para admin: name 'email_service' is not defined
+2025-06-27 14:13:24,240 - INFO - 127.0.0.1 - - [27/Jun/2025 14:13:24] "[35m[1mPOST /triagem/email/send-test-to-admin HTTP/1.1[0m" 500 -
+2025-06-27 14:20:37,198 - ERROR - Erro ao enviar teste para admin: name 'email_service' is not defined
+2025-06-27 14:20:37,199 - INFO - 127.0.0.1 - - [27/Jun/2025 14:20:37] "[35m[1mPOST /triagem/email/send-test-to-admin HTTP/1.1[0m" 500 -
+2025-06-27 14:37:49,376 - ERROR - Erro ao enviar teste para admin: name 'email_service' is not defined
+2025-06-27 14:37:49,376 - INFO - 127.0.0.1 - - [27/Jun/2025 14:37:49] "[35m[1mPOST /triagem/email/send-test-to-admin HTTP/1.1[0m" 500 -
+2025-06-27 14:43:58,542 - ERROR - Erro ao enviar teste para admin: name 'email_service' is not defined
+2025-06-27 14:43:58,542 - INFO - 127.0.0.1 - - [27/Jun/2025 14:43:58] "[35m[1mPOST /triagem/email/send-test-to-admin HTTP/1.1[0m" 500 -
+2025-06-27 14:44:31,840 - ERROR - Erro ao enviar teste para admin: name 'email_service' is not defined
+2025-06-27 14:44:31,841 - INFO - 127.0.0.1 - - [27/Jun/2025 14:44:31] "[35m[1mPOST /triagem/email/send-test-to-admin HTTP/1.1[0m" 500 -
+2025-06-27 14:45:15,635 - ERROR - Erro ao enviar teste para admin: name 'email_service' is not defined
+2025-06-27 14:45:15,635 - INFO - 127.0.0.1 - - [27/Jun/2025 14:45:15] "[35m[1mPOST /triagem/email/send-test-to-admin HTTP/1.1[0m" 500 -
+2025-06-27 14:47:11,574 - ERROR - Erro ao enviar teste para admin: name 'email_service' is not defined
+2025-06-27 14:47:11,574 - INFO - 127.0.0.1 - - [27/Jun/2025 14:47:11] "[35m[1mPOST /triagem/email/send-test-to-admin HTTP/1.1[0m" 500 -
+2025-06-27 14:48:00,211 - ERROR - Erro ao enviar teste para admin: name 'email_service' is not defined
+2025-06-27 14:48:00,212 - INFO - 127.0.0.1 - - [27/Jun/2025 14:48:00] "[35m[1mPOST /triagem/email/send-test-to-admin HTTP/1.1[0m" 500 -
+2025-06-27 14:51:28,736 - INFO - 127.0.0.1 - - [27/Jun/2025 14:51:28] "[33mPOST /triagem/email/test-conectivity HTTP/1.1[0m" 404 -
+2025-06-27 14:51:38,068 - ERROR - Exception on /triagem/email/test-connectivity [POST]
+Traceback (most recent call last):
+  File "C:\Users\anacl\Documents\TJMT\gmv-server\routes\triagem.py", line 645, in test_email_connectivity
+NameError: name 'email_service' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anacl\Documents\TJMT\gmv-server\routes\triagem.py", line 666, in test_email_connectivity
+    'smtp_server': status['smtp_server'],
+    ^^^^^^^
+UnboundLocalError: cannot access local variable 'smtplib' where it is not associated with a value
+2025-06-27 14:51:38,073 - INFO - 127.0.0.1 - - [27/Jun/2025 14:51:38] "[35m[1mPOST /triagem/email/test-connectivity HTTP/1.1[0m" 500 -
+2025-06-27 14:52:12,190 - ERROR - Erro ao enviar teste para admin: name 'email_service' is not defined
+2025-06-27 14:52:12,191 - INFO - 127.0.0.1 - - [27/Jun/2025 14:52:12] "[35m[1mPOST /triagem/email/send-test-to-admin HTTP/1.1[0m" 500 -
+2025-06-27 14:52:22,811 - INFO - Sinal 2 recebido. Finalizando graciosamente...
+2025-06-27 14:52:22,811 - INFO - Servidor com PID 21124 finalizado
+2025-06-27 14:52:32,334 - INFO -  Servidor iniciado com PID 57484
+2025-06-27 14:52:32,334 - INFO -  URL: http://0.0.0.0:5000
+2025-06-27 14:52:32,334 - INFO -  WebSocket: ws://0.0.0.0:5000/socket.io/
+2025-06-27 14:52:32,334 - INFO -  Health: http://0.0.0.0:5000/health
+2025-06-27 14:52:32,334 - INFO -  System Status: http://0.0.0.0:5000/api/system/status
+2025-06-27 14:52:32,334 - INFO -  Operações ativas: 0
+2025-06-27 14:52:32,344 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.124:5000
+2025-06-27 14:52:32,345 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-27 14:52:34,346 - INFO - 127.0.0.1 - - [27/Jun/2025 14:52:34] "POST /triagem/email/send-test-to-admin HTTP/1.1" 200 -
+2025-06-27 14:52:35,336 - INFO -  Iniciando RAG automaticamente...
+2025-06-27 14:52:35,336 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 14:52:35,336 - INFO -  Progresso rag_startup: Verificando sistema RAG...
+2025-06-27 14:52:35,336 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 14:52:35,337 - INFO -  Progresso rag_startup:  Módulo RAG encontrado
+2025-06-27 14:52:35,337 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 14:52:35,337 - INFO -  Progresso rag_startup: Conectando com Ollama...
+2025-06-27 14:52:39,701 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-27 14:52:41,723 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 14:52:41,723 - INFO -  Progresso rag_startup:  RAG inicializado! Carregando documentos...
+2025-06-27 14:52:42,433 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 14:52:42,433 - INFO -  Progresso rag_startup:  RAG pronto! 2178 documentos carregados
+2025-06-27 14:52:42,434 - INFO -  RAG inicializado automaticamente: 2178 documentos
+2025-06-27 14:52:42,434 - INFO - emitting event "rag_ready" to all [/]
+2025-06-27 14:53:19,335 - INFO - 127.0.0.1 - - [27/Jun/2025 14:53:19] "POST /triagem/email/send-test-to-admin HTTP/1.1" 200 -
+2025-06-27 14:53:24,364 - INFO - Sinal 2 recebido. Finalizando graciosamente...
+2025-06-27 14:53:24,364 - INFO - Servidor com PID 57484 finalizado
+2025-06-27 14:53:30,620 - INFO -  Servidor iniciado com PID 29640
+2025-06-27 14:53:30,620 - INFO -  URL: http://0.0.0.0:5000
+2025-06-27 14:53:30,620 - INFO -  WebSocket: ws://0.0.0.0:5000/socket.io/
+2025-06-27 14:53:30,621 - INFO -  Health: http://0.0.0.0:5000/health
+2025-06-27 14:53:30,621 - INFO -  System Status: http://0.0.0.0:5000/api/system/status
+2025-06-27 14:53:30,621 - INFO -  Operações ativas: 0
+2025-06-27 14:53:30,631 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.124:5000
+2025-06-27 14:53:30,631 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-27 14:53:32,020 - INFO - 127.0.0.1 - - [27/Jun/2025 14:53:32] "POST /triagem/email/send-test-to-admin HTTP/1.1" 200 -
+2025-06-27 14:53:33,622 - INFO -  Iniciando RAG automaticamente...
+2025-06-27 14:53:33,622 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 14:53:33,623 - INFO -  Progresso rag_startup: Verificando sistema RAG...
+2025-06-27 14:53:33,623 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 14:53:33,624 - INFO -  Progresso rag_startup:  Módulo RAG encontrado
+2025-06-27 14:53:33,624 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 14:53:33,625 - INFO -  Progresso rag_startup: Conectando com Ollama...
+2025-06-27 14:53:33,817 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-27 14:53:36,045 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 14:53:36,046 - INFO -  Progresso rag_startup:  RAG inicializado! Carregando documentos...
+2025-06-27 14:53:36,768 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 14:53:36,768 - INFO -  Progresso rag_startup:  RAG pronto! 2178 documentos carregados
+2025-06-27 14:53:36,769 - INFO -  RAG inicializado automaticamente: 2178 documentos
+2025-06-27 14:53:36,769 - INFO - emitting event "rag_ready" to all [/]
+2025-06-27 14:54:32,433 - INFO - Sinal 2 recebido. Finalizando graciosamente...
+2025-06-27 14:54:32,433 - INFO - Servidor com PID 29640 finalizado
+2025-06-27 14:54:38,713 - INFO -  Servidor iniciado com PID 35616
+2025-06-27 14:54:38,713 - INFO -  URL: http://0.0.0.0:5000
+2025-06-27 14:54:38,714 - INFO -  WebSocket: ws://0.0.0.0:5000/socket.io/
+2025-06-27 14:54:38,714 - INFO -  Health: http://0.0.0.0:5000/health
+2025-06-27 14:54:38,714 - INFO -  System Status: http://0.0.0.0:5000/api/system/status
+2025-06-27 14:54:38,714 - INFO -  Operações ativas: 0
+2025-06-27 14:54:38,724 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.124:5000
+2025-06-27 14:54:38,725 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-27 14:54:41,716 - INFO -  Iniciando RAG automaticamente...
+2025-06-27 14:54:41,716 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 14:54:41,716 - INFO -  Progresso rag_startup: Verificando sistema RAG...
+2025-06-27 14:54:41,716 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 14:54:41,717 - INFO -  Progresso rag_startup:  Módulo RAG encontrado
+2025-06-27 14:54:41,717 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 14:54:41,717 - INFO -  Progresso rag_startup: Conectando com Ollama...
+2025-06-27 14:54:41,901 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-27 14:54:44,206 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 14:54:44,206 - INFO -  Progresso rag_startup:  RAG inicializado! Carregando documentos...
+2025-06-27 14:54:44,879 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 14:54:44,880 - INFO -  Progresso rag_startup:  RAG pronto! 2178 documentos carregados
+2025-06-27 14:54:44,880 - INFO -  RAG inicializado automaticamente: 2178 documentos
+2025-06-27 14:54:44,880 - INFO - emitting event "rag_ready" to all [/]
+2025-06-27 14:56:08,943 - INFO - 127.0.0.1 - - [27/Jun/2025 14:56:08] "[35m[1mPOST /triagem/email/send-test-to-admin HTTP/1.1[0m" 500 -
+2025-06-27 15:09:30,964 - INFO - Sinal 2 recebido. Finalizando graciosamente...
+2025-06-27 15:09:30,964 - INFO - Servidor com PID 35616 finalizado
+2025-06-27 15:09:58,907 - INFO -  Servidor iniciado com PID 57504
+2025-06-27 15:09:58,908 - INFO -  URL: http://0.0.0.0:5000
+2025-06-27 15:09:58,908 - INFO -  WebSocket: ws://0.0.0.0:5000/socket.io/
+2025-06-27 15:09:58,908 - INFO -  Health: http://0.0.0.0:5000/health
+2025-06-27 15:09:58,908 - INFO -  System Status: http://0.0.0.0:5000/api/system/status
+2025-06-27 15:09:58,908 - INFO -  Operações ativas: 0
+2025-06-27 15:09:58,922 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.124:5000
+2025-06-27 15:09:58,923 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-27 15:10:01,910 - INFO -  Iniciando RAG automaticamente...
+2025-06-27 15:10:01,911 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 15:10:01,911 - INFO -  Progresso rag_startup: Verificando sistema RAG...
+2025-06-27 15:10:01,912 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 15:10:01,913 - INFO -  Progresso rag_startup:  Módulo RAG encontrado
+2025-06-27 15:10:01,913 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 15:10:01,913 - INFO -  Progresso rag_startup: Conectando com Ollama...
+2025-06-27 15:10:22,572 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-27 15:10:30,844 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 15:10:30,844 - INFO -  Progresso rag_startup:  RAG inicializado! Carregando documentos...
+2025-06-27 15:10:33,330 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 15:10:33,330 - INFO -  Progresso rag_startup:  RAG pronto! 2178 documentos carregados
+2025-06-27 15:10:33,331 - INFO -  RAG inicializado automaticamente: 2178 documentos
+2025-06-27 15:10:33,331 - INFO - emitting event "rag_ready" to all [/]
+2025-06-27 15:11:33,401 - INFO - Sinal 2 recebido. Finalizando graciosamente...
+2025-06-27 15:11:33,401 - INFO - Servidor com PID 57504 finalizado
+2025-06-27 15:11:42,700 - INFO -  Servidor iniciado com PID 48144
+2025-06-27 15:11:42,700 - INFO -  URL: http://0.0.0.0:5000
+2025-06-27 15:11:42,701 - INFO -  WebSocket: ws://0.0.0.0:5000/socket.io/
+2025-06-27 15:11:42,701 - INFO -  Health: http://0.0.0.0:5000/health
+2025-06-27 15:11:42,701 - INFO -  System Status: http://0.0.0.0:5000/api/system/status
+2025-06-27 15:11:42,701 - INFO -  Operações ativas: 0
+2025-06-27 15:11:42,715 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.124:5000
+2025-06-27 15:11:42,715 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-27 15:11:43,200 - WARNING - Email não encontrado para responsável: 'SISTEMA'. Usando admin.
+2025-06-27 15:11:43,200 - INFO - Tentativa 1/3 - Enviando para SISTEMA (dev.acnormun@gmail.com)
+2025-06-27 15:11:43,201 - INFO - Tentando STARTTLS (porta 587) para dev.acnormun@gmail.com
+2025-06-27 15:11:45,703 - INFO -  Iniciando RAG automaticamente...
+2025-06-27 15:11:45,703 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 15:11:45,704 - INFO -  Progresso rag_startup: Verificando sistema RAG...
+2025-06-27 15:11:45,704 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 15:11:45,704 - INFO -  Progresso rag_startup:  Módulo RAG encontrado
+2025-06-27 15:11:45,705 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 15:11:45,705 - INFO -  Progresso rag_startup: Conectando com Ollama...
+2025-06-27 15:11:45,913 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-27 15:11:48,173 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 15:11:48,173 - INFO -  Progresso rag_startup:  RAG inicializado! Carregando documentos...
+2025-06-27 15:11:48,852 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 15:11:48,853 - INFO -  Progresso rag_startup:  RAG pronto! 2178 documentos carregados
+2025-06-27 15:11:48,853 - INFO -  RAG inicializado automaticamente: 2178 documentos
+2025-06-27 15:11:48,853 - INFO - emitting event "rag_ready" to all [/]
+2025-06-27 15:12:04,234 - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-06-27 15:12:04,234 - INFO - Tentando fallback para SSL...
+2025-06-27 15:12:04,235 - INFO - Tentando SSL (porta 465) para dev.acnormun@gmail.com
+2025-06-27 15:12:25,285 - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-06-27 15:12:25,286 - WARNING - Tentativa 1 falhou, aguardando 2.0s...
+2025-06-27 15:12:27,286 - INFO - Tentativa 2/3 - Enviando para SISTEMA (dev.acnormun@gmail.com)
+2025-06-27 15:12:27,286 - INFO - Tentando STARTTLS (porta 587) para dev.acnormun@gmail.com
+2025-06-27 15:12:48,320 - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-06-27 15:12:48,320 - INFO - Tentando fallback para SSL...
+2025-06-27 15:12:48,320 - INFO - Tentando SSL (porta 465) para dev.acnormun@gmail.com
+2025-06-27 15:13:09,371 - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-06-27 15:13:09,371 - WARNING - Tentativa 2 falhou, aguardando 2.0s...
+2025-06-27 15:13:11,371 - INFO - Tentativa 3/3 - Enviando para SISTEMA (dev.acnormun@gmail.com)
+2025-06-27 15:13:11,372 - INFO - Tentando STARTTLS (porta 587) para dev.acnormun@gmail.com
+2025-06-27 15:13:11,373 - WARNING - STARTTLS falhou: [Errno 11001] getaddrinfo failed
+2025-06-27 15:13:11,373 - INFO - Tentando fallback para SSL...
+2025-06-27 15:13:11,373 - INFO - Tentando SSL (porta 465) para dev.acnormun@gmail.com
+2025-06-27 15:13:11,374 - ERROR - Erro inesperado no envio: [Errno 11001] getaddrinfo failed
+2025-06-27 15:13:11,374 - ERROR - Falha em todas as 3 tentativas para SISTEMA
+2025-06-27 15:13:11,374 - INFO - Tentando STARTTLS (porta 587) para dev.acnormun@gmail.com
+2025-06-27 15:13:11,375 - WARNING - STARTTLS falhou: [Errno 11001] getaddrinfo failed
+2025-06-27 15:13:11,375 - INFO - Tentando fallback para SSL...
+2025-06-27 15:13:11,375 - INFO - Tentando SSL (porta 465) para dev.acnormun@gmail.com
+2025-06-27 15:13:11,376 - ERROR - Erro inesperado no envio: [Errno 11001] getaddrinfo failed
+2025-06-27 15:13:11,377 - INFO - 127.0.0.1 - - [27/Jun/2025 15:13:11] "[35m[1mPOST /triagem/email/send-test-to-admin HTTP/1.1[0m" 500 -
+2025-06-27 15:13:54,039 - INFO - Sinal 2 recebido. Finalizando graciosamente...
+2025-06-27 15:13:54,039 - INFO - Servidor com PID 48144 finalizado
+2025-06-27 15:14:03,608 - INFO -  Servidor iniciado com PID 52308
+2025-06-27 15:14:03,609 - INFO -  URL: http://0.0.0.0:5000
+2025-06-27 15:14:03,609 - INFO -  WebSocket: ws://0.0.0.0:5000/socket.io/
+2025-06-27 15:14:03,609 - INFO -  Health: http://0.0.0.0:5000/health
+2025-06-27 15:14:03,609 - INFO -  System Status: http://0.0.0.0:5000/api/system/status
+2025-06-27 15:14:03,609 - INFO -  Operações ativas: 0
+2025-06-27 15:14:03,620 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.94.11:5000
+2025-06-27 15:14:03,620 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-27 15:14:06,610 - INFO -  Iniciando RAG automaticamente...
+2025-06-27 15:14:06,610 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 15:14:06,611 - INFO -  Progresso rag_startup: Verificando sistema RAG...
+2025-06-27 15:14:06,611 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 15:14:06,612 - INFO -  Progresso rag_startup:  Módulo RAG encontrado
+2025-06-27 15:14:06,612 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 15:14:06,613 - INFO -  Progresso rag_startup: Conectando com Ollama...
+2025-06-27 15:14:06,838 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-27 15:14:09,015 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 15:14:09,016 - INFO -  Progresso rag_startup:  RAG inicializado! Carregando documentos...
+2025-06-27 15:14:09,671 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 15:14:09,671 - INFO -  Progresso rag_startup:  RAG pronto! 2178 documentos carregados
+2025-06-27 15:14:09,671 - INFO -  RAG inicializado automaticamente: 2178 documentos
+2025-06-27 15:14:09,672 - INFO - emitting event "rag_ready" to all [/]
+2025-06-27 15:14:13,508 - WARNING - Email não encontrado para responsável: 'SISTEMA'. Usando admin.
+2025-06-27 15:14:13,508 - INFO - Tentativa 1/3 - Enviando para SISTEMA (dev.acnormun@gmail.com)
+2025-06-27 15:14:13,508 - INFO - Tentando STARTTLS (porta 587) para dev.acnormun@gmail.com
+2025-06-27 15:14:16,236 - WARNING - STARTTLS falhou: SMTP.send_message() got an unexpected keyword argument 'timeout'
+2025-06-27 15:14:16,236 - INFO - Tentando fallback para SSL...
+2025-06-27 15:14:16,237 - INFO - Tentando SSL (porta 465) para dev.acnormun@gmail.com
+2025-06-27 15:14:18,842 - ERROR - Erro inesperado no envio: SMTP.send_message() got an unexpected keyword argument 'timeout'
+2025-06-27 15:14:18,842 - WARNING - Tentativa 1 falhou, aguardando 2.0s...
+2025-06-27 15:14:20,844 - INFO - Tentativa 2/3 - Enviando para SISTEMA (dev.acnormun@gmail.com)
+2025-06-27 15:14:20,844 - INFO - Tentando STARTTLS (porta 587) para dev.acnormun@gmail.com
+2025-06-27 15:14:23,794 - WARNING - STARTTLS falhou: SMTP.send_message() got an unexpected keyword argument 'timeout'
+2025-06-27 15:14:23,795 - INFO - Tentando fallback para SSL...
+2025-06-27 15:14:23,795 - INFO - Tentando SSL (porta 465) para dev.acnormun@gmail.com
+2025-06-27 15:14:26,159 - ERROR - Erro inesperado no envio: SMTP.send_message() got an unexpected keyword argument 'timeout'
+2025-06-27 15:14:26,160 - WARNING - Tentativa 2 falhou, aguardando 2.0s...
+2025-06-27 15:14:28,160 - INFO - Tentativa 3/3 - Enviando para SISTEMA (dev.acnormun@gmail.com)
+2025-06-27 15:14:28,161 - INFO - Tentando STARTTLS (porta 587) para dev.acnormun@gmail.com
+2025-06-27 15:14:31,147 - WARNING - STARTTLS falhou: SMTP.send_message() got an unexpected keyword argument 'timeout'
+2025-06-27 15:14:31,147 - INFO - Tentando fallback para SSL...
+2025-06-27 15:14:31,148 - INFO - Tentando SSL (porta 465) para dev.acnormun@gmail.com
+2025-06-27 15:14:32,874 - ERROR - Erro inesperado no envio: SMTP.send_message() got an unexpected keyword argument 'timeout'
+2025-06-27 15:14:32,875 - ERROR - Falha em todas as 3 tentativas para SISTEMA
+2025-06-27 15:14:32,875 - INFO - Tentando STARTTLS (porta 587) para dev.acnormun@gmail.com
+2025-06-27 15:14:35,353 - WARNING - STARTTLS falhou: SMTP.send_message() got an unexpected keyword argument 'timeout'
+2025-06-27 15:14:35,353 - INFO - Tentando fallback para SSL...
+2025-06-27 15:14:35,354 - INFO - Tentando SSL (porta 465) para dev.acnormun@gmail.com
+2025-06-27 15:14:36,986 - ERROR - Erro inesperado no envio: SMTP.send_message() got an unexpected keyword argument 'timeout'
+2025-06-27 15:14:36,987 - INFO - 127.0.0.1 - - [27/Jun/2025 15:14:36] "[35m[1mPOST /triagem/email/send-test-to-admin HTTP/1.1[0m" 500 -
+2025-06-27 15:15:15,173 - INFO - Sinal 2 recebido. Finalizando graciosamente...
+2025-06-27 15:15:15,173 - INFO - Servidor com PID 52308 finalizado
+2025-06-27 15:15:23,388 - INFO -  Servidor iniciado com PID 20444
+2025-06-27 15:15:23,389 - INFO -  URL: http://0.0.0.0:5000
+2025-06-27 15:15:23,389 - INFO -  WebSocket: ws://0.0.0.0:5000/socket.io/
+2025-06-27 15:15:23,389 - INFO -  Health: http://0.0.0.0:5000/health
+2025-06-27 15:15:23,389 - INFO -  System Status: http://0.0.0.0:5000/api/system/status
+2025-06-27 15:15:23,389 - INFO -  Operações ativas: 0
+2025-06-27 15:15:23,414 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.94.11:5000
+2025-06-27 15:15:23,414 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-27 15:15:26,391 - INFO -  Iniciando RAG automaticamente...
+2025-06-27 15:15:26,393 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 15:15:26,393 - INFO -  Progresso rag_startup: Verificando sistema RAG...
+2025-06-27 15:15:26,393 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 15:15:26,393 - INFO -  Progresso rag_startup:  Módulo RAG encontrado
+2025-06-27 15:15:26,394 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 15:15:26,394 - INFO -  Progresso rag_startup: Conectando com Ollama...
+2025-06-27 15:15:26,586 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-27 15:15:28,795 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 15:15:28,795 - INFO -  Progresso rag_startup:  RAG inicializado! Carregando documentos...
+2025-06-27 15:15:29,490 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 15:15:29,491 - INFO -  Progresso rag_startup:  RAG pronto! 2178 documentos carregados
+2025-06-27 15:15:29,492 - INFO -  RAG inicializado automaticamente: 2178 documentos
+2025-06-27 15:15:29,492 - INFO - emitting event "rag_ready" to all [/]
+2025-06-27 15:15:31,920 - WARNING - Email não encontrado para responsável: 'SISTEMA'. Usando admin.
+2025-06-27 15:15:31,920 - INFO - Tentativa 1/3 - Enviando para SISTEMA (dev.acnormun@gmail.com)
+2025-06-27 15:15:31,920 - INFO - Tentando STARTTLS (porta 587) para dev.acnormun@gmail.com
+2025-06-27 15:15:34,628 - WARNING - STARTTLS falhou: SMTP.send_message() got an unexpected keyword argument 'timeout'
+2025-06-27 15:15:34,629 - INFO - Tentando fallback para SSL...
+2025-06-27 15:15:34,629 - INFO - Tentando SSL (porta 465) para dev.acnormun@gmail.com
+2025-06-27 15:15:36,504 - ERROR - Erro inesperado no envio: SMTP.send_message() got an unexpected keyword argument 'timeout'
+2025-06-27 15:15:36,504 - WARNING - Tentativa 1 falhou, aguardando 2.0s...
+2025-06-27 15:15:38,505 - INFO - Tentativa 2/3 - Enviando para SISTEMA (dev.acnormun@gmail.com)
+2025-06-27 15:15:38,505 - INFO - Tentando STARTTLS (porta 587) para dev.acnormun@gmail.com
+2025-06-27 15:15:40,985 - WARNING - STARTTLS falhou: SMTP.send_message() got an unexpected keyword argument 'timeout'
+2025-06-27 15:15:40,985 - INFO - Tentando fallback para SSL...
+2025-06-27 15:15:40,986 - INFO - Tentando SSL (porta 465) para dev.acnormun@gmail.com
+2025-06-27 15:15:42,618 - ERROR - Erro inesperado no envio: SMTP.send_message() got an unexpected keyword argument 'timeout'
+2025-06-27 15:15:42,618 - WARNING - Tentativa 2 falhou, aguardando 2.0s...
+2025-06-27 15:15:44,619 - INFO - Tentativa 3/3 - Enviando para SISTEMA (dev.acnormun@gmail.com)
+2025-06-27 15:15:44,619 - INFO - Tentando STARTTLS (porta 587) para dev.acnormun@gmail.com
+2025-06-27 15:15:47,117 - WARNING - STARTTLS falhou: SMTP.send_message() got an unexpected keyword argument 'timeout'
+2025-06-27 15:15:47,117 - INFO - Tentando fallback para SSL...
+2025-06-27 15:15:47,117 - INFO - Tentando SSL (porta 465) para dev.acnormun@gmail.com
+2025-06-27 15:15:48,706 - ERROR - Erro inesperado no envio: SMTP.send_message() got an unexpected keyword argument 'timeout'
+2025-06-27 15:15:48,707 - ERROR - Falha em todas as 3 tentativas para SISTEMA
+2025-06-27 15:15:48,707 - INFO - Tentando STARTTLS (porta 587) para dev.acnormun@gmail.com
+2025-06-27 15:15:51,285 - WARNING - STARTTLS falhou: SMTP.send_message() got an unexpected keyword argument 'timeout'
+2025-06-27 15:15:51,285 - INFO - Tentando fallback para SSL...
+2025-06-27 15:15:51,286 - INFO - Tentando SSL (porta 465) para dev.acnormun@gmail.com
+2025-06-27 15:15:53,097 - ERROR - Erro inesperado no envio: SMTP.send_message() got an unexpected keyword argument 'timeout'
+2025-06-27 15:15:53,099 - INFO - 127.0.0.1 - - [27/Jun/2025 15:15:53] "[35m[1mPOST /triagem/email/send-test-to-admin HTTP/1.1[0m" 500 -
+2025-06-27 15:16:02,726 - INFO - Sinal 2 recebido. Finalizando graciosamente...
+2025-06-27 15:16:02,727 - INFO - Servidor com PID 20444 finalizado
+2025-06-27 15:16:08,906 - INFO -  Servidor iniciado com PID 30684
+2025-06-27 15:16:08,907 - INFO -  URL: http://0.0.0.0:5000
+2025-06-27 15:16:08,907 - INFO -  WebSocket: ws://0.0.0.0:5000/socket.io/
+2025-06-27 15:16:08,907 - INFO -  Health: http://0.0.0.0:5000/health
+2025-06-27 15:16:08,907 - INFO -  System Status: http://0.0.0.0:5000/api/system/status
+2025-06-27 15:16:08,907 - INFO -  Operações ativas: 0
+2025-06-27 15:16:08,924 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.94.11:5000
+2025-06-27 15:16:08,924 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-27 15:16:11,909 - INFO -  Iniciando RAG automaticamente...
+2025-06-27 15:16:11,910 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 15:16:11,910 - INFO -  Progresso rag_startup: Verificando sistema RAG...
+2025-06-27 15:16:11,911 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 15:16:11,911 - INFO -  Progresso rag_startup:  Módulo RAG encontrado
+2025-06-27 15:16:11,911 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 15:16:11,911 - INFO -  Progresso rag_startup: Conectando com Ollama...
+2025-06-27 15:16:12,067 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-27 15:16:14,366 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 15:16:14,367 - INFO -  Progresso rag_startup:  RAG inicializado! Carregando documentos...
+2025-06-27 15:16:15,031 - INFO - emitting event "progress_update" to all [/]
+2025-06-27 15:16:15,032 - INFO -  Progresso rag_startup:  RAG pronto! 2178 documentos carregados
+2025-06-27 15:16:15,032 - INFO -  RAG inicializado automaticamente: 2178 documentos
+2025-06-27 15:16:15,032 - INFO - emitting event "rag_ready" to all [/]
+2025-06-27 15:16:22,374 - WARNING - Email não encontrado para responsável: 'SISTEMA'. Usando admin.
+2025-06-27 15:16:22,374 - INFO - Tentativa 1/3 - Enviando para SISTEMA (dev.acnormun@gmail.com)
+2025-06-27 15:16:22,374 - INFO - Tentando STARTTLS (porta 587) para dev.acnormun@gmail.com
+2025-06-27 15:16:24,824 - WARNING - STARTTLS falhou: SMTP.send_message() got an unexpected keyword argument 'timeout'
+2025-06-27 15:16:24,825 - INFO - Tentando fallback para SSL...
+2025-06-27 15:16:24,825 - INFO - Tentando SSL (porta 465) para dev.acnormun@gmail.com
+2025-06-27 15:16:26,497 - ERROR - Erro inesperado no envio: SMTP.send_message() got an unexpected keyword argument 'timeout'
+2025-06-27 15:16:26,498 - WARNING - Tentativa 1 falhou, aguardando 2.0s...
+2025-06-27 15:16:28,499 - INFO - Tentativa 2/3 - Enviando para SISTEMA (dev.acnormun@gmail.com)
+2025-06-27 15:16:28,499 - INFO - Tentando STARTTLS (porta 587) para dev.acnormun@gmail.com
+2025-06-27 15:16:31,144 - WARNING - STARTTLS falhou: SMTP.send_message() got an unexpected keyword argument 'timeout'
+2025-06-27 15:16:31,145 - INFO - Tentando fallback para SSL...
+2025-06-27 15:16:31,145 - INFO - Tentando SSL (porta 465) para dev.acnormun@gmail.com
+2025-06-27 15:16:32,831 - ERROR - Erro inesperado no envio: SMTP.send_message() got an unexpected keyword argument 'timeout'
+2025-06-27 15:16:32,832 - WARNING - Tentativa 2 falhou, aguardando 2.0s...
+2025-06-27 15:16:34,833 - INFO - Tentativa 3/3 - Enviando para SISTEMA (dev.acnormun@gmail.com)
+2025-06-27 15:16:34,833 - INFO - Tentando STARTTLS (porta 587) para dev.acnormun@gmail.com
+2025-06-27 15:16:37,404 - WARNING - STARTTLS falhou: SMTP.send_message() got an unexpected keyword argument 'timeout'
+2025-06-27 15:16:37,405 - INFO - Tentando fallback para SSL...
+2025-06-27 15:16:37,405 - INFO - Tentando SSL (porta 465) para dev.acnormun@gmail.com
+2025-06-27 15:16:39,144 - ERROR - Erro inesperado no envio: SMTP.send_message() got an unexpected keyword argument 'timeout'
+2025-06-27 15:16:39,144 - ERROR - Falha em todas as 3 tentativas para SISTEMA
+2025-06-27 15:16:39,144 - INFO - Tentando STARTTLS (porta 587) para dev.acnormun@gmail.com
+2025-06-27 15:16:41,452 - WARNING - STARTTLS falhou: SMTP.send_message() got an unexpected keyword argument 'timeout'
+2025-06-27 15:16:41,452 - INFO - Tentando fallback para SSL...
+2025-06-27 15:16:41,453 - INFO - Tentando SSL (porta 465) para dev.acnormun@gmail.com
+2025-06-27 15:16:43,500 - ERROR - Erro inesperado no envio: SMTP.send_message() got an unexpected keyword argument 'timeout'
+2025-06-27 15:16:43,502 - INFO - 127.0.0.1 - - [27/Jun/2025 15:16:43] "[35m[1mPOST /triagem/email/send-test-to-admin HTTP/1.1[0m" 500 -
+2025-06-27 15:17:42,280 - INFO - Sinal 2 recebido. Finalizando graciosamente...
+2025-06-27 15:17:42,281 - INFO - Servidor com PID 30684 finalizado

@@ -1,5 +1,5 @@
 # routes/triagem.py
-from flask import Blueprint, request, jsonify, current_app
+from flask import Blueprint, request, jsonify
 from utils.triagem import (
     get_processos,
     atualizar_processo,
@@ -18,6 +18,18 @@ import re
 import logging
 from datetime import datetime
 from utils.extrair_metadados_processo import extrair_e_formatar_metadados
+
+print("🔍 Tentando importar email_service...")
+
+try:
+    from utils.email_notification import email_service
+    print("✅ email_service importado com sucesso!")
+    print(f"📧 Config: {email_service.config.admin_email}")
+except ImportError as e:
+    print(f"❌ Erro de import: {e}")
+except Exception as e:
+    print(f"❌ Erro na inicialização: {e}")
+
 
 logger = logging.getLogger(__name__)
 
@@ -366,12 +378,45 @@ def receber_processo_com_markdown():
 
                 with open(PATH_TRIAGEM, 'w', encoding='utf-8') as f:
                     f.writelines(linhas)
+
+                # ===== NOVA SEÇÃO: NOTIFICAÇÃO POR EMAIL =====
+                send_progress_ws(operation_id, 8, 'Enviando notificação por email...', 95)
+                print("📧 [PASSO 7] Enviando notificação por email...")
+                
+                # Prepara dados para notificação
+                dados_notificacao = {
+                    'numero': numero,
+                    'tema': tema,
+                    'data_dist': data_dist,
+                    'responsavel': responsavel,
+                    'status': status,
+                    'comentarios': comentarios,
+                    'suspeitos': suspeitos
+                }
+                
+                # Envia notificação de forma assíncrona (não bloqueia)
+                try:
+                    from utils.email_notification import enviar_notificacao_processo
+                    success = enviar_notificacao_processo(dados_notificacao)
+                    if success:
+                        print("✅ Notificação por email iniciada com sucesso")
+                        logger.info(f"📧 Notificação enviada para {responsavel}")
+                    else:
+                        print("⚠️ Falha ao iniciar notificação (processo continua)")
+                        logger.warning(f"📧 Falha na notificação para {responsavel}")
+                        
+                except Exception as e:
+                    print(f"⚠️ Erro na notificação (processo continua): {e}")
+                    logger.warning(f"Erro na notificação email: {e}")
+                
+                # ===== FIM DA NOTIFICAÇÃO =====
                 
                 send_progress_ws(operation_id, 9, 'Processo adicionado com sucesso!', 100)
                 time.sleep(0.5)
                 
                 print(f" Processo {numero} salvo com sucesso")
-                print(f"    Suspeitos detectados: {len(suspeitos)}")
+                print(f"    📧 Notificação enviada para: {responsavel}")
+                print(f"    🔍 Suspeitos detectados: {len(suspeitos)}")
                 print(f"     Substituições anonimização: {total_substituicoes}")
                 print(f"    ⏱️ Tempo de anonimização: {tempo_anonimizacao}s")
                 print(f"     Arquivos anonimizados: {len([a for a in arquivos_anonimizados.values() if a])}")
@@ -562,6 +607,163 @@ def limpar_cache_rag():
                 'message': 'Falha ao limpar cache'
             }), 500
             
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'error': str(e)
+        }), 500
+
+@triagem_bp.route('/triagem/email/test', methods=['POST'])
+def test_email_notification():
+    """🧪 Testa sistema de notificação por email"""
+    try:
+        data = request.get_json() or {}
+        
+        # Usa dados do request ou dados de teste padrão
+        test_data = {
+            'numero': data.get('numero', f'TESTE-{int(time.time())}'),
+            'tema': data.get('tema', 'TESTE DO SISTEMA DE EMAIL'),
+            'data_dist': data.get('data_dist', datetime.now().strftime('%d/%m/%Y')),
+            'responsavel': data.get('responsavel', 'NATÁLIA'),  # Ajuste conforme necessário
+            'status': data.get('status', 'TESTE'),
+            'comentarios': data.get('comentarios', 'Este é um teste do sistema de notificações por email. Se você recebeu este email, tudo está funcionando corretamente!'),
+            'suspeitos': data.get('suspeitos', ['João Silva (teste)', 'Maria Santos (teste)'])
+        }
+        
+        logger.info(f"🧪 Testando notificação para {test_data['responsavel']}")
+        
+        # Envia notificação de teste
+        from utils.email_notification import enviar_notificacao_processo
+        success = enviar_notificacao_processo(test_data)
+        
+        return jsonify({
+            'success': success,
+            'message': 'Email de teste enviado com sucesso!' if success else 'Falha ao enviar email de teste',
+            'test_data': test_data,
+            'timestamp': datetime.now().isoformat()
+        }), 200 if success else 500
+        
+    except Exception as e:
+        logger.error(f"Erro no teste de email: {e}")
+        return jsonify({
+            'success': False,
+            'error': str(e),
+            'message': 'Erro interno no teste de email'
+        }), 500
+
+@triagem_bp.route('/triagem/email/status', methods=['GET'])
+def email_notification_status():
+    """📊 Retorna status da configuração de email"""
+    try:
+        status = email_service.test_configuration()
+        
+        return jsonify({
+            'success': True,
+            'email_enabled': status['enabled'],
+            'configured': status['email_configured'],
+            'connectivity': status['connectivity'],
+            'message': status['message'],
+            'smtp_server': status['smtp_server'],
+            'smtp_port': status['smtp_port'],
+            'admin_email': status['admin_email'],
+            'responsaveis_mapeados': status['responsaveis_mapeados'],
+            'emails_mapeados': status['emails_mapeados'],
+            'config_check': {
+                'EMAIL_USER': '✅ Configurado' if email_service.config.email_user else '❌ Não configurado',
+                'EMAIL_APP_PASSWORD': '✅ Configurado' if email_service.config.email_password else '❌ Não configurado',
+                'EMAIL_NOTIFICATIONS': '✅ Habilitado' if email_service.config.enabled else '❌ Desabilitado',
+                'emails_responsaveis': f"✅ {len(status['emails_mapeados'])} mapeados" if status['emails_mapeados'] else '⚠️ Nenhum mapeado'
+            }
+        }), 200
+        
+    except Exception as e:
+        logger.error(f"Erro ao verificar status do email: {e}")
+        return jsonify({
+            'success': False,
+            'error': str(e),
+            'message': 'Erro ao verificar configuração de email'
+        }), 500
+
+@triagem_bp.route('/triagem/email/test-connectivity', methods=['POST'])
+def test_email_connectivity():
+    """🔗 Testa apenas conectividade SMTP (sem enviar email)"""
+    try:
+        if not email_service.config.enabled:
+            return jsonify({
+                'success': False,
+                'message': 'Notificações por email estão desabilitadas'
+            }), 400
+        
+        # Teste de conectividade básica
+        import smtplib
+        
+        with smtplib.SMTP(email_service.config.smtp_server, email_service.config.smtp_port) as server:
+            server.starttls()
+            server.login(email_service.config.email_user, email_service.config.email_password)
+        
+        return jsonify({
+            'success': True,
+            'message': 'Conectividade SMTP OK',
+            'smtp_server': email_service.config.smtp_server,
+            'smtp_port': email_service.config.smtp_port,
+            'email_user': email_service.config.email_user
+        }), 200
+        
+    except smtplib.SMTPAuthenticationError:
+        return jsonify({
+            'success': False,
+            'message': 'Erro de autenticação. Verifique EMAIL_USER e EMAIL_APP_PASSWORD'
+        }), 401
+        
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'message': f'Erro de conectividade: {str(e)}'
+        }), 500
+
+@triagem_bp.route('/triagem/email/send-test-to-admin', methods=['POST'])
+def send_test_to_admin():
+    try:
+        # Importação local para debugar
+        print("🔍 Tentando importar email_service...")
+        from utils.email_notification import email_service
+        print("✅ Import funcionou!")
+        
+        success = email_service.send_test_email()
+        
+        return jsonify({
+            'success': success,
+            'message': f'Email de teste {"enviado" if success else "falhou"} para {email_service.config.admin_email}',
+            'admin_email': email_service.config.admin_email,
+            'timestamp': datetime.now().isoformat()
+        }), 200 if success else 500
+        
+    except Exception as e:
+        logger.error(f"Erro ao enviar teste para admin: {e}")
+        return jsonify({
+            'success': False,
+            'error': str(e)
+        }), 500
+
+@triagem_bp.route('/triagem/email/config', methods=['GET'])
+def get_email_config():
+    """⚙️ Retorna configuração atual (sem senhas)"""
+    try:
+        return jsonify({
+            'success': True,
+            'config': {
+                'enabled': email_service.config.enabled,
+                'smtp_server': email_service.config.smtp_server,
+                'smtp_port': email_service.config.smtp_port,
+                'email_user': email_service.config.email_user,
+                'admin_email': email_service.config.admin_email,
+                'retry_attempts': email_service.config.retry_attempts,
+                'retry_delay': email_service.config.retry_delay,
+            },
+            'email_mappings': email_service.email_mappings,
+            'total_responsaveis': len(email_service.email_mappings)
+        }), 200
+        
     except Exception as e:
         return jsonify({
             'success': False,
