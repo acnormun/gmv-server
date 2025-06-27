@@ -69,7 +69,7 @@ except ImportError as e:
 
 @dataclass
 class UltraFastRAGConfig:
-    model_name: str = "initium/law_model:latest"
+    model_name: str = "gemma:2b"
     temperature: float = 0.0           # Lowered for deterministic, factual output
     chunk_size: int = 800              # Smaller chunks improve retrieval accuracy
     chunk_overlap: int = 200           # Maintains context across sections
@@ -385,7 +385,7 @@ A responsabilidade dos entes federativos na saúde é solidária, podendo qualqu
         
         # Configura sistema com conversacional habilitado
         config = UltraFastRAGConfig(
-            model_name="initium/law_model:latest",
+            model_name="gemma:2b",
             temperature=0.1,
             data_dir=test_dir,
             use_ollama_embeddings=True,
@@ -434,7 +434,7 @@ A responsabilidade dos entes federativos na saúde é solidária, podendo qualqu
             print("❌ Falha na inicialização")
             print("💡 Certifique-se que o Ollama está rodando:")
             print("   ollama serve")
-            print("   ollama pull initium/law_model:latest")
+            print("   ollama pull gemma:2b")
             print("   ollama pull nomic-embed-text")
     else:
         print("❌ UltraFastRAG não disponível - pulando testes completos")

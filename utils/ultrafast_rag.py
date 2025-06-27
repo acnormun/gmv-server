@@ -36,7 +36,7 @@ except ImportError:
 
 @dataclass
 class UltraFastRAGConfig:
-    model_name: str = "initium/law_model:latest"  # ⚡ SEU MODELO
+    model_name: str = "gemma:2b"  # ⚡ SEU MODELO
     temperature: float = 0.0
     chunk_size: int = 2000  # ⚡ AUMENTADO de 800
     chunk_overlap: int = 400  # ⚡ AUMENTADO de 200
@@ -609,7 +609,7 @@ def init_optimized_rag():
     global optimized_rag_system
     
     config = UltraFastRAGConfig(
-        model_name="initium/law_model:latest",  # ⚡ SEU MODELO
+        model_name="gemma:2b",  # ⚡ SEU MODELO
         enable_cache=True,
         enable_parallel_search=True,
         enable_preprocessing=True,

@@ -6445,7 +6445,7 @@ AssertionError: write() before start_response
 2025-06-23 12:25:11,686 - INFO -  Progresso rag_startup: Conectando com Ollama...
 2025-06-23 12:25:11,686 - INFO - Inicializando RAG Otimizado...
 2025-06-23 12:25:20,397 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
-2025-06-23 12:25:22,078 - INFO -  initium/law_model:latest conectado
+2025-06-23 12:25:22,078 - INFO -  gemma:2b conectado
 2025-06-23 12:25:22,416 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
 2025-06-23 12:25:22,498 - INFO -  Chroma carregado do cache
 2025-06-23 12:25:22,498 - INFO - emitting event "progress_update" to all [/]
@@ -6572,7 +6572,7 @@ AssertionError: write() before start_response
 2025-06-23 12:29:23,901 - INFO -  Progresso rag_startup: Conectando com Ollama...
 2025-06-23 12:29:23,902 - INFO - Inicializando RAG Otimizado...
 2025-06-23 12:29:28,267 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
-2025-06-23 12:29:30,380 - INFO -  initium/law_model:latest conectado
+2025-06-23 12:29:30,380 - INFO -  gemma:2b conectado
 2025-06-23 12:29:30,925 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
 2025-06-23 12:29:31,035 - INFO -  Chroma carregado do cache
 2025-06-23 12:29:31,035 - INFO - emitting event "progress_update" to all [/]
@@ -6662,7 +6662,7 @@ AssertionError: write() before start_response
 2025-06-23 12:31:54,602 - INFO - 127.0.0.1 - - [23/Jun/2025 12:31:54] "GET /api/rag/status HTTP/1.1" 200 -
 2025-06-23 12:31:54,924 - INFO - 127.0.0.1 - - [23/Jun/2025 12:31:54] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
 2025-06-23 12:32:00,901 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
-2025-06-23 12:32:02,527 - INFO -  initium/law_model:latest conectado
+2025-06-23 12:32:02,527 - INFO -  gemma:2b conectado
 2025-06-23 12:32:02,913 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
 2025-06-23 12:32:02,976 - INFO -  Chroma carregado do cache
 2025-06-23 12:32:02,976 - INFO - emitting event "progress_update" to all [/]
@@ -6704,7 +6704,7 @@ AssertionError: write() before start_response
 2025-06-23 12:33:15,003 - INFO -  Progresso rag_startup: Conectando com Ollama...
 2025-06-23 12:33:15,003 - INFO - Inicializando RAG Otimizado...
 2025-06-23 12:33:23,503 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
-2025-06-23 12:33:25,446 - INFO -  initium/law_model:latest conectado
+2025-06-23 12:33:25,446 - INFO -  gemma:2b conectado
 2025-06-23 12:33:25,855 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
 2025-06-23 12:33:25,926 - INFO -  Chroma carregado do cache
 2025-06-23 12:33:25,926 - INFO - emitting event "progress_update" to all [/]
@@ -6744,7 +6744,7 @@ AssertionError: write() before start_response
 2025-06-23 12:36:18,627 - INFO -  Progresso rag_startup: Conectando com Ollama...
 2025-06-23 12:36:18,627 - INFO - Inicializando RAG Otimizado...
 2025-06-23 12:36:27,686 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
-2025-06-23 12:36:29,559 - INFO -  initium/law_model:latest conectado
+2025-06-23 12:36:29,559 - INFO -  gemma:2b conectado
 2025-06-23 12:36:30,266 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
 2025-06-23 12:36:30,392 - INFO -  Chroma carregado do cache
 2025-06-23 12:36:30,392 - INFO - emitting event "progress_update" to all [/]
@@ -6784,7 +6784,7 @@ AssertionError: write() before start_response
 2025-06-23 12:40:09,449 - INFO - Inicializando RAG Otimizado...
 2025-06-23 12:40:11,055 - INFO -  Cliente WebSocket conectado: 3HlCNI9RJAkfLNR8AAAD
 2025-06-23 12:40:18,924 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
-2025-06-23 12:40:20,711 - INFO -  initium/law_model:latest conectado
+2025-06-23 12:40:20,711 - INFO -  gemma:2b conectado
 2025-06-23 12:40:21,434 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
 2025-06-23 12:40:21,672 - INFO -  Chroma carregado do cache
 2025-06-23 12:40:21,672 - INFO - emitting event "progress_update" to all [/]
@@ -6854,7 +6854,7 @@ AssertionError: write() before start_response
 2025-06-23 12:44:24,687 - INFO -  Progresso rag_startup: Conectando com Ollama...
 2025-06-23 12:44:24,687 - INFO - Inicializando RAG Otimizado...
 2025-06-23 12:44:34,437 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
-2025-06-23 12:44:36,956 - INFO -  initium/law_model:latest conectado
+2025-06-23 12:44:36,956 - INFO -  gemma:2b conectado
 2025-06-23 12:44:38,042 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
 2025-06-23 12:44:38,262 - INFO -  Chroma carregado do cache
 2025-06-23 12:44:38,262 - INFO - emitting event "progress_update" to all [/]
@@ -6899,7 +6899,7 @@ AssertionError: write() before start_response
 2025-06-23 13:23:04,888 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-23 13:23:04,890 - INFO - 127.0.0.1 - - [23/Jun/2025 13:23:04] "GET /triagem HTTP/1.1" 200 -
 2025-06-23 13:23:09,355 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
-2025-06-23 13:23:11,425 - INFO -  initium/law_model:latest conectado
+2025-06-23 13:23:11,425 - INFO -  gemma:2b conectado
 2025-06-23 13:23:12,439 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
 2025-06-23 13:23:12,656 - INFO -  Chroma carregado do cache
 2025-06-23 13:23:12,657 - INFO - emitting event "progress_update" to all [/]
@@ -6943,7 +6943,7 @@ AssertionError: write() before start_response
 2025-06-23 13:32:26,450 - INFO - Inicializando RAG Otimizado...
 2025-06-23 13:32:26,459 - INFO - 127.0.0.1 - - [23/Jun/2025 13:32:26] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
 2025-06-23 13:32:36,004 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
-2025-06-23 13:32:38,082 - INFO -  initium/law_model:latest conectado
+2025-06-23 13:32:38,082 - INFO -  gemma:2b conectado
 2025-06-23 13:32:38,503 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
 2025-06-23 13:32:38,643 - INFO -  Chroma carregado do cache
 2025-06-23 13:32:38,643 - INFO - emitting event "progress_update" to all [/]
@@ -6986,7 +6986,7 @@ AssertionError: write() before start_response
 2025-06-23 13:41:06,419 - INFO -  Progresso rag_startup: Conectando com Ollama...
 2025-06-23 13:41:06,419 - INFO - Inicializando RAG Otimizado...
 2025-06-23 13:41:15,777 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
-2025-06-23 13:41:17,264 - INFO -  initium/law_model:latest conectado
+2025-06-23 13:41:17,264 - INFO -  gemma:2b conectado
 2025-06-23 13:41:17,672 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
 2025-06-23 13:41:17,815 - INFO -  Chroma carregado do cache
 2025-06-23 13:41:17,815 - INFO - emitting event "progress_update" to all [/]
@@ -12421,7 +12421,7 @@ AssertionError: write() before start_response
 2025-06-25 14:18:14,580 - INFO -  WebSocket: ws://0.0.0.0:5000/socket.io/
 2025-06-25 14:18:14,580 - INFO -  Health: http://0.0.0.0:5000/health
 2025-06-25 14:18:14,580 - INFO -  System Status: http://0.0.0.0:5000/api/system/status
-2025-06-25 14:18:14,580 - INFO -  Operações ativas: 0
+2025-06-25 14:18:14,580 - INFO -  Operaï¿½ï¿½es ativas: 0
 2025-06-25 14:18:14,580 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5000
@@ -12431,7 +12431,7 @@ AssertionError: write() before start_response
 2025-06-25 14:18:17,583 - INFO - emitting event "progress_update" to all [/]
 2025-06-25 14:18:17,584 - INFO -  Progresso rag_startup: Verificando sistema RAG...
 2025-06-25 14:18:17,584 - INFO - emitting event "progress_update" to all [/]
-2025-06-25 14:18:17,584 - INFO -  Progresso rag_startup:  Módulo RAG encontrado
+2025-06-25 14:18:17,584 - INFO -  Progresso rag_startup:  Mï¿½dulo RAG encontrado
 2025-06-25 14:18:17,585 - INFO - emitting event "progress_update" to all [/]
 2025-06-25 14:18:17,585 - INFO -  Progresso rag_startup: Conectando com Ollama...
 2025-06-25 14:18:51,146 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
@@ -12444,32 +12444,32 @@ AssertionError: write() before start_response
 2025-06-25 14:21:45,410 - INFO - 127.0.0.1 - - [25/Jun/2025 14:21:45] "[33mGET /api/rag/statistics HTTP/1.1[0m" 404 -
 2025-06-25 14:21:45,412 - INFO - 127.0.0.1 - - [25/Jun/2025 14:21:45] "GET /api/rag/status HTTP/1.1" 200 -
 2025-06-25 14:21:45,414 - INFO - 127.0.0.1 - - [25/Jun/2025 14:21:45] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
-2025-06-25 14:21:47,747 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 14:21:47,747 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-25 14:21:47,748 - INFO - 127.0.0.1 - - [25/Jun/2025 14:21:47] "GET /api/rag/processos-triagem HTTP/1.1" 200 -
 2025-06-25 14:21:54,081 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
 2025-06-25 14:21:54,201 - INFO - 127.0.0.1 - - [25/Jun/2025 14:21:54] "GET /api/rag/documentos-disponiveis HTTP/1.1" 200 -
 2025-06-25 14:22:10,491 - INFO - 127.0.0.1 - - [25/Jun/2025 14:22:10] "OPTIONS /api/rag/query HTTP/1.1" 200 -
 2025-06-25 14:24:41,766 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
 2025-06-25 14:25:01,396 - INFO - 127.0.0.1 - - [25/Jun/2025 14:25:01] "POST /api/rag/query HTTP/1.1" 200 -
-2025-06-25 14:25:43,047 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 14:25:43,047 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-25 14:25:43,049 - INFO - 127.0.0.1 - - [25/Jun/2025 14:25:43] "GET /api/rag/processos-triagem HTTP/1.1" 200 -
 2025-06-25 14:25:49,105 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
 2025-06-25 14:25:49,422 - INFO - 127.0.0.1 - - [25/Jun/2025 14:25:49] "GET /api/rag/documentos-disponiveis HTTP/1.1" 200 -
 2025-06-25 14:25:56,383 - INFO - 127.0.0.1 - - [25/Jun/2025 14:25:56] "OPTIONS /api/rag/query HTTP/1.1" 200 -
-2025-06-25 14:26:25,821 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 14:26:25,821 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-25 14:26:25,822 - INFO - 127.0.0.1 - - [25/Jun/2025 14:26:25] "GET /api/rag/processos-triagem HTTP/1.1" 200 -
 2025-06-25 14:27:12,509 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
-2025-06-25 14:33:58,049 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 14:33:58,049 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-25 14:33:58,059 - INFO - 127.0.0.1 - - [25/Jun/2025 14:33:58] "GET /triagem HTTP/1.1" 200 -
 2025-06-25 14:35:39,349 - INFO - 127.0.0.1 - - [25/Jun/2025 14:35:39] "POST /api/rag/query HTTP/1.1" 200 -
-2025-06-25 14:35:44,377 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 14:35:44,377 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-25 14:35:44,379 - INFO - 127.0.0.1 - - [25/Jun/2025 14:35:44] "GET /triagem HTTP/1.1" 200 -
 2025-06-25 14:35:44,705 - INFO -  Cliente WebSocket conectado: S6YACf05-U-krmi9AAAC
 2025-06-25 14:35:44,706 - INFO -  Cliente WebSocket conectado: ox5hFjvJ3ErUaJ8rAAAD
 2025-06-25 14:35:45,719 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
 2025-06-25 14:35:46,840 - INFO - 127.0.0.1 - - [25/Jun/2025 14:35:46] "GET /api/rag/documentos-disponiveis HTTP/1.1" 200 -
-2025-06-25 14:35:47,189 - INFO -  Cliente desconectado: S6YACf05-U-krmi9AAAC (removidas 0 operações)
-2025-06-25 14:35:47,190 - INFO -  Cliente desconectado: ox5hFjvJ3ErUaJ8rAAAD (removidas 0 operações)
+2025-06-25 14:35:47,189 - INFO -  Cliente desconectado: S6YACf05-U-krmi9AAAC (removidas 0 operaï¿½ï¿½es)
+2025-06-25 14:35:47,190 - INFO -  Cliente desconectado: ox5hFjvJ3ErUaJ8rAAAD (removidas 0 operaï¿½ï¿½es)
 2025-06-25 14:35:47,209 - INFO - 127.0.0.1 - - [25/Jun/2025 14:35:47] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
 2025-06-25 14:35:47,210 - INFO - 127.0.0.1 - - [25/Jun/2025 14:35:47] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
 2025-06-25 14:35:47,216 - ERROR - Error on request:
@@ -12500,12 +12500,12 @@ AssertionError: write() before start_response
 2025-06-25 14:43:55,736 - INFO - 127.0.0.1 - - [25/Jun/2025 14:43:55] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
 2025-06-25 14:44:27,086 - INFO - 127.0.0.1 - - [25/Jun/2025 14:44:27] "GET /api/rag/status HTTP/1.1" 200 -
 2025-06-25 14:44:27,500 - INFO - 127.0.0.1 - - [25/Jun/2025 14:44:27] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
-2025-06-25 14:44:32,736 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 14:44:32,736 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-25 14:44:32,737 - INFO - 127.0.0.1 - - [25/Jun/2025 14:44:32] "GET /triagem HTTP/1.1" 200 -
 2025-06-25 14:44:33,048 - INFO -  Cliente WebSocket conectado: KquJwmj9cqw5gffkAAAF
 2025-06-25 14:44:33,065 - INFO -  Cliente WebSocket conectado: 8_kPA6dNk1ImlbpeAAAH
-2025-06-25 14:44:34,062 - INFO -  Cliente desconectado: KquJwmj9cqw5gffkAAAF (removidas 0 operações)
-2025-06-25 14:44:34,063 - INFO -  Cliente desconectado: 8_kPA6dNk1ImlbpeAAAH (removidas 0 operações)
+2025-06-25 14:44:34,062 - INFO -  Cliente desconectado: KquJwmj9cqw5gffkAAAF (removidas 0 operaï¿½ï¿½es)
+2025-06-25 14:44:34,063 - INFO -  Cliente desconectado: 8_kPA6dNk1ImlbpeAAAH (removidas 0 operaï¿½ï¿½es)
 2025-06-25 14:44:34,089 - INFO - 127.0.0.1 - - [25/Jun/2025 14:44:34] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
 2025-06-25 14:44:34,090 - INFO - 127.0.0.1 - - [25/Jun/2025 14:44:34] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
 2025-06-25 14:44:34,093 - ERROR - Error on request:
@@ -12528,7 +12528,7 @@ Traceback (most recent call last):
 AssertionError: write() before start_response
 2025-06-25 14:44:34,389 - INFO - 127.0.0.1 - - [25/Jun/2025 14:44:34] "GET /api/rag/status HTTP/1.1" 200 -
 2025-06-25 14:44:34,653 - INFO - 127.0.0.1 - - [25/Jun/2025 14:44:34] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
-2025-06-25 14:45:48,755 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 14:45:48,755 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-25 14:45:48,755 - INFO - 127.0.0.1 - - [25/Jun/2025 14:45:48] "GET /triagem HTTP/1.1" 200 -
 2025-06-25 14:45:49,090 - INFO - 127.0.0.1 - - [25/Jun/2025 14:45:49] "GET /api/rag/status HTTP/1.1" 200 -
 2025-06-25 14:45:49,406 - INFO - 127.0.0.1 - - [25/Jun/2025 14:45:49] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
@@ -12557,13 +12557,13 @@ AssertionError: write() before start_response
 2025-06-25 14:59:48,385 - INFO -  WebSocket: ws://0.0.0.0:5000/socket.io/
 2025-06-25 14:59:48,385 - INFO -  Health: http://0.0.0.0:5000/health
 2025-06-25 14:59:48,385 - INFO -  System Status: http://0.0.0.0:5000/api/system/status
-2025-06-25 14:59:48,385 - INFO -  Operações ativas: 0
+2025-06-25 14:59:48,385 - INFO -  Operaï¿½ï¿½es ativas: 0
 2025-06-25 14:59:48,411 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5000
  * Running on http://10.0.82.78:5000
 2025-06-25 14:59:48,411 - INFO - [33mPress CTRL+C to quit[0m
-2025-06-25 14:59:49,987 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 14:59:49,987 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-25 14:59:49,987 - INFO -  Cliente WebSocket conectado: bjeU71oI9TaHmP07AAAB
 2025-06-25 14:59:49,987 - INFO - 127.0.0.1 - - [25/Jun/2025 14:59:49] "GET /triagem HTTP/1.1" 200 -
 2025-06-25 14:59:50,011 - INFO -  Cliente WebSocket conectado: c7KPD8710XtEVO9DAAAD
@@ -12571,7 +12571,7 @@ AssertionError: write() before start_response
 2025-06-25 14:59:51,396 - INFO - emitting event "progress_update" to all [/]
 2025-06-25 14:59:51,396 - INFO -  Progresso rag_startup: Verificando sistema RAG...
 2025-06-25 14:59:51,397 - INFO - emitting event "progress_update" to all [/]
-2025-06-25 14:59:51,397 - INFO -  Progresso rag_startup:  Módulo RAG encontrado
+2025-06-25 14:59:51,397 - INFO -  Progresso rag_startup:  Mï¿½dulo RAG encontrado
 2025-06-25 14:59:51,398 - INFO - emitting event "progress_update" to all [/]
 2025-06-25 14:59:51,398 - INFO -  Progresso rag_startup: Conectando com Ollama...
 2025-06-25 15:00:03,748 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
@@ -12581,12 +12581,12 @@ AssertionError: write() before start_response
 2025-06-25 15:00:11,322 - INFO -  Progresso rag_startup:  RAG pronto! 2178 documentos carregados
 2025-06-25 15:00:11,322 - INFO -  RAG inicializado automaticamente: 2178 documentos
 2025-06-25 15:00:11,322 - INFO - emitting event "rag_ready" to all [/]
-2025-06-25 15:00:13,662 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 15:00:13,662 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-25 15:00:13,677 - INFO - 127.0.0.1 - - [25/Jun/2025 15:00:13] "GET /triagem HTTP/1.1" 200 -
-2025-06-25 15:00:13,913 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 15:00:13,913 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-25 15:00:13,913 - INFO - 127.0.0.1 - - [25/Jun/2025 15:00:13] "GET /triagem HTTP/1.1" 200 -
-2025-06-25 15:00:55,431 - INFO -  Cliente desconectado: bjeU71oI9TaHmP07AAAB (removidas 0 operações)
-2025-06-25 15:00:55,432 - INFO -  Cliente desconectado: c7KPD8710XtEVO9DAAAD (removidas 0 operações)
+2025-06-25 15:00:55,431 - INFO -  Cliente desconectado: bjeU71oI9TaHmP07AAAB (removidas 0 operaï¿½ï¿½es)
+2025-06-25 15:00:55,432 - INFO -  Cliente desconectado: c7KPD8710XtEVO9DAAAD (removidas 0 operaï¿½ï¿½es)
 2025-06-25 15:00:55,454 - INFO - 127.0.0.1 - - [25/Jun/2025 15:00:55] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
 2025-06-25 15:00:55,455 - INFO - 127.0.0.1 - - [25/Jun/2025 15:00:55] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
 2025-06-25 15:00:55,462 - ERROR - Error on request:
@@ -12615,7 +12615,7 @@ AssertionError: write() before start_response
 2025-06-25 15:01:44,064 - INFO - 127.0.0.1 - - [25/Jun/2025 15:01:44] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
 2025-06-25 15:01:54,456 - INFO - 127.0.0.1 - - [25/Jun/2025 15:01:54] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
 2025-06-25 15:01:54,723 - INFO - 127.0.0.1 - - [25/Jun/2025 15:01:54] "[31m[1mPOST /api/rag/query-with-context HTTP/1.1[0m" 400 -
-2025-06-25 15:02:16,628 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 15:02:16,628 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-25 15:02:16,629 - INFO - 127.0.0.1 - - [25/Jun/2025 15:02:16] "GET /triagem HTTP/1.1" 200 -
 2025-06-25 15:02:17,062 - INFO - 127.0.0.1 - - [25/Jun/2025 15:02:17] "GET /api/rag/status HTTP/1.1" 200 -
 2025-06-25 15:02:17,391 - INFO - 127.0.0.1 - - [25/Jun/2025 15:02:17] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
@@ -12628,7 +12628,7 @@ AssertionError: write() before start_response
 2025-06-25 15:05:10,056 - INFO -  WebSocket: ws://0.0.0.0:5000/socket.io/
 2025-06-25 15:05:10,056 - INFO -  Health: http://0.0.0.0:5000/health
 2025-06-25 15:05:10,056 - INFO -  System Status: http://0.0.0.0:5000/api/system/status
-2025-06-25 15:05:10,056 - INFO -  Operações ativas: 0
+2025-06-25 15:05:10,056 - INFO -  Operaï¿½ï¿½es ativas: 0
 2025-06-25 15:05:10,073 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5000
@@ -12640,12 +12640,12 @@ AssertionError: write() before start_response
 2025-06-25 15:05:13,059 - INFO - emitting event "progress_update" to all [/]
 2025-06-25 15:05:13,060 - INFO -  Progresso rag_startup: Verificando sistema RAG...
 2025-06-25 15:05:13,060 - INFO - emitting event "progress_update" to all [/]
-2025-06-25 15:05:13,061 - INFO -  Progresso rag_startup:  Módulo RAG encontrado
+2025-06-25 15:05:13,061 - INFO -  Progresso rag_startup:  Mï¿½dulo RAG encontrado
 2025-06-25 15:05:13,062 - INFO - emitting event "progress_update" to all [/]
 2025-06-25 15:05:13,062 - INFO -  Progresso rag_startup: Conectando com Ollama...
 2025-06-25 15:05:24,588 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
-2025-06-25 15:05:27,813 - INFO -  Cliente desconectado: E9DtneijrpDAh6GEAAAB (removidas 0 operações)
-2025-06-25 15:05:27,820 - INFO -  Cliente desconectado: 0kB-7wpPWfLlqAhzAAAD (removidas 0 operações)
+2025-06-25 15:05:27,813 - INFO -  Cliente desconectado: E9DtneijrpDAh6GEAAAB (removidas 0 operaï¿½ï¿½es)
+2025-06-25 15:05:27,820 - INFO -  Cliente desconectado: 0kB-7wpPWfLlqAhzAAAD (removidas 0 operaï¿½ï¿½es)
 2025-06-25 15:05:27,856 - INFO - 127.0.0.1 - - [25/Jun/2025 15:05:27] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
 2025-06-25 15:05:27,857 - INFO - 127.0.0.1 - - [25/Jun/2025 15:05:27] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
 2025-06-25 15:05:27,910 - ERROR - Error on request:
@@ -12666,9 +12666,9 @@ Traceback (most recent call last):
   File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
     assert status_set is not None, "write() before start_response"
 AssertionError: write() before start_response
-2025-06-25 15:05:28,183 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 15:05:28,183 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-25 15:05:28,183 - INFO - 127.0.0.1 - - [25/Jun/2025 15:05:28] "GET /triagem HTTP/1.1" 200 -
-2025-06-25 15:05:28,644 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 15:05:28,644 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-25 15:05:28,645 - INFO - 127.0.0.1 - - [25/Jun/2025 15:05:28] "GET /triagem HTTP/1.1" 200 -
 2025-06-25 15:05:28,948 - INFO -  Cliente WebSocket conectado: IP25vK2mteDQ1fKDAAAF
 2025-06-25 15:05:28,973 - INFO -  Cliente WebSocket conectado: qTbM2FZQ86lhZjKQAAAH
@@ -12678,8 +12678,8 @@ AssertionError: write() before start_response
 2025-06-25 15:05:32,883 - INFO -  Progresso rag_startup:  RAG pronto! 2178 documentos carregados
 2025-06-25 15:05:32,883 - INFO -  RAG inicializado automaticamente: 2178 documentos
 2025-06-25 15:05:32,883 - INFO - emitting event "rag_ready" to all [/]
-2025-06-25 15:05:35,035 - INFO -  Cliente desconectado: IP25vK2mteDQ1fKDAAAF (removidas 0 operações)
-2025-06-25 15:05:35,036 - INFO -  Cliente desconectado: qTbM2FZQ86lhZjKQAAAH (removidas 0 operações)
+2025-06-25 15:05:35,035 - INFO -  Cliente desconectado: IP25vK2mteDQ1fKDAAAF (removidas 0 operaï¿½ï¿½es)
+2025-06-25 15:05:35,036 - INFO -  Cliente desconectado: qTbM2FZQ86lhZjKQAAAH (removidas 0 operaï¿½ï¿½es)
 2025-06-25 15:05:35,055 - INFO - 127.0.0.1 - - [25/Jun/2025 15:05:35] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
 2025-06-25 15:05:35,056 - INFO - 127.0.0.1 - - [25/Jun/2025 15:05:35] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
 2025-06-25 15:05:35,063 - ERROR - Error on request:
@@ -12700,10 +12700,10 @@ Traceback (most recent call last):
   File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
     assert status_set is not None, "write() before start_response"
 AssertionError: write() before start_response
-2025-06-25 15:05:35,203 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 15:05:35,203 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-25 15:05:35,203 - INFO - 127.0.0.1 - - [25/Jun/2025 15:05:35] "GET /triagem HTTP/1.1" 200 -
 2025-06-25 15:05:35,359 - INFO - 127.0.0.1 - - [25/Jun/2025 15:05:35] "GET /api/rag/status HTTP/1.1" 200 -
-2025-06-25 15:05:35,460 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 15:05:35,460 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-25 15:05:35,460 - INFO - 127.0.0.1 - - [25/Jun/2025 15:05:35] "GET /triagem HTTP/1.1" 200 -
 2025-06-25 15:05:35,521 - INFO - 127.0.0.1 - - [25/Jun/2025 15:05:35] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
 2025-06-25 15:05:40,420 - INFO - 127.0.0.1 - - [25/Jun/2025 15:05:40] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
@@ -12719,21 +12719,21 @@ AssertionError: write() before start_response
 2025-06-25 15:08:55,692 - INFO -  WebSocket: ws://0.0.0.0:5000/socket.io/
 2025-06-25 15:08:55,692 - INFO -  Health: http://0.0.0.0:5000/health
 2025-06-25 15:08:55,692 - INFO -  System Status: http://0.0.0.0:5000/api/system/status
-2025-06-25 15:08:55,692 - INFO -  Operações ativas: 0
+2025-06-25 15:08:55,692 - INFO -  Operaï¿½ï¿½es ativas: 0
 2025-06-25 15:08:55,712 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5000
  * Running on http://10.0.82.78:5000
 2025-06-25 15:08:55,712 - INFO - [33mPress CTRL+C to quit[0m
 2025-06-25 15:08:58,210 - INFO -  Cliente WebSocket conectado: IDSXAxM-UvfHuHGmAAAB
-2025-06-25 15:08:58,220 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 15:08:58,220 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-25 15:08:58,222 - INFO - 127.0.0.1 - - [25/Jun/2025 15:08:58] "GET /triagem HTTP/1.1" 200 -
 2025-06-25 15:08:58,244 - INFO -  Cliente WebSocket conectado: dPZFMX42QVJNPKyMAAAD
 2025-06-25 15:08:58,699 - INFO -  Iniciando RAG automaticamente...
 2025-06-25 15:08:58,699 - INFO - emitting event "progress_update" to all [/]
 2025-06-25 15:08:58,699 - INFO -  Progresso rag_startup: Verificando sistema RAG...
 2025-06-25 15:08:58,700 - INFO - emitting event "progress_update" to all [/]
-2025-06-25 15:08:58,700 - INFO -  Progresso rag_startup:  Módulo RAG encontrado
+2025-06-25 15:08:58,700 - INFO -  Progresso rag_startup:  Mï¿½dulo RAG encontrado
 2025-06-25 15:08:58,700 - INFO - emitting event "progress_update" to all [/]
 2025-06-25 15:08:58,700 - INFO -  Progresso rag_startup: Conectando com Ollama...
 2025-06-25 15:09:14,744 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
@@ -12743,12 +12743,12 @@ AssertionError: write() before start_response
 2025-06-25 15:09:23,024 - INFO -  Progresso rag_startup:  RAG pronto! 2178 documentos carregados
 2025-06-25 15:09:23,024 - INFO -  RAG inicializado automaticamente: 2178 documentos
 2025-06-25 15:09:23,024 - INFO - emitting event "rag_ready" to all [/]
-2025-06-25 15:09:25,347 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 15:09:25,347 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-25 15:09:25,347 - INFO - 127.0.0.1 - - [25/Jun/2025 15:09:25] "GET /triagem HTTP/1.1" 200 -
-2025-06-25 15:09:25,594 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 15:09:25,594 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-25 15:09:25,594 - INFO - 127.0.0.1 - - [25/Jun/2025 15:09:25] "GET /triagem HTTP/1.1" 200 -
-2025-06-25 15:09:48,136 - INFO -  Cliente desconectado: dPZFMX42QVJNPKyMAAAD (removidas 0 operações)
-2025-06-25 15:09:48,138 - INFO -  Cliente desconectado: IDSXAxM-UvfHuHGmAAAB (removidas 0 operações)
+2025-06-25 15:09:48,136 - INFO -  Cliente desconectado: dPZFMX42QVJNPKyMAAAD (removidas 0 operaï¿½ï¿½es)
+2025-06-25 15:09:48,138 - INFO -  Cliente desconectado: IDSXAxM-UvfHuHGmAAAB (removidas 0 operaï¿½ï¿½es)
 2025-06-25 15:09:48,153 - INFO - 127.0.0.1 - - [25/Jun/2025 15:09:48] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
 2025-06-25 15:09:48,153 - INFO - 127.0.0.1 - - [25/Jun/2025 15:09:48] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
 2025-06-25 15:09:48,160 - ERROR - Error on request:
@@ -12792,7 +12792,7 @@ AssertionError: write() before start_response
 2025-06-25 16:03:50,502 - INFO -  WebSocket: ws://0.0.0.0:5000/socket.io/
 2025-06-25 16:03:50,502 - INFO -  Health: http://0.0.0.0:5000/health
 2025-06-25 16:03:50,502 - INFO -  System Status: http://0.0.0.0:5000/api/system/status
-2025-06-25 16:03:50,502 - INFO -  Operações ativas: 0
+2025-06-25 16:03:50,502 - INFO -  Operaï¿½ï¿½es ativas: 0
 2025-06-25 16:03:50,518 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5000
@@ -12802,7 +12802,7 @@ AssertionError: write() before start_response
 2025-06-25 16:03:53,515 - INFO - emitting event "progress_update" to all [/]
 2025-06-25 16:03:53,515 - INFO -  Progresso rag_startup: Verificando sistema RAG...
 2025-06-25 16:03:53,515 - INFO - emitting event "progress_update" to all [/]
-2025-06-25 16:03:53,515 - INFO -  Progresso rag_startup:  Módulo RAG encontrado
+2025-06-25 16:03:53,515 - INFO -  Progresso rag_startup:  Mï¿½dulo RAG encontrado
 2025-06-25 16:03:53,515 - INFO - emitting event "progress_update" to all [/]
 2025-06-25 16:03:53,517 - INFO -  Progresso rag_startup: Conectando com Ollama...
 2025-06-25 16:04:08,542 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
@@ -12812,12 +12812,12 @@ AssertionError: write() before start_response
 2025-06-25 16:04:17,427 - INFO -  Progresso rag_startup:  RAG pronto! 2178 documentos carregados
 2025-06-25 16:04:17,427 - INFO -  RAG inicializado automaticamente: 2178 documentos
 2025-06-25 16:04:17,442 - INFO - emitting event "rag_ready" to all [/]
-2025-06-25 16:05:22,400 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 16:05:22,400 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-25 16:05:22,411 - INFO - 127.0.0.1 - - [25/Jun/2025 16:05:22] "GET /triagem HTTP/1.1" 200 -
 2025-06-25 16:05:22,416 - INFO -  Cliente WebSocket conectado: tioYIYggirpGJ4CwAAAC
 2025-06-25 16:05:22,420 - INFO -  Cliente WebSocket conectado: akftTE_m5eu5LznJAAAD
-2025-06-25 16:05:23,165 - INFO -  Cliente desconectado: tioYIYggirpGJ4CwAAAC (removidas 0 operações)
-2025-06-25 16:05:23,167 - INFO -  Cliente desconectado: akftTE_m5eu5LznJAAAD (removidas 0 operações)
+2025-06-25 16:05:23,165 - INFO -  Cliente desconectado: tioYIYggirpGJ4CwAAAC (removidas 0 operaï¿½ï¿½es)
+2025-06-25 16:05:23,167 - INFO -  Cliente desconectado: akftTE_m5eu5LznJAAAD (removidas 0 operaï¿½ï¿½es)
 2025-06-25 16:05:23,194 - INFO - 127.0.0.1 - - [25/Jun/2025 16:05:23] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
 2025-06-25 16:05:23,194 - INFO - 127.0.0.1 - - [25/Jun/2025 16:05:23] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
 2025-06-25 16:05:23,214 - INFO - 127.0.0.1 - - [25/Jun/2025 16:05:23] "GET /api/rag/status HTTP/1.1" 200 -
@@ -12842,24 +12842,24 @@ AssertionError: write() before start_response
 2025-06-25 16:05:23,528 - INFO - 127.0.0.1 - - [25/Jun/2025 16:05:23] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
 2025-06-25 16:05:29,833 - INFO - 127.0.0.1 - - [25/Jun/2025 16:05:29] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
 2025-06-25 16:05:30,083 - INFO - 127.0.0.1 - - [25/Jun/2025 16:05:30] "POST /api/rag/query-with-context HTTP/1.1" 200 -
-2025-06-25 16:05:39,557 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 16:05:39,557 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-25 16:05:39,558 - INFO -  Cliente WebSocket conectado: d51wUVSe4FJ5EfeWAAAF
 2025-06-25 16:05:39,559 - INFO - 127.0.0.1 - - [25/Jun/2025 16:05:39] "GET /triagem HTTP/1.1" 200 -
 2025-06-25 16:05:39,572 - INFO -  Cliente WebSocket conectado: D872gR6IvypUsU0PAAAH
 2025-06-25 16:05:42,444 - INFO - 127.0.0.1 - - [25/Jun/2025 16:05:42] "OPTIONS /triagem/1036792-16.2024.8.11.0000 HTTP/1.1" 200 -
-2025-06-25 16:05:42,749 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 16:05:42,749 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-25 16:05:42,753 - INFO - 127.0.0.1 - - [25/Jun/2025 16:05:42] "DELETE /triagem/1036792-16.2024.8.11.0000 HTTP/1.1" 200 -
-2025-06-25 16:05:43,016 - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 16:05:43,016 - INFO -  2 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-25 16:05:43,017 - INFO - 127.0.0.1 - - [25/Jun/2025 16:05:43] "GET /triagem HTTP/1.1" 200 -
 2025-06-25 16:05:48,773 - INFO - 127.0.0.1 - - [25/Jun/2025 16:05:48] "OPTIONS /triagem/1004080-49.2021.8.11.0041 HTTP/1.1" 200 -
-2025-06-25 16:05:49,088 - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 16:05:49,088 - INFO -  2 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-25 16:05:49,091 - INFO - 127.0.0.1 - - [25/Jun/2025 16:05:49] "DELETE /triagem/1004080-49.2021.8.11.0041 HTTP/1.1" 200 -
-2025-06-25 16:05:49,346 - INFO -  1 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 16:05:49,346 - INFO -  1 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-25 16:05:49,347 - INFO - 127.0.0.1 - - [25/Jun/2025 16:05:49] "GET /triagem HTTP/1.1" 200 -
 2025-06-25 16:05:52,938 - INFO - 127.0.0.1 - - [25/Jun/2025 16:05:52] "OPTIONS /triagem/1002436-58.2025.8.11.0000 HTTP/1.1" 200 -
-2025-06-25 16:05:53,253 - INFO -  1 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 16:05:53,253 - INFO -  1 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-25 16:05:53,253 - INFO - 127.0.0.1 - - [25/Jun/2025 16:05:53] "DELETE /triagem/1002436-58.2025.8.11.0000 HTTP/1.1" 200 -
-2025-06-25 16:05:53,514 - INFO -  0 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 16:05:53,514 - INFO -  0 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-25 16:05:53,515 - INFO - 127.0.0.1 - - [25/Jun/2025 16:05:53] "GET /triagem HTTP/1.1" 200 -
 2025-06-25 16:06:56,053 - INFO - 127.0.0.1 - - [25/Jun/2025 16:06:56] "OPTIONS /triagem/form HTTP/1.1" 200 -
 2025-06-25 16:06:56,717 - INFO - 127.0.0.1 - - [25/Jun/2025 16:06:56] "POST /triagem/form HTTP/1.1" 200 -
@@ -12870,7 +12870,7 @@ AssertionError: write() before start_response
 2025-06-25 16:06:57,219 - INFO - emitting event "progress_update" to D872gR6IvypUsU0PAAAH [/]
 2025-06-25 16:06:57,219 - INFO -  Progresso enviado para 70ec2748-d910-46eb-bccc-f27957850444: 10% - Validando dados do processo...
 2025-06-25 16:06:57,548 - INFO - emitting event "progress_update" to D872gR6IvypUsU0PAAAH [/]
-2025-06-25 16:06:57,548 - INFO -  Progresso enviado para 70ec2748-d910-46eb-bccc-f27957850444: 25% - Analisando suspeição e impedimento no documento...
+2025-06-25 16:06:57,548 - INFO -  Progresso enviado para 70ec2748-d910-46eb-bccc-f27957850444: 25% - Analisando suspeiï¿½ï¿½o e impedimento no documento...
 2025-06-25 16:06:58,093 - INFO -  Suspeitos encontrados: []
 2025-06-25 16:06:58,093 - INFO - emitting event "progress_update" to D872gR6IvypUsU0PAAAH [/]
 2025-06-25 16:06:58,093 - INFO -  Progresso enviado para 70ec2748-d910-46eb-bccc-f27957850444: 40% - Preparando estrutura de arquivos...
@@ -12883,16 +12883,16 @@ AssertionError: write() before start_response
 2025-06-25 16:07:07,063 - INFO -  Progresso enviado para 70ec2748-d910-46eb-bccc-f27957850444: 60% - Salvando arquivo original (DAT)...
 2025-06-25 16:07:07,470 - INFO - Arquivo DAT salvo: /Users/anacl/Documents/GMV/Triagem Inicial/dat\1002436-58.2025.8.11.0000.dat
 2025-06-25 16:07:07,470 - INFO - emitting event "progress_update" to D872gR6IvypUsU0PAAAH [/]
-2025-06-25 16:07:07,472 - INFO -  Progresso enviado para 70ec2748-d910-46eb-bccc-f27957850444: 75% - Executando anonimização automática...
+2025-06-25 16:07:07,472 - INFO -  Progresso enviado para 70ec2748-d910-46eb-bccc-f27957850444: 75% - Executando anonimizaï¿½ï¿½o automï¿½tica...
 2025-06-25 16:07:18,615 - INFO - emitting event "progress_update" to D872gR6IvypUsU0PAAAH [/]
-2025-06-25 16:07:18,615 - INFO -  Progresso enviado para 70ec2748-d910-46eb-bccc-f27957850444: 80% - Salvando versão anonimizada...
-2025-06-25 16:07:18,623 - INFO -  Anonimização concluída: 470 substituições em 10.75s
+2025-06-25 16:07:18,615 - INFO -  Progresso enviado para 70ec2748-d910-46eb-bccc-f27957850444: 80% - Salvando versï¿½o anonimizada...
+2025-06-25 16:07:18,623 - INFO -  Anonimizaï¿½ï¿½o concluï¿½da: 470 substituiï¿½ï¿½es em 10.75s
 2025-06-25 16:07:18,623 - INFO - emitting event "progress_update" to D872gR6IvypUsU0PAAAH [/]
 2025-06-25 16:07:18,623 - INFO -  Progresso enviado para 70ec2748-d910-46eb-bccc-f27957850444: 90% - Atualizando tabela de triagem...
 2025-06-25 16:07:18,927 - INFO - emitting event "progress_update" to D872gR6IvypUsU0PAAAH [/]
 2025-06-25 16:07:18,927 - INFO -  Progresso enviado para 70ec2748-d910-46eb-bccc-f27957850444: 100% - Processo adicionado com sucesso!
 2025-06-25 16:07:19,439 - INFO -  Processo 1002436-58.2025.8.11.0000 salvo com sucesso
-2025-06-25 16:07:20,953 - INFO -  1 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 16:07:20,953 - INFO -  1 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-25 16:07:20,959 - INFO - 127.0.0.1 - - [25/Jun/2025 16:07:20] "GET /triagem HTTP/1.1" 200 -
 2025-06-25 16:08:10,377 - INFO - 127.0.0.1 - - [25/Jun/2025 16:08:10] "OPTIONS /triagem/form HTTP/1.1" 200 -
 2025-06-25 16:08:11,075 - INFO - 127.0.0.1 - - [25/Jun/2025 16:08:11] "POST /triagem/form HTTP/1.1" 200 -
@@ -12903,7 +12903,7 @@ AssertionError: write() before start_response
 2025-06-25 16:08:11,580 - INFO - emitting event "progress_update" to D872gR6IvypUsU0PAAAH [/]
 2025-06-25 16:08:11,580 - INFO -  Progresso enviado para bb2d2351-bae0-4553-9439-d70cb5089fa3: 10% - Validando dados do processo...
 2025-06-25 16:08:11,883 - INFO - emitting event "progress_update" to D872gR6IvypUsU0PAAAH [/]
-2025-06-25 16:08:11,885 - INFO -  Progresso enviado para bb2d2351-bae0-4553-9439-d70cb5089fa3: 25% - Analisando suspeição e impedimento no documento...
+2025-06-25 16:08:11,885 - INFO -  Progresso enviado para bb2d2351-bae0-4553-9439-d70cb5089fa3: 25% - Analisando suspeiï¿½ï¿½o e impedimento no documento...
 2025-06-25 16:08:12,470 - INFO -  Suspeitos encontrados: []
 2025-06-25 16:08:12,470 - INFO - emitting event "progress_update" to D872gR6IvypUsU0PAAAH [/]
 2025-06-25 16:08:12,471 - INFO -  Progresso enviado para bb2d2351-bae0-4553-9439-d70cb5089fa3: 40% - Preparando estrutura de arquivos...
@@ -12916,16 +12916,16 @@ AssertionError: write() before start_response
 2025-06-25 16:08:15,302 - INFO -  Progresso enviado para bb2d2351-bae0-4553-9439-d70cb5089fa3: 60% - Salvando arquivo original (DAT)...
 2025-06-25 16:08:15,742 - INFO - Arquivo DAT salvo: /Users/anacl/Documents/GMV/Triagem Inicial/dat\1004080-49.2021.8.11.0041.dat
 2025-06-25 16:08:15,742 - INFO - emitting event "progress_update" to D872gR6IvypUsU0PAAAH [/]
-2025-06-25 16:08:15,742 - INFO -  Progresso enviado para bb2d2351-bae0-4553-9439-d70cb5089fa3: 75% - Executando anonimização automática...
+2025-06-25 16:08:15,742 - INFO -  Progresso enviado para bb2d2351-bae0-4553-9439-d70cb5089fa3: 75% - Executando anonimizaï¿½ï¿½o automï¿½tica...
 2025-06-25 16:11:31,992 - INFO - emitting event "progress_update" to D872gR6IvypUsU0PAAAH [/]
-2025-06-25 16:11:31,992 - INFO -  Progresso enviado para bb2d2351-bae0-4553-9439-d70cb5089fa3: 80% - Salvando versão anonimizada...
-2025-06-25 16:11:32,003 - INFO -  Anonimização concluída: 3289 substituições em 195.85s
+2025-06-25 16:11:31,992 - INFO -  Progresso enviado para bb2d2351-bae0-4553-9439-d70cb5089fa3: 80% - Salvando versï¿½o anonimizada...
+2025-06-25 16:11:32,003 - INFO -  Anonimizaï¿½ï¿½o concluï¿½da: 3289 substituiï¿½ï¿½es em 195.85s
 2025-06-25 16:11:32,003 - INFO - emitting event "progress_update" to D872gR6IvypUsU0PAAAH [/]
 2025-06-25 16:11:32,009 - INFO -  Progresso enviado para bb2d2351-bae0-4553-9439-d70cb5089fa3: 90% - Atualizando tabela de triagem...
 2025-06-25 16:11:32,311 - INFO - emitting event "progress_update" to D872gR6IvypUsU0PAAAH [/]
 2025-06-25 16:11:32,312 - INFO -  Progresso enviado para bb2d2351-bae0-4553-9439-d70cb5089fa3: 100% - Processo adicionado com sucesso!
 2025-06-25 16:11:32,816 - INFO -  Processo 1004080-49.2021.8.11.0041 salvo com sucesso
-2025-06-25 16:11:34,652 - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 16:11:34,652 - INFO -  2 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-25 16:11:34,652 - INFO - 127.0.0.1 - - [25/Jun/2025 16:11:34] "GET /triagem HTTP/1.1" 200 -
 2025-06-25 16:12:22,009 - INFO - 127.0.0.1 - - [25/Jun/2025 16:12:22] "OPTIONS /triagem/form HTTP/1.1" 200 -
 2025-06-25 16:12:22,402 - INFO - 127.0.0.1 - - [25/Jun/2025 16:12:22] "POST /triagem/form HTTP/1.1" 200 -
@@ -12936,7 +12936,7 @@ AssertionError: write() before start_response
 2025-06-25 16:12:22,904 - INFO - emitting event "progress_update" to D872gR6IvypUsU0PAAAH [/]
 2025-06-25 16:12:22,904 - INFO -  Progresso enviado para 66c1980d-473c-4f8e-a6ce-d373405d2628: 10% - Validando dados do processo...
 2025-06-25 16:12:23,206 - INFO - emitting event "progress_update" to D872gR6IvypUsU0PAAAH [/]
-2025-06-25 16:12:23,206 - INFO -  Progresso enviado para 66c1980d-473c-4f8e-a6ce-d373405d2628: 25% - Analisando suspeição e impedimento no documento...
+2025-06-25 16:12:23,206 - INFO -  Progresso enviado para 66c1980d-473c-4f8e-a6ce-d373405d2628: 25% - Analisando suspeiï¿½ï¿½o e impedimento no documento...
 2025-06-25 16:12:23,752 - INFO -  Suspeitos encontrados: []
 2025-06-25 16:12:23,752 - INFO - emitting event "progress_update" to D872gR6IvypUsU0PAAAH [/]
 2025-06-25 16:12:23,752 - INFO -  Progresso enviado para 66c1980d-473c-4f8e-a6ce-d373405d2628: 40% - Preparando estrutura de arquivos...
@@ -12949,19 +12949,19 @@ AssertionError: write() before start_response
 2025-06-25 16:12:26,632 - INFO -  Progresso enviado para 66c1980d-473c-4f8e-a6ce-d373405d2628: 60% - Salvando arquivo original (DAT)...
 2025-06-25 16:12:26,952 - INFO - Arquivo DAT salvo: /Users/anacl/Documents/GMV/Triagem Inicial/dat\1036792-16.2024.8.11.0000.dat
 2025-06-25 16:12:26,952 - INFO - emitting event "progress_update" to D872gR6IvypUsU0PAAAH [/]
-2025-06-25 16:12:26,952 - INFO -  Progresso enviado para 66c1980d-473c-4f8e-a6ce-d373405d2628: 75% - Executando anonimização automática...
+2025-06-25 16:12:26,952 - INFO -  Progresso enviado para 66c1980d-473c-4f8e-a6ce-d373405d2628: 75% - Executando anonimizaï¿½ï¿½o automï¿½tica...
 2025-06-25 16:13:03,362 - INFO - emitting event "progress_update" to D872gR6IvypUsU0PAAAH [/]
-2025-06-25 16:13:03,362 - INFO -  Progresso enviado para 66c1980d-473c-4f8e-a6ce-d373405d2628: 80% - Salvando versão anonimizada...
-2025-06-25 16:13:03,371 - INFO -  Anonimização concluída: 1245 substituições em 36.01s
+2025-06-25 16:13:03,362 - INFO -  Progresso enviado para 66c1980d-473c-4f8e-a6ce-d373405d2628: 80% - Salvando versï¿½o anonimizada...
+2025-06-25 16:13:03,371 - INFO -  Anonimizaï¿½ï¿½o concluï¿½da: 1245 substituiï¿½ï¿½es em 36.01s
 2025-06-25 16:13:03,371 - INFO - emitting event "progress_update" to D872gR6IvypUsU0PAAAH [/]
 2025-06-25 16:13:03,371 - INFO -  Progresso enviado para 66c1980d-473c-4f8e-a6ce-d373405d2628: 90% - Atualizando tabela de triagem...
 2025-06-25 16:13:03,681 - INFO - emitting event "progress_update" to D872gR6IvypUsU0PAAAH [/]
 2025-06-25 16:13:03,682 - INFO -  Progresso enviado para 66c1980d-473c-4f8e-a6ce-d373405d2628: 100% - Processo adicionado com sucesso!
 2025-06-25 16:13:04,187 - INFO -  Processo 1036792-16.2024.8.11.0000 salvo com sucesso
-2025-06-25 16:13:05,690 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 16:13:05,690 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-25 16:13:05,691 - INFO - 127.0.0.1 - - [25/Jun/2025 16:13:05] "GET /triagem HTTP/1.1" 200 -
-2025-06-25 16:13:07,590 - INFO -  Cliente desconectado: d51wUVSe4FJ5EfeWAAAF (removidas 0 operações)
-2025-06-25 16:13:07,591 - INFO -  Cliente desconectado: D872gR6IvypUsU0PAAAH (removidas 0 operações)
+2025-06-25 16:13:07,590 - INFO -  Cliente desconectado: d51wUVSe4FJ5EfeWAAAF (removidas 0 operaï¿½ï¿½es)
+2025-06-25 16:13:07,591 - INFO -  Cliente desconectado: D872gR6IvypUsU0PAAAH (removidas 0 operaï¿½ï¿½es)
 2025-06-25 16:13:07,608 - INFO - 127.0.0.1 - - [25/Jun/2025 16:13:07] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
 2025-06-25 16:13:07,608 - INFO - 127.0.0.1 - - [25/Jun/2025 16:13:07] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
 2025-06-25 16:13:07,611 - ERROR - Error on request:
@@ -12982,7 +12982,7 @@ Traceback (most recent call last):
   File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
     assert status_set is not None, "write() before start_response"
 AssertionError: write() before start_response
-2025-06-25 16:13:07,927 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 16:13:07,927 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-25 16:13:07,932 - INFO - 127.0.0.1 - - [25/Jun/2025 16:13:07] "GET /triagem HTTP/1.1" 200 -
 2025-06-25 16:13:09,581 - INFO - 127.0.0.1 - - [25/Jun/2025 16:13:09] "GET /api/rag/status HTTP/1.1" 200 -
 2025-06-25 16:13:09,893 - INFO - 127.0.0.1 - - [25/Jun/2025 16:13:09] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
@@ -12995,7 +12995,7 @@ AssertionError: write() before start_response
 2025-06-25 16:18:22,370 - INFO - 127.0.0.1 - - [25/Jun/2025 16:18:22] "POST /api/rag/query-with-context HTTP/1.1" 200 -
 2025-06-25 16:27:33,488 - INFO - 127.0.0.1 - - [25/Jun/2025 16:27:33] "GET /api/rag/status HTTP/1.1" 200 -
 2025-06-25 16:27:33,877 - INFO - 127.0.0.1 - - [25/Jun/2025 16:27:33] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
-2025-06-25 16:27:50,691 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 16:27:50,691 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-25 16:27:50,691 - INFO - 127.0.0.1 - - [25/Jun/2025 16:27:50] "GET /triagem HTTP/1.1" 200 -
 2025-06-25 16:27:52,199 - INFO - 127.0.0.1 - - [25/Jun/2025 16:27:52] "GET /api/rag/status HTTP/1.1" 200 -
 2025-06-25 16:27:52,528 - INFO - 127.0.0.1 - - [25/Jun/2025 16:27:52] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
@@ -13003,7 +13003,7 @@ AssertionError: write() before start_response
 2025-06-25 16:28:05,383 - INFO - 127.0.0.1 - - [25/Jun/2025 16:28:05] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
 2025-06-25 16:28:15,598 - INFO - 127.0.0.1 - - [25/Jun/2025 16:28:15] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
 2025-06-25 16:28:15,916 - INFO - 127.0.0.1 - - [25/Jun/2025 16:28:15] "POST /api/rag/query-with-context HTTP/1.1" 200 -
-2025-06-25 16:28:26,023 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 16:28:26,023 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-25 16:28:26,024 - INFO - 127.0.0.1 - - [25/Jun/2025 16:28:26] "GET /triagem HTTP/1.1" 200 -
 2025-06-25 16:28:26,864 - INFO - 127.0.0.1 - - [25/Jun/2025 16:28:26] "GET /api/rag/status HTTP/1.1" 200 -
 2025-06-25 16:28:27,126 - INFO - 127.0.0.1 - - [25/Jun/2025 16:28:27] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
@@ -13024,7 +13024,7 @@ AssertionError: write() before start_response
 2025-06-25 16:47:49,685 - INFO -  WebSocket: ws://0.0.0.0:5000/socket.io/
 2025-06-25 16:47:49,685 - INFO -  Health: http://0.0.0.0:5000/health
 2025-06-25 16:47:49,685 - INFO -  System Status: http://0.0.0.0:5000/api/system/status
-2025-06-25 16:47:49,685 - INFO -  Operações ativas: 0
+2025-06-25 16:47:49,685 - INFO -  Operaï¿½ï¿½es ativas: 0
 2025-06-25 16:47:49,710 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5000
@@ -13036,7 +13036,7 @@ AssertionError: write() before start_response
 2025-06-25 16:47:52,690 - INFO - emitting event "progress_update" to all [/]
 2025-06-25 16:47:52,690 - INFO -  Progresso rag_startup: Verificando sistema RAG...
 2025-06-25 16:47:52,690 - INFO - emitting event "progress_update" to all [/]
-2025-06-25 16:47:52,692 - INFO -  Progresso rag_startup:  Módulo RAG encontrado
+2025-06-25 16:47:52,692 - INFO -  Progresso rag_startup:  Mï¿½dulo RAG encontrado
 2025-06-25 16:47:52,692 - INFO - emitting event "progress_update" to all [/]
 2025-06-25 16:47:52,692 - INFO -  Progresso rag_startup: Conectando com Ollama...
 2025-06-25 16:48:02,359 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
@@ -13046,12 +13046,12 @@ AssertionError: write() before start_response
 2025-06-25 16:48:10,002 - INFO -  Progresso rag_startup:  RAG pronto! 2178 documentos carregados
 2025-06-25 16:48:10,002 - INFO -  RAG inicializado automaticamente: 2178 documentos
 2025-06-25 16:48:10,002 - INFO - emitting event "rag_ready" to all [/]
-2025-06-25 16:48:12,338 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 16:48:12,338 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-25 16:48:12,352 - INFO - 127.0.0.1 - - [25/Jun/2025 16:48:12] "GET /triagem HTTP/1.1" 200 -
-2025-06-25 16:48:12,580 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 16:48:12,580 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-25 16:48:12,580 - INFO - 127.0.0.1 - - [25/Jun/2025 16:48:12] "GET /triagem HTTP/1.1" 200 -
-2025-06-25 16:48:16,620 - INFO -  Cliente desconectado: Y2fS6d8JDOnkqlmFAAAD (removidas 0 operações)
-2025-06-25 16:48:16,621 - INFO -  Cliente desconectado: GbpyS1cURgcjFgB7AAAB (removidas 0 operações)
+2025-06-25 16:48:16,620 - INFO -  Cliente desconectado: Y2fS6d8JDOnkqlmFAAAD (removidas 0 operaï¿½ï¿½es)
+2025-06-25 16:48:16,621 - INFO -  Cliente desconectado: GbpyS1cURgcjFgB7AAAB (removidas 0 operaï¿½ï¿½es)
 2025-06-25 16:48:16,636 - INFO - 127.0.0.1 - - [25/Jun/2025 16:48:16] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
 2025-06-25 16:48:16,637 - INFO - 127.0.0.1 - - [25/Jun/2025 16:48:16] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
 2025-06-25 16:48:16,643 - ERROR - Error on request:
@@ -13072,7 +13072,7 @@ Traceback (most recent call last):
   File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
     assert status_set is not None, "write() before start_response"
 AssertionError: write() before start_response
-2025-06-25 16:48:16,972 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 16:48:16,972 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-25 16:48:16,973 - INFO - 127.0.0.1 - - [25/Jun/2025 16:48:16] "GET /triagem HTTP/1.1" 200 -
 2025-06-25 16:48:17,578 - INFO - 127.0.0.1 - - [25/Jun/2025 16:48:17] "GET /api/rag/status HTTP/1.1" 200 -
 2025-06-25 16:48:17,902 - INFO - 127.0.0.1 - - [25/Jun/2025 16:48:17] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
@@ -13103,13 +13103,13 @@ TypeError: query_with_specific_context() missing 3 required positional arguments
 2025-06-25 16:56:57,240 - INFO -  WebSocket: ws://0.0.0.0:5000/socket.io/
 2025-06-25 16:56:57,240 - INFO -  Health: http://0.0.0.0:5000/health
 2025-06-25 16:56:57,240 - INFO -  System Status: http://0.0.0.0:5000/api/system/status
-2025-06-25 16:56:57,240 - INFO -  Operações ativas: 0
+2025-06-25 16:56:57,240 - INFO -  Operaï¿½ï¿½es ativas: 0
 2025-06-25 16:56:57,253 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5000
  * Running on http://10.0.82.78:5000
 2025-06-25 16:56:57,254 - INFO - [33mPress CTRL+C to quit[0m
-2025-06-25 16:56:57,369 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 16:56:57,369 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-25 16:56:57,370 - INFO - 127.0.0.1 - - [25/Jun/2025 16:56:57] "GET /triagem HTTP/1.1" 200 -
 2025-06-25 16:56:57,607 - INFO -  Cliente WebSocket conectado: sxQ868BN8FEOH4R6AAAB
 2025-06-25 16:56:57,625 - INFO -  Cliente WebSocket conectado: LA0YrlYFm5G17dvcAAAD
@@ -13117,7 +13117,7 @@ TypeError: query_with_specific_context() missing 3 required positional arguments
 2025-06-25 16:57:00,242 - INFO - emitting event "progress_update" to all [/]
 2025-06-25 16:57:00,242 - INFO -  Progresso rag_startup: Verificando sistema RAG...
 2025-06-25 16:57:00,242 - INFO - emitting event "progress_update" to all [/]
-2025-06-25 16:57:00,242 - INFO -  Progresso rag_startup:  Módulo RAG encontrado
+2025-06-25 16:57:00,242 - INFO -  Progresso rag_startup:  Mï¿½dulo RAG encontrado
 2025-06-25 16:57:00,246 - INFO - emitting event "progress_update" to all [/]
 2025-06-25 16:57:00,246 - INFO -  Progresso rag_startup: Conectando com Ollama...
 2025-06-25 16:57:12,272 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
@@ -13127,12 +13127,12 @@ TypeError: query_with_specific_context() missing 3 required positional arguments
 2025-06-25 16:57:20,006 - INFO -  Progresso rag_startup:  RAG pronto! 2178 documentos carregados
 2025-06-25 16:57:20,006 - INFO -  RAG inicializado automaticamente: 2178 documentos
 2025-06-25 16:57:20,006 - INFO - emitting event "rag_ready" to all [/]
-2025-06-25 16:57:22,342 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 16:57:22,342 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-25 16:57:22,342 - INFO - 127.0.0.1 - - [25/Jun/2025 16:57:22] "GET /triagem HTTP/1.1" 200 -
-2025-06-25 16:57:22,611 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 16:57:22,611 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-25 16:57:22,611 - INFO - 127.0.0.1 - - [25/Jun/2025 16:57:22] "GET /triagem HTTP/1.1" 200 -
-2025-06-25 16:58:13,897 - INFO -  Cliente desconectado: sxQ868BN8FEOH4R6AAAB (removidas 0 operações)
-2025-06-25 16:58:13,899 - INFO -  Cliente desconectado: LA0YrlYFm5G17dvcAAAD (removidas 0 operações)
+2025-06-25 16:58:13,897 - INFO -  Cliente desconectado: sxQ868BN8FEOH4R6AAAB (removidas 0 operaï¿½ï¿½es)
+2025-06-25 16:58:13,899 - INFO -  Cliente desconectado: LA0YrlYFm5G17dvcAAAD (removidas 0 operaï¿½ï¿½es)
 2025-06-25 16:58:13,918 - INFO - 127.0.0.1 - - [25/Jun/2025 16:58:13] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
 2025-06-25 16:58:13,918 - INFO - 127.0.0.1 - - [25/Jun/2025 16:58:13] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
 2025-06-25 16:58:13,932 - ERROR - Error on request:
@@ -13162,7 +13162,7 @@ AssertionError: write() before start_response
 2025-06-25 17:01:06,517 - INFO - 127.0.0.1 - - [25/Jun/2025 17:01:06] "POST /api/rag/query-with-context HTTP/1.1" 200 -
 2025-06-25 17:02:18,105 - INFO - 127.0.0.1 - - [25/Jun/2025 17:02:18] "GET /api/rag/status HTTP/1.1" 200 -
 2025-06-25 17:02:18,435 - INFO - 127.0.0.1 - - [25/Jun/2025 17:02:18] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
-2025-06-25 17:02:21,325 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 17:02:21,325 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-25 17:02:21,326 - INFO - 127.0.0.1 - - [25/Jun/2025 17:02:21] "GET /triagem HTTP/1.1" 200 -
 2025-06-25 17:02:21,554 - INFO - 127.0.0.1 - - [25/Jun/2025 17:02:21] "GET /api/rag/status HTTP/1.1" 200 -
 2025-06-25 17:02:21,749 - INFO - 127.0.0.1 - - [25/Jun/2025 17:02:21] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
@@ -13175,13 +13175,13 @@ AssertionError: write() before start_response
 2025-06-25 17:05:25,354 - INFO -  WebSocket: ws://0.0.0.0:5000/socket.io/
 2025-06-25 17:05:25,355 - INFO -  Health: http://0.0.0.0:5000/health
 2025-06-25 17:05:25,355 - INFO -  System Status: http://0.0.0.0:5000/api/system/status
-2025-06-25 17:05:25,355 - INFO -  Operações ativas: 0
+2025-06-25 17:05:25,355 - INFO -  Operaï¿½ï¿½es ativas: 0
 2025-06-25 17:05:25,378 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5000
  * Running on http://10.0.82.78:5000
 2025-06-25 17:05:25,378 - INFO - [33mPress CTRL+C to quit[0m
-2025-06-25 17:05:26,489 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 17:05:26,489 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-25 17:05:26,491 - INFO -  Cliente WebSocket conectado: HclQeX845-yN8av2AAAB
 2025-06-25 17:05:26,492 - INFO - 127.0.0.1 - - [25/Jun/2025 17:05:26] "GET /triagem HTTP/1.1" 200 -
 2025-06-25 17:05:26,548 - INFO -  Cliente WebSocket conectado: -xTUrt290CXaEhjSAAAD
@@ -13189,7 +13189,7 @@ AssertionError: write() before start_response
 2025-06-25 17:05:28,357 - INFO - emitting event "progress_update" to all [/]
 2025-06-25 17:05:28,358 - INFO -  Progresso rag_startup: Verificando sistema RAG...
 2025-06-25 17:05:28,359 - INFO - emitting event "progress_update" to all [/]
-2025-06-25 17:05:28,359 - INFO -  Progresso rag_startup:  Módulo RAG encontrado
+2025-06-25 17:05:28,359 - INFO -  Progresso rag_startup:  Mï¿½dulo RAG encontrado
 2025-06-25 17:05:28,360 - INFO - emitting event "progress_update" to all [/]
 2025-06-25 17:05:28,360 - INFO -  Progresso rag_startup: Conectando com Ollama...
 2025-06-25 17:05:30,255 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
@@ -13199,10 +13199,10 @@ AssertionError: write() before start_response
 2025-06-25 17:05:38,600 - INFO -  Progresso rag_startup:  RAG pronto! 2178 documentos carregados
 2025-06-25 17:05:38,600 - INFO -  RAG inicializado automaticamente: 2178 documentos
 2025-06-25 17:05:38,600 - INFO - emitting event "rag_ready" to all [/]
-2025-06-25 17:05:40,924 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 17:05:40,924 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-25 17:05:40,924 - INFO - 127.0.0.1 - - [25/Jun/2025 17:05:40] "GET /triagem HTTP/1.1" 200 -
-2025-06-25 17:05:41,087 - INFO -  Cliente desconectado: HclQeX845-yN8av2AAAB (removidas 0 operações)
-2025-06-25 17:05:41,088 - INFO -  Cliente desconectado: -xTUrt290CXaEhjSAAAD (removidas 0 operações)
+2025-06-25 17:05:41,087 - INFO -  Cliente desconectado: HclQeX845-yN8av2AAAB (removidas 0 operaï¿½ï¿½es)
+2025-06-25 17:05:41,088 - INFO -  Cliente desconectado: -xTUrt290CXaEhjSAAAD (removidas 0 operaï¿½ï¿½es)
 2025-06-25 17:05:41,110 - INFO - 127.0.0.1 - - [25/Jun/2025 17:05:41] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
 2025-06-25 17:05:41,111 - INFO - 127.0.0.1 - - [25/Jun/2025 17:05:41] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
 2025-06-25 17:05:41,118 - ERROR - Error on request:
@@ -13223,7 +13223,7 @@ Traceback (most recent call last):
   File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
     assert status_set is not None, "write() before start_response"
 AssertionError: write() before start_response
-2025-06-25 17:05:41,207 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 17:05:41,207 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
 2025-06-25 17:05:41,208 - INFO - 127.0.0.1 - - [25/Jun/2025 17:05:41] "GET /triagem HTTP/1.1" 200 -
 2025-06-25 17:05:41,250 - INFO - 127.0.0.1 - - [25/Jun/2025 17:05:41] "GET /api/rag/status HTTP/1.1" 200 -
 2025-06-25 17:05:41,426 - INFO - 127.0.0.1 - - [25/Jun/2025 17:05:41] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
@@ -13246,3 +13246,1044 @@ AssertionError: write() before start_response
 2025-06-25 17:21:03,738 - INFO - 127.0.0.1 - - [25/Jun/2025 17:21:03] "POST /api/rag/query-with-context HTTP/1.1" 200 -
 2025-06-25 17:22:57,150 - INFO - Sinal 2 recebido. Finalizando graciosamente...
 2025-06-25 17:22:57,150 - INFO - Servidor com PID 55880 finalizado
+2025-06-25 17:25:24,212 - INFO -  Servidor iniciado com PID 25860
+2025-06-25 17:25:24,212 - INFO -  URL: http://0.0.0.0:5000
+2025-06-25 17:25:24,212 - INFO -  WebSocket: ws://0.0.0.0:5000/socket.io/
+2025-06-25 17:25:24,212 - INFO -  Health: http://0.0.0.0:5000/health
+2025-06-25 17:25:24,212 - INFO -  System Status: http://0.0.0.0:5000/api/system/status
+2025-06-25 17:25:24,212 - INFO -  Operaï¿½ï¿½es ativas: 0
+2025-06-25 17:25:24,257 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.78:5000
+2025-06-25 17:25:24,258 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-25 17:25:27,224 - INFO -  Iniciando RAG automaticamente...
+2025-06-25 17:25:27,224 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 17:25:27,225 - INFO -  Progresso rag_startup: Verificando sistema RAG...
+2025-06-25 17:25:27,226 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 17:25:27,226 - INFO -  Progresso rag_startup:  Mï¿½dulo RAG encontrado
+2025-06-25 17:25:27,226 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 17:25:27,226 - INFO -  Progresso rag_startup: Conectando com Ollama...
+2025-06-25 17:25:36,566 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-25 17:25:38,263 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 17:25:38,263 - INFO -  Progresso rag_startup:  RAG inicializado! Carregando documentos...
+2025-06-25 17:25:38,735 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 17:25:38,735 - INFO -  Progresso rag_startup:  RAG pronto! 2178 documentos carregados
+2025-06-25 17:25:38,735 - INFO -  RAG inicializado automaticamente: 2178 documentos
+2025-06-25 17:25:38,743 - INFO - emitting event "rag_ready" to all [/]
+2025-06-25 17:25:49,147 - INFO - 127.0.0.1 - - [25/Jun/2025 17:25:49] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-25 17:26:01,397 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-25 17:26:02,211 - INFO - 127.0.0.1 - - [25/Jun/2025 17:26:02] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-25 17:26:32,963 - INFO - Sinal 2 recebido. Finalizando graciosamente...
+2025-06-25 17:26:32,964 - INFO - Servidor com PID 25860 finalizado
+2025-06-25 17:27:03,450 - INFO -  Servidor iniciado com PID 9164
+2025-06-25 17:27:03,450 - INFO -  URL: http://0.0.0.0:5000
+2025-06-25 17:27:03,466 - INFO -  WebSocket: ws://0.0.0.0:5000/socket.io/
+2025-06-25 17:27:03,466 - INFO -  Health: http://0.0.0.0:5000/health
+2025-06-25 17:27:03,466 - INFO -  System Status: http://0.0.0.0:5000/api/system/status
+2025-06-25 17:27:03,466 - INFO -  Operaï¿½ï¿½es ativas: 0
+2025-06-25 17:27:03,467 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.78:5000
+2025-06-25 17:27:03,467 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-25 17:27:06,468 - INFO -  Iniciando RAG automaticamente...
+2025-06-25 17:27:06,468 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 17:27:06,468 - INFO -  Progresso rag_startup: Verificando sistema RAG...
+2025-06-25 17:27:06,468 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 17:27:06,468 - INFO -  Progresso rag_startup:  Mï¿½dulo RAG encontrado
+2025-06-25 17:27:06,468 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 17:27:06,468 - INFO -  Progresso rag_startup: Conectando com Ollama...
+2025-06-25 17:27:24,562 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-25 17:27:33,107 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 17:27:33,107 - INFO -  Progresso rag_startup:  RAG inicializado! Carregando documentos...
+2025-06-25 17:27:33,514 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 17:27:33,514 - INFO -  Progresso rag_startup:  RAG pronto! 2178 documentos carregados
+2025-06-25 17:27:33,514 - INFO -  RAG inicializado automaticamente: 2178 documentos
+2025-06-25 17:27:33,514 - INFO - emitting event "rag_ready" to all [/]
+2025-06-25 17:27:38,200 - INFO - 127.0.0.1 - - [25/Jun/2025 17:27:38] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-25 17:28:14,816 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-25 17:28:44,575 - INFO - 127.0.0.1 - - [25/Jun/2025 17:28:44] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-25 17:29:16,770 - INFO - Sinal 2 recebido. Finalizando graciosamente...
+2025-06-25 17:29:16,770 - INFO - Servidor com PID 9164 finalizado
+2025-06-25 17:29:56,904 - INFO -  Servidor iniciado com PID 34144
+2025-06-25 17:29:56,904 - INFO -  URL: http://0.0.0.0:5000
+2025-06-25 17:29:56,904 - INFO -  WebSocket: ws://0.0.0.0:5000/socket.io/
+2025-06-25 17:29:56,904 - INFO -  Health: http://0.0.0.0:5000/health
+2025-06-25 17:29:56,904 - INFO -  System Status: http://0.0.0.0:5000/api/system/status
+2025-06-25 17:29:56,904 - INFO -  Operaï¿½ï¿½es ativas: 0
+2025-06-25 17:29:56,919 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.78:5000
+2025-06-25 17:29:56,919 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-25 17:29:59,914 - INFO -  Iniciando RAG automaticamente...
+2025-06-25 17:29:59,914 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 17:29:59,914 - INFO -  Progresso rag_startup: Verificando sistema RAG...
+2025-06-25 17:29:59,914 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 17:29:59,914 - INFO -  Progresso rag_startup:  Mï¿½dulo RAG encontrado
+2025-06-25 17:29:59,917 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 17:29:59,917 - INFO -  Progresso rag_startup: Conectando com Ollama...
+2025-06-25 17:30:15,359 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-25 17:30:37,175 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 17:30:37,175 - INFO -  Progresso rag_startup:  RAG inicializado! Carregando documentos...
+2025-06-25 17:30:37,680 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 17:30:37,681 - INFO -  Progresso rag_startup:  RAG pronto! 2178 documentos carregados
+2025-06-25 17:30:37,681 - INFO -  RAG inicializado automaticamente: 2178 documentos
+2025-06-25 17:30:37,681 - INFO - emitting event "rag_ready" to all [/]
+2025-06-25 17:30:46,236 - INFO - 127.0.0.1 - - [25/Jun/2025 17:30:46] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-25 17:31:39,542 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-25 17:31:59,777 - INFO - 127.0.0.1 - - [25/Jun/2025 17:31:59] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-25 17:34:02,704 - INFO - Sinal 2 recebido. Finalizando graciosamente...
+2025-06-25 17:34:02,705 - INFO - Servidor com PID 34144 finalizado
+2025-06-25 17:45:16,262 - INFO -  Servidor iniciado com PID 16184
+2025-06-25 17:45:16,262 - INFO -  URL: http://0.0.0.0:5000
+2025-06-25 17:45:16,262 - INFO -  WebSocket: ws://0.0.0.0:5000/socket.io/
+2025-06-25 17:45:16,262 - INFO -  Health: http://0.0.0.0:5000/health
+2025-06-25 17:45:16,262 - INFO -  System Status: http://0.0.0.0:5000/api/system/status
+2025-06-25 17:45:16,262 - INFO -  Operaï¿½ï¿½es ativas: 0
+2025-06-25 17:45:16,289 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.78:5000
+2025-06-25 17:45:16,290 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-25 17:45:19,267 - INFO -  Iniciando RAG automaticamente...
+2025-06-25 17:45:19,267 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 17:45:19,270 - INFO -  Progresso rag_startup: Verificando sistema RAG...
+2025-06-25 17:45:19,271 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 17:45:19,271 - INFO -  Progresso rag_startup:  Mï¿½dulo RAG encontrado
+2025-06-25 17:45:19,271 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 17:45:19,271 - INFO -  Progresso rag_startup: Conectando com Ollama...
+2025-06-25 17:45:28,942 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-25 17:45:53,647 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 17:45:53,647 - INFO -  Progresso rag_startup:  RAG inicializado! Carregando documentos...
+2025-06-25 17:45:54,245 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 17:45:54,246 - INFO -  Progresso rag_startup:  RAG pronto! 2178 documentos carregados
+2025-06-25 17:45:54,246 - INFO -  RAG inicializado automaticamente: 2178 documentos
+2025-06-25 17:45:54,246 - INFO - emitting event "rag_ready" to all [/]
+2025-06-25 17:46:11,035 - INFO - Sinal 2 recebido. Finalizando graciosamente...
+2025-06-25 17:46:11,035 - INFO - Servidor com PID 16184 finalizado
+2025-06-25 17:46:58,819 - INFO -  Servidor iniciado com PID 56872
+2025-06-25 17:46:58,819 - INFO -  URL: http://0.0.0.0:5000
+2025-06-25 17:46:58,819 - INFO -  WebSocket: ws://0.0.0.0:5000/socket.io/
+2025-06-25 17:46:58,819 - INFO -  Health: http://0.0.0.0:5000/health
+2025-06-25 17:46:58,819 - INFO -  System Status: http://0.0.0.0:5000/api/system/status
+2025-06-25 17:46:58,819 - INFO -  Operaï¿½ï¿½es ativas: 0
+2025-06-25 17:46:58,836 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.78:5000
+2025-06-25 17:46:58,836 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-25 17:47:00,596 - INFO -  Cliente WebSocket conectado: 8kvdL2QBMqOXSU37AAAB
+2025-06-25 17:47:01,823 - INFO -  Iniciando RAG automaticamente...
+2025-06-25 17:47:01,823 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 17:47:01,824 - INFO -  Progresso rag_startup: Verificando sistema RAG...
+2025-06-25 17:47:01,824 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 17:47:01,824 - INFO -  Progresso rag_startup:  Mï¿½dulo RAG encontrado
+2025-06-25 17:47:01,825 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 17:47:01,825 - INFO -  Progresso rag_startup: Conectando com Ollama...
+2025-06-25 17:47:01,868 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 404 Not Found"
+2025-06-25 17:47:01,868 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 17:47:01,868 - INFO -  Progresso rag_startup:  Falha ao inicializar RAG - Verifique se Ollama estï¿½ rodando
+2025-06-25 17:47:01,870 - WARNING -  RAG nï¿½o inicializou - Ollama pode estar offline
+2025-06-25 17:47:01,870 - WARNING -  Execute: ollama serve
+2025-06-25 17:47:01,870 - INFO - emitting event "rag_error" to all [/]
+2025-06-25 17:47:02,623 - INFO -  Cliente desconectado: 8kvdL2QBMqOXSU37AAAB (removidas 0 operaï¿½ï¿½es)
+2025-06-25 17:47:03,857 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 17:47:03,857 - INFO - 127.0.0.1 - - [25/Jun/2025 17:47:03] "GET /triagem HTTP/1.1" 200 -
+2025-06-25 17:47:04,469 - INFO -  Cliente WebSocket conectado: 8p8CObENst4Q9stFAAAE
+2025-06-25 17:47:04,469 - INFO -  Cliente WebSocket conectado: Of7Gi4ps5zOspPqAAAAF
+2025-06-25 17:47:19,770 - INFO - Sinal 2 recebido. Finalizando graciosamente...
+2025-06-25 17:47:19,770 - INFO - Servidor com PID 56872 finalizado
+2025-06-25 17:48:16,247 - INFO -  Servidor iniciado com PID 62656
+2025-06-25 17:48:16,247 - INFO -  URL: http://0.0.0.0:5000
+2025-06-25 17:48:16,247 - INFO -  WebSocket: ws://0.0.0.0:5000/socket.io/
+2025-06-25 17:48:16,248 - INFO -  Health: http://0.0.0.0:5000/health
+2025-06-25 17:48:16,248 - INFO -  System Status: http://0.0.0.0:5000/api/system/status
+2025-06-25 17:48:16,248 - INFO -  Operaï¿½ï¿½es ativas: 0
+2025-06-25 17:48:16,265 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.78:5000
+2025-06-25 17:48:16,265 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-25 17:48:18,654 - INFO -  Cliente WebSocket conectado: DelBm6W6NseWniAfAAAB
+2025-06-25 17:48:19,251 - INFO -  Iniciando RAG automaticamente...
+2025-06-25 17:48:19,251 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 17:48:19,251 - INFO -  Progresso rag_startup: Verificando sistema RAG...
+2025-06-25 17:48:19,251 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 17:48:19,251 - INFO -  Progresso rag_startup:  Mï¿½dulo RAG encontrado
+2025-06-25 17:48:19,251 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 17:48:19,254 - INFO -  Progresso rag_startup: Conectando com Ollama...
+2025-06-25 17:48:21,623 - INFO -  Cliente WebSocket conectado: FIXvv3bCKs4XIFMAAAAD
+2025-06-25 17:48:46,245 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-25 17:49:49,177 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 17:49:49,474 - INFO -  Progresso rag_startup:  RAG inicializado! Carregando documentos...
+2025-06-25 17:49:50,094 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 17:49:50,094 - INFO -  Progresso rag_startup:  RAG pronto! 2178 documentos carregados
+2025-06-25 17:49:50,094 - INFO -  RAG inicializado automaticamente: 2178 documentos
+2025-06-25 17:49:50,098 - INFO - emitting event "rag_ready" to all [/]
+2025-06-25 17:49:52,568 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 17:49:52,568 - INFO - 127.0.0.1 - - [25/Jun/2025 17:49:52] "GET /triagem HTTP/1.1" 200 -
+2025-06-25 17:49:52,731 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-25 17:49:52,732 - INFO - 127.0.0.1 - - [25/Jun/2025 17:49:52] "GET /triagem HTTP/1.1" 200 -
+2025-06-25 17:50:02,896 - INFO -  Cliente desconectado: DelBm6W6NseWniAfAAAB (removidas 0 operaï¿½ï¿½es)
+2025-06-25 17:50:02,898 - INFO -  Cliente desconectado: FIXvv3bCKs4XIFMAAAAD (removidas 0 operaï¿½ï¿½es)
+2025-06-25 17:50:02,930 - INFO - 127.0.0.1 - - [25/Jun/2025 17:50:02] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-25 17:50:02,931 - INFO - 127.0.0.1 - - [25/Jun/2025 17:50:02] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-25 17:50:02,996 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-25 17:50:03,002 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-25 17:50:04,377 - INFO - 127.0.0.1 - - [25/Jun/2025 17:50:04] "GET /api/rag/status HTTP/1.1" 200 -
+2025-06-25 17:50:05,057 - INFO - 127.0.0.1 - - [25/Jun/2025 17:50:05] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-06-25 17:50:20,059 - INFO - 127.0.0.1 - - [25/Jun/2025 17:50:20] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-25 17:50:26,680 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 17:51:40,342 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-25 17:59:47,964 - INFO - 127.0.0.1 - - [25/Jun/2025 17:59:47] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-25 18:05:29,668 - INFO - Sinal 2 recebido. Finalizando graciosamente...
+2025-06-25 18:05:29,668 - INFO - Servidor com PID 62656 finalizado
+2025-06-25 18:11:29,696 - INFO -  Servidor iniciado com PID 15540
+2025-06-25 18:11:29,696 - INFO -  URL: http://0.0.0.0:5000
+2025-06-25 18:11:29,696 - INFO -  WebSocket: ws://0.0.0.0:5000/socket.io/
+2025-06-25 18:11:29,696 - INFO -  Health: http://0.0.0.0:5000/health
+2025-06-25 18:11:29,696 - INFO -  System Status: http://0.0.0.0:5000/api/system/status
+2025-06-25 18:11:29,696 - INFO -  Operaï¿½ï¿½es ativas: 0
+2025-06-25 18:11:29,712 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.78:5000
+2025-06-25 18:11:29,712 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-25 18:11:32,703 - INFO -  Iniciando RAG automaticamente...
+2025-06-25 18:11:32,703 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 18:11:32,703 - INFO -  Progresso rag_startup: Verificando sistema RAG...
+2025-06-25 18:11:32,703 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 18:11:32,705 - INFO -  Progresso rag_startup:  Mï¿½dulo RAG encontrado
+2025-06-25 18:11:32,705 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 18:11:32,705 - INFO -  Progresso rag_startup: Conectando com Ollama...
+2025-06-25 18:11:36,634 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-25 18:11:44,221 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 18:11:44,221 - INFO -  Progresso rag_startup:  RAG inicializado! Carregando documentos...
+2025-06-25 18:11:44,681 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 18:11:44,681 - INFO -  Progresso rag_startup:  RAG pronto! 2178 documentos carregados
+2025-06-25 18:11:44,681 - INFO -  RAG inicializado automaticamente: 2178 documentos
+2025-06-25 18:11:44,681 - INFO - emitting event "rag_ready" to all [/]
+2025-06-25 18:11:49,696 - INFO - 127.0.0.1 - - [25/Jun/2025 18:11:49] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-25 18:11:51,959 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 18:14:03,103 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-25 18:16:02,316 - INFO - 127.0.0.1 - - [25/Jun/2025 18:16:02] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-25 18:17:58,084 - INFO - Sinal 2 recebido. Finalizando graciosamente...
+2025-06-25 18:17:58,084 - INFO - Servidor com PID 15540 finalizado
+2025-06-25 18:27:24,462 - INFO -  Servidor iniciado com PID 45652
+2025-06-25 18:27:24,463 - INFO -  URL: http://0.0.0.0:5000
+2025-06-25 18:27:24,463 - INFO -  WebSocket: ws://0.0.0.0:5000/socket.io/
+2025-06-25 18:27:24,463 - INFO -  Health: http://0.0.0.0:5000/health
+2025-06-25 18:27:24,464 - INFO -  System Status: http://0.0.0.0:5000/api/system/status
+2025-06-25 18:27:24,464 - INFO -  Operaï¿½ï¿½es ativas: 0
+2025-06-25 18:27:24,490 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.78:5000
+2025-06-25 18:27:24,490 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-25 18:27:27,466 - INFO -  Iniciando RAG automaticamente...
+2025-06-25 18:27:27,466 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 18:27:27,466 - INFO -  Progresso rag_startup: Verificando sistema RAG...
+2025-06-25 18:27:27,466 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 18:27:27,466 - INFO -  Progresso rag_startup:  Mï¿½dulo RAG encontrado
+2025-06-25 18:27:27,466 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 18:27:27,466 - INFO -  Progresso rag_startup: Conectando com Ollama...
+2025-06-25 18:27:42,254 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-25 18:28:06,830 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 18:28:06,830 - INFO -  Progresso rag_startup:  RAG inicializado! Carregando documentos...
+2025-06-25 18:28:07,413 - INFO - emitting event "progress_update" to all [/]
+2025-06-25 18:28:07,413 - INFO -  Progresso rag_startup:  RAG pronto! 2178 documentos carregados
+2025-06-25 18:28:07,413 - INFO -  RAG inicializado automaticamente: 2178 documentos
+2025-06-25 18:28:07,413 - INFO - emitting event "rag_ready" to all [/]
+2025-06-25 18:28:22,644 - INFO - 127.0.0.1 - - [25/Jun/2025 18:28:22] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-25 18:28:29,913 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-25 18:29:40,353 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-25 18:37:21,259 - INFO - 127.0.0.1 - - [25/Jun/2025 18:37:21] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-25 18:57:41,832 - INFO - 127.0.0.1 - - [25/Jun/2025 18:57:41] "GET /api/rag/status HTTP/1.1" 200 -
+2025-06-25 22:39:27,916 - INFO - 127.0.0.1 - - [25/Jun/2025 22:39:27] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-06-25 22:39:29,350 - INFO - 127.0.0.1 - - [25/Jun/2025 22:39:29] "GET /api/rag/status HTTP/1.1" 200 -
+2025-06-25 22:39:29,870 - INFO - 127.0.0.1 - - [25/Jun/2025 22:39:29] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-06-25 23:31:21,407 - INFO - Sinal 2 recebido. Finalizando graciosamente...
+2025-06-25 23:31:21,407 - INFO - Servidor com PID 45652 finalizado
+2025-06-26 09:07:43,482 - INFO -  Servidor iniciado com PID 48240
+2025-06-26 09:07:43,482 - INFO -  URL: http://0.0.0.0:5000
+2025-06-26 09:07:43,482 - INFO -  WebSocket: ws://0.0.0.0:5000/socket.io/
+2025-06-26 09:07:43,484 - INFO -  Health: http://0.0.0.0:5000/health
+2025-06-26 09:07:43,484 - INFO -  System Status: http://0.0.0.0:5000/api/system/status
+2025-06-26 09:07:43,484 - INFO -  Operaï¿½ï¿½es ativas: 0
+2025-06-26 09:07:43,513 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.85:5000
+2025-06-26 09:07:43,514 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-26 09:07:43,937 - INFO - 127.0.0.1 - - [26/Jun/2025 09:07:43] "GET /api/rag/status HTTP/1.1" 200 -
+2025-06-26 09:07:44,454 - INFO - 127.0.0.1 - - [26/Jun/2025 09:07:44] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-06-26 09:07:46,485 - INFO -  Iniciando RAG automaticamente...
+2025-06-26 09:07:46,485 - INFO - emitting event "progress_update" to all [/]
+2025-06-26 09:07:46,485 - INFO -  Progresso rag_startup: Verificando sistema RAG...
+2025-06-26 09:07:46,485 - INFO - emitting event "progress_update" to all [/]
+2025-06-26 09:07:46,485 - INFO -  Progresso rag_startup:  Mï¿½dulo RAG encontrado
+2025-06-26 09:07:46,486 - INFO - emitting event "progress_update" to all [/]
+2025-06-26 09:07:46,486 - INFO -  Progresso rag_startup: Conectando com Ollama...
+2025-06-26 09:07:46,840 - INFO -  Cliente WebSocket conectado: kz2M3UoBFz-k47y2AAAB
+2025-06-26 09:07:46,850 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-26 09:07:46,853 - INFO - 127.0.0.1 - - [26/Jun/2025 09:07:46] "GET /triagem HTTP/1.1" 200 -
+2025-06-26 09:07:46,858 - INFO -  Cliente WebSocket conectado: p4ssBiWmz0GRQLpfAAAD
+2025-06-26 09:07:56,465 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-26 09:08:04,118 - INFO - emitting event "progress_update" to all [/]
+2025-06-26 09:08:04,118 - INFO -  Progresso rag_startup:  RAG inicializado! Carregando documentos...
+2025-06-26 09:08:04,957 - INFO - emitting event "progress_update" to all [/]
+2025-06-26 09:08:04,957 - INFO -  Progresso rag_startup:  RAG pronto! 2178 documentos carregados
+2025-06-26 09:08:04,957 - INFO -  RAG inicializado automaticamente: 2178 documentos
+2025-06-26 09:08:04,957 - INFO - emitting event "rag_ready" to all [/]
+2025-06-26 09:08:07,292 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-26 09:08:07,297 - INFO - 127.0.0.1 - - [26/Jun/2025 09:08:07] "GET /triagem HTTP/1.1" 200 -
+2025-06-26 09:08:07,542 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-26 09:08:07,542 - INFO - 127.0.0.1 - - [26/Jun/2025 09:08:07] "GET /triagem HTTP/1.1" 200 -
+2025-06-26 09:08:25,943 - INFO -  Cliente desconectado: kz2M3UoBFz-k47y2AAAB (removidas 0 operaï¿½ï¿½es)
+2025-06-26 09:08:25,944 - INFO -  Cliente desconectado: p4ssBiWmz0GRQLpfAAAD (removidas 0 operaï¿½ï¿½es)
+2025-06-26 09:08:25,956 - INFO - 127.0.0.1 - - [26/Jun/2025 09:08:25] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-26 09:08:25,962 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-26 09:08:25,973 - INFO - 127.0.0.1 - - [26/Jun/2025 09:08:25] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-26 09:08:25,978 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-26 09:08:26,265 - INFO - 127.0.0.1 - - [26/Jun/2025 09:08:26] "GET /api/rag/status HTTP/1.1" 200 -
+2025-06-26 09:08:26,526 - INFO - 127.0.0.1 - - [26/Jun/2025 09:08:26] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-06-26 09:08:34,642 - INFO - 127.0.0.1 - - [26/Jun/2025 09:08:34] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 09:08:41,674 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-26 09:09:28,567 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-26 09:16:26,689 - INFO - 127.0.0.1 - - [26/Jun/2025 09:16:26] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 09:17:36,608 - INFO - 127.0.0.1 - - [26/Jun/2025 09:17:36] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 09:18:13,685 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-26 09:18:22,410 - INFO - 127.0.0.1 - - [26/Jun/2025 09:18:22] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 09:21:23,317 - INFO - 127.0.0.1 - - [26/Jun/2025 09:21:23] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 09:22:00,329 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-26 09:22:24,572 - INFO - 127.0.0.1 - - [26/Jun/2025 09:22:24] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 09:24:37,543 - INFO - Sinal 2 recebido. Finalizando graciosamente...
+2025-06-26 09:24:37,543 - INFO - Servidor com PID 48240 finalizado
+2025-06-26 09:25:26,968 - INFO -  Servidor iniciado com PID 68952
+2025-06-26 09:25:26,968 - INFO -  URL: http://0.0.0.0:5000
+2025-06-26 09:25:26,968 - INFO -  WebSocket: ws://0.0.0.0:5000/socket.io/
+2025-06-26 09:25:26,968 - INFO -  Health: http://0.0.0.0:5000/health
+2025-06-26 09:25:26,968 - INFO -  System Status: http://0.0.0.0:5000/api/system/status
+2025-06-26 09:25:26,968 - INFO -  Operaï¿½ï¿½es ativas: 0
+2025-06-26 09:25:26,984 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.85:5000
+2025-06-26 09:25:26,984 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-26 09:25:29,983 - INFO -  Iniciando RAG automaticamente...
+2025-06-26 09:25:29,983 - INFO - emitting event "progress_update" to all [/]
+2025-06-26 09:25:29,983 - INFO -  Progresso rag_startup: Verificando sistema RAG...
+2025-06-26 09:25:29,983 - INFO - emitting event "progress_update" to all [/]
+2025-06-26 09:25:29,983 - INFO -  Progresso rag_startup:  Mï¿½dulo RAG encontrado
+2025-06-26 09:25:29,983 - INFO - emitting event "progress_update" to all [/]
+2025-06-26 09:25:29,983 - INFO -  Progresso rag_startup: Conectando com Ollama...
+2025-06-26 09:25:44,774 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-26 09:25:54,012 - INFO - emitting event "progress_update" to all [/]
+2025-06-26 09:25:54,012 - INFO -  Progresso rag_startup:  RAG inicializado! Carregando documentos...
+2025-06-26 09:25:54,652 - INFO - emitting event "progress_update" to all [/]
+2025-06-26 09:25:54,652 - INFO -  Progresso rag_startup:  RAG pronto! 2178 documentos carregados
+2025-06-26 09:25:54,653 - INFO -  RAG inicializado automaticamente: 2178 documentos
+2025-06-26 09:25:54,653 - INFO - emitting event "rag_ready" to all [/]
+2025-06-26 09:26:14,159 - INFO - 127.0.0.1 - - [26/Jun/2025 09:26:14] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 09:27:11,347 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-26 09:27:21,498 - INFO - 127.0.0.1 - - [26/Jun/2025 09:27:21] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 09:27:32,506 - INFO - 127.0.0.1 - - [26/Jun/2025 09:27:32] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 09:28:32,377 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-26 09:28:42,689 - INFO - 127.0.0.1 - - [26/Jun/2025 09:28:42] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 09:29:01,884 - INFO - 127.0.0.1 - - [26/Jun/2025 09:29:01] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 09:30:03,274 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-26 09:30:19,531 - INFO - 127.0.0.1 - - [26/Jun/2025 09:30:19] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 09:31:11,853 - INFO - 127.0.0.1 - - [26/Jun/2025 09:31:11] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 09:32:10,534 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-26 09:32:18,356 - INFO - 127.0.0.1 - - [26/Jun/2025 09:32:18] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 09:55:29,542 - INFO - 127.0.0.1 - - [26/Jun/2025 09:55:29] "GET /api/rag/status HTTP/1.1" 200 -
+2025-06-26 09:55:30,026 - INFO - 127.0.0.1 - - [26/Jun/2025 09:55:30] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-06-26 09:57:42,410 - INFO -  Cliente WebSocket conectado: UqSAPw0nnuylk5w0AAAC
+2025-06-26 09:57:42,523 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-26 09:57:42,524 - INFO -  Cliente WebSocket conectado: qSsP6CQ8T_foS2dFAAAD
+2025-06-26 09:57:42,525 - INFO - 127.0.0.1 - - [26/Jun/2025 09:57:42] "GET /triagem HTTP/1.1" 200 -
+2025-06-26 09:57:51,963 - INFO - 127.0.0.1 - - [26/Jun/2025 09:57:51] "OPTIONS /triagem/1004080-49.2021.8.11.0041 HTTP/1.1" 200 -
+2025-06-26 09:57:52,279 - INFO -  3 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-26 09:57:52,279 - INFO - 127.0.0.1 - - [26/Jun/2025 09:57:52] "DELETE /triagem/1004080-49.2021.8.11.0041 HTTP/1.1" 200 -
+2025-06-26 09:57:52,531 - INFO -  2 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-26 09:57:52,531 - INFO - 127.0.0.1 - - [26/Jun/2025 09:57:52] "GET /triagem HTTP/1.1" 200 -
+2025-06-26 10:22:22,785 - INFO -  Cliente desconectado: UqSAPw0nnuylk5w0AAAC (removidas 0 operaï¿½ï¿½es)
+2025-06-26 10:22:22,787 - INFO -  Cliente desconectado: qSsP6CQ8T_foS2dFAAAD (removidas 0 operaï¿½ï¿½es)
+2025-06-26 10:22:22,805 - INFO - 127.0.0.1 - - [26/Jun/2025 10:22:22] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-26 10:22:22,819 - INFO - 127.0.0.1 - - [26/Jun/2025 10:22:22] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-26 10:22:22,832 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-26 10:22:22,835 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-26 10:22:23,115 - INFO -  2 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-26 10:22:23,118 - INFO - 127.0.0.1 - - [26/Jun/2025 10:22:23] "GET /triagem HTTP/1.1" 200 -
+2025-06-26 10:22:26,941 - INFO - 127.0.0.1 - - [26/Jun/2025 10:22:26] "GET /api/rag/status HTTP/1.1" 200 -
+2025-06-26 10:22:27,259 - INFO - 127.0.0.1 - - [26/Jun/2025 10:22:27] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-06-26 10:22:29,094 - INFO -  2 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-26 10:22:29,095 - INFO - 127.0.0.1 - - [26/Jun/2025 10:22:29] "GET /triagem HTTP/1.1" 200 -
+2025-06-26 10:22:29,390 - INFO -  Cliente WebSocket conectado: rNHE7r5IYmr_TzdnAAAF
+2025-06-26 10:22:29,403 - INFO -  Cliente WebSocket conectado: zdVkLpROlkeTQ54mAAAH
+2025-06-26 10:22:34,982 - INFO -  Cliente desconectado: rNHE7r5IYmr_TzdnAAAF (removidas 0 operaï¿½ï¿½es)
+2025-06-26 10:22:34,982 - INFO -  Cliente desconectado: zdVkLpROlkeTQ54mAAAH (removidas 0 operaï¿½ï¿½es)
+2025-06-26 10:22:34,996 - INFO - 127.0.0.1 - - [26/Jun/2025 10:22:34] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-26 10:22:34,997 - INFO - 127.0.0.1 - - [26/Jun/2025 10:22:34] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-26 10:22:34,999 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-26 10:22:35,000 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-26 10:22:35,306 - INFO -  2 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-26 10:22:35,306 - INFO - 127.0.0.1 - - [26/Jun/2025 10:22:35] "GET /triagem HTTP/1.1" 200 -
+2025-06-26 10:22:42,547 - INFO -  2 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-26 10:22:42,549 - INFO - 127.0.0.1 - - [26/Jun/2025 10:22:42] "GET /triagem HTTP/1.1" 200 -
+2025-06-26 10:22:42,848 - INFO -  Cliente WebSocket conectado: push44fM6OGBKAYwAAAJ
+2025-06-26 10:22:42,857 - INFO -  Cliente WebSocket conectado: fAEIlbBjF377eSQ9AAAL
+2025-06-26 10:22:49,963 - INFO - 127.0.0.1 - - [26/Jun/2025 10:22:49] "OPTIONS /triagem/1002436-58.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-26 10:22:50,214 - INFO -  2 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-26 10:22:50,214 - INFO - 127.0.0.1 - - [26/Jun/2025 10:22:50] "PUT /triagem/1002436-58.2025.8.11.0000 HTTP/1.1" 200 -
+2025-06-26 10:22:50,285 - INFO -  2 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-26 10:22:50,285 - INFO - 127.0.0.1 - - [26/Jun/2025 10:22:50] "GET /triagem HTTP/1.1" 200 -
+2025-06-26 10:22:53,019 - INFO -  Cliente desconectado: push44fM6OGBKAYwAAAJ (removidas 0 operaï¿½ï¿½es)
+2025-06-26 10:22:53,020 - INFO -  Cliente desconectado: fAEIlbBjF377eSQ9AAAL (removidas 0 operaï¿½ï¿½es)
+2025-06-26 10:22:53,040 - INFO -  2 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-26 10:22:53,041 - INFO - 127.0.0.1 - - [26/Jun/2025 10:22:53] "GET /triagem HTTP/1.1" 200 -
+2025-06-26 10:22:53,043 - INFO - 127.0.0.1 - - [26/Jun/2025 10:22:53] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-26 10:22:53,043 - INFO - 127.0.0.1 - - [26/Jun/2025 10:22:53] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-26 10:22:53,046 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-26 10:22:53,047 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-26 10:23:04,028 - INFO -  2 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-26 10:23:04,029 - INFO -  Cliente WebSocket conectado: 45BA43FxrZmzSCJvAAAO
+2025-06-26 10:23:04,030 - INFO - 127.0.0.1 - - [26/Jun/2025 10:23:04] "GET /triagem HTTP/1.1" 200 -
+2025-06-26 10:23:04,033 - INFO -  Cliente WebSocket conectado: CeWJuPlJ4TBqfUaTAAAP
+2025-06-26 10:23:18,620 - INFO -  Cliente desconectado: CeWJuPlJ4TBqfUaTAAAP (removidas 0 operaï¿½ï¿½es)
+2025-06-26 10:23:18,622 - INFO -  Cliente desconectado: 45BA43FxrZmzSCJvAAAO (removidas 0 operaï¿½ï¿½es)
+2025-06-26 10:23:18,647 - INFO -  2 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-26 10:23:18,647 - INFO - 127.0.0.1 - - [26/Jun/2025 10:23:18] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-26 10:23:18,647 - INFO - 127.0.0.1 - - [26/Jun/2025 10:23:18] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-26 10:23:18,648 - INFO - 127.0.0.1 - - [26/Jun/2025 10:23:18] "GET /triagem HTTP/1.1" 200 -
+2025-06-26 10:23:18,651 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-26 10:23:18,653 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-26 10:23:21,182 - INFO -  2 processos extraï¿½dos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-26 10:23:21,182 - INFO - 127.0.0.1 - - [26/Jun/2025 10:23:21] "GET /triagem HTTP/1.1" 200 -
+2025-06-26 10:23:21,182 - INFO -  Cliente WebSocket conectado: nn8n-uKLWk7F396TAAAR
+2025-06-26 10:23:21,201 - INFO -  Cliente WebSocket conectado: QcLiycG6LI79pkOAAAAT
+2025-06-26 10:23:22,193 - INFO -  Cliente desconectado: nn8n-uKLWk7F396TAAAR (removidas 0 operaï¿½ï¿½es)
+2025-06-26 10:23:22,193 - INFO -  Cliente desconectado: QcLiycG6LI79pkOAAAAT (removidas 0 operaï¿½ï¿½es)
+2025-06-26 10:23:22,211 - INFO - 127.0.0.1 - - [26/Jun/2025 10:23:22] "GET /api/rag/status HTTP/1.1" 200 -
+2025-06-26 10:23:22,211 - INFO - 127.0.0.1 - - [26/Jun/2025 10:23:22] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-26 10:23:22,211 - INFO - 127.0.0.1 - - [26/Jun/2025 10:23:22] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-26 10:23:22,217 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-26 10:23:22,218 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-26 10:23:22,526 - INFO - 127.0.0.1 - - [26/Jun/2025 10:23:22] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-06-26 10:23:29,958 - INFO - 127.0.0.1 - - [26/Jun/2025 10:23:29] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 10:23:30,264 - INFO - 127.0.0.1 - - [26/Jun/2025 10:23:30] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 10:23:57,227 - INFO - 127.0.0.1 - - [26/Jun/2025 10:23:57] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 10:25:02,139 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-26 10:25:11,844 - INFO - 127.0.0.1 - - [26/Jun/2025 10:25:11] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 10:25:20,002 - INFO - Sinal 2 recebido. Finalizando graciosamente...
+2025-06-26 10:25:20,002 - INFO - Servidor com PID 68952 finalizado
+2025-06-26 10:25:29,619 - INFO -  Servidor iniciado com PID 44300
+2025-06-26 10:25:29,619 - INFO -  URL: http://0.0.0.0:5000
+2025-06-26 10:25:29,619 - INFO -  WebSocket: ws://0.0.0.0:5000/socket.io/
+2025-06-26 10:25:29,619 - INFO -  Health: http://0.0.0.0:5000/health
+2025-06-26 10:25:29,619 - INFO -  System Status: http://0.0.0.0:5000/api/system/status
+2025-06-26 10:25:29,619 - INFO -  Operações ativas: 0
+2025-06-26 10:25:29,635 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.85:5000
+2025-06-26 10:25:29,635 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-26 10:25:29,699 - INFO -  Cliente WebSocket conectado: INxjtq86F2NhrnSSAAAB
+2025-06-26 10:25:30,394 - INFO -  Cliente WebSocket conectado: e48KepvV15umPPN0AAAD
+2025-06-26 10:25:32,632 - INFO -  Iniciando RAG automaticamente...
+2025-06-26 10:25:32,632 - INFO - emitting event "progress_update" to all [/]
+2025-06-26 10:25:32,632 - INFO -  Progresso rag_startup: Verificando sistema RAG...
+2025-06-26 10:25:32,636 - INFO - emitting event "progress_update" to all [/]
+2025-06-26 10:25:32,636 - INFO -  Progresso rag_startup:  Módulo RAG encontrado
+2025-06-26 10:25:32,636 - INFO - emitting event "progress_update" to all [/]
+2025-06-26 10:25:32,636 - INFO -  Progresso rag_startup: Conectando com Ollama...
+2025-06-26 10:25:42,016 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-26 10:25:43,621 - INFO - emitting event "progress_update" to all [/]
+2025-06-26 10:25:43,621 - INFO -  Progresso rag_startup:  RAG inicializado! Carregando documentos...
+2025-06-26 10:25:44,144 - INFO - emitting event "progress_update" to all [/]
+2025-06-26 10:25:44,144 - INFO -  Progresso rag_startup:  RAG pronto! 2178 documentos carregados
+2025-06-26 10:25:44,144 - INFO -  RAG inicializado automaticamente: 2178 documentos
+2025-06-26 10:25:44,144 - INFO - emitting event "rag_ready" to all [/]
+2025-06-26 10:25:46,460 - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-26 10:25:46,461 - INFO - 127.0.0.1 - - [26/Jun/2025 10:25:46] "GET /triagem HTTP/1.1" 200 -
+2025-06-26 10:25:46,734 - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-26 10:25:46,734 - INFO - 127.0.0.1 - - [26/Jun/2025 10:25:46] "GET /triagem HTTP/1.1" 200 -
+2025-06-26 10:26:22,713 - INFO -  Cliente desconectado: INxjtq86F2NhrnSSAAAB (removidas 0 operações)
+2025-06-26 10:26:22,714 - INFO -  Cliente desconectado: e48KepvV15umPPN0AAAD (removidas 0 operações)
+2025-06-26 10:26:22,731 - INFO - 127.0.0.1 - - [26/Jun/2025 10:26:22] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-26 10:26:22,731 - INFO - 127.0.0.1 - - [26/Jun/2025 10:26:22] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-26 10:26:22,736 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-26 10:26:22,741 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-26 10:26:22,761 - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-26 10:26:22,761 - INFO - 127.0.0.1 - - [26/Jun/2025 10:26:22] "GET /triagem HTTP/1.1" 200 -
+2025-06-26 10:26:25,578 - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-26 10:26:25,579 - INFO - 127.0.0.1 - - [26/Jun/2025 10:26:25] "GET /triagem HTTP/1.1" 200 -
+2025-06-26 10:26:26,420 - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-26 10:26:26,422 - INFO - 127.0.0.1 - - [26/Jun/2025 10:26:26] "GET /triagem HTTP/1.1" 200 -
+2025-06-26 10:26:26,719 - INFO -  Cliente WebSocket conectado: GTY7XyMwJApTDcqPAAAF
+2025-06-26 10:26:26,733 - INFO -  Cliente WebSocket conectado: 79tSXAqYu8yMB6FBAAAH
+2025-06-26 10:26:28,449 - INFO -  Cliente desconectado: GTY7XyMwJApTDcqPAAAF (removidas 0 operações)
+2025-06-26 10:26:28,449 - INFO -  Cliente desconectado: 79tSXAqYu8yMB6FBAAAH (removidas 0 operações)
+2025-06-26 10:26:28,468 - INFO - 127.0.0.1 - - [26/Jun/2025 10:26:28] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-26 10:26:28,468 - INFO - 127.0.0.1 - - [26/Jun/2025 10:26:28] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-26 10:26:28,473 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-26 10:26:28,474 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-26 10:26:28,769 - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-26 10:26:28,770 - INFO - 127.0.0.1 - - [26/Jun/2025 10:26:28] "GET /triagem HTTP/1.1" 200 -
+2025-06-26 10:26:35,523 - INFO - 127.0.0.1 - - [26/Jun/2025 10:26:35] "GET /api/rag/status HTTP/1.1" 200 -
+2025-06-26 10:26:35,849 - INFO - 127.0.0.1 - - [26/Jun/2025 10:26:35] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-06-26 10:26:37,442 - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-26 10:26:37,443 - INFO - 127.0.0.1 - - [26/Jun/2025 10:26:37] "GET /triagem HTTP/1.1" 200 -
+2025-06-26 10:26:38,280 - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-26 10:26:38,280 - INFO -  Cliente WebSocket conectado: 3Ark0ai8SW75Am6CAAAJ
+2025-06-26 10:26:38,281 - INFO - 127.0.0.1 - - [26/Jun/2025 10:26:38] "GET /triagem HTTP/1.1" 200 -
+2025-06-26 10:26:38,291 - INFO -  Cliente WebSocket conectado: yZXMv13QSZGjJSGLAAAL
+2025-06-26 10:26:39,057 - INFO -  Cliente desconectado: yZXMv13QSZGjJSGLAAAL (removidas 0 operações)
+2025-06-26 10:26:39,057 - INFO -  Cliente desconectado: 3Ark0ai8SW75Am6CAAAJ (removidas 0 operações)
+2025-06-26 10:26:39,079 - INFO - 127.0.0.1 - - [26/Jun/2025 10:26:39] "GET /api/rag/status HTTP/1.1" 200 -
+2025-06-26 10:26:39,084 - INFO - 127.0.0.1 - - [26/Jun/2025 10:26:39] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-26 10:26:39,084 - INFO - 127.0.0.1 - - [26/Jun/2025 10:26:39] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-26 10:26:39,091 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-26 10:26:39,094 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-26 10:26:39,393 - INFO - 127.0.0.1 - - [26/Jun/2025 10:26:39] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-06-26 10:26:45,842 - INFO - 127.0.0.1 - - [26/Jun/2025 10:26:45] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 10:26:58,610 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-26 10:27:16,818 - INFO - 127.0.0.1 - - [26/Jun/2025 10:27:16] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 10:27:25,747 - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-26 10:27:25,748 - INFO - 127.0.0.1 - - [26/Jun/2025 10:27:25] "GET /triagem HTTP/1.1" 200 -
+2025-06-26 10:27:26,688 - INFO - 127.0.0.1 - - [26/Jun/2025 10:27:26] "GET /api/rag/status HTTP/1.1" 200 -
+2025-06-26 10:27:26,950 - INFO - 127.0.0.1 - - [26/Jun/2025 10:27:26] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-06-26 10:27:29,605 - INFO - 127.0.0.1 - - [26/Jun/2025 10:27:29] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 10:27:29,923 - INFO - 127.0.0.1 - - [26/Jun/2025 10:27:29] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 10:27:42,948 - INFO - 127.0.0.1 - - [26/Jun/2025 10:27:42] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 10:27:55,693 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-26 10:27:58,302 - INFO - 127.0.0.1 - - [26/Jun/2025 10:27:58] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 10:28:36,139 - INFO - 127.0.0.1 - - [26/Jun/2025 10:28:36] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 10:28:48,771 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-26 10:28:52,136 - INFO - 127.0.0.1 - - [26/Jun/2025 10:28:52] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 10:29:22,469 - INFO - 127.0.0.1 - - [26/Jun/2025 10:29:22] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 10:29:34,820 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-26 10:29:38,195 - INFO - 127.0.0.1 - - [26/Jun/2025 10:29:38] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 10:30:02,315 - INFO - 127.0.0.1 - - [26/Jun/2025 10:30:02] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 10:30:15,177 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-26 10:30:18,169 - INFO - 127.0.0.1 - - [26/Jun/2025 10:30:18] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 10:30:59,346 - INFO - 127.0.0.1 - - [26/Jun/2025 10:30:59] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 10:31:11,999 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-26 10:31:15,296 - INFO - 127.0.0.1 - - [26/Jun/2025 10:31:15] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 10:31:30,041 - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-26 10:31:30,041 - INFO - 127.0.0.1 - - [26/Jun/2025 10:31:30] "GET /triagem HTTP/1.1" 200 -
+2025-06-26 10:31:31,414 - INFO - 127.0.0.1 - - [26/Jun/2025 10:31:31] "GET /api/rag/status HTTP/1.1" 200 -
+2025-06-26 10:31:31,663 - INFO - 127.0.0.1 - - [26/Jun/2025 10:31:31] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-06-26 10:31:37,872 - INFO - 127.0.0.1 - - [26/Jun/2025 10:31:37] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 10:31:50,108 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-26 10:31:50,302 - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-26 10:31:50,307 - INFO - 127.0.0.1 - - [26/Jun/2025 10:31:50] "GET /triagem HTTP/1.1" 200 -
+2025-06-26 10:31:52,146 - INFO - 127.0.0.1 - - [26/Jun/2025 10:31:52] "GET /api/rag/status HTTP/1.1" 200 -
+2025-06-26 10:31:52,467 - INFO - 127.0.0.1 - - [26/Jun/2025 10:31:52] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-06-26 10:31:57,548 - INFO - 127.0.0.1 - - [26/Jun/2025 10:31:57] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 10:31:57,865 - INFO - 127.0.0.1 - - [26/Jun/2025 10:31:57] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 10:31:58,210 - INFO - 127.0.0.1 - - [26/Jun/2025 10:31:58] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 10:32:14,648 - INFO - 127.0.0.1 - - [26/Jun/2025 10:32:14] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 10:32:27,375 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-26 10:32:29,782 - INFO - 127.0.0.1 - - [26/Jun/2025 10:32:29] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 10:32:44,832 - INFO - 127.0.0.1 - - [26/Jun/2025 10:32:44] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 10:32:57,440 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-26 10:32:59,756 - INFO - 127.0.0.1 - - [26/Jun/2025 10:32:59] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 10:33:08,119 - INFO - 127.0.0.1 - - [26/Jun/2025 10:33:08] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 10:33:20,889 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-26 10:33:23,095 - INFO - 127.0.0.1 - - [26/Jun/2025 10:33:23] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 10:33:45,312 - INFO - 127.0.0.1 - - [26/Jun/2025 10:33:45] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 10:33:57,962 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-26 10:34:01,516 - INFO - 127.0.0.1 - - [26/Jun/2025 10:34:01] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 10:34:23,651 - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-26 10:34:23,652 - INFO - 127.0.0.1 - - [26/Jun/2025 10:34:23] "GET /triagem HTTP/1.1" 200 -
+2025-06-26 10:34:24,484 - INFO - 127.0.0.1 - - [26/Jun/2025 10:34:24] "GET /api/rag/status HTTP/1.1" 200 -
+2025-06-26 10:34:24,745 - INFO - 127.0.0.1 - - [26/Jun/2025 10:34:24] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-06-26 10:38:32,190 - INFO -  Cliente WebSocket conectado: 2RapfjEeDBebslwAAAAN
+2025-06-26 10:38:32,206 - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-26 10:38:32,206 - INFO - 127.0.0.1 - - [26/Jun/2025 10:38:32] "GET /triagem HTTP/1.1" 200 -
+2025-06-26 10:38:32,206 - INFO -  Cliente WebSocket conectado: qC4lbdxKJruAJBOjAAAP
+2025-06-26 11:23:38,153 - INFO -  Cliente desconectado: qC4lbdxKJruAJBOjAAAP (removidas 0 operações)
+2025-06-26 11:23:38,153 - INFO -  Cliente desconectado: 2RapfjEeDBebslwAAAAN (removidas 0 operações)
+2025-06-26 11:24:09,130 - INFO -  Cliente WebSocket conectado: 4cQRyMsf7pPuFskkAAAS
+2025-06-26 11:24:09,131 - INFO -  Cliente WebSocket conectado: AlcmMGhBpxRY222zAAAT
+2025-06-26 11:45:44,984 - INFO -  Cliente desconectado: 4cQRyMsf7pPuFskkAAAS (removidas 0 operações)
+2025-06-26 11:45:44,988 - INFO -  Cliente desconectado: AlcmMGhBpxRY222zAAAT (removidas 0 operações)
+2025-06-26 11:45:45,045 - INFO - 127.0.0.1 - - [26/Jun/2025 11:45:45] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-26 11:45:45,046 - INFO - 127.0.0.1 - - [26/Jun/2025 11:45:45] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-26 11:45:45,057 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-26 11:45:45,060 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-26 11:45:45,439 - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-26 11:45:45,441 - INFO - 127.0.0.1 - - [26/Jun/2025 11:45:45] "GET /triagem HTTP/1.1" 200 -
+2025-06-26 11:46:17,694 - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-26 11:46:17,694 - INFO - 127.0.0.1 - - [26/Jun/2025 11:46:17] "GET /triagem HTTP/1.1" 200 -
+2025-06-26 11:46:17,982 - INFO -  Cliente WebSocket conectado: vKEz0VTREiv8_iBRAAAV
+2025-06-26 11:46:18,003 - INFO -  Cliente WebSocket conectado: YkmPHtyXA3SftwnvAAAX
+2025-06-26 11:47:34,662 - INFO - 127.0.0.1 - - [26/Jun/2025 11:47:34] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-06-26 11:47:35,591 - INFO - 127.0.0.1 - - [26/Jun/2025 11:47:35] "POST /triagem/form HTTP/1.1" 200 -
+2025-06-26 11:47:35,607 - INFO - received event "start_listening" from YkmPHtyXA3SftwnvAAAX [/]
+2025-06-26 11:47:35,607 - INFO -  Registrado progresso: a6228b1c-4b6a-4138-ac64-70f9c3e7b3d0 -> YkmPHtyXA3SftwnvAAAX
+2025-06-26 11:47:35,607 - INFO - Sockets ativos: 1
+2025-06-26 11:47:35,613 - INFO - emitting event "progress_update" to YkmPHtyXA3SftwnvAAAX [/]
+2025-06-26 11:47:36,095 - INFO - emitting event "progress_update" to YkmPHtyXA3SftwnvAAAX [/]
+2025-06-26 11:47:36,097 - INFO -  Progresso enviado para a6228b1c-4b6a-4138-ac64-70f9c3e7b3d0: 10% - Validando dados do processo...
+2025-06-26 11:47:36,464 - INFO - emitting event "progress_update" to YkmPHtyXA3SftwnvAAAX [/]
+2025-06-26 11:47:36,464 - INFO -  Progresso enviado para a6228b1c-4b6a-4138-ac64-70f9c3e7b3d0: 25% - Analisando suspeição e impedimento no documento...
+2025-06-26 11:47:37,078 - INFO -  Suspeitos encontrados: []
+2025-06-26 11:47:37,078 - INFO - emitting event "progress_update" to YkmPHtyXA3SftwnvAAAX [/]
+2025-06-26 11:47:37,078 - INFO -  Progresso enviado para a6228b1c-4b6a-4138-ac64-70f9c3e7b3d0: 40% - Preparando estrutura de arquivos...
+2025-06-26 11:47:37,383 - INFO - emitting event "progress_update" to YkmPHtyXA3SftwnvAAAX [/]
+2025-06-26 11:47:37,383 - INFO -  Progresso enviado para a6228b1c-4b6a-4138-ac64-70f9c3e7b3d0: 55% - Salvando documento processado...
+2025-06-26 11:47:37,824 - INFO - emitting event "progress_update" to YkmPHtyXA3SftwnvAAAX [/]
+2025-06-26 11:47:37,824 - INFO -  Progresso enviado para a6228b1c-4b6a-4138-ac64-70f9c3e7b3d0: 65% - Atualizando sistema de busca...
+2025-06-26 11:47:42,548 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-06-26 11:47:42,895 - INFO - emitting event "progress_update" to YkmPHtyXA3SftwnvAAAX [/]
+2025-06-26 11:47:42,895 - INFO -  Progresso enviado para a6228b1c-4b6a-4138-ac64-70f9c3e7b3d0: 60% - Salvando arquivo original (DAT)...
+2025-06-26 11:47:43,297 - INFO - Arquivo DAT salvo: /Users/anacl/Documents/GMV/Triagem Inicial/dat\1002436-58.2025.8.11.0000.dat
+2025-06-26 11:47:43,298 - INFO - emitting event "progress_update" to YkmPHtyXA3SftwnvAAAX [/]
+2025-06-26 11:47:43,298 - INFO -  Progresso enviado para a6228b1c-4b6a-4138-ac64-70f9c3e7b3d0: 75% - Executando anonimização automática...
+2025-06-26 11:48:16,037 - INFO - emitting event "progress_update" to YkmPHtyXA3SftwnvAAAX [/]
+2025-06-26 11:48:16,039 - INFO -  Progresso enviado para a6228b1c-4b6a-4138-ac64-70f9c3e7b3d0: 80% - Salvando versão anonimizada...
+2025-06-26 11:48:16,046 - INFO -  Anonimização concluída: 469 substituições em 32.35s
+2025-06-26 11:48:16,046 - INFO - emitting event "progress_update" to YkmPHtyXA3SftwnvAAAX [/]
+2025-06-26 11:48:16,046 - INFO -  Progresso enviado para a6228b1c-4b6a-4138-ac64-70f9c3e7b3d0: 90% - Atualizando tabela de triagem...
+2025-06-26 11:48:16,349 - INFO - emitting event "progress_update" to YkmPHtyXA3SftwnvAAAX [/]
+2025-06-26 11:48:16,349 - INFO -  Progresso enviado para a6228b1c-4b6a-4138-ac64-70f9c3e7b3d0: 100% - Processo adicionado com sucesso!
+2025-06-26 11:48:16,863 - INFO -  Processo 1002436-58.2025.8.11.0000 salvo com sucesso
+2025-06-26 11:48:18,684 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-26 11:48:18,699 - INFO - 127.0.0.1 - - [26/Jun/2025 11:48:18] "GET /triagem HTTP/1.1" 200 -
+2025-06-26 11:49:33,572 - INFO -  Cliente desconectado: vKEz0VTREiv8_iBRAAAV (removidas 0 operações)
+2025-06-26 11:49:33,572 - INFO -  Cliente desconectado: YkmPHtyXA3SftwnvAAAX (removidas 0 operações)
+2025-06-26 11:49:33,605 - INFO - 127.0.0.1 - - [26/Jun/2025 11:49:33] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-26 11:49:33,609 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-26 11:49:33,630 - INFO - 127.0.0.1 - - [26/Jun/2025 11:49:33] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-26 11:49:33,632 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-26 11:49:33,913 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-26 11:49:33,915 - INFO - 127.0.0.1 - - [26/Jun/2025 11:49:33] "GET /triagem HTTP/1.1" 200 -
+2025-06-26 11:50:36,738 - INFO - 127.0.0.1 - - [26/Jun/2025 11:50:36] "GET /api/rag/status HTTP/1.1" 200 -
+2025-06-26 11:50:36,996 - INFO - 127.0.0.1 - - [26/Jun/2025 11:50:36] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-06-26 11:51:12,066 - INFO - 127.0.0.1 - - [26/Jun/2025 11:51:12] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 11:51:34,754 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-26 11:51:37,392 - INFO - 127.0.0.1 - - [26/Jun/2025 11:51:37] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-06-26 12:44:22,716 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-26 12:44:22,720 - INFO -  Cliente WebSocket conectado: 1RPbKE8vVeB24ElPAAAZ
+2025-06-26 12:44:22,720 - INFO - 127.0.0.1 - - [26/Jun/2025 12:44:22] "GET /triagem HTTP/1.1" 200 -
+2025-06-26 12:44:22,746 - INFO -  Cliente WebSocket conectado: h1Gjtj9HA8v4K8ZTAAAb
+2025-06-26 12:50:20,252 - INFO -  Cliente desconectado: 1RPbKE8vVeB24ElPAAAZ (removidas 0 operações)
+2025-06-26 12:50:20,267 - INFO -  Cliente desconectado: h1Gjtj9HA8v4K8ZTAAAb (removidas 0 operações)
+2025-06-26 12:50:20,313 - INFO - 127.0.0.1 - - [26/Jun/2025 12:50:20] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-26 12:56:49,566 - INFO - 127.0.0.1 - - [26/Jun/2025 12:56:49] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-26 12:56:49,566 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-26 12:56:49,572 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-26 12:56:54,005 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-26 12:56:54,015 - INFO - 127.0.0.1 - - [26/Jun/2025 12:56:54] "GET /triagem HTTP/1.1" 200 -
+2025-06-26 12:56:55,351 - INFO -  Cliente WebSocket conectado: NjJZRs2ORkXh_i2JAAAe
+2025-06-26 12:56:55,351 - INFO -  Cliente WebSocket conectado: gGq8d54iRdBZ5KldAAAf
+2025-06-26 14:01:38,976 - INFO -  Cliente desconectado: NjJZRs2ORkXh_i2JAAAe (removidas 0 operações)
+2025-06-26 14:01:38,976 - INFO -  Cliente desconectado: gGq8d54iRdBZ5KldAAAf (removidas 0 operações)
+2025-06-26 14:01:39,054 - INFO - 127.0.0.1 - - [26/Jun/2025 14:01:39] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-26 14:01:39,117 - INFO - 127.0.0.1 - - [26/Jun/2025 14:01:39] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-26 14:01:39,137 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-26 14:01:39,305 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-26 14:01:42,079 - INFO -  Cliente WebSocket conectado: N2CB9qemvPrF70EoAAAi
+2025-06-26 14:01:42,331 - INFO -  Cliente WebSocket conectado: f8q023cSA7IFTfuSAAAj
+2025-06-26 14:01:42,458 - INFO -  Cliente desconectado: N2CB9qemvPrF70EoAAAi (removidas 0 operações)
+2025-06-26 14:01:42,458 - INFO -  Cliente desconectado: f8q023cSA7IFTfuSAAAj (removidas 0 operações)
+2025-06-26 14:01:43,630 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-26 14:01:43,631 - INFO - 127.0.0.1 - - [26/Jun/2025 14:01:43] "GET /triagem HTTP/1.1" 200 -
+2025-06-26 14:01:44,091 - INFO -  Cliente WebSocket conectado: k_SKP1vT0c6LTwsHAAAm
+2025-06-26 14:01:44,151 - INFO -  Cliente WebSocket conectado: h2iuNodTCVge4yh0AAAn
+2025-06-26 14:26:43,258 - INFO -  Cliente desconectado: h2iuNodTCVge4yh0AAAn (removidas 0 operações)
+2025-06-26 14:26:43,260 - INFO -  Cliente desconectado: k_SKP1vT0c6LTwsHAAAm (removidas 0 operações)
+2025-06-26 14:30:22,455 - INFO - 127.0.0.1 - - [26/Jun/2025 14:30:22] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-26 14:30:22,475 - INFO - 127.0.0.1 - - [26/Jun/2025 14:30:22] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-26 14:30:22,494 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-26 14:30:22,494 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-26 14:30:24,363 - INFO -  Cliente WebSocket conectado: fNXnhVfUMY5bag3fAAAp
+2025-06-26 14:30:24,378 - INFO -  Cliente desconectado: fNXnhVfUMY5bag3fAAAp (removidas 0 operações)
+2025-06-26 14:30:26,620 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-26 14:30:26,621 - INFO - 127.0.0.1 - - [26/Jun/2025 14:30:26] "GET /triagem HTTP/1.1" 200 -
+2025-06-26 14:30:27,239 - INFO -  Cliente WebSocket conectado: tN7-jXscjpjoyl2hAAAs
+2025-06-26 14:30:27,240 - INFO -  Cliente WebSocket conectado: _kiewGmjg4usZvlUAAAt
+2025-06-26 16:52:17,200 - INFO -  Cliente desconectado: _kiewGmjg4usZvlUAAAt (removidas 0 operações)
+2025-06-26 16:52:17,200 - INFO -  Cliente desconectado: tN7-jXscjpjoyl2hAAAs (removidas 0 operações)
+2025-06-26 16:52:17,200 - INFO - 127.0.0.1 - - [26/Jun/2025 16:52:17] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-26 16:52:17,216 - INFO - 127.0.0.1 - - [26/Jun/2025 16:52:17] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-26 16:52:17,216 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-26 16:52:17,216 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-26 16:52:22,254 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-26 16:52:22,257 - INFO - 127.0.0.1 - - [26/Jun/2025 16:52:22] "GET /triagem HTTP/1.1" 200 -
+2025-06-26 16:52:23,339 - INFO -  Cliente WebSocket conectado: MYU0WBZe1iXIy813AAAy
+2025-06-26 16:52:23,339 - INFO -  Cliente WebSocket conectado: Tlw4xjMU0j8sYzA7AAAz
+2025-06-26 17:02:20,306 - INFO -  Cliente desconectado: Tlw4xjMU0j8sYzA7AAAz (removidas 0 operações)
+2025-06-26 17:02:20,312 - INFO -  Cliente desconectado: MYU0WBZe1iXIy813AAAy (removidas 0 operações)
+2025-06-26 17:02:20,315 - INFO - 127.0.0.1 - - [26/Jun/2025 17:02:20] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-26 17:02:20,318 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-26 17:02:20,320 - INFO - 127.0.0.1 - - [26/Jun/2025 17:02:20] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-26 17:02:20,321 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-26 17:06:02,374 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-26 17:06:02,376 - INFO - 127.0.0.1 - - [26/Jun/2025 17:06:02] "GET /triagem HTTP/1.1" 200 -
+2025-06-26 17:06:03,616 - INFO -  Cliente WebSocket conectado: UIkz2pnZRcY1UxV5AAA2
+2025-06-26 17:06:03,618 - INFO -  Cliente WebSocket conectado: QePedLTWsYYCBOQeAAA3
+2025-06-26 17:16:07,502 - INFO -  Cliente desconectado: QePedLTWsYYCBOQeAAA3 (removidas 0 operações)
+2025-06-26 17:16:07,503 - INFO -  Cliente desconectado: UIkz2pnZRcY1UxV5AAA2 (removidas 0 operações)
+2025-06-26 17:16:07,505 - INFO - 127.0.0.1 - - [26/Jun/2025 17:16:07] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-26 17:16:07,505 - INFO - 127.0.0.1 - - [26/Jun/2025 17:16:07] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-26 17:23:55,250 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-26 17:23:55,267 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-26 17:24:00,955 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-26 17:24:00,955 - INFO - 127.0.0.1 - - [26/Jun/2025 17:24:00] "GET /triagem HTTP/1.1" 200 -
+2025-06-26 17:24:02,264 - INFO -  Cliente WebSocket conectado: W6aB2fYL90g5eHvMAAA6
+2025-06-26 17:24:02,445 - INFO -  Cliente WebSocket conectado: su0KwdVaXk5ZG4jRAAA7
+2025-06-26 19:29:50,294 - INFO -  Cliente desconectado: su0KwdVaXk5ZG4jRAAA7 (removidas 0 operações)
+2025-06-26 19:29:50,296 - INFO -  Cliente desconectado: W6aB2fYL90g5eHvMAAA6 (removidas 0 operações)
+2025-06-26 19:29:50,656 - INFO - 127.0.0.1 - - [26/Jun/2025 19:29:50] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-26 19:29:50,666 - INFO - 127.0.0.1 - - [26/Jun/2025 19:29:50] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-26 19:29:50,767 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-26 19:29:50,767 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-26 19:29:55,624 - INFO -  Cliente WebSocket conectado: kHq_zL7_w8n5AGn9AAA-
+2025-06-26 19:29:55,627 - INFO -  Cliente WebSocket conectado: fK3wIJ6iNNO-2S5pAAA_
+2025-06-26 19:29:55,815 - INFO -  Cliente desconectado: kHq_zL7_w8n5AGn9AAA- (removidas 0 operações)
+2025-06-26 19:29:55,816 - INFO -  Cliente desconectado: fK3wIJ6iNNO-2S5pAAA_ (removidas 0 operações)
+2025-06-26 19:29:58,286 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-26 19:29:58,294 - INFO - 127.0.0.1 - - [26/Jun/2025 19:29:58] "GET /triagem HTTP/1.1" 200 -
+2025-06-26 19:29:59,492 - INFO -  Cliente WebSocket conectado: PTRmRNf2qo4449TcAABC
+2025-06-26 19:29:59,494 - INFO -  Cliente WebSocket conectado: yf1h8ApNTtdbmn5pAABD
+2025-06-26 19:30:07,420 - INFO -  Cliente desconectado: PTRmRNf2qo4449TcAABC (removidas 0 operações)
+2025-06-27 09:15:34,727 - INFO -  Cliente desconectado: yf1h8ApNTtdbmn5pAABD (removidas 0 operações)
+2025-06-27 09:15:34,729 - INFO - 127.0.0.1 - - [27/Jun/2025 09:15:34] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-27 09:15:34,729 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-27 09:15:34,729 - INFO - 127.0.0.1 - - [27/Jun/2025 09:15:34] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-06-27 09:15:34,737 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-06-27 09:17:39,503 - INFO -  Cliente WebSocket conectado: Oc2_X1qcG6BlOKLMAABF
+2025-06-27 09:17:39,517 - INFO -  Cliente WebSocket conectado: 4WnIrs27RI3A5HpBAABH
+2025-06-27 09:27:21,710 - INFO -  Cliente desconectado: Oc2_X1qcG6BlOKLMAABF (removidas 0 operações)
+2025-06-27 09:27:21,715 - INFO -  Cliente desconectado: 4WnIrs27RI3A5HpBAABH (removidas 0 operações)
+2025-06-27 09:27:23,120 - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-06-27 09:27:23,126 - INFO - 127.0.0.1 - - [27/Jun/2025 09:27:23] "GET /triagem HTTP/1.1" 200 -
+2025-06-27 09:27:23,513 - INFO -  Cliente WebSocket conectado: 1Rqj-dTV_kX03fYGAABK
+2025-06-27 09:27:23,514 - INFO -  Cliente WebSocket conectado: 8XmqapXlqHYEWPdxAABL
+2025-06-27 10:24:18,251 - INFO - Sinal 2 recebido. Finalizando graciosamente...
+2025-06-27 10:24:18,259 - INFO - Servidor com PID 44300 finalizado
