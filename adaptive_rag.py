@@ -70,14 +70,14 @@ except ImportError as e:
 @dataclass
 class UltraFastRAGConfig:
     model_name: str = "gemma:2b"
-    temperature: float = 0.1
-    chunk_size: int = 1200
-    chunk_overlap: int = 200
-    top_k: int = 4
-    max_chunks: int = 500
+    temperature: float = 0.0           # Lowered for deterministic, factual output
+    chunk_size: int = 800              # Smaller chunks improve retrieval accuracy
+    chunk_overlap: int = 200           # Maintains context across sections
+    top_k: int = 6                     # More candidates = better recall for precision
+    max_chunks: int = 60               # Limits context to most relevant chunks
     data_dir: str = "data"
     use_ollama_embeddings: bool = True
-    enable_conversational: bool = True
+    enable_conversational: bool = True  # Keep enabled for multi-turn interactions
 
 # =================================================================================
 # FUNÇÃO DE INTEGRAÇÃO CONVERSACIONAL
