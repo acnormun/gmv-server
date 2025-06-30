@@ -25,8 +25,7 @@ def processar_com_progresso(data, operation_id, operation_sockets):
         responsavel = limpar(data.get('responsavel'))
         status = limpar(data.get('status'))
         comentarios = limpar(data.get('comentarios'))
-        dat_base64 = data.get('dat')
-        ultima_att = datetime.now().strftime('%Y-%m-%d')
+        prioridade = limpar(data.get('prioridade'))
         logger.info(f"📄 Processando: {numero}")
         send_progress_ws(operation_id, 2, 'Analisando suspeição...', 25)
         suspeitos = []
@@ -54,6 +53,7 @@ def processar_com_progresso(data, operation_id, operation_sockets):
             'data_dist': data_dist,
             'responsavel': responsavel,
             'status': status,
+            'prioridade' : prioridade,
             'comentarios': comentarios,
             'suspeitos': suspeitos
         }
@@ -95,6 +95,7 @@ def processar_sem_progresso(data, operation_id):
     data_dist = limpar(data.get('dataDistribuicao'))
     responsavel = limpar(data.get('responsavel'))
     status = limpar(data.get('status'))
+    prioridade = limpar(data.get('prioridade'))
     comentarios = limpar(data.get('comentarios'))
     ultima_att = datetime.now().strftime('%Y-%m-%d')
     suspeitos = []
@@ -111,11 +112,11 @@ def processar_sem_progresso(data, operation_id):
         with open(os.path.join(pasta_dat, f"{nome_base}.dat"), 'w', encoding='utf-8') as f:
             f.write(dat_base64)
     suspeitos_str = ', '.join(suspeitos)
-    nova_linha = f"| {numero} | {tema} | {data_dist} | {responsavel} | {status} | {ultima_att} | {suspeitos_str} | {comentarios} |\n"
+    nova_linha = f"| {numero} | {tema} | {data_dist} | {responsavel} | {status} | {ultima_att} | {suspeitos_str} | {prioridade} | {comentarios} |\n"
     if not os.path.exists(path_triagem):
         with open(path_triagem, 'w', encoding='utf-8') as f:
             f.write("# Tabela de Processos\n\n")
-            f.write("| Nº Processo | Tema | Data da Distribuição | Responsável | Status | Última Atualização | Suspeitos | Comentários |\n")
+            f.write("| Nº Processo | Tema | Data da Distribuição | Responsável | Status | Última Atualização | Suspeitos | Prioridade | Comentários |\n")
             f.write("|-------------|------|-----------------------|-------------|--------|----------------------|-----------|-------------|\n")
     with open(path_triagem, 'a', encoding='utf-8') as f:
         f.write(nova_linha)
@@ -157,15 +158,16 @@ def atualizar_processo(numero, data):
         "status": limpar(data['status']),
         "ultimaAtualizacao": ultima_att,
         "suspeitos": suspeitos_calculados,
+        "prioridade": limpar(data.get('prioridade', 'MÉDIA')),
         "comentarios": limpar(data.get('comentarios', ''))
     }
     processos.append(atualizado)
     with open(path_triagem, 'w', encoding='utf-8') as f:
         f.write("# Tabela de Processos\n\n")
-        f.write("| Nº Processo | Tema | Data da Distribuição | Responsável | Status | Última Atualização | Suspeitos | Comentários |\n")
+        f.write("| Nº Processo | Tema | Data da Distribuição | Responsável | Status | Última Atualização | Suspeitos | Prioridade | Comentários |\n")
         f.write("|-------------|------|-----------------------|-------------|--------|----------------------|-----------|-------------|\n")
         for p in processos:
-            f.write(f"| {p['numeroProcesso']} | {p['tema']} | {p['dataDistribuicao']} | {p['responsavel']} | {p['status']} | {p['ultimaAtualizacao']} | {p['suspeitos']} | {p.get('comentarios', '')} |\n")
+            f.write(f"| {p['numeroProcesso']} | {p['tema']} | {p['dataDistribuicao']} | {p['responsavel']} | {p['status']} | {p['ultimaAtualizacao']} | {p['suspeitos']} | {p['prioridade', 'MÉDIA']} | {p.get('comentarios', '')} |\n")
 
 def deletar_processo_por_numero(numero):
     path_triagem = current_app.config['PATH_TRIAGEM']
@@ -174,10 +176,10 @@ def deletar_processo_por_numero(numero):
     processos = [p for p in processos if p['numeroProcesso'] != numero]
     with open(path_triagem, 'w', encoding='utf-8') as f:
         f.write("# Tabela de Processos\n\n")
-        f.write("| Nº Processo | Tema | Data da Distribuição | Responsável | Status | Última Atualização | Suspeitos | Comentários |\n")
+        f.write("| Nº Processo | Tema | Data da Distribuição | Responsável | Status | Última Atualização | Suspeitos | Prioridade | Comentários |\n")
         f.write("|-------------|------|-----------------------|-------------|--------|----------------------|-----------|-------------|\n")
         for p in processos:
-            f.write(f"| {p['numeroProcesso']} | {p['tema']} | {p['dataDistribuicao']} | {p['responsavel']} | {p['status']} | {p['ultimaAtualizacao']} | {p['suspeitos']} | {p.get('comentarios', '')} |\n")
+            f.write(f"| {p['numeroProcesso']} | {p['tema']} | {p['dataDistribuicao']} | {p['responsavel']} | {p['status']} | {p['ultimaAtualizacao']} | {p['suspeitos']} | {p['prioridade', 'MÉDIA']} | {p.get('comentarios', '')} |\n")
     caminho_md = os.path.join(pasta_dest, f"{numero.replace('/', '-')}.md")
     if os.path.exists(caminho_md):
         os.remove(caminho_md)
