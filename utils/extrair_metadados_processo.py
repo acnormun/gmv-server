@@ -87,10 +87,10 @@ def extrair_metadados_processo(markdown_text: str) -> Dict[str, str]:
                     break
         metadados.update(_extrair_partes_processo(texto_primeira_pagina))
         metadados = _limpar_metadados(metadados)
-        logger.info(f"🔍 Metadados extraídos: {len([v for v in metadados.values() if v])} campos preenchidos")
+        logger.info(f"Metadados extraídos: {len([v for v in metadados.values() if v])} campos preenchidos")
         return metadados
     except Exception as e:
-        logger.error(f"❌ Erro ao extrair metadados: {str(e)}")
+        logger.error(f"Erro ao extrair metadados: {str(e)}")
         return metadados
 
 def _extrair_partes_processo(texto: str) -> Dict[str, str]:
@@ -132,7 +132,7 @@ def _extrair_partes_processo(texto: str) -> Dict[str, str]:
                     partes[tipo_parte] = match.group(1).strip()
                     break
     except Exception as e:
-        logger.error(f"❌ Erro ao extrair partes: {str(e)}")
+        logger.error(f"Erro ao extrair partes: {str(e)}")
     return partes
 
 def _limpar_metadados(metadados: Dict[str, str]) -> Dict[str, str]:

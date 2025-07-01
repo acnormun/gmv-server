@@ -69,7 +69,7 @@ class FIRACDetector:
                     result['numero_processo'] = numero_match
                     result['confidence'] = 1.0
                 
-                logger.info(f"🎯 FIRAC solicitado detectado: {match.group(0)}")
+                logger.info(f"FIRAC solicitado detectado: {match.group(0)}")
                 break
         
         return result
@@ -87,7 +87,7 @@ class FIRACDetector:
         """Gera o FIRAC para um processo específico"""
         
         if not self.rag_system:
-            logger.error("❌ Sistema RAG não disponível para gerar FIRAC")
+            logger.error("Sistema RAG não disponível para gerar FIRAC")
             return FIRACStructure(
                 resumo="Sistema RAG não disponível para análise"
             )
@@ -102,7 +102,7 @@ class FIRACDetector:
                     resumo="Número do processo não identificado. Por favor, informe o número completo do processo."
                 )
             
-            logger.info(f"🔍 Gerando FIRAC para processo: {numero_processo}")
+            logger.info(f"Gerando FIRAC para processo: {numero_processo}")
             
             # Busca informações do processo no RAG
             search_query = f"processo {numero_processo} fatos questões direito aplicação decisão"
@@ -122,11 +122,11 @@ class FIRACDetector:
             if hasattr(self.rag_system, 'llm'):
                 firac = self._enhance_firac_with_llm(firac, context)
             
-            logger.info(f"✅ FIRAC gerado com sucesso para {numero_processo}")
+            logger.info(f"FIRAC gerado com sucesso para {numero_processo}")
             return firac
             
         except Exception as e:
-            logger.error(f"❌ Erro ao gerar FIRAC: {str(e)}")
+            logger.error(f"Erro ao gerar FIRAC: {str(e)}")
             return FIRACStructure(
                 numero_processo=numero_processo or "Não identificado",
                 resumo=f"Erro ao gerar FIRAC: {str(e)}"
@@ -220,7 +220,7 @@ class FIRACDetector:
             return enhanced_firac
             
         except Exception as e:
-            logger.error(f"❌ Erro ao melhorar FIRAC com LLM: {str(e)}")
+            logger.error(f"Erro ao melhorar FIRAC com LLM: {str(e)}")
             return firac
     
     def _parse_llm_firac_response(self, response: str, original_firac: FIRACStructure) -> FIRACStructure:
@@ -294,7 +294,7 @@ class FIRACEnabledRAG:
         firac_detection = self.firac_detector.detect_firac_request(question)
         
         if firac_detection['is_firac_request']:
-            logger.info("🎯 Solicitação de FIRAC detectada!")
+            logger.info("Solicitação de FIRAC detectada!")
             
             # Gera o FIRAC
             firac = self.firac_detector.generate_firac(

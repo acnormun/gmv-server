@@ -59,7 +59,7 @@ def send_progress_ws(operation_id, step, message, percentage):
             if percentage >= 100 or step == 0:
                 if operation_id in _operation_sockets:
                     del _operation_sockets[operation_id]
-                    logger.info(f"🧹 Operação {operation_id} removida da lista")
+                    logger.info(f" Operação {operation_id} removida da lista")
         else:
             logger.warning(f" Cliente não encontrado para operação {operation_id}")
             logger.warning(f"   Sockets ativos: {list(_operation_sockets.keys())}")
@@ -82,6 +82,6 @@ def force_cleanup_operation(operation_id):
     global _operation_sockets
     if operation_id in _operation_sockets:
         del _operation_sockets[operation_id]
-        logger.info(f"🧹 Operação {operation_id} removida manualmente")
+        logger.info(f"Operação {operation_id} removida manualmente")
         return True
     return False
