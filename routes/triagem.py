@@ -159,14 +159,16 @@ def processar_processo_isolado(data, operation_id):
             safe_send_progress(operation_id, 3, 'Processando PDF do PJe...', 20)
             try:
                 from utils.processador_pje_integrado import processar_pje_com_progresso
-                pasta_temp = os.path.join(PASTA_DESTINO, f"temp_{operation_id[:8]}")
-                os.makedirs(pasta_temp, exist_ok=True)
+                nome_arquivo_base = numero.replace('/', '-')
+                pasta_processo = os.path.join(PASTA_DESTINO, nome_arquivo_base)
+                os.makedirs(pasta_processo, exist_ok=True)
                 resultado_pje = processar_pje_com_progresso(
                     dat_base64,
                     numero,
-                    pasta_temp,
+                    pasta_processo,
                     operation_id
                 )
+
                 if resultado_pje and resultado_pje['sucesso']:
                     if resultado_pje['arquivos_gerados']['markdowns']:
                         primeiro_md = resultado_pje['arquivos_gerados']['markdowns'][0]
