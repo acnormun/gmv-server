@@ -275,13 +275,19 @@ class ProcessadorPJeIntegrado:
                 texto_md = self.converter_pdf_para_markdown(doc['caminho'], doc['nome_documento'])
                 nome_md = doc['arquivo'].replace('.pdf', '.md')
                 caminho_md = os.path.join(pasta_markdowns, nome_md)
+                front_matter = [
+                    "---",
+                    f"arquivo: '{doc['arquivo']}'",
+                    f"id_documento: '{doc['id_documento']}'",
+                    f"nome_documento: '{doc['nome_documento']}'",
+                    f"paginas: '{doc['paginas_range']}'",
+                    f"paginas_count: {doc['paginas_count']}",
+                    "ocr: 'PaddleOCR (Português)'",
+                    "---",
+                    "",
+                ]
                 with open(caminho_md, 'w', encoding='utf-8') as f:
-                    f.write(f"# {doc['nome_documento']}\n\n")
-                    f.write(f"**Arquivo:** {doc['arquivo']}\n\n")
-                    f.write(f"**ID Documento:** {doc['id_documento']}\n\n")
-                    f.write(f"**Páginas:** {doc['paginas_range']} ({doc['paginas_count']} páginas)\n\n")
-                    f.write(f"**OCR:** PaddleOCR (Português)\n\n")
-                    f.write("---\n\n")
+                    f.write("\n".join(front_matter))
                     f.write(texto_md)
                 doc['caminho_markdown'] = caminho_md
                 self.documentos_processados.append(doc)

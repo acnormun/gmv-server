@@ -7,6 +7,9 @@ from dataclasses import dataclass
 from typing import Any, Dict, List, Optional
 from functools import lru_cache
 import threading
+from dotenv import load_dotenv
+
+load_dotenv()
 
 from langchain.schema import Document
 from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -57,7 +60,7 @@ class UltraFastRAG:
         self.response_cache = {}
         self.cache_stats = {"hits": 0, "misses": 0}
         self.cache_lock = threading.Lock()
-        self.data_path = os.getenv("DADOS_ANONIMOS", os.getenv("PASTA_DESTINO", self.config.data_dir))
+        self.data_path = os.getenv("PASTA_DESTINO", self.config.data_dir)
         self.cache_path = os.path.join(os.path.dirname(self.data_path), ".rag_cache")
         os.makedirs(self.cache_path, exist_ok=True)
         self.text_splitter = RecursiveCharacterTextSplitter(
@@ -184,55 +187,149 @@ class UltraFastRAG:
     
     def load_documents_from_directory(self):
         if not os.path.exists(self.data_path):
-            print(f"Diretório não encontrado: {self.data_path}")
+            print(f"❌ Diretório não encontrado: {self.data_path}")
             return 0
-        print(f"Carregando documentos otimizado de: {self.data_path}")
+        print(f"🔍 Carregando documentos de: {self.data_path}")
         documents = []
+        arquivos_processados = 0
+        arquivos_ignorados = 0
+        pastas_ignoradas = {'.rag_cache', 'anonimizados', 'dat', 'mapas', '__pycache__', '.git'}
         try:
-            for root, _, files in os.walk(self.data_path):
+            for root, dirs, files in os.walk(self.data_path):
+                dirs[:] = [d for d in dirs if d not in pastas_ignoradas and not d.startswith('.')]
+                rel_path = os.path.relpath(root, self.data_path)
+                if rel_path != ".":
+                    print(f"📂 Explorando: {rel_path}")
                 for file in files:
                     if file.lower().endswith(('.txt', '.md')):
                         try:
                             filepath = os.path.join(root, file)
+                            file_size = os.path.getsize(filepath)
+                            if file_size < 100:
+                                print(f"   ⏭️ Pulando {file} (muito pequeno: {file_size} bytes)")
+                                arquivos_ignorados += 1
+                                continue
                             with open(filepath, 'r', encoding='utf-8') as f:
                                 content = f.read().strip()
                             if len(content) < 100:
+                                print(f"   ⏭️ Pulando {file} (conteúdo insuficiente)")
+                                arquivos_ignorados += 1
                                 continue
-                            metadata = self._parse_legal_metadata_fast(content)
+                            print(f"   📄 Processando: {file} ({len(content)} chars)")
+                            metadata = self._parse_enhanced_metadata(content, filepath)
                             metadata['filename'] = file
                             metadata['source'] = filepath
+                            metadata['relative_path'] = os.path.relpath(filepath, self.data_path)
                             clean_content = self._clean_content_fast(content)
+                            if len(clean_content.strip()) < 50:
+                                print(f"   ⏭️ Pulando {file} (sem conteúdo substantivo após limpeza)")
+                                arquivos_ignorados += 1
+                                continue
                             chunks = self.text_splitter.split_text(clean_content)
-                            for chunk in chunks:
-                                if len(chunk.strip()) > 100:
+                            chunks_adicionados = 0
+                            for i, chunk in enumerate(chunks):
+                                chunk_clean = chunk.strip()
+                                if len(chunk_clean) > 100:
+                                    chunk_metadata = metadata.copy()
+                                    chunk_metadata['chunk_index'] = i
+                                    chunk_metadata['total_chunks'] = len(chunks)
                                     documents.append(Document(
-                                        page_content=chunk.strip(),
-                                        metadata=metadata.copy()
+                                        page_content=chunk_clean,
+                                        metadata=chunk_metadata
                                     ))
-                        except Exception:
+                                    chunks_adicionados += 1
+                            print(f"      ✅ {chunks_adicionados} chunks criados")
+                            arquivos_processados += 1
+                        except Exception as e:
+                            print(f"   ❌ Erro ao processar {file}: {e}")
+                            arquivos_ignorados += 1
                             continue
+            print(f"\n📊 RELATÓRIO DE CARREGAMENTO:")
+            print(f"   📄 Arquivos processados: {arquivos_processados}")
+            print(f"   ⏭️ Arquivos ignorados: {arquivos_ignorados}")
+            print(f"   📚 Total de chunks: {len(documents)}")
             if documents:
-                print(f"{len(documents)} chunks carregados (otimizado)")
+                print(f"✅ {len(documents)} chunks carregados com sucesso!")
                 self.documents = documents
                 self._create_vector_store()
+                print(f"\n🔍 EXEMPLOS DE DOCUMENTOS CARREGADOS:")
+                for i, doc in enumerate(documents[:3]):
+                    meta = doc.metadata
+                    print(f"   {i+1}. {meta.get('filename', 'N/A')} (chunk {meta.get('chunk_index', 0)})")
+                    print(f"      Processo: {meta.get('numero_processo', 'N/A')}")
+                    print(f"      Tamanho: {len(doc.page_content)} chars")
+                    print(f"      Preview: {doc.page_content[:100]}...")
+            else:
+                print("⚠️ Nenhum documento foi carregado!")
             return len(documents)
         except Exception as e:
-            print(f"Erro ao carregar documentos: {e}")
+            print(f"❌ Erro crítico ao carregar documentos: {e}")
+            import traceback
+            traceback.print_exc()
             return 0
-    
+
+    def _parse_enhanced_metadata(self, content: str, filepath: str) -> Dict[str, str]:
+        metadata = {}
+        if content.startswith('---'):
+            try:
+                end_pos = content.find('---', 3)
+                if end_pos != -1:
+                    yaml_content = content[3:end_pos]
+                    for line in yaml_content.split('\n'):
+                        if ':' in line:
+                            key, value = line.split(':', 1)
+                            key = key.strip()
+                            value = value.strip().strip('"\'')
+                            if value and value != 'N/A':
+                                metadata[key] = value
+            except Exception as e:
+                print(f"      ⚠️ Erro ao processar front matter: {e}")
+        if not metadata.get('numero_processo'):
+            regex_metadata = self._parse_legal_metadata_fast(content)
+            metadata.update(regex_metadata)
+        if not metadata.get('numero_processo'):
+            processo_match = re.search(r'(\d{7}-\d{2}\.\d{4}\.\d\.\d{2}\.\d{4})', filepath)
+            if processo_match:
+                metadata['numero_processo'] = processo_match.group(1)
+        return metadata
+
     @lru_cache(maxsize=100)
     def _parse_legal_metadata_fast(self, content: str) -> Dict[str, str]:
         metadata = {}
         patterns = {
-            'numero_processo': r'numero_processo[:\s]+["\']?([^"\'\n]+)["\']?',
-            'agravante': r'agravante[:\s]+["\']?([^"\'\n]+)["\']?',
-            'agravado': r'agravado[:\s]+["\']?([^"\'\n]+)["\']?',
-            'valor_causa': r'valor_causa[:\s]+["\']?([^"\'\n]+)["\']?',
+            'numero_processo': [
+                r'numero_processo[:\s]+["\']?([^"\'\n]+)["\']?',
+                r'Número[:\s]+(\d{7}-\d{2}\.\d{4}\.\d\.\d{2}\.\d{4})',
+                r'(\d{7}-\d{2}\.\d{4}\.\d\.\d{2}\.\d{4})'
+            ],
+            'agravante': [
+                r'agravante[:\s]+["\']?([^"\'\n]+)["\']?',
+                r'AGRAVANTE[:\s]+([^:\n]+)',
+                r'Agravante[:\s]+([^:\n]+)'
+            ],
+            'agravado': [
+                r'agravado[:\s]+["\']?([^"\'\n]+)["\']?',
+                r'AGRAVADO[:\s]+([^:\n]+)',
+                r'Agravado[:\s]+([^:\n]+)'
+            ],
+            'valor_causa': [
+                r'valor_causa[:\s]+["\']?([^"\'\n]+)["\']?',
+                r'Valor da causa[:\s]+(R\$[^:\n]+)',
+                r'VALOR DA CAUSA[:\s]+(R\$[^:\n]+)'
+            ],
+            'assuntos': [
+                r'assuntos[:\s]+["\']?([^"\'\n]+)["\']?',
+                r'Assuntos[:\s]+([^:\n]+)'
+            ]
         }
-        for key, pattern in patterns.items():
-            match = re.search(pattern, content, re.IGNORECASE)
-            if match:
-                metadata[key] = match.group(1).strip()
+        for key, pattern_list in patterns.items():
+            for pattern in pattern_list:
+                match = re.search(pattern, content, re.IGNORECASE)
+                if match:
+                    value = match.group(1).strip()
+                    if value and len(value) > 1:
+                        metadata[key] = value
+                        break
         return metadata
     
     def _clean_content_fast(self, content: str) -> str:

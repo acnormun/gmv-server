@@ -19942,3 +19942,1102 @@ porque o host conectado nï¿½o respondeu
 2025-07-02 10:16:30,168 - MainThread   - INFO - Pool de threads criado com 15 workers
 2025-07-02 10:16:30,171 - MainThread   - INFO - Aguardando threads finalizarem...
 2025-07-02 10:16:30,174 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-02 10:45:29,849 - MainThread   - INFO - CORS configurado
+2025-07-02 10:45:29,849 - MainThread   - INFO - Rotas registradas
+2025-07-02 10:45:29,849 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-02 10:45:29,849 - MainThread   - INFO - Background cleanup iniciado
+2025-07-02 10:45:29,863 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-02 10:45:29,863 - MainThread   - INFO - Inicialização RAG em background
+2025-07-02 10:45:29,865 - MainThread   - INFO - Servidor pronto!
+2025-07-02 10:45:29,865 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-02 10:45:29,865 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-02 10:45:29,865 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-02 10:45:29,882 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.60:5000
+2025-07-02 10:45:29,882 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-02 10:45:32,216 - Thread-3 (process_request_thread) - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-02 10:45:32,216 - Thread-3 (process_request_thread) - INFO - Extraídos 3 processos da tabela
+2025-07-02 10:45:32,218 - Thread-3 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 10:45:32] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 10:45:33,463 - Thread-5 (process_request_thread) - INFO - Cliente conectado: NX6hE_pEhpeySWPgAAAB
+2025-07-02 10:45:36,620 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-07-02 10:45:41,630 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-02 10:46:08,867 - Thread-11 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 10:46:08] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-07-02 10:46:09,422 - Thread-12 (process_request_thread) - INFO - Pool de threads criado com 15 workers
+2025-07-02 10:46:09,422 - TriagemWorker_0 - INFO - Iniciando processamento isolado: a65146ed
+2025-07-02 10:46:09,422 - Thread-12 (process_request_thread) - INFO - Operação submetida: a65146ed
+2025-07-02 10:46:09,422 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação a65146ed-1eea-419b-b70d-bf23d01b02bf
+2025-07-02 10:46:09,422 - Thread-12 (process_request_thread) - INFO - Operações ativas: 1/15
+2025-07-02 10:46:09,422 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 10:46:09,433 - Thread-12 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 10:46:09] "POST /triagem/form HTTP/1.1" 200 -
+2025-07-02 10:46:09,433 - TriagemWorker_0 - INFO - [a65146ed] 5% - Conectando...
+2025-07-02 10:46:09,454 - Thread-14 (_handle_event_internal) - INFO - Registrado: a65146ed -> NX6hE_pEhpeySWPgAAAB
+2025-07-02 10:46:09,455 - Thread-14 (_handle_event_internal) - INFO - WebSocket registrado: a65146ed -> NX6hE_pEhpeySWPgAAAB
+2025-07-02 10:46:09,459 - Thread-13 (process_request_thread) - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-02 10:46:09,460 - Thread-13 (process_request_thread) - INFO - Extraídos 3 processos da tabela
+2025-07-02 10:46:09,460 - Thread-13 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 10:46:09] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 10:46:09,936 - TriagemWorker_0 - INFO - WebSocket conectado para a65146ed
+2025-07-02 10:46:09,936 - TriagemWorker_0 - INFO -  Progresso enviado para a65146ed-1eea-419b-b70d-bf23d01b02bf: 10% - Validando dados...
+2025-07-02 10:46:09,936 - TriagemWorker_0 - INFO - [a65146ed] 10% - Validando dados...
+2025-07-02 10:46:09,936 - TriagemWorker_0 - INFO - Processando: 1002436-58.2025.8.11.0000 [a65146ed]
+2025-07-02 10:46:09,936 - TriagemWorker_0 - INFO -  Progresso enviado para a65146ed-1eea-419b-b70d-bf23d01b02bf: 20% - Processando PDF do PJe...
+2025-07-02 10:46:09,936 - TriagemWorker_0 - INFO - [a65146ed] 20% - Processando PDF do PJe...
+2025-07-02 10:46:13,914 - TriagemWorker_0 - INFO - Loading faiss with AVX512 support.
+2025-07-02 10:46:13,914 - TriagemWorker_0 - INFO - Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2025-07-02 10:46:13,914 - TriagemWorker_0 - INFO - Loading faiss with AVX2 support.
+2025-07-02 10:46:13,998 - TriagemWorker_0 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-02 10:46:14,015 - TriagemWorker_0 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-02 10:46:14,667 - TriagemWorker_0 - INFO -  Progresso enviado para a65146ed-1eea-419b-b70d-bf23d01b02bf: 5% - Inicializando PaddleOCR...
+2025-07-02 10:47:56,664 - Thread-86 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 10:47:56] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 10:48:07,197 - Thread-87 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 10:48:07] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 10:58:16,544 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação a65146ed-1eea-419b-b70d-bf23d01b02bf
+2025-07-02 10:58:16,549 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 10:58:16,607 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação a65146ed-1eea-419b-b70d-bf23d01b02bf
+2025-07-02 10:58:16,607 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 10:58:16,611 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação a65146ed-1eea-419b-b70d-bf23d01b02bf
+2025-07-02 10:58:16,611 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 10:58:16,611 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação a65146ed-1eea-419b-b70d-bf23d01b02bf
+2025-07-02 10:58:16,611 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 10:58:16,611 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação a65146ed-1eea-419b-b70d-bf23d01b02bf
+2025-07-02 10:58:16,611 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 10:58:29,622 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação a65146ed-1eea-419b-b70d-bf23d01b02bf
+2025-07-02 10:58:29,622 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 10:58:29,631 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação a65146ed-1eea-419b-b70d-bf23d01b02bf
+2025-07-02 10:58:29,631 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 10:58:50,694 - Thread-276 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-02 10:59:11,768 - Thread-276 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-02 10:59:11,771 - Thread-276 (_send) - WARNING - Tentativa 1 falhou, aguardando 2.0s...
+2025-07-02 10:59:34,836 - Thread-276 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-02 10:59:55,879 - Thread-276 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-02 10:59:55,879 - Thread-276 (_send) - WARNING - Tentativa 2 falhou, aguardando 2.0s...
+2025-07-02 11:00:18,935 - Thread-276 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-02 11:00:39,988 - Thread-276 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-02 11:00:39,988 - Thread-276 (_send) - ERROR - Falha em todas as 3 tentativas para NAIRA
+2025-07-02 11:01:01,061 - Thread-276 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-02 11:01:22,103 - Thread-276 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-02 11:01:44,559 - Thread-285 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 11:01:44] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 11:01:45,171 - Thread-286 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 11:01:45] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 11:53:07,414 - Thread-5 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 11:53:07] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-02 11:53:08,003 - Thread-5 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-07-02 11:53:12,297 - Thread-355 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 11:53:12] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 11:59:30,886 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-02 11:59:42,955 - MainThread   - INFO - CORS configurado
+2025-07-02 11:59:42,962 - MainThread   - INFO - Rotas registradas
+2025-07-02 11:59:42,963 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-02 11:59:42,964 - MainThread   - INFO - Background cleanup iniciado
+2025-07-02 11:59:42,964 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-02 11:59:42,965 - MainThread   - INFO - Inicialização RAG em background
+2025-07-02 11:59:42,965 - MainThread   - INFO - Servidor pronto!
+2025-07-02 11:59:42,966 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-02 11:59:42,966 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-02 11:59:42,967 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-02 11:59:42,987 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.60:5000
+2025-07-02 11:59:42,987 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-02 11:59:43,441 - Thread-3 (process_request_thread) - INFO - Cliente conectado: _Jnv7cXMEJF6SVeOAAAB
+2025-07-02 11:59:47,754 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-07-02 11:59:52,575 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-02 12:01:22,346 - Thread-11 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 12:01:22] "OPTIONS /triagem/1036792-16.2024.8.11.0000 HTTP/1.1" 200 -
+2025-07-02 12:01:22,631 - Thread-12 (process_request_thread) - INFO -  4 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-02 12:01:22,634 - Thread-12 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 12:01:22] "DELETE /triagem/1036792-16.2024.8.11.0000 HTTP/1.1" 200 -
+2025-07-02 12:01:22,660 - Thread-13 (process_request_thread) - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-02 12:01:22,660 - Thread-13 (process_request_thread) - INFO - Extraídos 3 processos da tabela
+2025-07-02 12:01:22,660 - Thread-13 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 12:01:22] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 12:01:26,518 - Thread-14 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 12:01:26] "OPTIONS /triagem/1004080-49.2021.8.11.0041 HTTP/1.1" 200 -
+2025-07-02 12:01:26,825 - Thread-16 (process_request_thread) - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-02 12:01:26,831 - Thread-16 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 12:01:26] "DELETE /triagem/1004080-49.2021.8.11.0041 HTTP/1.1" 200 -
+2025-07-02 12:01:27,089 - Thread-17 (process_request_thread) - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-02 12:01:27,089 - Thread-17 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-02 12:01:27,089 - Thread-17 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 12:01:27] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 12:01:30,383 - Thread-18 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 12:01:30] "OPTIONS /triagem/1046123-35.2020.8.11.0041 HTTP/1.1" 200 -
+2025-07-02 12:01:30,694 - Thread-19 (process_request_thread) - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-02 12:01:30,701 - Thread-19 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 12:01:30] "DELETE /triagem/1046123-35.2020.8.11.0041 HTTP/1.1" 200 -
+2025-07-02 12:01:30,952 - Thread-20 (process_request_thread) - INFO -  1 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-02 12:01:30,952 - Thread-20 (process_request_thread) - INFO - Extraídos 1 processos da tabela
+2025-07-02 12:01:30,953 - Thread-20 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 12:01:30] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 12:01:33,925 - Thread-22 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 12:01:33] "OPTIONS /triagem/1002436-58.2025.8.11.0000 HTTP/1.1" 200 -
+2025-07-02 12:01:34,188 - Thread-23 (process_request_thread) - INFO -  1 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-02 12:01:34,193 - Thread-23 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 12:01:34] "DELETE /triagem/1002436-58.2025.8.11.0000 HTTP/1.1" 200 -
+2025-07-02 12:01:34,231 - Thread-24 (process_request_thread) - INFO -  0 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-02 12:01:34,232 - Thread-24 (process_request_thread) - INFO - Extraídos 0 processos da tabela
+2025-07-02 12:01:34,232 - Thread-24 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 12:01:34] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 12:02:24,329 - Thread-28 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 12:02:24] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-07-02 12:02:24,602 - Thread-29 (process_request_thread) - INFO - Pool de threads criado com 15 workers
+2025-07-02 12:02:24,602 - TriagemWorker_0 - INFO - Iniciando processamento isolado: 7b294ef9
+2025-07-02 12:02:24,602 - Thread-29 (process_request_thread) - INFO - Operação submetida: 7b294ef9
+2025-07-02 12:02:24,602 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 7b294ef9-a1ab-422b-ac97-05ccf12c028f
+2025-07-02 12:02:24,602 - Thread-29 (process_request_thread) - INFO - Operações ativas: 1/15
+2025-07-02 12:02:24,602 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 12:02:24,609 - Thread-29 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 12:02:24] "POST /triagem/form HTTP/1.1" 200 -
+2025-07-02 12:02:24,609 - TriagemWorker_0 - INFO - [7b294ef9] 5% - Conectando...
+2025-07-02 12:02:24,618 - Thread-30 (_handle_event_internal) - INFO - Registrado: 7b294ef9 -> _Jnv7cXMEJF6SVeOAAAB
+2025-07-02 12:02:24,618 - Thread-30 (_handle_event_internal) - INFO - WebSocket registrado: 7b294ef9 -> _Jnv7cXMEJF6SVeOAAAB
+2025-07-02 12:02:24,643 - Thread-31 (process_request_thread) - INFO -  0 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-02 12:02:24,644 - Thread-31 (process_request_thread) - INFO - Extraídos 0 processos da tabela
+2025-07-02 12:02:24,644 - Thread-31 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 12:02:24] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 12:02:25,112 - TriagemWorker_0 - INFO - WebSocket conectado para 7b294ef9
+2025-07-02 12:02:25,112 - TriagemWorker_0 - INFO -  Progresso enviado para 7b294ef9-a1ab-422b-ac97-05ccf12c028f: 10% - Validando dados...
+2025-07-02 12:02:25,112 - TriagemWorker_0 - INFO - [7b294ef9] 10% - Validando dados...
+2025-07-02 12:02:25,112 - TriagemWorker_0 - INFO - Processando: 1046123-35.2020.8.11.0041 [7b294ef9]
+2025-07-02 12:02:25,112 - TriagemWorker_0 - INFO -  Progresso enviado para 7b294ef9-a1ab-422b-ac97-05ccf12c028f: 20% - Processando PDF do PJe...
+2025-07-02 12:02:25,112 - TriagemWorker_0 - INFO - [7b294ef9] 20% - Processando PDF do PJe...
+2025-07-02 12:02:28,892 - TriagemWorker_0 - INFO - Loading faiss with AVX512 support.
+2025-07-02 12:02:28,892 - TriagemWorker_0 - INFO - Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2025-07-02 12:02:28,892 - TriagemWorker_0 - INFO - Loading faiss with AVX2 support.
+2025-07-02 12:02:28,975 - TriagemWorker_0 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-02 12:02:28,991 - TriagemWorker_0 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-02 12:02:29,666 - TriagemWorker_0 - INFO -  Progresso enviado para 7b294ef9-a1ab-422b-ac97-05ccf12c028f: 5% - Inicializando PaddleOCR...
+2025-07-02 12:03:18,276 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 7b294ef9-a1ab-422b-ac97-05ccf12c028f
+2025-07-02 12:03:18,277 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 12:03:18,303 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 7b294ef9-a1ab-422b-ac97-05ccf12c028f
+2025-07-02 12:03:18,304 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 12:03:18,304 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 7b294ef9-a1ab-422b-ac97-05ccf12c028f
+2025-07-02 12:03:18,305 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 12:03:18,311 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 7b294ef9-a1ab-422b-ac97-05ccf12c028f
+2025-07-02 12:03:18,311 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 12:03:18,312 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 7b294ef9-a1ab-422b-ac97-05ccf12c028f
+2025-07-02 12:03:18,312 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 12:03:24,960 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 7b294ef9-a1ab-422b-ac97-05ccf12c028f
+2025-07-02 12:03:24,960 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 12:03:24,960 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 7b294ef9-a1ab-422b-ac97-05ccf12c028f
+2025-07-02 12:03:24,960 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 12:03:24,960 - Thread-403 (_send) - WARNING - Email não encontrado para responsável: 'LEISI'. Usando admin.
+2025-07-02 12:03:46,063 - Thread-403 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-02 12:04:07,105 - Thread-403 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-02 12:04:07,105 - Thread-403 (_send) - WARNING - Tentativa 1 falhou, aguardando 2.0s...
+2025-07-02 12:04:10,410 - Thread-406 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 12:04:10] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 12:04:11,146 - Thread-407 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 12:04:11] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 12:04:19,981 - Thread-409 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 12:04:19] "OPTIONS /triagem/1046123-35.2020.8.11.0041 HTTP/1.1" 200 -
+2025-07-02 12:04:20,246 - Thread-410 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 12:04:20] "DELETE /triagem/1046123-35.2020.8.11.0041 HTTP/1.1" 200 -
+2025-07-02 12:04:20,296 - Thread-411 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 12:04:20] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 12:04:30,245 - Thread-403 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-02 12:04:41,068 - Thread-412 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 12:04:41] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-07-02 12:04:41,414 - Thread-413 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 12:04:41] "POST /triagem/form HTTP/1.1" 200 -
+2025-07-02 12:04:41,414 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 7532b552-ed4f-429b-8f5e-4617fa388892
+2025-07-02 12:04:41,414 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 12:04:41,646 - Thread-415 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 12:04:41] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 12:04:51,278 - Thread-403 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-02 12:04:51,280 - Thread-403 (_send) - WARNING - Tentativa 2 falhou, aguardando 2.0s...
+2025-07-02 12:05:14,330 - Thread-403 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-02 12:05:26,766 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 7532b552-ed4f-429b-8f5e-4617fa388892
+2025-07-02 12:05:26,766 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 12:05:26,782 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 7532b552-ed4f-429b-8f5e-4617fa388892
+2025-07-02 12:05:26,782 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 12:05:26,782 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 7532b552-ed4f-429b-8f5e-4617fa388892
+2025-07-02 12:05:26,782 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 12:05:26,782 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 7532b552-ed4f-429b-8f5e-4617fa388892
+2025-07-02 12:05:26,782 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 12:05:26,782 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 7532b552-ed4f-429b-8f5e-4617fa388892
+2025-07-02 12:05:26,782 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 12:05:33,020 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 7532b552-ed4f-429b-8f5e-4617fa388892
+2025-07-02 12:05:33,020 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 12:05:33,022 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 7532b552-ed4f-429b-8f5e-4617fa388892
+2025-07-02 12:05:33,022 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 12:05:35,373 - Thread-403 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-02 12:05:35,374 - Thread-403 (_send) - ERROR - Falha em todas as 3 tentativas para LEISI
+2025-07-02 12:05:54,053 - Thread-786 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-02 12:05:56,404 - Thread-403 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-02 12:06:15,114 - Thread-786 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-02 12:06:15,116 - Thread-786 (_send) - WARNING - Tentativa 1 falhou, aguardando 2.0s...
+2025-07-02 12:06:17,462 - Thread-403 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-02 12:06:38,158 - Thread-786 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-02 12:06:59,217 - Thread-786 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-02 12:06:59,217 - Thread-786 (_send) - WARNING - Tentativa 2 falhou, aguardando 2.0s...
+2025-07-02 12:07:22,261 - Thread-786 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-02 12:07:43,300 - Thread-786 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-02 12:07:43,300 - Thread-786 (_send) - ERROR - Falha em todas as 3 tentativas para NAIRA
+2025-07-02 12:08:04,334 - Thread-786 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-02 12:08:25,369 - Thread-786 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-02 12:08:32,655 - Thread-795 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 12:08:32] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 12:08:32,890 - Thread-796 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 12:08:32] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 12:08:37,124 - Thread-797 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 12:08:37] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-02 12:08:37,458 - Thread-798 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 12:08:37] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-02 12:08:39,906 - Thread-799 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 12:08:39] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-02 12:08:40,212 - Thread-800 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 12:08:40] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-02 12:08:50,905 - Thread-801 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 12:08:50] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-02 12:08:51,221 - Thread-802 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 12:08:51] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-02 12:09:47,031 - Thread-803 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 12:09:47] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-02 12:09:47,435 - Thread-811 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 12:09:47] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-02 12:09:52,470 - Thread-812 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 12:09:52] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 12:09:53,178 - Thread-813 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 12:09:53] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-02 12:09:53,440 - Thread-814 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 12:09:53] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-02 12:10:29,504 - Thread-815 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 12:10:29] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-02 12:10:29,812 - Thread-817 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 12:10:29] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-02 13:01:02,563 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-02 13:01:16,088 - MainThread   - INFO - CORS configurado
+2025-07-02 13:01:16,096 - MainThread   - INFO - Rotas registradas
+2025-07-02 13:01:16,096 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-02 13:01:16,096 - MainThread   - INFO - Background cleanup iniciado
+2025-07-02 13:01:16,096 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-02 13:01:16,096 - MainThread   - INFO - Inicialização RAG em background
+2025-07-02 13:01:16,096 - MainThread   - INFO - Servidor pronto!
+2025-07-02 13:01:16,096 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-02 13:01:16,096 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-02 13:01:16,096 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-02 13:01:16,114 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.60:5000
+2025-07-02 13:01:16,114 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-02 13:01:17,200 - Thread-3 (process_request_thread) - INFO -  1 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-02 13:01:17,201 - Thread-3 (process_request_thread) - INFO - Extraídos 1 processos da tabela
+2025-07-02 13:01:17,201 - Thread-3 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 13:01:17] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 13:01:17,523 - Thread-5 (process_request_thread) - INFO - Cliente conectado: MJfPB6AvFX_DR_jlAAAB
+2025-07-02 13:01:22,756 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-07-02 13:01:27,815 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-02 13:02:06,058 - Thread-11 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 13:02:06] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-07-02 13:02:06,727 - Thread-12 (process_request_thread) - INFO - Pool de threads criado com 15 workers
+2025-07-02 13:02:06,728 - TriagemWorker_0 - INFO - Iniciando processamento isolado: ef2ccc7f
+2025-07-02 13:02:06,728 - Thread-12 (process_request_thread) - INFO - Operação submetida: ef2ccc7f
+2025-07-02 13:02:06,729 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação ef2ccc7f-2699-45ad-a765-50b4681e8ca1
+2025-07-02 13:02:06,729 - Thread-12 (process_request_thread) - INFO - Operações ativas: 1/15
+2025-07-02 13:02:06,729 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 13:02:06,736 - Thread-12 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 13:02:06] "POST /triagem/form HTTP/1.1" 200 -
+2025-07-02 13:02:06,737 - TriagemWorker_0 - INFO - [ef2ccc7f] 5% - Conectando...
+2025-07-02 13:02:06,757 - Thread-14 (_handle_event_internal) - INFO - Registrado: ef2ccc7f -> MJfPB6AvFX_DR_jlAAAB
+2025-07-02 13:02:06,757 - Thread-14 (_handle_event_internal) - INFO - WebSocket registrado: ef2ccc7f -> MJfPB6AvFX_DR_jlAAAB
+2025-07-02 13:02:06,766 - Thread-13 (process_request_thread) - INFO -  1 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-02 13:02:06,766 - Thread-13 (process_request_thread) - INFO - Extraídos 1 processos da tabela
+2025-07-02 13:02:06,768 - Thread-13 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 13:02:06] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 13:02:07,237 - TriagemWorker_0 - INFO - WebSocket conectado para ef2ccc7f
+2025-07-02 13:02:07,238 - TriagemWorker_0 - INFO -  Progresso enviado para ef2ccc7f-2699-45ad-a765-50b4681e8ca1: 10% - Validando dados...
+2025-07-02 13:02:07,238 - TriagemWorker_0 - INFO - [ef2ccc7f] 10% - Validando dados...
+2025-07-02 13:02:07,238 - TriagemWorker_0 - INFO - Processando: 1002436-58.2025.8.11.0000 [ef2ccc7f]
+2025-07-02 13:02:07,238 - TriagemWorker_0 - INFO -  Progresso enviado para ef2ccc7f-2699-45ad-a765-50b4681e8ca1: 20% - Processando PDF do PJe...
+2025-07-02 13:02:07,239 - TriagemWorker_0 - INFO - [ef2ccc7f] 20% - Processando PDF do PJe...
+2025-07-02 13:02:10,925 - TriagemWorker_0 - INFO - Loading faiss with AVX512 support.
+2025-07-02 13:02:10,925 - TriagemWorker_0 - INFO - Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2025-07-02 13:02:10,925 - TriagemWorker_0 - INFO - Loading faiss with AVX2 support.
+2025-07-02 13:02:10,986 - TriagemWorker_0 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-02 13:02:11,008 - TriagemWorker_0 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-02 13:02:11,602 - TriagemWorker_0 - INFO -  Progresso enviado para ef2ccc7f-2699-45ad-a765-50b4681e8ca1: 5% - Inicializando PaddleOCR...
+2025-07-02 13:13:15,866 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação ef2ccc7f-2699-45ad-a765-50b4681e8ca1
+2025-07-02 13:13:15,882 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 13:13:15,947 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação ef2ccc7f-2699-45ad-a765-50b4681e8ca1
+2025-07-02 13:13:15,948 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 13:13:15,952 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação ef2ccc7f-2699-45ad-a765-50b4681e8ca1
+2025-07-02 13:13:15,952 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 13:13:15,971 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação ef2ccc7f-2699-45ad-a765-50b4681e8ca1
+2025-07-02 13:13:15,971 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 13:13:15,971 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação ef2ccc7f-2699-45ad-a765-50b4681e8ca1
+2025-07-02 13:13:15,971 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 13:13:28,147 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação ef2ccc7f-2699-45ad-a765-50b4681e8ca1
+2025-07-02 13:13:28,148 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 13:13:28,156 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação ef2ccc7f-2699-45ad-a765-50b4681e8ca1
+2025-07-02 13:13:28,156 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 13:13:49,207 - Thread-272 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-02 13:13:56,412 - Thread-275 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 13:13:56] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 13:13:57,764 - Thread-276 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 13:13:57] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 13:14:10,267 - Thread-272 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-02 13:14:10,267 - Thread-272 (_send) - WARNING - Tentativa 1 falhou, aguardando 2.0s...
+2025-07-02 13:14:16,056 - Thread-277 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 13:14:16] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-02 13:14:16,326 - Thread-278 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 13:14:16] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-02 13:14:25,462 - Thread-279 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 13:14:25] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-02 13:14:25,775 - Thread-281 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 13:14:25] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-02 13:14:33,321 - Thread-272 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-02 13:14:54,362 - Thread-272 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-02 13:14:54,363 - Thread-272 (_send) - WARNING - Tentativa 2 falhou, aguardando 2.0s...
+2025-07-02 13:15:17,408 - Thread-272 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-02 13:15:38,518 - Thread-272 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-02 13:15:38,518 - Thread-272 (_send) - ERROR - Falha em todas as 3 tentativas para NATÁLIA
+2025-07-02 13:15:59,576 - Thread-272 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-02 13:16:20,639 - Thread-272 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-02 14:17:54,959 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-02 14:18:11,083 - MainThread   - INFO - CORS configurado
+2025-07-02 14:18:11,090 - MainThread   - INFO - Rotas registradas
+2025-07-02 14:18:11,092 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-02 14:18:11,094 - MainThread   - INFO - Background cleanup iniciado
+2025-07-02 14:18:11,095 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-02 14:18:11,095 - MainThread   - INFO - Inicialização RAG em background
+2025-07-02 14:18:11,097 - MainThread   - INFO - Servidor pronto!
+2025-07-02 14:18:11,097 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-02 14:18:11,098 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-02 14:18:11,098 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-02 14:18:11,116 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.60:5000
+2025-07-02 14:18:11,116 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-02 14:18:11,529 - Thread-3 (process_request_thread) - INFO - Cliente conectado: mT1eqDofQacqP_53AAAB
+2025-07-02 14:18:15,846 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-07-02 14:18:21,116 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-02 14:18:30,868 - Thread-8 (process_request_thread) - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-02 14:18:30,868 - Thread-8 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-02 14:18:30,869 - Thread-8 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:18:30] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 14:19:28,184 - Thread-13 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:19:28] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-07-02 14:19:29,119 - Thread-14 (process_request_thread) - INFO - Pool de threads criado com 15 workers
+2025-07-02 14:19:29,119 - TriagemWorker_0 - INFO - Iniciando processamento isolado: 4a901fe1
+2025-07-02 14:19:29,119 - Thread-14 (process_request_thread) - INFO - Operação submetida: 4a901fe1
+2025-07-02 14:19:29,119 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4a901fe1-1016-4830-bf1b-4032de8b64ab
+2025-07-02 14:19:29,119 - Thread-14 (process_request_thread) - INFO - Operações ativas: 1/15
+2025-07-02 14:19:29,119 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 14:19:29,119 - Thread-14 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:19:29] "POST /triagem/form HTTP/1.1" 200 -
+2025-07-02 14:19:29,119 - TriagemWorker_0 - INFO - [4a901fe1] 5% - Conectando...
+2025-07-02 14:19:29,156 - Thread-16 (_handle_event_internal) - INFO - Registrado: 4a901fe1 -> mT1eqDofQacqP_53AAAB
+2025-07-02 14:19:29,156 - Thread-16 (_handle_event_internal) - INFO - WebSocket registrado: 4a901fe1 -> mT1eqDofQacqP_53AAAB
+2025-07-02 14:19:29,165 - Thread-15 (process_request_thread) - INFO -  2 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-02 14:19:29,166 - Thread-15 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-02 14:19:29,167 - Thread-15 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:19:29] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 14:19:29,632 - TriagemWorker_0 - INFO - WebSocket conectado para 4a901fe1
+2025-07-02 14:19:29,632 - TriagemWorker_0 - INFO -  Progresso enviado para 4a901fe1-1016-4830-bf1b-4032de8b64ab: 10% - Validando dados...
+2025-07-02 14:19:29,632 - TriagemWorker_0 - INFO - [4a901fe1] 10% - Validando dados...
+2025-07-02 14:19:29,632 - TriagemWorker_0 - INFO - Processando: 1004080-49.2021.8.11.0041 [4a901fe1]
+2025-07-02 14:19:29,632 - TriagemWorker_0 - INFO -  Progresso enviado para 4a901fe1-1016-4830-bf1b-4032de8b64ab: 20% - Processando PDF do PJe...
+2025-07-02 14:19:29,632 - TriagemWorker_0 - INFO - [4a901fe1] 20% - Processando PDF do PJe...
+2025-07-02 14:19:35,440 - TriagemWorker_0 - INFO - Loading faiss with AVX512 support.
+2025-07-02 14:19:35,440 - TriagemWorker_0 - INFO - Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2025-07-02 14:19:35,440 - TriagemWorker_0 - INFO - Loading faiss with AVX2 support.
+2025-07-02 14:19:35,507 - TriagemWorker_0 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-02 14:19:35,523 - TriagemWorker_0 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-02 14:19:36,089 - TriagemWorker_0 - INFO -  Progresso enviado para 4a901fe1-1016-4830-bf1b-4032de8b64ab: 5% - Inicializando PaddleOCR...
+2025-07-02 14:21:36,862 - Thread-215 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:21:36] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 14:21:48,429 - Thread-247 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:21:48] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 14:24:24,331 - Thread-3 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:24:24] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-02 14:24:24,389 - Thread-3 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-07-02 14:24:24,729 - Thread-489 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:24:24] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 14:24:24,896 - Thread-494 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:24:24] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 14:24:25,408 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4a901fe1-1016-4830-bf1b-4032de8b64ab
+2025-07-02 14:24:25,408 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 14:24:25,718 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4a901fe1-1016-4830-bf1b-4032de8b64ab
+2025-07-02 14:24:25,719 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 14:24:28,496 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4a901fe1-1016-4830-bf1b-4032de8b64ab
+2025-07-02 14:24:28,496 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 14:24:31,113 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4a901fe1-1016-4830-bf1b-4032de8b64ab
+2025-07-02 14:24:31,113 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 14:24:33,850 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4a901fe1-1016-4830-bf1b-4032de8b64ab
+2025-07-02 14:24:33,851 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 14:24:39,396 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4a901fe1-1016-4830-bf1b-4032de8b64ab
+2025-07-02 14:24:39,402 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 14:24:39,796 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4a901fe1-1016-4830-bf1b-4032de8b64ab
+2025-07-02 14:24:39,796 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 14:24:40,126 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4a901fe1-1016-4830-bf1b-4032de8b64ab
+2025-07-02 14:24:40,126 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 14:24:42,598 - Thread-495 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:24:42] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 14:24:43,326 - Thread-544 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:24:43] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 14:24:44,112 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4a901fe1-1016-4830-bf1b-4032de8b64ab
+2025-07-02 14:24:44,113 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 14:24:44,362 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4a901fe1-1016-4830-bf1b-4032de8b64ab
+2025-07-02 14:24:44,363 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 14:24:44,585 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4a901fe1-1016-4830-bf1b-4032de8b64ab
+2025-07-02 14:24:44,586 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 14:24:44,791 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4a901fe1-1016-4830-bf1b-4032de8b64ab
+2025-07-02 14:24:44,792 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 14:24:44,993 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4a901fe1-1016-4830-bf1b-4032de8b64ab
+2025-07-02 14:24:44,994 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 14:24:45,884 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4a901fe1-1016-4830-bf1b-4032de8b64ab
+2025-07-02 14:24:45,884 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 14:24:46,286 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4a901fe1-1016-4830-bf1b-4032de8b64ab
+2025-07-02 14:24:46,286 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 14:24:46,686 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4a901fe1-1016-4830-bf1b-4032de8b64ab
+2025-07-02 14:24:46,686 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 14:24:46,940 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4a901fe1-1016-4830-bf1b-4032de8b64ab
+2025-07-02 14:24:46,940 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 14:24:47,239 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4a901fe1-1016-4830-bf1b-4032de8b64ab
+2025-07-02 14:24:47,239 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 14:24:47,459 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4a901fe1-1016-4830-bf1b-4032de8b64ab
+2025-07-02 14:24:47,460 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 14:24:47,682 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4a901fe1-1016-4830-bf1b-4032de8b64ab
+2025-07-02 14:24:47,697 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 14:24:47,932 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4a901fe1-1016-4830-bf1b-4032de8b64ab
+2025-07-02 14:24:47,932 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 14:24:52,410 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4a901fe1-1016-4830-bf1b-4032de8b64ab
+2025-07-02 14:24:52,410 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 14:24:52,790 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4a901fe1-1016-4830-bf1b-4032de8b64ab
+2025-07-02 14:24:52,790 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 14:24:53,741 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4a901fe1-1016-4830-bf1b-4032de8b64ab
+2025-07-02 14:24:53,741 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 14:24:54,089 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4a901fe1-1016-4830-bf1b-4032de8b64ab
+2025-07-02 14:24:54,089 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 14:24:54,818 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4a901fe1-1016-4830-bf1b-4032de8b64ab
+2025-07-02 14:24:54,818 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 14:24:55,025 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4a901fe1-1016-4830-bf1b-4032de8b64ab
+2025-07-02 14:24:55,025 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 14:24:55,025 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4a901fe1-1016-4830-bf1b-4032de8b64ab
+2025-07-02 14:24:55,025 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 14:24:55,137 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4a901fe1-1016-4830-bf1b-4032de8b64ab
+2025-07-02 14:24:55,137 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 14:24:55,137 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4a901fe1-1016-4830-bf1b-4032de8b64ab
+2025-07-02 14:24:55,137 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 14:24:55,152 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4a901fe1-1016-4830-bf1b-4032de8b64ab
+2025-07-02 14:24:55,152 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 14:24:55,152 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4a901fe1-1016-4830-bf1b-4032de8b64ab
+2025-07-02 14:24:55,152 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 14:29:07,995 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4a901fe1-1016-4830-bf1b-4032de8b64ab
+2025-07-02 14:29:07,995 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 14:29:07,998 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4a901fe1-1016-4830-bf1b-4032de8b64ab
+2025-07-02 14:29:07,998 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-02 14:29:07,999 - Thread-666 (_send) - WARNING - Email não encontrado para responsável: 'LOURIVAL'. Usando admin.
+2025-07-02 14:29:29,090 - Thread-666 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-02 14:29:50,149 - Thread-666 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-02 14:29:50,151 - Thread-666 (_send) - WARNING - Tentativa 1 falhou, aguardando 2.0s...
+2025-07-02 14:30:13,199 - Thread-666 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-02 14:30:34,238 - Thread-666 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-02 14:30:34,239 - Thread-666 (_send) - WARNING - Tentativa 2 falhou, aguardando 2.0s...
+2025-07-02 14:30:57,339 - Thread-666 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-02 14:31:18,383 - Thread-666 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-02 14:31:18,383 - Thread-666 (_send) - ERROR - Falha em todas as 3 tentativas para LOURIVAL
+2025-07-02 14:31:39,424 - Thread-666 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-02 14:32:00,476 - Thread-666 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-02 14:35:00,414 - Thread-681 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:35:00] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 14:35:01,119 - Thread-682 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:35:01] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 14:35:12,520 - Thread-683 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:35:12] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-02 14:35:12,765 - Thread-684 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:35:12] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-02 14:35:21,896 - Thread-685 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:35:21] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-02 14:35:22,211 - Thread-687 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:35:22] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-02 14:35:52,269 - Thread-688 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:35:52] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-02 14:35:52,575 - Thread-690 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:35:52] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-02 14:36:02,539 - Thread-691 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:36:02] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-02 14:36:02,957 - Thread-696 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:36:02] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-02 14:36:08,190 - Thread-697 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:36:08] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 14:36:08,644 - Thread-698 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:36:08] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-02 14:36:08,911 - Thread-699 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:36:08] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-02 14:36:19,112 - Thread-700 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:36:19] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-02 14:36:19,429 - Thread-701 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:36:19] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-02 14:47:18,885 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-02 14:47:32,279 - MainThread   - INFO - CORS configurado
+2025-07-02 14:47:32,288 - MainThread   - INFO - Rotas registradas
+2025-07-02 14:47:32,289 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-02 14:47:32,290 - MainThread   - INFO - Background cleanup iniciado
+2025-07-02 14:47:32,290 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-02 14:47:32,290 - MainThread   - INFO - Inicialização RAG em background
+2025-07-02 14:47:32,291 - MainThread   - INFO - Servidor pronto!
+2025-07-02 14:47:32,292 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-02 14:47:32,292 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-02 14:47:32,292 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-02 14:47:32,316 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.60:5000
+2025-07-02 14:47:32,316 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-02 14:47:32,503 - Thread-3 (process_request_thread) - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-02 14:47:32,503 - Thread-3 (process_request_thread) - INFO - Extraídos 3 processos da tabela
+2025-07-02 14:47:32,504 - Thread-3 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:47:32] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 14:47:32,757 - Thread-4 (process_request_thread) - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-02 14:47:32,757 - Thread-4 (process_request_thread) - INFO - Extraídos 3 processos da tabela
+2025-07-02 14:47:32,758 - Thread-4 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:47:32] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 14:47:33,692 - Thread-6 (process_request_thread) - INFO - Cliente conectado: j_Ismx75Qi5zJ0U0AAAB
+2025-07-02 14:47:34,901 - Thread-11 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:47:34] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-02 14:47:35,149 - Thread-12 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:47:35] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-02 14:47:38,588 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-07-02 14:47:45,546 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-02 14:47:50,262 - Thread-14 (process_request_thread) - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-02 14:47:50,262 - Thread-14 (process_request_thread) - INFO - Extraídos 3 processos da tabela
+2025-07-02 14:47:50,263 - Thread-14 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:47:50] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 14:47:50,622 - Thread-15 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:47:50] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-02 14:47:50,950 - Thread-16 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:47:50] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-02 14:48:00,365 - Thread-17 (process_request_thread) - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-02 14:48:00,366 - Thread-17 (process_request_thread) - INFO - Extraídos 3 processos da tabela
+2025-07-02 14:48:00,369 - Thread-17 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:48:00] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 14:48:02,456 - Thread-19 (process_request_thread) - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-02 14:48:02,457 - Thread-19 (process_request_thread) - INFO - Extraídos 3 processos da tabela
+2025-07-02 14:48:02,458 - Thread-19 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:48:02] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 14:48:03,864 - Thread-20 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:48:03] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-02 14:48:04,183 - Thread-21 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:48:04] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-02 14:54:31,995 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-02 14:54:31,997 - MainThread   - INFO - Pool de threads criado com 15 workers
+2025-07-02 14:54:31,998 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-02 14:54:31,998 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-02 14:54:41,370 - MainThread   - INFO - CORS configurado
+2025-07-02 14:54:41,375 - MainThread   - INFO - Rotas registradas
+2025-07-02 14:54:41,376 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-02 14:54:41,377 - MainThread   - INFO - Background cleanup iniciado
+2025-07-02 14:54:41,377 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-02 14:54:41,377 - MainThread   - INFO - Inicialização RAG em background
+2025-07-02 14:54:41,377 - MainThread   - INFO - Servidor pronto!
+2025-07-02 14:54:41,378 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-02 14:54:41,378 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-02 14:54:41,378 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-02 14:54:41,393 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.60:5000
+2025-07-02 14:54:41,393 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-02 14:54:43,403 - Thread-4 (process_request_thread) - INFO - Cliente conectado: B7VOxlKMOBSSpjgKAAAB
+2025-07-02 14:54:45,629 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-07-02 14:54:49,975 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-02 14:54:50,538 - Thread-9 (process_request_thread) - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-02 14:54:50,539 - Thread-9 (process_request_thread) - INFO - Extraídos 3 processos da tabela
+2025-07-02 14:54:50,540 - Thread-9 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:54:50] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 14:54:50,961 - Thread-10 (process_request_thread) - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-02 14:54:50,962 - Thread-10 (process_request_thread) - INFO - Extraídos 3 processos da tabela
+2025-07-02 14:54:50,963 - Thread-10 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:54:50] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 14:54:56,061 - Thread-11 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:54:56] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-02 14:54:56,315 - Thread-12 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:54:56] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-02 14:55:26,536 - Thread-15 (process_request_thread) - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-02 14:55:26,536 - Thread-15 (process_request_thread) - INFO - Extraídos 3 processos da tabela
+2025-07-02 14:55:26,537 - Thread-15 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:55:26] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 14:55:26,779 - Thread-16 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:55:26] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-02 14:55:26,933 - Thread-17 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:55:26] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-02 14:56:27,701 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-02 14:56:27,701 - MainThread   - INFO - Pool de threads criado com 15 workers
+2025-07-02 14:56:27,701 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-02 14:56:27,701 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-02 14:56:38,174 - MainThread   - INFO - CORS configurado
+2025-07-02 14:56:38,179 - MainThread   - INFO - Rotas registradas
+2025-07-02 14:56:38,180 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-02 14:56:38,181 - MainThread   - INFO - Background cleanup iniciado
+2025-07-02 14:56:38,182 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-02 14:56:38,182 - MainThread   - INFO - Inicialização RAG em background
+2025-07-02 14:56:38,183 - MainThread   - INFO - Servidor pronto!
+2025-07-02 14:56:38,183 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-02 14:56:38,183 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-02 14:56:38,183 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-02 14:56:38,199 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.60:5000
+2025-07-02 14:56:38,200 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-02 14:56:38,398 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-07-02 14:56:40,291 - Thread-3 (process_request_thread) - INFO - Cliente conectado: cn4lxkNeXNJSnxbiAAAB
+2025-07-02 14:56:44,901 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-02 14:57:12,789 - Thread-9 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:57:12] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-02 14:57:13,053 - Thread-10 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 14:57:13] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-02 15:08:16,678 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-02 15:08:16,678 - MainThread   - INFO - Pool de threads criado com 15 workers
+2025-07-02 15:08:16,678 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-02 15:08:16,679 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-02 15:08:26,143 - MainThread   - INFO - CORS configurado
+2025-07-02 15:08:26,150 - MainThread   - INFO - Rotas registradas
+2025-07-02 15:08:26,151 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-02 15:08:26,153 - MainThread   - INFO - Background cleanup iniciado
+2025-07-02 15:08:26,153 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-02 15:08:26,153 - MainThread   - INFO - Inicialização RAG em background
+2025-07-02 15:08:26,154 - MainThread   - INFO - Servidor pronto!
+2025-07-02 15:08:26,154 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-02 15:08:26,155 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-02 15:08:26,155 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-02 15:08:26,171 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.60:5000
+2025-07-02 15:08:26,172 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-02 15:08:26,710 - Thread-3 (process_request_thread) - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-02 15:08:26,717 - Thread-3 (process_request_thread) - INFO - Extraídos 3 processos da tabela
+2025-07-02 15:08:26,719 - Thread-3 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 15:08:26] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 15:08:30,903 - Thread-5 (process_request_thread) - INFO - Cliente conectado: bj5WwXqXpSJr8BI5AAAB
+2025-07-02 15:08:36,348 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-07-02 15:08:37,694 - Thread-10 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 15:08:37] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-02 15:08:38,931 - Thread-11 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 15:08:38] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-02 15:09:00,728 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-02 15:09:07,364 - Thread-13 (process_request_thread) - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-02 15:09:07,364 - Thread-13 (process_request_thread) - INFO - Extraídos 3 processos da tabela
+2025-07-02 15:09:07,364 - Thread-13 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 15:09:07] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 15:09:07,882 - Thread-14 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 15:09:07] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-02 15:09:08,196 - Thread-15 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 15:09:08] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-02 15:11:28,672 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-02 15:11:28,672 - MainThread   - INFO - Pool de threads criado com 15 workers
+2025-07-02 15:11:28,672 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-02 15:11:28,672 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-02 15:11:39,603 - MainThread   - INFO - CORS configurado
+2025-07-02 15:11:39,621 - MainThread   - INFO - Rotas registradas
+2025-07-02 15:11:39,621 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-02 15:11:39,621 - MainThread   - INFO - Background cleanup iniciado
+2025-07-02 15:11:39,621 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-02 15:11:39,621 - MainThread   - INFO - Inicialização RAG em background
+2025-07-02 15:11:39,621 - MainThread   - INFO - Servidor pronto!
+2025-07-02 15:11:39,621 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-02 15:11:39,621 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-02 15:11:39,621 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-02 15:11:39,642 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.60:5000
+2025-07-02 15:11:39,642 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-02 15:11:39,744 - Thread-3 (process_request_thread) - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-02 15:11:39,744 - Thread-3 (process_request_thread) - INFO - Extraídos 3 processos da tabela
+2025-07-02 15:11:39,744 - Thread-3 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 15:11:39] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 15:11:39,834 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-07-02 15:11:41,810 - Thread-5 (process_request_thread) - INFO - Cliente conectado: 9gJBaKnc-TYou2KFAAAB
+2025-07-02 15:11:46,422 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-02 15:11:56,796 - Thread-4 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 15:11:56] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-02 15:11:57,118 - Thread-10 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 15:11:57] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-02 15:12:58,181 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-02 15:12:58,181 - MainThread   - INFO - Pool de threads criado com 15 workers
+2025-07-02 15:12:58,181 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-02 15:12:58,181 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-02 15:13:03,602 - MainThread   - INFO - CORS configurado
+2025-07-02 15:13:03,602 - MainThread   - INFO - Rotas registradas
+2025-07-02 15:13:03,602 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-02 15:13:03,602 - MainThread   - INFO - Background cleanup iniciado
+2025-07-02 15:13:03,602 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-02 15:13:03,602 - MainThread   - INFO - Inicialização RAG em background
+2025-07-02 15:13:03,617 - MainThread   - INFO - Servidor pronto!
+2025-07-02 15:13:03,617 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-02 15:13:03,617 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-02 15:13:03,617 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-02 15:13:03,617 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.60:5000
+2025-07-02 15:13:03,617 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-02 15:13:03,801 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-07-02 15:13:03,859 - Thread-3 (process_request_thread) - INFO - Cliente conectado: EXHt4nEBrHlW3faZAAAB
+2025-07-02 15:13:10,795 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-02 15:13:20,829 - Thread-8 (process_request_thread) - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-02 15:13:20,829 - Thread-8 (process_request_thread) - INFO - Extraídos 3 processos da tabela
+2025-07-02 15:13:20,829 - Thread-8 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 15:13:20] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 15:13:22,625 - Thread-9 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 15:13:22] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-02 15:13:22,946 - Thread-10 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 15:13:22] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-02 15:14:24,564 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-02 15:14:24,565 - MainThread   - INFO - Pool de threads criado com 15 workers
+2025-07-02 15:14:24,565 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-02 15:14:24,565 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-02 15:14:30,285 - MainThread   - INFO - CORS configurado
+2025-07-02 15:14:30,285 - MainThread   - INFO - Rotas registradas
+2025-07-02 15:14:30,285 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-02 15:14:30,285 - MainThread   - INFO - Background cleanup iniciado
+2025-07-02 15:14:30,285 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-02 15:14:30,285 - MainThread   - INFO - Inicialização RAG em background
+2025-07-02 15:14:30,285 - MainThread   - INFO - Servidor pronto!
+2025-07-02 15:14:30,285 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-02 15:14:30,285 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-02 15:14:30,285 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-02 15:14:30,308 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.60:5000
+2025-07-02 15:14:30,308 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-02 15:14:30,497 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-07-02 15:14:30,928 - Thread-3 (process_request_thread) - INFO - Cliente conectado: e9ONl_fjcMAXHnJ2AAAB
+2025-07-02 15:14:34,559 - Thread-8 (process_request_thread) - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-02 15:14:34,560 - Thread-8 (process_request_thread) - INFO - Extraídos 3 processos da tabela
+2025-07-02 15:14:34,563 - Thread-8 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 15:14:34] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 15:14:37,369 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-02 15:14:39,499 - Thread-9 (process_request_thread) - ERROR - Exception on /api/rag/status [GET]
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anacl\Documents\TJMT\gmv-server\routes\rag_routes.py", line 74, in status
+    return jsonify(get_rag_status())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\json\provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\json\provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\json\provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type UltraFastRAG is not JSON serializable
+2025-07-02 15:14:39,509 - Thread-9 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 15:14:39] "[35m[1mGET /api/rag/status HTTP/1.1[0m" 500 -
+2025-07-02 15:14:39,823 - Thread-10 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 15:14:39] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-02 15:14:45,923 - Thread-11 (process_request_thread) - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-02 15:14:45,973 - Thread-11 (process_request_thread) - INFO - Extraídos 3 processos da tabela
+2025-07-02 15:14:45,974 - Thread-11 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 15:14:45] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 15:14:46,870 - Thread-12 (process_request_thread) - ERROR - Exception on /api/rag/status [GET]
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anacl\Documents\TJMT\gmv-server\routes\rag_routes.py", line 74, in status
+    return jsonify(get_rag_status())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\json\provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\json\provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\json\provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type UltraFastRAG is not JSON serializable
+2025-07-02 15:14:46,874 - Thread-12 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 15:14:46] "[35m[1mGET /api/rag/status HTTP/1.1[0m" 500 -
+2025-07-02 15:14:47,124 - Thread-13 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 15:14:47] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-02 15:15:04,476 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-02 15:15:04,477 - MainThread   - INFO - Pool de threads criado com 15 workers
+2025-07-02 15:15:04,477 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-02 15:15:04,477 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-02 15:15:11,049 - MainThread   - INFO - CORS configurado
+2025-07-02 15:15:11,064 - MainThread   - INFO - Rotas registradas
+2025-07-02 15:15:11,066 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-02 15:15:11,067 - MainThread   - INFO - Background cleanup iniciado
+2025-07-02 15:15:11,067 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-02 15:15:11,067 - MainThread   - INFO - Inicialização RAG em background
+2025-07-02 15:15:11,067 - MainThread   - INFO - Servidor pronto!
+2025-07-02 15:15:11,067 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-02 15:15:11,067 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-02 15:15:11,067 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-02 15:15:11,067 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.60:5000
+2025-07-02 15:15:11,081 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-02 15:15:11,251 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-07-02 15:15:11,546 - Thread-3 (process_request_thread) - INFO - Cliente conectado: j99kpftdTAGlda7FAAAB
+2025-07-02 15:15:18,170 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-02 15:15:20,657 - Thread-8 (process_request_thread) - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-02 15:15:20,657 - Thread-8 (process_request_thread) - INFO - Extraídos 3 processos da tabela
+2025-07-02 15:15:20,657 - Thread-8 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 15:15:20] "GET /triagem HTTP/1.1" 200 -
+2025-07-02 15:15:21,291 - Thread-9 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 15:15:21] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-02 15:15:21,656 - Thread-10 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 15:15:21] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-02 15:37:22,068 - Thread-3 (process_request_thread) - INFO - Cliente desconectado: j99kpftdTAGlda7FAAAB
+2025-07-02 15:42:58,365 - Thread-3 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 15:42:58] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-02 15:42:58,617 - Thread-3 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-07-02 15:43:00,919 - Thread-65 (process_request_thread) - INFO - Cliente conectado: hY636E1ZsEnXc5-NAAAD
+2025-07-02 15:43:01,311 - Thread-65 (process_request_thread) - INFO - Cliente desconectado: hY636E1ZsEnXc5-NAAAD
+2025-07-02 15:43:05,759 - Thread-70 (process_request_thread) - INFO - Cliente conectado: Y0qtpst4n64m6lH8AAAF
+2025-07-02 15:43:05,975 - Thread-74 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 15:43:05] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-02 15:43:06,565 - Thread-75 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 15:43:06] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-02 15:48:25,500 - Thread-70 (process_request_thread) - INFO - Cliente desconectado: Y0qtpst4n64m6lH8AAAF
+2025-07-02 15:48:25,510 - Thread-70 (process_request_thread) - INFO - 127.0.0.1 - - [02/Jul/2025 15:48:25] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-02 15:48:25,515 - Thread-70 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-07-03 08:46:39,259 - Thread-88 (process_request_thread) - INFO - Cliente conectado: kA6hRkkfHcRAKoA3AAAH
+2025-07-03 09:15:09,307 - Thread-88 (process_request_thread) - INFO - Cliente desconectado: kA6hRkkfHcRAKoA3AAAH
+2025-07-03 09:15:10,489 - Thread-160 (process_request_thread) - INFO - Cliente conectado: czpbiE4hWa3qamC9AAAJ
+2025-07-03 09:15:10,529 - Thread-164 (process_request_thread) - INFO - 127.0.0.1 - - [03/Jul/2025 09:15:10] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-03 09:15:10,761 - Thread-165 (process_request_thread) - INFO - 127.0.0.1 - - [03/Jul/2025 09:15:10] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-03 09:48:03,723 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-03 09:48:03,747 - MainThread   - INFO - Pool de threads criado com 15 workers
+2025-07-03 09:48:03,747 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-03 09:48:03,747 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-03 09:48:15,040 - MainThread   - INFO - CORS configurado
+2025-07-03 09:48:15,054 - MainThread   - INFO - Rotas registradas
+2025-07-03 09:48:15,055 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-03 09:48:15,055 - MainThread   - INFO - Background cleanup iniciado
+2025-07-03 09:48:15,055 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-03 09:48:15,055 - MainThread   - INFO - Inicialização RAG em background
+2025-07-03 09:48:15,055 - MainThread   - INFO - Servidor pronto!
+2025-07-03 09:48:15,055 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-03 09:48:15,055 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-03 09:48:15,055 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-03 09:48:15,078 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.67:5000
+2025-07-03 09:48:15,078 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-03 09:48:16,066 - Thread-3 (process_request_thread) - INFO - Cliente conectado: ZAhhbQlp4XI34GQNAAAB
+2025-07-03 09:48:24,211 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-07-03 09:48:28,623 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-03 09:49:39,013 - Thread-11 (process_request_thread) - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-03 09:49:39,013 - Thread-11 (process_request_thread) - INFO - Extraídos 3 processos da tabela
+2025-07-03 09:49:39,015 - Thread-11 (process_request_thread) - INFO - 127.0.0.1 - - [03/Jul/2025 09:49:39] "GET /triagem HTTP/1.1" 200 -
+2025-07-03 09:49:40,755 - Thread-12 (process_request_thread) - INFO - 127.0.0.1 - - [03/Jul/2025 09:49:40] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-03 09:49:41,076 - Thread-13 (process_request_thread) - INFO - 127.0.0.1 - - [03/Jul/2025 09:49:41] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-03 09:53:39,309 - Thread-24 (process_request_thread) - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-03 09:53:39,309 - Thread-24 (process_request_thread) - INFO - Extraídos 3 processos da tabela
+2025-07-03 09:53:39,310 - Thread-24 (process_request_thread) - INFO - 127.0.0.1 - - [03/Jul/2025 09:53:39] "GET /triagem HTTP/1.1" 200 -
+2025-07-03 09:53:39,562 - Thread-25 (process_request_thread) - INFO - 127.0.0.1 - - [03/Jul/2025 09:53:39] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-03 09:53:39,628 - Thread-26 (process_request_thread) - INFO - 127.0.0.1 - - [03/Jul/2025 09:53:39] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-03 09:53:48,015 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-03 09:53:48,016 - MainThread   - INFO - Pool de threads criado com 15 workers
+2025-07-03 09:53:48,016 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-03 09:53:48,016 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-03 09:53:56,562 - MainThread   - INFO - CORS configurado
+2025-07-03 09:53:56,562 - MainThread   - INFO - Rotas registradas
+2025-07-03 09:53:56,562 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-03 09:53:56,562 - MainThread   - INFO - Background cleanup iniciado
+2025-07-03 09:53:56,562 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-03 09:53:56,562 - MainThread   - INFO - Inicialização RAG em background
+2025-07-03 09:53:56,562 - MainThread   - INFO - Servidor pronto!
+2025-07-03 09:53:56,562 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-03 09:53:56,562 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-03 09:53:56,562 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-03 09:53:56,578 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.67:5000
+2025-07-03 09:53:56,578 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-03 09:54:00,802 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-07-03 09:54:01,597 - Thread-3 (process_request_thread) - INFO - Cliente conectado: EBfqvl913zInxecJAAAB
+2025-07-03 09:54:01,869 - Thread-8 (process_request_thread) - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-03 09:54:01,869 - Thread-8 (process_request_thread) - INFO - Extraídos 3 processos da tabela
+2025-07-03 09:54:01,872 - Thread-8 (process_request_thread) - INFO - 127.0.0.1 - - [03/Jul/2025 09:54:01] "GET /triagem HTTP/1.1" 200 -
+2025-07-03 09:54:06,110 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-03 09:54:12,830 - Thread-10 (process_request_thread) - INFO - 127.0.0.1 - - [03/Jul/2025 09:54:12] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-03 09:54:13,090 - Thread-11 (process_request_thread) - INFO - 127.0.0.1 - - [03/Jul/2025 09:54:13] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-03 09:55:55,091 - Thread-17 (process_request_thread) - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-03 09:55:55,091 - Thread-17 (process_request_thread) - INFO - Extraídos 3 processos da tabela
+2025-07-03 09:55:55,091 - Thread-17 (process_request_thread) - INFO - 127.0.0.1 - - [03/Jul/2025 09:55:55] "GET /triagem HTTP/1.1" 200 -
+2025-07-03 09:55:55,679 - Thread-18 (process_request_thread) - INFO - 127.0.0.1 - - [03/Jul/2025 09:55:55] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-03 09:55:56,024 - Thread-19 (process_request_thread) - INFO - 127.0.0.1 - - [03/Jul/2025 09:55:56] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-03 09:56:31,752 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-03 09:56:31,752 - MainThread   - INFO - Pool de threads criado com 15 workers
+2025-07-03 09:56:31,752 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-03 09:56:31,752 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-03 09:56:39,527 - MainThread   - INFO - CORS configurado
+2025-07-03 09:56:39,533 - MainThread   - INFO - Rotas registradas
+2025-07-03 09:56:39,534 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-03 09:56:39,535 - MainThread   - INFO - Background cleanup iniciado
+2025-07-03 09:56:39,536 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-03 09:56:39,536 - MainThread   - INFO - Inicialização RAG em background
+2025-07-03 09:56:39,536 - MainThread   - INFO - Servidor pronto!
+2025-07-03 09:56:39,536 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-03 09:56:39,537 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-03 09:56:39,537 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-03 09:56:39,561 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.67:5000
+2025-07-03 09:56:39,561 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-03 09:56:39,583 - Thread-3 (process_request_thread) - INFO - Cliente conectado: d9JNJ6K6uxFMFsaDAAAB
+2025-07-03 09:56:39,744 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-07-03 09:56:39,811 - Thread-8 (process_request_thread) - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-03 09:56:39,811 - Thread-8 (process_request_thread) - INFO - Extraídos 3 processos da tabela
+2025-07-03 09:56:39,812 - Thread-8 (process_request_thread) - INFO - 127.0.0.1 - - [03/Jul/2025 09:56:39] "GET /triagem HTTP/1.1" 200 -
+2025-07-03 09:56:47,261 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-03 09:56:58,593 - Thread-10 (process_request_thread) - INFO - 127.0.0.1 - - [03/Jul/2025 09:56:58] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-03 09:56:58,859 - Thread-11 (process_request_thread) - INFO - 127.0.0.1 - - [03/Jul/2025 09:56:58] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-03 09:57:38,411 - Thread-3 (process_request_thread) - INFO - Cliente desconectado: d9JNJ6K6uxFMFsaDAAAB
+2025-07-03 09:57:39,138 - Thread-12 (process_request_thread) - INFO - 127.0.0.1 - - [03/Jul/2025 09:57:39] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-03 09:57:39,536 - Thread-15 (process_request_thread) - INFO - Cliente conectado: keAfv7FVQc-DsT9aAAAD
+2025-07-03 09:57:39,554 - Thread-19 (process_request_thread) - INFO - 127.0.0.1 - - [03/Jul/2025 09:57:39] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-03 09:57:45,733 - Thread-20 (process_request_thread) - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-03 09:57:45,733 - Thread-20 (process_request_thread) - INFO - Extraídos 3 processos da tabela
+2025-07-03 09:57:45,734 - Thread-20 (process_request_thread) - INFO - 127.0.0.1 - - [03/Jul/2025 09:57:45] "GET /triagem HTTP/1.1" 200 -
+2025-07-03 09:57:47,029 - Thread-21 (process_request_thread) - INFO - 127.0.0.1 - - [03/Jul/2025 09:57:47] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-03 09:57:47,287 - Thread-22 (process_request_thread) - INFO - 127.0.0.1 - - [03/Jul/2025 09:57:47] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-03 09:57:58,022 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-03 09:57:58,023 - MainThread   - INFO - Pool de threads criado com 15 workers
+2025-07-03 09:57:58,023 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-03 09:57:58,023 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-03 09:58:04,157 - MainThread   - INFO - CORS configurado
+2025-07-03 09:58:04,160 - MainThread   - INFO - Rotas registradas
+2025-07-03 09:58:04,160 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-03 09:58:04,160 - MainThread   - INFO - Background cleanup iniciado
+2025-07-03 09:58:04,160 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-03 09:58:04,160 - MainThread   - INFO - Inicialização RAG em background
+2025-07-03 09:58:04,160 - MainThread   - INFO - Servidor pronto!
+2025-07-03 09:58:04,160 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-03 09:58:04,160 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-03 09:58:04,160 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-03 09:58:04,173 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.67:5000
+2025-07-03 09:58:04,173 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-03 09:58:04,351 - Thread-3 (process_request_thread) - INFO - Cliente conectado: GlFtySxwV41z6RBWAAAB
+2025-07-03 09:58:04,359 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-07-03 09:58:10,955 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-03 10:07:36,045 - Thread-30 (process_request_thread) - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-03 10:07:36,045 - Thread-30 (process_request_thread) - INFO - Extraídos 3 processos da tabela
+2025-07-03 10:07:36,051 - Thread-30 (process_request_thread) - INFO - 127.0.0.1 - - [03/Jul/2025 10:07:36] "GET /triagem HTTP/1.1" 200 -
+2025-07-03 10:07:36,764 - Thread-31 (process_request_thread) - ERROR - Exception on /api/rag/status [GET]
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anacl\Documents\TJMT\gmv-server\routes\rag_routes.py", line 74, in status
+    return jsonify(get_rag_status())
+                   ^^^^^^^^^^^^^^^^
+  File "C:\Users\anacl\Documents\TJMT\gmv-server\adaptive_rag.py", line 117, in get_rag_status
+    "teste":rag_system.testando,
+            ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'UltraFastRAG' object has no attribute 'testando'
+2025-07-03 10:07:36,772 - Thread-31 (process_request_thread) - INFO - 127.0.0.1 - - [03/Jul/2025 10:07:36] "[35m[1mGET /api/rag/status HTTP/1.1[0m" 500 -
+2025-07-03 10:07:37,098 - Thread-32 (process_request_thread) - INFO - 127.0.0.1 - - [03/Jul/2025 10:07:37] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-03 10:07:38,779 - Thread-33 (process_request_thread) - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-03 10:07:38,779 - Thread-33 (process_request_thread) - INFO - Extraídos 3 processos da tabela
+2025-07-03 10:07:38,781 - Thread-33 (process_request_thread) - INFO - 127.0.0.1 - - [03/Jul/2025 10:07:38] "GET /triagem HTTP/1.1" 200 -
+2025-07-03 10:07:40,511 - Thread-35 (process_request_thread) - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-03 10:07:40,511 - Thread-35 (process_request_thread) - INFO - Extraídos 3 processos da tabela
+2025-07-03 10:07:40,511 - Thread-35 (process_request_thread) - INFO - 127.0.0.1 - - [03/Jul/2025 10:07:40] "GET /triagem HTTP/1.1" 200 -
+2025-07-03 10:07:57,109 - Thread-36 (process_request_thread) - ERROR - Exception on /api/rag/status [GET]
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anacl\Documents\TJMT\gmv-server\routes\rag_routes.py", line 74, in status
+    return jsonify(get_rag_status())
+                   ^^^^^^^^^^^^^^^^
+  File "C:\Users\anacl\Documents\TJMT\gmv-server\adaptive_rag.py", line 117, in get_rag_status
+    "teste":rag_system.testando,
+            ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'UltraFastRAG' object has no attribute 'testando'
+2025-07-03 10:07:57,111 - Thread-36 (process_request_thread) - INFO - 127.0.0.1 - - [03/Jul/2025 10:07:57] "[35m[1mGET /api/rag/status HTTP/1.1[0m" 500 -
+2025-07-03 10:07:57,440 - Thread-37 (process_request_thread) - INFO - 127.0.0.1 - - [03/Jul/2025 10:07:57] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-03 10:09:11,685 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-03 10:09:11,685 - MainThread   - INFO - Pool de threads criado com 15 workers
+2025-07-03 10:09:11,686 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-03 10:09:11,686 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
