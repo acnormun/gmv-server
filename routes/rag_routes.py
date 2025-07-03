@@ -31,7 +31,6 @@ def _parse_front_matter(text: str):
 
 def _load_process_documents(base_path: str, processos: List[str]):
     documentos = []
-    print('AQUIII', processos)
     for numero in processos:
         numero_sanitizado = numero.replace('/', '-')
         pasta = os.path.join(base_path, numero_sanitizado, 'markdowns')
@@ -115,12 +114,25 @@ def query():
     question = data['question'].strip()
     if not question:
         return jsonify({"success": False, "message": "Pergunta não pode ser vazia"})
-    start_time = time.time()
-    result = rag.query(question)
+    processos_ctx = data.get('context')
+    if processos_ctx is not None:
+        if not isinstance(processos_ctx, list):
+            return jsonify({"success": False, "message": "Campo 'context' deve ser uma lista"})
+        k = data.get('k', 5)
+        try:
+            k = int(k)
+        except (ValueError, TypeError):
+            k = 5
+        start_time = time.time()
+        result = query_with_specific_context_helper(rag, question, processos_ctx, k)
+    else:
+        start_time = time.time()
+        result = rag.query(question)
     processing_time = time.time() - start_time
     if 'error' in result:
         return jsonify({"success": False, "message": result['error']})
-    result['processing_time'] = round(processing_time, 2)
+    if 'processing_time' not in result:
+        result['processing_time'] = round(processing_time, 2)
     return jsonify({"success": True, "data": result})
 
 @rag_bp.route('/query-with-context', methods=['POST'])

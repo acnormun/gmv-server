@@ -43,7 +43,7 @@ except ImportError:
 
 @dataclass
 class UltraFastRAGConfig:
-    model_name: str = "qwen3:1.7b"
+    model_name: str = "gemma3:4b"
     temperature: float = 0.0
     chunk_size: int = 800
     chunk_overlap: int = 200
@@ -249,7 +249,7 @@ A responsabilidade dos entes federativos na saúde é solidária, podendo qualqu
             with open(os.path.join(test_dir, "processo_teste.md"), "w", encoding="utf-8") as f:
                 f.write(test_content)
         config = UltraFastRAGConfig(
-            model_name="qwen3:1.7b",
+            model_name="gemma3:4b",
             temperature=0.1,
             data_dir=test_dir,
             use_ollama_embeddings=True,

@@ -33,7 +33,7 @@ except ImportError:
 
 @dataclass
 class UltraFastRAGConfig:
-    model_name: str = "qwen3:1.7b"
+    model_name: str = "gemma3:4b"
     temperature: float = 0.0
     chunk_size: int = 2000
     chunk_overlap: int = 400
@@ -542,7 +542,7 @@ optimized_rag_system = None
 def init_optimized_rag():
     global optimized_rag_system
     config = UltraFastRAGConfig(
-        model_name="qwen3:1.7b",
+        model_name="gemma3:4b",
         enable_cache=True,
         enable_parallel_search=True,
         enable_preprocessing=True,
