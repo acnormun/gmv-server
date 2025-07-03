@@ -64,6 +64,7 @@ def extrair_tabela_md(arquivo_md):
                 "status": limpar(row.get("Status")),
                 "ultimaAtualizacao": limpar(row.get("Última Atualização")),
                 "suspeitos": limpar(row.get('Suspeitos')),
+                "prioridade": limpar(row.get("Prioridade")),
                 "comentarios": limpar(row.get("Comentários")) if "Comentários" in row else ""
             })
         

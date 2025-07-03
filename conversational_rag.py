@@ -307,7 +307,6 @@ def enhance_rag_with_conversation(rag_system):
             return original_query(question, top_k)
     rag_system.query = enhanced_query
     rag_system.conversational_handler = smart_handler
-    logger.info("✅ Sistema RAG melhorado com capacidades conversacionais!")
     return rag_system
 
 def test_conversational_responses():

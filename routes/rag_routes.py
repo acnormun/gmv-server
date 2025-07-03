@@ -3,6 +3,7 @@ from flask import Blueprint, jsonify, request
 import threading
 import time
 import os
+import re
 
 rag_bp = Blueprint('rag', __name__, url_prefix='/api/rag')
 
@@ -12,6 +13,56 @@ def get_rag():
         return rag_system, None
     except Exception as e:
         return None, str(e)
+
+def _parse_front_matter(text: str):
+    if text.startswith('---'):
+        end = text.find('---', 3)
+        if end != -1:
+            yaml_block = text[3:end]
+            metadata = {}
+            for line in yaml_block.splitlines():
+                if ':' in line:
+                    key, value = line.split(':', 1)
+                    metadata[key.strip()] = value.strip().strip('"\'')
+            body = text[end + 3:].lstrip()
+            return metadata, body
+    return {}, text
+
+
+def _load_process_documents(base_path: str, processos: List[str]):
+    documentos = []
+    for numero in processos:
+        numero_sanitizado = numero.replace('/', '-')
+        pasta = os.path.join(base_path, numero_sanitizado, 'markdowns')
+        if not os.path.isdir(pasta):
+            continue
+        for nome in os.listdir(pasta):
+            if nome.lower().endswith('.md'):
+                caminho = os.path.join(pasta, nome)
+                try:
+                    with open(caminho, 'r', encoding='utf-8') as f:
+                        texto = f.read()
+                    meta, corpo = _parse_front_matter(texto)
+                    meta['numero_processo'] = numero
+                    documentos.append({'content': corpo, 'metadata': meta, 'filename': nome})
+                except Exception:
+                    continue
+    return documentos
+
+
+def _select_relevant_docs(docs: List[Dict[str, Any]], question: str, k: int):
+    palavras = re.findall(r'\b\w{3,}\b', question.lower())
+    pontuados = []
+    for doc in docs:
+        texto = doc['content'].lower()
+        meta_text = ' '.join(str(v).lower() for v in doc['metadata'].values() if isinstance(v, str))
+        score = sum(texto.count(p) for p in palavras) + sum(meta_text.count(p) for p in palavras)
+        pontuados.append((score, doc))
+    pontuados.sort(key=lambda x: x[0], reverse=True)
+    selecionados = [d for s, d in pontuados if s > 0][:k]
+    if not selecionados:
+        selecionados = [d for _, d in pontuados[:k]]
+    return selecionados
 
 @rag_bp.route('/status', methods=['GET'])
 def status():
@@ -63,12 +114,25 @@ def query():
     question = data['question'].strip()
     if not question:
         return jsonify({"success": False, "message": "Pergunta não pode ser vazia"})
-    start_time = time.time()
-    result = rag.query(question)
+    processos_ctx = data.get('context')
+    if processos_ctx is not None:
+        if not isinstance(processos_ctx, list):
+            return jsonify({"success": False, "message": "Campo 'context' deve ser uma lista"})
+        k = data.get('k', 5)
+        try:
+            k = int(k)
+        except (ValueError, TypeError):
+            k = 5
+        start_time = time.time()
+        result = query_with_specific_context_helper(rag, question, processos_ctx, k)
+    else:
+        start_time = time.time()
+        result = rag.query(question)
     processing_time = time.time() - start_time
     if 'error' in result:
         return jsonify({"success": False, "message": result['error']})
-    result['processing_time'] = round(processing_time, 2)
+    if 'processing_time' not in result:
+        result['processing_time'] = round(processing_time, 2)
     return jsonify({"success": True, "data": result})
 
 @rag_bp.route('/query-with-context', methods=['POST'])
@@ -114,64 +178,23 @@ def query_with_context():
 
 def query_with_specific_context_helper(rag, question: str, processos_selecionados: List[str], k: int = 5) -> Dict[str, Any]:
     try:
-        import time
         start_time = time.time()
-        print(f"⚡ CONSULTA RÁPIDA:")
+        print("⚡ CONSULTA DIRETA POR PASTAS")
         print(f"   ❓ Pergunta: {question}")
         print(f"   ⚖️ Processos: {processos_selecionados}")
         if not processos_selecionados:
             return rag.query(question, top_k=k)
-        relevant_docs = []
-        for processo in processos_selecionados:
-            print(f"🔍 Busca direta: {processo}")
-            try:
-                docs_encontrados = rag.vector_store.similarity_search(processo, k=3)
-                print(f"   📄 Encontrados: {len(docs_encontrados)} docs")
-                for doc in docs_encontrados:
-                    metadata = getattr(doc, 'metadata', {})
-                    content = getattr(doc, 'page_content', '')
-                    if processo in metadata.get('numero_processo', ''):
-                        relevant_docs.append(doc)
-                        print(f"   ✅ Doc relevante adicionado (metadata)")
-                        continue
-                    if processo in content:
-                        relevant_docs.append(doc)
-                        print(f"   ✅ Doc relevante adicionado (conteúdo)")
-            except Exception as e:
-                print(f"   ❌ Erro na busca: {e}")
-                continue
-        print(f"📋 Total documentos relevantes: {len(relevant_docs)}")
-        if not relevant_docs:
-            print("⚠️ Nenhum documento específico encontrado - busca híbrida")
-            for processo in processos_selecionados:
-                try:
-                    docs_ampla = rag.vector_store.similarity_search(question, k=5)
-                    for doc in docs_ampla:
-                        if processo in getattr(doc, 'page_content', ''):
-                            relevant_docs.append(doc)
-                            print(f"   ✅ Doc híbrido encontrado")
-                            break
-                except:
-                    continue
-        if not relevant_docs:
-            print("⚠️ Fallback para busca geral")
-            result = rag.query(question, top_k=k)
-            if 'answer' in result:
-                aviso = f"\n\n⚠️ Não foram encontrados documentos específicos para: {', '.join(processos_selecionados)}"
-                result['answer'] += aviso
-            return result
-        if len(relevant_docs) > 5:
-            relevant_docs = relevant_docs[:5]
-            print(f"🔄 Limitado a 5 documentos para velocidade")
+        docs_raw = _load_process_documents(rag.data_path, processos_selecionados)
+        if not docs_raw:
+            return {"error": "Nenhum documento encontrado para os processos"}
+
+        selected = _select_relevant_docs(docs_raw, question, k)
         context_parts = []
-        for i, doc in enumerate(relevant_docs, 1):
-            content = doc.page_content.strip()
-            metadata = doc.metadata
-            doc_text = f"DOCUMENTO {i}:\n"
-            if 'numero_processo' in metadata:
-                doc_text += f"Processo: {metadata['numero_processo']}\n"
-            doc_text += f"{content}"
-            context_parts.append(doc_text)
+        for i, doc in enumerate(selected, 1):
+            trecho = doc['content'].strip()
+            if len(trecho) > 1500:
+                trecho = trecho[:1500] + '...'
+            context_parts.append(f"DOCUMENTO {i} ({doc['filename']}):\n{trecho}")
         context = "\n\n" + "-"*30 + "\n\n".join(context_parts)
         prompt = f"""Responda baseado nos documentos do processo {', '.join(processos_selecionados)}:
 
@@ -182,33 +205,27 @@ DOCUMENTOS:
 
 RESPOSTA:"""
         try:
-            response = rag.llm.invoke(prompt)
+            response = rag.llm.invoke(prompt) if hasattr(rag.llm, 'invoke') else rag.llm(prompt)
             answer = response.content if hasattr(response, 'content') else str(response)
         except Exception as e:
             print(f"❌ Erro no LLM: {e}")
             answer = f"Erro ao gerar resposta: {str(e)}"
         processing_time = time.time() - start_time
-        source_documents = []
-        for doc in relevant_docs:
-            source_documents.append({
-                "content": doc.page_content[:300] + "...",
-                "filename": doc.metadata.get('numero_processo', 'Desconhecido'),
-                "metadata": {"numero_processo": doc.metadata.get('numero_processo')}
-            })
+        source_documents = [{"filename": doc['filename'], "metadata": doc['metadata']} for doc in selected]
         print(f"⚡ Consulta concluída em {processing_time:.2f}s")
         return {
             "answer": answer,
             "question": question,
             "context_size": len(context),
-            "documents_count": len(relevant_docs),
+            "documents_count": len(selected),
             "processing_time": processing_time,
-            "search_method": "ultra_fast",
+            "search_method": "filesystem",
             "source_documents": source_documents,
             "context_info": {
-                "documentos_selecionados": [],
+                "documentos_selecionados": [d['filename'] for d in selected],
                 "processos_selecionados": processos_selecionados,
-                "total_filtered_docs": len(relevant_docs),
-                "relevant_chunks": len(relevant_docs)
+                "total_filtered_docs": len(selected),
+                "relevant_chunks": len(selected)
             }
         }
     except Exception as e:
