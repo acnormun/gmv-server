@@ -549,7 +549,7 @@ def init_optimized_rag():
         num_predict=1500,
         max_context_length=20000,
         top_k=8,
-        min_similarity_score=0.01,
+        min_similarity_score=0.001,
         max_chunks=1000
     )
     optimized_rag_system = UltraFastRAG(config)
