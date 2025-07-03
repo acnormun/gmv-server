@@ -152,13 +152,19 @@ def background_cleanup():
 
 def init_rag_background():
     try:
-        from adaptive_rag import rag_system, init_rag_system
+        from adaptive_rag import init_rag_system, load_data_directory
         logger.info("Tentando inicializar RAG...")
         if init_rag_system():
             logger.info("RAG inicializado com sucesso")
+            try:
+                docs = load_data_directory()
+                logger.info(f"{docs} documentos carregados")
+            except Exception as e:
+                logger.warning(f"Erro ao carregar documentos: {e}")
+                docs = 0
             socketio.emit('rag_status', {
-                'status': 'ready',
-                'message': 'Sistema RAG online'
+                'status': 'ready' if docs > 0 else 'offline',
+                'message': 'Sistema RAG online' if docs > 0 else 'Nenhum documento carregado'
             })
         else:
             logger.warning("RAG falhou - Ollama pode estar offline")
