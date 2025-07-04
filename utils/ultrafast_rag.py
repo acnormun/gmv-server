@@ -806,14 +806,6 @@ PERGUNTA: {question}
 
 RESPOSTA DETALHADA E FUNDAMENTADA:"""
         rag_system._create_optimized_prompt = create_extraction_prompt
-        print("Correção avançada de busca aplicada!")
-        print("Melhorias implementadas:")
-        print("  - Busca híbrida: keywords + semântica + processo + conteúdo")
-        print("  - Threshold reduzido: 0.05 → 0.001 (muito mais permissivo)")
-        print("  - Priorização de conteúdo substantivo vs metadados")
-        print("  - Sistema de ranking inteligente")
-        print("  - Contexto expandido: 15000 → 20000 chars")
-        print("  - Prompt otimizado para extração específica")
         return True
     except Exception as e:
         print(f"Erro na correção avançada: {e}")

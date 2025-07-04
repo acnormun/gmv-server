@@ -9,6 +9,7 @@ from langchain.schema import Document
 from langchain.schema.retriever import BaseRetriever
 
 from utils.smart_tfidf_embedder import SmartTFIDFEmbedder
+from utils.inverted_index import InvertedIndex
 
 try:
     from langchain_ollama import OllamaEmbeddings
@@ -29,6 +30,7 @@ class OptimizedVectorStore:
         self.metadata = []
         self.doc_hashes = []
         self.use_ollama = use_ollama
+        self.inverted_index = InvertedIndex()
         if use_ollama and OllamaEmbeddings:
             try:
                 self.ollama_embeddings = OllamaEmbeddings(model="nomic-embed-text")
@@ -79,6 +81,11 @@ class OptimizedVectorStore:
                         new_docs.append(doc)
                         new_contents.append(doc.page_content)
                         self.doc_hashes.append(doc_hash)
+                        self.inverted_index.add_document(
+                            doc.page_content,
+                            len(self.documents) - 1,
+                            doc.metadata.values(),
+                        )
                     else:
                         cached = cache[doc_hash]
                         embedding = self._normalize_embedding(cached["embedding"])
@@ -86,6 +93,11 @@ class OptimizedVectorStore:
                         self.documents.append(doc.page_content)
                         self.metadata.append(doc.metadata)
                         self.doc_hashes.append(doc_hash)
+                        self.inverted_index.add_document(
+                            doc.page_content,
+                            len(self.documents) - 1,
+                            doc.metadata.values(),
+                        )
                 except Exception:
                     continue
             if new_contents:
@@ -121,12 +133,22 @@ class OptimizedVectorStore:
                         self.embeddings.append(embedding)
                         self.documents.append(doc.page_content)
                         self.metadata.append(doc.metadata)
+                        self.inverted_index.add_document(
+                            doc.page_content,
+                            len(self.documents) - 1,
+                            doc.metadata.values(),
+                        )
                 else:
                     fallback_embedding = [0.0] * 100
                     for doc in new_docs:
                         self.embeddings.append(fallback_embedding)
                         self.documents.append(doc.page_content)
                         self.metadata.append(doc.metadata)
+                        self.inverted_index.add_document(
+                            doc.page_content,
+                            len(self.documents) - 1,
+                            doc.metadata.values(),
+                        )
             try:
                 self._save_cache()
             except Exception:
@@ -169,7 +191,10 @@ class OptimizedVectorStore:
             if len(query_vec) == 0:
                 return []
             similarities = []
-            for i, doc_embedding in enumerate(self.embeddings):
+            candidate_indices = self.inverted_index.query(query)
+            indices_to_check = candidate_indices if candidate_indices else range(len(self.embeddings))
+            for i in indices_to_check:
+                doc_embedding = self.embeddings[i]
                 try:
                     doc_vec = self._ensure_numpy_array(doc_embedding)
                     if len(query_vec) != len(doc_vec) or len(doc_vec) == 0:
@@ -191,7 +216,7 @@ class OptimizedVectorStore:
                     similarities.append((i, 0.0))
             similarities.sort(key=lambda x: x[1], reverse=True)
             if not any(score >= min_score for _, score in similarities):
-                min_score = 0.01
+                min_score = 0.001
             similarities = [(i, score) for i, score in similarities if score >= min_score]
             selected = similarities[:k]
             results = []
@@ -201,6 +226,101 @@ class OptimizedVectorStore:
                         doc = Document(
                             page_content=self.documents[i], 
                             metadata={**self.metadata[i], "similarity_score": score}
+                        )
+                        results.append(doc)
+                except Exception:
+                    pass
+            return results
+        except Exception:
+            return []
+        
+    def _lexical_similarity(self, query_tokens, doc_index):
+        try:
+            doc_tokens = InvertedIndex._tokenize(self.documents[doc_index])
+            if doc_index < len(self.metadata):
+                for value in self.metadata[doc_index].values():
+                    if value and isinstance(value, str):
+                        doc_tokens.extend(InvertedIndex._tokenize(value))
+            if not query_tokens or not doc_tokens:
+                return 0.0
+            q_set = set(query_tokens)
+            d_set = set(doc_tokens)
+            return len(q_set.intersection(d_set)) / len(q_set)
+        except Exception:
+            return 0.0
+
+    def hybrid_search(
+        self,
+        query: str,
+        k: int = 4,
+        semantic_weight: float = 0.6,
+        lexical_weight: float = 0.4,
+        min_score: float = 0.05,
+    ):
+        if not self.embeddings:
+            return []
+        query_tokens = InvertedIndex._tokenize(query)
+        query_embedding = None
+        if self.use_ollama and hasattr(self, 'ollama_embeddings') and self.ollama_embeddings:
+            try:
+                query_embedding_raw = self.ollama_embeddings.embed_query(query)
+                query_embedding = self._normalize_embedding(query_embedding_raw)
+            except Exception:
+                self.use_ollama = False
+                if hasattr(self, 'ollama_embeddings'):
+                    del self.ollama_embeddings
+        if not self.use_ollama or query_embedding is None:
+            try:
+                if not hasattr(self, 'tfidf_embedder') or self.tfidf_embedder is None:
+                    self.tfidf_embedder = SmartTFIDFEmbedder()
+                    if self.documents:
+                        train_docs = self.documents[:500] if len(self.documents) > 500 else self.documents
+                        self.tfidf_embedder.fit(train_docs)
+                if not self.tfidf_embedder.is_fitted:
+                    return []
+                query_embedding_raw = self.tfidf_embedder.embed_query(query)
+                query_embedding = self._normalize_embedding(query_embedding_raw)
+            except Exception:
+                return []
+        if query_embedding is None or len(query_embedding) == 0:
+            return []
+        try:
+            query_vec = self._ensure_numpy_array(query_embedding)
+            if len(query_vec) == 0:
+                return []
+            similarities = []
+            candidate_indices = self.inverted_index.query(query)
+            indices_to_check = candidate_indices if candidate_indices else range(len(self.embeddings))
+            for i in indices_to_check:
+                doc_embedding = self.embeddings[i]
+                try:
+                    doc_vec = self._ensure_numpy_array(doc_embedding)
+                    if len(query_vec) != len(doc_vec) or len(doc_vec) == 0:
+                        continue
+                    norm_query = np.linalg.norm(query_vec)
+                    norm_doc = np.linalg.norm(doc_vec)
+                    if norm_query == 0 or norm_doc == 0:
+                        sem_sim = 0.0
+                    else:
+                        sem_sim = np.dot(query_vec, doc_vec) / (norm_query * norm_doc)
+                        sem_sim = max(-1.0, min(1.0, float(sem_sim)))
+                    lex_sim = self._lexical_similarity(query_tokens, i)
+                    final_score = semantic_weight * sem_sim + lexical_weight * lex_sim
+                    similarities.append((i, float(final_score)))
+                except Exception:
+                    similarities.append((i, 0.0))
+            similarities.sort(key=lambda x: x[1], reverse=True)
+            if not any(score >= min_score for _, score in similarities):
+                min_score = 0.001
+            similarities = [(i, score) for i, score in similarities if score >= min_score]
+            selected = similarities[:k]
+            results = []
+            for i, score in selected:
+                try:
+                    if i < len(self.documents) and i < len(self.metadata):
+                        doc = Document(
+                            page_content=self.documents[i],
+                            metadata={**self.metadata[i], "similarity_score": score, "search_type": "hybrid"},
                         )
                         results.append(doc)
                 except Exception:
@@ -249,6 +369,11 @@ class OptimizedVectorStore:
                 self.documents.append(data["content"])
                 self.metadata.append(data["metadata"])
                 self.doc_hashes.append(doc_hash)
+                self.inverted_index.add_document(
+                    data["content"],
+                    len(self.documents) - 1,
+                    data["metadata"].values() if isinstance(data["metadata"], dict) else None,
+                )
             embedder_file = os.path.join(self.persist_dir, "tfidf_embedder.pkl")
             if os.path.exists(embedder_file):
                 try:
