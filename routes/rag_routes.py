@@ -5,6 +5,11 @@ import time
 import os
 import re
 
+_llm_cache_lock = threading.Lock()
+_llm_cache: Dict[str, tuple[str, float]] = {}
+_LLM_CACHE_TTL = 300
+
+
 rag_bp = Blueprint('rag', __name__, url_prefix='/api/rag')
 
 def get_rag():
@@ -63,6 +68,27 @@ def _select_relevant_docs(docs: List[Dict[str, Any]], question: str, k: int):
     if not selecionados:
         selecionados = [d for _, d in pontuados[:k]]
     return selecionados
+
+def _get_cached_llm_answer(prompt: str) -> str | None:
+    """Retrieve cached LLM answer if not expired."""
+    with _llm_cache_lock:
+        item = _llm_cache.get(prompt)
+        if not item:
+            return None
+        answer, ts = item
+        if time.time() - ts > _LLM_CACHE_TTL:
+            del _llm_cache[prompt]
+            return None
+        return answer
+
+
+def _set_cached_llm_answer(prompt: str, answer: str) -> None:
+    """Cache an LLM answer with basic LRU eviction."""
+    with _llm_cache_lock:
+        if len(_llm_cache) >= 100:
+            oldest = min(_llm_cache.items(), key=lambda i: i[1][1])[0]
+            del _llm_cache[oldest]
+        _llm_cache[prompt] = (answer, time.time())
 
 @rag_bp.route('/status', methods=['GET'])
 def status():
@@ -161,24 +187,19 @@ def query_with_context():
     except (ValueError, TypeError):
         k = 5
     try:
-        start_time = time.time()
         result = query_with_specific_context_helper(rag, question, processos_selecionados, k)
-        processing_time = time.time() - start_time
         if 'error' in result:
             return jsonify({"success": False, "message": result['error']})
-        if 'processing_time' not in result:
-            result['processing_time'] = round(processing_time, 2)
         return jsonify({"success": True, "data": result})
     except Exception as e:
         print(f"❌ Erro na consulta com contexto: {e}")
         return jsonify({
-            "success": False, 
+            "success": False,
             "message": f"Erro interno: {str(e)}"
         }), 500
 
 def query_with_specific_context_helper(rag, question: str, processos_selecionados: List[str], k: int = 5) -> Dict[str, Any]:
     try:
-        start_time = time.time()
         print("⚡ CONSULTA DIRETA POR PASTAS")
         print(f"   ❓ Pergunta: {question}")
         print(f"   ⚖️ Processos: {processos_selecionados}")
@@ -204,29 +225,24 @@ def query_with_specific_context_helper(rag, question: str, processos_selecionado
 Pergunta: {question}
 
 Resposta:"""
-        try:
-            response = rag.llm.invoke(prompt) if hasattr(rag.llm, 'invoke') else rag.llm(prompt)
-            answer = response.content if hasattr(response, 'content') else str(response)
-        except Exception as e:
-            print(f"❌ Erro no LLM: {e}")
-            answer = f"Erro ao gerar resposta: {str(e)}"
-        processing_time = time.time() - start_time
+        cached = _get_cached_llm_answer(prompt)
+        if cached is not None:
+            answer = cached
+        else:
+            llm_call = getattr(rag.llm, 'invoke', rag.llm)
+            try:
+                response = llm_call(prompt)
+                answer = response.content if hasattr(response, 'content') else str(response)
+                _set_cached_llm_answer(prompt, answer)
+            except Exception as e:
+                print(f"❌ Erro no LLM: {e}")
+                answer = f"Erro ao gerar resposta: {str(e)}"
         source_documents = [{"filename": doc['filename'], "metadata": doc['metadata']} for doc in selected]
-        print(f"⚡ Consulta concluída em {processing_time:.2f}s")
         return {
             "answer": answer,
             "question": question,
-            "context_size": len(context),
-            "documents_count": len(selected),
-            "processing_time": processing_time,
             "search_method": "filesystem",
             "source_documents": source_documents,
-            "context_info": {
-                "documentos_selecionados": [d['filename'] for d in selected],
-                "processos_selecionados": processos_selecionados,
-                "total_filtered_docs": len(selected),
-                "relevant_chunks": len(selected)
-            }
         }
     except Exception as e:
         print(f"❌ Erro na consulta rápida: {e}")

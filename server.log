@@ -23549,3 +23549,73 @@ porque o host conectado não respondeu
 2025-07-07 15:10:17,769 - MainThread   - INFO - Pool de threads criado com 15 workers
 2025-07-07 15:10:17,769 - MainThread   - INFO - Aguardando threads finalizarem...
 2025-07-07 15:10:17,769 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-07 15:35:08,598 - MainThread   - INFO - CORS configurado
+2025-07-07 15:35:08,613 - MainThread   - INFO - Rotas registradas
+2025-07-07 15:35:08,613 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-07 15:35:08,613 - MainThread   - INFO - Background cleanup iniciado
+2025-07-07 15:35:08,613 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-07 15:35:08,613 - MainThread   - INFO - Inicialização RAG em background
+2025-07-07 15:35:08,613 - MainThread   - INFO - Servidor pronto!
+2025-07-07 15:35:08,613 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-07 15:35:08,613 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-07 15:35:08,613 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-07 15:35:08,613 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.95:5000
+2025-07-07 15:35:08,613 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-07 15:35:08,893 - Thread-3 (process_request_thread) - INFO - Cliente conectado: _oXn0lmMuNS917tGAAAB
+2025-07-07 15:35:14,711 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-07-07 15:35:22,275 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-07 15:35:22,561 - Thread-2 (init_rag_background) - INFO - 300 documentos carregados
+2025-07-07 15:35:26,096 - Thread-8 (process_request_thread) - INFO - 127.0.0.1 - - [07/Jul/2025 15:35:26] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-07 15:35:26,359 - Thread-9 (process_request_thread) - INFO - 127.0.0.1 - - [07/Jul/2025 15:35:26] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-07 15:35:31,221 - Thread-10 (process_request_thread) - INFO -  1 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-07 15:35:31,222 - Thread-10 (process_request_thread) - INFO - Extraídos 1 processos da tabela
+2025-07-07 15:35:31,222 - Thread-10 (process_request_thread) - INFO - 127.0.0.1 - - [07/Jul/2025 15:35:31] "GET /triagem HTTP/1.1" 200 -
+2025-07-07 15:35:32,680 - Thread-11 (process_request_thread) - INFO - 127.0.0.1 - - [07/Jul/2025 15:35:32] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-07 15:35:32,932 - Thread-12 (process_request_thread) - INFO - 127.0.0.1 - - [07/Jul/2025 15:35:32] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-07 15:35:41,494 - Thread-13 (process_request_thread) - INFO - 127.0.0.1 - - [07/Jul/2025 15:35:41] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-07 15:35:58,979 - Thread-3 (process_request_thread) - INFO - Cliente desconectado: _oXn0lmMuNS917tGAAAB
+2025-07-07 15:36:00,024 - Thread-16 (process_request_thread) - INFO - 127.0.0.1 - - [07/Jul/2025 15:36:00] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-07 15:36:00,495 - Thread-18 (process_request_thread) - INFO - Cliente conectado: A_H7zDNyu9XrxYYsAAAD
+2025-07-07 15:36:00,507 - Thread-22 (process_request_thread) - INFO - 127.0.0.1 - - [07/Jul/2025 15:36:00] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-07 15:36:08,623 - Thread-23 (process_request_thread) - INFO -  1 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-07 15:36:08,638 - Thread-23 (process_request_thread) - INFO - Extraídos 1 processos da tabela
+2025-07-07 15:36:08,639 - Thread-23 (process_request_thread) - INFO - 127.0.0.1 - - [07/Jul/2025 15:36:08] "GET /triagem HTTP/1.1" 200 -
+2025-07-07 15:36:09,309 - Thread-24 (process_request_thread) - INFO - 127.0.0.1 - - [07/Jul/2025 15:36:09] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-07 15:36:09,567 - Thread-25 (process_request_thread) - INFO - 127.0.0.1 - - [07/Jul/2025 15:36:09] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-07 15:36:23,330 - Thread-26 (process_request_thread) - INFO - 127.0.0.1 - - [07/Jul/2025 15:36:23] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-07 15:39:19,200 - Thread-15 (process_request_thread) - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-07-07 15:39:23,478 - Thread-15 (process_request_thread) - INFO - 127.0.0.1 - - [07/Jul/2025 15:39:23] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-07 15:43:04,731 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-07 15:43:04,731 - MainThread   - INFO - Pool de threads criado com 15 workers
+2025-07-07 15:43:04,731 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-07 15:43:04,731 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-07 15:43:18,695 - MainThread   - INFO - CORS configurado
+2025-07-07 15:43:18,712 - MainThread   - INFO - Rotas registradas
+2025-07-07 15:43:18,713 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-07 15:43:18,715 - MainThread   - INFO - Background cleanup iniciado
+2025-07-07 15:43:18,715 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-07 15:43:18,715 - MainThread   - INFO - Inicialização RAG em background
+2025-07-07 15:43:18,715 - MainThread   - INFO - Servidor pronto!
+2025-07-07 15:43:18,715 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-07 15:43:18,715 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-07 15:43:18,715 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-07 15:43:18,744 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.95:5000
+2025-07-07 15:43:18,745 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-07 15:43:21,490 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-07-07 15:43:23,920 - Thread-3 (process_request_thread) - INFO - Cliente conectado: PCl8_N8zdlQxJRLpAAAB
+2025-07-07 15:43:29,244 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-07 15:43:29,596 - Thread-2 (init_rag_background) - INFO - 300 documentos carregados
+2025-07-07 15:43:35,580 - Thread-8 (process_request_thread) - INFO - 127.0.0.1 - - [07/Jul/2025 15:43:35] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-07 15:47:23,175 - Thread-9 (process_request_thread) - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-07-07 15:47:26,923 - Thread-9 (process_request_thread) - INFO - 127.0.0.1 - - [07/Jul/2025 15:47:26] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-07 15:57:43,367 - Thread-45 (process_request_thread) - INFO - 127.0.0.1 - - [07/Jul/2025 15:57:43] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-07 15:57:59,896 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-07 15:57:59,896 - MainThread   - INFO - Pool de threads criado com 15 workers
+2025-07-07 15:57:59,901 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-07 15:57:59,901 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
