@@ -224,6 +224,14 @@ def processar_processo_isolado(data, operation_id):
                 with open(caminho_md, 'w', encoding='utf-8') as f:
                     f.write(markdown_com_metadados)
                 logger.info(f"Markdown salvo: {caminho_md}")
+                if dat_base64 and dat_base64.strip():
+                    caminho_dat = os.path.join(PASTA_DAT, f"{nome_arquivo_base}.dat")
+                    try:
+                        with open(caminho_dat, 'w', encoding='utf-8') as dat_f:
+                            dat_f.write(dat_base64)
+                        logger.info(f"DAT salvo: {caminho_dat}")
+                    except Exception as e:
+                        logger.error(f"Erro ao salvar DAT [{numero}]: {e}")
             except Exception as e:
                 logger.error(f"Erro ao salvar markdown [{numero}]: {e}")
         if RAG_DISPONIVEL:

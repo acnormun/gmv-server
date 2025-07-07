@@ -1,5 +1,6 @@
 from flask import current_app
 import os
+import re
 import time
 import logging
 import threading
@@ -328,6 +329,7 @@ def atualizar_processo(numero, data):
 def deletar_processo_por_numero(numero):
     path_triagem = current_app.config['PATH_TRIAGEM']
     pasta_dest = current_app.config['PASTA_DESTINO']
+    pasta_dat = current_app.config['PASTA_DAT']
     processos = extrair_tabela_md(path_triagem)
     processos = [p for p in processos if p['numeroProcesso'] != numero]
     with open(path_triagem, 'w', encoding='utf-8') as f:
@@ -339,6 +341,20 @@ def deletar_processo_por_numero(numero):
     caminho_md = os.path.join(pasta_dest, f"{numero.replace('/', '-')}.md")
     if os.path.exists(caminho_md):
         os.remove(caminho_md)
+    caminho_dat = os.path.join(pasta_dat, f"{numero.replace('/', '-')}.dat")
+    if os.path.exists(caminho_dat):
+        os.remove(caminho_dat)
+    caminho_md_anon = os.path.join(pasta_dest, "anonimizados", f"{numero.replace('/', '-')}_anon.md")
+    if os.path.exists(caminho_md_anon):
+        os.remove(caminho_md_anon)
+    caminho_mapa = os.path.join(pasta_dest, "mapas", f"{numero.replace('/', '-')}_mapa.md")
+    if os.path.exists(caminho_mapa):
+        os.remove(caminho_mapa)
+    nome_pasta = re.sub(r'[^\w\-.]', '_', numero)
+    pasta_processo = os.path.join(pasta_dest, nome_pasta)
+    if os.path.isdir(pasta_processo):
+        import shutil
+        shutil.rmtree(pasta_processo, ignore_errors=True)
 
 def obter_dat_por_numero(numero):
     caminho = os.path.join(current_app.config['PASTA_DAT'], f"{numero.replace('/', '-')}.dat")

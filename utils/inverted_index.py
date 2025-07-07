@@ -28,6 +28,16 @@ class InvertedIndex:
                 results = docs if results is None else results.intersection(docs)
         return results if results else set()
 
+    def query_any(self, text: str) -> Set[int]:
+        """Return documents containing any of the tokens in the text."""
+        tokens = self._tokenize(text)
+        results: Set[int] = set()
+        for token in tokens:
+            docs = self.index.get(token)
+            if docs:
+                results.update(docs)
+        return results
+    
     @staticmethod
     def _tokenize(text: str) -> list:
         return re.findall(r"\b\w{3,}\b", text.lower())

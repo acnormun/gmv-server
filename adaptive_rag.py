@@ -109,7 +109,10 @@ def get_rag_status():
     conversational_status = "Inativo"
     model_name = "N/A"
     if hasattr(rag_system, 'config'):
-        embedding_method = "Híbrido (Ollama + TF-IDF)" if rag_system.config.use_ollama_embeddings else "TF-IDF"
+        if rag_system.config.use_matryoshka_embeddings:
+            embedding_method = "Matryoshka"
+        else:
+            embedding_method = "Híbrido (Ollama + TF-IDF)" if rag_system.config.use_ollama_embeddings else "TF-IDF"
         conversational_status = "Ativo" if rag_system.config.enable_conversational and hasattr(rag_system, 'conversational_handler') else "Inativo"
         model_name = rag_system.config.model_name
     return {

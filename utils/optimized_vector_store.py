@@ -10,6 +10,7 @@ from langchain.schema.retriever import BaseRetriever
 
 from utils.smart_tfidf_embedder import SmartTFIDFEmbedder
 from utils.inverted_index import InvertedIndex
+from utils.matryoshka import MatryoshkaEmbedding, MATRYOSHKA_CONFIGS
 
 try:
     from langchain_ollama import OllamaEmbeddings
@@ -23,23 +24,36 @@ except ImportError:
             OllamaEmbeddings = None
 
 class OptimizedVectorStore:
-    def __init__(self, persist_dir, use_ollama=True):
+    def __init__(self, persist_dir, use_ollama=True, use_matryoshka=False, matryoshka_preset="balanced"):
         self.persist_dir = persist_dir
         self.embeddings = []
         self.documents = []
         self.metadata = []
         self.doc_hashes = []
-        self.use_ollama = use_ollama
+        self.use_ollama = use_ollama and not use_matryoshka
+        self.use_matryoshka = use_matryoshka
         self.inverted_index = InvertedIndex()
-        if use_ollama and OllamaEmbeddings:
+        self.process_index = {}
+        self.matryoshka_embedder = None
+        self.matryoshka_dim = None
+        if self.use_matryoshka:
+            try:
+                config = MATRYOSHKA_CONFIGS.get(matryoshka_preset, MATRYOSHKA_CONFIGS["balanced"])
+                self.matryoshka_embedder = MatryoshkaEmbedding(
+                    model_name=config["model_name"],
+                    matryoshka_dims=config["dimensions"],
+                )
+                self.matryoshka_dim = max(self.matryoshka_embedder.matryoshka_dims)
+            except Exception:
+                self.use_matryoshka = False
+        if self.use_ollama and OllamaEmbeddings:
             try:
                 self.ollama_embeddings = OllamaEmbeddings(model="nomic-embed-text")
             except Exception:
                 self.use_ollama = False
-                self.tfidf_embedder = SmartTFIDFEmbedder()
         else:
             self.use_ollama = False
-            self.tfidf_embedder = SmartTFIDFEmbedder()
+        self.tfidf_embedder = None if self.use_matryoshka else SmartTFIDFEmbedder()
         os.makedirs(persist_dir, exist_ok=True)
 
     def _get_doc_hash(self, content):
@@ -102,7 +116,19 @@ class OptimizedVectorStore:
                     continue
             if new_contents:
                 new_embeddings = None
-                if self.use_ollama and hasattr(self, 'ollama_embeddings') and self.ollama_embeddings:
+                if self.use_matryoshka and self.matryoshka_embedder:
+                    try:
+                        batch_size = 8
+                        new_embeddings = []
+                        for i in range(0, len(new_contents), batch_size):
+                            batch = new_contents[i:i+batch_size]
+                            emb_dict = self.matryoshka_embedder.encode_matryoshka(batch, [self.matryoshka_dim])
+                            batch_emb = emb_dict[self.matryoshka_dim]
+                            normalized_batch = [self._normalize_embedding(emb) for emb in batch_emb]
+                            new_embeddings.extend(normalized_batch)
+                    except Exception:
+                        new_embeddings = None
+                if new_embeddings is None and self.use_ollama and hasattr(self, 'ollama_embeddings') and self.ollama_embeddings:
                     try:
                         batch_size = 5
                         new_embeddings = []
@@ -138,6 +164,9 @@ class OptimizedVectorStore:
                             len(self.documents) - 1,
                             doc.metadata.values(),
                         )
+                        proc = doc.metadata.get("numero_processo")
+                        if proc:
+                            self.process_index.setdefault(proc, set()).add(len(self.documents) - 1)
                 else:
                     fallback_embedding = [0.0] * 100
                     for doc in new_docs:
@@ -149,6 +178,9 @@ class OptimizedVectorStore:
                             len(self.documents) - 1,
                             doc.metadata.values(),
                         )
+                        proc = doc.metadata.get("numero_processo")
+                        if proc:
+                            self.process_index.setdefault(proc, set()).add(len(self.documents) - 1)
             try:
                 self._save_cache()
             except Exception:
@@ -163,7 +195,13 @@ class OptimizedVectorStore:
         if keyword_results:
             return keyword_results
         query_embedding = None
-        if self.use_ollama and hasattr(self, 'ollama_embeddings') and self.ollama_embeddings:
+        if self.use_matryoshka and self.matryoshka_embedder:
+            try:
+                query_embedding = self.matryoshka_embedder.encode_matryoshka([query], [self.matryoshka_dim])[self.matryoshka_dim][0]
+                query_embedding = self._normalize_embedding(query_embedding)
+            except Exception:
+                query_embedding = None
+        if query_embedding is None and self.use_ollama and hasattr(self, 'ollama_embeddings') and self.ollama_embeddings:
             try:
                 query_embedding_raw = self.ollama_embeddings.embed_query(query)
                 query_embedding = self._normalize_embedding(query_embedding_raw)
@@ -171,7 +209,7 @@ class OptimizedVectorStore:
                 self.use_ollama = False
                 if hasattr(self, 'ollama_embeddings'):
                     del self.ollama_embeddings
-        if not self.use_ollama or query_embedding is None:
+        if query_embedding is None:
             try:
                 if not hasattr(self, 'tfidf_embedder') or self.tfidf_embedder is None:
                     self.tfidf_embedder = SmartTFIDFEmbedder()
@@ -261,7 +299,13 @@ class OptimizedVectorStore:
             return []
         query_tokens = InvertedIndex._tokenize(query)
         query_embedding = None
-        if self.use_ollama and hasattr(self, 'ollama_embeddings') and self.ollama_embeddings:
+        if self.use_matryoshka and self.matryoshka_embedder:
+            try:
+                query_embedding = self.matryoshka_embedder.encode_matryoshka([query], [self.matryoshka_dim])[self.matryoshka_dim][0]
+                query_embedding = self._normalize_embedding(query_embedding)
+            except Exception:
+                query_embedding = None
+        if query_embedding is None and self.use_ollama and hasattr(self, 'ollama_embeddings') and self.ollama_embeddings:
             try:
                 query_embedding_raw = self.ollama_embeddings.embed_query(query)
                 query_embedding = self._normalize_embedding(query_embedding_raw)
@@ -269,7 +313,7 @@ class OptimizedVectorStore:
                 self.use_ollama = False
                 if hasattr(self, 'ollama_embeddings'):
                     del self.ollama_embeddings
-        if not self.use_ollama or query_embedding is None:
+        if query_embedding is None:
             try:
                 if not hasattr(self, 'tfidf_embedder') or self.tfidf_embedder is None:
                     self.tfidf_embedder = SmartTFIDFEmbedder()
@@ -353,7 +397,7 @@ class OptimizedVectorStore:
             cache_file = os.path.join(self.persist_dir, "smart_cache.pkl")
             with open(cache_file, 'wb') as f:
                 pickle.dump(cache_data, f)
-            if not self.use_ollama and hasattr(self, 'tfidf_embedder'):
+            if not self.use_ollama and not self.use_matryoshka and hasattr(self, 'tfidf_embedder'):
                 embedder_file = os.path.join(self.persist_dir, "tfidf_embedder.pkl")
                 with open(embedder_file, 'wb') as f:
                     pickle.dump(self.tfidf_embedder, f)
@@ -374,8 +418,13 @@ class OptimizedVectorStore:
                     len(self.documents) - 1,
                     data["metadata"].values() if isinstance(data["metadata"], dict) else None,
                 )
+                proc = None
+                if isinstance(data["metadata"], dict):
+                    proc = data["metadata"].get("numero_processo")
+                if proc:
+                    self.process_index.setdefault(proc, set()).add(len(self.documents) - 1)
             embedder_file = os.path.join(self.persist_dir, "tfidf_embedder.pkl")
-            if os.path.exists(embedder_file):
+            if not self.use_matryoshka and os.path.exists(embedder_file):
                 try:
                     with open(embedder_file, 'rb') as f:
                         self.tfidf_embedder = pickle.load(f)
@@ -398,8 +447,17 @@ class OptimizedVectorStore:
             keywords.extend(important_words)
             if not keywords:
                 return []
+            candidates = self.inverted_index.query_any(' '.join(keywords))
+            for proc in process_matches:
+                idxs = self.process_index.get(proc)
+                if idxs:
+                    candidates.update(idxs)
+            if not candidates:
+                candidates = range(len(self.documents))
             matches = []
-            for i, (doc_content, metadata) in enumerate(zip(self.documents, self.metadata)):
+            for i in candidates:
+                doc_content = self.documents[i]
+                metadata = self.metadata[i]
                 score = 0.0
                 content_lower = doc_content.lower()
                 for keyword in keywords:
@@ -464,13 +522,19 @@ class OptimizedVectorStore:
     def test_similarity_calculation(self, query, max_docs=10):
         try:
             query_embedding = None
-            if self.use_ollama and hasattr(self, 'ollama_embeddings') and self.ollama_embeddings:
+            if self.use_matryoshka and self.matryoshka_embedder:
+                try:
+                    query_embedding = self.matryoshka_embedder.encode_matryoshka([query], [self.matryoshka_dim])[self.matryoshka_dim][0]
+                    query_embedding = self._normalize_embedding(query_embedding)
+                except Exception:
+                    query_embedding = None
+            if query_embedding is None and self.use_ollama and hasattr(self, 'ollama_embeddings') and self.ollama_embeddings:
                 try:
                     query_embedding_raw = self.ollama_embeddings.embed_query(query)
                     query_embedding = self._normalize_embedding(query_embedding_raw)
                 except Exception:
                     self.use_ollama = False
-            if not self.use_ollama or query_embedding is None:
+            if query_embedding is None:
                 if not hasattr(self, 'tfidf_embedder') or self.tfidf_embedder is None:
                     self.tfidf_embedder = SmartTFIDFEmbedder()
                     if self.documents:
