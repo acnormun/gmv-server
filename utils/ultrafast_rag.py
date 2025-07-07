@@ -7,6 +7,7 @@ from dataclasses import dataclass
 from typing import Any, Dict, List, Optional
 from functools import lru_cache
 import threading
+import requests
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -44,6 +45,7 @@ class UltraFastRAGConfig:
     enable_conversational: bool = True
     max_context_length: int = 20000
     num_predict: int = 1500
+    ollama_base_url: str = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
     enable_cache: bool = True
     cache_ttl: int = 3600 
     min_similarity_score: float = 0.001
@@ -120,24 +122,52 @@ class UltraFastRAG:
                 del self.response_cache[oldest_key]
             self.response_cache[cache_key] = (response, time.time())
     
+    def _check_ollama_connection(self) -> bool:
+        """Verifies that the Ollama server is reachable before creating the LLM."""
+        url = self.config.ollama_base_url.rstrip("/") + "/api/tags"
+        for attempt in range(3):
+            try:
+                r = requests.get(url, timeout=5)
+                if r.status_code == 200:
+                    return True
+            except Exception as e:
+                print(f"Verificação Ollama tentativa {attempt+1} falhou: {e}")
+            time.sleep(2)
+        return False
+    
     def initialize(self):
         try:
             print("Inicializando UltraFast RAG Otimizado...")
-            try:
-                self.llm = OllamaLLM(
-                    model=self.config.model_name,
-                    temperature=self.config.temperature,
-                    num_predict=self.config.num_predict,
-                    num_ctx=8192,
-                    repeat_penalty=1.1,
-                    top_k=40,
-                    top_p=0.9,
-                    stop=[],
+            if not self._check_ollama_connection():
+                print(
+                    "Erro: Ollama não está acessível. Verifique se o serviço está rodando e se OLLAMA_BASE_URL está correto."
                 )
-                self.llm.invoke("OK")
-                print(f"LLM {self.config.model_name} otimizado conectado")
-            except Exception as e:
-                print(f"Erro na conexão LLM: {e}")
+                return False
+            connected = False
+            for attempt in range(3):
+                try:
+                    self.llm = OllamaLLM(
+                        model=self.config.model_name,
+                        temperature=self.config.temperature,
+                        num_predict=self.config.num_predict,
+                        base_url=self.config.ollama_base_url,
+                        num_ctx=8192,
+                        repeat_penalty=1.1,
+                        top_k=40,
+                        top_p=0.9,
+                        stop=[],
+                    )
+                    self.llm.invoke("OK")
+                    print(
+                        f"LLM {self.config.model_name} conectado em {self.config.ollama_base_url}"
+                    )
+                    connected = True
+                    break
+                except Exception as e:
+                    print(f"Tentativa {attempt+1} falhou ao conectar Ollama: {e}")
+                    time.sleep(2)
+            if not connected:
+                print("Erro na conexão LLM: todas as tentativas falharam")
                 return False
             self.is_initialized = True
             self._load_cache()
@@ -549,7 +579,7 @@ def init_optimized_rag():
         num_predict=1500,
         max_context_length=20000,
         top_k=8,
-        min_similarity_score=0.01,
+        min_similarity_score=0.001,
         max_chunks=1000
     )
     optimized_rag_system = UltraFastRAG(config)
@@ -806,14 +836,6 @@ PERGUNTA: {question}
 
 RESPOSTA DETALHADA E FUNDAMENTADA:"""
         rag_system._create_optimized_prompt = create_extraction_prompt
-        print("Correção avançada de busca aplicada!")
-        print("Melhorias implementadas:")
-        print("  - Busca híbrida: keywords + semântica + processo + conteúdo")
-        print("  - Threshold reduzido: 0.05 → 0.001 (muito mais permissivo)")
-        print("  - Priorização de conteúdo substantivo vs metadados")
-        print("  - Sistema de ranking inteligente")
-        print("  - Contexto expandido: 15000 → 20000 chars")
-        print("  - Prompt otimizado para extração específica")
         return True
     except Exception as e:
         print(f"Erro na correção avançada: {e}")

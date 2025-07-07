@@ -190,24 +190,12 @@ def extrair_e_formatar_metadados(markdown_content):
     conteudo_local = str(markdown_content)
     print(f"🔍 [EXTRAÇÃO] Processando conteúdo de {len(conteudo_local)} caracteres")
     print(f"🔍 [EXTRAÇÃO] Primeiros 50 chars: {conteudo_local[:50]}...")
-    metadados_extraidos = {}
     try:
-        lines = conteudo_local.split('\n')
-        for i, line in enumerate(lines[:20]):
-            line_clean = line.strip()
-            if 'processo' in line_clean.lower() and not metadados_extraidos.get('numero_processo'):
-                import re
-                match = re.search(r'\d{7}-\d{2}\.\d{4}\.\d\.\d{2}\.\d{4}', line_clean)
-                if match:
-                    metadados_extraidos['numero_processo'] = match.group()
-                    print(f"📋 [EXTRAÇÃO] Número processo encontrado: {metadados_extraidos['numero_processo']}")
-        if metadados_extraidos:
-            front_matter = "---\n"
-            for key, value in metadados_extraidos.items():
-                if value:
-                    front_matter += f"{key}: {value}\n"
-            front_matter += "---"
-            print(f"✅ [EXTRAÇÃO] Front matter gerado: {len(metadados_extraidos)} campos")
+        metadados_extraidos = extrair_metadados_processo(conteudo_local)
+        campos_preenchidos = len([v for v in metadados_extraidos.values() if v])
+        if campos_preenchidos > 0:
+            front_matter = formatar_metadados_para_markdown(metadados_extraidos)
+            print(f"✅ [EXTRAÇÃO] Front matter gerado: {campos_preenchidos} campos")
             return metadados_extraidos, front_matter
         else:
             print("⚠️ [EXTRAÇÃO] Nenhum metadado extraído")

@@ -52,6 +52,7 @@ def processar_processo_em_background(data, operation_id):
             return
 
         resultado_pje = None
+        primeiro_md_pje = None
         caminho_md = os.path.join(PASTA_DESTINO, f"{numero.replace('/', '-')}.md")
         caminho_dat = os.path.join(PASTA_DAT, f"{numero.replace('/', '-')}.dat")
 
@@ -72,7 +73,8 @@ def processar_processo_em_background(data, operation_id):
             except Exception as e:
                 send_progress_ws(operation_id, 2, f'Aviso: Processamento PJe falhou, continuando...', 20)
                 if not markdown:
-                    with open(caminho_dat, 'w', encoding='utf-8') as f:
+                    primeiro_md_pje = markdowns[0]
+                    with open(primeiro_md_pje, 'r', encoding='utf-8') as f:
                         f.write(dat_base64)
         elif not markdown:
             send_progress_ws(operation_id, 0, 'Erro: É necessário markdown OU arquivo PDF válido', 0)
@@ -89,6 +91,8 @@ def processar_processo_em_background(data, operation_id):
         send_progress_ws(operation_id, 4, 'Preparando estrutura de arquivos...', 35)
         os.makedirs(PASTA_DESTINO, exist_ok=True)
         os.makedirs(PASTA_DAT, exist_ok=True)
+        if primeiro_md_pje:
+            caminho_md = primeiro_md_pje
 
         send_progress_ws(operation_id, 5, 'Salvando arquivos processados...', 45)
         campos_extraidos = 0
@@ -98,7 +102,22 @@ def processar_processo_em_background(data, operation_id):
             metadados_dict, front_matter = extrair_e_formatar_metadados(markdown)
             campos_extraidos = len([v for v in metadados_dict.values() if v])
             if campos_extraidos:
-                markdown_com_metadados = front_matter + "\n\n" + markdown
+                if primeiro_md_pje:
+                    with open(caminho_md, 'r', encoding='utf-8') as f:
+                        original_content = f.read()
+                    meta_lines = front_matter.splitlines()[1:-1]
+                    if original_content.startswith('---'):
+                        end_idx = original_content.find('\n---', 3)
+                        if end_idx != -1:
+                            before = original_content[:end_idx]
+                            after = original_content[end_idx:]
+                            markdown_com_metadados = before + '\n' + '\n'.join(meta_lines) + after
+                        else:
+                            markdown_com_metadados = front_matter + "\n\n" + original_content
+                    else:
+                        markdown_com_metadados = front_matter + "\n\n" + original_content
+                else:
+                    markdown_com_metadados = front_matter + "\n\n" + markdown
         except Exception:
             pass
 
@@ -111,7 +130,7 @@ def processar_processo_em_background(data, operation_id):
                 doc = Document(
                     page_content=markdown_com_metadados,
                     metadata={
-                        "filename": f"{numero.replace('/', '-')}.md",
+                        "filename": os.path.basename(caminho_md),
                         "source": caminho_md,
                         "numero_processo": numero,
                         "tem_metadados": campos_extraidos > 0,
