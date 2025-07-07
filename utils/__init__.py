@@ -1,4 +1,3 @@
-# utils/__init__.py
 
 """
 Pacote utils para o sistema RAG modular
@@ -14,9 +13,7 @@ Contém:
 __version__ = "1.0.0"
 __all__ = []
 
-# Imports seguros e individuais para evitar problemas de dependência circular
 def safe_import(module_name, class_name):
-    """Import seguro de módulos"""
     try:
         module = __import__(f'utils.{module_name}', fromlist=[class_name])
         return getattr(module, class_name)
@@ -27,7 +24,6 @@ def safe_import(module_name, class_name):
         print(f"❌ Erro ao importar {class_name}: {e}")
         return None
 
-# Imports condicionais
 ConversationalLayer = safe_import('conversational_layer', 'ConversationalLayer')
 if ConversationalLayer:
     __all__.append('ConversationalLayer')
@@ -44,7 +40,6 @@ SmartRAGHandler = safe_import('smart_rag_handler', 'SmartRAGHandler')
 if SmartRAGHandler:
     __all__.append('SmartRAGHandler')
 
-# Imports do UltraFastRAG (pode ter dependências extras)
 try:
     UltraFastRAG = safe_import('ultrafast_rag', 'UltraFastRAG')
     UltraFastRAGConfig = safe_import('ultrafast_rag', 'UltraFastRAGConfig')
