@@ -155,6 +155,7 @@ def processar_processo_isolado(data, operation_id):
             return
         logger.info(f"Processando: {numero} [{operation_id[:8]}]")
         resultado_pje = None
+        primeiro_md_pje = None
         if dat_base64 and dat_base64.strip():
             safe_send_progress(operation_id, 3, 'Processando PDF do PJe...', 20)
             try:
@@ -167,10 +168,11 @@ def processar_processo_isolado(data, operation_id):
                 )
 
                 if resultado_pje and resultado_pje['sucesso']:
-                    if resultado_pje['arquivos_gerados']['markdowns']:
-                        primeiro_md = resultado_pje['arquivos_gerados']['markdowns'][0]
+                     markdowns = resultado_pje['arquivos_gerados']['markdowns']
+                     if markdowns:
+                        primeiro_md_pje = markdowns[0]
                         try:
-                            with open(primeiro_md, 'r', encoding='utf-8') as f:
+                            with open(primeiro_md_pje, 'r', encoding='utf-8') as f:
                                 markdown_pje = f.read()
                             if not markdown or not markdown.strip():
                                 markdown = markdown_pje
@@ -193,13 +195,30 @@ def processar_processo_isolado(data, operation_id):
         os.makedirs(PASTA_DESTINO, exist_ok=True)
         os.makedirs(PASTA_DAT, exist_ok=True)
         caminho_md = os.path.join(PASTA_DESTINO, f"{nome_arquivo_base}.md")
+        if primeiro_md_pje:
+            caminho_md = primeiro_md_pje
         safe_send_progress(operation_id, 6, 'Salvando markdown...', 55)
         if markdown and markdown.strip():
             try:
                 metadados_dict, front_matter = extrair_e_formatar_metadados(markdown)
                 campos_extraidos = len([v for v in metadados_dict.values() if v])
                 if campos_extraidos > 0:
-                    markdown_com_metadados = front_matter + "\n\n" + markdown
+                    if primeiro_md_pje:
+                        with open(caminho_md, 'r', encoding='utf-8') as f:
+                            original_content = f.read()
+                        meta_lines = front_matter.splitlines()[1:-1]
+                        if original_content.startswith('---'):
+                            end_idx = original_content.find('\n---', 3)
+                            if end_idx != -1:
+                                before = original_content[:end_idx]
+                                after = original_content[end_idx:]
+                                markdown_com_metadados = before + '\n' + '\n'.join(meta_lines) + after
+                            else:
+                                markdown_com_metadados = front_matter + "\n\n" + original_content
+                        else:
+                            markdown_com_metadados = front_matter + "\n\n" + original_content
+                    else:
+                        markdown_com_metadados = front_matter + "\n\n" + markdown
                 else:
                     markdown_com_metadados = markdown
                 with open(caminho_md, 'w', encoding='utf-8') as f:

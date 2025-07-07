@@ -2,6 +2,8 @@ import os
 from dataclasses import dataclass
 import numpy as np
 from dotenv import load_dotenv
+
+from utils.ultrafast_rag import UltraFastRAGConfig
 load_dotenv()
 
 try:
@@ -40,18 +42,6 @@ try:
     from utils.ultrafast_rag import UltraFastRAG
 except ImportError:
     UltraFastRAG = None
-
-@dataclass
-class UltraFastRAGConfig:
-    model_name: str = "gemma3:4b"
-    temperature: float = 0.0
-    chunk_size: int = 800
-    chunk_overlap: int = 200
-    top_k: int = 6
-    max_chunks: int = 60
-    data_dir: str = "data"
-    use_ollama_embeddings: bool = True
-    enable_conversational: bool = True
 
 def enhance_rag_with_conversation(rag_system):
     if not SmartRAGHandler:
