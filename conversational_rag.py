@@ -308,34 +308,3 @@ def enhance_rag_with_conversation(rag_system):
     rag_system.query = enhanced_query
     rag_system.conversational_handler = smart_handler
     return rag_system
-
-def test_conversational_responses():
-    conv_layer = ConversationalLayer()
-    test_cases = [
-        "Oi!",
-        "Bom dia!",
-        "Como você está?",
-        "Obrigado pela ajuda",
-        "Você pode me ajudar?",
-        "Tchau!",
-        "Qual seu nome?",
-        "Oi, bom dia! Preciso saber sobre um processo específico",
-        "Olá! Gostaria de entender sobre TEA e terapia ABA",
-        "Valeu pelas informações! Qual o valor da causa do processo 1005888?"
-    ]
-    print("🧪 TESTE DE RESPOSTAS CONVERSACIONAIS")
-    print("=" * 60)
-    for test in test_cases:
-        conv_type = conv_layer.detect_conversation_type(test)
-        should_conv = conv_layer.should_use_conversational_response(test)
-        print(f"\n📝 Input: '{test}'")
-        print(f"🎯 Tipo: {conv_type}")
-        print(f"🗣️ Conversacional: {should_conv}")
-        if conv_type and should_conv:
-            response = conv_layer.generate_conversational_response(test, conv_type)
-            print(f"💬 Resposta: {response}")
-        else:
-            print(f"🔍 Resposta: [Processamento técnico RAG]")
-
-if __name__ == "__main__":
-    test_conversational_responses()

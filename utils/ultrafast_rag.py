@@ -442,22 +442,12 @@ class UltraFastRAG:
         return "\n\n" + "="*50 + "\n\n".join(context_parts)
     
     def _create_optimized_prompt(self, question: str, context: str) -> str:
-        return f"""Você é um assistente jurídico especializado. Analise TODOS os documentos fornecidos e responda de forma DETALHADA.
-
-    INSTRUÇÕES CRÍTICAS:
-    1. Use TODAS as informações relevantes dos documentos
-    2. Para argumentos de defesa: extraia alegações, sustentações específicas
-    3. Para motivações: identifique tipo de ação, fundamentos, razões
-    4. Cite trechos específicos quando relevante
-    5. NÃO se limite aos metadados - use o CONTEÚDO COMPLETO
-    6. Se houver múltiplas informações, inclua todas
-
-    DOCUMENTOS COMPLETOS:
+        return f"""Você é um assistente jurídico especializado. Utilize apenas o texto a seguir como referência e responda de forma clara e completa, sem mencionar de onde as informações vieram.
     {context}
 
     PERGUNTA: {question}
 
-    RESPOSTA DETALHADA E FUNDAMENTADA:"""
+    RESPOSTA:"""
     
     def query(self, question: str, top_k: Optional[int] = None) -> Dict[str, Any]:
         if not self.is_initialized or not self.vector_store:
@@ -542,16 +532,3 @@ def load_optimized_data():
     if optimized_rag_system:
         return optimized_rag_system.load_documents_from_directory()
     return 0
-
-if __name__ == "__main__":
-    print("SISTEMA RAG ULTRA OTIMIZADO")
-    print("=" * 50)
-    if init_optimized_rag():
-        print("Sistema otimizado inicializado")
-        docs_loaded = load_optimized_data()
-        if docs_loaded > 0:
-            print(f"{docs_loaded} documentos carregados")
-        else:
-            print("Nenhum documento carregado")
-    else:
-        print("Falha na inicialização do sistema otimizado")

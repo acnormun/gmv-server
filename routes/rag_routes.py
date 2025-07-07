@@ -184,10 +184,11 @@ def query_with_specific_context_helper(rag, question: str, processos_selecionado
         print(f"   ⚖️ Processos: {processos_selecionados}")
         if not processos_selecionados:
             return rag.query(question, top_k=k)
+        print('Loading process documents...')
         docs_raw = _load_process_documents(rag.data_path, processos_selecionados)
         if not docs_raw:
             return {"error": "Nenhum documento encontrado para os processos"}
-
+        print('Selecting relevant docs...')
         selected = _select_relevant_docs(docs_raw, question, k)
         context_parts = []
         for i, doc in enumerate(selected, 1):
@@ -195,15 +196,14 @@ def query_with_specific_context_helper(rag, question: str, processos_selecionado
             if len(trecho) > 1500:
                 trecho = trecho[:1500] + '...'
             context_parts.append(f"DOCUMENTO {i} ({doc['filename']}):\n{trecho}")
-        context = "\n\n" + "-"*30 + "\n\n".join(context_parts)
-        prompt = f"""Responda baseado nos documentos do processo {', '.join(processos_selecionados)}:
+        context = "\n\n".join(context_parts)
+        prompt = f"""Você é um assistente jurídico. Use apenas o texto fornecido abaixo para responder à pergunta sem mencionar a origem das informações.
 
-PERGUNTA: {question}
-
-DOCUMENTOS:
 {context}
 
-RESPOSTA:"""
+Pergunta: {question}
+
+Resposta:"""
         try:
             response = rag.llm.invoke(prompt) if hasattr(rag.llm, 'invoke') else rag.llm(prompt)
             answer = response.content if hasattr(response, 'content') else str(response)
