@@ -24233,3 +24233,75 @@ AssertionError: write() before start_response
 2025-07-08 14:39:18,738 - MainThread   - INFO - Pool de threads criado com 15 workers
 2025-07-08 14:39:18,738 - MainThread   - INFO - Aguardando threads finalizarem...
 2025-07-08 14:39:18,738 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-08 14:40:08,771 - MainThread   - INFO - CORS configurado
+2025-07-08 14:40:08,778 - MainThread   - INFO - Rotas registradas
+2025-07-08 14:40:08,779 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-08 14:40:08,779 - MainThread   - INFO - Background cleanup iniciado
+2025-07-08 14:40:08,780 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-08 14:40:08,780 - MainThread   - INFO - Inicialização RAG em background
+2025-07-08 14:40:08,781 - MainThread   - INFO - Servidor pronto!
+2025-07-08 14:40:08,781 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-08 14:40:08,781 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-08 14:40:08,781 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-08 14:40:08,794 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.81:5000
+2025-07-08 14:40:08,795 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-08 14:40:13,336 - Thread-3 (process_request_thread) - INFO - Cliente conectado: J1c2NPZFJuEKjK_7AAAB
+2025-07-08 14:40:24,220 - Thread-2 (init_rag_background) - ERROR - Erro ao carregar modelo sentence-transformers/paraphrase-MiniLM-L3-v2: (MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /sentence-transformers/paraphrase-MiniLM-L3-v2/resolve/main/tokenizer_config.json (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)')))"), '(Request ID: 1c0a22c1-6cc3-4bef-b8da-c1413c1642c2)')
+2025-07-08 14:40:24,316 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-08 14:40:24,684 - Thread-2 (init_rag_background) - ERROR - Erro ao carregar modelo sentence-transformers/paraphrase-MiniLM-L3-v2: (MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /sentence-transformers/paraphrase-MiniLM-L3-v2/resolve/main/tokenizer_config.json (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)')))"), '(Request ID: e6c15ec0-fded-435b-bb6f-6830f6c8f279)')
+2025-07-08 14:40:24,841 - Thread-2 (init_rag_background) - INFO - 508 documentos carregados
+2025-07-08 14:40:37,076 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-08 14:40:37,076 - MainThread   - INFO - Pool de threads criado com 15 workers
+2025-07-08 14:40:37,076 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-08 14:40:37,077 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-08 14:41:03,210 - MainThread   - INFO - CORS configurado
+2025-07-08 14:41:03,216 - MainThread   - INFO - Rotas registradas
+2025-07-08 14:41:03,217 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-08 14:41:03,218 - MainThread   - INFO - Background cleanup iniciado
+2025-07-08 14:41:03,220 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-08 14:41:03,220 - MainThread   - INFO - Inicialização RAG em background
+2025-07-08 14:41:03,220 - MainThread   - INFO - Servidor pronto!
+2025-07-08 14:41:03,221 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-08 14:41:03,221 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-08 14:41:03,221 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-08 14:41:03,235 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.81:5000
+2025-07-08 14:41:03,236 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-08 14:41:07,333 - Thread-3 (process_request_thread) - INFO - Cliente conectado: SUuFopuORkENPDWyAAAB
+2025-07-08 14:41:18,821 - Thread-2 (init_rag_background) - ERROR - Erro ao carregar modelo sentence-transformers/paraphrase-MiniLM-L3-v2: (MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /sentence-transformers/paraphrase-MiniLM-L3-v2/resolve/main/tokenizer_config.json (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)')))"), '(Request ID: ff7afc54-2206-453f-9674-06934580388e)')
+2025-07-08 14:41:18,929 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-08 14:41:19,315 - Thread-2 (init_rag_background) - ERROR - Erro ao carregar modelo sentence-transformers/paraphrase-MiniLM-L3-v2: (MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /sentence-transformers/paraphrase-MiniLM-L3-v2/resolve/main/tokenizer_config.json (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)')))"), '(Request ID: 426d5e38-fbfe-4473-9a08-4a263d44b60a)')
+2025-07-08 14:41:19,483 - Thread-2 (init_rag_background) - INFO - 508 documentos carregados
+2025-07-08 14:41:30,604 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-08 14:41:30,604 - MainThread   - INFO - Pool de threads criado com 15 workers
+2025-07-08 14:41:30,604 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-08 14:41:30,605 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-08 14:46:43,844 - MainThread   - INFO - CORS configurado
+2025-07-08 14:46:43,850 - MainThread   - INFO - Rotas registradas
+2025-07-08 14:46:43,852 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-08 14:46:43,853 - MainThread   - INFO - Background cleanup iniciado
+2025-07-08 14:46:43,853 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-08 14:46:43,853 - MainThread   - INFO - Inicialização RAG em background
+2025-07-08 14:46:43,854 - MainThread   - INFO - Servidor pronto!
+2025-07-08 14:46:43,854 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-08 14:46:43,854 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-08 14:46:43,854 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-08 14:46:43,870 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.81:5000
+2025-07-08 14:46:43,871 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-08 14:46:50,848 - Thread-3 (process_request_thread) - INFO - Cliente conectado: cYv06vHoCBc6P1ptAAAB
+2025-07-08 14:47:05,431 - Thread-2 (init_rag_background) - ERROR - Erro ao carregar modelo sentence-transformers/paraphrase-MiniLM-L3-v2: (MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /sentence-transformers/paraphrase-MiniLM-L3-v2/resolve/main/tokenizer_config.json (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)')))"), '(Request ID: 151e29f1-1d74-4f36-acff-be488d6b502b)')
+2025-07-08 14:47:05,567 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-08 14:47:06,035 - Thread-2 (init_rag_background) - ERROR - Erro ao carregar modelo sentence-transformers/paraphrase-MiniLM-L3-v2: (MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /sentence-transformers/paraphrase-MiniLM-L3-v2/resolve/main/tokenizer_config.json (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1028)')))"), '(Request ID: 56ea642a-418e-46b2-ac64-244216d48e1e)')
+2025-07-08 14:47:06,197 - Thread-2 (init_rag_background) - INFO - 508 documentos carregados
+2025-07-08 14:55:36,335 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-08 14:55:36,343 - MainThread   - INFO - Pool de threads criado com 15 workers
+2025-07-08 14:55:36,344 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-08 14:55:36,344 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
