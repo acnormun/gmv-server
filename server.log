@@ -24305,3 +24305,225 @@ AssertionError: write() before start_response
 2025-07-08 14:55:36,343 - MainThread   - INFO - Pool de threads criado com 15 workers
 2025-07-08 14:55:36,344 - MainThread   - INFO - Aguardando threads finalizarem...
 2025-07-08 14:55:36,344 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-08 15:34:30,720 - MainThread   - INFO - CORS configurado
+2025-07-08 15:34:30,727 - MainThread   - INFO - Rotas registradas
+2025-07-08 15:34:30,728 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-08 15:34:30,728 - MainThread   - INFO - Background cleanup iniciado
+2025-07-08 15:34:30,729 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-08 15:34:30,729 - MainThread   - INFO - Inicialização RAG em background
+2025-07-08 15:34:30,730 - MainThread   - INFO - Servidor pronto!
+2025-07-08 15:34:30,730 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-08 15:34:30,730 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-08 15:34:30,732 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-08 15:34:30,746 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.81:5000
+2025-07-08 15:34:30,747 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-08 15:34:30,810 - Thread-3 (process_request_thread) - INFO - Cliente conectado: 9HJwQyqwI1_qjdgWAAAB
+2025-07-08 15:34:40,928 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-08 15:34:40,929 - MainThread   - INFO - Pool de threads criado com 15 workers
+2025-07-08 15:34:40,929 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-08 15:34:40,929 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-08 15:34:51,749 - MainThread   - INFO - CORS configurado
+2025-07-08 15:34:51,756 - MainThread   - INFO - Rotas registradas
+2025-07-08 15:34:51,757 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-08 15:34:51,758 - MainThread   - INFO - Background cleanup iniciado
+2025-07-08 15:34:51,759 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-08 15:34:51,759 - MainThread   - INFO - Inicialização RAG em background
+2025-07-08 15:34:51,759 - MainThread   - INFO - Servidor pronto!
+2025-07-08 15:34:51,759 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-08 15:34:51,760 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-08 15:34:51,760 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-08 15:34:51,777 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.81:5000
+2025-07-08 15:34:51,778 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-08 15:34:55,671 - Thread-3 (process_request_thread) - INFO - Cliente conectado: R-MgK4zv6XazShRdAAAB
+2025-07-08 15:35:02,774 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-08 15:35:02,775 - MainThread   - INFO - Pool de threads criado com 15 workers
+2025-07-08 15:35:02,775 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-08 15:35:02,775 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-08 15:35:29,831 - MainThread   - INFO - CORS configurado
+2025-07-08 15:35:29,837 - MainThread   - INFO - Rotas registradas
+2025-07-08 15:35:29,838 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-08 15:35:29,839 - MainThread   - INFO - Background cleanup iniciado
+2025-07-08 15:35:29,839 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-08 15:35:29,839 - MainThread   - INFO - Inicialização RAG em background
+2025-07-08 15:35:29,840 - MainThread   - INFO - Servidor pronto!
+2025-07-08 15:35:29,840 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-08 15:35:29,841 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-08 15:35:29,841 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-08 15:35:29,853 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.81:5000
+2025-07-08 15:35:29,854 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-08 15:35:31,308 - Thread-3 (process_request_thread) - INFO - Cliente conectado: ZZK3w7CefE1cFQ8XAAAB
+2025-07-08 15:35:42,639 - Thread-2 (init_rag_background) - WARNING - RAG falhou - Ollama pode estar offline
+2025-07-08 15:35:43,422 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-08 15:35:43,423 - MainThread   - INFO - Pool de threads criado com 15 workers
+2025-07-08 15:35:43,423 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-08 15:35:43,423 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-08 15:36:00,238 - MainThread   - INFO - CORS configurado
+2025-07-08 15:36:00,245 - MainThread   - INFO - Rotas registradas
+2025-07-08 15:36:00,246 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-08 15:36:00,247 - MainThread   - INFO - Background cleanup iniciado
+2025-07-08 15:36:00,247 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-08 15:36:00,248 - MainThread   - INFO - Inicialização RAG em background
+2025-07-08 15:36:00,248 - MainThread   - INFO - Servidor pronto!
+2025-07-08 15:36:00,248 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-08 15:36:00,249 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-08 15:36:00,249 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-08 15:36:00,265 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.81:5000
+2025-07-08 15:36:00,265 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-08 15:36:03,306 - Thread-3 (process_request_thread) - INFO - Cliente conectado: PzhsVybe7zGgOqyhAAAB
+2025-07-08 15:36:08,363 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-08 15:36:08,364 - MainThread   - INFO - Pool de threads criado com 15 workers
+2025-07-08 15:36:08,364 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-08 15:36:08,365 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-08 15:36:26,473 - MainThread   - INFO - CORS configurado
+2025-07-08 15:36:26,479 - MainThread   - INFO - Rotas registradas
+2025-07-08 15:36:26,480 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-08 15:36:26,481 - MainThread   - INFO - Background cleanup iniciado
+2025-07-08 15:36:26,481 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-08 15:36:26,481 - MainThread   - INFO - Inicialização RAG em background
+2025-07-08 15:36:26,482 - MainThread   - INFO - Servidor pronto!
+2025-07-08 15:36:26,482 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-08 15:36:26,482 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-08 15:36:26,483 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-08 15:36:26,495 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.81:5000
+2025-07-08 15:36:26,496 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-08 15:36:29,312 - Thread-3 (process_request_thread) - INFO - Cliente conectado: XsrTwL0OzeN7yU2TAAAB
+2025-07-08 15:36:37,929 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-08 15:36:37,930 - MainThread   - INFO - Pool de threads criado com 15 workers
+2025-07-08 15:36:37,931 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-08 15:36:37,932 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-08 15:37:13,387 - MainThread   - INFO - CORS configurado
+2025-07-08 15:37:13,392 - MainThread   - INFO - Rotas registradas
+2025-07-08 15:37:13,394 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-08 15:37:13,394 - MainThread   - INFO - Background cleanup iniciado
+2025-07-08 15:37:13,395 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-08 15:37:13,395 - MainThread   - INFO - Inicialização RAG em background
+2025-07-08 15:37:13,395 - MainThread   - INFO - Servidor pronto!
+2025-07-08 15:37:13,396 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-08 15:37:13,396 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-08 15:37:13,396 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-08 15:37:13,408 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.81:5000
+2025-07-08 15:37:13,409 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-08 15:37:13,825 - Thread-3 (process_request_thread) - INFO - Cliente conectado: bYmaEUV8dWHV_7OmAAAB
+2025-07-08 15:37:26,175 - Thread-2 (init_rag_background) - WARNING - RAG falhou - Ollama pode estar offline
+2025-07-08 15:37:32,614 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-08 15:37:32,614 - MainThread   - INFO - Pool de threads criado com 15 workers
+2025-07-08 15:37:32,614 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-08 15:37:32,614 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-08 15:37:46,412 - MainThread   - INFO - CORS configurado
+2025-07-08 15:37:46,418 - MainThread   - INFO - Rotas registradas
+2025-07-08 15:37:46,419 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-08 15:37:46,420 - MainThread   - INFO - Background cleanup iniciado
+2025-07-08 15:37:46,420 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-08 15:37:46,420 - MainThread   - INFO - Inicialização RAG em background
+2025-07-08 15:37:46,421 - MainThread   - INFO - Servidor pronto!
+2025-07-08 15:37:46,421 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-08 15:37:46,421 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-08 15:37:46,421 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-08 15:37:46,434 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.81:5000
+2025-07-08 15:37:46,435 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-08 15:37:46,824 - Thread-3 (process_request_thread) - INFO - Cliente conectado: v0xPwhIsReCJavBGAAAB
+2025-07-08 15:38:00,656 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-08 15:38:00,673 - MainThread   - INFO - Pool de threads criado com 15 workers
+2025-07-08 15:38:00,673 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-08 15:38:00,674 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-08 15:38:39,794 - MainThread   - INFO - CORS configurado
+2025-07-08 15:38:39,800 - MainThread   - INFO - Rotas registradas
+2025-07-08 15:38:39,801 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-08 15:38:39,802 - MainThread   - INFO - Background cleanup iniciado
+2025-07-08 15:38:39,803 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-08 15:38:39,803 - MainThread   - INFO - Inicialização RAG em background
+2025-07-08 15:38:39,803 - MainThread   - INFO - Servidor pronto!
+2025-07-08 15:38:39,803 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-08 15:38:39,804 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-08 15:38:39,804 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-08 15:38:39,829 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.81:5000
+2025-07-08 15:38:39,831 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-08 15:38:54,595 - Thread-2 (init_rag_background) - INFO - Load pretrained SentenceTransformer: models\paraphrase-MiniLM-L3-v2
+2025-07-08 15:38:55,983 - Thread-2 (init_rag_background) - INFO - Modelo models\paraphrase-MiniLM-L3-v2 carregado no dispositivo cpu
+2025-07-08 15:38:55,983 - Thread-2 (init_rag_background) - INFO - Dimensões Matryoshka: [32, 64, 128]
+2025-07-08 15:38:56,077 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-08 15:38:56,377 - Thread-2 (init_rag_background) - INFO - Load pretrained SentenceTransformer: models\paraphrase-MiniLM-L3-v2
+2025-07-08 15:38:56,438 - Thread-2 (init_rag_background) - INFO - Modelo models\paraphrase-MiniLM-L3-v2 carregado no dispositivo cpu
+2025-07-08 15:38:56,438 - Thread-2 (init_rag_background) - INFO - Dimensões Matryoshka: [32, 64, 128]
+2025-07-08 15:38:56,595 - Thread-2 (init_rag_background) - INFO - 508 documentos carregados
+2025-07-08 15:40:23,935 - Thread-3 (process_request_thread) - INFO - Cliente conectado: gaVeKagePChw7EJlAAAB
+2025-07-08 15:40:23,950 - Thread-8 (process_request_thread) - INFO -  3 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-08 15:40:23,950 - Thread-8 (process_request_thread) - INFO - Extraídos 3 processos da tabela
+2025-07-08 15:40:23,951 - Thread-8 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 15:40:23] "GET /triagem HTTP/1.1" 200 -
+2025-07-08 15:40:31,108 - Thread-9 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 15:40:31] "OPTIONS /triagem/12345 HTTP/1.1" 200 -
+2025-07-08 15:40:31,418 - Thread-10 (process_request_thread) - INFO -  3 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-08 15:40:31,421 - Thread-10 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 15:40:31] "DELETE /triagem/12345 HTTP/1.1" 200 -
+2025-07-08 15:40:31,689 - Thread-11 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-08 15:40:31,690 - Thread-11 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-08 15:40:31,690 - Thread-11 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 15:40:31] "GET /triagem HTTP/1.1" 200 -
+2025-07-08 15:40:34,738 - Thread-12 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 15:40:34] "OPTIONS /triagem/1002663-66.2018.8.11.0041 HTTP/1.1" 200 -
+2025-07-08 15:40:35,049 - Thread-13 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-08 15:40:35,053 - Thread-13 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 15:40:35] "DELETE /triagem/1002663-66.2018.8.11.0041 HTTP/1.1" 200 -
+2025-07-08 15:40:35,306 - Thread-14 (process_request_thread) - INFO -  1 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-08 15:40:35,306 - Thread-14 (process_request_thread) - INFO - Extraídos 1 processos da tabela
+2025-07-08 15:40:35,307 - Thread-14 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 15:40:35] "GET /triagem HTTP/1.1" 200 -
+2025-07-08 16:21:09,117 - Thread-113 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 16:21:09] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-07-08 16:21:09,431 - Thread-114 (process_request_thread) - INFO - Pool de threads criado com 15 workers
+2025-07-08 16:21:09,437 - TriagemWorker_0 - INFO - Iniciando processamento isolado: 14df381c
+2025-07-08 16:21:09,437 - Thread-114 (process_request_thread) - INFO - Operação submetida: 14df381c
+2025-07-08 16:21:09,438 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 14df381c-2122-42dd-b75b-4647ed33ac62
+2025-07-08 16:21:09,438 - Thread-114 (process_request_thread) - INFO - Operações ativas: 1/15
+2025-07-08 16:21:09,438 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-08 16:21:09,439 - Thread-114 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 16:21:09] "POST /triagem/form HTTP/1.1" 200 -
+2025-07-08 16:21:09,439 - TriagemWorker_0 - INFO - [14df381c] 5% - Conectando...
+2025-07-08 16:21:09,451 - Thread-116 (_handle_event_internal) - INFO - Registrado: 14df381c -> gaVeKagePChw7EJlAAAB
+2025-07-08 16:21:09,452 - Thread-116 (_handle_event_internal) - INFO - WebSocket registrado: 14df381c -> gaVeKagePChw7EJlAAAB
+2025-07-08 16:21:09,462 - Thread-115 (process_request_thread) - INFO -  1 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-08 16:21:09,462 - Thread-115 (process_request_thread) - INFO - Extraídos 1 processos da tabela
+2025-07-08 16:21:09,462 - Thread-115 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 16:21:09] "GET /triagem HTTP/1.1" 200 -
+2025-07-08 16:21:09,941 - TriagemWorker_0 - INFO - WebSocket conectado para 14df381c
+2025-07-08 16:21:09,942 - TriagemWorker_0 - INFO -  Progresso enviado para 14df381c-2122-42dd-b75b-4647ed33ac62: 10% - Validando dados...
+2025-07-08 16:21:09,943 - TriagemWorker_0 - INFO - [14df381c] 10% - Validando dados...
+2025-07-08 16:21:09,944 - TriagemWorker_0 - INFO - Processando: 1002663-66.2018.8.11.0041 [14df381c]
+2025-07-08 16:21:09,945 - TriagemWorker_0 - INFO -  Progresso enviado para 14df381c-2122-42dd-b75b-4647ed33ac62: 20% - Processando PDF do PJe...
+2025-07-08 16:21:09,946 - TriagemWorker_0 - INFO - [14df381c] 20% - Processando PDF do PJe...
+2025-07-08 16:21:13,655 - TriagemWorker_0 - INFO - Loading faiss with AVX2 support.
+2025-07-08 16:21:13,796 - TriagemWorker_0 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-08 16:21:13,822 - TriagemWorker_0 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-08 16:21:15,332 - TriagemWorker_0 - INFO -  Progresso enviado para 14df381c-2122-42dd-b75b-4647ed33ac62: 5% - Inicializando PaddleOCR...
+2025-07-08 16:21:52,525 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 14df381c-2122-42dd-b75b-4647ed33ac62
+2025-07-08 16:21:52,525 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-08 16:21:52,525 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 14df381c-2122-42dd-b75b-4647ed33ac62
+2025-07-08 16:21:52,525 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-08 16:21:52,546 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 14df381c-2122-42dd-b75b-4647ed33ac62
+2025-07-08 16:21:52,546 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-08 16:21:52,547 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 14df381c-2122-42dd-b75b-4647ed33ac62
+2025-07-08 16:21:52,547 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-08 16:21:52,639 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 14df381c-2122-42dd-b75b-4647ed33ac62
+2025-07-08 16:21:52,639 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-08 16:21:52,639 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 14df381c-2122-42dd-b75b-4647ed33ac62
+2025-07-08 16:21:52,639 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-08 16:21:55,689 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 14df381c-2122-42dd-b75b-4647ed33ac62
+2025-07-08 16:21:55,689 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-08 16:21:55,691 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 14df381c-2122-42dd-b75b-4647ed33ac62
+2025-07-08 16:21:55,691 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-08 16:22:08,045 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'

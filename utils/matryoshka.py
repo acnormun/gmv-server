@@ -1,12 +1,11 @@
 import numpy as np
 import torch
-import torch.nn as nn
-import torch.nn.functional as F
+import os
 from typing import List, Dict, Optional, Tuple, Union
 import json
 import logging
 import time
-from transformers import AutoModel, AutoTokenizer
+from sentence_transformers import SentenceTransformer
 
 logger = logging.getLogger(__name__)
 
@@ -16,8 +15,8 @@ class MatryoshkaEmbedding:
     As técnicas Matryoshka criam embeddings "aninhados" onde as primeiras dimensões
     contêm informação hierárquica, permitindo uso adaptativo baseado na complexidade.
     """
-    def __init__(self, 
-                 model_name: str = "sentence-transformers/paraphrase-MiniLM-L3-v2",
+    def __init__(self,
+                 model_name: str = os.path.join("models", "paraphrase-MiniLM-L3-v2"),
                  matryoshka_dims: Optional[List[int]] = None,
                  device: str = "auto"):
         self.model_name = model_name
@@ -26,20 +25,14 @@ class MatryoshkaEmbedding:
         else:
             self.device = torch.device(device)
         try:
-            self.tokenizer = AutoTokenizer.from_pretrained(model_name)
-            self.model = AutoModel.from_pretrained(model_name)
-            self.model.to(self.device)
+            self.model = SentenceTransformer(model_name, device=str(self.device))
             self.model.eval()
             logger.info(f"Modelo {model_name} carregado no dispositivo {self.device}")
         except Exception as e:
             logger.error(f"Erro ao carregar modelo {model_name}: {e}")
             raise
         if matryoshka_dims is None:
-            with torch.no_grad():
-                dummy_input = self.tokenizer(["test"], return_tensors="pt", padding=True)
-                dummy_input = {k: v.to(self.device) for k, v in dummy_input.items()}
-                dummy_output = self.model(**dummy_input)
-                base_dim = dummy_output.last_hidden_state.shape[-1]
+            base_dim = self.model.get_sentence_embedding_dimension()
             self.matryoshka_dims = []
             dim = 16
             while dim <= base_dim:
@@ -59,13 +52,6 @@ class MatryoshkaEmbedding:
         dims_hash = hash(tuple(sorted(target_dims)))
         return f"{text_hash}_{dims_hash}"
     
-    def _mean_pooling(self, model_output, attention_mask):
-        token_embeddings = model_output[0]
-        input_mask_expanded = attention_mask.unsqueeze(-1).expand(token_embeddings.size()).float()
-        sum_embeddings = torch.sum(token_embeddings * input_mask_expanded, 1)
-        sum_mask = torch.clamp(input_mask_expanded.sum(1), min=1e-9)
-        return sum_embeddings / sum_mask
-    
     def encode_matryoshka(self, 
                          texts: Union[str, List[str]], 
                          target_dims: Optional[List[int]] = None,
@@ -83,23 +69,11 @@ class MatryoshkaEmbedding:
             return self.embedding_cache[cache_key]
         self.cache_misses += 1
         try:
-            inputs = self.tokenizer(
-                texts, 
-                padding=True, 
-                truncation=True, 
-                return_tensors="pt", 
-                max_length=512
+            embeddings = self.model.encode(
+                texts,
+                convert_to_tensor=True,
+                normalize_embeddings=normalize,
             )
-            inputs = {k: v.to(self.device) for k, v in inputs.items()}
-        except Exception as e:
-            logger.error(f"Erro na tokenização: {e}")
-            raise
-        try:
-            with torch.no_grad():
-                outputs = self.model(**inputs)
-                embeddings = self._mean_pooling(outputs, inputs['attention_mask'])
-                if normalize:
-                    embeddings = F.normalize(embeddings, p=2, dim=1)
         except Exception as e:
             logger.error(f"Erro na geração de embeddings: {e}")
             raise
@@ -275,7 +249,7 @@ class MatryoshkaEmbedding:
             logger.error(f"Erro ao carregar embeddings: {e}")
             raise
 
-def create_matryoshka_model(model_name: str = "sentence-transformers/paraphrase-MiniLM-L3-v2",
+def create_matryoshka_model(model_name: str = os.path.join("models", "paraphrase-MiniLM-L3-v2"),
                            custom_dims: Optional[List[int]] = None) -> MatryoshkaEmbedding:
     return MatryoshkaEmbedding(
         model_name=model_name,
@@ -284,22 +258,22 @@ def create_matryoshka_model(model_name: str = "sentence-transformers/paraphrase-
 
 MATRYOSHKA_CONFIGS = {
     'fast': {
-        'model_name': 'sentence-transformers/paraphrase-MiniLM-L3-v2',
+        'model_name': os.path.join('models', 'paraphrase-MiniLM-L3-v2'),
         'dimensions': [32, 64, 128],
         'thresholds': {32: 0.4, 64: 0.6, 128: 0.8}
     },
     'balanced': {
-        'model_name': 'sentence-transformers/paraphrase-MiniLM-L3-v2', 
+        'model_name': os.path.join('models', 'paraphrase-MiniLM-L3-v2'), 
         'dimensions': [32, 64, 128, 256],
         'thresholds': {32: 0.3, 64: 0.5, 128: 0.7, 256: 0.8}
     },
     'accurate': {
-        'model_name': 'sentence-transformers/all-mpnet-base-v2',
+        'model_name': os.path.join('models', 'paraphrase-MiniLM-L3-v2'),
         'dimensions': [64, 128, 256, 384, 768],
         'thresholds': {64: 0.2, 128: 0.4, 256: 0.6, 384: 0.7, 768: 0.8}
     },
     'multilingual': {
-        'model_name': 'sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2',
+        'model_name': os.path.join('models', 'paraphrase-multilingual-MiniLM-L12-v2'),
         'dimensions': [32, 64, 128, 256, 384],
         'thresholds': {32: 0.3, 64: 0.5, 128: 0.7, 256: 0.8, 384: 0.85}
     }
