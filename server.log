@@ -23619,3 +23619,500 @@ porque o host conectado não respondeu
 2025-07-07 15:57:59,896 - MainThread   - INFO - Pool de threads criado com 15 workers
 2025-07-07 15:57:59,901 - MainThread   - INFO - Aguardando threads finalizarem...
 2025-07-07 15:57:59,901 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-08 09:00:13,762 - MainThread   - INFO - CORS configurado
+2025-07-08 09:00:13,780 - MainThread   - INFO - Rotas registradas
+2025-07-08 09:00:13,780 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-08 09:00:13,780 - MainThread   - INFO - Background cleanup iniciado
+2025-07-08 09:00:13,780 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-08 09:00:13,780 - MainThread   - INFO - Inicialização RAG em background
+2025-07-08 09:00:13,790 - MainThread   - INFO - Servidor pronto!
+2025-07-08 09:00:13,790 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-08 09:00:13,790 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-08 09:00:13,790 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-08 09:00:13,826 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.75:5000
+2025-07-08 09:00:13,826 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-08 09:00:37,593 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-07-08 09:00:52,832 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-08 09:00:54,137 - Thread-2 (init_rag_background) - INFO - 300 documentos carregados
+2025-07-08 09:12:44,094 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-08 09:12:44,099 - MainThread   - INFO - Pool de threads criado com 15 workers
+2025-07-08 09:12:44,099 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-08 09:12:44,099 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-08 09:13:27,165 - MainThread   - INFO - CORS configurado
+2025-07-08 09:13:27,169 - MainThread   - INFO - Rotas registradas
+2025-07-08 09:13:27,169 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-08 09:13:27,177 - MainThread   - INFO - Background cleanup iniciado
+2025-07-08 09:13:27,179 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-08 09:13:27,179 - MainThread   - INFO - Inicialização RAG em background
+2025-07-08 09:13:27,181 - MainThread   - INFO - Servidor pronto!
+2025-07-08 09:13:27,181 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-08 09:13:27,181 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-08 09:13:27,182 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-08 09:13:27,198 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.75:5000
+2025-07-08 09:13:27,202 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-08 09:13:37,546 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-07-08 09:13:58,207 - Thread-2 (init_rag_background) - INFO - Modelo sentence-transformers/all-MiniLM-L6-v2 carregado no dispositivo cpu
+2025-07-08 09:13:58,207 - Thread-2 (init_rag_background) - INFO - Dimensões Matryoshka: [32, 64, 128, 256]
+2025-07-08 09:13:58,207 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-08 09:13:59,169 - Thread-2 (init_rag_background) - INFO - Modelo sentence-transformers/all-MiniLM-L6-v2 carregado no dispositivo cpu
+2025-07-08 09:13:59,169 - Thread-2 (init_rag_background) - INFO - Dimensões Matryoshka: [32, 64, 128, 256]
+2025-07-08 09:14:37,265 - Thread-2 (init_rag_background) - INFO - 300 documentos carregados
+2025-07-08 09:14:51,993 - Thread-3 (process_request_thread) - INFO - Cliente conectado: HU6cHItVCXkJupcKAAAB
+2025-07-08 09:14:52,064 - Thread-8 (process_request_thread) - INFO -  1 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-08 09:14:52,065 - Thread-8 (process_request_thread) - INFO - Extraídos 1 processos da tabela
+2025-07-08 09:14:52,065 - Thread-8 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 09:14:52] "GET /triagem HTTP/1.1" 200 -
+2025-07-08 09:14:57,852 - Thread-9 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 09:14:57] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-08 09:14:58,196 - Thread-10 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 09:14:58] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-08 09:15:10,276 - Thread-3 (process_request_thread) - INFO - Cliente desconectado: HU6cHItVCXkJupcKAAAB
+2025-07-08 09:15:11,107 - Thread-11 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 09:15:11] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-08 09:15:11,599 - Thread-16 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 09:15:11] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-08 09:15:11,624 - Thread-12 (process_request_thread) - INFO - Cliente conectado: 1DW-DewUOgOjJU8cAAAD
+2025-07-08 09:15:13,713 - Thread-17 (process_request_thread) - INFO -  1 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-08 09:15:13,713 - Thread-17 (process_request_thread) - INFO - Extraídos 1 processos da tabela
+2025-07-08 09:15:13,713 - Thread-17 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 09:15:13] "GET /triagem HTTP/1.1" 200 -
+2025-07-08 09:15:14,755 - Thread-18 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 09:15:14] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-08 09:15:15,023 - Thread-19 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 09:15:15] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-08 09:15:27,353 - Thread-20 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 09:15:27] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-08 09:20:37,811 - Thread-21 (process_request_thread) - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-07-08 09:20:42,960 - Thread-21 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 09:20:42] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-08 09:22:19,723 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-08 09:22:19,723 - MainThread   - INFO - Pool de threads criado com 15 workers
+2025-07-08 09:22:19,723 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-08 09:22:19,725 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-08 09:22:35,675 - MainThread   - INFO - CORS configurado
+2025-07-08 09:22:35,686 - MainThread   - INFO - Rotas registradas
+2025-07-08 09:22:35,686 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-08 09:22:35,686 - MainThread   - INFO - Background cleanup iniciado
+2025-07-08 09:22:35,686 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-08 09:22:35,686 - MainThread   - INFO - Inicialização RAG em background
+2025-07-08 09:22:35,686 - MainThread   - INFO - Servidor pronto!
+2025-07-08 09:22:35,686 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-08 09:22:35,693 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-08 09:22:35,693 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-08 09:22:35,706 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.75:5000
+2025-07-08 09:22:35,706 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-08 09:22:36,146 - Thread-3 (process_request_thread) - INFO - Cliente conectado: TnLp4p0KX9OyigdmAAAB
+2025-07-08 09:22:38,929 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-07-08 09:22:49,273 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-08 09:22:54,503 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:22:57,391 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:23:00,016 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:23:02,665 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:23:05,526 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:23:08,114 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:23:10,894 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:23:13,570 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:23:16,815 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:23:19,654 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:23:21,861 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:23:24,011 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:23:26,659 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:23:28,997 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:23:31,551 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:23:33,924 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:23:36,317 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:23:38,546 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:23:40,963 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:23:43,907 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:23:46,385 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:23:49,212 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:23:51,488 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:23:54,023 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:23:56,648 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:23:58,853 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:24:01,450 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:24:04,409 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:24:06,626 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:24:09,294 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:24:11,595 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:24:14,144 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:24:16,790 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:24:19,502 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:24:22,280 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:24:25,155 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:24:28,050 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:24:31,052 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:24:34,020 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:24:37,170 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:24:39,709 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:24:42,076 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:24:45,381 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:24:48,213 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:24:50,904 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:24:53,376 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:24:56,422 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:24:59,270 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:25:02,288 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:25:05,056 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:25:07,575 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:25:09,842 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:25:12,659 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:25:15,202 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:25:18,169 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:25:21,119 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:25:23,926 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:25:27,053 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:25:30,111 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:25:32,894 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 09:25:33,034 - Thread-2 (init_rag_background) - INFO - 300 documentos carregados
+2025-07-08 09:25:47,353 - Thread-15 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 09:25:47] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-08 09:31:45,717 - Thread-16 (process_request_thread) - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-07-08 09:31:51,987 - Thread-16 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 09:31:51] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-08 09:34:35,342 - Thread-3 (process_request_thread) - INFO - Cliente desconectado: TnLp4p0KX9OyigdmAAAB
+2025-07-08 09:34:35,350 - Thread-3 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 09:34:35] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-08 09:34:35,354 - Thread-3 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-07-08 09:58:45,461 - Thread-39 (process_request_thread) - INFO - Cliente conectado: Sg_xB-juqej1oeR_AAAD
+2025-07-08 09:58:46,096 - Thread-39 (process_request_thread) - INFO - Cliente desconectado: Sg_xB-juqej1oeR_AAAD
+2025-07-08 09:58:47,662 - Thread-47 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 09:58:47] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-08 09:58:48,290 - Thread-43 (process_request_thread) - INFO - Cliente conectado: y6-88luJTm-jEOGzAAAF
+2025-07-08 09:58:48,450 - Thread-48 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 09:58:48] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-08 10:06:38,256 - Thread-43 (process_request_thread) - INFO - Cliente desconectado: y6-88luJTm-jEOGzAAAF
+2025-07-08 10:06:38,258 - Thread-43 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 10:06:38] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-08 10:06:38,260 - Thread-43 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-07-08 10:14:57,989 - Thread-67 (process_request_thread) - INFO - Cliente conectado: ynfHg1dyEj_2Wdq5AAAH
+2025-07-08 10:14:59,443 - Thread-67 (process_request_thread) - INFO - Cliente desconectado: ynfHg1dyEj_2Wdq5AAAH
+2025-07-08 10:15:01,457 - Thread-75 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 10:15:01] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-08 10:15:01,801 - Thread-71 (process_request_thread) - INFO - Cliente conectado: Us4wIwJskfm1xuxxAAAJ
+2025-07-08 10:15:01,832 - Thread-76 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 10:15:01] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-08 10:15:12,204 - Thread-77 (process_request_thread) - INFO -  1 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-08 10:15:12,204 - Thread-77 (process_request_thread) - INFO - Extraídos 1 processos da tabela
+2025-07-08 10:15:12,204 - Thread-77 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 10:15:12] "GET /triagem HTTP/1.1" 200 -
+2025-07-08 10:15:13,151 - Thread-78 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 10:15:13] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-08 10:15:13,470 - Thread-79 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 10:15:13] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-08 10:15:42,412 - Thread-80 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 10:15:42] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-08 10:20:31,803 - Thread-82 (process_request_thread) - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-07-08 10:20:36,535 - Thread-82 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 10:20:36] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-08 10:21:56,720 - Thread-71 (process_request_thread) - INFO - Cliente desconectado: Us4wIwJskfm1xuxxAAAJ
+2025-07-08 10:21:56,727 - Thread-71 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 10:21:56] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-08 10:21:56,727 - Thread-71 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-07-08 10:32:18,353 - Thread-99 (process_request_thread) - INFO - Cliente conectado: zKXs0Mdqpk6JvLbSAAAL
+2025-07-08 10:33:30,565 - Thread-99 (process_request_thread) - INFO - Cliente desconectado: zKXs0Mdqpk6JvLbSAAAL
+2025-07-08 10:33:30,569 - Thread-99 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 10:33:30] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-08 10:33:30,577 - Thread-99 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-07-08 10:33:31,766 - Thread-109 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 10:33:31] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-08 10:33:31,935 - Thread-105 (process_request_thread) - INFO - Cliente conectado: ZNU_e8AE57VhUpxbAAAN
+2025-07-08 10:33:32,024 - Thread-110 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 10:33:32] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-08 10:38:35,499 - Thread-105 (process_request_thread) - INFO - Cliente desconectado: ZNU_e8AE57VhUpxbAAAN
+2025-07-08 10:38:35,502 - Thread-105 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 10:38:35] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-08 10:38:35,504 - Thread-105 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-07-08 10:38:42,880 - Thread-124 (process_request_thread) - INFO - Cliente conectado: 8HimmhNEfsefoioxAAAP
+2025-07-08 10:38:47,237 - Thread-124 (process_request_thread) - INFO - Cliente desconectado: 8HimmhNEfsefoioxAAAP
+2025-07-08 10:38:47,241 - Thread-124 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 10:38:47] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-08 10:38:51,935 - Thread-124 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-07-08 10:38:52,542 - Thread-128 (process_request_thread) - INFO - Cliente conectado: aZCuLMQS8GzEWW5LAAAR
+2025-07-08 10:42:05,493 - Thread-128 (process_request_thread) - INFO - Cliente desconectado: aZCuLMQS8GzEWW5LAAAR
+2025-07-08 10:42:05,503 - Thread-128 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 10:42:05] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-08 10:42:05,509 - Thread-128 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-07-08 10:44:31,861 - Thread-139 (process_request_thread) - INFO - Cliente conectado: 2xXPrs3bjMVXYkiXAAAT
+2025-07-08 10:44:35,125 - Thread-139 (process_request_thread) - INFO - Cliente desconectado: 2xXPrs3bjMVXYkiXAAAT
+2025-07-08 10:44:36,794 - Thread-147 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 10:44:36] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-08 10:44:37,340 - Thread-143 (process_request_thread) - INFO - Cliente conectado: oiV-GOEmyUarIM6JAAAV
+2025-07-08 10:44:37,351 - Thread-148 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 10:44:37] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-08 10:59:42,149 - Thread-143 (process_request_thread) - INFO - Cliente desconectado: oiV-GOEmyUarIM6JAAAV
+2025-07-08 10:59:42,154 - Thread-143 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 10:59:42] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-08 10:59:42,155 - Thread-143 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-07-08 11:00:48,375 - Thread-185 (process_request_thread) - INFO - Cliente conectado: SrJC2p6DWnzp9R6EAAAX
+2025-07-08 11:04:51,802 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-08 11:04:51,805 - MainThread   - INFO - Pool de threads criado com 15 workers
+2025-07-08 11:04:51,805 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-08 11:04:51,805 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-08 11:05:03,675 - MainThread   - INFO - CORS configurado
+2025-07-08 11:05:03,685 - MainThread   - INFO - Rotas registradas
+2025-07-08 11:05:03,685 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-08 11:05:03,690 - MainThread   - INFO - Background cleanup iniciado
+2025-07-08 11:05:03,690 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-08 11:05:03,690 - MainThread   - INFO - Inicialização RAG em background
+2025-07-08 11:05:03,690 - MainThread   - INFO - Servidor pronto!
+2025-07-08 11:05:03,690 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-08 11:05:03,690 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-08 11:05:03,690 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-08 11:05:03,713 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.75:5000
+2025-07-08 11:05:03,714 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-08 11:05:07,038 - Thread-3 (process_request_thread) - INFO - Cliente conectado: pJNcDIX9_0WyPU_AAAAB
+2025-07-08 11:05:12,658 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-07-08 11:05:21,965 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-08 11:05:22,385 - Thread-2 (init_rag_background) - INFO - 300 documentos carregados
+2025-07-08 11:06:28,316 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-08 11:06:28,316 - MainThread   - INFO - Pool de threads criado com 15 workers
+2025-07-08 11:06:28,316 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-08 11:06:28,316 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-08 11:06:50,384 - MainThread   - INFO - CORS configurado
+2025-07-08 11:06:50,394 - MainThread   - INFO - Rotas registradas
+2025-07-08 11:06:50,394 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-08 11:06:50,394 - MainThread   - INFO - Background cleanup iniciado
+2025-07-08 11:06:50,400 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-08 11:06:50,400 - MainThread   - INFO - Inicialização RAG em background
+2025-07-08 11:06:50,400 - MainThread   - INFO - Servidor pronto!
+2025-07-08 11:06:50,400 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-08 11:06:50,400 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-08 11:06:50,400 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-08 11:06:50,415 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.75:5000
+2025-07-08 11:06:50,415 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-08 11:06:50,555 - Thread-3 (process_request_thread) - INFO - Cliente conectado: QLv8SNos1k3bkt3WAAAB
+2025-07-08 11:06:52,972 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-07-08 11:07:06,735 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-08 11:07:11,551 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:07:14,432 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:07:17,059 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:07:19,713 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:07:22,570 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:07:25,127 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:07:27,891 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:07:30,566 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:07:33,810 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:07:36,658 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:07:38,868 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:07:41,030 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:07:43,704 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:07:46,112 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:07:48,737 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:07:51,167 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:07:53,639 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:07:55,956 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:07:58,447 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:08:01,476 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:08:03,993 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:08:06,886 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:08:09,237 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:08:11,841 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:08:14,549 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:08:16,789 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:08:19,450 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:08:22,488 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:08:24,748 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:08:27,463 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:08:29,815 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:08:32,419 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:08:35,110 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:08:37,862 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:08:40,733 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:08:43,679 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:08:46,641 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:08:49,715 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:08:52,761 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:08:55,950 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:08:58,284 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:09:00,365 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:09:03,497 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:09:06,091 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:09:08,583 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:09:11,039 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:09:14,146 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:09:16,988 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:09:20,017 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:09:22,855 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:09:25,411 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:09:27,764 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:09:30,651 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:09:33,262 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:09:36,294 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:09:39,373 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:09:42,284 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:09:45,510 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:09:48,620 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:09:51,461 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 11:09:51,520 - Thread-2 (init_rag_background) - INFO - 300 documentos carregados
+2025-07-08 11:14:32,238 - Thread-3 (process_request_thread) - INFO - Cliente desconectado: QLv8SNos1k3bkt3WAAAB
+2025-07-08 11:14:32,244 - Thread-3 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 11:14:32] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-08 11:14:32,251 - Thread-3 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-07-08 11:48:42,767 - Thread-26 (process_request_thread) - INFO - Cliente conectado: MlidmpL6bLW-FZgOAAAD
+2025-07-08 11:51:52,387 - Thread-26 (process_request_thread) - INFO - Cliente desconectado: MlidmpL6bLW-FZgOAAAD
+2025-07-08 11:51:52,392 - Thread-26 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 11:51:52] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-08 11:51:52,392 - Thread-26 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-07-08 11:58:59,391 - Thread-37 (process_request_thread) - INFO - Cliente conectado: tt5Dxosan-7XDRG3AAAF
+2025-07-08 11:59:09,718 - Thread-37 (process_request_thread) - INFO - Cliente desconectado: tt5Dxosan-7XDRG3AAAF
+2025-07-08 11:59:11,172 - Thread-45 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 11:59:11] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-08 11:59:11,408 - Thread-41 (process_request_thread) - INFO - Cliente conectado: YYZYZe7Fj05br7cxAAAH
+2025-07-08 11:59:11,437 - Thread-46 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 11:59:11] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-08 11:59:15,454 - Thread-47 (process_request_thread) - INFO -  1 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-08 11:59:15,454 - Thread-47 (process_request_thread) - INFO - Extraídos 1 processos da tabela
+2025-07-08 11:59:15,457 - Thread-47 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 11:59:15] "GET /triagem HTTP/1.1" 200 -
+2025-07-08 11:59:16,833 - Thread-48 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 11:59:16] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-08 11:59:17,088 - Thread-49 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 11:59:17] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-08 11:59:34,821 - Thread-50 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 11:59:34] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-08 12:02:59,497 - Thread-41 (process_request_thread) - INFO - Cliente desconectado: YYZYZe7Fj05br7cxAAAH
+2025-07-08 12:02:59,535 - Thread-41 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 12:02:59] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-08 12:02:59,541 - Thread-41 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-07-08 12:03:36,725 - Thread-70 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 12:03:36] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-08 12:03:37,043 - Thread-66 (process_request_thread) - INFO - Cliente conectado: qT5Z2hhxuDmfKx0SAAAK
+2025-07-08 12:03:37,066 - Thread-71 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 12:03:37] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-08 12:04:03,851 - Thread-73 (process_request_thread) - INFO -  1 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-08 12:04:03,851 - Thread-73 (process_request_thread) - INFO - Extraídos 1 processos da tabela
+2025-07-08 12:04:03,851 - Thread-73 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 12:04:03] "GET /triagem HTTP/1.1" 200 -
+2025-07-08 12:04:04,519 - Thread-74 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 12:04:04] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-08 12:04:04,865 - Thread-75 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 12:04:04] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-08 12:04:20,574 - Thread-76 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 12:04:20] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-08 12:04:22,491 - Thread-77 (process_request_thread) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 12:04:36,454 - Thread-51 (process_request_thread) - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-07-08 12:04:40,059 - Thread-51 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 12:04:40] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-08 12:07:51,910 - Thread-77 (process_request_thread) - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-07-08 12:07:55,662 - Thread-77 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 12:07:55] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-08 12:11:52,240 - Thread-97 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 12:11:52] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-08 12:11:53,265 - Thread-98 (process_request_thread) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 12:15:16,191 - Thread-98 (process_request_thread) - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-07-08 12:15:43,952 - Thread-98 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 12:15:43] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-08 12:26:27,747 - Thread-135 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 12:26:27] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-08 12:26:28,848 - Thread-136 (process_request_thread) - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-07-08 12:28:08,892 - Thread-142 (process_request_thread) - INFO -  1 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-08 12:28:08,892 - Thread-142 (process_request_thread) - INFO - Extraídos 1 processos da tabela
+2025-07-08 12:28:08,892 - Thread-142 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 12:28:08] "GET /triagem HTTP/1.1" 200 -
+2025-07-08 12:28:17,956 - Thread-144 (process_request_thread) - INFO -  1 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-08 12:28:17,956 - Thread-144 (process_request_thread) - INFO - Extraídos 1 processos da tabela
+2025-07-08 12:28:17,959 - Thread-144 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 12:28:17] "GET /triagem HTTP/1.1" 200 -
+2025-07-08 12:29:42,358 - Thread-136 (process_request_thread) - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-07-08 12:29:50,333 - Thread-136 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 12:29:50] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-08 12:32:20,715 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-08 12:32:20,715 - MainThread   - INFO - Pool de threads criado com 15 workers
+2025-07-08 12:32:20,715 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-08 12:32:20,730 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-08 12:32:37,946 - MainThread   - INFO - CORS configurado
+2025-07-08 12:32:37,946 - MainThread   - INFO - Rotas registradas
+2025-07-08 12:32:37,946 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-08 12:32:37,946 - MainThread   - INFO - Background cleanup iniciado
+2025-07-08 12:32:37,946 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-08 12:32:37,946 - MainThread   - INFO - Inicialização RAG em background
+2025-07-08 12:32:37,946 - MainThread   - INFO - Servidor pronto!
+2025-07-08 12:32:37,946 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-08 12:32:37,946 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-08 12:32:37,946 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-08 12:32:37,962 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.75:5000
+2025-07-08 12:32:37,962 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-08 12:32:40,839 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-07-08 12:32:43,042 - Thread-3 (process_request_thread) - INFO - Cliente conectado: hoVj7zHpjnS_05IzAAAB
+2025-07-08 12:32:53,987 - Thread-2 (init_rag_background) - INFO - Modelo sentence-transformers/all-MiniLM-L6-v2 carregado no dispositivo cpu
+2025-07-08 12:32:53,987 - Thread-2 (init_rag_background) - INFO - Dimensões Matryoshka: [32, 64, 128]
+2025-07-08 12:32:53,987 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-08 12:32:54,805 - Thread-2 (init_rag_background) - INFO - Modelo sentence-transformers/all-MiniLM-L6-v2 carregado no dispositivo cpu
+2025-07-08 12:32:54,805 - Thread-2 (init_rag_background) - INFO - Dimensões Matryoshka: [32, 64, 128]
+2025-07-08 12:33:23,685 - Thread-2 (init_rag_background) - INFO - 300 documentos carregados
+2025-07-08 12:34:06,979 - Thread-11 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 12:34:06] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-08 12:34:07,246 - Thread-12 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 12:34:07] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-08 12:34:21,595 - Thread-13 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 12:34:21] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-08 12:38:30,806 - Thread-14 (process_request_thread) - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-07-08 12:38:34,789 - Thread-14 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 12:38:34] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-08 12:49:29,482 - Thread-3 (process_request_thread) - INFO - Cliente desconectado: hoVj7zHpjnS_05IzAAAB
+2025-07-08 12:49:29,484 - Thread-3 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 12:49:29] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-08 12:49:29,486 - Thread-3 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+  File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+2025-07-08 13:10:15,674 - Thread-53 (process_request_thread) - INFO - Cliente conectado: 9tR0HElqmF2rriBeAAAD
+2025-07-08 13:10:16,496 - Thread-53 (process_request_thread) - INFO - Cliente desconectado: 9tR0HElqmF2rriBeAAAD
+2025-07-08 13:10:17,762 - Thread-61 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 13:10:17] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-08 13:10:17,842 - Thread-57 (process_request_thread) - INFO - Cliente conectado: hweTL4DskjoN1rEqAAAF
+2025-07-08 13:10:18,015 - Thread-62 (process_request_thread) - INFO - 127.0.0.1 - - [08/Jul/2025 13:10:18] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-08 13:33:00,118 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-08 13:33:00,119 - MainThread   - INFO - Pool de threads criado com 15 workers
+2025-07-08 13:33:00,119 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-08 13:33:00,119 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'

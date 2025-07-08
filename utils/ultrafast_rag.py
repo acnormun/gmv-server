@@ -40,9 +40,9 @@ class UltraFastRAGConfig:
     top_k: int = 8
     max_chunks: int = 1000
     data_dir: str = "data"
-    use_ollama_embeddings: bool = True
-    use_matryoshka_embeddings: bool = False
-    matryoshka_preset: str = "balanced"
+    use_ollama_embeddings: bool = False
+    use_matryoshka_embeddings: bool = True
+    matryoshka_preset: str = "fast"
     enable_conversational: bool = True
     max_context_length: int = 20000
     num_predict: int = 1500

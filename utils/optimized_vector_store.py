@@ -24,7 +24,7 @@ except ImportError:
             OllamaEmbeddings = None
 
 class OptimizedVectorStore:
-    def __init__(self, persist_dir, use_ollama=True, use_matryoshka=False, matryoshka_preset="balanced"):
+    def __init__(self, persist_dir, use_ollama=False, use_matryoshka=True, matryoshka_preset="fast"):
         self.persist_dir = persist_dir
         self.embeddings = []
         self.documents = []
@@ -38,7 +38,7 @@ class OptimizedVectorStore:
         self.matryoshka_dim = None
         if self.use_matryoshka:
             try:
-                config = MATRYOSHKA_CONFIGS.get(matryoshka_preset, MATRYOSHKA_CONFIGS["balanced"])
+                config = MATRYOSHKA_CONFIGS.get(matryoshka_preset, MATRYOSHKA_CONFIGS["fast"])
                 self.matryoshka_embedder = MatryoshkaEmbedding(
                     model_name=config["model_name"],
                     matryoshka_dims=config["dimensions"],
