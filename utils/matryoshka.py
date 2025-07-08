@@ -17,7 +17,7 @@ class MatryoshkaEmbedding:
     contêm informação hierárquica, permitindo uso adaptativo baseado na complexidade.
     """
     def __init__(self, 
-                 model_name: str = "sentence-transformers/all-MiniLM-L6-v2",
+                 model_name: str = "sentence-transformers/paraphrase-MiniLM-L3-v2",
                  matryoshka_dims: Optional[List[int]] = None,
                  device: str = "auto"):
         self.model_name = model_name
@@ -275,7 +275,7 @@ class MatryoshkaEmbedding:
             logger.error(f"Erro ao carregar embeddings: {e}")
             raise
 
-def create_matryoshka_model(model_name: str = "sentence-transformers/all-MiniLM-L6-v2",
+def create_matryoshka_model(model_name: str = "sentence-transformers/paraphrase-MiniLM-L3-v2",
                            custom_dims: Optional[List[int]] = None) -> MatryoshkaEmbedding:
     return MatryoshkaEmbedding(
         model_name=model_name,
@@ -284,12 +284,12 @@ def create_matryoshka_model(model_name: str = "sentence-transformers/all-MiniLM-
 
 MATRYOSHKA_CONFIGS = {
     'fast': {
-        'model_name': 'sentence-transformers/all-MiniLM-L6-v2',
+        'model_name': 'sentence-transformers/paraphrase-MiniLM-L3-v2',
         'dimensions': [32, 64, 128],
         'thresholds': {32: 0.4, 64: 0.6, 128: 0.8}
     },
     'balanced': {
-        'model_name': 'sentence-transformers/all-MiniLM-L6-v2', 
+        'model_name': 'sentence-transformers/paraphrase-MiniLM-L3-v2', 
         'dimensions': [32, 64, 128, 256],
         'thresholds': {32: 0.3, 64: 0.5, 128: 0.7, 256: 0.8}
     },
