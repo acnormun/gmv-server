@@ -109,7 +109,10 @@ def get_rag_status():
     conversational_status = "Inativo"
     model_name = "N/A"
     if hasattr(rag_system, 'config'):
-        embedding_method = "Híbrido (Ollama + TF-IDF)" if rag_system.config.use_ollama_embeddings else "TF-IDF"
+        if rag_system.config.use_matryoshka_embeddings:
+            embedding_method = "Matryoshka"
+        else:
+            embedding_method = "Híbrido (Ollama + TF-IDF)" if rag_system.config.use_ollama_embeddings else "TF-IDF"
         conversational_status = "Ativo" if rag_system.config.enable_conversational and hasattr(rag_system, 'conversational_handler') else "Inativo"
         model_name = rag_system.config.model_name
     return {
@@ -151,114 +154,3 @@ def get_sample_documents(limit: int = 5):
         return samples
     except Exception as e:
         return [{"error": str(e)}]
-
-def test_search_detailed(question: str):
-    if hasattr(rag_system, 'test_search_detailed'):
-        return rag_system.test_search_detailed(question)
-    return {"error": "Teste detalhado não disponível"}
-
-def quick_test():
-    try:
-        test_queries = [
-            "triagem",
-            "processo",
-            "agravo"
-        ]
-        for query in test_queries:
-            try:
-                result = rag_system.query(query)
-                docs_found = result.get('documents_found', 0)
-                has_answer = len(result.get('answer', '')) > 0
-            except Exception:
-                pass
-        processes = list_available_processes(5)
-        return True
-    except Exception:
-        return False
-
-def test_conversational_responses():
-    if not ConversationalLayer:
-        return
-    conv_layer = ConversationalLayer()
-    test_cases = [
-        "Oi!",
-        "Bom dia!",
-        "Como você está?",
-        "Obrigado pela ajuda",
-        "Você pode me ajudar?",
-        "Tchau!",
-        "Qual seu nome?",
-        "Oi, bom dia! Preciso saber sobre um processo específico",
-        "Olá! Gostaria de entender sobre TEA e terapia ABA",
-        "Valeu pelas informações! Qual o valor da causa do processo 1005888?"
-    ]
-    for test in test_cases:
-        conv_type = conv_layer.detect_conversation_type(test)
-        should_conv = conv_layer.should_use_conversational_response(test)
-        if conv_type and should_conv:
-            response = conv_layer.generate_conversational_response(test, conv_type)
-        else:
-            pass
-
-if __name__ == "__main__":
-    test_conversational_responses()
-    if UltraFastRAG:
-        test_dir = "data"
-        if not os.path.exists(test_dir):
-            os.makedirs(test_dir)
-            test_content = """### METADADOS DO PROCESSO
-numero_processo: "1005888-76.2025.8.11.0000"
-data_distribuicao: "27/02/2025"
-valor_causa: "R$ 1.518,00"
-assuntos: "Liminar, Multas e demais Sanções, Tratamento médico-hospitalar"
-
-### PARTES ENVOLVIDAS
-agravante: "Y. F. O."
-agravado: "MUNICIPIO DE SINOP, ESTADO DE MATO GROSSO"
-terceiro_interessado: "MINISTERIO PUBLICO DO ESTADO DE MATO GROSSO"
-
-### CONTEÚDO PRINCIPAL
-
-Trata-se de Recurso de Agravo de Instrumento interposto por Y.F.O., representado por sua genitora, em face da decisão da Vara Especializada da Infância e Juventude.
-
-O agravante foi diagnosticado com Transtorno do Espectro Autista (TEA) CID 10 - F84.0 e necessita de:
-- Fonoaudiologia especializada em TEA (3x por semana)
-- Terapia ocupacional especializada (3x por semana) 
-- Psicoterapia comportamental tipo ABA (3x por semana)
-- Atendimento com neuropediatra
-- Professor de apoio especializado
-- Psicopedagoga (3x por semana)
-
-PARECER NAT-JUS:
-A terapia ABA não tem embasamento científico robusto e os procedimentos são de caráter eletivo. Estudos indicam que não há evidência de superioridade da ABA sobre alternativas terapêuticas, além do alto custo individual.
-
-O SUS disponibiliza fisioterapia, psicoterapia, fonoaudiologia e terapia ocupacional. A psicopedagogia é responsabilidade da Secretaria Municipal de Educação.
-
-A responsabilidade dos entes federativos na saúde é solidária, podendo qualquer um ser demandado para fornecer os serviços.
-"""
-            with open(os.path.join(test_dir, "processo_teste.md"), "w", encoding="utf-8") as f:
-                f.write(test_content)
-        config = UltraFastRAGConfig(
-            model_name="gemma3:4b",
-            temperature=0.1,
-            data_dir=test_dir,
-            use_ollama_embeddings=True,
-            enable_conversational=True
-        )
-        test_rag = UltraFastRAG(config)
-        if test_rag.initialize():
-            docs_loaded = test_rag.load_documents_from_directory()
-            if docs_loaded > 0:
-                queries = [
-                    "Oi! Bom dia!",
-                    "Qual é o número do processo e quem são as partes envolvidas?",
-                    "Obrigado! A terapia ABA é disponibilizada pelo SUS?",
-                    "Quais tratamentos o agravante necessita?",
-                    "Valeu pelas informações! Tchau!"
-                ]
-                for query in queries:
-                    result = test_rag.query(query)
-        else:
-            pass
-    else:
-        pass

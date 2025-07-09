@@ -7,7 +7,6 @@ from dataclasses import dataclass
 from typing import Any, Dict, List, Optional
 from functools import lru_cache
 import threading
-import requests
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -41,7 +40,9 @@ class UltraFastRAGConfig:
     top_k: int = 8
     max_chunks: int = 1000
     data_dir: str = "data"
-    use_ollama_embeddings: bool = True
+    use_ollama_embeddings: bool = False
+    use_matryoshka_embeddings: bool = True
+    matryoshka_preset: str = "fast"
     enable_conversational: bool = True
     max_context_length: int = 20000
     num_predict: int = 1500
@@ -122,27 +123,9 @@ class UltraFastRAG:
                 del self.response_cache[oldest_key]
             self.response_cache[cache_key] = (response, time.time())
     
-    def _check_ollama_connection(self) -> bool:
-        """Verifies that the Ollama server is reachable before creating the LLM."""
-        url = self.config.ollama_base_url.rstrip("/") + "/api/tags"
-        for attempt in range(3):
-            try:
-                r = requests.get(url, timeout=5)
-                if r.status_code == 200:
-                    return True
-            except Exception as e:
-                print(f"Verificação Ollama tentativa {attempt+1} falhou: {e}")
-            time.sleep(2)
-        return False
-    
     def initialize(self):
         try:
             print("Inicializando UltraFast RAG Otimizado...")
-            if not self._check_ollama_connection():
-                print(
-                    "Erro: Ollama não está acessível. Verifique se o serviço está rodando e se OLLAMA_BASE_URL está correto."
-                )
-                return False
             connected = False
             for attempt in range(3):
                 try:
@@ -198,7 +181,9 @@ class UltraFastRAG:
         try:
             self.vector_store = OptimizedVectorStore(
                 os.path.join(self.cache_path, "optimized"),
-                use_ollama=self.config.use_ollama_embeddings
+                use_ollama=self.config.use_ollama_embeddings,
+                use_matryoshka=self.config.use_matryoshka_embeddings,
+                matryoshka_preset=self.config.matryoshka_preset,
             )
             if self.vector_store.load():
                 try:
@@ -376,7 +361,9 @@ class UltraFastRAG:
             print("Criando vector store otimizado...")
             self.vector_store = OptimizedVectorStore(
                 os.path.join(self.cache_path, "optimized"),
-                use_ollama=self.config.use_ollama_embeddings
+                use_ollama=self.config.use_ollama_embeddings,
+                use_matryoshka=self.config.use_matryoshka_embeddings,
+                matryoshka_preset=self.config.matryoshka_preset,
             )
             max_docs = min(len(self.documents), self.config.max_chunks)
             self.vector_store.add_documents(self.documents[:max_docs], max_docs=max_docs)
@@ -388,66 +375,34 @@ class UltraFastRAG:
     def _search_documents_optimized(self, query: str, top_k: int) -> List[Document]:
         if not self.vector_store:
             return []
-        print(f"Busca híbrida para: '{query}'")
-        keyword_results = []
-        legal_keywords = [
-            'argumento', 'argumenta', 'sustenta', 'alega', 'defesa', 
-            'motivação', 'fundamento', 'razão', 'motivo',
-            'pad', 'processo administrativo', 'disciplinar', 'demissão',
-            'cerceamento', 'contraditório', 'ampla defesa',
-            'tutela', 'liminar', 'urgência', 'recurso', 'agravo'
-        ]
-        query_lower = query.lower()
-        relevant_keywords = []
-        for keyword in legal_keywords:
-            if keyword in query_lower:
-                relevant_keywords.append(keyword)
-        if not relevant_keywords:
-            relevant_keywords = [word for word in query_lower.split() if len(word) > 3]
-        print(f"Buscando por: {relevant_keywords}")
-        for doc in self.documents or []:
-            content_lower = doc.page_content.lower()
-            score = 0
-            for keyword in relevant_keywords:
-                count = content_lower.count(keyword.lower())
-                score += count
-            if score > 0:
-                doc_copy = Document(
-                    page_content=doc.page_content,
-                    metadata={
-                        **doc.metadata,
-                        "similarity_score": min(score / 5, 1.0),
-                        "search_type": "keyword"
-                    }
-                )
-                keyword_results.append((score, doc_copy))
-        keyword_results.sort(key=lambda x: x[0], reverse=True)
-        keyword_docs = [doc for _, doc in keyword_results[:top_k]]
-        print(f"Keywords encontraram: {len(keyword_docs)} docs")
+        print(f"Busca otimizada para: '{query}'")
+        keyword_docs = self.vector_store._keyword_search(query, k=top_k)
         process_results = []
         process_pattern = r'\d{7}-\d{2}\.\d{4}\.\d\.\d{2}\.\d{4}'
         process_match = re.search(process_pattern, query)
         if process_match:
             process_number = process_match.group()
-            print(f"Processo específico: {process_number}")
-            for doc in self.documents or []:
-                if process_number in doc.page_content:
-                    doc_copy = Document(
-                        page_content=doc.page_content,
+            idxs = self.vector_store.process_index.get(process_number)
+            if idxs:
+                for idx in idxs:
+                    doc = Document(
+                        page_content=self.vector_store.documents[idx],
                         metadata={
-                            **doc.metadata,
+                             **self.vector_store.metadata[idx],
                             "similarity_score": 0.95,
                             "search_type": "process"
                         }
                     )
-                    process_results.append(doc_copy)
-            print(f"Processo encontrou: {len(process_results)} docs")
+                    process_results.append(doc)
         semantic_results = []
         try:
-            semantic_results = self.vector_store.similarity_search(
-                query, k=top_k, min_score=0.001
+            semantic_results = self.vector_store.hybrid_search(
+                query,
+                k=top_k,
+                semantic_weight=0.7,
+                lexical_weight=0.3,
+                min_score=self.config.min_similarity_score,
             )
-            print(f"Semântica encontrou: {len(semantic_results)} docs")
         except Exception as e:
             print(f"Busca semântica falhou: {e}")
         all_results = []
@@ -458,9 +413,7 @@ class UltraFastRAG:
                 if doc_hash not in seen:
                     seen.add(doc_hash)
                     all_results.append(doc)
-        final_results = all_results[:top_k]
-        print(f"Total selecionado: {len(final_results)} documentos")
-        return final_results
+        return all_results[:top_k]
     
     def _create_optimized_context(self, docs: List[Document]) -> str:
         if not docs:
@@ -489,22 +442,12 @@ class UltraFastRAG:
         return "\n\n" + "="*50 + "\n\n".join(context_parts)
     
     def _create_optimized_prompt(self, question: str, context: str) -> str:
-        return f"""Você é um assistente jurídico especializado. Analise TODOS os documentos fornecidos e responda de forma DETALHADA.
-
-    INSTRUÇÕES CRÍTICAS:
-    1. Use TODAS as informações relevantes dos documentos
-    2. Para argumentos de defesa: extraia alegações, sustentações específicas
-    3. Para motivações: identifique tipo de ação, fundamentos, razões
-    4. Cite trechos específicos quando relevante
-    5. NÃO se limite aos metadados - use o CONTEÚDO COMPLETO
-    6. Se houver múltiplas informações, inclua todas
-
-    DOCUMENTOS COMPLETOS:
+        return f"""Você é um assistente jurídico especializado. Utilize apenas o texto a seguir como referência e responda de forma clara e completa, sem mencionar de onde as informações vieram.
     {context}
 
     PERGUNTA: {question}
 
-    RESPOSTA DETALHADA E FUNDAMENTADA:"""
+    RESPOSTA:"""
     
     def query(self, question: str, top_k: Optional[int] = None) -> Dict[str, Any]:
         if not self.is_initialized or not self.vector_store:
@@ -589,324 +532,3 @@ def load_optimized_data():
     if optimized_rag_system:
         return optimized_rag_system.load_documents_from_directory()
     return 0
-
-def query_optimized_rag(question: str, top_k: int = 3):
-    if optimized_rag_system:
-        return optimized_rag_system.query(question, top_k)
-    return {"error": "Sistema não inicializado"}
-
-def get_optimized_performance_stats():
-    if optimized_rag_system:
-        return optimized_rag_system.get_performance_stats()
-    return {"error": "Sistema não inicializado"}
-
-def clear_optimized_cache():
-    if optimized_rag_system:
-        optimized_rag_system.clear_cache()
-
-def performance_comparison_test():
-    print("TESTE DE PERFORMANCE - RAG OTIMIZADO")
-    print("=" * 60)
-    if not optimized_rag_system or not optimized_rag_system.is_initialized:
-        print("Sistema otimizado não inicializado")
-        return
-    test_queries = [
-        "processo 1005888",
-        "terapia ABA",
-        "valor da causa",
-        "agravante agravado",
-        "SUS tratamento"
-    ]
-    print("Testando velocidade das consultas...")
-    for i, query in enumerate(test_queries, 1):
-        print(f"\n--- TESTE {i} ---")
-        print(f"Query: {query}")
-        start_time = time.time()
-        result = optimized_rag_system.query(query)
-        end_time = time.time()
-        if "error" not in result:
-            print(f"Resposta obtida")
-            print(f"Tempo: {end_time - start_time:.2f}s")
-            print(f"Docs encontrados: {result.get('documents_found', 0)}")
-            print(f"Do cache: {result.get('from_cache', False)}")
-        else:
-            print(f"Erro: {result['error']}")
-    print(f"\nESTATÍSTICAS FINAIS:")
-    stats = optimized_rag_system.get_performance_stats()
-    print(f"Cache hits: {stats['cache_stats']['hits']}")
-    print(f"Cache misses: {stats['cache_stats']['misses']}")
-    if stats['cache_stats']['hits'] + stats['cache_stats']['misses'] > 0:
-        hit_rate = stats['cache_stats']['hits'] / (stats['cache_stats']['hits'] + stats['cache_stats']['misses'])
-        print(f"Taxa de acerto do cache: {hit_rate:.2%}")
-
-if __name__ == "__main__":
-    print("SISTEMA RAG ULTRA OTIMIZADO")
-    print("=" * 50)
-    if init_optimized_rag():
-        print("Sistema otimizado inicializado")
-        docs_loaded = load_optimized_data()
-        if docs_loaded > 0:
-            print(f"{docs_loaded} documentos carregados")
-            performance_comparison_test()
-        else:
-            print("Nenhum documento carregado")
-    else:
-        print("Falha na inicialização do sistema otimizado")
-        
-def apply_advanced_search_fix(rag_system):
-    print("Aplicando correção avançada de busca...")
-    try:
-        if hasattr(rag_system, 'config'):
-            rag_system.config.min_similarity_score = 0.001
-            rag_system.config.top_k = 8
-        def advanced_hybrid_search(query: str, top_k: int = 8) -> List:
-            if not rag_system.vector_store:
-                return []
-            print(f"Busca híbrida para: '{query}'")
-            keyword_results = []
-            legal_keywords = {
-                'argumento': ['argumento', 'argumenta', 'sustenta', 'defesa', 'alega'],
-                'defesa': ['defesa', 'razões de defesa', 'contraditório', 'ampla defesa', 'cerceamento'],
-                'motivacao': ['motivação', 'fundamento', 'razão', 'motivo', 'objetivo'],
-                'pad': ['PAD', 'processo administrativo', 'disciplinar', 'demissão'],
-                'lei': ['lei municipal', 'lei complementar', 'art.', 'artigo'],
-                'processo': ['processo', 'agravo', 'recurso', 'ação'],
-                'tutela': ['tutela', 'liminar', 'urgência', 'antecipação']
-            }
-            query_lower = query.lower()
-            relevant_keywords = []
-            for keywords in legal_keywords.values():
-                for keyword in keywords:
-                    if keyword in query_lower:
-                        relevant_keywords.extend(keywords)
-            if not relevant_keywords:
-                relevant_keywords = [word for word in query_lower.split() if len(word) > 3]
-            print(f"Keywords relevantes: {relevant_keywords}")
-            for doc in rag_system.documents or []:
-                content_lower = doc.page_content.lower()
-                score = 0
-                matches = []
-                for keyword in relevant_keywords:
-                    count = content_lower.count(keyword.lower())
-                    if count > 0:
-                        score += count * (len(keyword) / 10)
-                        matches.append(f"{keyword}({count})")
-                if score > 0:
-                    doc_copy = type(doc)(
-                        page_content=doc.page_content,
-                        metadata={
-                            **doc.metadata,
-                            "similarity_score": min(score / 10, 1.0),
-                            "search_type": "keyword",
-                            "matches": matches
-                        }
-                    )
-                    keyword_results.append((score, doc_copy))
-            keyword_results.sort(key=lambda x: x[0], reverse=True)
-            keyword_docs = [doc for _, doc in keyword_results[:top_k]]
-            print(f"Busca por keywords encontrou: {len(keyword_docs)} documentos")
-            semantic_results = []
-            try:
-                semantic_results = rag_system.vector_store.similarity_search(
-                    query, k=top_k, min_score=0.001
-                )
-                print(f"Busca semântica encontrou: {len(semantic_results)} documentos")
-            except Exception as e:
-                print(f"Busca semântica falhou: {e}")
-            process_results = []
-            process_pattern = r'\d{7}-\d{2}\.\d{4}\.\d\.\d{2}\.\d{4}'
-            process_match = re.search(process_pattern, query)
-            if process_match:
-                process_number = process_match.group()
-                print(f"Buscando processo específico: {process_number}")
-                for doc in rag_system.documents or []:
-                    if process_number in doc.page_content or process_number in str(doc.metadata):
-                        doc_copy = type(doc)(
-                            page_content=doc.page_content,
-                            metadata={
-                                **doc.metadata,
-                                "similarity_score": 0.9,
-                                "search_type": "process_number"
-                            }
-                        )
-                        process_results.append(doc_copy)
-                print(f"Busca por processo encontrou: {len(process_results)} documentos")
-            substantial_results = []
-            for doc in rag_system.documents or []:
-                content = doc.page_content
-                substantial_score = 0
-                substantial_indicators = [
-                    'sustenta', 'argumenta', 'alega', 'defende', 'contesta',
-                    'fundamento', 'razão', 'motivo', 'ementa', 'decisão',
-                    'voto', 'acórdão', 'sentença', 'despacho', 'parecer',
-                    'lei municipal', 'código de processo', 'constituição',
-                    'jurisprudência', 'precedente', 'súmula'
-                ]
-                for indicator in substantial_indicators:
-                    if indicator in content.lower():
-                        substantial_score += 1
-                if len(content) < 200 or content.count(':') > content.count('.'):
-                    substantial_score *= 0.3
-                if substantial_score > 2:
-                    doc_copy = type(doc)(
-                        page_content=doc.page_content,
-                        metadata={
-                            **doc.metadata,
-                            "similarity_score": min(substantial_score / 10, 1.0),
-                            "search_type": "substantial_content"
-                        }
-                    )
-                    substantial_results.append(doc_copy)
-            print(f"Busca substantiva encontrou: {len(substantial_results)} documentos")
-            all_results = []
-            seen_content = set()
-            for result_set, priority in [
-                (process_results, 100),
-                (keyword_docs, 80),
-                (substantial_results, 60),
-                (semantic_results, 40)
-            ]:
-                for doc in result_set:
-                    content_hash = hash(doc.page_content[:200])
-                    if content_hash not in seen_content:
-                        seen_content.add(content_hash)
-                        current_score = doc.metadata.get("similarity_score", 0)
-                        final_score = (current_score * priority) / 100
-                        doc.metadata["final_score"] = final_score
-                        doc.metadata["priority"] = priority
-                        all_results.append(doc)
-            all_results.sort(key=lambda x: x.metadata.get("final_score", 0), reverse=True)
-            final_results = all_results[:top_k]
-            print(f"Busca híbrida final: {len(final_results)} documentos selecionados")
-            for i, doc in enumerate(final_results[:3], 1):
-                search_type = doc.metadata.get("search_type", "unknown")
-                score = doc.metadata.get("final_score", 0)
-                preview = doc.page_content[:100].replace('\n', ' ')
-                print(f"   {i}. {search_type} (score: {score:.3f}): {preview}...")
-            return final_results
-        rag_system._search_documents_optimized = lambda query, top_k: advanced_hybrid_search(query, top_k)
-        def create_intelligent_context(docs):
-            if not docs:
-                return ""
-            context_parts = []
-            total_length = 0
-            max_length = 20000
-            docs_sorted = sorted(docs, key=lambda d: len(d.page_content), reverse=True)
-            for i, doc in enumerate(docs_sorted, 1):
-                content = doc.page_content.strip()
-                metadata_info = []
-                search_type = doc.metadata.get("search_type", "embedding")
-                score = doc.metadata.get("final_score", doc.metadata.get("similarity_score", 0))
-                for key in ['numero_processo', 'agravante', 'agravado', 'assuntos']:
-                    if key in doc.metadata and doc.metadata[key]:
-                        metadata_info.append(f"{key}: {doc.metadata[key]}")
-                matches = doc.metadata.get("matches", [])
-                debug_info = f"Busca: {search_type}, Score: {score:.3f}"
-                if matches:
-                    debug_info += f", Matches: {matches}"
-                doc_text = f"DOCUMENTO {i} ({debug_info})"
-                if metadata_info:
-                    doc_text += f"\nMetadados: {', '.join(metadata_info)}"
-                doc_text += f"\nConteúdo:\n{content}"
-                if total_length + len(doc_text) > max_length:
-                    remaining = max_length - total_length - 500
-                    if remaining > 1000:
-                        doc_text = f"DOCUMENTO {i} (PARCIAL - {debug_info}):\n{content[:remaining]}..."
-                        context_parts.append(doc_text)
-                    break
-                context_parts.append(doc_text)
-                total_length += len(doc_text)
-            return "\n\n" + "="*80 + "\n\n".join(context_parts)
-        rag_system._create_optimized_context = lambda docs: create_intelligent_context(docs)
-        def create_extraction_prompt(question, context):
-            return f"""Você é um assistente jurídico especializado. Analise os documentos fornecidos e responda de forma DETALHADA e COMPLETA.
-
-INSTRUÇÕES IMPORTANTES:
-1. Use TODAS as informações relevantes dos documentos
-2. Para argumentos de defesa: extraia alegações, sustentações, argumentações específicas
-3. Para motivações: identifique o tipo de ação, objeto, fundamentos jurídicos
-4. Cite trechos específicos dos documentos quando relevante
-5. Se houver informações contraditórias, mencione todas as versões
-6. NÃO se limite apenas aos metadados - use o CONTEÚDO COMPLETO
-
-DOCUMENTOS ANALISADOS:
-{context}
-
-PERGUNTA: {question}
-
-RESPOSTA DETALHADA E FUNDAMENTADA:"""
-        rag_system._create_optimized_prompt = create_extraction_prompt
-        return True
-    except Exception as e:
-        print(f"Erro na correção avançada: {e}")
-        return False
-
-def test_advanced_search():
-    print("\nTESTANDO SISTEMA DE BUSCA AVANÇADA...")
-    if not optimized_rag_system:
-        print("Sistema não inicializado")
-        return
-    test_cases = [
-        "Qual foi o argumento da defesa no processo 1002436-58.2025.8.11.0000?",
-        "Qual a motivação do processo 1002436-58.2025.8.11.0000?",
-        "O que a agravante alega sobre cerceamento de defesa?",
-        "Quais são os fundamentos da demissão da servidora?",
-        "Qual foi a decisão do tribunal sobre o PAD?"
-    ]
-    for i, question in enumerate(test_cases, 1):
-        print(f"\n--- TESTE {i} ---")
-        print(f"Pergunta: {question}")
-        start_time = time.time()
-        result = optimized_rag_system.query(question)
-        elapsed = time.time() - start_time
-        if "error" not in result:
-            answer = result.get("answer", "")
-            docs_found = result.get("documents_found", 0)
-            print(f"Resposta obtida em {elapsed:.2f}s")
-            print(f"Documentos encontrados: {docs_found}")
-            print(f"Tamanho da resposta: {len(answer)} caracteres")
-            if len(answer) > 200 and not answer.startswith("Não é possível"):
-                print("SUCESSO: Conteúdo substantivo encontrado!")
-            else:
-                print("Ainda limitado aos metadados")
-            print(f"Prévia: {answer[:200]}...")
-        else:
-            print(f"Erro: {result['error']}")
-
-def fix_search_and_test():
-    print("APLICANDO CORREÇÃO AVANÇADA DE BUSCA...")
-    if apply_advanced_search_fix(optimized_rag_system):
-        print("Correção aplicada com sucesso!")
-        test_advanced_search()
-        print("\nSISTEMA PRONTO PARA USO!")
-        print("Use: result = optimized_rag_system.query('sua pergunta')")
-    else:
-        print("Falha na aplicação da correção")
-
-def test_specific_questions():
-    if not optimized_rag_system:
-        print("Sistema não inicializado")
-        return
-    questions = [
-        "Qual foi o argumento da defesa no processo 1002436-58.2025.8.11.0000?",
-        "Qual a motivação do processo 1002436-58.2025.8.11.0000?",
-        "O que a agravante alega sobre cerceamento de defesa?",
-        "Resuma o que trata o processo 1002436-58.2025.8.11.0000"
-    ]
-    for i, question in enumerate(questions, 1):
-        print(f"\n{'='*60}")
-        print(f"TESTE {i}: {question}")
-        print('='*60)
-        result = optimized_rag_system.query(question)
-        if "error" not in result:
-            answer = result.get("answer", "")
-            docs = result.get("documents_found", 0)
-            print(f"Docs encontrados: {docs}")
-            print(f"Tamanho resposta: {len(answer)} chars")
-            print(f"Resposta:\n{answer}")
-            if len(answer) > 300 and "não é possível" not in answer.lower():
-                print("SUCESSO - Conteúdo substantivo encontrado!")
-            else:
-                print("Resposta ainda limitada")
-        else:
-            print(f"Erro: {result['error']}")
