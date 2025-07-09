@@ -25254,3 +25254,452 @@ AssertionError: write() before start_response
 2025-07-09 13:03:18,273 - Thread-145 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 13:03:18] "GET /api/rag/status HTTP/1.1" 200 -
 2025-07-09 13:03:18,535 - Thread-146 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 13:03:18] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
 2025-07-09 13:16:22,438 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-09 13:53:20,660 - MainThread   - INFO - CORS configurado
+2025-07-09 13:53:20,667 - MainThread   - INFO - Rotas registradas
+2025-07-09 13:53:20,668 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-09 13:53:20,668 - MainThread   - INFO - Background cleanup iniciado
+2025-07-09 13:53:20,669 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-09 13:53:20,669 - MainThread   - INFO - Inicialização RAG em background
+2025-07-09 13:53:20,669 - MainThread   - INFO - Servidor pronto!
+2025-07-09 13:53:20,670 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-09 13:53:20,670 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-09 13:53:20,671 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-09 13:53:20,686 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.81:5000
+2025-07-09 13:53:20,687 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-09 13:53:20,890 - Thread-3 (process_request_thread) - INFO - Cliente conectado: TtiZG3gfNmCHJ_XtAAAB
+2025-07-09 13:53:33,517 - Thread-2 (init_rag_background) - WARNING - RAG falhou - Ollama pode estar offline
+2025-07-09 13:58:02,279 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-09 13:58:02,279 - MainThread   - INFO - Pool de threads criado com 15 workers
+2025-07-09 13:58:02,280 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-09 13:58:02,280 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-09 13:58:14,080 - MainThread   - INFO - CORS configurado
+2025-07-09 13:58:14,091 - MainThread   - INFO - Rotas registradas
+2025-07-09 13:58:14,093 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-09 13:58:14,094 - MainThread   - INFO - Background cleanup iniciado
+2025-07-09 13:58:14,095 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-09 13:58:14,095 - MainThread   - INFO - Inicialização RAG em background
+2025-07-09 13:58:14,095 - MainThread   - INFO - Servidor pronto!
+2025-07-09 13:58:14,096 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-09 13:58:14,096 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-09 13:58:14,096 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-09 13:58:14,113 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.81:5000
+2025-07-09 13:58:14,113 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-09 13:58:14,940 - Thread-3 (process_request_thread) - INFO - Cliente conectado: jHXRIgAxlYzws3xGAAAB
+2025-07-09 13:58:26,922 - Thread-2 (init_rag_background) - WARNING - RAG falhou - Ollama pode estar offline
+2025-07-09 13:58:27,600 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-09 13:58:27,601 - MainThread   - INFO - Pool de threads criado com 15 workers
+2025-07-09 13:58:27,602 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-09 13:58:27,602 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-09 13:59:50,792 - MainThread   - INFO - CORS configurado
+2025-07-09 13:59:50,799 - MainThread   - INFO - Rotas registradas
+2025-07-09 13:59:50,800 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-09 13:59:50,800 - MainThread   - INFO - Background cleanup iniciado
+2025-07-09 13:59:50,801 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-09 13:59:50,801 - MainThread   - INFO - Inicialização RAG em background
+2025-07-09 13:59:50,801 - MainThread   - INFO - Servidor pronto!
+2025-07-09 13:59:50,802 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-09 13:59:50,802 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-09 13:59:50,803 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-09 13:59:50,817 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.81:5000
+2025-07-09 13:59:50,817 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-09 13:59:55,447 - Thread-3 (process_request_thread) - INFO - Cliente conectado: 0DV61X9v57jsJi1CAAAB
+2025-07-09 14:00:09,636 - Thread-2 (init_rag_background) - INFO - Load pretrained SentenceTransformer: models\paraphrase-MiniLM-L3-v2
+2025-07-09 14:00:11,707 - Thread-2 (init_rag_background) - INFO - Modelo models\paraphrase-MiniLM-L3-v2 carregado no dispositivo cpu
+2025-07-09 14:00:11,708 - Thread-2 (init_rag_background) - INFO - Dimensões Matryoshka: [32, 64, 128]
+2025-07-09 14:00:11,803 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-09 14:00:12,191 - Thread-2 (init_rag_background) - INFO - Load pretrained SentenceTransformer: models\paraphrase-MiniLM-L3-v2
+2025-07-09 14:00:12,253 - Thread-2 (init_rag_background) - INFO - Modelo models\paraphrase-MiniLM-L3-v2 carregado no dispositivo cpu
+2025-07-09 14:00:12,254 - Thread-2 (init_rag_background) - INFO - Dimensões Matryoshka: [32, 64, 128]
+2025-07-09 14:00:12,353 - Thread-2 (init_rag_background) - INFO - 493 documentos carregados
+2025-07-09 14:21:26,371 - Thread-59 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 14:21:26] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-09 14:21:26,622 - Thread-60 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 14:21:26] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-09 14:42:53,751 - Thread-3 (process_request_thread) - INFO - Cliente desconectado: 0DV61X9v57jsJi1CAAAB
+2025-07-09 14:42:53,757 - Thread-3 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 14:42:53] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-09 14:42:53,787 - Thread-3 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2025-07-09 14:43:24,298 - Thread-114 (process_request_thread) - INFO - Cliente conectado: Ke84y8UeGRuyw0-rAAAD
+2025-07-09 14:43:24,313 - Thread-118 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 14:43:24] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-09 14:43:24,571 - Thread-119 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 14:43:24] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-09 14:43:46,976 - Thread-120 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-09 14:43:46,976 - Thread-120 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-09 14:43:46,977 - Thread-120 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 14:43:46] "GET /triagem HTTP/1.1" 200 -
+2025-07-09 14:44:13,438 - Thread-122 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 14:44:13] "OPTIONS /triagem/1002663-66.2018.8.11.0041 HTTP/1.1" 200 -
+2025-07-09 14:44:13,704 - Thread-123 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-09 14:44:13,749 - Thread-123 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 14:44:13] "DELETE /triagem/1002663-66.2018.8.11.0041 HTTP/1.1" 200 -
+2025-07-09 14:44:13,762 - Thread-124 (process_request_thread) - INFO -  1 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-09 14:44:13,762 - Thread-124 (process_request_thread) - INFO - Extraídos 1 processos da tabela
+2025-07-09 14:44:13,763 - Thread-124 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 14:44:13] "GET /triagem HTTP/1.1" 200 -
+2025-07-09 14:44:58,216 - Thread-127 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 14:44:58] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-07-09 14:44:58,546 - Thread-128 (process_request_thread) - INFO - Pool de threads criado com 15 workers
+2025-07-09 14:44:58,549 - TriagemWorker_0 - INFO - Iniciando processamento isolado: 7c2a8b45
+2025-07-09 14:44:58,549 - Thread-128 (process_request_thread) - INFO - Operação submetida: 7c2a8b45
+2025-07-09 14:44:58,550 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 7c2a8b45-2305-4653-8a1f-0f64de55010f
+2025-07-09 14:44:58,550 - Thread-128 (process_request_thread) - INFO - Operações ativas: 1/15
+2025-07-09 14:44:58,550 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 14:44:58,551 - Thread-128 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 14:44:58] "POST /triagem/form HTTP/1.1" 200 -
+2025-07-09 14:44:58,551 - TriagemWorker_0 - INFO - [7c2a8b45] 5% - Conectando...
+2025-07-09 14:44:58,561 - Thread-130 (_handle_event_internal) - INFO - Registrado: 7c2a8b45 -> Ke84y8UeGRuyw0-rAAAD
+2025-07-09 14:44:58,562 - Thread-130 (_handle_event_internal) - INFO - WebSocket registrado: 7c2a8b45 -> Ke84y8UeGRuyw0-rAAAD
+2025-07-09 14:44:58,566 - Thread-129 (process_request_thread) - INFO -  1 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-09 14:44:58,566 - Thread-129 (process_request_thread) - INFO - Extraídos 1 processos da tabela
+2025-07-09 14:44:58,567 - Thread-129 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 14:44:58] "GET /triagem HTTP/1.1" 200 -
+2025-07-09 14:44:59,052 - TriagemWorker_0 - INFO - WebSocket conectado para 7c2a8b45
+2025-07-09 14:44:59,053 - TriagemWorker_0 - INFO -  Progresso enviado para 7c2a8b45-2305-4653-8a1f-0f64de55010f: 10% - Validando dados...
+2025-07-09 14:44:59,054 - TriagemWorker_0 - INFO - [7c2a8b45] 10% - Validando dados...
+2025-07-09 14:44:59,056 - TriagemWorker_0 - INFO - Processando: 1002663-66.2018.8.11.0041 [7c2a8b45]
+2025-07-09 14:44:59,057 - TriagemWorker_0 - INFO -  Progresso enviado para 7c2a8b45-2305-4653-8a1f-0f64de55010f: 20% - Processando PDF do PJe...
+2025-07-09 14:44:59,058 - TriagemWorker_0 - INFO - [7c2a8b45] 20% - Processando PDF do PJe...
+2025-07-09 14:45:00,895 - TriagemWorker_0 - INFO - Loading faiss with AVX2 support.
+2025-07-09 14:45:00,973 - TriagemWorker_0 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-09 14:45:00,982 - TriagemWorker_0 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-09 14:45:01,507 - TriagemWorker_0 - INFO -  Progresso enviado para 7c2a8b45-2305-4653-8a1f-0f64de55010f: 5% - Inicializando OCR...
+2025-07-09 14:45:23,132 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 7c2a8b45-2305-4653-8a1f-0f64de55010f
+2025-07-09 14:45:23,133 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 14:45:23,156 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 7c2a8b45-2305-4653-8a1f-0f64de55010f
+2025-07-09 14:45:23,156 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 14:45:23,156 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 7c2a8b45-2305-4653-8a1f-0f64de55010f
+2025-07-09 14:45:23,157 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 14:45:23,248 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 7c2a8b45-2305-4653-8a1f-0f64de55010f
+2025-07-09 14:45:23,248 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 14:45:23,248 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 7c2a8b45-2305-4653-8a1f-0f64de55010f
+2025-07-09 14:45:23,249 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 14:45:26,324 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 7c2a8b45-2305-4653-8a1f-0f64de55010f
+2025-07-09 14:45:26,324 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 14:45:26,326 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 7c2a8b45-2305-4653-8a1f-0f64de55010f
+2025-07-09 14:45:26,326 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 14:45:26,326 - Thread-133 (_send) - WARNING - Email não encontrado para responsável: 'JUSSARA'. Usando admin.
+2025-07-09 14:45:44,695 - Thread-114 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 14:45:44] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-09 14:45:44,700 - Thread-114 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2025-07-09 14:45:45,680 - Thread-139 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 14:45:45] "GET /triagem HTTP/1.1" 200 -
+2025-07-09 14:45:47,437 - Thread-133 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 14:46:08,486 - Thread-133 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 14:46:08,488 - Thread-133 (_send) - WARNING - Tentativa 1 falhou, aguardando 2.0s...
+2025-07-09 14:46:31,518 - Thread-133 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 14:46:52,549 - Thread-133 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 14:46:52,550 - Thread-133 (_send) - WARNING - Tentativa 2 falhou, aguardando 2.0s...
+2025-07-09 14:47:15,567 - Thread-133 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 14:47:36,618 - Thread-133 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 14:47:36,619 - Thread-133 (_send) - ERROR - Falha em todas as 3 tentativas para JUSSARA
+2025-07-09 14:47:57,662 - Thread-133 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 14:48:18,702 - Thread-133 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 15:14:17,361 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-09 15:14:37,165 - MainThread   - INFO - CORS configurado
+2025-07-09 15:14:37,172 - MainThread   - INFO - Rotas registradas
+2025-07-09 15:14:37,173 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-09 15:14:37,174 - MainThread   - INFO - Background cleanup iniciado
+2025-07-09 15:14:37,174 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-09 15:14:37,174 - MainThread   - INFO - Inicialização RAG em background
+2025-07-09 15:14:37,175 - MainThread   - INFO - Servidor pronto!
+2025-07-09 15:14:37,175 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-09 15:14:37,175 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-09 15:14:37,176 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-09 15:14:37,191 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.81:5000
+2025-07-09 15:14:37,192 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-09 15:14:38,971 - Thread-3 (process_request_thread) - INFO - Cliente conectado: 6_dST5TLD4BG-5mGAAAB
+2025-07-09 15:15:07,918 - Thread-2 (init_rag_background) - INFO - Load pretrained SentenceTransformer: models\paraphrase-MiniLM-L3-v2
+2025-07-09 15:15:10,564 - Thread-2 (init_rag_background) - INFO - Modelo models\paraphrase-MiniLM-L3-v2 carregado no dispositivo cpu
+2025-07-09 15:15:10,564 - Thread-2 (init_rag_background) - INFO - Dimensões Matryoshka: [32, 64, 128]
+2025-07-09 15:15:10,667 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-09 15:15:11,094 - Thread-2 (init_rag_background) - INFO - Load pretrained SentenceTransformer: models\paraphrase-MiniLM-L3-v2
+2025-07-09 15:15:11,164 - Thread-2 (init_rag_background) - INFO - Modelo models\paraphrase-MiniLM-L3-v2 carregado no dispositivo cpu
+2025-07-09 15:15:11,165 - Thread-2 (init_rag_background) - INFO - Dimensões Matryoshka: [32, 64, 128]
+2025-07-09 15:15:11,496 - Thread-2 (init_rag_background) - INFO - 493 documentos carregados
+2025-07-09 15:15:46,714 - Thread-11 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 15:15:46] "OPTIONS /triagem/1002663-66.2018.8.11.0041 HTTP/1.1" 200 -
+2025-07-09 15:15:47,041 - Thread-12 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-09 15:15:47,095 - Thread-12 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 15:15:47] "DELETE /triagem/1002663-66.2018.8.11.0041 HTTP/1.1" 200 -
+2025-07-09 15:15:47,111 - Thread-13 (process_request_thread) - INFO -  1 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-09 15:15:47,111 - Thread-13 (process_request_thread) - INFO - Extraídos 1 processos da tabela
+2025-07-09 15:15:47,111 - Thread-13 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 15:15:47] "GET /triagem HTTP/1.1" 200 -
+2025-07-09 15:16:08,464 - Thread-15 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 15:16:08] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-07-09 15:16:08,803 - Thread-16 (process_request_thread) - INFO - Pool de threads criado com 15 workers
+2025-07-09 15:16:08,808 - TriagemWorker_0 - INFO - Iniciando processamento isolado: 4864a8ea
+2025-07-09 15:16:08,809 - Thread-16 (process_request_thread) - INFO - Operação submetida: 4864a8ea
+2025-07-09 15:16:08,810 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4864a8ea-d917-4d65-b406-a541a67fac3a
+2025-07-09 15:16:08,810 - Thread-16 (process_request_thread) - INFO - Operações ativas: 1/15
+2025-07-09 15:16:08,810 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 15:16:08,811 - Thread-16 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 15:16:08] "POST /triagem/form HTTP/1.1" 200 -
+2025-07-09 15:16:08,811 - TriagemWorker_0 - INFO - [4864a8ea] 5% - Conectando...
+2025-07-09 15:16:08,827 - Thread-18 (_handle_event_internal) - INFO - Registrado: 4864a8ea -> 6_dST5TLD4BG-5mGAAAB
+2025-07-09 15:16:08,829 - Thread-17 (process_request_thread) - INFO -  1 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-09 15:16:08,830 - Thread-18 (_handle_event_internal) - INFO - WebSocket registrado: 4864a8ea -> 6_dST5TLD4BG-5mGAAAB
+2025-07-09 15:16:08,830 - Thread-17 (process_request_thread) - INFO - Extraídos 1 processos da tabela
+2025-07-09 15:16:08,831 - Thread-17 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 15:16:08] "GET /triagem HTTP/1.1" 200 -
+2025-07-09 15:16:09,312 - TriagemWorker_0 - INFO - WebSocket conectado para 4864a8ea
+2025-07-09 15:16:09,313 - TriagemWorker_0 - INFO -  Progresso enviado para 4864a8ea-d917-4d65-b406-a541a67fac3a: 10% - Validando dados...
+2025-07-09 15:16:09,314 - TriagemWorker_0 - INFO - [4864a8ea] 10% - Validando dados...
+2025-07-09 15:16:09,315 - TriagemWorker_0 - INFO - Processando: 1002663-66.2018.8.11.0041 [4864a8ea]
+2025-07-09 15:16:09,316 - TriagemWorker_0 - INFO -  Progresso enviado para 4864a8ea-d917-4d65-b406-a541a67fac3a: 20% - Processando PDF do PJe...
+2025-07-09 15:16:09,316 - TriagemWorker_0 - INFO - [4864a8ea] 20% - Processando PDF do PJe...
+2025-07-09 15:16:11,425 - TriagemWorker_0 - INFO - Loading faiss with AVX2 support.
+2025-07-09 15:16:11,507 - TriagemWorker_0 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-09 15:16:11,514 - TriagemWorker_0 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-09 15:16:12,078 - TriagemWorker_0 - INFO -  Progresso enviado para 4864a8ea-d917-4d65-b406-a541a67fac3a: 5% - Inicializando OCR...
+2025-07-09 15:16:43,862 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4864a8ea-d917-4d65-b406-a541a67fac3a
+2025-07-09 15:16:43,864 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 15:16:43,887 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4864a8ea-d917-4d65-b406-a541a67fac3a
+2025-07-09 15:16:43,887 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 15:16:43,888 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4864a8ea-d917-4d65-b406-a541a67fac3a
+2025-07-09 15:16:43,889 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 15:16:43,988 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4864a8ea-d917-4d65-b406-a541a67fac3a
+2025-07-09 15:16:43,988 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 15:16:43,989 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4864a8ea-d917-4d65-b406-a541a67fac3a
+2025-07-09 15:16:43,989 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 15:16:47,111 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4864a8ea-d917-4d65-b406-a541a67fac3a
+2025-07-09 15:16:47,111 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 15:16:47,113 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 4864a8ea-d917-4d65-b406-a541a67fac3a
+2025-07-09 15:16:47,113 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 15:17:08,231 - Thread-22 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 15:17:29,309 - Thread-22 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 15:17:29,312 - Thread-22 (_send) - WARNING - Tentativa 1 falhou, aguardando 2.0s...
+2025-07-09 15:17:52,346 - Thread-22 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 15:18:13,392 - Thread-22 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 15:18:13,393 - Thread-22 (_send) - WARNING - Tentativa 2 falhou, aguardando 2.0s...
+2025-07-09 15:18:36,425 - Thread-22 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 15:18:57,469 - Thread-22 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 15:18:57,470 - Thread-22 (_send) - ERROR - Falha em todas as 3 tentativas para NAIRA
+2025-07-09 15:19:18,488 - Thread-22 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 15:19:39,534 - Thread-22 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 15:28:07,027 - Thread-3 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 15:28:07] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-09 15:28:07,039 - Thread-3 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2025-07-09 15:28:08,034 - Thread-54 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 15:28:08] "GET /triagem HTTP/1.1" 200 -
+2025-07-09 15:28:16,751 - Thread-56 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 15:28:16] "OPTIONS /triagem/1002663-66.2018.8.11.0041 HTTP/1.1" 200 -
+2025-07-09 15:28:17,058 - Thread-57 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 15:28:17] "DELETE /triagem/1002663-66.2018.8.11.0041 HTTP/1.1" 200 -
+2025-07-09 15:28:17,070 - Thread-58 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 15:28:17] "GET /triagem HTTP/1.1" 200 -
+2025-07-09 15:28:47,756 - Thread-60 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 15:28:47] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-07-09 15:28:48,048 - Thread-61 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 15:28:48] "POST /triagem/form HTTP/1.1" 200 -
+2025-07-09 15:28:48,048 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 671834d1-69b5-424c-9f1c-38070fdfe3ec
+2025-07-09 15:28:48,049 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 15:28:48,075 - Thread-63 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 15:28:48] "GET /triagem HTTP/1.1" 200 -
+2025-07-09 15:29:07,629 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 671834d1-69b5-424c-9f1c-38070fdfe3ec
+2025-07-09 15:29:07,629 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 15:29:07,650 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 671834d1-69b5-424c-9f1c-38070fdfe3ec
+2025-07-09 15:29:07,651 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 15:29:07,651 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 671834d1-69b5-424c-9f1c-38070fdfe3ec
+2025-07-09 15:29:07,652 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 15:29:07,745 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 671834d1-69b5-424c-9f1c-38070fdfe3ec
+2025-07-09 15:29:07,746 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 15:29:07,746 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 671834d1-69b5-424c-9f1c-38070fdfe3ec
+2025-07-09 15:29:07,746 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 15:29:10,793 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 671834d1-69b5-424c-9f1c-38070fdfe3ec
+2025-07-09 15:29:10,793 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 15:29:10,794 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 671834d1-69b5-424c-9f1c-38070fdfe3ec
+2025-07-09 15:29:10,795 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 15:29:31,848 - Thread-67 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 15:29:43,790 - Thread-50 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 15:29:43] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-09 15:29:43,796 - Thread-50 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2025-07-09 15:29:52,958 - Thread-67 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 15:29:52,960 - Thread-67 (_send) - WARNING - Tentativa 1 falhou, aguardando 2.0s...
+2025-07-09 15:29:57,875 - Thread-73 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 15:29:57] "GET /triagem HTTP/1.1" 200 -
+2025-07-09 15:30:01,955 - Thread-74 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 15:30:01] "OPTIONS /triagem/1002663-66.2018.8.11.0041 HTTP/1.1" 200 -
+2025-07-09 15:30:02,310 - Thread-75 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 15:30:02] "DELETE /triagem/1002663-66.2018.8.11.0041 HTTP/1.1" 200 -
+2025-07-09 15:30:02,543 - Thread-76 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 15:30:02] "GET /triagem HTTP/1.1" 200 -
+2025-07-09 15:30:15,984 - Thread-67 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 15:30:19,763 - Thread-77 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 15:30:19] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-07-09 15:30:20,123 - Thread-78 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 15:30:20] "POST /triagem/form HTTP/1.1" 200 -
+2025-07-09 15:30:20,123 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 98f9a6e8-8516-4ba1-a16e-accd2f83e781
+2025-07-09 15:30:20,124 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 15:30:20,327 - Thread-80 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 15:30:20] "GET /triagem HTTP/1.1" 200 -
+2025-07-09 15:30:37,035 - Thread-67 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 15:30:37,036 - Thread-67 (_send) - WARNING - Tentativa 2 falhou, aguardando 2.0s...
+2025-07-09 15:30:38,781 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 98f9a6e8-8516-4ba1-a16e-accd2f83e781
+2025-07-09 15:30:38,781 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 15:30:38,801 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 98f9a6e8-8516-4ba1-a16e-accd2f83e781
+2025-07-09 15:30:38,801 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 15:30:38,802 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 98f9a6e8-8516-4ba1-a16e-accd2f83e781
+2025-07-09 15:30:38,802 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 15:30:38,896 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 98f9a6e8-8516-4ba1-a16e-accd2f83e781
+2025-07-09 15:30:38,896 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 15:30:38,896 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 98f9a6e8-8516-4ba1-a16e-accd2f83e781
+2025-07-09 15:30:38,897 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 15:30:41,953 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 98f9a6e8-8516-4ba1-a16e-accd2f83e781
+2025-07-09 15:30:41,953 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 15:30:41,955 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 98f9a6e8-8516-4ba1-a16e-accd2f83e781
+2025-07-09 15:30:41,955 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 15:31:00,098 - Thread-67 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 15:31:02,978 - Thread-84 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 15:31:15,739 - Thread-81 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 15:31:15] "GET /triagem HTTP/1.1" 200 -
+2025-07-09 15:31:16,802 - Thread-87 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 15:31:16] "GET /triagem HTTP/1.1" 200 -
+2025-07-09 15:31:21,135 - Thread-67 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 15:31:21,137 - Thread-67 (_send) - ERROR - Falha em todas as 3 tentativas para NATÁLIA
+2025-07-09 15:31:24,021 - Thread-84 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 15:31:24,022 - Thread-84 (_send) - WARNING - Tentativa 1 falhou, aguardando 2.0s...
+2025-07-09 15:31:42,169 - Thread-67 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 15:31:47,069 - Thread-84 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 15:32:03,187 - Thread-67 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 15:32:08,102 - Thread-84 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 15:32:08,103 - Thread-84 (_send) - WARNING - Tentativa 2 falhou, aguardando 2.0s...
+2025-07-09 15:32:31,135 - Thread-84 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 15:32:52,183 - Thread-84 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 15:32:52,184 - Thread-84 (_send) - ERROR - Falha em todas as 3 tentativas para NATÁLIA
+2025-07-09 15:33:13,268 - Thread-84 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 15:33:34,302 - Thread-84 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 15:36:58,540 - Thread-102 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 15:36:58] "OPTIONS /triagem/1002663-66.2018.8.11.0041 HTTP/1.1" 200 -
+2025-07-09 15:36:58,848 - Thread-103 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 15:36:58] "DELETE /triagem/1002663-66.2018.8.11.0041 HTTP/1.1" 200 -
+2025-07-09 15:36:58,860 - Thread-104 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 15:36:58] "GET /triagem HTTP/1.1" 200 -
+2025-07-09 15:47:38,953 - Thread-69 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 15:47:38] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-09 15:47:38,966 - Thread-69 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2025-07-09 15:47:39,911 - Thread-135 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 15:47:39] "GET /triagem HTTP/1.1" 200 -
+2025-07-09 15:48:00,549 - Thread-136 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 15:48:00] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-07-09 15:48:00,924 - Thread-137 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 15:48:00] "POST /triagem/form HTTP/1.1" 200 -
+2025-07-09 15:48:00,925 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 13f349a1-2aff-4b9d-8b5f-446ae42ce6a4
+2025-07-09 15:48:00,925 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 15:48:01,125 - Thread-139 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 15:48:01] "GET /triagem HTTP/1.1" 200 -
+2025-07-09 15:48:20,035 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 13f349a1-2aff-4b9d-8b5f-446ae42ce6a4
+2025-07-09 15:48:20,035 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 15:48:20,055 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 13f349a1-2aff-4b9d-8b5f-446ae42ce6a4
+2025-07-09 15:48:20,055 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 15:48:20,056 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 13f349a1-2aff-4b9d-8b5f-446ae42ce6a4
+2025-07-09 15:48:20,056 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 15:48:20,149 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 13f349a1-2aff-4b9d-8b5f-446ae42ce6a4
+2025-07-09 15:48:20,150 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 15:48:20,150 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 13f349a1-2aff-4b9d-8b5f-446ae42ce6a4
+2025-07-09 15:48:20,150 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 15:48:23,127 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 13f349a1-2aff-4b9d-8b5f-446ae42ce6a4
+2025-07-09 15:48:23,127 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 15:48:23,128 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 13f349a1-2aff-4b9d-8b5f-446ae42ce6a4
+2025-07-09 15:48:23,128 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 15:48:44,324 - Thread-143 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 15:49:05,354 - Thread-143 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 15:49:05,356 - Thread-143 (_send) - WARNING - Tentativa 1 falhou, aguardando 2.0s...
+2025-07-09 15:49:28,387 - Thread-143 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 15:49:49,433 - Thread-143 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 15:49:49,433 - Thread-143 (_send) - WARNING - Tentativa 2 falhou, aguardando 2.0s...
+2025-07-09 15:49:55,145 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
