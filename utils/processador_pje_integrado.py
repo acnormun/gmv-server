@@ -264,8 +264,8 @@ class ProcessadorPJeIntegrado:
         total = len(documentos_separados)
         for i, doc in enumerate(documentos_separados):
             try:
-                progress = 50 + int((i + 1) / total * 40)
-                self.log_progress(5, f'Processando OCR: {doc["arquivo"]} ({i+1}/{total})', progress)
+                progress = 50 + int((i + 1) / total * 10)
+                self.log_progress(3, f'Processando OCR: {doc["arquivo"]} ({i+1}/{total})', progress)
                 texto_md = self.converter_pdf_para_markdown(doc['caminho'], doc['nome_documento'])
                 nome_md = doc['arquivo'].replace('.pdf', '.md')
                 caminho_md = os.path.join(pasta_markdowns, nome_md)
@@ -293,17 +293,17 @@ class ProcessadorPJeIntegrado:
     
     def processar_pdf_completo(self, dat_base64, numero_processo, pasta_destino):
         try:
-            self.log_progress(1, 'Inicializando OCR...', 5)
+            self.log_progress(3, 'Inicializando OCR...', 25)
             sucesso_ocr, msg_ocr = self.inicializar_ocr()
             if not sucesso_ocr:
                 raise Exception(msg_ocr)
-            self.log_progress(2, 'Decodificando PDF base64...', 10)
+            self.log_progress(3, 'Decodificando PDF base64...', 30)
             temp_pdf_path, tamanho_bytes = self.decodificar_pdf_base64(dat_base64, numero_processo)
-            self.log_progress(3, 'Analisando estrutura do PDF...', 15)
+            self.log_progress(3, 'Analisando estrutura do PDF...', 35)
             pdf_reader = PdfReader(temp_pdf_path)
             total_paginas = len(pdf_reader.pages)
             print(f"📄 PDF carregado: {total_paginas} páginas, {tamanho_bytes} bytes")
-            self.log_progress(4, 'Extraindo tabela de documentos...', 20)
+            self.log_progress(3, 'Extraindo tabela de documentos...', 40)
             texto_inicial = ""
             for i in range(min(5, total_paginas)):
                 try:
@@ -326,13 +326,13 @@ class ProcessadorPJeIntegrado:
                     'movimento': 'Documento único',
                     'documento': 'Processo completo'
                 }]
-            self.log_progress(5, 'Criando estrutura de pastas...', 25)
+            self.log_progress(3, 'Criando estrutura de pastas...', 45)
             self.criar_estrutura_pastas(pasta_destino, self.processo_numero)
             pasta_original = os.path.join(self.pasta_processo, 'original')
             pdf_original_path = os.path.join(pasta_original, f"{self.processo_numero.replace('/', '-')}_original.pdf")
             with open(temp_pdf_path, 'rb') as src, open(pdf_original_path, 'wb') as dst:
                 dst.write(src.read())
-            self.log_progress(6, 'Localizando documentos no PDF...', 30)
+            self.log_progress(3, 'Localizando documentos no PDF...', 50)
             documentos_localizados = self.encontrar_inicio_documentos(pdf_reader, tabela_docs)
             if not documentos_localizados and len(tabela_docs) == 1:
                 documentos_finais = [{
@@ -345,11 +345,11 @@ class ProcessadorPJeIntegrado:
                 documentos_finais = self.calcular_ranges_paginas(documentos_localizados, total_paginas)
             if not documentos_finais:
                 raise Exception("Não foi possível identificar a estrutura de documentos no PDF")
-            self.log_progress(7, f'Separando PDF em {len(documentos_finais)} documentos...', 40)
+            self.log_progress(3, f'Separando PDF em {len(documentos_finais)} documentos...', 55)
             documentos_separados = self.separar_pdfs(pdf_reader, documentos_finais)
             if not documentos_separados:
                 raise Exception("Nenhum documento pôde ser separado")
-            self.log_progress(8, 'Iniciando processamento OCR...', 50)
+            self.log_progress(3, 'Iniciando processamento OCR...', 50)
             total_processados = self.processar_todos_documentos_ocr(documentos_separados)
             try:
                 os.unlink(temp_pdf_path)
@@ -370,7 +370,7 @@ class ProcessadorPJeIntegrado:
                     'markdowns': [doc['caminho_markdown'] for doc in self.documentos_processados if 'caminho_markdown' in doc]
                 }
             }
-            self.log_progress(9, 'Processamento PJe concluído com sucesso!', 100)
+            self.log_progress(3, 'Processamento PJe concluído com sucesso!', 60)
             print(f"🎉 Processamento concluído:")
             print(f"   📁 Pasta: {self.pasta_processo}")
             print(f"   📄 {len(documentos_separados)} PDFs separados")
