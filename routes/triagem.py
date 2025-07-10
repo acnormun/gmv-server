@@ -144,6 +144,7 @@ def processar_processo_isolado(data, operation_id):
         responsavel = limpar(data.get('responsavel', ''))
         status = limpar(data.get('status', ''))
         markdown = limpar(data.get('markdown', ''))
+        prioridade = limpar(data.get('prioridade', ''))
         comentarios = limpar(data.get('comentarios', ''))
         dat_base64 = data.get('dat')
         ultima_att = datetime.now().strftime('%Y-%m-%d')
@@ -268,6 +269,7 @@ def processar_processo_isolado(data, operation_id):
             f"| {status} "
             f"| {ultima_att} "
             f"| {suspeitos_str} "
+            f"| {prioridade} "
             f"| {comentarios} |\n"
         )
         try:
@@ -278,9 +280,9 @@ def processar_processo_isolado(data, operation_id):
                     linhas = f.readlines()
                     if not linhas:
                         f.write("# Tabela de Processos\n\n")
-                        f.write("| Nº Processo | Tema | Data da Distribuição | Responsável | Status | Última Atualização | Suspeitos | Comentários |\n")
+                        f.write("| Nº Processo | Tema | Data da Distribuição | Responsável | Status | Última Atualização | Suspeitos | Prioridade | Comentários |\n")
                         f.write("|-------------|------|-----------------------|-------------|--------|----------------------|-----------|-------------|\n")
-                    f.seek(0, 2)  # Vai para o final do arquivo
+                    f.seek(0, 2)
                     f.write(nova_linha)
             logger.info(f"Tabela atualizada para {numero}")
         except Exception as e:

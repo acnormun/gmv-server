@@ -25703,3 +25703,958 @@ corretamente após um período de tempo ou a conexão estabelecida falhou
 porque o host conectado não respondeu
 2025-07-09 15:49:49,433 - Thread-143 (_send) - WARNING - Tentativa 2 falhou, aguardando 2.0s...
 2025-07-09 15:49:55,145 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-09 16:02:33,133 - MainThread   - INFO - CORS configurado
+2025-07-09 16:02:33,140 - MainThread   - INFO - Rotas registradas
+2025-07-09 16:02:33,141 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-09 16:02:33,142 - MainThread   - INFO - Background cleanup iniciado
+2025-07-09 16:02:33,142 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-09 16:02:33,142 - MainThread   - INFO - Inicialização RAG em background
+2025-07-09 16:02:33,143 - MainThread   - INFO - Servidor pronto!
+2025-07-09 16:02:33,143 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-09 16:02:33,143 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-09 16:02:33,143 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-09 16:02:33,158 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.81:5000
+2025-07-09 16:02:33,158 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-09 16:02:33,807 - Thread-3 (process_request_thread) - INFO - Cliente conectado: JwKQ9XO6eRMbG2ufAAAB
+2025-07-09 16:02:45,977 - Thread-2 (init_rag_background) - WARNING - RAG falhou - Ollama pode estar offline
+2025-07-09 16:04:11,294 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-09 16:04:11,294 - MainThread   - INFO - Pool de threads criado com 15 workers
+2025-07-09 16:04:11,294 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-09 16:04:11,295 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-09 16:04:21,070 - MainThread   - INFO - CORS configurado
+2025-07-09 16:04:21,076 - MainThread   - INFO - Rotas registradas
+2025-07-09 16:04:21,077 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-09 16:04:21,078 - MainThread   - INFO - Background cleanup iniciado
+2025-07-09 16:04:21,078 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-09 16:04:21,078 - MainThread   - INFO - Inicialização RAG em background
+2025-07-09 16:04:21,079 - MainThread   - INFO - Servidor pronto!
+2025-07-09 16:04:21,079 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-09 16:04:21,079 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-09 16:04:21,080 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-09 16:04:21,092 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.81:5000
+2025-07-09 16:04:21,092 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-09 16:04:23,791 - Thread-3 (process_request_thread) - INFO - Cliente conectado: voVEFKCR9V-KNjKcAAAB
+2025-07-09 16:04:33,905 - Thread-2 (init_rag_background) - WARNING - RAG falhou - Ollama pode estar offline
+2025-07-09 16:04:45,092 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-09 16:04:45,093 - MainThread   - INFO - Pool de threads criado com 15 workers
+2025-07-09 16:04:45,094 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-09 16:04:45,094 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-09 16:04:54,858 - MainThread   - INFO - CORS configurado
+2025-07-09 16:04:54,864 - MainThread   - INFO - Rotas registradas
+2025-07-09 16:04:54,865 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-09 16:04:54,866 - MainThread   - INFO - Background cleanup iniciado
+2025-07-09 16:04:54,866 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-09 16:04:54,866 - MainThread   - INFO - Inicialização RAG em background
+2025-07-09 16:04:54,867 - MainThread   - INFO - Servidor pronto!
+2025-07-09 16:04:54,867 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-09 16:04:54,867 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-09 16:04:54,867 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-09 16:04:54,880 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.81:5000
+2025-07-09 16:04:54,880 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-09 16:04:55,530 - Thread-3 (process_request_thread) - INFO - Cliente conectado: z6aB0lvZZbAPvQktAAAB
+2025-07-09 16:05:07,649 - Thread-2 (init_rag_background) - WARNING - RAG falhou - Ollama pode estar offline
+2025-07-09 16:05:35,287 - Thread-3 (process_request_thread) - INFO - Cliente desconectado: z6aB0lvZZbAPvQktAAAB
+2025-07-09 16:05:35,349 - Thread-3 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 16:05:35] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-09 16:05:35,360 - Thread-3 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2025-07-09 16:05:35,675 - Thread-9 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-09 16:05:35,675 - Thread-9 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-09 16:05:35,676 - Thread-9 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 16:05:35] "GET /triagem HTTP/1.1" 200 -
+2025-07-09 16:05:35,687 - Thread-10 (process_request_thread) - INFO - Cliente conectado: XA3y_RMO9yTBtyylAAAD
+2025-07-09 16:06:18,593 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-09 16:06:18,594 - MainThread   - INFO - Pool de threads criado com 15 workers
+2025-07-09 16:06:18,595 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-09 16:06:18,595 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-09 16:06:28,192 - MainThread   - INFO - CORS configurado
+2025-07-09 16:06:28,199 - MainThread   - INFO - Rotas registradas
+2025-07-09 16:06:28,200 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-09 16:06:28,200 - MainThread   - INFO - Background cleanup iniciado
+2025-07-09 16:06:28,201 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-09 16:06:28,201 - MainThread   - INFO - Inicialização RAG em background
+2025-07-09 16:06:28,201 - MainThread   - INFO - Servidor pronto!
+2025-07-09 16:06:28,202 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-09 16:06:28,202 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-09 16:06:28,202 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-09 16:06:28,215 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.81:5000
+2025-07-09 16:06:28,215 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-09 16:06:29,844 - Thread-3 (process_request_thread) - INFO - Cliente conectado: UnFQ-edsEoBfVFpDAAAB
+2025-07-09 16:07:10,312 - MainThread   - INFO - CORS configurado
+2025-07-09 16:07:10,319 - MainThread   - INFO - Rotas registradas
+2025-07-09 16:07:10,320 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-09 16:07:10,321 - MainThread   - INFO - Background cleanup iniciado
+2025-07-09 16:07:10,321 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-09 16:07:10,321 - MainThread   - INFO - Inicialização RAG em background
+2025-07-09 16:07:10,322 - MainThread   - INFO - Servidor pronto!
+2025-07-09 16:07:10,322 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-09 16:07:10,322 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-09 16:07:10,322 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-09 16:07:10,336 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.81:5000
+2025-07-09 16:07:10,336 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-09 16:07:10,483 - Thread-3 (process_request_thread) - INFO - Cliente conectado: qSY97CHKlh9ZRg-FAAAB
+2025-07-09 16:07:29,877 - Thread-2 (init_rag_background) - INFO - Load pretrained SentenceTransformer: models\paraphrase-MiniLM-L3-v2
+2025-07-09 16:07:31,815 - Thread-2 (init_rag_background) - INFO - Modelo models\paraphrase-MiniLM-L3-v2 carregado no dispositivo cpu
+2025-07-09 16:07:31,815 - Thread-2 (init_rag_background) - INFO - Dimensões Matryoshka: [32, 64, 128]
+2025-07-09 16:07:31,902 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-09 16:07:32,290 - Thread-2 (init_rag_background) - INFO - Load pretrained SentenceTransformer: models\paraphrase-MiniLM-L3-v2
+2025-07-09 16:07:32,358 - Thread-2 (init_rag_background) - INFO - Modelo models\paraphrase-MiniLM-L3-v2 carregado no dispositivo cpu
+2025-07-09 16:07:32,359 - Thread-2 (init_rag_background) - INFO - Dimensões Matryoshka: [32, 64, 128]
+2025-07-09 16:07:32,675 - Thread-2 (init_rag_background) - INFO - 493 documentos carregados
+2025-07-09 16:12:25,393 - Thread-21 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 16:12:25] "OPTIONS /triagem/1002663-66.2018.8.11.0041 HTTP/1.1" 200 -
+2025-07-09 16:12:25,696 - Thread-22 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-09 16:12:25,743 - Thread-22 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 16:12:25] "DELETE /triagem/1002663-66.2018.8.11.0041 HTTP/1.1" 200 -
+2025-07-09 16:12:25,757 - Thread-23 (process_request_thread) - INFO -  1 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-09 16:12:25,757 - Thread-23 (process_request_thread) - INFO - Extraídos 1 processos da tabela
+2025-07-09 16:12:25,758 - Thread-23 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 16:12:25] "GET /triagem HTTP/1.1" 200 -
+2025-07-09 16:15:12,150 - Thread-3 (process_request_thread) - INFO - Cliente desconectado: qSY97CHKlh9ZRg-FAAAB
+2025-07-09 16:15:12,155 - Thread-3 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 16:15:12] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-09 16:15:12,169 - Thread-3 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2025-07-09 16:15:47,566 - Thread-35 (process_request_thread) - INFO -  1 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-09 16:15:47,566 - Thread-35 (process_request_thread) - INFO - Extraídos 1 processos da tabela
+2025-07-09 16:15:47,567 - Thread-35 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 16:15:47] "GET /triagem HTTP/1.1" 200 -
+2025-07-09 16:15:47,570 - Thread-31 (process_request_thread) - INFO - Cliente conectado: hWslf1T3kPq5ICXkAAAD
+2025-07-09 16:16:10,178 - Thread-36 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 16:16:10] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-07-09 16:16:10,540 - Thread-37 (process_request_thread) - INFO - Pool de threads criado com 15 workers
+2025-07-09 16:16:10,541 - TriagemWorker_0 - INFO - Iniciando processamento isolado: 2e4c74d2
+2025-07-09 16:16:10,541 - Thread-37 (process_request_thread) - INFO - Operação submetida: 2e4c74d2
+2025-07-09 16:16:10,542 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 2e4c74d2-7db1-4bc7-b3a4-046e49ac848e
+2025-07-09 16:16:10,542 - Thread-37 (process_request_thread) - INFO - Operações ativas: 1/15
+2025-07-09 16:16:10,542 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 16:16:10,543 - Thread-37 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 16:16:10] "POST /triagem/form HTTP/1.1" 200 -
+2025-07-09 16:16:10,543 - TriagemWorker_0 - INFO - [2e4c74d2] 5% - Conectando...
+2025-07-09 16:16:10,557 - Thread-38 (_handle_event_internal) - INFO - Registrado: 2e4c74d2 -> hWslf1T3kPq5ICXkAAAD
+2025-07-09 16:16:10,557 - Thread-38 (_handle_event_internal) - INFO - WebSocket registrado: 2e4c74d2 -> hWslf1T3kPq5ICXkAAAD
+2025-07-09 16:16:10,744 - Thread-39 (process_request_thread) - INFO -  1 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-09 16:16:10,745 - Thread-39 (process_request_thread) - INFO - Extraídos 1 processos da tabela
+2025-07-09 16:16:10,745 - Thread-39 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 16:16:10] "GET /triagem HTTP/1.1" 200 -
+2025-07-09 16:16:11,044 - TriagemWorker_0 - INFO - WebSocket conectado para 2e4c74d2
+2025-07-09 16:16:11,044 - TriagemWorker_0 - INFO -  Progresso enviado para 2e4c74d2-7db1-4bc7-b3a4-046e49ac848e: 10% - Validando dados...
+2025-07-09 16:16:11,044 - TriagemWorker_0 - INFO - [2e4c74d2] 10% - Validando dados...
+2025-07-09 16:16:11,046 - TriagemWorker_0 - INFO - Processando: 1002663-66.2018.8.11.0041 [2e4c74d2]
+2025-07-09 16:16:11,047 - TriagemWorker_0 - INFO -  Progresso enviado para 2e4c74d2-7db1-4bc7-b3a4-046e49ac848e: 20% - Processando PDF do PJe...
+2025-07-09 16:16:11,047 - TriagemWorker_0 - INFO - [2e4c74d2] 20% - Processando PDF do PJe...
+2025-07-09 16:16:11,051 - TriagemWorker_0 - WARNING - ProcessadorPJe falhou [2e4c74d2]: unindent does not match any outer indentation level (processador_pje_integrado.py, line 31)
+2025-07-09 16:16:11,052 - TriagemWorker_0 - INFO -  Progresso enviado para 2e4c74d2-7db1-4bc7-b3a4-046e49ac848e: 25% - Aviso: ProcessadorPJe falhou, continuando...
+2025-07-09 16:16:11,052 - TriagemWorker_0 - INFO - [2e4c74d2] 25% - Aviso: ProcessadorPJe falhou, continuando...
+2025-07-09 16:16:11,052 - TriagemWorker_0 - INFO -  Progresso enviado para 2e4c74d2-7db1-4bc7-b3a4-046e49ac848e: 35% - Analisando suspeição...
+2025-07-09 16:16:11,052 - TriagemWorker_0 - INFO - [2e4c74d2] 35% - Analisando suspeição...
+2025-07-09 16:16:11,074 - TriagemWorker_0 - INFO - Suspeitos encontrados [1002663-66.2018.8.11.0041]: []
+2025-07-09 16:16:11,074 - TriagemWorker_0 - INFO -  Progresso enviado para 2e4c74d2-7db1-4bc7-b3a4-046e49ac848e: 45% - Preparando arquivos...
+2025-07-09 16:16:11,075 - TriagemWorker_0 - INFO - [2e4c74d2] 45% - Preparando arquivos...
+2025-07-09 16:16:11,076 - TriagemWorker_0 - INFO -  Progresso enviado para 2e4c74d2-7db1-4bc7-b3a4-046e49ac848e: 55% - Salvando markdown...
+2025-07-09 16:16:11,076 - TriagemWorker_0 - INFO - [2e4c74d2] 55% - Salvando markdown...
+2025-07-09 16:16:11,168 - TriagemWorker_0 - INFO - Metadados extraídos: 12 campos preenchidos
+2025-07-09 16:16:11,169 - TriagemWorker_0 - INFO - Markdown salvo: /Users/54117/Desktop/GMV/Triagem Inicial\1002663-66.2018.8.11.0041.md
+2025-07-09 16:16:11,174 - TriagemWorker_0 - INFO - DAT salvo: /Users/54117/Desktop/GMV/Triagem Inicial/dat\1002663-66.2018.8.11.0041.dat
+2025-07-09 16:16:11,174 - TriagemWorker_0 - INFO -  Progresso enviado para 2e4c74d2-7db1-4bc7-b3a4-046e49ac848e: 65% - Atualizando busca...
+2025-07-09 16:16:11,174 - TriagemWorker_0 - INFO - [2e4c74d2] 65% - Atualizando busca...
+2025-07-09 16:16:11,174 - TriagemWorker_0 - INFO -  Progresso enviado para 2e4c74d2-7db1-4bc7-b3a4-046e49ac848e: 75% - Executando anonimização...
+2025-07-09 16:16:11,175 - TriagemWorker_0 - INFO - [2e4c74d2] 75% - Executando anonimização...
+2025-07-09 16:16:14,363 - TriagemWorker_0 - INFO - Anonimização [1002663-66.2018.8.11.0041]: 482 substituições
+2025-07-09 16:16:14,364 - TriagemWorker_0 - INFO -  Progresso enviado para 2e4c74d2-7db1-4bc7-b3a4-046e49ac848e: 90% - Atualizando tabela...
+2025-07-09 16:16:14,364 - TriagemWorker_0 - INFO - [2e4c74d2] 90% - Atualizando tabela...
+2025-07-09 16:16:14,366 - TriagemWorker_0 - INFO - Tabela atualizada para 1002663-66.2018.8.11.0041
+2025-07-09 16:16:14,367 - TriagemWorker_0 - INFO -  Progresso enviado para 2e4c74d2-7db1-4bc7-b3a4-046e49ac848e: 100% - Processo concluído!
+2025-07-09 16:16:14,367 - TriagemWorker_0 - INFO -  Operação 2e4c74d2-7db1-4bc7-b3a4-046e49ac848e removida da lista
+2025-07-09 16:16:14,367 - Thread-43 (_send) - INFO - Tentativa 1/3 - Enviando para NAIRA (dev.acnormun@gmail.com)
+2025-07-09 16:16:14,368 - TriagemWorker_0 - INFO - [2e4c74d2] 100% - Processo concluído!
+2025-07-09 16:16:14,368 - Thread-43 (_send) - INFO - Tentando STARTTLS (porta 587) para dev.acnormun@gmail.com
+2025-07-09 16:16:14,368 - TriagemWorker_0 - INFO - Processo concluído: 1002663-66.2018.8.11.0041 [2e4c74d2]
+2025-07-09 16:16:14,369 - TriagemWorker_0 - INFO - Suspeitos: 0
+2025-07-09 16:16:14,369 - TriagemWorker_0 - INFO - Substituições: 482
+2025-07-09 16:16:35,400 - Thread-43 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 16:16:35,401 - Thread-43 (_send) - INFO - Tentando fallback para SSL...
+2025-07-09 16:16:35,402 - Thread-43 (_send) - INFO - Tentando SSL (porta 465) para dev.acnormun@gmail.com
+2025-07-09 16:16:56,480 - Thread-43 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 16:16:56,483 - Thread-43 (_send) - WARNING - Tentativa 1 falhou, aguardando 2.0s...
+2025-07-09 16:16:58,484 - Thread-43 (_send) - INFO - Tentativa 2/3 - Enviando para NAIRA (dev.acnormun@gmail.com)
+2025-07-09 16:16:58,484 - Thread-43 (_send) - INFO - Tentando STARTTLS (porta 587) para dev.acnormun@gmail.com
+2025-07-09 16:17:19,511 - Thread-43 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 16:17:19,512 - Thread-43 (_send) - INFO - Tentando fallback para SSL...
+2025-07-09 16:17:19,512 - Thread-43 (_send) - INFO - Tentando SSL (porta 465) para dev.acnormun@gmail.com
+2025-07-09 16:17:40,559 - Thread-43 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 16:17:40,560 - Thread-43 (_send) - WARNING - Tentativa 2 falhou, aguardando 2.0s...
+2025-07-09 16:17:42,561 - Thread-43 (_send) - INFO - Tentativa 3/3 - Enviando para NAIRA (dev.acnormun@gmail.com)
+2025-07-09 16:17:42,562 - Thread-43 (_send) - INFO - Tentando STARTTLS (porta 587) para dev.acnormun@gmail.com
+2025-07-09 16:18:03,589 - Thread-43 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 16:18:03,590 - Thread-43 (_send) - INFO - Tentando fallback para SSL...
+2025-07-09 16:18:03,591 - Thread-43 (_send) - INFO - Tentando SSL (porta 465) para dev.acnormun@gmail.com
+2025-07-09 16:18:09,742 - Thread-48 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 16:18:09] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-07-09 16:18:10,031 - Thread-49 (process_request_thread) - INFO - Operação submetida: 80724577
+2025-07-09 16:18:10,031 - TriagemWorker_0 - INFO - Iniciando processamento isolado: 80724577
+2025-07-09 16:18:10,031 - Thread-49 (process_request_thread) - INFO - Operações ativas: 1/15
+2025-07-09 16:18:10,031 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 80724577-c3fd-4e78-8eab-9dc13db4506c
+2025-07-09 16:18:10,032 - Thread-49 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 16:18:10] "POST /triagem/form HTTP/1.1" 200 -
+2025-07-09 16:18:10,032 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 16:18:10,033 - TriagemWorker_0 - INFO - [80724577] 5% - Conectando...
+2025-07-09 16:18:10,041 - Thread-50 (_handle_event_internal) - INFO - Registrado: 80724577 -> hWslf1T3kPq5ICXkAAAD
+2025-07-09 16:18:10,041 - Thread-50 (_handle_event_internal) - INFO - WebSocket registrado: 80724577 -> hWslf1T3kPq5ICXkAAAD
+2025-07-09 16:18:10,061 - Thread-51 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-09 16:18:10,061 - Thread-51 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-09 16:18:10,062 - Thread-51 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 16:18:10] "GET /triagem HTTP/1.1" 200 -
+2025-07-09 16:18:10,534 - TriagemWorker_0 - INFO - WebSocket conectado para 80724577
+2025-07-09 16:18:10,535 - TriagemWorker_0 - INFO -  Progresso enviado para 80724577-c3fd-4e78-8eab-9dc13db4506c: 10% - Validando dados...
+2025-07-09 16:18:10,536 - TriagemWorker_0 - INFO - [80724577] 10% - Validando dados...
+2025-07-09 16:18:10,537 - TriagemWorker_0 - INFO - Processando: 1002663-66.2018.8.11.0041 [80724577]
+2025-07-09 16:18:10,538 - TriagemWorker_0 - INFO -  Progresso enviado para 80724577-c3fd-4e78-8eab-9dc13db4506c: 20% - Processando PDF do PJe...
+2025-07-09 16:18:10,539 - TriagemWorker_0 - INFO - [80724577] 20% - Processando PDF do PJe...
+2025-07-09 16:18:10,542 - TriagemWorker_0 - WARNING - ProcessadorPJe falhou [80724577]: unindent does not match any outer indentation level (processador_pje_integrado.py, line 31)
+2025-07-09 16:18:10,542 - TriagemWorker_0 - INFO -  Progresso enviado para 80724577-c3fd-4e78-8eab-9dc13db4506c: 25% - Aviso: ProcessadorPJe falhou, continuando...
+2025-07-09 16:18:10,542 - TriagemWorker_0 - INFO - [80724577] 25% - Aviso: ProcessadorPJe falhou, continuando...
+2025-07-09 16:18:10,543 - TriagemWorker_0 - INFO -  Progresso enviado para 80724577-c3fd-4e78-8eab-9dc13db4506c: 35% - Analisando suspeição...
+2025-07-09 16:18:10,543 - TriagemWorker_0 - INFO - [80724577] 35% - Analisando suspeição...
+2025-07-09 16:18:10,563 - TriagemWorker_0 - INFO - Suspeitos encontrados [1002663-66.2018.8.11.0041]: []
+2025-07-09 16:18:10,563 - TriagemWorker_0 - INFO -  Progresso enviado para 80724577-c3fd-4e78-8eab-9dc13db4506c: 45% - Preparando arquivos...
+2025-07-09 16:18:10,563 - TriagemWorker_0 - INFO - [80724577] 45% - Preparando arquivos...
+2025-07-09 16:18:10,564 - TriagemWorker_0 - INFO -  Progresso enviado para 80724577-c3fd-4e78-8eab-9dc13db4506c: 55% - Salvando markdown...
+2025-07-09 16:18:10,564 - TriagemWorker_0 - INFO - [80724577] 55% - Salvando markdown...
+2025-07-09 16:18:10,652 - TriagemWorker_0 - INFO - Metadados extraídos: 12 campos preenchidos
+2025-07-09 16:18:10,653 - TriagemWorker_0 - INFO - Markdown salvo: /Users/54117/Desktop/GMV/Triagem Inicial\1002663-66.2018.8.11.0041.md
+2025-07-09 16:18:10,659 - TriagemWorker_0 - INFO - DAT salvo: /Users/54117/Desktop/GMV/Triagem Inicial/dat\1002663-66.2018.8.11.0041.dat
+2025-07-09 16:18:10,659 - TriagemWorker_0 - INFO -  Progresso enviado para 80724577-c3fd-4e78-8eab-9dc13db4506c: 65% - Atualizando busca...
+2025-07-09 16:18:10,659 - TriagemWorker_0 - INFO - [80724577] 65% - Atualizando busca...
+2025-07-09 16:18:10,660 - TriagemWorker_0 - INFO -  Progresso enviado para 80724577-c3fd-4e78-8eab-9dc13db4506c: 75% - Executando anonimização...
+2025-07-09 16:18:10,660 - TriagemWorker_0 - INFO - [80724577] 75% - Executando anonimização...
+2025-07-09 16:18:13,777 - TriagemWorker_0 - INFO - Anonimização [1002663-66.2018.8.11.0041]: 482 substituições
+2025-07-09 16:18:13,778 - TriagemWorker_0 - INFO -  Progresso enviado para 80724577-c3fd-4e78-8eab-9dc13db4506c: 90% - Atualizando tabela...
+2025-07-09 16:18:13,778 - TriagemWorker_0 - INFO - [80724577] 90% - Atualizando tabela...
+2025-07-09 16:18:13,778 - TriagemWorker_0 - INFO - Tabela atualizada para 1002663-66.2018.8.11.0041
+2025-07-09 16:18:13,779 - TriagemWorker_0 - INFO -  Progresso enviado para 80724577-c3fd-4e78-8eab-9dc13db4506c: 100% - Processo concluído!
+2025-07-09 16:18:13,779 - Thread-54 (_send) - INFO - Tentativa 1/3 - Enviando para NAIRA (dev.acnormun@gmail.com)
+2025-07-09 16:18:13,780 - TriagemWorker_0 - INFO -  Operação 80724577-c3fd-4e78-8eab-9dc13db4506c removida da lista
+2025-07-09 16:18:13,780 - Thread-54 (_send) - INFO - Tentando STARTTLS (porta 587) para dev.acnormun@gmail.com
+2025-07-09 16:18:13,780 - TriagemWorker_0 - INFO - [80724577] 100% - Processo concluído!
+2025-07-09 16:18:13,781 - TriagemWorker_0 - INFO - Processo concluído: 1002663-66.2018.8.11.0041 [80724577]
+2025-07-09 16:18:13,781 - TriagemWorker_0 - INFO - Suspeitos: 0
+2025-07-09 16:18:13,781 - TriagemWorker_0 - INFO - Substituições: 482
+2025-07-09 16:18:24,636 - Thread-43 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 16:18:24,638 - Thread-43 (_send) - ERROR - Falha em todas as 3 tentativas para NAIRA
+2025-07-09 16:18:24,639 - Thread-43 (_send) - INFO - Tentando STARTTLS (porta 587) para dev.acnormun@gmail.com
+2025-07-09 16:18:34,810 - Thread-54 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 16:18:34,811 - Thread-54 (_send) - INFO - Tentando fallback para SSL...
+2025-07-09 16:18:34,811 - Thread-54 (_send) - INFO - Tentando SSL (porta 465) para dev.acnormun@gmail.com
+2025-07-09 16:18:45,684 - Thread-43 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 16:18:45,686 - Thread-43 (_send) - INFO - Tentando fallback para SSL...
+2025-07-09 16:18:45,686 - Thread-43 (_send) - INFO - Tentando SSL (porta 465) para dev.acnormun@gmail.com
+2025-07-09 16:18:55,851 - Thread-54 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 16:18:55,853 - Thread-54 (_send) - WARNING - Tentativa 1 falhou, aguardando 2.0s...
+2025-07-09 16:18:57,853 - Thread-54 (_send) - INFO - Tentativa 2/3 - Enviando para NAIRA (dev.acnormun@gmail.com)
+2025-07-09 16:18:57,854 - Thread-54 (_send) - INFO - Tentando STARTTLS (porta 587) para dev.acnormun@gmail.com
+2025-07-09 16:19:06,703 - Thread-43 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 16:19:18,887 - Thread-54 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 16:19:18,888 - Thread-54 (_send) - INFO - Tentando fallback para SSL...
+2025-07-09 16:19:18,889 - Thread-54 (_send) - INFO - Tentando SSL (porta 465) para dev.acnormun@gmail.com
+2025-07-09 16:19:40,018 - Thread-54 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 16:19:40,018 - Thread-54 (_send) - WARNING - Tentativa 2 falhou, aguardando 2.0s...
+2025-07-09 16:19:42,018 - Thread-54 (_send) - INFO - Tentativa 3/3 - Enviando para NAIRA (dev.acnormun@gmail.com)
+2025-07-09 16:19:42,019 - Thread-54 (_send) - INFO - Tentando STARTTLS (porta 587) para dev.acnormun@gmail.com
+2025-07-09 16:20:03,047 - Thread-54 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 16:20:03,048 - Thread-54 (_send) - INFO - Tentando fallback para SSL...
+2025-07-09 16:20:03,049 - Thread-54 (_send) - INFO - Tentando SSL (porta 465) para dev.acnormun@gmail.com
+2025-07-09 16:20:20,535 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-09 16:20:20,537 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-09 16:20:20,538 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-09 16:20:38,504 - MainThread   - INFO - CORS configurado
+2025-07-09 16:20:38,511 - MainThread   - INFO - Rotas registradas
+2025-07-09 16:20:38,511 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-09 16:20:38,512 - MainThread   - INFO - Background cleanup iniciado
+2025-07-09 16:20:38,513 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-09 16:20:38,513 - MainThread   - INFO - Inicialização RAG em background
+2025-07-09 16:20:38,514 - MainThread   - INFO - Servidor pronto!
+2025-07-09 16:20:38,514 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-09 16:20:38,514 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-09 16:20:38,514 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-09 16:20:38,527 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.81:5000
+2025-07-09 16:20:38,528 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-09 16:20:39,659 - Thread-3 (process_request_thread) - INFO - Cliente conectado: yEQ7n5w38FKpMhV5AAAB
+2025-07-09 16:21:02,350 - Thread-2 (init_rag_background) - INFO - Load pretrained SentenceTransformer: models\paraphrase-MiniLM-L3-v2
+2025-07-09 16:21:02,678 - Thread-8 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 16:21:02] "OPTIONS /triagem/1002663-66.2018.8.11.0041 HTTP/1.1" 200 -
+2025-07-09 16:21:02,918 - Thread-9 (process_request_thread) - INFO -  3 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-09 16:21:02,923 - Thread-9 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 16:21:02] "DELETE /triagem/1002663-66.2018.8.11.0041 HTTP/1.1" 200 -
+2025-07-09 16:21:03,041 - Thread-10 (process_request_thread) - INFO -  1 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-09 16:21:03,041 - Thread-10 (process_request_thread) - INFO - Extraídos 1 processos da tabela
+2025-07-09 16:21:03,042 - Thread-10 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 16:21:03] "GET /triagem HTTP/1.1" 200 -
+2025-07-09 16:21:04,774 - Thread-2 (init_rag_background) - INFO - Modelo models\paraphrase-MiniLM-L3-v2 carregado no dispositivo cpu
+2025-07-09 16:21:04,775 - Thread-2 (init_rag_background) - INFO - Dimensões Matryoshka: [32, 64, 128]
+2025-07-09 16:21:04,877 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-09 16:21:05,140 - Thread-2 (init_rag_background) - INFO - Load pretrained SentenceTransformer: models\paraphrase-MiniLM-L3-v2
+2025-07-09 16:21:05,202 - Thread-2 (init_rag_background) - INFO - Modelo models\paraphrase-MiniLM-L3-v2 carregado no dispositivo cpu
+2025-07-09 16:21:05,202 - Thread-2 (init_rag_background) - INFO - Dimensões Matryoshka: [32, 64, 128]
+2025-07-09 16:21:05,417 - Thread-2 (init_rag_background) - INFO - 300 documentos carregados
+2025-07-09 16:21:29,501 - Thread-14 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 16:21:29] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-07-09 16:21:29,796 - Thread-16 (process_request_thread) - INFO - Pool de threads criado com 15 workers
+2025-07-09 16:21:29,798 - TriagemWorker_0 - INFO - Iniciando processamento isolado: 1fc49e77
+2025-07-09 16:21:29,798 - Thread-16 (process_request_thread) - INFO - Operação submetida: 1fc49e77
+2025-07-09 16:21:29,799 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 1fc49e77-cc3f-40ea-b582-6075bed41138
+2025-07-09 16:21:29,799 - Thread-16 (process_request_thread) - INFO - Operações ativas: 1/15
+2025-07-09 16:21:29,799 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 16:21:29,800 - Thread-16 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 16:21:29] "POST /triagem/form HTTP/1.1" 200 -
+2025-07-09 16:21:29,800 - TriagemWorker_0 - INFO - [1fc49e77] 5% - Conectando...
+2025-07-09 16:21:29,826 - Thread-17 (process_request_thread) - INFO -  1 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-09 16:21:29,826 - Thread-17 (process_request_thread) - INFO - Extraídos 1 processos da tabela
+2025-07-09 16:21:29,827 - Thread-17 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 16:21:29] "GET /triagem HTTP/1.1" 200 -
+2025-07-09 16:21:29,862 - Thread-18 (_handle_event_internal) - INFO - Registrado: 1fc49e77 -> yEQ7n5w38FKpMhV5AAAB
+2025-07-09 16:21:29,862 - Thread-18 (_handle_event_internal) - INFO - WebSocket registrado: 1fc49e77 -> yEQ7n5w38FKpMhV5AAAB
+2025-07-09 16:21:30,301 - TriagemWorker_0 - INFO - WebSocket conectado para 1fc49e77
+2025-07-09 16:21:30,302 - TriagemWorker_0 - INFO -  Progresso enviado para 1fc49e77-cc3f-40ea-b582-6075bed41138: 10% - Validando dados...
+2025-07-09 16:21:30,302 - TriagemWorker_0 - INFO - [1fc49e77] 10% - Validando dados...
+2025-07-09 16:21:30,303 - TriagemWorker_0 - INFO - Processando: 1002663-66.2018.8.11.0041 [1fc49e77]
+2025-07-09 16:21:30,303 - TriagemWorker_0 - INFO -  Progresso enviado para 1fc49e77-cc3f-40ea-b582-6075bed41138: 20% - Processando PDF do PJe...
+2025-07-09 16:21:30,304 - TriagemWorker_0 - INFO - [1fc49e77] 20% - Processando PDF do PJe...
+2025-07-09 16:21:30,317 - TriagemWorker_0 - WARNING - ProcessadorPJe falhou [1fc49e77]: invalid syntax (processador_pje_integrado.py, line 221)
+2025-07-09 16:21:30,318 - TriagemWorker_0 - INFO -  Progresso enviado para 1fc49e77-cc3f-40ea-b582-6075bed41138: 25% - Aviso: ProcessadorPJe falhou, continuando...
+2025-07-09 16:21:30,318 - TriagemWorker_0 - INFO - [1fc49e77] 25% - Aviso: ProcessadorPJe falhou, continuando...
+2025-07-09 16:21:30,318 - TriagemWorker_0 - INFO -  Progresso enviado para 1fc49e77-cc3f-40ea-b582-6075bed41138: 35% - Analisando suspeição...
+2025-07-09 16:21:30,318 - TriagemWorker_0 - INFO - [1fc49e77] 35% - Analisando suspeição...
+2025-07-09 16:21:30,340 - TriagemWorker_0 - INFO - Suspeitos encontrados [1002663-66.2018.8.11.0041]: []
+2025-07-09 16:21:30,341 - TriagemWorker_0 - INFO -  Progresso enviado para 1fc49e77-cc3f-40ea-b582-6075bed41138: 45% - Preparando arquivos...
+2025-07-09 16:21:30,341 - TriagemWorker_0 - INFO - [1fc49e77] 45% - Preparando arquivos...
+2025-07-09 16:21:30,342 - TriagemWorker_0 - INFO -  Progresso enviado para 1fc49e77-cc3f-40ea-b582-6075bed41138: 55% - Salvando markdown...
+2025-07-09 16:21:30,342 - TriagemWorker_0 - INFO - [1fc49e77] 55% - Salvando markdown...
+2025-07-09 16:21:30,437 - TriagemWorker_0 - INFO - Metadados extraídos: 12 campos preenchidos
+2025-07-09 16:21:30,439 - TriagemWorker_0 - INFO - Markdown salvo: /Users/54117/Desktop/GMV/Triagem Inicial\1002663-66.2018.8.11.0041.md
+2025-07-09 16:21:30,444 - TriagemWorker_0 - INFO - DAT salvo: /Users/54117/Desktop/GMV/Triagem Inicial/dat\1002663-66.2018.8.11.0041.dat
+2025-07-09 16:21:30,445 - TriagemWorker_0 - INFO -  Progresso enviado para 1fc49e77-cc3f-40ea-b582-6075bed41138: 65% - Atualizando busca...
+2025-07-09 16:21:30,445 - TriagemWorker_0 - INFO - [1fc49e77] 65% - Atualizando busca...
+2025-07-09 16:21:30,445 - TriagemWorker_0 - INFO -  Progresso enviado para 1fc49e77-cc3f-40ea-b582-6075bed41138: 75% - Executando anonimização...
+2025-07-09 16:21:30,445 - TriagemWorker_0 - INFO - [1fc49e77] 75% - Executando anonimização...
+2025-07-09 16:21:33,590 - TriagemWorker_0 - INFO - Anonimização [1002663-66.2018.8.11.0041]: 487 substituições
+2025-07-09 16:21:33,590 - TriagemWorker_0 - INFO -  Progresso enviado para 1fc49e77-cc3f-40ea-b582-6075bed41138: 90% - Atualizando tabela...
+2025-07-09 16:21:33,591 - TriagemWorker_0 - INFO - [1fc49e77] 90% - Atualizando tabela...
+2025-07-09 16:21:33,592 - TriagemWorker_0 - INFO - Tabela atualizada para 1002663-66.2018.8.11.0041
+2025-07-09 16:21:33,593 - TriagemWorker_0 - INFO -  Progresso enviado para 1fc49e77-cc3f-40ea-b582-6075bed41138: 100% - Processo concluído!
+2025-07-09 16:21:33,593 - TriagemWorker_0 - INFO -  Operação 1fc49e77-cc3f-40ea-b582-6075bed41138 removida da lista
+2025-07-09 16:21:33,594 - Thread-21 (_send) - INFO - Tentativa 1/3 - Enviando para NATÁLIA (dev.acnormun@gmail.com)
+2025-07-09 16:21:33,594 - TriagemWorker_0 - INFO - [1fc49e77] 100% - Processo concluído!
+2025-07-09 16:21:33,594 - Thread-21 (_send) - INFO - Tentando STARTTLS (porta 587) para dev.acnormun@gmail.com
+2025-07-09 16:21:33,594 - TriagemWorker_0 - INFO - Processo concluído: 1002663-66.2018.8.11.0041 [1fc49e77]
+2025-07-09 16:21:33,597 - TriagemWorker_0 - INFO - Suspeitos: 0
+2025-07-09 16:21:33,597 - TriagemWorker_0 - INFO - Substituições: 487
+2025-07-09 16:21:54,638 - Thread-21 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 16:21:54,638 - Thread-21 (_send) - INFO - Tentando fallback para SSL...
+2025-07-09 16:21:54,638 - Thread-21 (_send) - INFO - Tentando SSL (porta 465) para dev.acnormun@gmail.com
+2025-07-09 16:22:08,115 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-09 16:22:08,116 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-09 16:22:08,116 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-09 16:22:22,067 - MainThread   - INFO - CORS configurado
+2025-07-09 16:22:22,073 - MainThread   - INFO - Rotas registradas
+2025-07-09 16:22:22,074 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-09 16:22:22,075 - MainThread   - INFO - Background cleanup iniciado
+2025-07-09 16:22:22,075 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-09 16:22:22,075 - MainThread   - INFO - Inicialização RAG em background
+2025-07-09 16:22:22,076 - MainThread   - INFO - Servidor pronto!
+2025-07-09 16:22:22,076 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-09 16:22:22,076 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-09 16:22:22,076 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-09 16:22:22,097 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.81:5000
+2025-07-09 16:22:22,098 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-09 16:22:22,585 - Thread-3 (process_request_thread) - INFO - Cliente conectado: RdETx5x1lL24LAUeAAAB
+2025-07-09 16:22:31,245 - Thread-3 (process_request_thread) - INFO - Cliente desconectado: RdETx5x1lL24LAUeAAAB
+2025-07-09 16:22:31,251 - Thread-3 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 16:22:31] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-09 16:22:31,259 - Thread-3 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2025-07-09 16:22:32,024 - Thread-12 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-09 16:22:32,025 - Thread-12 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-09 16:22:32,026 - Thread-12 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 16:22:32] "GET /triagem HTTP/1.1" 200 -
+2025-07-09 16:22:32,118 - Thread-8 (process_request_thread) - INFO - Cliente conectado: f2cWktwrf6A2HTEsAAAD
+2025-07-09 16:22:37,135 - Thread-2 (init_rag_background) - INFO - Load pretrained SentenceTransformer: models\paraphrase-MiniLM-L3-v2
+2025-07-09 16:22:38,225 - Thread-2 (init_rag_background) - INFO - Modelo models\paraphrase-MiniLM-L3-v2 carregado no dispositivo cpu
+2025-07-09 16:22:38,226 - Thread-2 (init_rag_background) - INFO - Dimensões Matryoshka: [32, 64, 128]
+2025-07-09 16:22:38,271 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-09 16:22:38,538 - Thread-2 (init_rag_background) - INFO - Load pretrained SentenceTransformer: models\paraphrase-MiniLM-L3-v2
+2025-07-09 16:22:38,598 - Thread-2 (init_rag_background) - INFO - Modelo models\paraphrase-MiniLM-L3-v2 carregado no dispositivo cpu
+2025-07-09 16:22:38,598 - Thread-2 (init_rag_background) - INFO - Dimensões Matryoshka: [32, 64, 128]
+2025-07-09 16:22:39,700 - Thread-2 (init_rag_background) - INFO - 404 documentos carregados
+2025-07-09 16:22:44,820 - Thread-15 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 16:22:44] "OPTIONS /triagem/1002663-66.2018.8.11.0041 HTTP/1.1" 200 -
+2025-07-09 16:22:45,096 - Thread-16 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-09 16:22:45,105 - Thread-16 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 16:22:45] "DELETE /triagem/1002663-66.2018.8.11.0041 HTTP/1.1" 200 -
+2025-07-09 16:22:45,137 - Thread-17 (process_request_thread) - INFO -  1 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-09 16:22:45,137 - Thread-17 (process_request_thread) - INFO - Extraídos 1 processos da tabela
+2025-07-09 16:22:45,138 - Thread-17 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 16:22:45] "GET /triagem HTTP/1.1" 200 -
+2025-07-09 16:23:06,606 - Thread-20 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 16:23:06] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-07-09 16:23:06,938 - Thread-21 (process_request_thread) - INFO - Pool de threads criado com 15 workers
+2025-07-09 16:23:06,939 - TriagemWorker_0 - INFO - Iniciando processamento isolado: d055881c
+2025-07-09 16:23:06,939 - Thread-21 (process_request_thread) - INFO - Operação submetida: d055881c
+2025-07-09 16:23:06,939 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação d055881c-4b8e-4a90-86d0-3609bbc1f2e7
+2025-07-09 16:23:06,940 - Thread-21 (process_request_thread) - INFO - Operações ativas: 1/15
+2025-07-09 16:23:06,940 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 16:23:06,941 - Thread-21 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 16:23:06] "POST /triagem/form HTTP/1.1" 200 -
+2025-07-09 16:23:06,941 - TriagemWorker_0 - INFO - [d055881c] 5% - Conectando...
+2025-07-09 16:23:06,954 - Thread-22 (process_request_thread) - INFO -  1 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-09 16:23:06,955 - Thread-22 (process_request_thread) - INFO - Extraídos 1 processos da tabela
+2025-07-09 16:23:06,955 - Thread-22 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 16:23:06] "GET /triagem HTTP/1.1" 200 -
+2025-07-09 16:23:06,957 - Thread-23 (_handle_event_internal) - INFO - Registrado: d055881c -> f2cWktwrf6A2HTEsAAAD
+2025-07-09 16:23:06,957 - Thread-23 (_handle_event_internal) - INFO - WebSocket registrado: d055881c -> f2cWktwrf6A2HTEsAAAD
+2025-07-09 16:23:07,442 - TriagemWorker_0 - INFO - WebSocket conectado para d055881c
+2025-07-09 16:23:07,443 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 10% - Validando dados...
+2025-07-09 16:23:07,443 - TriagemWorker_0 - INFO - [d055881c] 10% - Validando dados...
+2025-07-09 16:23:07,443 - TriagemWorker_0 - INFO - Processando: 1002663-66.2018.8.11.0041 [d055881c]
+2025-07-09 16:23:07,443 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 20% - Processando PDF do PJe...
+2025-07-09 16:23:07,444 - TriagemWorker_0 - INFO - [d055881c] 20% - Processando PDF do PJe...
+2025-07-09 16:23:07,572 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 5% - Inicializando OCR...
+2025-07-09 16:23:07,573 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 10% - Decodificando PDF base64...
+2025-07-09 16:23:07,589 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 15% - Analisando estrutura do PDF...
+2025-07-09 16:23:07,620 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 20% - Extraindo tabela de documentos...
+2025-07-09 16:23:07,669 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 25% - Criando estrutura de pastas...
+2025-07-09 16:23:07,676 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 30% - Localizando documentos no PDF...
+2025-07-09 16:23:11,599 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 40% - Separando PDF em 52 documentos...
+2025-07-09 16:23:11,834 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 50% - Iniciando processamento OCR...
+2025-07-09 16:23:11,835 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 50% - Processando OCR: 00_inicial.pdf (1/52)
+2025-07-09 16:23:12,733 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 51% - Processando OCR: 263308778_Sem_movimento_2017217512_-_DRO.pdf (2/52)
+2025-07-09 16:23:13,117 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 52% - Processando OCR: 263308779_Sem_movimento_2017217512_-_DRO.pdf (3/52)
+2025-07-09 16:23:13,771 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 53% - Processando OCR: 263308780_Sem_movimento_Decisão_Decisão.pdf (4/52)
+2025-07-09 16:23:13,984 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 53% - Processando OCR: 263308781_Sem_movimento_Citação_Citação.pdf (5/52)
+2025-07-09 16:23:14,238 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 54% - Processando OCR: 263308782_Sem_movimento_Citação_Citação.pdf (6/52)
+2025-07-09 16:23:14,478 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 55% - Processando OCR: 263308783_Sem_movimento_Certidão_Certidã.pdf (7/52)
+2025-07-09 16:23:14,576 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 56% - Processando OCR: 263308784_Sem_movimento_1002663-662018_-.pdf (8/52)
+2025-07-09 16:23:14,775 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 56% - Processando OCR: 263308785_Sem_movimento_1002663-66201881.pdf (9/52)
+2025-07-09 16:23:14,962 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 57% - Processando OCR: 263308786_Sem_movimento_Intimação_Intima.pdf (10/52)
+2025-07-09 16:23:15,064 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 58% - Processando OCR: 263308787_Sem_movimento_Petição_Petição.pdf (11/52)
+2025-07-09 16:23:15,220 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 59% - Processando OCR: 263308788_Sem_movimento_Pugnarpelapenhor.pdf (12/52)
+2025-07-09 16:23:15,707 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 60% - Processando OCR: 263308789_Sem_movimento_Pugnarpelapenhor.pdf (13/52)
+2025-07-09 16:23:16,049 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 60% - Processando OCR: 263308790_Sem_movimento_Pugnarpelapenhor.pdf (14/52)
+2025-07-09 16:23:16,374 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 61% - Processando OCR: 263308794_Sem_movimento_1002663-66201881.pdf (15/52)
+2025-07-09 16:23:16,512 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 62% - Processando OCR: 263308793_Sem_movimento_1002663-66201881.pdf (16/52)
+2025-07-09 16:23:16,660 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 63% - Processando OCR: 263308792_Sem_movimento_1002663-66201881.pdf (17/52)
+2025-07-09 16:23:17,270 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 63% - Processando OCR: 263308791_Sem_movimento_Decisão_Decisão.pdf (18/52)
+2025-07-09 16:23:17,586 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 64% - Processando OCR: 263308795_Sem_movimento_Sentença_Sentenç.pdf (19/52)
+2025-07-09 16:23:18,386 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 65% - Processando OCR: 263308796_Sem_movimento_Sentença_Sentenç.pdf (20/52)
+2025-07-09 16:23:19,159 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 66% - Processando OCR: 263308797_Sem_movimento_Apelação_Recurso.pdf (21/52)
+2025-07-09 16:23:24,219 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 66% - Processando OCR: 263308798_Sem_movimento_Certidão_Certidã.pdf (22/52)
+2025-07-09 16:23:24,303 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 67% - Processando OCR: 263308799_Sem_movimento_Intimação_Intima.pdf (23/52)
+2025-07-09 16:23:24,435 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 68% - Processando OCR: 263309750_Sem_movimento_Intimação_Intima.pdf (24/52)
+2025-07-09 16:23:24,567 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 69% - Processando OCR: 263309751_Sem_movimento_Intimação_Intima.pdf (25/52)
+2025-07-09 16:23:24,694 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 70% - Processando OCR: 263309752_Sem_movimento_Não_entregue_-_D.pdf (26/52)
+2025-07-09 16:23:24,857 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 70% - Processando OCR: 263309753_Sem_movimento_Não_entregue_-_M.pdf (27/52)
+2025-07-09 16:23:25,019 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 71% - Processando OCR: 263391255_Juntada_de_Certidão_PREVENÇÃO_.pdf (28/52)
+2025-07-09 16:23:25,121 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 72% - Processando OCR: 263391258_Juntada_de_Certidão_Preparo_re.pdf (29/52)
+2025-07-09 16:23:25,233 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 73% - Processando OCR: 264164766_Expedição_de_Outros_documentos.pdf (30/52)
+2025-07-09 16:23:25,345 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 73% - Processando OCR: 264164773_Publicado_Intimação_de_pauta_e.pdf (31/52)
+2025-07-09 16:23:25,459 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 74% - Processando OCR: 268816288_Sem_movimento_Certidão_de_julg.pdf (32/52)
+2025-07-09 16:23:25,564 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 75% - Processando OCR: 263470254_Sem_movimento_Voto_do_Magistra.pdf (33/52)
+2025-07-09 16:23:26,394 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 76% - Processando OCR: 268826288_Publicado_Acórdão_em.pdf (34/52)
+2025-07-09 16:23:27,507 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 76% - Processando OCR: 263470263_Sem_movimento_Ementa_Ementa.pdf (35/52)
+2025-07-09 16:23:27,658 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 77% - Processando OCR: 263470251_Sem_movimento_Relatório_Relató.pdf (36/52)
+2025-07-09 16:23:27,775 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 78% - Processando OCR: 270074878_Juntada_de_Petição_de_petição_.pdf (37/52)
+2025-07-09 16:23:29,526 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 79% - Processando OCR: 270168877_Ato_ordinatório_praticado_Cert.pdf (38/52)
+2025-07-09 16:23:29,631 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 80% - Processando OCR: 271108871_Publicado_Intimação_em.pdf (39/52)
+2025-07-09 16:23:29,717 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 80% - Processando OCR: 277326884_Ato_ordinatório_praticado_Cert.pdf (40/52)
+2025-07-09 16:23:29,818 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 81% - Processando OCR: 277691381_Publicado_Decisão_em.pdf (41/52)
+2025-07-09 16:23:30,324 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 82% - Processando OCR: 289909384_Ato_ordinatório_praticado_Cert.pdf (42/52)
+2025-07-09 16:23:30,421 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 83% - Processando OCR: 291604397_Ato_ordinatório_praticado_Cert.pdf (43/52)
+2025-07-09 16:23:30,517 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 83% - Processando OCR: 292095883_Determinado_o_encaminhamento_d.pdf (44/52)
+2025-07-09 16:23:30,752 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 84% - Processando OCR: 292357354_Levantada_a_Causa_Suspensiva_o.pdf (45/52)
+2025-07-09 16:23:30,851 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 85% - Processando OCR: 294273392_Expedição_de_Outros_documentos.pdf (46/52)
+2025-07-09 16:23:30,983 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 86% - Processando OCR: 294273397_Publicado_Intimação_de_pauta_e.pdf (47/52)
+2025-07-09 16:23:31,116 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 86% - Processando OCR: 296850412_Juntada_de_Petição_de_certidão.pdf (48/52)
+2025-07-09 16:23:31,213 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 87% - Processando OCR: 296943861_Publicado_Acórdão_em.pdf (49/52)
+2025-07-09 16:23:32,903 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 88% - Processando OCR: 293676854_Sem_movimento_Voto_do_Magistra.pdf (50/52)
+2025-07-09 16:23:33,905 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 89% - Processando OCR: 293669399_Sem_movimento_Relatório_Relató.pdf (51/52)
+2025-07-09 16:23:34,254 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 90% - Processando OCR: 293676860_Sem_movimento_Ementa_Ementa.pdf (52/52)
+2025-07-09 16:23:34,502 - TriagemWorker_0 - INFO -  Progresso enviado para d055881c-4b8e-4a90-86d0-3609bbc1f2e7: 100% - Processamento PJe concluído com sucesso!
+2025-07-09 16:23:34,502 - TriagemWorker_0 - INFO -  Operação d055881c-4b8e-4a90-86d0-3609bbc1f2e7 removida da lista
+2025-07-09 16:23:34,503 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação d055881c-4b8e-4a90-86d0-3609bbc1f2e7
+2025-07-09 16:23:34,503 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 16:23:34,503 - TriagemWorker_0 - INFO - [d055881c] 35% - Analisando suspeição...
+2025-07-09 16:23:34,523 - TriagemWorker_0 - INFO - Suspeitos encontrados [1002663-66.2018.8.11.0041]: []
+2025-07-09 16:23:34,524 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação d055881c-4b8e-4a90-86d0-3609bbc1f2e7
+2025-07-09 16:23:34,524 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 16:23:34,524 - TriagemWorker_0 - INFO - [d055881c] 45% - Preparando arquivos...
+2025-07-09 16:23:34,525 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação d055881c-4b8e-4a90-86d0-3609bbc1f2e7
+2025-07-09 16:23:34,525 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 16:23:34,525 - TriagemWorker_0 - INFO - [d055881c] 55% - Salvando markdown...
+2025-07-09 16:23:34,614 - TriagemWorker_0 - INFO - Metadados extraídos: 12 campos preenchidos
+2025-07-09 16:23:34,615 - TriagemWorker_0 - INFO - Markdown salvo: /Users/54117/Desktop/GMV/Triagem Inicial\1002663-66.2018.8.11.0041\markdowns\00_inicial.md
+2025-07-09 16:23:34,619 - TriagemWorker_0 - INFO - DAT salvo: /Users/54117/Desktop/GMV/Triagem Inicial/dat\1002663-66.2018.8.11.0041.dat
+2025-07-09 16:23:34,619 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação d055881c-4b8e-4a90-86d0-3609bbc1f2e7
+2025-07-09 16:23:34,619 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 16:23:34,619 - TriagemWorker_0 - INFO - [d055881c] 65% - Atualizando busca...
+2025-07-09 16:23:34,620 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação d055881c-4b8e-4a90-86d0-3609bbc1f2e7
+2025-07-09 16:23:34,620 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 16:23:34,620 - TriagemWorker_0 - INFO - [d055881c] 75% - Executando anonimização...
+2025-07-09 16:23:37,714 - TriagemWorker_0 - INFO - Anonimização [1002663-66.2018.8.11.0041]: 474 substituições
+2025-07-09 16:23:37,714 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação d055881c-4b8e-4a90-86d0-3609bbc1f2e7
+2025-07-09 16:23:37,714 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 16:23:37,714 - TriagemWorker_0 - INFO - [d055881c] 90% - Atualizando tabela...
+2025-07-09 16:23:37,715 - TriagemWorker_0 - INFO - Tabela atualizada para 1002663-66.2018.8.11.0041
+2025-07-09 16:23:37,716 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação d055881c-4b8e-4a90-86d0-3609bbc1f2e7
+2025-07-09 16:23:37,716 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-09 16:23:37,716 - Thread-26 (_send) - WARNING - Email não encontrado para responsável: 'LOURIVAL'. Usando admin.
+2025-07-09 16:23:37,716 - TriagemWorker_0 - INFO - [d055881c] 100% - Processo concluído!
+2025-07-09 16:23:37,716 - Thread-26 (_send) - INFO - Tentativa 1/3 - Enviando para LOURIVAL (dev.acnormun@gmail.com)
+2025-07-09 16:23:37,717 - TriagemWorker_0 - INFO - Processo concluído: 1002663-66.2018.8.11.0041 [d055881c]
+2025-07-09 16:23:37,717 - Thread-26 (_send) - INFO - Tentando STARTTLS (porta 587) para dev.acnormun@gmail.com
+2025-07-09 16:23:37,717 - TriagemWorker_0 - INFO - Suspeitos: 0
+2025-07-09 16:23:37,717 - TriagemWorker_0 - INFO - Substituições: 474
+2025-07-09 16:23:58,732 - Thread-26 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 16:23:58,732 - Thread-26 (_send) - INFO - Tentando fallback para SSL...
+2025-07-09 16:23:58,732 - Thread-26 (_send) - INFO - Tentando SSL (porta 465) para dev.acnormun@gmail.com
+2025-07-09 16:24:19,762 - Thread-26 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 16:24:19,766 - Thread-26 (_send) - WARNING - Tentativa 1 falhou, aguardando 2.0s...
+2025-07-09 16:24:21,767 - Thread-26 (_send) - INFO - Tentativa 2/3 - Enviando para LOURIVAL (dev.acnormun@gmail.com)
+2025-07-09 16:24:21,767 - Thread-26 (_send) - INFO - Tentando STARTTLS (porta 587) para dev.acnormun@gmail.com
+2025-07-09 16:24:42,862 - Thread-26 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 16:24:42,863 - Thread-26 (_send) - INFO - Tentando fallback para SSL...
+2025-07-09 16:24:42,863 - Thread-26 (_send) - INFO - Tentando SSL (porta 465) para dev.acnormun@gmail.com
+2025-07-09 16:25:03,903 - Thread-26 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 16:25:03,904 - Thread-26 (_send) - WARNING - Tentativa 2 falhou, aguardando 2.0s...
+2025-07-09 16:25:05,904 - Thread-26 (_send) - INFO - Tentativa 3/3 - Enviando para LOURIVAL (dev.acnormun@gmail.com)
+2025-07-09 16:25:05,905 - Thread-26 (_send) - INFO - Tentando STARTTLS (porta 587) para dev.acnormun@gmail.com
+2025-07-09 16:25:14,007 - Thread-31 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-09 16:25:14,007 - Thread-31 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-09 16:25:14,008 - Thread-31 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 16:25:14] "GET /triagem HTTP/1.1" 200 -
+2025-07-09 16:25:14,966 - Thread-32 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 16:25:14] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-09 16:25:15,288 - Thread-33 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 16:25:15] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-09 16:25:26,937 - Thread-26 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 16:25:26,938 - Thread-26 (_send) - INFO - Tentando fallback para SSL...
+2025-07-09 16:25:26,938 - Thread-26 (_send) - INFO - Tentando SSL (porta 465) para dev.acnormun@gmail.com
+2025-07-09 16:25:33,847 - Thread-34 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 16:25:33] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-09 16:25:47,987 - Thread-26 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 16:25:47,988 - Thread-26 (_send) - ERROR - Falha em todas as 3 tentativas para LOURIVAL
+2025-07-09 16:25:47,988 - Thread-26 (_send) - INFO - Tentando STARTTLS (porta 587) para dev.acnormun@gmail.com
+2025-07-09 16:26:09,054 - Thread-26 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 16:26:09,054 - Thread-26 (_send) - INFO - Tentando fallback para SSL...
+2025-07-09 16:26:09,055 - Thread-26 (_send) - INFO - Tentando SSL (porta 465) para dev.acnormun@gmail.com
+2025-07-09 16:26:30,155 - Thread-26 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-09 16:27:59,444 - Thread-36 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 16:27:59] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-09 16:28:06,782 - Thread-8 (process_request_thread) - INFO - Cliente desconectado: f2cWktwrf6A2HTEsAAAD
+2025-07-09 16:28:06,785 - Thread-8 (process_request_thread) - INFO - 127.0.0.1 - - [09/Jul/2025 16:28:06] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-09 16:28:06,789 - Thread-8 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2025-07-10 10:02:35,392 - MainThread   - INFO - CORS configurado
+2025-07-10 10:02:35,401 - MainThread   - INFO - Rotas registradas
+2025-07-10 10:02:35,402 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-10 10:02:35,403 - MainThread   - INFO - Background cleanup iniciado
+2025-07-10 10:02:35,403 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-10 10:02:35,403 - MainThread   - INFO - Inicialização RAG em background
+2025-07-10 10:02:35,404 - MainThread   - INFO - Servidor pronto!
+2025-07-10 10:02:35,404 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-10 10:02:35,404 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-10 10:02:35,404 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-10 10:02:35,421 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.81:5000
+2025-07-10 10:02:35,422 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-10 10:02:58,015 - Thread-2 (init_rag_background) - INFO - Load pretrained SentenceTransformer: models\paraphrase-MiniLM-L3-v2
+2025-07-10 10:03:00,155 - Thread-2 (init_rag_background) - INFO - Modelo models\paraphrase-MiniLM-L3-v2 carregado no dispositivo cpu
+2025-07-10 10:03:00,155 - Thread-2 (init_rag_background) - INFO - Dimensões Matryoshka: [32, 64, 128]
+2025-07-10 10:03:00,240 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-10 10:03:00,671 - Thread-2 (init_rag_background) - INFO - Load pretrained SentenceTransformer: models\paraphrase-MiniLM-L3-v2
+2025-07-10 10:03:00,740 - Thread-2 (init_rag_background) - INFO - Modelo models\paraphrase-MiniLM-L3-v2 carregado no dispositivo cpu
+2025-07-10 10:03:00,740 - Thread-2 (init_rag_background) - INFO - Dimensões Matryoshka: [32, 64, 128]
+2025-07-10 10:03:02,855 - Thread-2 (init_rag_background) - INFO - 493 documentos carregados
+2025-07-10 10:04:46,562 - Thread-5 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-10 10:04:46,562 - Thread-5 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-10 10:04:46,568 - Thread-5 (process_request_thread) - INFO - 127.0.0.1 - - [10/Jul/2025 10:04:46] "GET /triagem HTTP/1.1" 200 -
+2025-07-10 10:04:46,575 - Thread-4 (process_request_thread) - INFO - Cliente conectado: Q7mrskr7OqLILH5_AAAB
+2025-07-10 10:04:51,035 - Thread-11 (process_request_thread) - INFO - 127.0.0.1 - - [10/Jul/2025 10:04:51] "OPTIONS /triagem/1002663-66.2018.8.11.0041 HTTP/1.1" 200 -
+2025-07-10 10:04:51,299 - Thread-12 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-10 10:04:51,345 - Thread-12 (process_request_thread) - INFO - 127.0.0.1 - - [10/Jul/2025 10:04:51] "DELETE /triagem/1002663-66.2018.8.11.0041 HTTP/1.1" 200 -
+2025-07-10 10:04:51,357 - Thread-13 (process_request_thread) - INFO -  1 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-10 10:04:51,357 - Thread-13 (process_request_thread) - INFO - Extraídos 1 processos da tabela
+2025-07-10 10:04:51,358 - Thread-13 (process_request_thread) - INFO - 127.0.0.1 - - [10/Jul/2025 10:04:51] "GET /triagem HTTP/1.1" 200 -
+2025-07-10 10:05:39,903 - Thread-16 (process_request_thread) - INFO - 127.0.0.1 - - [10/Jul/2025 10:05:39] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-07-10 10:05:40,189 - Thread-17 (process_request_thread) - INFO - Pool de threads criado com 15 workers
+2025-07-10 10:05:40,205 - TriagemWorker_0 - INFO - Iniciando processamento isolado: 15c56251
+2025-07-10 10:05:40,206 - Thread-17 (process_request_thread) - INFO - Operação submetida: 15c56251
+2025-07-10 10:05:40,208 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 15c56251-d6a1-465a-933f-13b03c0baaf6
+2025-07-10 10:05:40,208 - Thread-17 (process_request_thread) - INFO - Operações ativas: 1/15
+2025-07-10 10:05:40,209 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-10 10:05:40,210 - Thread-17 (process_request_thread) - INFO - 127.0.0.1 - - [10/Jul/2025 10:05:40] "POST /triagem/form HTTP/1.1" 200 -
+2025-07-10 10:05:40,210 - TriagemWorker_0 - INFO - [15c56251] 5% - Conectando...
+2025-07-10 10:05:40,228 - Thread-18 (process_request_thread) - INFO -  1 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-10 10:05:40,229 - Thread-18 (process_request_thread) - INFO - Extraídos 1 processos da tabela
+2025-07-10 10:05:40,229 - Thread-18 (process_request_thread) - INFO - 127.0.0.1 - - [10/Jul/2025 10:05:40] "GET /triagem HTTP/1.1" 200 -
+2025-07-10 10:05:40,235 - Thread-19 (_handle_event_internal) - INFO - Registrado: 15c56251 -> Q7mrskr7OqLILH5_AAAB
+2025-07-10 10:05:40,236 - Thread-19 (_handle_event_internal) - INFO - WebSocket registrado: 15c56251 -> Q7mrskr7OqLILH5_AAAB
+2025-07-10 10:05:40,711 - TriagemWorker_0 - INFO - WebSocket conectado para 15c56251
+2025-07-10 10:05:40,711 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 10% - Validando dados...
+2025-07-10 10:05:40,712 - TriagemWorker_0 - INFO - [15c56251] 10% - Validando dados...
+2025-07-10 10:05:40,713 - TriagemWorker_0 - INFO - Processando: 1002663-66.2018.8.11.0041 [15c56251]
+2025-07-10 10:05:40,713 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 20% - Processando PDF do PJe...
+2025-07-10 10:05:40,713 - TriagemWorker_0 - INFO - [15c56251] 20% - Processando PDF do PJe...
+2025-07-10 10:05:41,349 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 5% - Inicializando OCR...
+2025-07-10 10:05:41,349 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 10% - Decodificando PDF base64...
+2025-07-10 10:05:41,368 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 15% - Analisando estrutura do PDF...
+2025-07-10 10:05:41,403 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 20% - Extraindo tabela de documentos...
+2025-07-10 10:05:41,459 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 25% - Criando estrutura de pastas...
+2025-07-10 10:05:41,467 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 30% - Localizando documentos no PDF...
+2025-07-10 10:05:46,320 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 40% - Separando PDF em 52 documentos...
+2025-07-10 10:05:46,531 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 50% - Iniciando processamento OCR...
+2025-07-10 10:05:46,531 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 50% - Processando OCR: 00_inicial.pdf (1/52)
+2025-07-10 10:05:47,138 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 51% - Processando OCR: 263308778_Sem_movimento_2017217512_-_DRO.pdf (2/52)
+2025-07-10 10:05:47,481 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 52% - Processando OCR: 263308779_Sem_movimento_2017217512_-_DRO.pdf (3/52)
+2025-07-10 10:05:48,134 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 53% - Processando OCR: 263308780_Sem_movimento_Decisão_Decisão.pdf (4/52)
+2025-07-10 10:05:48,347 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 53% - Processando OCR: 263308781_Sem_movimento_Citação_Citação.pdf (5/52)
+2025-07-10 10:05:48,593 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 54% - Processando OCR: 263308782_Sem_movimento_Citação_Citação.pdf (6/52)
+2025-07-10 10:05:48,852 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 55% - Processando OCR: 263308783_Sem_movimento_Certidão_Certidã.pdf (7/52)
+2025-07-10 10:05:48,940 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 56% - Processando OCR: 263308784_Sem_movimento_1002663-662018_-.pdf (8/52)
+2025-07-10 10:05:49,121 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 56% - Processando OCR: 263308785_Sem_movimento_1002663-66201881.pdf (9/52)
+2025-07-10 10:05:49,309 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 57% - Processando OCR: 263308786_Sem_movimento_Intimação_Intima.pdf (10/52)
+2025-07-10 10:05:49,397 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 58% - Processando OCR: 263308787_Sem_movimento_Petição_Petição.pdf (11/52)
+2025-07-10 10:05:49,571 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 59% - Processando OCR: 263308788_Sem_movimento_Pugnarpelapenhor.pdf (12/52)
+2025-07-10 10:05:50,067 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 60% - Processando OCR: 263308789_Sem_movimento_Pugnarpelapenhor.pdf (13/52)
+2025-07-10 10:05:50,382 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 60% - Processando OCR: 263308790_Sem_movimento_Pugnarpelapenhor.pdf (14/52)
+2025-07-10 10:05:50,720 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 61% - Processando OCR: 263308794_Sem_movimento_1002663-66201881.pdf (15/52)
+2025-07-10 10:05:50,862 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 62% - Processando OCR: 263308793_Sem_movimento_1002663-66201881.pdf (16/52)
+2025-07-10 10:05:51,006 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 63% - Processando OCR: 263308792_Sem_movimento_1002663-66201881.pdf (17/52)
+2025-07-10 10:05:51,625 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 63% - Processando OCR: 263308791_Sem_movimento_Decisão_Decisão.pdf (18/52)
+2025-07-10 10:05:51,971 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 64% - Processando OCR: 263308795_Sem_movimento_Sentença_Sentenç.pdf (19/52)
+2025-07-10 10:05:52,842 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 65% - Processando OCR: 263308796_Sem_movimento_Sentença_Sentenç.pdf (20/52)
+2025-07-10 10:05:53,668 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 66% - Processando OCR: 263308797_Sem_movimento_Apelação_Recurso.pdf (21/52)
+2025-07-10 10:05:58,939 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 66% - Processando OCR: 263308798_Sem_movimento_Certidão_Certidã.pdf (22/52)
+2025-07-10 10:05:59,025 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 67% - Processando OCR: 263308799_Sem_movimento_Intimação_Intima.pdf (23/52)
+2025-07-10 10:05:59,156 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 68% - Processando OCR: 263309750_Sem_movimento_Intimação_Intima.pdf (24/52)
+2025-07-10 10:05:59,288 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 69% - Processando OCR: 263309751_Sem_movimento_Intimação_Intima.pdf (25/52)
+2025-07-10 10:05:59,418 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 70% - Processando OCR: 263309752_Sem_movimento_Não_entregue_-_D.pdf (26/52)
+2025-07-10 10:05:59,579 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 70% - Processando OCR: 263309753_Sem_movimento_Não_entregue_-_M.pdf (27/52)
+2025-07-10 10:05:59,779 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 71% - Processando OCR: 263391255_Juntada_de_Certidão_PREVENÇÃO_.pdf (28/52)
+2025-07-10 10:05:59,907 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 72% - Processando OCR: 263391258_Juntada_de_Certidão_Preparo_re.pdf (29/52)
+2025-07-10 10:06:00,012 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 73% - Processando OCR: 264164766_Expedição_de_Outros_documentos.pdf (30/52)
+2025-07-10 10:06:00,136 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 73% - Processando OCR: 264164773_Publicado_Intimação_de_pauta_e.pdf (31/52)
+2025-07-10 10:06:00,259 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 74% - Processando OCR: 268816288_Sem_movimento_Certidão_de_julg.pdf (32/52)
+2025-07-10 10:06:00,367 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 75% - Processando OCR: 263470254_Sem_movimento_Voto_do_Magistra.pdf (33/52)
+2025-07-10 10:06:01,253 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 76% - Processando OCR: 268826288_Publicado_Acórdão_em.pdf (34/52)
+2025-07-10 10:06:02,416 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 76% - Processando OCR: 263470263_Sem_movimento_Ementa_Ementa.pdf (35/52)
+2025-07-10 10:06:02,563 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 77% - Processando OCR: 263470251_Sem_movimento_Relatório_Relató.pdf (36/52)
+2025-07-10 10:06:02,682 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 78% - Processando OCR: 270074878_Juntada_de_Petição_de_petição_.pdf (37/52)
+2025-07-10 10:06:04,437 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 79% - Processando OCR: 270168877_Ato_ordinatório_praticado_Cert.pdf (38/52)
+2025-07-10 10:06:04,544 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 80% - Processando OCR: 271108871_Publicado_Intimação_em.pdf (39/52)
+2025-07-10 10:06:04,632 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 80% - Processando OCR: 277326884_Ato_ordinatório_praticado_Cert.pdf (40/52)
+2025-07-10 10:06:04,733 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 81% - Processando OCR: 277691381_Publicado_Decisão_em.pdf (41/52)
+2025-07-10 10:06:05,243 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 82% - Processando OCR: 289909384_Ato_ordinatório_praticado_Cert.pdf (42/52)
+2025-07-10 10:06:05,344 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 83% - Processando OCR: 291604397_Ato_ordinatório_praticado_Cert.pdf (43/52)
+2025-07-10 10:06:05,444 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 83% - Processando OCR: 292095883_Determinado_o_encaminhamento_d.pdf (44/52)
+2025-07-10 10:06:05,690 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 84% - Processando OCR: 292357354_Levantada_a_Causa_Suspensiva_o.pdf (45/52)
+2025-07-10 10:06:05,793 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 85% - Processando OCR: 294273392_Expedição_de_Outros_documentos.pdf (46/52)
+2025-07-10 10:06:05,931 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 86% - Processando OCR: 294273397_Publicado_Intimação_de_pauta_e.pdf (47/52)
+2025-07-10 10:06:06,060 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 86% - Processando OCR: 296850412_Juntada_de_Petição_de_certidão.pdf (48/52)
+2025-07-10 10:06:06,156 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 87% - Processando OCR: 296943861_Publicado_Acórdão_em.pdf (49/52)
+2025-07-10 10:06:07,851 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 88% - Processando OCR: 293676854_Sem_movimento_Voto_do_Magistra.pdf (50/52)
+2025-07-10 10:06:08,855 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 89% - Processando OCR: 293669399_Sem_movimento_Relatório_Relató.pdf (51/52)
+2025-07-10 10:06:09,208 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 90% - Processando OCR: 293676860_Sem_movimento_Ementa_Ementa.pdf (52/52)
+2025-07-10 10:06:09,458 - TriagemWorker_0 - INFO -  Progresso enviado para 15c56251-d6a1-465a-933f-13b03c0baaf6: 100% - Processamento PJe concluído com sucesso!
+2025-07-10 10:06:09,458 - TriagemWorker_0 - INFO -  Operação 15c56251-d6a1-465a-933f-13b03c0baaf6 removida da lista
+2025-07-10 10:06:09,459 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 15c56251-d6a1-465a-933f-13b03c0baaf6
+2025-07-10 10:06:09,460 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-10 10:06:09,460 - TriagemWorker_0 - INFO - [15c56251] 35% - Analisando suspeição...
+2025-07-10 10:06:09,481 - TriagemWorker_0 - INFO - Suspeitos encontrados [1002663-66.2018.8.11.0041]: []
+2025-07-10 10:06:09,481 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 15c56251-d6a1-465a-933f-13b03c0baaf6
+2025-07-10 10:06:09,482 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-10 10:06:09,482 - TriagemWorker_0 - INFO - [15c56251] 45% - Preparando arquivos...
+2025-07-10 10:06:09,483 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 15c56251-d6a1-465a-933f-13b03c0baaf6
+2025-07-10 10:06:09,483 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-10 10:06:09,483 - TriagemWorker_0 - INFO - [15c56251] 55% - Salvando markdown...
+2025-07-10 10:06:09,570 - TriagemWorker_0 - INFO - Metadados extraídos: 12 campos preenchidos
+2025-07-10 10:06:09,571 - TriagemWorker_0 - INFO - Markdown salvo: /Users/54117/Desktop/GMV/Triagem Inicial\1002663-66.2018.8.11.0041\markdowns\00_inicial.md
+2025-07-10 10:06:09,576 - TriagemWorker_0 - INFO - DAT salvo: /Users/54117/Desktop/GMV/Triagem Inicial/dat\1002663-66.2018.8.11.0041.dat
+2025-07-10 10:06:09,576 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 15c56251-d6a1-465a-933f-13b03c0baaf6
+2025-07-10 10:06:09,576 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-10 10:06:09,576 - TriagemWorker_0 - INFO - [15c56251] 65% - Atualizando busca...
+2025-07-10 10:06:09,577 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 15c56251-d6a1-465a-933f-13b03c0baaf6
+2025-07-10 10:06:09,577 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-10 10:06:09,577 - TriagemWorker_0 - INFO - [15c56251] 75% - Executando anonimização...
+2025-07-10 10:06:12,647 - TriagemWorker_0 - INFO - Anonimização [1002663-66.2018.8.11.0041]: 479 substituições
+2025-07-10 10:06:12,648 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 15c56251-d6a1-465a-933f-13b03c0baaf6
+2025-07-10 10:06:12,648 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-10 10:06:12,648 - TriagemWorker_0 - INFO - [15c56251] 90% - Atualizando tabela...
+2025-07-10 10:06:12,649 - TriagemWorker_0 - INFO - Tabela atualizada para 1002663-66.2018.8.11.0041
+2025-07-10 10:06:12,650 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 15c56251-d6a1-465a-933f-13b03c0baaf6
+2025-07-10 10:06:12,650 - Thread-22 (_send) - WARNING - Email não encontrado para responsável: 'LOURIVAL'. Usando admin.
+2025-07-10 10:06:12,651 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-10 10:06:12,651 - Thread-22 (_send) - INFO - Tentativa 1/3 - Enviando para LOURIVAL (dev.acnormun@gmail.com)
+2025-07-10 10:06:12,651 - TriagemWorker_0 - INFO - [15c56251] 100% - Processo concluído!
+2025-07-10 10:06:12,651 - Thread-22 (_send) - INFO - Tentando STARTTLS (porta 587) para dev.acnormun@gmail.com
+2025-07-10 10:06:12,652 - TriagemWorker_0 - INFO - Processo concluído: 1002663-66.2018.8.11.0041 [15c56251]
+2025-07-10 10:06:12,653 - TriagemWorker_0 - INFO - Suspeitos: 0
+2025-07-10 10:06:12,653 - TriagemWorker_0 - INFO - Substituições: 479
+2025-07-10 10:06:33,709 - Thread-22 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-10 10:06:33,710 - Thread-22 (_send) - INFO - Tentando fallback para SSL...
+2025-07-10 10:06:33,711 - Thread-22 (_send) - INFO - Tentando SSL (porta 465) para dev.acnormun@gmail.com
+2025-07-10 10:06:39,000 - Thread-24 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-10 10:06:39,001 - Thread-24 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-10 10:06:39,001 - Thread-24 (process_request_thread) - INFO - 127.0.0.1 - - [10/Jul/2025 10:06:39] "GET /triagem HTTP/1.1" 200 -
+2025-07-10 10:06:39,361 - Thread-25 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-10 10:06:39,361 - Thread-25 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-10 10:06:39,362 - Thread-25 (process_request_thread) - INFO - 127.0.0.1 - - [10/Jul/2025 10:06:39] "GET /triagem HTTP/1.1" 200 -
+2025-07-10 10:06:45,824 - Thread-26 (process_request_thread) - INFO - 127.0.0.1 - - [10/Jul/2025 10:06:45] "OPTIONS /triagem/1002663-66.2018.8.11.0041 HTTP/1.1" 200 -
+2025-07-10 10:06:46,087 - Thread-27 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-10 10:06:46,122 - Thread-27 (process_request_thread) - INFO - 127.0.0.1 - - [10/Jul/2025 10:06:46] "DELETE /triagem/1002663-66.2018.8.11.0041 HTTP/1.1" 200 -
+2025-07-10 10:06:46,134 - Thread-28 (process_request_thread) - INFO -  1 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-10 10:06:46,135 - Thread-28 (process_request_thread) - INFO - Extraídos 1 processos da tabela
+2025-07-10 10:06:46,135 - Thread-28 (process_request_thread) - INFO - 127.0.0.1 - - [10/Jul/2025 10:06:46] "GET /triagem HTTP/1.1" 200 -
+2025-07-10 10:06:54,778 - Thread-22 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-10 10:06:54,781 - Thread-22 (_send) - WARNING - Tentativa 1 falhou, aguardando 2.0s...
+2025-07-10 10:06:56,782 - Thread-22 (_send) - INFO - Tentativa 2/3 - Enviando para LOURIVAL (dev.acnormun@gmail.com)
+2025-07-10 10:06:56,782 - Thread-22 (_send) - INFO - Tentando STARTTLS (porta 587) para dev.acnormun@gmail.com
+2025-07-10 10:07:06,304 - Thread-4 (process_request_thread) - INFO - Cliente desconectado: Q7mrskr7OqLILH5_AAAB
+2025-07-10 10:07:06,308 - Thread-4 (process_request_thread) - INFO - 127.0.0.1 - - [10/Jul/2025 10:07:06] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-10 10:07:06,318 - Thread-4 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2025-07-10 10:07:07,319 - Thread-34 (process_request_thread) - INFO -  1 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-10 10:07:07,319 - Thread-34 (process_request_thread) - INFO - Extraídos 1 processos da tabela
+2025-07-10 10:07:07,320 - Thread-34 (process_request_thread) - INFO - 127.0.0.1 - - [10/Jul/2025 10:07:07] "GET /triagem HTTP/1.1" 200 -
+2025-07-10 10:07:07,333 - Thread-30 (process_request_thread) - INFO - Cliente conectado: qc88AodB-MK-du0uAAAD
+2025-07-10 10:07:17,827 - Thread-22 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-10 10:07:17,829 - Thread-22 (_send) - INFO - Tentando fallback para SSL...
+2025-07-10 10:07:17,829 - Thread-22 (_send) - INFO - Tentando SSL (porta 465) para dev.acnormun@gmail.com
+2025-07-10 10:07:28,105 - Thread-35 (process_request_thread) - INFO - 127.0.0.1 - - [10/Jul/2025 10:07:28] "OPTIONS /triagem/form HTTP/1.1" 200 -
+2025-07-10 10:07:28,471 - Thread-36 (process_request_thread) - INFO - Operação submetida: 19962413
+2025-07-10 10:07:28,471 - TriagemWorker_0 - INFO - Iniciando processamento isolado: 19962413
+2025-07-10 10:07:28,471 - Thread-36 (process_request_thread) - INFO - Operações ativas: 1/15
+2025-07-10 10:07:28,471 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 19962413-498e-4bed-aa97-a331a29b6233
+2025-07-10 10:07:28,472 - Thread-36 (process_request_thread) - INFO - 127.0.0.1 - - [10/Jul/2025 10:07:28] "POST /triagem/form HTTP/1.1" 200 -
+2025-07-10 10:07:28,472 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-10 10:07:28,473 - TriagemWorker_0 - INFO - [19962413] 5% - Conectando...
+2025-07-10 10:07:28,491 - Thread-37 (_handle_event_internal) - INFO - Registrado: 19962413 -> qc88AodB-MK-du0uAAAD
+2025-07-10 10:07:28,491 - Thread-37 (_handle_event_internal) - INFO - WebSocket registrado: 19962413 -> qc88AodB-MK-du0uAAAD
+2025-07-10 10:07:28,667 - Thread-38 (process_request_thread) - INFO -  1 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-10 10:07:28,667 - Thread-38 (process_request_thread) - INFO - Extraídos 1 processos da tabela
+2025-07-10 10:07:28,668 - Thread-38 (process_request_thread) - INFO - 127.0.0.1 - - [10/Jul/2025 10:07:28] "GET /triagem HTTP/1.1" 200 -
+2025-07-10 10:07:28,973 - TriagemWorker_0 - INFO - WebSocket conectado para 19962413
+2025-07-10 10:07:28,974 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 10% - Validando dados...
+2025-07-10 10:07:28,974 - TriagemWorker_0 - INFO - [19962413] 10% - Validando dados...
+2025-07-10 10:07:28,974 - TriagemWorker_0 - INFO - Processando: 1002663-66.2018.8.11.0041 [19962413]
+2025-07-10 10:07:28,975 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 20% - Processando PDF do PJe...
+2025-07-10 10:07:28,975 - TriagemWorker_0 - INFO - [19962413] 20% - Processando PDF do PJe...
+2025-07-10 10:07:28,975 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 5% - Inicializando OCR...
+2025-07-10 10:07:28,975 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 10% - Decodificando PDF base64...
+2025-07-10 10:07:28,991 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 15% - Analisando estrutura do PDF...
+2025-07-10 10:07:29,020 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 20% - Extraindo tabela de documentos...
+2025-07-10 10:07:29,077 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 25% - Criando estrutura de pastas...
+2025-07-10 10:07:29,086 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 30% - Localizando documentos no PDF...
+2025-07-10 10:07:33,027 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 40% - Separando PDF em 52 documentos...
+2025-07-10 10:07:33,256 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 50% - Iniciando processamento OCR...
+2025-07-10 10:07:33,256 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 50% - Processando OCR: 00_inicial.pdf (1/52)
+2025-07-10 10:07:33,788 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 51% - Processando OCR: 263308778_Sem_movimento_2017217512_-_DRO.pdf (2/52)
+2025-07-10 10:07:34,140 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 52% - Processando OCR: 263308779_Sem_movimento_2017217512_-_DRO.pdf (3/52)
+2025-07-10 10:07:34,791 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 53% - Processando OCR: 263308780_Sem_movimento_Decisão_Decisão.pdf (4/52)
+2025-07-10 10:07:35,027 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 53% - Processando OCR: 263308781_Sem_movimento_Citação_Citação.pdf (5/52)
+2025-07-10 10:07:35,265 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 54% - Processando OCR: 263308782_Sem_movimento_Citação_Citação.pdf (6/52)
+2025-07-10 10:07:35,518 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 55% - Processando OCR: 263308783_Sem_movimento_Certidão_Certidã.pdf (7/52)
+2025-07-10 10:07:35,605 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 56% - Processando OCR: 263308784_Sem_movimento_1002663-662018_-.pdf (8/52)
+2025-07-10 10:07:35,800 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 56% - Processando OCR: 263308785_Sem_movimento_1002663-66201881.pdf (9/52)
+2025-07-10 10:07:35,998 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 57% - Processando OCR: 263308786_Sem_movimento_Intimação_Intima.pdf (10/52)
+2025-07-10 10:07:36,084 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 58% - Processando OCR: 263308787_Sem_movimento_Petição_Petição.pdf (11/52)
+2025-07-10 10:07:36,234 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 59% - Processando OCR: 263308788_Sem_movimento_Pugnarpelapenhor.pdf (12/52)
+2025-07-10 10:07:36,558 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 60% - Processando OCR: 263308789_Sem_movimento_Pugnarpelapenhor.pdf (13/52)
+2025-07-10 10:07:36,877 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 60% - Processando OCR: 263308790_Sem_movimento_Pugnarpelapenhor.pdf (14/52)
+2025-07-10 10:07:37,224 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 61% - Processando OCR: 263308794_Sem_movimento_1002663-66201881.pdf (15/52)
+2025-07-10 10:07:37,376 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 62% - Processando OCR: 263308793_Sem_movimento_1002663-66201881.pdf (16/52)
+2025-07-10 10:07:37,523 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 63% - Processando OCR: 263308792_Sem_movimento_1002663-66201881.pdf (17/52)
+2025-07-10 10:07:38,165 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 63% - Processando OCR: 263308791_Sem_movimento_Decisão_Decisão.pdf (18/52)
+2025-07-10 10:07:38,506 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 64% - Processando OCR: 263308795_Sem_movimento_Sentença_Sentenç.pdf (19/52)
+2025-07-10 10:07:38,861 - Thread-22 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-10 10:07:38,862 - Thread-22 (_send) - WARNING - Tentativa 2 falhou, aguardando 2.0s...
+2025-07-10 10:07:39,333 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 65% - Processando OCR: 263308796_Sem_movimento_Sentença_Sentenç.pdf (20/52)
+2025-07-10 10:07:40,136 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 66% - Processando OCR: 263308797_Sem_movimento_Apelação_Recurso.pdf (21/52)
+2025-07-10 10:07:40,878 - Thread-22 (_send) - INFO - Tentativa 3/3 - Enviando para LOURIVAL (dev.acnormun@gmail.com)
+2025-07-10 10:07:40,883 - Thread-22 (_send) - INFO - Tentando STARTTLS (porta 587) para dev.acnormun@gmail.com
+2025-07-10 10:07:45,179 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 66% - Processando OCR: 263308798_Sem_movimento_Certidão_Certidã.pdf (22/52)
+2025-07-10 10:07:45,266 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 67% - Processando OCR: 263308799_Sem_movimento_Intimação_Intima.pdf (23/52)
+2025-07-10 10:07:45,394 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 68% - Processando OCR: 263309750_Sem_movimento_Intimação_Intima.pdf (24/52)
+2025-07-10 10:07:45,526 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 69% - Processando OCR: 263309751_Sem_movimento_Intimação_Intima.pdf (25/52)
+2025-07-10 10:07:45,653 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 70% - Processando OCR: 263309752_Sem_movimento_Não_entregue_-_D.pdf (26/52)
+2025-07-10 10:07:45,817 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 70% - Processando OCR: 263309753_Sem_movimento_Não_entregue_-_M.pdf (27/52)
+2025-07-10 10:07:45,992 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 71% - Processando OCR: 263391255_Juntada_de_Certidão_PREVENÇÃO_.pdf (28/52)
+2025-07-10 10:07:46,096 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 72% - Processando OCR: 263391258_Juntada_de_Certidão_Preparo_re.pdf (29/52)
+2025-07-10 10:07:46,194 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 73% - Processando OCR: 264164766_Expedição_de_Outros_documentos.pdf (30/52)
+2025-07-10 10:07:46,322 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 73% - Processando OCR: 264164773_Publicado_Intimação_de_pauta_e.pdf (31/52)
+2025-07-10 10:07:46,439 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 74% - Processando OCR: 268816288_Sem_movimento_Certidão_de_julg.pdf (32/52)
+2025-07-10 10:07:46,547 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 75% - Processando OCR: 263470254_Sem_movimento_Voto_do_Magistra.pdf (33/52)
+2025-07-10 10:07:47,397 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 76% - Processando OCR: 268826288_Publicado_Acórdão_em.pdf (34/52)
+2025-07-10 10:07:48,501 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 76% - Processando OCR: 263470263_Sem_movimento_Ementa_Ementa.pdf (35/52)
+2025-07-10 10:07:48,659 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 77% - Processando OCR: 263470251_Sem_movimento_Relatório_Relató.pdf (36/52)
+2025-07-10 10:07:48,782 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 78% - Processando OCR: 270074878_Juntada_de_Petição_de_petição_.pdf (37/52)
+2025-07-10 10:07:50,533 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 79% - Processando OCR: 270168877_Ato_ordinatório_praticado_Cert.pdf (38/52)
+2025-07-10 10:07:50,668 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 80% - Processando OCR: 271108871_Publicado_Intimação_em.pdf (39/52)
+2025-07-10 10:07:50,754 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 80% - Processando OCR: 277326884_Ato_ordinatório_praticado_Cert.pdf (40/52)
+2025-07-10 10:07:50,856 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 81% - Processando OCR: 277691381_Publicado_Decisão_em.pdf (41/52)
+2025-07-10 10:07:51,380 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 82% - Processando OCR: 289909384_Ato_ordinatório_praticado_Cert.pdf (42/52)
+2025-07-10 10:07:51,484 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 83% - Processando OCR: 291604397_Ato_ordinatório_praticado_Cert.pdf (43/52)
+2025-07-10 10:07:51,583 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 83% - Processando OCR: 292095883_Determinado_o_encaminhamento_d.pdf (44/52)
+2025-07-10 10:07:51,832 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 84% - Processando OCR: 292357354_Levantada_a_Causa_Suspensiva_o.pdf (45/52)
+2025-07-10 10:07:51,934 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 85% - Processando OCR: 294273392_Expedição_de_Outros_documentos.pdf (46/52)
+2025-07-10 10:07:52,067 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 86% - Processando OCR: 294273397_Publicado_Intimação_de_pauta_e.pdf (47/52)
+2025-07-10 10:07:52,208 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 86% - Processando OCR: 296850412_Juntada_de_Petição_de_certidão.pdf (48/52)
+2025-07-10 10:07:52,310 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 87% - Processando OCR: 296943861_Publicado_Acórdão_em.pdf (49/52)
+2025-07-10 10:07:54,047 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 88% - Processando OCR: 293676854_Sem_movimento_Voto_do_Magistra.pdf (50/52)
+2025-07-10 10:07:55,072 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 89% - Processando OCR: 293669399_Sem_movimento_Relatório_Relató.pdf (51/52)
+2025-07-10 10:07:55,439 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 90% - Processando OCR: 293676860_Sem_movimento_Ementa_Ementa.pdf (52/52)
+2025-07-10 10:07:55,708 - TriagemWorker_0 - INFO -  Progresso enviado para 19962413-498e-4bed-aa97-a331a29b6233: 100% - Processamento PJe concluído com sucesso!
+2025-07-10 10:07:55,708 - TriagemWorker_0 - INFO -  Operação 19962413-498e-4bed-aa97-a331a29b6233 removida da lista
+2025-07-10 10:07:55,709 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 19962413-498e-4bed-aa97-a331a29b6233
+2025-07-10 10:07:55,709 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-10 10:07:55,710 - TriagemWorker_0 - INFO - [19962413] 35% - Analisando suspeição...
+2025-07-10 10:07:55,733 - TriagemWorker_0 - INFO - Suspeitos encontrados [1002663-66.2018.8.11.0041]: []
+2025-07-10 10:07:55,733 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 19962413-498e-4bed-aa97-a331a29b6233
+2025-07-10 10:07:55,733 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-10 10:07:55,733 - TriagemWorker_0 - INFO - [19962413] 45% - Preparando arquivos...
+2025-07-10 10:07:55,734 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 19962413-498e-4bed-aa97-a331a29b6233
+2025-07-10 10:07:55,734 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-10 10:07:55,734 - TriagemWorker_0 - INFO - [19962413] 55% - Salvando markdown...
+2025-07-10 10:07:55,823 - TriagemWorker_0 - INFO - Metadados extraídos: 12 campos preenchidos
+2025-07-10 10:07:55,824 - TriagemWorker_0 - INFO - Markdown salvo: /Users/54117/Desktop/GMV/Triagem Inicial\1002663-66.2018.8.11.0041\markdowns\00_inicial.md
+2025-07-10 10:07:55,829 - TriagemWorker_0 - INFO - DAT salvo: /Users/54117/Desktop/GMV/Triagem Inicial/dat\1002663-66.2018.8.11.0041.dat
+2025-07-10 10:07:55,830 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 19962413-498e-4bed-aa97-a331a29b6233
+2025-07-10 10:07:55,830 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-10 10:07:55,830 - TriagemWorker_0 - INFO - [19962413] 65% - Atualizando busca...
+2025-07-10 10:07:55,830 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 19962413-498e-4bed-aa97-a331a29b6233
+2025-07-10 10:07:55,831 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-10 10:07:55,831 - TriagemWorker_0 - INFO - [19962413] 75% - Executando anonimização...
+2025-07-10 10:07:58,957 - TriagemWorker_0 - INFO - Anonimização [1002663-66.2018.8.11.0041]: 479 substituições
+2025-07-10 10:07:58,957 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 19962413-498e-4bed-aa97-a331a29b6233
+2025-07-10 10:07:58,958 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-10 10:07:58,958 - TriagemWorker_0 - INFO - [19962413] 90% - Atualizando tabela...
+2025-07-10 10:07:58,958 - TriagemWorker_0 - INFO - Tabela atualizada para 1002663-66.2018.8.11.0041
+2025-07-10 10:07:58,959 - TriagemWorker_0 - WARNING -  Cliente não encontrado para operação 19962413-498e-4bed-aa97-a331a29b6233
+2025-07-10 10:07:58,959 - TriagemWorker_0 - WARNING -    Sockets ativos: []
+2025-07-10 10:07:58,960 - Thread-43 (_send) - WARNING - Email não encontrado para responsável: 'LOURIVAL'. Usando admin.
+2025-07-10 10:07:58,960 - TriagemWorker_0 - INFO - [19962413] 100% - Processo concluído!
+2025-07-10 10:07:58,960 - Thread-43 (_send) - INFO - Tentativa 1/3 - Enviando para LOURIVAL (dev.acnormun@gmail.com)
+2025-07-10 10:07:58,960 - TriagemWorker_0 - INFO - Processo concluído: 1002663-66.2018.8.11.0041 [19962413]
+2025-07-10 10:07:58,961 - Thread-43 (_send) - INFO - Tentando STARTTLS (porta 587) para dev.acnormun@gmail.com
+2025-07-10 10:07:58,961 - TriagemWorker_0 - INFO - Suspeitos: 0
+2025-07-10 10:07:58,962 - TriagemWorker_0 - INFO - Substituições: 479
+2025-07-10 10:08:01,930 - Thread-22 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-10 10:08:01,930 - Thread-22 (_send) - INFO - Tentando fallback para SSL...
+2025-07-10 10:08:01,931 - Thread-22 (_send) - INFO - Tentando SSL (porta 465) para dev.acnormun@gmail.com
+2025-07-10 10:08:19,993 - Thread-43 (_send) - WARNING - STARTTLS falhou: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-10 10:08:19,993 - Thread-43 (_send) - INFO - Tentando fallback para SSL...
+2025-07-10 10:08:19,994 - Thread-43 (_send) - INFO - Tentando SSL (porta 465) para dev.acnormun@gmail.com
+2025-07-10 10:08:22,961 - Thread-22 (_send) - ERROR - Erro inesperado no envio: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+2025-07-10 10:08:22,962 - Thread-22 (_send) - ERROR - Falha em todas as 3 tentativas para LOURIVAL
+2025-07-10 10:08:22,962 - Thread-22 (_send) - INFO - Tentando STARTTLS (porta 587) para dev.acnormun@gmail.com
+2025-07-10 10:08:25,847 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-10 10:08:25,847 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-10 10:08:25,848 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'

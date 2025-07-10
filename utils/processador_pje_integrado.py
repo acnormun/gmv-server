@@ -5,7 +5,6 @@ import tempfile
 from datetime import datetime
 from PyPDF2 import PdfReader, PdfWriter
 import pdf2image
-from paddleocr import PaddleOCR
 import pytesseract
 import pypdfium2 as pdfium
 import numpy as np
@@ -25,49 +24,14 @@ class ProcessadorPJeIntegrado:
             send_progress_ws(self.operation_id, step, message, progress)
         print(f"📄 [PASSO {step}] {message} ({progress}%)")
     
-    def inicializar_paddleocr(self):
+    def inicializar_ocr(self):
         try:
-            if os.getenv("USE_TESSERACT", "0") == "1":
-                raise Exception("Tesseract forced via USE_TESSERACT=1")
             if self.ocr_engine is None:
-                configs = [
-                    {
-                        'use_angle_cls': True,
-                        'lang': 'pt',
-                        'use_gpu': False,
-                        'show_log': False
-                    },
-                    {
-                        'use_angle_cls': True,
-                        'lang': 'pt',
-                        'use_gpu': False
-                    },
-                    {
-                        'lang': 'pt'
-                    },
-                    {}
-                ]
-                for i, config in enumerate(configs):
-                    try:
-                        print(f"🔄 Tentando configuração PaddleOCR #{i+1}...")
-                        self.ocr_engine = PaddleOCR(**config)
-                        self.ocr_engine_name = 'paddle'
-                        print(f"✅ PaddleOCR inicializado com configuração #{i+1}")
-                        break
-                    except Exception as e:
-                        print(f"⚠️ Configuração #{i+1} falhou: {e}")
-                        if i == len(configs) - 1:
-                            raise e
-                        continue
-            return True, "✅ PaddleOCR inicializado com sucesso!"
-        except Exception as e:
-            print(f"⚠️ Falha ao inicializar PaddleOCR: {e}")
-            try:
                 self.ocr_engine = pytesseract
                 self.ocr_engine_name = 'tesseract'
-                return True, "✅ Tesseract OCR inicializado como alternativa offline"
-            except Exception as e2:
-                return False, f"❌ Erro ao inicializar OCR: {str(e2)}"
+            return True, "✅ OCR inicializado com Tesseract"
+        except Exception as e:
+            return False, f"❌ Erro ao inicializar OCR: {str(e)}"
     
     def decodificar_pdf_base64(self, dat_base64, nome_processo):
         try:
@@ -196,29 +160,25 @@ class ProcessadorPJeIntegrado:
     
     def pdf_to_images(self, caminho_pdf, dpi=200):
         try:
-            return pdf2image.convert_from_path(caminho_pdf, dpi=dpi)
+            pdf = pdfium.PdfDocument(caminho_pdf)
+            images = []
+            scale = dpi / 72
+            for i in range(len(pdf)):
+                page = pdf[i]
+                if hasattr(page, "render_topil"):
+                    pil_image = page.render_topil(scale=scale)
+                else:
+                    bitmap = page.render(scale=scale)
+                    pil_image = bitmap.to_pil()
+                    bitmap.close()
+                images.append(pil_image)
+                page.close()
+            pdf.close()
+            print("✅ Conversão realizada via pypdfium2")
+            return images
         except Exception as e:
-            print(f"⚠️ Falha ao usar Poppler: {e} - tentando pypdfium2...")
-            try:
-                pdf = pdfium.PdfDocument(caminho_pdf)
-                images = []
-                scale = dpi / 72
-                for i in range(len(pdf)):
-                    page = pdf[i]
-                    if hasattr(page, "render_topil"):
-                        pil_image = page.render_topil(scale=scale)
-                    else:
-                        bitmap = page.render(scale=scale)
-                        pil_image = bitmap.to_pil()
-                        bitmap.close()
-                    images.append(pil_image)
-                    page.close()
-                pdf.close()
-                print("✅ Conversão realizada via pypdfium2")
-                return images
-            except Exception as e2:
-                print(f"❌ Falha ao usar pypdfium2: {e2}")
-                raise
+            print(f"⚠️ Falha ao usar pypdfium2: {e} - tentando Poppler...")
+            return pdf2image.convert_from_path(caminho_pdf, dpi=dpi)
 
     def separar_pdfs(self, pdf_reader, documentos):
         documentos_separados = []
@@ -255,25 +215,12 @@ class ProcessadorPJeIntegrado:
                 print(f"❌ Erro ao separar documento {doc.get('id_documento', 'N/A')}: {e}")
         return documentos_separados
     
-    def paddle_ocr_rapido(self, image):
+    def ocr_rapido(self, image):
         try:
-            if self.ocr_engine_name == 'tesseract':
-                texto = self.ocr_engine.image_to_string(image, lang='por')
-                return texto.strip() if texto.strip() else "[NENHUM TEXTO DETECTADO]"
-            img_array = np.array(image)
-            result = self.ocr_engine.ocr(img_array, cls=True)
-            texto_extraido = []
-            if result and result[0]:
-                for line in result[0]:
-                    if line and len(line) >= 2:
-                        texto = line[1][0]
-                        confianca = line[1][1]
-                        if confianca > 0.7:
-                            texto_extraido.append(texto)
-            return '\n'.join(texto_extraido) if texto_extraido else "[NENHUM TEXTO DETECTADO]"
+            texto = self.ocr_engine.image_to_string(image, lang='por')
+            return texto.strip() if texto.strip() else "[NENHUM TEXTO DETECTADO]"
         except Exception as e:
-            engine = 'Tesseract' if self.ocr_engine_name == 'tesseract' else 'PaddleOCR'
-            return f"*Erro {engine}: {e}*"
+            return f"*Erro Tesseract: {e}*"
     
     def converter_pdf_para_markdown(self, caminho_pdf, nome_documento=""):
         try:
@@ -290,9 +237,9 @@ class ProcessadorPJeIntegrado:
                     pass
                 texto_ocr = ""
                 if i < len(images):
-                    texto_ocr = self.paddle_ocr_rapido(images[i])
+                    texto_ocr = self.ocr_rapido(images[i])
                 if texto_direto and texto_ocr and "ERRO" not in texto_ocr.upper():
-                    engine_tag = 'Tesseract' if self.ocr_engine_name == 'tesseract' else 'PaddleOCR'
+                    engine_tag = 'Tesseract'
                     if len(texto_ocr) > len(texto_direto) * 0.8:
                         texto_final = (
                             f"**[PDF + OCR]**\n\n{texto_direto}\n\n"
@@ -303,7 +250,7 @@ class ProcessadorPJeIntegrado:
                 elif texto_direto:
                     texto_final = f"**[Texto PDF]**\n\n{texto_direto}"
                 elif texto_ocr and "ERRO" not in texto_ocr.upper():
-                    engine_tag = 'Tesseract' if self.ocr_engine_name == 'tesseract' else 'PaddleOCR'
+                    engine_tag = 'Tesseract'
                     texto_final = f"**[{engine_tag}]**\n\n{texto_ocr}"
                 else:
                     texto_final = "*Página sem conteúdo extraível*"
@@ -322,7 +269,7 @@ class ProcessadorPJeIntegrado:
                 texto_md = self.converter_pdf_para_markdown(doc['caminho'], doc['nome_documento'])
                 nome_md = doc['arquivo'].replace('.pdf', '.md')
                 caminho_md = os.path.join(pasta_markdowns, nome_md)
-                engine_label = 'Tesseract (Portugu\u00eas)' if self.ocr_engine_name == 'tesseract' else 'PaddleOCR (Portugu\u00eas)'
+                engine_label = 'Tesseract (Portugu\u00eas)'
                 front_matter = [
                     "---",
                     f"arquivo: '{doc['arquivo']}'",
@@ -347,7 +294,7 @@ class ProcessadorPJeIntegrado:
     def processar_pdf_completo(self, dat_base64, numero_processo, pasta_destino):
         try:
             self.log_progress(1, 'Inicializando OCR...', 5)
-            sucesso_ocr, msg_ocr = self.inicializar_paddleocr()
+            sucesso_ocr, msg_ocr = self.inicializar_ocr()
             if not sucesso_ocr:
                 raise Exception(msg_ocr)
             self.log_progress(2, 'Decodificando PDF base64...', 10)
