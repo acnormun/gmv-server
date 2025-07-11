@@ -182,7 +182,7 @@ def processar_processo_isolado(data, operation_id):
             except Exception as e:
                 logger.warning(f"ProcessadorPJe falhou [{operation_id[:8]}]: {e}")
                 safe_send_progress(operation_id, 3, 'Aviso: ProcessadorPJe falhou, continuando...', 65)
-        safe_send_progress(operation_id, 4, 'Analisando suspeição...', 65)
+        safe_send_progress(operation_id, 4, 'Analisando suspeição...', 70)
         suspeitos = []
         if markdown and markdown.strip():
             try:

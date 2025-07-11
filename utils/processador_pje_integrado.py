@@ -264,7 +264,7 @@ class ProcessadorPJeIntegrado:
         total = len(documentos_separados)
         for i, doc in enumerate(documentos_separados):
             try:
-                progress = 50 + int((i + 1) / total * 10)
+                progress = 60 + int((i + 1) / total * 10)
                 self.log_progress(3, f'Processando OCR: {doc["arquivo"]} ({i+1}/{total})', progress)
                 texto_md = self.converter_pdf_para_markdown(doc['caminho'], doc['nome_documento'])
                 nome_md = doc['arquivo'].replace('.pdf', '.md')
@@ -349,7 +349,7 @@ class ProcessadorPJeIntegrado:
             documentos_separados = self.separar_pdfs(pdf_reader, documentos_finais)
             if not documentos_separados:
                 raise Exception("Nenhum documento pôde ser separado")
-            self.log_progress(3, 'Iniciando processamento OCR...', 50)
+            self.log_progress(3, 'Iniciando processamento OCR...', 60)
             total_processados = self.processar_todos_documentos_ocr(documentos_separados)
             try:
                 os.unlink(temp_pdf_path)
