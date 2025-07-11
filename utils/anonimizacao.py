@@ -11,35 +11,26 @@ from pathlib import Path
 logger = logging.getLogger(__name__)
 
 class AnonimizadorOtimizado:
-    """Sistema de anonimização otimizado usando spaCy"""
-    
     def __init__(self, caminho_palavras_descartadas="utils/palavras_descartadas.txt"):
         print(" Inicializando AnonimizadorOtimizado...")
         
-        # Carrega modelo spaCy apenas uma vez com componentes otimizados
         self.nlp = self._carregar_modelo_otimizado()
-        
-        # Cache para normalizações e mapeamentos
+
         self.cache_normalizacao = {}
         self.cache_suspeitos = None
         
-        # Palavras descartadas carregadas do arquivo txt
         self.palavras_descartadas = self._carregar_palavras_descartadas(caminho_palavras_descartadas)
         
-        # Padrões regex compilados para melhor performance
         self.padroes_regex = self._compilar_padroes()
         
         print(" AnonimizadorOtimizado inicializado com sucesso")
     
     def _carregar_modelo_otimizado(self):
-        """Carrega o modelo spaCy com configurações otimizadas"""
         try:
             print("📦 Carregando modelo spaCy...")
-            # Desabilita componentes desnecessários para performance
             nlp = spacy.load("pt_core_news_sm", 
                            disable=["parser", "tagger", "lemmatizer", "attribute_ruler"])
-            
-            # Aumenta limite para textos grandes
+
             nlp.max_length = 2_000_000
             
             print(" Modelo spaCy carregado com sucesso")
@@ -51,16 +42,13 @@ class AnonimizadorOtimizado:
     
     @lru_cache(maxsize=2000)
     def normalizar(self, texto: str) -> str:
-        """Normaliza texto com cache para evitar reprocessamento"""
         if not texto:
             return ""
         return unicodedata.normalize('NFKD', texto).encode('ASCII', 'ignore').decode().lower().strip()
     
     def _carregar_palavras_descartadas(self, caminho="utils/palavras_descartadas.txt") -> Set[str]:
-        """Carrega palavras descartadas de arquivo txt como set para busca rápida"""
         palavras = set()
         
-        # Tenta diferentes caminhos possíveis
         caminhos_possiveis = [
             caminho,
             "utils/palavras_descartadas.txt",
@@ -79,7 +67,6 @@ class AnonimizadorOtimizado:
         if not arquivo_encontrado:
             print(f" Arquivo de palavras descartadas não encontrado. Usando lista padrão.")
             
-            # Lista mínima de fallback
             palavras = {
                 'E', 'EM', 'NO', 'NA', 'DOS', 'DAS', 'DE', 'DO', 'DA', 'AOS', 'AO',
                 'COM', 'SEM', 'POR', 'PARA', 'ANTE', 'APÓS', 'APOS', 'ATÉ', 'ATE',
@@ -95,11 +82,9 @@ class AnonimizadorOtimizado:
                 for linha in f:
                     palavra = linha.strip().upper()
                     
-                    # Pula linhas vazias e comentários
                     if not palavra or palavra.startswith('#'):
                         continue
-                    
-                    # Adiciona palavra em maiúscula E sua versão normalizada
+
                     palavras.add(palavra)
                     palavras.add(self.normalizar(palavra))
                     total_palavras += 1
@@ -108,7 +93,6 @@ class AnonimizadorOtimizado:
             
         except Exception as e:
             print(f"Erro ao ler arquivo {arquivo_encontrado}: {e}")
-            # Lista mínima de fallback
             palavras = {
                 'E', 'EM', 'NO', 'NA', 'DOS', 'DAS', 'DE', 'DO', 'DA', 'AOS', 'AO',
                 'COM', 'SEM', 'POR', 'PARA', 'TRIBUNAL', 'VARA', 'PROCESSO'
@@ -117,7 +101,6 @@ class AnonimizadorOtimizado:
         return palavras
     
     def _compilar_padroes(self) -> Dict[str, re.Pattern]:
-        """Compila padrões regex uma única vez para melhor performance"""
         return {
             'cpf': re.compile(r'\b\d{3}\.?\d{3}\.?\d{3}[-\.]?\d{2}\b'),
             'rg': re.compile(r'\b\d{1,2}\.?\d{3}\.?\d{3}[-\.]?\d{1,2}\b'),
@@ -131,13 +114,11 @@ class AnonimizadorOtimizado:
         }
     
     def carregar_suspeitos_mapeados(self, caminho="utils/suspeitos.txt") -> Dict[str, Tuple[str, str]]:
-        """Carrega mapeamento de suspeitos com cache"""
         if self.cache_suspeitos is not None:
             return self.cache_suspeitos
         
         mapa = {}
-        
-        # Tenta diferentes caminhos
+
         caminhos_possiveis = [
             caminho,
             "utils/suspeitos.txt",
@@ -188,15 +169,12 @@ class AnonimizadorOtimizado:
         return mapa
     
     def extrair_nomes_spacy_otimizado(self, texto: str, debug=False) -> List[str]:
-        """Extrai nomes usando spaCy + regex híbrido para melhor cobertura"""
         nomes_spacy = set()
         nomes_regex = set()
-        
-        # MÉTODO 1: spaCy (se disponível)
+
         if self.nlp:
             try:
-                # Processa texto em lotes se for muito grande
-                if len(texto) > 500000:  # 500KB
+                if len(texto) > 500000:
                     nomes_spacy = set(self._processar_texto_grande(texto))
                 else:
                     doc = self.nlp(texto)
@@ -220,13 +198,11 @@ class AnonimizadorOtimizado:
             except Exception as e:
                 print(f"Erro ao extrair nomes com spaCy: {e}")
         
-        # MÉTODO 2: Regex robusto (sempre executa para complementar)
         nomes_regex = set(self._extrair_nomes_regex_melhorado(texto, debug))
         
         if debug:
             print(f"Regex encontrou: {len(nomes_regex)} nomes")
         
-        # COMBINA os resultados (união dos dois métodos)
         todos_nomes = nomes_spacy.union(nomes_regex)
         
         if debug:
@@ -237,7 +213,6 @@ class AnonimizadorOtimizado:
         return list(todos_nomes)
     
     def _extrair_nomes_regex_melhorado(self, texto: str, debug=False) -> List[str]:
-        """Método melhorado usando regex para capturar nomes que o spaCy pode perder"""
         nomes_encontrados = set()
         
         # PADRÃO 1: Nomes próprios normais (primeira letra maiúscula)
@@ -264,8 +239,7 @@ class AnonimizadorOtimizado:
         # Ex: "João Silva," ou "Maria Santos."
         padrao5 = r'\b[A-ZÁÀÂÃÉÈÊÍÌÔÕÓÒÚÇ][a-záàâãéèêíìôõóòúç]+(?:\s+[A-ZÁÀÂÃÉÈÊÍÌÔÕÓÒÚÇ][a-záàâãéèêíìôõóòúç]+)+(?=[,\.])'
         nomes5 = re.findall(padrao5, texto)
-        
-        # Combina todos os padrões
+
         todos_padroes = nomes1 + nomes2 + nomes3 + nomes4 + nomes5
         
         if debug:
@@ -275,7 +249,6 @@ class AnonimizadorOtimizado:
             print(f" REGEX - Padrão 4 (únicos): {len(nomes4)} - {nomes4[:3] if nomes4 else []}")
             print(f" REGEX - Padrão 5 (pontuados): {len(nomes5)} - {nomes5[:3] if nomes5 else []}")
         
-        # Valida cada nome encontrado
         for nome in todos_padroes:
             nome_limpo = nome.strip()
             if self._validar_nome_melhorado(nome_limpo, debug):
@@ -289,21 +262,17 @@ class AnonimizadorOtimizado:
         return list(nomes_encontrados)
     
     def _validar_nome_melhorado(self, nome: str, debug=False) -> bool:
-        """Validação melhorada para nomes, incluindo casos especiais"""
         if not nome or len(nome) < 2:
             return False
-        
-        # Normaliza para comparação
+
         nome_normalizado = self.normalizar(nome)
         nome_upper = nome.upper()
         
-        # FILTRO 1: Palavras descartadas básicas
         if nome_upper in self.palavras_descartadas or nome_normalizado in self.palavras_descartadas:
             if debug:
                 print(f"   Rejeitado por palavra descartada: {nome}")
             return False
         
-        # FILTRO 2: Para nomes compostos, verifica cada palavra
         palavras_do_nome = nome.split()
         if len(palavras_do_nome) > 1:
             palavras_descartadas_count = 0
@@ -313,23 +282,21 @@ class AnonimizadorOtimizado:
                 if palavra_upper in self.palavras_descartadas or palavra_norm in self.palavras_descartadas:
                     palavras_descartadas_count += 1
             
-            # Se mais de 50% das palavras são descartadas, rejeita
             if palavras_descartadas_count > len(palavras_do_nome) * 0.5:
                 if debug:
                     print(f"   Rejeitado por muitas palavras descartadas: {palavras_descartadas_count}/{len(palavras_do_nome)}")
                 return False
-        
-        # FILTRO 3: Padrões que não são nomes
+
         filtros_basicos = [
-            lambda x: all(c in '.,;:-_()[]{}' for c in x),  # Apenas pontuação
-            lambda x: re.match(r'^\d+$', x),  # Apenas números
-            lambda x: re.match(r'^[IVX]+$', x.upper()),  # Números romanos
-            lambda x: x.upper() in ['SIM', 'NÃO', 'NAO'],  # Respostas
-            lambda x: re.match(r'.*@.*', x),  # Emails
-            lambda x: re.match(r'^www\.', x, re.IGNORECASE),  # URLs
-            lambda x: re.match(r'^http', x, re.IGNORECASE),  # URLs
-            lambda x: re.match(r'^\d+[A-Z]*$', x),  # Números com letras
-            lambda x: len([c for c in x if c.isdigit()]) > len(x) * 0.7,  # Muitos números
+            lambda x: all(c in '.,;:-_()[]{}' for c in x),
+            lambda x: re.match(r'^\d+$', x),
+            lambda x: re.match(r'^[IVX]+$', x.upper()),
+            lambda x: x.upper() in ['SIM', 'NÃO', 'NAO'],
+            lambda x: re.match(r'.*@.*', x),
+            lambda x: re.match(r'^www\.', x, re.IGNORECASE),
+            lambda x: re.match(r'^http', x, re.IGNORECASE),
+            lambda x: re.match(r'^\d+[A-Z]*$', x),
+            lambda x: len([c for c in x if c.isdigit()]) > len(x) * 0.7,
         ]
         
         for filtro in filtros_basicos:
@@ -338,17 +305,15 @@ class AnonimizadorOtimizado:
                     print(f"   Rejeitado por filtro básico: {nome}")
                 return False
         
-        # FILTRO 4: Siglas muito longas (mas permite nomes como "DA SILVA")
-        if (len(nome) >= 6 and  # Aumentei para 6 para permitir nomes como "SILVA"
+        if (len(nome) >= 6 and 
             nome.isupper() and 
             not any(c.islower() for c in nome) and
             nome.count('.') == 0 and
-            nome.count(' ') == 0):  # Siglas longas SEM espaços
+            nome.count(' ') == 0):
             if debug:
                 print(f"   Rejeitado por ser sigla longa: {nome}")
             return False
         
-        # FILTRO 5: Palavras muito comuns em documentos jurídicos (adicional)
         palavras_juridicas_extras = {
             'AUTOS', 'FOLHA', 'FOLHAS', 'PÁGINA', 'PAGINA', 'PÁGINAS', 'PAGINAS',
             'VERSO', 'FRENTE', 'DOCUMENTO', 'ANEXO', 'ANEXOS', 'CÓPIA', 'COPIA',
@@ -363,7 +328,7 @@ class AnonimizadorOtimizado:
         
         # FILTRO 6: Aceita nomes que passaram em todos os filtros
         # MAS adiciona verificação especial para nomes únicos muito curtos
-        if len(palavras_do_nome) == 1 and len(nome) < 4:  # Nome único muito curto
+        if len(palavras_do_nome) == 1 and len(nome) < 4: 
             if debug:
                 print(f"   Rejeitado por ser muito curto: {nome}")
             return False
@@ -371,22 +336,18 @@ class AnonimizadorOtimizado:
         return True
     
     def _validar_nome(self, nome: str) -> bool:
-        """Valida se um nome deve ser considerado para anonimização - usa versão melhorada"""
         return self._validar_nome_melhorado(nome, debug=False)
     
     def _obter_motivo_rejeicao(self, nome: str) -> str:
-        """Retorna o motivo específico da rejeição de um nome"""
         if not nome or len(nome) < 2:
             return "muito curto (< 2 chars)"
         
         nome_normalizado = self.normalizar(nome)
         nome_upper = nome.upper()
         
-        # Verifica palavra descartada
         if nome_upper in self.palavras_descartadas or nome_normalizado in self.palavras_descartadas:
             return "palavra descartada"
         
-        # Verifica palavras compostas
         palavras_do_nome = nome.split()
         if len(palavras_do_nome) > 1:
             palavras_descartadas_count = 0
@@ -399,7 +360,6 @@ class AnonimizadorOtimizado:
             if palavras_descartadas_count > len(palavras_do_nome) * 0.5:
                 return f"muitas palavras descartadas ({palavras_descartadas_count}/{len(palavras_do_nome)})"
         
-        # Verifica filtros específicos
         if all(c in '.,;:-_()[]{}' for c in nome):
             return "apenas pontuação"
         if re.match(r'^\d+$', nome):
@@ -419,12 +379,10 @@ class AnonimizadorOtimizado:
         if len([c for c in nome if c.isdigit()]) > len(nome) * 0.7:
             return "muitos números"
         
-        # Verifica siglas longas
         if (len(nome) >= 6 and nome.isupper() and not any(c.islower() for c in nome) 
             and nome.count('.') == 0 and nome.count(' ') == 0):
             return "sigla longa"
-        
-        # Verifica palavras jurídicas extras
+
         palavras_juridicas_extras = {
             'AUTOS', 'FOLHA', 'FOLHAS', 'PÁGINA', 'PAGINA', 'PÁGINAS', 'PAGINAS',
             'VERSO', 'FRENTE', 'DOCUMENTO', 'ANEXO', 'ANEXOS', 'CÓPIA', 'COPIA',
@@ -432,15 +390,13 @@ class AnonimizadorOtimizado:
         }
         if nome_upper in palavras_juridicas_extras:
             return "termo jurídico"
-        
-        # Verifica se é muito curto para nome único
+
         if len(palavras_do_nome) == 1 and len(nome) < 4:
             return "nome único muito curto"
         
         return "filtro desconhecido"
     
     def anonimizar_texto_otimizado(self, texto: str) -> str:
-        """Anonimiza padrões usando regex compilados"""
         substituicoes = {
             'cpf': '[CPF_REMOVIDO]',
             'rg': '[RG_REMOVIDO]',
@@ -459,14 +415,11 @@ class AnonimizadorOtimizado:
         return texto
     
     def anonimizar_com_identificadores(self, texto: str, mapa_suspeitos: Dict, debug=False) -> Tuple[str, Dict]:
-        """Anonimiza texto com identificadores otimizado"""
         
         print(f"🔒 Iniciando anonimização do texto...")
         
-        # PRIMEIRO: Anonimiza padrões (CPF, RG, emails, etc.) ANTES de processar nomes
         texto_com_padroes = self.anonimizar_texto_otimizado(texto)
         
-        # SEGUNDO: Extrai e processa nomes
         nomes = self.extrair_nomes_spacy_otimizado(texto, debug=debug)
         reverso = {}
         substituidos = set()
@@ -476,7 +429,6 @@ class AnonimizadorOtimizado:
         if debug and nomes:
             print(f"   Nomes: {nomes}")
         
-        # TERCEIRO: Processa suspeitos conhecidos
         for nome in nomes:
             nome_norm = self.normalizar(nome)
             if nome_norm in mapa_suspeitos:
@@ -484,14 +436,12 @@ class AnonimizadorOtimizado:
                 if ident not in reverso:
                     reverso[ident] = nome_real
                 
-                # Substitui no texto
                 padrao = re.compile(rf'\b{re.escape(nome)}\b', flags=re.IGNORECASE)
                 texto_com_padroes, n = padrao.subn(ident, texto_com_padroes)
                 if n > 0:
                     substituidos.add(nome)
                     print(f"🎯 SUSPEITO: {nome} → {ident} ({n}x)")
         
-        # QUARTO: Processa nomes comuns
         for nome in nomes:
             if nome in substituidos:
                 continue
@@ -509,8 +459,7 @@ class AnonimizadorOtimizado:
         return texto_com_padroes, reverso
     
     def _processar_texto_grande(self, texto: str) -> List[str]:
-        """Processa textos grandes em chunks para evitar problemas de memória"""
-        chunk_size = 100000  # 100KB por chunk
+        chunk_size = 100000
         chunks = [texto[i:i+chunk_size] for i in range(0, len(texto), chunk_size)]
         
         todos_nomes = set()
@@ -524,7 +473,6 @@ class AnonimizadorOtimizado:
                         if self._validar_nome(nome):
                             todos_nomes.add(nome)
                 
-                # Força garbage collection entre chunks
                 del doc
                 gc.collect()
                 

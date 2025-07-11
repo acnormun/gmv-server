@@ -144,6 +144,7 @@ def processar_processo_isolado(data, operation_id):
         responsavel = limpar(data.get('responsavel', ''))
         status = limpar(data.get('status', ''))
         markdown = limpar(data.get('markdown', ''))
+        prioridade = limpar(data.get('prioridade', ''))
         comentarios = limpar(data.get('comentarios', ''))
         dat_base64 = data.get('dat')
         ultima_att = datetime.now().strftime('%Y-%m-%d')
@@ -180,8 +181,8 @@ def processar_processo_isolado(data, operation_id):
                             logger.warning(f"Erro ao ler markdown PJe: {e}")
             except Exception as e:
                 logger.warning(f"ProcessadorPJe falhou [{operation_id[:8]}]: {e}")
-                safe_send_progress(operation_id, 3, 'Aviso: ProcessadorPJe falhou, continuando...', 25)
-        safe_send_progress(operation_id, 4, 'Analisando suspeição...', 35)
+                safe_send_progress(operation_id, 3, 'Aviso: ProcessadorPJe falhou, continuando...', 65)
+        safe_send_progress(operation_id, 4, 'Analisando suspeição...', 70)
         suspeitos = []
         if markdown and markdown.strip():
             try:
@@ -190,14 +191,14 @@ def processar_processo_isolado(data, operation_id):
             except Exception as e:
                 logger.error(f"Erro na análise de suspeitos [{numero}]: {e}")
                 suspeitos = []
-        safe_send_progress(operation_id, 5, 'Preparando arquivos...', 45)
+        safe_send_progress(operation_id, 5, 'Preparando arquivos...', 75)
         nome_arquivo_base = numero.replace('/', '-')
         os.makedirs(PASTA_DESTINO, exist_ok=True)
         os.makedirs(PASTA_DAT, exist_ok=True)
         caminho_md = os.path.join(PASTA_DESTINO, f"{nome_arquivo_base}.md")
         if primeiro_md_pje:
             caminho_md = primeiro_md_pje
-        safe_send_progress(operation_id, 6, 'Salvando markdown...', 55)
+        safe_send_progress(operation_id, 6, 'Salvando markdown...', 80)
         if markdown and markdown.strip():
             try:
                 metadados_dict, front_matter = extrair_e_formatar_metadados(markdown)
@@ -236,10 +237,10 @@ def processar_processo_isolado(data, operation_id):
                 logger.error(f"Erro ao salvar markdown [{numero}]: {e}")
         if RAG_DISPONIVEL:
             try:
-                safe_send_progress(operation_id, 7, 'Atualizando busca...', 65)
+                safe_send_progress(operation_id, 7, 'Atualizando busca...', 85)
             except Exception as e:
                 logger.warning(f"Erro RAG [{numero}]: {e}")
-        safe_send_progress(operation_id, 8, 'Executando anonimização...', 75)
+        safe_send_progress(operation_id, 8, 'Executando anonimização...', 90)
         total_substituicoes = 0
         if ANONIMIZACAO_ATIVA and markdown and markdown.strip():
             try:
@@ -258,7 +259,7 @@ def processar_processo_isolado(data, operation_id):
                     logger.info(f"Anonimização [{numero}]: {total_substituicoes} substituições")
             except Exception as e:
                 logger.error(f"Erro na anonimização [{numero}]: {e}")
-        safe_send_progress(operation_id, 9, 'Atualizando tabela...', 90)
+        safe_send_progress(operation_id, 9, 'Atualizando tabela...', 95)
         suspeitos_str = ', '.join(suspeitos) if suspeitos else ''
         nova_linha = (
             f"| {numero} "
@@ -268,6 +269,7 @@ def processar_processo_isolado(data, operation_id):
             f"| {status} "
             f"| {ultima_att} "
             f"| {suspeitos_str} "
+            f"| {prioridade} "
             f"| {comentarios} |\n"
         )
         try:
@@ -278,9 +280,9 @@ def processar_processo_isolado(data, operation_id):
                     linhas = f.readlines()
                     if not linhas:
                         f.write("# Tabela de Processos\n\n")
-                        f.write("| Nº Processo | Tema | Data da Distribuição | Responsável | Status | Última Atualização | Suspeitos | Comentários |\n")
+                        f.write("| Nº Processo | Tema | Data da Distribuição | Responsável | Status | Última Atualização | Suspeitos | Prioridade | Comentários |\n")
                         f.write("|-------------|------|-----------------------|-------------|--------|----------------------|-----------|-------------|\n")
-                    f.seek(0, 2)  # Vai para o final do arquivo
+                    f.seek(0, 2)
                     f.write(nova_linha)
             logger.info(f"Tabela atualizada para {numero}")
         except Exception as e:
