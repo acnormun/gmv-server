@@ -70,7 +70,6 @@ def _select_relevant_docs(docs: List[Dict[str, Any]], question: str, k: int):
     return selecionados
 
 def _get_cached_llm_answer(prompt: str) -> str | None:
-    """Retrieve cached LLM answer if not expired."""
     with _llm_cache_lock:
         item = _llm_cache.get(prompt)
         if not item:
@@ -83,7 +82,6 @@ def _get_cached_llm_answer(prompt: str) -> str | None:
 
 
 def _set_cached_llm_answer(prompt: str, answer: str) -> None:
-    """Cache an LLM answer with basic LRU eviction."""
     with _llm_cache_lock:
         if len(_llm_cache) >= 100:
             oldest = min(_llm_cache.items(), key=lambda i: i[1][1])[0]

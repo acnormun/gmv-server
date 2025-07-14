@@ -33916,3 +33916,775 @@ porque o host conectado não respondeu
 2025-07-11 10:53:23,187 - MainThread   - INFO - Sinal 2 recebido, encerrando...
 2025-07-11 10:53:23,190 - MainThread   - INFO - Aguardando threads finalizarem...
 2025-07-11 10:53:23,191 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-11 11:18:23,809 - MainThread   - INFO - CORS configurado
+2025-07-11 11:18:23,816 - MainThread   - INFO - Rotas registradas
+2025-07-11 11:18:23,817 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-11 11:18:23,818 - MainThread   - INFO - Background cleanup iniciado
+2025-07-11 11:18:23,819 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-11 11:18:23,819 - MainThread   - INFO - Inicialização RAG em background
+2025-07-11 11:18:23,819 - MainThread   - INFO - Servidor pronto!
+2025-07-11 11:18:23,819 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-11 11:18:23,820 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-11 11:18:23,820 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-11 11:18:23,837 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.81:5000
+2025-07-11 11:18:23,837 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-11 11:18:25,224 - Thread-3 (process_request_thread) - INFO - Cliente conectado: 1y5Zd7HvMkE8yO9OAAAB
+2025-07-11 11:18:36,678 - Thread-2 (init_rag_background) - WARNING - RAG falhou - Ollama pode estar offline
+2025-07-11 11:19:19,931 - Thread-3 (process_request_thread) - INFO - Cliente desconectado: 1y5Zd7HvMkE8yO9OAAAB
+2025-07-11 11:19:19,935 - Thread-3 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 11:19:19] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-11 11:19:19,940 - Thread-3 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2025-07-11 11:19:21,302 - Thread-10 (process_request_thread) - INFO - Cliente conectado: EZkrCyG8Z7kFHEMJAAAD
+2025-07-11 11:19:21,346 - Thread-14 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-11 11:19:21,346 - Thread-14 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-11 11:19:21,347 - Thread-14 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 11:19:21] "GET /triagem HTTP/1.1" 200 -
+2025-07-11 11:19:23,944 - Thread-16 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 11:19:23] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-11 11:19:24,200 - Thread-17 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 11:19:24] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-11 11:19:27,679 - Thread-18 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-11 11:19:27,680 - Thread-18 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-11 11:19:27,680 - Thread-18 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 11:19:27] "GET /triagem HTTP/1.1" 200 -
+2025-07-11 11:19:31,341 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-11 11:19:31,341 - MainThread   - INFO - Pool de threads criado com 15 workers
+2025-07-11 11:19:31,342 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-11 11:19:31,342 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-11 11:19:43,112 - MainThread   - INFO - CORS configurado
+2025-07-11 11:19:43,118 - MainThread   - INFO - Rotas registradas
+2025-07-11 11:19:43,119 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-11 11:19:43,120 - MainThread   - INFO - Background cleanup iniciado
+2025-07-11 11:19:43,121 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-11 11:19:43,121 - MainThread   - INFO - Inicialização RAG em background
+2025-07-11 11:19:43,121 - MainThread   - INFO - Servidor pronto!
+2025-07-11 11:19:43,122 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-11 11:19:43,122 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-11 11:19:43,122 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-11 11:19:43,136 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.81:5000
+2025-07-11 11:19:43,137 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-11 11:19:43,691 - Thread-3 (process_request_thread) - INFO - Cliente conectado: t03HbsWMC77NtdGbAAAB
+2025-07-11 11:20:07,957 - Thread-2 (init_rag_background) - INFO - Load pretrained SentenceTransformer: models\paraphrase-MiniLM-L3-v2
+2025-07-11 11:20:10,314 - Thread-2 (init_rag_background) - INFO - Modelo models\paraphrase-MiniLM-L3-v2 carregado no dispositivo cpu
+2025-07-11 11:20:10,314 - Thread-2 (init_rag_background) - INFO - Dimensões Matryoshka: [32, 64, 128]
+2025-07-11 11:20:10,410 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-11 11:20:10,860 - Thread-2 (init_rag_background) - INFO - Load pretrained SentenceTransformer: models\paraphrase-MiniLM-L3-v2
+2025-07-11 11:20:10,924 - Thread-2 (init_rag_background) - INFO - Modelo models\paraphrase-MiniLM-L3-v2 carregado no dispositivo cpu
+2025-07-11 11:20:10,924 - Thread-2 (init_rag_background) - INFO - Dimensões Matryoshka: [32, 64, 128]
+2025-07-11 11:20:11,230 - Thread-2 (init_rag_background) - INFO - 493 documentos carregados
+2025-07-11 11:20:23,717 - Thread-10 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 11:20:23] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-11 11:20:23,938 - Thread-11 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 11:20:23] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-11 11:20:44,032 - Thread-14 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 11:20:44] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-11 11:20:53,748 - Thread-17 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-11 11:20:53,749 - Thread-17 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-11 11:20:53,750 - Thread-17 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 11:20:53] "GET /triagem HTTP/1.1" 200 -
+2025-07-11 11:20:54,048 - Thread-18 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 11:20:54] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-11 11:20:54,384 - Thread-19 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 11:20:54] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-11 11:23:46,030 - Thread-15 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 11:23:46] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-11 11:24:23,924 - Thread-29 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-11 11:24:23,924 - Thread-29 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-11 11:24:23,925 - Thread-29 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 11:24:23] "GET /triagem HTTP/1.1" 200 -
+2025-07-11 11:24:24,162 - Thread-30 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 11:24:24] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-11 11:24:24,519 - Thread-31 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 11:24:24] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-11 11:25:01,721 - Thread-34 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 11:25:01] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-11 11:27:24,989 - Thread-35 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 11:27:24] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-11 11:27:58,397 - Thread-44 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-11 11:27:58,398 - Thread-44 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-11 11:27:58,398 - Thread-44 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 11:27:58] "GET /triagem HTTP/1.1" 200 -
+2025-07-11 11:27:58,634 - Thread-45 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 11:27:58] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-11 11:27:58,841 - Thread-46 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 11:27:58] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-11 11:28:44,399 - Thread-50 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 11:28:44] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-11 11:31:00,038 - Thread-51 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 11:31:00] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-11 11:33:40,904 - Thread-65 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-11 11:33:40,905 - Thread-65 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-11 11:33:40,905 - Thread-65 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 11:33:40] "GET /triagem HTTP/1.1" 200 -
+2025-07-11 11:33:41,135 - Thread-66 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 11:33:41] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-11 11:33:41,449 - Thread-67 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 11:33:41] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-11 11:34:00,678 - Thread-68 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 11:34:00] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-11 11:37:31,385 - Thread-70 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 11:37:31] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-11 11:37:39,803 - Thread-81 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-11 11:37:39,804 - Thread-81 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-11 11:37:39,805 - Thread-81 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 11:37:39] "GET /triagem HTTP/1.1" 200 -
+2025-07-11 11:37:39,974 - Thread-82 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 11:37:39] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-11 11:37:40,300 - Thread-83 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 11:37:40] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-11 12:09:38,955 - Thread-3 (process_request_thread) - INFO - Cliente desconectado: t03HbsWMC77NtdGbAAAB
+2025-07-11 12:09:38,966 - Thread-3 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 12:09:38] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-11 12:09:39,006 - Thread-3 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2025-07-11 12:14:35,946 - Thread-161 (process_request_thread) - INFO - Cliente conectado: rsNXhY5m4124FuI-AAAD
+2025-07-11 12:16:21,974 - Thread-161 (process_request_thread) - INFO - Cliente desconectado: rsNXhY5m4124FuI-AAAD
+2025-07-11 12:16:21,979 - Thread-161 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 12:16:21] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-11 12:16:21,986 - Thread-161 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2025-07-11 12:16:22,866 - Thread-169 (process_request_thread) - INFO - Cliente conectado: KU-eNTCTtP6N0SXbAAAF
+2025-07-11 12:16:22,886 - Thread-173 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 12:16:22] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-11 12:16:23,133 - Thread-174 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 12:16:23] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-11 12:26:44,411 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-11 12:26:44,419 - MainThread   - INFO - Pool de threads criado com 15 workers
+2025-07-11 12:26:44,420 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-11 12:26:44,420 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-11 12:42:33,801 - MainThread   - INFO - CORS configurado
+2025-07-11 12:42:33,807 - MainThread   - INFO - Rotas registradas
+2025-07-11 12:42:33,809 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-11 12:42:33,810 - MainThread   - INFO - Background cleanup iniciado
+2025-07-11 12:42:33,810 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-11 12:42:33,810 - MainThread   - INFO - Inicialização RAG em background
+2025-07-11 12:42:33,811 - MainThread   - INFO - Servidor pronto!
+2025-07-11 12:42:33,811 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-11 12:42:33,811 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-11 12:42:33,811 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-11 12:42:33,828 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.81:5000
+2025-07-11 12:42:33,829 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-11 12:42:35,519 - Thread-3 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-11 12:42:35,519 - Thread-3 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-11 12:42:35,521 - Thread-3 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 12:42:35] "GET /triagem HTTP/1.1" 200 -
+2025-07-11 12:42:36,841 - Thread-5 (process_request_thread) - INFO - Cliente conectado: Ss7KYvXHUwVMJVtjAAAB
+2025-07-11 12:42:38,334 - Thread-10 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 12:42:38] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-11 12:42:38,597 - Thread-11 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 12:42:38] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-11 12:42:46,381 - Thread-13 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-11 12:42:46,400 - Thread-13 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-11 12:42:46,404 - Thread-13 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 12:42:46] "GET /triagem HTTP/1.1" 200 -
+2025-07-11 12:42:59,459 - Thread-2 (init_rag_background) - INFO - Load pretrained SentenceTransformer: models\paraphrase-MiniLM-L3-v2
+2025-07-11 12:43:01,797 - Thread-2 (init_rag_background) - INFO - Modelo models\paraphrase-MiniLM-L3-v2 carregado no dispositivo cpu
+2025-07-11 12:43:01,798 - Thread-2 (init_rag_background) - INFO - Dimensões Matryoshka: [32, 64, 128]
+2025-07-11 12:43:01,904 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-11 12:43:02,570 - Thread-2 (init_rag_background) - INFO - Load pretrained SentenceTransformer: models\paraphrase-MiniLM-L3-v2
+2025-07-11 12:43:02,636 - Thread-2 (init_rag_background) - INFO - Modelo models\paraphrase-MiniLM-L3-v2 carregado no dispositivo cpu
+2025-07-11 12:43:02,636 - Thread-2 (init_rag_background) - INFO - Dimensões Matryoshka: [32, 64, 128]
+2025-07-11 12:43:02,734 - Thread-2 (init_rag_background) - INFO - 493 documentos carregados
+2025-07-11 12:43:09,852 - Thread-16 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 12:43:09] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-11 12:43:10,114 - Thread-17 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 12:43:10] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-11 12:43:17,506 - Thread-18 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-11 12:43:17,506 - Thread-18 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-11 12:43:17,507 - Thread-18 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 12:43:17] "GET /triagem HTTP/1.1" 200 -
+2025-07-11 12:43:18,311 - Thread-19 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 12:43:18] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-11 12:43:18,563 - Thread-20 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 12:43:18] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-11 12:44:06,947 - Thread-24 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 12:44:06] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-11 12:46:12,966 - Thread-25 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 12:46:12] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-11 12:46:21,713 - Thread-33 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-11 12:46:21,713 - Thread-33 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-11 12:46:21,714 - Thread-33 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 12:46:21] "GET /triagem HTTP/1.1" 200 -
+2025-07-11 12:46:21,949 - Thread-35 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 12:46:21] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-11 12:46:22,132 - Thread-36 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 12:46:22] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-11 12:50:47,975 - Thread-48 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 12:50:47] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-11 12:52:41,105 - Thread-49 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 12:52:41] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-11 12:54:21,360 - Thread-60 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-11 12:54:21,360 - Thread-60 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-11 12:54:21,362 - Thread-60 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 12:54:21] "GET /triagem HTTP/1.1" 200 -
+2025-07-11 12:54:21,571 - Thread-61 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 12:54:21] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-11 12:54:21,728 - Thread-62 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 12:54:21] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-11 12:54:37,268 - Thread-64 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-11 12:54:37,269 - Thread-64 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-11 12:54:37,269 - Thread-64 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 12:54:37] "GET /triagem HTTP/1.1" 200 -
+2025-07-11 13:15:27,920 - Thread-5 (process_request_thread) - INFO - Cliente desconectado: Ss7KYvXHUwVMJVtjAAAB
+2025-07-11 13:15:27,927 - Thread-5 (process_request_thread) - INFO - 127.0.0.1 - - [11/Jul/2025 13:15:27] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-11 13:15:28,004 - Thread-5 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2025-07-14 08:49:54,697 - MainThread   - INFO - CORS configurado
+2025-07-14 08:49:54,710 - MainThread   - INFO - Rotas registradas
+2025-07-14 08:49:54,713 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-14 08:49:54,714 - MainThread   - INFO - Background cleanup iniciado
+2025-07-14 08:49:54,715 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-14 08:49:54,715 - MainThread   - INFO - Inicialização RAG em background
+2025-07-14 08:49:54,716 - MainThread   - INFO - Servidor pronto!
+2025-07-14 08:49:54,716 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-14 08:49:54,716 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-14 08:49:54,717 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-14 08:49:54,753 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.81:5000
+2025-07-14 08:49:54,754 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-14 08:49:57,260 - Thread-3 (process_request_thread) - INFO - Cliente conectado: juT2vc2mPAcbPSKNAAAB
+2025-07-14 08:50:21,352 - Thread-3 (process_request_thread) - INFO - Cliente desconectado: juT2vc2mPAcbPSKNAAAB
+2025-07-14 08:50:21,412 - Thread-3 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 08:50:21] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-14 08:50:21,568 - Thread-3 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2025-07-14 08:50:22,868 - Thread-8 (process_request_thread) - INFO - Cliente conectado: Yr7UQcr9o0eU-iT6AAAD
+2025-07-14 08:50:23,454 - Thread-9 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-14 08:50:23,455 - Thread-9 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-14 08:50:23,464 - Thread-9 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 08:50:23] "GET /triagem HTTP/1.1" 200 -
+2025-07-14 08:50:31,323 - Thread-2 (init_rag_background) - INFO - Load pretrained SentenceTransformer: models\paraphrase-MiniLM-L3-v2
+2025-07-14 08:50:36,154 - Thread-2 (init_rag_background) - INFO - Modelo models\paraphrase-MiniLM-L3-v2 carregado no dispositivo cpu
+2025-07-14 08:50:36,155 - Thread-2 (init_rag_background) - INFO - Dimensões Matryoshka: [32, 64, 128]
+2025-07-14 08:50:36,273 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-14 08:50:37,407 - Thread-2 (init_rag_background) - INFO - Load pretrained SentenceTransformer: models\paraphrase-MiniLM-L3-v2
+2025-07-14 08:50:37,479 - Thread-2 (init_rag_background) - INFO - Modelo models\paraphrase-MiniLM-L3-v2 carregado no dispositivo cpu
+2025-07-14 08:50:37,479 - Thread-2 (init_rag_background) - INFO - Dimensões Matryoshka: [32, 64, 128]
+2025-07-14 08:50:37,587 - Thread-2 (init_rag_background) - INFO - 493 documentos carregados
+2025-07-14 09:27:27,542 - Thread-102 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 09:27:27] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 09:27:27,731 - Thread-103 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 09:27:27] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 09:27:32,046 - Thread-106 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 09:27:32] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-14 09:27:32,306 - Thread-107 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 09:27:32] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-14 09:41:13,934 - Thread-142 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 09:41:13] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 09:41:14,199 - Thread-143 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 09:41:14] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 09:43:53,863 - Thread-151 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 09:43:53] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 09:43:54,114 - Thread-152 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 09:43:54] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 09:43:58,472 - Thread-153 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-14 09:43:58,473 - Thread-153 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-14 09:43:58,474 - Thread-153 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 09:43:58] "GET /triagem HTTP/1.1" 200 -
+2025-07-14 09:43:59,475 - Thread-154 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 09:43:59] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 09:43:59,733 - Thread-155 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 09:43:59] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 09:53:38,433 - Thread-180 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 09:53:38] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 09:53:38,686 - Thread-181 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 09:53:38] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 09:53:39,743 - Thread-8 (process_request_thread) - INFO - Cliente desconectado: Yr7UQcr9o0eU-iT6AAAD
+2025-07-14 09:53:39,756 - Thread-8 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 09:53:39] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-14 09:53:39,796 - Thread-8 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2025-07-14 09:53:40,472 - Thread-182 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 09:53:40] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 09:53:40,838 - Thread-183 (process_request_thread) - INFO - Cliente conectado: rdp7wPCrWiIGri8JAAAF
+2025-07-14 09:53:40,903 - Thread-187 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 09:53:40] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 09:53:45,086 - Thread-189 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 09:53:45] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-14 09:53:45,346 - Thread-190 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 09:53:45] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-14 09:54:00,142 - Thread-192 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-14 09:54:00,142 - Thread-192 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-14 09:54:00,143 - Thread-192 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 09:54:00] "GET /triagem HTTP/1.1" 200 -
+2025-07-14 09:54:00,545 - Thread-193 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 09:54:00] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 09:54:00,862 - Thread-194 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 09:54:00] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 09:54:23,170 - Thread-197 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 09:54:23] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-14 09:54:26,116 - Thread-198 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 09:54:26] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-14 09:55:19,216 - Thread-202 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 09:55:19] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-14 09:57:58,065 - Thread-203 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 09:57:58] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-14 09:58:25,181 - Thread-213 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 09:58:25] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-14 10:00:46,110 - Thread-214 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 10:00:46] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-14 10:16:14,232 - Thread-259 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-14 10:16:14,234 - Thread-259 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-14 10:16:14,236 - Thread-259 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 10:16:14] "GET /triagem HTTP/1.1" 200 -
+2025-07-14 10:16:14,423 - Thread-260 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 10:16:14] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 10:16:14,678 - Thread-261 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 10:16:14] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 10:16:21,729 - Thread-262 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-14 10:16:21,730 - Thread-262 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-14 10:16:21,730 - Thread-262 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 10:16:21] "GET /triagem HTTP/1.1" 200 -
+2025-07-14 10:16:23,205 - Thread-263 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 10:16:23] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 10:16:23,455 - Thread-264 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 10:16:23] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 10:16:39,097 - Thread-265 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 10:16:39] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-14 10:16:42,292 - Thread-268 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-14 10:16:42,294 - Thread-268 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-14 10:16:42,295 - Thread-268 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 10:16:42] "GET /triagem HTTP/1.1" 200 -
+2025-07-14 10:16:43,425 - Thread-269 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 10:16:43] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 10:16:43,771 - Thread-270 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 10:16:43] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 10:20:09,878 - Thread-267 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 10:20:09] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-14 10:28:34,085 - Thread-299 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 10:28:34] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-14 10:30:25,332 - Thread-300 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 10:30:25] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-14 10:39:47,115 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-14 10:39:47,126 - MainThread   - INFO - Pool de threads criado com 15 workers
+2025-07-14 10:39:47,127 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-14 10:39:47,127 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-14 10:49:02,791 - MainThread   - INFO - CORS configurado
+2025-07-14 10:49:02,797 - MainThread   - INFO - Rotas registradas
+2025-07-14 10:49:02,798 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-14 10:49:02,799 - MainThread   - INFO - Background cleanup iniciado
+2025-07-14 10:49:02,799 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-14 10:49:02,799 - MainThread   - INFO - Inicialização RAG em background
+2025-07-14 10:49:02,800 - MainThread   - INFO - Servidor pronto!
+2025-07-14 10:49:02,800 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-14 10:49:02,800 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-14 10:49:02,800 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-14 10:49:02,819 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.81:5000
+2025-07-14 10:49:02,820 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-14 10:49:18,100 - Thread-3 (process_request_thread) - INFO - Cliente conectado: AkUWguH16sZhGXpHAAAB
+2025-07-14 10:49:22,853 - Thread-8 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 10:49:22] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-14 10:49:23,031 - Thread-9 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 10:49:23] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-14 10:49:30,577 - Thread-2 (init_rag_background) - INFO - Load pretrained SentenceTransformer: models\paraphrase-MiniLM-L3-v2
+2025-07-14 10:49:33,700 - Thread-2 (init_rag_background) - INFO - Modelo models\paraphrase-MiniLM-L3-v2 carregado no dispositivo cpu
+2025-07-14 10:49:33,700 - Thread-2 (init_rag_background) - INFO - Dimensões Matryoshka: [32, 64, 128]
+2025-07-14 10:49:33,801 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-14 10:49:34,251 - Thread-2 (init_rag_background) - INFO - Load pretrained SentenceTransformer: models\paraphrase-MiniLM-L3-v2
+2025-07-14 10:49:34,316 - Thread-2 (init_rag_background) - INFO - Modelo models\paraphrase-MiniLM-L3-v2 carregado no dispositivo cpu
+2025-07-14 10:49:34,316 - Thread-2 (init_rag_background) - INFO - Dimensões Matryoshka: [32, 64, 128]
+2025-07-14 10:49:34,412 - Thread-2 (init_rag_background) - INFO - 493 documentos carregados
+2025-07-14 10:49:45,008 - Thread-12 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 10:49:45] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-14 10:50:06,920 - Thread-16 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-14 10:50:06,921 - Thread-16 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-14 10:50:06,922 - Thread-16 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 10:50:06] "GET /triagem HTTP/1.1" 200 -
+2025-07-14 10:50:07,652 - Thread-17 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 10:50:07] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 10:50:07,978 - Thread-18 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 10:50:07] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 10:52:50,083 - Thread-13 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 10:52:50] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-14 11:27:27,969 - Thread-3 (process_request_thread) - INFO - Cliente desconectado: AkUWguH16sZhGXpHAAAB
+2025-07-14 11:27:27,980 - Thread-3 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 11:27:27] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-14 11:27:28,041 - Thread-3 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2025-07-14 11:52:08,908 - Thread-108 (process_request_thread) - INFO - Cliente conectado: Nry-0Z7Oh5vR2gzZAAAD
+2025-07-14 12:00:24,179 - Thread-108 (process_request_thread) - INFO - Cliente desconectado: Nry-0Z7Oh5vR2gzZAAAD
+2025-07-14 12:00:24,183 - Thread-108 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:00:24] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-14 12:00:24,192 - Thread-108 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2025-07-14 12:00:25,312 - Thread-135 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:00:25] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 12:00:25,315 - Thread-131 (process_request_thread) - INFO - Cliente conectado: y00xdmbmxXa9LeOyAAAF
+2025-07-14 12:00:25,544 - Thread-136 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:00:25] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 12:01:50,502 - Thread-141 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-14 12:01:50,503 - Thread-141 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-14 12:01:50,504 - Thread-141 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:01:50] "GET /triagem HTTP/1.1" 200 -
+2025-07-14 12:01:51,330 - Thread-142 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:01:51] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 12:01:51,648 - Thread-143 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:01:51] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 12:01:56,058 - Thread-144 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-14 12:01:56,059 - Thread-144 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-14 12:01:56,060 - Thread-144 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:01:56] "GET /triagem HTTP/1.1" 200 -
+2025-07-14 12:16:36,989 - Thread-131 (process_request_thread) - INFO - Cliente desconectado: y00xdmbmxXa9LeOyAAAF
+2025-07-14 12:16:37,005 - Thread-131 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:16:37] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-14 12:16:37,032 - Thread-131 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2025-07-14 12:16:38,061 - Thread-184 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-14 12:16:38,065 - Thread-180 (process_request_thread) - INFO - Cliente conectado: AqraZ0jwNG8gMYDaAAAH
+2025-07-14 12:16:38,065 - Thread-184 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-14 12:16:38,066 - Thread-184 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:16:38] "GET /triagem HTTP/1.1" 200 -
+2025-07-14 12:16:39,236 - Thread-185 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:16:39] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 12:16:39,586 - Thread-186 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:16:39] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 12:16:43,576 - Thread-187 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:16:43] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-14 12:16:43,912 - Thread-188 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:16:43] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-14 12:16:53,673 - Thread-190 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:16:53] "OPTIONS /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-14 12:19:53,334 - Thread-191 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:19:53] "POST /api/rag/query-with-context HTTP/1.1" 200 -
+2025-07-14 12:22:39,972 - Thread-180 (process_request_thread) - INFO - Cliente desconectado: AqraZ0jwNG8gMYDaAAAH
+2025-07-14 12:22:40,021 - Thread-180 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:22:40] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-14 12:22:40,058 - Thread-180 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2025-07-14 12:22:40,308 - Thread-207 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:22:40] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 12:22:40,344 - Thread-208 (process_request_thread) - INFO - Cliente conectado: UODLG6jsqdUdZTAPAAAJ
+2025-07-14 12:22:40,561 - Thread-212 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:22:40] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 12:23:45,114 - Thread-208 (process_request_thread) - INFO - Cliente desconectado: UODLG6jsqdUdZTAPAAAJ
+2025-07-14 12:23:45,153 - Thread-208 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:23:45] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-14 12:23:45,162 - Thread-208 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2025-07-14 12:23:45,424 - Thread-216 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:23:45] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 12:23:45,445 - Thread-217 (process_request_thread) - INFO - Cliente conectado: 3wJnDKHVoHAmuLhbAAAL
+2025-07-14 12:23:45,677 - Thread-221 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:23:45] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 12:26:48,892 - Thread-217 (process_request_thread) - INFO - Cliente desconectado: 3wJnDKHVoHAmuLhbAAAL
+2025-07-14 12:26:48,920 - Thread-217 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:26:48] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-14 12:26:48,932 - Thread-217 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2025-07-14 12:26:49,210 - Thread-230 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:26:49] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 12:26:49,228 - Thread-231 (process_request_thread) - INFO - Cliente conectado: V82Xu0mI3cQDUVOCAAAN
+2025-07-14 12:26:49,468 - Thread-235 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:26:49] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 12:27:53,780 - Thread-231 (process_request_thread) - INFO - Cliente desconectado: V82Xu0mI3cQDUVOCAAAN
+2025-07-14 12:27:53,800 - Thread-231 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:27:53] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-14 12:27:53,806 - Thread-231 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2025-07-14 12:27:54,096 - Thread-239 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:27:54] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 12:27:54,114 - Thread-240 (process_request_thread) - INFO - Cliente conectado: LPzEQ1lTg1iSqmDgAAAP
+2025-07-14 12:27:54,357 - Thread-244 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:27:54] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 12:29:49,700 - Thread-240 (process_request_thread) - INFO - Cliente desconectado: LPzEQ1lTg1iSqmDgAAAP
+2025-07-14 12:29:49,736 - Thread-240 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:29:49] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-14 12:29:49,743 - Thread-240 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2025-07-14 12:29:50,037 - Thread-250 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:29:50] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 12:29:50,054 - Thread-251 (process_request_thread) - INFO - Cliente conectado: 5ZLYqlnS926OQuZBAAAR
+2025-07-14 12:29:50,275 - Thread-255 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:29:50] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 12:30:13,664 - Thread-251 (process_request_thread) - INFO - Cliente desconectado: 5ZLYqlnS926OQuZBAAAR
+2025-07-14 12:30:13,676 - Thread-256 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:30:13] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 12:30:13,705 - Thread-251 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:30:13] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-14 12:30:13,712 - Thread-251 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2025-07-14 12:30:14,012 - Thread-261 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:30:14] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 12:30:14,028 - Thread-257 (process_request_thread) - INFO - Cliente conectado: pl9UvmGMJxEsJ8cAAAAT
+2025-07-14 12:30:37,328 - Thread-257 (process_request_thread) - INFO - Cliente desconectado: pl9UvmGMJxEsJ8cAAAAT
+2025-07-14 12:30:37,335 - Thread-262 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:30:37] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 12:30:37,355 - Thread-257 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:30:37] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-14 12:30:37,388 - Thread-257 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2025-07-14 12:30:37,668 - Thread-263 (process_request_thread) - INFO - Cliente conectado: RZXK27wLv62UeE91AAAV
+2025-07-14 12:30:37,678 - Thread-267 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:30:37] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 12:36:38,203 - Thread-263 (process_request_thread) - INFO - Cliente desconectado: RZXK27wLv62UeE91AAAV
+2025-07-14 12:36:38,250 - Thread-263 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:36:38] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-14 12:36:38,264 - Thread-263 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2025-07-14 12:36:38,531 - Thread-283 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:36:38] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 12:36:38,549 - Thread-284 (process_request_thread) - INFO - Cliente conectado: _gDhzpLgsWqP2z46AAAX
+2025-07-14 12:36:38,783 - Thread-288 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:36:38] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 12:37:21,692 - Thread-284 (process_request_thread) - INFO - Cliente desconectado: _gDhzpLgsWqP2z46AAAX
+2025-07-14 12:37:21,724 - Thread-284 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:37:21] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-14 12:37:21,730 - Thread-284 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2025-07-14 12:37:22,003 - Thread-291 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:37:22] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 12:37:22,020 - Thread-292 (process_request_thread) - INFO - Cliente conectado: ER_RXFwMlJxr-MkXAAAZ
+2025-07-14 12:37:22,266 - Thread-296 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:37:22] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 12:37:55,628 - Thread-292 (process_request_thread) - INFO - Cliente desconectado: ER_RXFwMlJxr-MkXAAAZ
+2025-07-14 12:37:55,675 - Thread-292 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:37:55] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-14 12:37:55,684 - Thread-292 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2025-07-14 12:37:55,943 - Thread-300 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:37:55] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 12:37:55,965 - Thread-299 (process_request_thread) - INFO - Cliente conectado: XpZ2-B-xB1p9PYwgAAAb
+2025-07-14 12:37:56,204 - Thread-304 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:37:56] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 12:38:18,932 - Thread-306 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:38:18] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 12:38:19,202 - Thread-307 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:38:19] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 12:41:19,694 - Thread-317 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:41:19] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 12:41:19,944 - Thread-318 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:41:19] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 12:41:30,477 - Thread-319 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:41:30] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 12:41:30,804 - Thread-320 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:41:30] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 12:41:35,415 - Thread-321 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-14 12:41:35,416 - Thread-321 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-14 12:41:35,417 - Thread-321 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:41:35] "GET /triagem HTTP/1.1" 200 -
+2025-07-14 12:41:36,699 - Thread-322 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:41:36] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 12:41:36,975 - Thread-323 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:41:36] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 12:44:11,225 - Thread-332 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:44:11] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 12:44:11,476 - Thread-333 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:44:11] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 12:44:25,600 - Thread-335 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:44:25] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 12:44:25,862 - Thread-336 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:44:25] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 12:44:31,875 - Thread-338 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:44:31] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 12:44:32,141 - Thread-339 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:44:32] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 12:47:27,926 - Thread-348 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:47:27] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 12:47:28,178 - Thread-349 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:47:28] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 12:47:35,144 - Thread-352 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:47:35] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 12:47:35,407 - Thread-353 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:47:35] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 12:48:39,291 - Thread-357 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:48:39] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 12:48:39,544 - Thread-358 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:48:39] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 12:48:54,142 - Thread-299 (process_request_thread) - INFO - Cliente desconectado: XpZ2-B-xB1p9PYwgAAAb
+2025-07-14 12:48:54,148 - Thread-299 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:48:54] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-14 12:48:54,162 - Thread-299 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2025-07-14 12:48:55,624 - Thread-361 (process_request_thread) - INFO - Cliente conectado: t9OvoiO_6sVZhrp0AAAd
+2025-07-14 12:48:55,639 - Thread-365 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:48:55] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 12:48:55,893 - Thread-366 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:48:55] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 12:48:58,570 - Thread-367 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-14 12:48:58,570 - Thread-367 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-14 12:48:58,571 - Thread-367 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:48:58] "GET /triagem HTTP/1.1" 200 -
+2025-07-14 12:49:00,662 - Thread-368 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:49:00] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 12:49:00,908 - Thread-369 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:49:00] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 12:50:35,742 - Thread-375 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:50:35] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 12:50:36,008 - Thread-376 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:50:36] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 12:50:41,797 - Thread-377 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:50:41] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 12:50:42,140 - Thread-378 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:50:42] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 12:50:46,721 - Thread-380 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-14 12:50:46,721 - Thread-380 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-14 12:50:46,722 - Thread-380 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:50:46] "GET /triagem HTTP/1.1" 200 -
+2025-07-14 12:50:46,956 - Thread-381 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:50:46] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 12:50:47,141 - Thread-382 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:50:47] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 12:50:51,751 - Thread-383 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-14 12:50:51,752 - Thread-383 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-14 12:50:51,752 - Thread-383 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:50:51] "GET /triagem HTTP/1.1" 200 -
+2025-07-14 12:50:52,664 - Thread-384 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:50:52] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 12:50:52,941 - Thread-385 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:50:52] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 12:51:57,575 - Thread-390 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:51:57] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 12:51:57,822 - Thread-391 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:51:57] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 12:52:03,595 - Thread-392 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-14 12:52:03,595 - Thread-392 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-14 12:52:03,597 - Thread-392 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:52:03] "GET /triagem HTTP/1.1" 200 -
+2025-07-14 12:52:06,572 - Thread-393 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:52:06] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 12:52:06,824 - Thread-394 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:52:06] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 12:52:15,894 - Thread-397 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-14 12:52:15,894 - Thread-397 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-14 12:52:15,895 - Thread-397 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:52:15] "GET /triagem HTTP/1.1" 200 -
+2025-07-14 12:52:17,295 - Thread-398 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-14 12:52:17,296 - Thread-398 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-14 12:52:17,296 - Thread-398 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:52:17] "GET /triagem HTTP/1.1" 200 -
+2025-07-14 12:52:19,412 - Thread-399 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-14 12:52:19,412 - Thread-399 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-14 12:52:19,413 - Thread-399 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:52:19] "GET /triagem HTTP/1.1" 200 -
+2025-07-14 12:53:23,219 - Thread-361 (process_request_thread) - INFO - Cliente desconectado: t9OvoiO_6sVZhrp0AAAd
+2025-07-14 12:53:23,223 - Thread-361 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:53:23] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-14 12:53:23,232 - Thread-361 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2025-07-14 12:53:24,631 - Thread-407 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-14 12:53:24,631 - Thread-407 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-14 12:53:24,631 - Thread-407 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 12:53:24] "GET /triagem HTTP/1.1" 200 -
+2025-07-14 12:53:24,751 - Thread-403 (process_request_thread) - INFO - Cliente conectado: FM4UA2V0C_FqGEVMAAAf
+2025-07-14 13:06:50,461 - Thread-403 (process_request_thread) - INFO - Cliente desconectado: FM4UA2V0C_FqGEVMAAAf
+2025-07-14 13:06:50,530 - Thread-403 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 13:06:50] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-14 13:06:50,546 - Thread-403 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2025-07-14 13:06:50,868 - Thread-441 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-14 13:06:50,872 - Thread-442 (process_request_thread) - INFO - Cliente conectado: 6jpbfknoLpcAMO_7AAAh
+2025-07-14 13:06:50,872 - Thread-441 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-14 13:06:50,874 - Thread-441 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 13:06:50] "GET /triagem HTTP/1.1" 200 -
+2025-07-14 13:08:08,227 - Thread-450 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-14 13:08:08,227 - Thread-450 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-14 13:08:08,228 - Thread-450 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 13:08:08] "GET /triagem HTTP/1.1" 200 -
+2025-07-14 13:12:00,341 - Thread-442 (process_request_thread) - INFO - Cliente desconectado: 6jpbfknoLpcAMO_7AAAh
+2025-07-14 13:12:00,350 - Thread-442 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 13:12:00] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-14 13:12:00,362 - Thread-442 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2025-07-14 13:12:01,823 - Thread-465 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-14 13:12:01,823 - Thread-465 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-14 13:12:01,824 - Thread-465 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 13:12:01] "GET /triagem HTTP/1.1" 200 -
+2025-07-14 13:12:01,835 - Thread-461 (process_request_thread) - INFO - Cliente conectado: BXUcaCUL7Vqm-4zXAAAj
+2025-07-14 13:12:53,666 - Thread-461 (process_request_thread) - INFO - Cliente desconectado: BXUcaCUL7Vqm-4zXAAAj
+2025-07-14 13:12:53,712 - Thread-461 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 13:12:53] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-14 13:12:53,722 - Thread-461 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2025-07-14 13:12:54,020 - Thread-469 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-14 13:12:54,023 - Thread-469 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-14 13:12:54,025 - Thread-469 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 13:12:54] "GET /triagem HTTP/1.1" 200 -
+2025-07-14 13:12:54,052 - Thread-470 (process_request_thread) - INFO - Cliente conectado: AIldx7nBuxY-IJAXAAAl
+2025-07-14 13:12:54,248 - Thread-474 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-14 13:12:54,249 - Thread-474 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-14 13:12:54,249 - Thread-474 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 13:12:54] "GET /triagem HTTP/1.1" 200 -
+2025-07-14 13:13:47,422 - Thread-478 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-14 13:13:47,423 - Thread-478 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-14 13:13:47,423 - Thread-478 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 13:13:47] "GET /triagem HTTP/1.1" 200 -
+2025-07-14 13:13:48,474 - Thread-479 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-14 13:13:48,474 - Thread-479 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-14 13:13:48,474 - Thread-479 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 13:13:48] "GET /triagem HTTP/1.1" 200 -
+2025-07-14 13:17:01,468 - Thread-487 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-14 13:17:01,469 - Thread-487 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-14 13:17:01,469 - Thread-487 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 13:17:01] "GET /triagem HTTP/1.1" 200 -
+2025-07-14 13:17:02,260 - Thread-488 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-14 13:17:02,260 - Thread-488 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-14 13:17:02,261 - Thread-488 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 13:17:02] "GET /triagem HTTP/1.1" 200 -
+2025-07-14 13:30:26,641 - Thread-522 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-14 13:30:26,644 - Thread-522 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-14 13:30:26,648 - Thread-522 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 13:30:26] "GET /triagem HTTP/1.1" 200 -
+2025-07-14 13:30:29,144 - Thread-523 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-14 13:30:29,144 - Thread-523 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-14 13:30:29,145 - Thread-523 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 13:30:29] "GET /triagem HTTP/1.1" 200 -
+2025-07-14 13:30:32,361 - Thread-524 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-14 13:30:32,362 - Thread-524 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-14 13:30:32,362 - Thread-524 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 13:30:32] "GET /triagem HTTP/1.1" 200 -
+2025-07-14 13:30:32,871 - Thread-525 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 13:30:32] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-14 13:30:33,257 - Thread-526 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 13:30:33] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-14 13:30:35,035 - Thread-527 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-14 13:30:35,035 - Thread-527 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-14 13:30:35,036 - Thread-527 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 13:30:35] "GET /triagem HTTP/1.1" 200 -
+2025-07-14 13:30:35,747 - Thread-528 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-14 13:30:35,748 - Thread-528 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-14 13:30:35,749 - Thread-528 (process_request_thread) - INFO - 127.0.0.1 - - [14/Jul/2025 13:30:35] "GET /triagem HTTP/1.1" 200 -
+2025-07-14 13:33:07,323 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-14 13:33:07,332 - MainThread   - INFO - Pool de threads criado com 15 workers
+2025-07-14 13:33:07,333 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-14 13:33:07,334 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'

@@ -475,35 +475,29 @@ class UltraFastRAG:
                 answer = self.llm.invoke(prompt)
             else:
                 answer = self.llm(prompt)
+                snippets = []
+            for doc in relevant_docs:
+                text = doc.page_content.strip()
+                if len(text) > 200:
+                    text = text[:200] + "..."
+                snippets.append({
+                    "snippet": text,
+                    "metadata": doc.metadata
+                })
             result = {
                 "answer": answer.strip(),
                 "documents_found": len(relevant_docs),
                 "processing_time": time.time() - start_time,
                 "from_cache": False,
-                "cache_stats": self.cache_stats.copy()
+                "cache_stats": self.cache_stats.copy(),
+                "snippets": snippets
             }
             self._save_to_cache(cache_key, result)
             return result
         except Exception as e:
             error_result = {"error": str(e), "processing_time": time.time() - start_time}
             return error_result
-    
-    def get_performance_stats(self) -> Dict[str, Any]:
-        return {
-            "cache_stats": self.cache_stats.copy(),
-            "cache_size": len(self.response_cache),
-            "documents_loaded": len(self.documents) if self.documents else 0,
-            "config": {
-                "num_predict": self.config.num_predict,
-                "max_context_length": self.config.max_context_length,
-                "top_k": self.config.top_k,
-                "chunk_size": self.config.chunk_size,
-                "enable_cache": self.config.enable_cache,
-                "enable_parallel_search": self.config.enable_parallel_search,
-                "enable_preprocessing": self.config.enable_preprocessing
-            }
-        }
-    
+            
     def clear_cache(self):
         with self.cache_lock:
             self.response_cache.clear()
