@@ -34688,6 +34688,7 @@ AssertionError: write() before start_response
 2025-07-14 13:33:07,332 - MainThread   - INFO - Pool de threads criado com 15 workers
 2025-07-14 13:33:07,333 - MainThread   - INFO - Aguardando threads finalizarem...
 2025-07-14 13:33:07,334 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+<<<<<<< HEAD
 2025-07-16 10:19:47,301 - MainThread   - INFO - CORS configurado
 2025-07-16 10:19:47,301 - MainThread   - INFO - Rotas registradas
 2025-07-16 10:19:47,301 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
@@ -36197,3 +36198,132 @@ Traceback (most recent call last):
   File "C:\Users\anacl\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\serving.py", line 261, in write
     assert status_set is not None, "write() before start_response"
 AssertionError: write() before start_response
+=======
+2025-07-16 12:44:49,891 - MainThread   - INFO - CORS configurado
+2025-07-16 12:44:49,903 - MainThread   - INFO - Rotas registradas
+2025-07-16 12:44:49,905 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-16 12:44:49,926 - MainThread   - INFO - Background cleanup iniciado
+2025-07-16 12:44:49,927 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-16 12:44:49,927 - MainThread   - INFO - Inicialização RAG em background
+2025-07-16 12:44:49,927 - MainThread   - INFO - Servidor pronto!
+2025-07-16 12:44:49,927 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-16 12:44:49,928 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-16 12:44:49,928 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-16 12:44:49,960 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.81:5000
+2025-07-16 12:44:49,961 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-16 12:45:23,603 - Thread-2 (init_rag_background) - INFO - Load pretrained SentenceTransformer: models\paraphrase-MiniLM-L3-v2
+2025-07-16 12:45:28,026 - Thread-2 (init_rag_background) - INFO - Modelo models\paraphrase-MiniLM-L3-v2 carregado no dispositivo cpu
+2025-07-16 12:45:28,027 - Thread-2 (init_rag_background) - INFO - Dimensões Matryoshka: [32, 64, 128]
+2025-07-16 12:45:28,126 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-16 12:45:28,606 - Thread-2 (init_rag_background) - INFO - Load pretrained SentenceTransformer: models\paraphrase-MiniLM-L3-v2
+2025-07-16 12:45:28,679 - Thread-2 (init_rag_background) - INFO - Modelo models\paraphrase-MiniLM-L3-v2 carregado no dispositivo cpu
+2025-07-16 12:45:28,679 - Thread-2 (init_rag_background) - INFO - Dimensões Matryoshka: [32, 64, 128]
+2025-07-16 12:45:28,782 - Thread-2 (init_rag_background) - INFO - 493 documentos carregados
+2025-07-16 12:49:41,627 - Thread-3 (process_request_thread) - ERROR - http://localhost:5174 is not an accepted origin. (further occurrences of this error will be logged with level INFO)
+2025-07-16 12:49:41,638 - Thread-3 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 12:49:41] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 12:49:41,877 - Thread-4 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-16 12:49:41,879 - Thread-4 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-16 12:49:41,894 - Thread-4 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 12:49:41] "GET /triagem HTTP/1.1" 200 -
+2025-07-16 12:49:43,264 - Thread-6 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 12:49:43] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 12:49:45,531 - Thread-7 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 12:49:45] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 12:49:48,248 - Thread-8 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 12:49:48] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 12:49:51,614 - Thread-9 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 12:49:51] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 12:49:51,649 - Thread-10 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-16 12:49:51,649 - Thread-10 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-16 12:49:51,650 - Thread-10 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 12:49:51] "GET /triagem HTTP/1.1" 200 -
+2025-07-16 12:49:53,413 - Thread-12 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 12:49:53] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 12:49:56,651 - Thread-13 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 12:49:56] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 12:49:59,196 - Thread-14 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 12:49:59] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 12:50:04,531 - Thread-15 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 12:50:04] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 12:50:09,864 - Thread-16 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 12:50:09] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 12:50:15,207 - Thread-17 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 12:50:15] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 12:50:20,530 - Thread-18 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 12:50:20] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 12:50:21,156 - Thread-11 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-16 12:50:21,156 - Thread-11 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-16 12:50:21,157 - Thread-11 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 12:50:21] "GET /triagem HTTP/1.1" 200 -
+2025-07-16 12:50:25,864 - Thread-19 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 12:50:25] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 12:50:31,181 - Thread-20 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 12:50:31] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 12:50:36,513 - Thread-21 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 12:50:36] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 12:50:38,269 - Thread-26 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-16 12:50:38,273 - Thread-26 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-16 12:50:38,275 - Thread-26 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 12:50:38] "GET /triagem HTTP/1.1" 200 -
+2025-07-16 12:50:38,302 - Thread-22 (process_request_thread) - INFO - Cliente conectado: Kf0t8-Qnd-qmRFsyAAAB
+2025-07-16 12:50:42,344 - Thread-28 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-16 12:50:42,345 - Thread-28 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-16 12:50:42,346 - Thread-28 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 12:50:42] "GET /triagem HTTP/1.1" 200 -
+2025-07-16 12:51:46,876 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-16 12:51:46,879 - MainThread   - INFO - Pool de threads criado com 15 workers
+2025-07-16 12:51:46,879 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-16 12:51:46,879 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-17 14:23:06,697 - MainThread   - INFO - CORS configurado
+2025-07-17 14:23:06,703 - MainThread   - INFO - Rotas registradas
+2025-07-17 14:23:06,705 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-17 14:23:06,706 - MainThread   - INFO - Background cleanup iniciado
+2025-07-17 14:23:06,707 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-17 14:23:06,708 - MainThread   - INFO - Inicialização RAG em background
+2025-07-17 14:23:06,708 - MainThread   - INFO - Servidor pronto!
+2025-07-17 14:23:06,708 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-17 14:23:06,709 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-17 14:23:06,709 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-17 14:23:06,736 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.35.81:5000
+2025-07-17 14:23:06,736 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-17 14:23:30,113 - Thread-3 (process_request_thread) - INFO - 127.0.0.1 - - [17/Jul/2025 14:23:30] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2025-07-17 14:23:30,277 - Thread-9 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-17 14:23:30,290 - Thread-10 (process_request_thread) - INFO - Cliente conectado: 2G_9-beS87TBuxk5AAAC
+2025-07-17 14:23:30,291 - Thread-4 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-17 14:23:30,297 - Thread-9 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-17 14:23:30,300 - Thread-4 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-17 14:23:30,303 - Thread-9 (process_request_thread) - INFO - 127.0.0.1 - - [17/Jul/2025 14:23:30] "GET /triagem HTTP/1.1" 200 -
+2025-07-17 14:23:30,304 - Thread-4 (process_request_thread) - INFO - 127.0.0.1 - - [17/Jul/2025 14:23:30] "GET /triagem HTTP/1.1" 200 -
+2025-07-17 14:23:30,332 - Thread-3 (process_request_thread) - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "C:\Users\54117\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2025-07-17 14:23:39,435 - Thread-2 (init_rag_background) - INFO - Load pretrained SentenceTransformer: models\paraphrase-MiniLM-L3-v2
+2025-07-17 14:23:44,835 - Thread-2 (init_rag_background) - INFO - Modelo models\paraphrase-MiniLM-L3-v2 carregado no dispositivo cpu
+2025-07-17 14:23:44,836 - Thread-2 (init_rag_background) - INFO - Dimensões Matryoshka: [32, 64, 128]
+2025-07-17 14:23:44,980 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-17 14:23:46,185 - Thread-2 (init_rag_background) - INFO - Load pretrained SentenceTransformer: models\paraphrase-MiniLM-L3-v2
+2025-07-17 14:23:46,280 - Thread-2 (init_rag_background) - INFO - Modelo models\paraphrase-MiniLM-L3-v2 carregado no dispositivo cpu
+2025-07-17 14:23:46,280 - Thread-2 (init_rag_background) - INFO - Dimensões Matryoshka: [32, 64, 128]
+2025-07-17 14:23:46,444 - Thread-2 (init_rag_background) - INFO - 493 documentos carregados
+2025-07-17 14:25:10,173 - Thread-17 (process_request_thread) - INFO - Cliente conectado: joPmSwiKOuerahucAAAE
+2025-07-17 14:33:58,482 - Thread-64 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-17 14:33:58,483 - Thread-64 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-17 14:33:58,488 - Thread-64 (process_request_thread) - INFO - 127.0.0.1 - - [17/Jul/2025 14:33:58] "GET /triagem HTTP/1.1" 200 -
+2025-07-17 14:34:02,427 - Thread-65 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-17 14:34:02,428 - Thread-65 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-17 14:34:02,429 - Thread-65 (process_request_thread) - INFO - 127.0.0.1 - - [17/Jul/2025 14:34:02] "GET /triagem HTTP/1.1" 200 -
+2025-07-17 14:34:04,961 - Thread-66 (process_request_thread) - INFO - 127.0.0.1 - - [17/Jul/2025 14:34:04] "GET /api/rag/status HTTP/1.1" 200 -
+2025-07-17 14:34:05,230 - Thread-67 (process_request_thread) - INFO - 127.0.0.1 - - [17/Jul/2025 14:34:05] "[33mGET /rag/suggestions HTTP/1.1[0m" 404 -
+2025-07-17 14:34:09,555 - Thread-68 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-17 14:34:09,555 - Thread-68 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-17 14:34:09,556 - Thread-68 (process_request_thread) - INFO - 127.0.0.1 - - [17/Jul/2025 14:34:09] "GET /triagem HTTP/1.1" 200 -
+2025-07-17 14:35:06,915 - Thread-73 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-17 14:35:06,915 - Thread-73 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-17 14:35:06,916 - Thread-73 (process_request_thread) - INFO - 127.0.0.1 - - [17/Jul/2025 14:35:06] "GET /triagem HTTP/1.1" 200 -
+2025-07-17 14:47:55,823 - Thread-137 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-17 14:47:55,824 - Thread-137 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-17 14:47:55,824 - Thread-137 (process_request_thread) - INFO - 127.0.0.1 - - [17/Jul/2025 14:47:55] "GET /triagem HTTP/1.1" 200 -
+2025-07-17 14:47:57,585 - Thread-138 (process_request_thread) - INFO -  2 processos extraídos de /Users/54117/Desktop/GMV/Triagem Inicial/Tabela Triagem.md
+2025-07-17 14:47:57,586 - Thread-138 (process_request_thread) - INFO - Extraídos 2 processos da tabela
+2025-07-17 14:47:57,586 - Thread-138 (process_request_thread) - INFO - 127.0.0.1 - - [17/Jul/2025 14:47:57] "GET /triagem HTTP/1.1" 200 -
+2025-07-17 14:55:07,950 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-17 14:55:07,957 - MainThread   - INFO - Pool de threads criado com 15 workers
+2025-07-17 14:55:07,958 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-17 14:55:07,959 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+>>>>>>> a071dca4ac816ffeb982ea836b2f42a02d3c0eb7
