@@ -8,6 +8,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.so
+.rag_cache
 
 # Pastas específicas
 utils/__pycache__/

@@ -12,7 +12,12 @@ app.config['MAX_CONTENT_LENGTH'] = 100 * 1024 * 1024
 
 socketio = SocketIO(
     app,
-    cors_allowed_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+    cors_allowed_origins=[
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+        "file://",
+        "*"
+    ],
     logger=False,
     async_mode='threading',
     ping_timeout=60,
@@ -45,7 +50,11 @@ app.config['PASTA_DAT'] = PASTA_DAT
 
 try:
     from flask_cors import CORS
-    CORS(app, resources={r"/*": {"origins": ["http://localhost:5173"]}})
+    CORS(app, resources={r"/*": {"origins": [
+        "http://localhost:5173",
+        "file://",
+        "*"
+    ]}})
     logger.info("CORS configurado")
 except ImportError:
     logger.warning("flask-cors não instalado")
